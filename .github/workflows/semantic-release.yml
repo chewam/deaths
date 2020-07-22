@@ -1,7 +1,19 @@
-steps:
-  - name: Checkout
-    uses: actions/checkout@master
-  - name: Semantic Release
-    uses: cycjimmy/semantic-release-action@v2
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+name: CI
+
+on:
+  push:
+    branches: [master, next]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

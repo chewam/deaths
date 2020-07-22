@@ -24,6 +24,9 @@
     "prettier": "^2.0.4"
   },
   "release": {
-    "branches": ["master", "next"]
+    "branches": [
+      "master",
+      "next"
+    ]
   }
 }
