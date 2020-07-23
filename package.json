@@ -26,6 +26,10 @@
   "release": {
     "branches": [
       "master"
+    ],
+    "plugins": [
+      "@semantic-release/changelog",
+      "@semantic-release/git"
     ]
   }
 }
