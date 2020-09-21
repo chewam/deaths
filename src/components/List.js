@@ -1,7 +1,7 @@
 import React from "react"
 
-import colors from "data/colors"
-import { getTotal } from "utils/deaths"
+import colors from "@data/colors"
+import { getTotal } from "@utils/deaths"
 
 const List = ({ years, toggleYear }) => (
   <ul>

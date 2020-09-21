@@ -1,12 +1,12 @@
 import Head from "next/head"
 import React, { useState } from "react"
 
-import List from "components/List"
-import Chart from "components/Chart"
-import Footer from "components/Footer"
-import Header from "components/Header"
-import Overview from "components/Overview"
-import { defaultYears } from "utils/deaths"
+import List from "@components/List"
+import Chart from "@components/Chart"
+import Footer from "@components/Footer"
+import Header from "@components/Header"
+import Overview from "@components/Overview"
+import { defaultYears } from "@utils/deaths"
 
 const Home = () => {
   const [years, setYearsState] = useState(defaultYears)

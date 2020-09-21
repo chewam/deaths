@@ -1,4 +1,4 @@
-import deaths from "data/deaths"
+import deaths from "@data/deaths"
 
 const Months = [
   "Janvier",

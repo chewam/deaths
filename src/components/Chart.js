@@ -9,8 +9,8 @@ import {
   ResponsiveContainer,
 } from "recharts"
 
-import colors from "data/colors"
-import deaths from "data/deaths"
+import colors from "@data/colors"
+import deaths from "@data/deaths"
 
 const styles = {
   stroke: "#333",

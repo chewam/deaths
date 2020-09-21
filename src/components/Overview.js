@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts"
 
-import { linearDeaths } from "utils/deaths"
+import { linearDeaths } from "@utils/deaths"
 
 const styles = {
   stroke: "#333",
