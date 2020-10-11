@@ -25,13 +25,8 @@ jobs:
       - name: Install
         run: yarn --frozen-lockfile --perfer-offline
 
-      - name: Check cache usage
-        if: steps.yarn-cache.outputs.cache-hit == 'true'
-        run: |
-          echo cache has been used!
-
       - name: Lint
         run: yarn lint
 
       - name: Test
-        run: yarn test
+        run: yarn test:ci
