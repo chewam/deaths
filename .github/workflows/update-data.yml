@@ -1,13 +1,18 @@
 name: Update Data
 
-on: push
+on:
+  schedule:
+    - cron: "*/15 * * * *"
 
 jobs:
-  download:
+  udpate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          ref: master
+          token: ${{ secrets.PAT }}
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -27,3 +32,8 @@ jobs:
 
       - name: Download files
         run: ./scripts/fetch.js
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update deaths data
