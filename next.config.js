@@ -6,7 +6,8 @@ module.exports = nextSourceMaps({
   env: {
     APP_VERSION: version,
     SENTRY_DSN: process.env.SENTRY_DSN,
-    NOW_GITHUB_COMMIT_SHA: process.env.NOW_GITHUB_COMMIT_SHA,
+    VERCEL_URL: process.env.VERCEL_URL,
+    VERCEL_GITHUB_COMMIT_SHA: process.env.VERCEL_GITHUB_COMMIT_SHA,
   },
   webpack: (config, { isServer, buildId }) => {
     config.plugins.push(

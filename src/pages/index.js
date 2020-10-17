@@ -1,5 +1,5 @@
-import Head from "next/head"
 import React, { useState } from "react"
+import NextHead from "next/head"
 
 import List from "@components/List"
 import Footer from "@components/Footer"
@@ -9,6 +9,7 @@ import { defaultYears } from "@utils/deaths"
 import YearsView from "@components/YearsView"
 
 const Home = () => {
+  const VERCEL_URL = process.env.VERCEL_URL
   const [years, setYearsState] = useState(defaultYears)
 
   const toggleYear = (year) => {
@@ -16,21 +17,26 @@ const Home = () => {
     setYearsState({ ...years })
   }
 
-  const Meta = () => (
-    <Head>
+  const Head = () => (
+    <NextHead>
       <title>Décès annuels en France</title>
       <link rel="icon" href="/favicon.png" />
+      <meta property="og:title" content="Décès annuels en France" />
       <meta
         name="description"
-        content="Statistiques annuelles des décès en France de 2010 à nos jours."
+        property="og:description"
+        content="Statistiques annuelles des décès en France de 2010 à nos jours, basées sur les données de l'INSEE."
+      />
+      <meta
+        property="og:image"
+        content={`https://${VERCEL_URL}/screenshot.png`}
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
+    </NextHead>
   )
 
-  return (
+  const Body = () => (
     <>
-      <Meta />
       <Header />
       <main>
         <section className="top">
@@ -46,6 +52,13 @@ const Home = () => {
         </section>
       </main>
       <Footer />
+    </>
+  )
+
+  return (
+    <>
+      <Head />
+      <Body />
     </>
   )
 }
