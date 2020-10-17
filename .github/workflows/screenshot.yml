@@ -12,3 +12,7 @@ jobs:
         with:
           source: ${{ github.event.deployment_status.target_url }}
           destination: screenshot.png
+          scale-factor: 2
+          delay: 10
+          disable-animations: true
+          overwrite: true
