@@ -7,16 +7,8 @@ jobs:
     if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: install puppeteer-headful
-        uses: mujo-code/puppeteer-headful@master
-        env:
-          CI: "true"
-      - name: screenshots-ci-action
-        uses: flameddd/screenshots-ci-action@v1.1.1
+      - name: Screenshot Website
+        uses: swinton/screenshot-website@v1.x
         with:
-          url: ${{ github.event.deployment_status.target_url }}
-      - uses: actions/upload-artifact@v2
-        with:
-          path: screenshots
-          name: Download-screenshots
+          source: ${{ github.event.deployment_status.target_url }}
+          destination: screenshot.png
