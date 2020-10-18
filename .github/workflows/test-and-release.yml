@@ -2,47 +2,63 @@ name: Tests & Release
 
 on:
   push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+    # branches: [master]
+    branches: [open-graph]
+  # pull_request:
+  #   branches: [master]
 
 #
 
 jobs:
   #
 
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v2
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+  #     - name: Get yarn cache directory path
+  #       id: yarn-cache-dir-path
+  #       run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - name: Get yarn cache
-        uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+  #     - name: Get yarn cache
+  #       uses: actions/cache@v2
+  #       id: yarn-cache
+  #       with:
+  #         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+  #         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-yarn-
 
-      - name: Install
-        run: yarn --frozen-lockfile --perfer-offline
+  #     - name: Install
+  #       run: yarn --frozen-lockfile --perfer-offline
 
-      - name: Lint
-        run: yarn lint
+  #     - name: Lint
+  #       run: yarn lint
 
-      - name: Test
-        run: yarn test:ci
+  #     - name: Test
+  #       run: yarn test:ci
+
+  #
+
+  # screenshot:
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Take screenshot
+  #       id: screenshot
+  #       uses: swinton/screenshot-website@v1.x
+  #       with:
+  #         delay: 5
+  #         overwrite: true
+  #         source: deaths.now.sh
+  #         disable-animations: true
 
   #
 
   release:
-    needs: test
+    # needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -50,18 +66,34 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
 
-      - name: Semantic Release
-        id: semantic
-        uses: cycjimmy/semantic-release-action@v2
+      - name: Take screenshot
+        id: screenshot
+        uses: swinton/screenshot-website@v1.x
         with:
-          semantic_version: 16
-          extra_plugins: |
-            @semantic-release/changelog
-            @semantic-release/git
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          delay: 5
+          overwrite: true
+          source: https://deaths.now.sh
+          disable-animations: true
 
-      - name: Release sum up
-        if: steps.semantic.outputs.new_release_published == 'true'
+      - name: Check screenshot
         run: |
-          echo ${{ steps.semantic.outputs.new_release_version }}
+          echo ${{ steps.screenshot.outputs.path }}
+          pwd
+          ls -la
+          ls -la ${{ steps.screenshot.outputs.path }}
+
+      # - name: Semantic Release
+      #   id: semantic
+      #   uses: cycjimmy/semantic-release-action@v2
+      #   with:
+      #     semantic_version: 16
+      #     extra_plugins: |
+      #       @semantic-release/changelog
+      #       @semantic-release/git
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.PAT }}
+
+      # - name: Release sum up
+      #   if: steps.semantic.outputs.new_release_published == 'true'
+      #   run: |
+      #     echo ${{ steps.semantic.outputs.new_release_version }}
