@@ -1,5 +1,3 @@
-import React from "react"
-
 const version = process.env.APP_VERSION || "0.0.0"
 const sha = process.env.VERCEL_GITHUB_COMMIT_SHA || "dev"
 

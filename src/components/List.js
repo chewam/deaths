@@ -1,5 +1,3 @@
-import React from "react"
-
 import colors from "@data/colors"
 import { getRatio, getTotal } from "@utils/deaths"
 

@@ -1,5 +1,4 @@
 import Error from "next/error"
-import React from "react"
 
 import sentry from "@utils/sentry"
 

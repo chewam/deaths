@@ -1,4 +1,3 @@
-import React from "react"
 import * as Sentry from "@sentry/node"
 
 import "@styles/index.scss"
