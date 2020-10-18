@@ -81,6 +81,8 @@ jobs:
           pwd
           ls -la
           ls -la ${{ steps.screenshot.outputs.path }}
+          cp ${{ steps.screenshot.outputs.path }} ./public/
+          ls -la ./public/
 
       # - name: Semantic Release
       #   id: semantic
