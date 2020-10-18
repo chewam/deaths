@@ -15,8 +15,8 @@ jobs:
         uses: flameddd/screenshots-ci-action@v1.1.1
         with:
           url: ${{ github.event.deployment_status.target_url }}
-          devices: iPhone X,iPhone X landscape,iPhone 6,iPhone 6 landscape,Galaxy S5,Galaxy S5 landscape,Nexus 10,Nexus 10 landscape
+          devices: iPhone X,iPhone X landscape,iPhone 6,iPhone 6 landscape,Galaxy S5,Galaxy S5 landscape,Nexus 10,Nexus 10 landscape,iPad,iPad landscape
       - uses: actions/upload-artifact@v2
         with:
           path: screenshots
-          name: devices-screenshots
+          name: test-screenshots
