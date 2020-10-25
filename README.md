@@ -38,4 +38,4 @@ yarn start
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-[![codecov](https://codecov.io/gh/chewam/deaths/branch/master/graph/badge.svg?token=AYKKEFMQVK)](undefined)
+[![codecov](https://codecov.io/gh/chewam/deaths/branch/master/graph/badge.svg?token=AYKKEFMQVK)](https://codecov.io/gh/chewam/deaths)
