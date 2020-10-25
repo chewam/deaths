@@ -1,5 +1,3 @@
-[![codecov](https://codecov.io/gh/chewam/deaths/branch/master/graph/badge.svg?token=AYKKEFMQVK)](undefined)
-
 ##### Install dependencies
 
 ```bash
