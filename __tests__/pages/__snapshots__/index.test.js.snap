@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<DocumentFragment>
+  <header>
+    <h1>
+      Décès annuels en France
+      <small>
+        Sources INSEE (
+        <a
+          href="https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          data.gouv.fr
+        </a>
+        )
+      </small>
+    </h1>
+  </header>
+  <main>
+    <section
+      class="top"
+    >
+      <aside>
+        <ul
+          class="list"
+        >
+          <li
+            class=""
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #ff80ff; background-color: rgb(255, 128, 255);"
+              />
+            </div>
+            <div>
+              <div>
+                2020
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  473 612 décès
+                </div>
+                <div>
+                  (0.71% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class=""
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #bf80ff; background-color: rgb(191, 128, 255);"
+              />
+            </div>
+            <div>
+              <div>
+                2019
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  621 161 décès
+                </div>
+                <div>
+                  (0.93% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class=""
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #8080ff; background-color: rgb(128, 128, 255);"
+              />
+            </div>
+            <div>
+              <div>
+                2018
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  618 424 décès
+                </div>
+                <div>
+                  (0.92% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class=""
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #80bfff; background-color: rgb(128, 191, 255);"
+              />
+            </div>
+            <div>
+              <div>
+                2017
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  615 439 décès
+                </div>
+                <div>
+                  (0.92% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #80ffff; background-color: rgb(128, 255, 255);"
+              />
+            </div>
+            <div>
+              <div>
+                2016
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  602 230 décès
+                </div>
+                <div>
+                  (0.90% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #80ffbf; background-color: rgb(128, 255, 191);"
+              />
+            </div>
+            <div>
+              <div>
+                2015
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  601 833 décès
+                </div>
+                <div>
+                  (0.91% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #80ff80; background-color: rgb(128, 255, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2014
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  567 451 décès
+                </div>
+                <div>
+                  (0.86% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #bfff80; background-color: rgb(191, 255, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2013
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  577 527 décès
+                </div>
+                <div>
+                  (0.88% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #ffff80; background-color: rgb(255, 255, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2012
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  578 133 décès
+                </div>
+                <div>
+                  (0.89% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #ffbf80; background-color: rgb(255, 191, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2011
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  548 949 décès
+                </div>
+                <div>
+                  (0.85% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #ff8080; background-color: rgb(255, 128, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2010
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  556 669 décès
+                </div>
+                <div>
+                  (0.86% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </aside>
+      <figure>
+        <div
+          id="chart-resp-container"
+        />
+      </figure>
+    </section>
+    <section
+      class="bottom"
+    >
+      <div
+        id="overview-resp-container"
+      />
+    </section>
+  </main>
+  <footer>
+    <div>
+      Chewam © 2020
+    </div>
+    <div>
+      version 0.0.0 (
+      <a
+        href="https://github.com/chewam/deaths/tree/dev"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        dev
+      </a>
+      )
+    </div>
+  </footer>
+</DocumentFragment>
+`;
