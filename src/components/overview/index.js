@@ -2,13 +2,15 @@ import {
   Line,
   XAxis,
   YAxis,
-  Tooltip,
   LineChart,
   CartesianGrid,
   ResponsiveContainer,
+  Tooltip as RCTooltip,
 } from "recharts"
 
 import { linearDeaths } from "@utils/deaths"
+
+import Tooltip from "./Tooltip"
 
 const styles = {
   stroke: "#b3b3b3",
@@ -17,14 +19,6 @@ const styles = {
   padding: { left: 0, right: 20 },
   margin: { top: 8, right: 0, bottom: 10, left: -10 },
 }
-
-const MonthTooltip = ({ active, payload, label }) =>
-  active ? (
-    <div className="custom-tooltip">
-      <div>{label}</div>
-      <div>{new Intl.NumberFormat("fr-FR").format(payload[0].value)} décès</div>
-    </div>
-  ) : null
 
 const Overview = () => (
   <ResponsiveContainer id="overview-resp-container">
@@ -47,7 +41,7 @@ const Overview = () => (
         stroke={styles.stroke}
         domain={[40000, 75000]}
       />
-      <Tooltip content={<MonthTooltip />} />
+      <RCTooltip content={<Tooltip />} />
     </LineChart>
   </ResponsiveContainer>
 )

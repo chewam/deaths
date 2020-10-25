@@ -2,7 +2,7 @@ import Head from "@components/Head"
 import Years from "@components/years"
 import Footer from "@components/Footer"
 import Header from "@components/Header"
-import Overview from "@components/Overview"
+import Overview from "@components/overview"
 
 const Body = () => (
   <>
