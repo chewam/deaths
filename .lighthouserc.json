@@ -1,5 +1,6 @@
 {
   "ci": {
+    "staticDistDir": "./dist",
     "upload": {
       "target": "temporary-public-storage"
     }
