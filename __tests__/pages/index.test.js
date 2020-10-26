@@ -4,7 +4,7 @@ import Index from "../../src/pages/index"
 
 test("should match snapshot", () => {
   const { asFragment } = render(<Index />)
-  expect(asFragment(<Index />)).toMatchSnapshot()
+  expect(asFragment()).toMatchSnapshot()
 })
 
 // describe("Index page", () => {

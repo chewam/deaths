@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Years Tooltip should create a simple tooltip 1`] = `
+<DocumentFragment>
+  <div
+    class="custom-tooltip"
+  >
+    <div>
+      toto
+    </div>
+    <div
+      style="color: red;"
+    >
+      titi: 7
+    </div>
+    <div
+      style="color: blue;"
+    >
+      tata: 42
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Years Tooltip should not create a tooltip 1`] = `<DocumentFragment />`;
