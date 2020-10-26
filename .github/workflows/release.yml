@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    branches: [master]
+
+#
+
+jobs:
+  release:
+    name: Create and publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Take screenshot
+        id: screenshot
+        uses: swinton/screenshot-website@v1.x
+        with:
+          delay: 5
+          width: 900
+          height: 472
+          overwrite: true
+          source: https://deaths.now.sh
+          disable-animations: true
+
+      - name: Copy screenshot
+        run: |
+          echo ${{ steps.screenshot.outputs.path }}
+          cp ${{ steps.screenshot.outputs.path }} ./public/
+          ls -la ./public/
+
+      - name: Semantic Release
+        id: semantic
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          semantic_version: 16
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+
+      - name: Release sum up
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: |
+          echo ${{ steps.semantic.outputs.new_release_version }}

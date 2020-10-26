@@ -1,8 +1,6 @@
-name: Tests & Release
+name: Quality
 
 on:
-  push:
-    branches: [master]
   pull_request:
     branches: [master]
 
@@ -12,6 +10,7 @@ jobs:
   #
 
   test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -33,13 +32,13 @@ jobs:
       - name: Install
         run: yarn --frozen-lockfile --perfer-offline
 
-      - name: Lint
+      - name: Lint code
         run: yarn lint
 
-      - name: Test
+      - name: Run tests
         run: yarn test:ci -u
 
-      - name: Code coverage
+      - name: Publish code coverage
         uses: codecov/codecov-action@v1
         with:
           directory: coverage
@@ -47,6 +46,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
 
   #
+
   lighthouse:
     name: Lighthouse
     needs: test
@@ -81,10 +81,6 @@ jobs:
       - name: Build
         run: yarn build
 
-      # - name: npm install, build
-      #   run: |
-      #     npm install
-      #     npm run build
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.5.x
@@ -95,10 +91,11 @@ jobs:
   #
 
   release:
+    name: Release
     needs: lighthouse
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.PAT }}
