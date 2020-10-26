@@ -6,17 +6,3 @@ test("should match snapshot", () => {
   const { asFragment } = render(<Index />)
   expect(asFragment()).toMatchSnapshot()
 })
-
-// describe("Index page", () => {
-//   test("should render header title", () => {
-//     const { getByText } = render(<Index />)
-//     const headerElement = getByText(/Décès annuels en France/)
-//     expect(headerElement).toBeInTheDocument()
-//   })
-
-//   test("should render footer copyright", () => {
-//     const { getByText } = render(<Index />)
-//     const headerElement = getByText(/Chewam © 2020/)
-//     expect(headerElement).toBeInTheDocument()
-//   })
-// })

@@ -12,5 +12,6 @@ module.exports = {
     "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
   },
   transformIgnorePatterns: ["/node_modules/"],
-  setupFilesAfterEnv: ["./jest.setup.js"],
+  setupFilesAfterEnv: ["./jest/setup.js"],
+  snapshotResolver: "./jest/resolver.js",
 }
