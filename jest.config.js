@@ -4,6 +4,7 @@ module.exports = {
     "src/**/**.js",
     "!**/node_modules/**",
     "!<rootDir>/src/pages/_*.js",
+    "!<rootDir>/src/utils/sentry.js",
   ],
   moduleNameMapper: {
     "@data/(.*)": "<rootDir>/src/data/$1",
