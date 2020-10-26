@@ -7,6 +7,12 @@ jobs:
     if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     steps:
+      - name: Echo deployment_status
+        run: |
+          echo ${{ github.event.deployment_status.environment }}
+          echo ${{ github.event.deployment_status.description }}
+          echo ${{ github.event.deployment_status.state }}
+          echo ${{ github.event.deployment_status.target_url }}
       - name: install puppeteer-headful
         uses: mujo-code/puppeteer-headful@master
         env:
