@@ -3,6 +3,9 @@
     "collect": {
       "staticDistDir": "./.next"
     },
+    "assert": {
+      "preset": "lighthouse:recommended"
+    },
     "upload": {
       "target": "temporary-public-storage"
     }
