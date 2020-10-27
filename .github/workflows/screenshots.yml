@@ -24,33 +24,3 @@ jobs:
         with:
           path: screenshots
           name: test-screenshots
-
-  # preview:
-  #   name: Capture preview
-  #   if: github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Preview'
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout repository
-  #       uses: actions/checkout@v2
-
-  #     - name: Take screenshot
-  #       id: screenshot
-  #       uses: swinton/screenshot-website@v1.x
-  #       with:
-  #         delay: 5
-  #         width: 900
-  #         height: 472
-  #         overwrite: true
-  #         source: ${{ github.event.deployment_status.target_url }}
-  #         disable-animations: true
-
-  #     - name: Copy screenshot
-  #       run: |
-  #         echo ${{ steps.screenshot.outputs.path }}
-  #         cp ${{ steps.screenshot.outputs.path }} ./public/
-  #         ls -la ./public/
-
-  #     - name: Commit changes
-  #       uses: stefanzweifel/git-auto-commit-action@v4
-  #       with:
-  #         commit_message: Update preview
