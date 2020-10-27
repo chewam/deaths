@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -32,8 +34,14 @@ jobs:
       - name: Install
         run: yarn --frozen-lockfile --perfer-offline
 
-      - name: Lint code
-        run: yarn lint
+      # - name: Lint code
+      #   run: yarn lint
+      - name: Lint Code Base
+        uses: github/super-linter@v3
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run tests
         run: yarn test:ci -u
@@ -91,7 +99,7 @@ jobs:
   #
 
   release:
-    name: Simulate release
+    name: Semantic release
     needs: lighthouse
     runs-on: ubuntu-latest
     steps:
@@ -100,22 +108,22 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
 
-      - name: Take screenshot
-        id: screenshot
-        uses: swinton/screenshot-website@v1.x
-        with:
-          delay: 5
-          width: 900
-          height: 472
-          overwrite: true
-          source: https://deaths.now.sh
-          disable-animations: true
+      # - name: Take screenshot
+      #   id: screenshot
+      #   uses: swinton/screenshot-website@v1.x
+      #   with:
+      #     delay: 5
+      #     width: 900
+      #     height: 472
+      #     overwrite: true
+      #     source: https://deaths.now.sh
+      #     disable-animations: true
 
-      - name: Copy screenshot
-        run: |
-          echo ${{ steps.screenshot.outputs.path }}
-          cp ${{ steps.screenshot.outputs.path }} ./public/
-          ls -la ./public/
+      # - name: Copy screenshot
+      #   run: |
+      #     echo ${{ steps.screenshot.outputs.path }}
+      #     cp ${{ steps.screenshot.outputs.path }} ./public/
+      #     ls -la ./public/
 
       - name: Semantic Release
         id: semantic
