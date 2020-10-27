@@ -10,7 +10,7 @@ jobs:
   #
 
   test:
-    name: Test
+    name: Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -91,7 +91,7 @@ jobs:
   #
 
   release:
-    name: Release
+    name: Simulate release
     needs: lighthouse
     runs-on: ubuntu-latest
     steps:
