@@ -11,13 +11,13 @@
     "lint": "eslint src/**/*.js"
   },
   "dependencies": {
-    "@sentry/browser": "^5.27.4",
-    "@sentry/integrations": "^5.27.4",
-    "@sentry/node": "^5.27.4",
+    "@sentry/browser": "^5.27.6",
+    "@sentry/integrations": "^5.27.6",
+    "@sentry/node": "^5.27.6",
     "@zeit/next-source-maps": "^0.0.3",
     "event-stream": "^4.0.1",
     "google-palette": "^1.1.0",
-    "next": "^10.0.2",
+    "next": "^10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "recharts": "2.0.0-beta.8",
