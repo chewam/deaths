@@ -1,0 +1,6 @@
+@use "./variables" as *;
+
+.ratio {
+  flex: 1;
+  margin-right: $spacing;
+}

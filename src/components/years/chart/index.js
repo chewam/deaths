@@ -78,6 +78,7 @@ const Chart = ({ years }) => {
           tick={styles.tick}
           stroke={styles.stroke}
           domain={[40000, 80000]}
+          tickFormatter={(value) => Intl.NumberFormat("fr-FR").format(value)}
         />
         <RCTooltip content={<Tooltip />} />
       </LineChart>

@@ -38,3 +38,10 @@ export const linearDeaths = deaths
     []
   )
   .sort((a, b) => a.date - b.date)
+
+export const ratioDeaths = Object.keys(deaths[0]).reduce(
+  (years, key) => (
+    key !== "month" && years.push({ ratio: getRatio(key), year: key }), years
+  ),
+  []
+)

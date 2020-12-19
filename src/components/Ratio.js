@@ -1,0 +1,57 @@
+import {
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  BarChart,
+  CartesianGrid,
+  ResponsiveContainer,
+} from "recharts"
+
+import colors from "@data/colors"
+
+import { ratioDeaths } from "@utils/deaths"
+
+const styles = {
+  stroke: "#b3b3b3",
+  gridStroke: "#666",
+  tick: { fontSize: 12 },
+  padding: { left: 10, right: 10 },
+  margin: { top: 8, right: 0, bottom: 10, left: -5 },
+}
+
+const Ratio = () => (
+  <ResponsiveContainer id="ratio-resp-container" className="ratio">
+    <BarChart data={ratioDeaths} margin={styles.margin}>
+      <CartesianGrid stroke={styles.gridStroke} strokeDasharray="3 3" />
+      <XAxis
+        dy={10}
+        angle={30}
+        dataKey="year"
+        tick={styles.tick}
+        stroke={styles.stroke}
+        padding={styles.padding}
+        interval="preserveStartEnd"
+      />
+      <YAxis
+        dx={-5}
+        type="number"
+        tick={styles.tick}
+        stroke={styles.stroke}
+        domain={[0.8, 1.1]}
+        tickFormatter={(value) => `${value}%`}
+      />
+      <Bar dataKey="ratio">
+        {ratioDeaths.map((ratio, index) => (
+          <Cell
+            fillOpacity="0.4"
+            key={`cell-${index}`}
+            stroke={colors[ratio.year]}
+          />
+        ))}
+      </Bar>
+    </BarChart>
+  </ResponsiveContainer>
+)
+
+export default Ratio

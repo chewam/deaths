@@ -19,14 +19,14 @@ const styles = {
   gridStroke: "#666",
   tick: { fontSize: 12 },
   padding: { left: 0, right: 20 },
-  margin: { top: 8, right: 0, bottom: 10, left: -10 },
+  margin: { top: 8, right: 0, bottom: 10, left: -5 },
 }
 
 const Overview = () => {
   const reference = linearDeaths.reduce((a, b) => (a.value > b.value ? a : b))
 
   return (
-    <ResponsiveContainer id="overview-resp-container">
+    <ResponsiveContainer id="overview-resp-container" className="overview">
       <LineChart data={linearDeaths} margin={styles.margin}>
         <CartesianGrid stroke={styles.gridStroke} strokeDasharray="3 3" />
         <ReferenceLine
@@ -44,7 +44,11 @@ const Overview = () => {
           stroke={styles.stroke}
           strokeDasharray="3 3"
         />
-        <Line dataKey="value" type="monotone" dot={{ fill: styles.stroke }} />
+        <Line
+          dataKey="value"
+          type="monotone"
+          dot={{ fill: styles.stroke, fillOpacity: 0 }}
+        />
         <XAxis
           dy={10}
           angle={30}
@@ -60,6 +64,7 @@ const Overview = () => {
           tick={styles.tick}
           stroke={styles.stroke}
           domain={[40000, 75000]}
+          tickFormatter={(value) => Intl.NumberFormat("fr-FR").format(value)}
         />
         <RCTooltip content={<Tooltip />} />
       </LineChart>
