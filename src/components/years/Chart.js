@@ -23,6 +23,15 @@ const styles = {
   margin: { top: 8, right: 0, bottom: 10, left: -10 },
 }
 
+const tickFormatter = (value) => new Intl.NumberFormat("fr-FR").format(value)
+
+const toolTipRenderer = (payload) =>
+  payload.reverse().map((item, i) => (
+    <div key={i} style={{ color: item.color }}>
+      {item.name}: {new Intl.NumberFormat("fr-FR").format(item.value)} décès
+    </div>
+  ))
+
 const Chart = ({ years }) => {
   const reference = deaths
     .map((month, i) => {
@@ -69,7 +78,7 @@ const Chart = ({ years }) => {
           tick={styles.tick}
           stroke={styles.stroke}
           domain={[40000, 80000]}
-          tickFormatter={(value) => Intl.NumberFormat("fr-FR").format(value)}
+          tickFormatter={tickFormatter}
         />
         {Object.keys(years).map((year, i) =>
           years[year] ? (
@@ -82,17 +91,7 @@ const Chart = ({ years }) => {
             />
           ) : null
         )}
-        <Tooltip
-          content={<CustomTooltip />}
-          render={(payload) =>
-            payload.reverse().map((item, i) => (
-              <div key={i} style={{ color: item.color }}>
-                {item.name}: {new Intl.NumberFormat("fr-FR").format(item.value)}{" "}
-                décès
-              </div>
-            ))
-          }
-        />
+        <Tooltip renderer={toolTipRenderer} content={<CustomTooltip />} />
       </LineChart>
     </ResponsiveContainer>
   )

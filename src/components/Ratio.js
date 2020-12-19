@@ -23,6 +23,11 @@ const styles = {
   margin: { top: 8, right: 0, bottom: 10, left: -5 },
 }
 
+const tickFormatter = (value) => `${value}%`
+
+const toolTipRenderer = ([{ value }]) =>
+  `${new Intl.NumberFormat("fr-FR").format(value)}% de mortalité`
+
 const Ratio = () => (
   <ResponsiveContainer id="ratio-resp-container" className="ratio">
     <BarChart data={ratioDeaths} margin={styles.margin}>
@@ -42,14 +47,12 @@ const Ratio = () => (
         tick={styles.tick}
         stroke={styles.stroke}
         domain={[0.8, 1.1]}
-        tickFormatter={(value) => `${value}%`}
+        tickFormatter={tickFormatter}
       />
       <Tooltip
         content={<CustomTooltip />}
         cursor={{ fill: "#000", fillOpacity: "0.4" }}
-        render={([{ value }]) =>
-          `${new Intl.NumberFormat("fr-FR").format(value)}% de mortalité`
-        }
+        renderer={toolTipRenderer}
       />
       <Bar dataKey="ratio">
         {ratioDeaths.map((ratio, index) => (

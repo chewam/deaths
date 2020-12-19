@@ -22,6 +22,11 @@ const styles = {
   margin: { top: 8, right: 0, bottom: 10, left: -5 },
 }
 
+const tickFormatter = (value) => new Intl.NumberFormat("fr-FR").format(value)
+
+const toolTipRenderer = ([{ value }]) =>
+  `${new Intl.NumberFormat("fr-FR").format(value)} décès`
+
 const Overview = () => {
   const reference = linearDeaths.reduce((a, b) => (a.value > b.value ? a : b))
 
@@ -44,9 +49,7 @@ const Overview = () => {
           tick={styles.tick}
           stroke={styles.stroke}
           domain={[40000, 75000]}
-          tickFormatter={(value) =>
-            new Intl.NumberFormat("fr-FR").format(value)
-          }
+          tickFormatter={tickFormatter}
         />
         <ReferenceLine
           y={reference.value}
@@ -63,12 +66,7 @@ const Overview = () => {
           stroke={styles.stroke}
           strokeDasharray="3 3"
         />
-        <Tooltip
-          content={<CustomTooltip />}
-          render={([{ value }]) =>
-            `${new Intl.NumberFormat("fr-FR").format(value)} décès`
-          }
-        />
+        <Tooltip content={<CustomTooltip />} renderer={toolTipRenderer} />
         <Line
           dataKey="value"
           type="monotone"
