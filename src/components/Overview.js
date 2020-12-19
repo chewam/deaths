@@ -3,16 +3,16 @@ import {
   Label,
   XAxis,
   YAxis,
+  Tooltip,
   LineChart,
   CartesianGrid,
   ReferenceLine,
   ResponsiveContainer,
-  Tooltip as RCTooltip,
 } from "recharts"
 
 import { linearDeaths } from "@utils/deaths"
 
-import Tooltip from "./Tooltip"
+import CustomTooltip from "@components/Tooltip"
 
 const styles = {
   stroke: "#b3b3b3",
@@ -29,26 +29,6 @@ const Overview = () => {
     <ResponsiveContainer id="overview-resp-container" className="overview">
       <LineChart data={linearDeaths} margin={styles.margin}>
         <CartesianGrid stroke={styles.gridStroke} strokeDasharray="3 3" />
-        <ReferenceLine
-          y={reference.value}
-          label={
-            <Label
-              fill={"#ccc"}
-              fontSize="80%"
-              position="insideBottomRight"
-              value={`${reference.label}: ${Intl.NumberFormat("fr-FR").format(
-                reference.value
-              )} décès`}
-            />
-          }
-          stroke={styles.stroke}
-          strokeDasharray="3 3"
-        />
-        <Line
-          dataKey="value"
-          type="monotone"
-          dot={{ fill: styles.stroke, fillOpacity: 0 }}
-        />
         <XAxis
           dy={10}
           angle={30}
@@ -64,9 +44,36 @@ const Overview = () => {
           tick={styles.tick}
           stroke={styles.stroke}
           domain={[40000, 75000]}
-          tickFormatter={(value) => Intl.NumberFormat("fr-FR").format(value)}
+          tickFormatter={(value) =>
+            new Intl.NumberFormat("fr-FR").format(value)
+          }
         />
-        <RCTooltip content={<Tooltip />} />
+        <ReferenceLine
+          y={reference.value}
+          label={
+            <Label
+              fill={"#ccc"}
+              fontSize="80%"
+              position="insideBottomRight"
+              value={`${reference.label}: ${new Intl.NumberFormat(
+                "fr-FR"
+              ).format(reference.value)} décès`}
+            />
+          }
+          stroke={styles.stroke}
+          strokeDasharray="3 3"
+        />
+        <Tooltip
+          content={<CustomTooltip />}
+          render={([{ value }]) =>
+            `${new Intl.NumberFormat("fr-FR").format(value)} décès`
+          }
+        />
+        <Line
+          dataKey="value"
+          type="monotone"
+          dot={{ fill: styles.stroke, fillOpacity: 0 }}
+        />
       </LineChart>
     </ResponsiveContainer>
   )

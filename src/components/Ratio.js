@@ -3,6 +3,7 @@ import {
   Cell,
   XAxis,
   YAxis,
+  Tooltip,
   BarChart,
   CartesianGrid,
   ResponsiveContainer,
@@ -11,6 +12,8 @@ import {
 import colors from "@data/colors"
 
 import { ratioDeaths } from "@utils/deaths"
+
+import CustomTooltip from "@components/Tooltip"
 
 const styles = {
   stroke: "#b3b3b3",
@@ -40,6 +43,13 @@ const Ratio = () => (
         stroke={styles.stroke}
         domain={[0.8, 1.1]}
         tickFormatter={(value) => `${value}%`}
+      />
+      <Tooltip
+        content={<CustomTooltip />}
+        cursor={{ fill: "#000", fillOpacity: "0.4" }}
+        render={([{ value }]) =>
+          `${new Intl.NumberFormat("fr-FR").format(value)}% de mortalité`
+        }
       />
       <Bar dataKey="ratio">
         {ratioDeaths.map((ratio, index) => (

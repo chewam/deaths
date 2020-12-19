@@ -2,7 +2,7 @@ import { useState } from "react"
 import { defaultYears } from "@utils/deaths"
 
 import List from "./List"
-import Chart from "./chart"
+import Chart from "./Chart"
 
 const Years = () => {
   const [years, setYears] = useState(defaultYears)
