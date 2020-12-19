@@ -43,10 +43,10 @@ exports[`should match snapshot 1`] = `
                 class="deaths"
               >
                 <div>
-                  473 612 décès
+                  595 993 décès
                 </div>
                 <div>
-                  (0.71% de la population totale)
+                  (0.89% de la population totale)
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ exports[`should match snapshot 1`] = `
                 class="deaths"
               >
                 <div>
-                  621 161 décès
+                  621 309 décès
                 </div>
                 <div>
                   (0.93% de la population totale)
@@ -93,7 +93,7 @@ exports[`should match snapshot 1`] = `
                 class="deaths"
               >
                 <div>
-                  618 424 décès
+                  618 469 décès
                 </div>
                 <div>
                   (0.92% de la population totale)
@@ -118,7 +118,7 @@ exports[`should match snapshot 1`] = `
                 class="deaths"
               >
                 <div>
-                  615 439 décès
+                  615 457 décès
                 </div>
                 <div>
                   (0.92% de la population totale)
@@ -143,7 +143,7 @@ exports[`should match snapshot 1`] = `
                 class="deaths"
               >
                 <div>
-                  602 230 décès
+                  602 238 décès
                 </div>
                 <div>
                   (0.90% de la population totale)
@@ -168,7 +168,7 @@ exports[`should match snapshot 1`] = `
                 class="deaths"
               >
                 <div>
-                  601 833 décès
+                  601 841 décès
                 </div>
                 <div>
                   (0.91% de la population totale)
@@ -193,7 +193,7 @@ exports[`should match snapshot 1`] = `
                 class="deaths"
               >
                 <div>
-                  567 451 décès
+                  567 460 décès
                 </div>
                 <div>
                   (0.86% de la population totale)
@@ -218,7 +218,7 @@ exports[`should match snapshot 1`] = `
                 class="deaths"
               >
                 <div>
-                  577 527 décès
+                  577 532 décès
                 </div>
                 <div>
                   (0.88% de la population totale)
@@ -243,7 +243,7 @@ exports[`should match snapshot 1`] = `
                 class="deaths"
               >
                 <div>
-                  578 133 décès
+                  578 137 décès
                 </div>
                 <div>
                   (0.89% de la population totale)
@@ -268,7 +268,7 @@ exports[`should match snapshot 1`] = `
                 class="deaths"
               >
                 <div>
-                  548 949 décès
+                  548 952 décès
                 </div>
                 <div>
                   (0.85% de la population totale)
@@ -293,7 +293,7 @@ exports[`should match snapshot 1`] = `
                 class="deaths"
               >
                 <div>
-                  556 669 décès
+                  556 677 décès
                 </div>
                 <div>
                   (0.86% de la population totale)
@@ -313,6 +313,11 @@ exports[`should match snapshot 1`] = `
       class="bottom"
     >
       <div
+        class="ratio"
+        id="ratio-resp-container"
+      />
+      <div
+        class="overview"
         id="overview-resp-container"
       />
     </section>

@@ -9,7 +9,16 @@ exports[`Overview Tooltip should create a simple tooltip 1`] = `
       toto
     </div>
     <div>
-      42 décès
+      <div
+        style="color: red;"
+      >
+        titi: 7
+      </div>
+      <div
+        style="color: blue;"
+      >
+        tata: 42
+      </div>
     </div>
   </div>
 </DocumentFragment>
