@@ -34,7 +34,7 @@ const getDatasetResources = async () => {
 
 const getYearlyFiles = (resources) => {
   const files = resources.filter((resource) =>
-    resource.title.match(/^deces-20[1-9]\d\.txt$/)
+    resource.title.match(/^deces-20[0-9]\d\.txt$/)
   )
   const year = parseInt(files[0].title.match(/\d{4}/)[0], 10)
   return { files, year }

@@ -28,7 +28,7 @@ const processData = (data) => {
   for (const key in data) {
     const { year, month } = data[key]
     const index = month - 1
-    if (2010 > year || year > 2020) continue
+    if (2000 > year || year > 2020) continue
     if (0 > index || index > 12) continue
     if (!result[index]) {
       result[index] = { month: Months[index] }
