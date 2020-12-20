@@ -6,6 +6,7 @@ ul.list {
   display: flex;
   list-style: none;
   flex-direction: column;
+  // background-color: cornsilk;
 
   li {
     flex: 1;
@@ -13,7 +14,12 @@ ul.list {
     cursor: pointer;
     position: relative;
     align-items: center;
-    margin: 0 0 $spacing 0;
+    margin: 0 0 $spacing * 1.5 0;
+    flex-direction: row;
+
+    // & > div:first-child {
+    // background-color: burlywood;
+    // }
 
     .dot {
       border-width: 1px;
@@ -26,13 +32,27 @@ ul.list {
       min-height: $spacing * 1.3;
     }
 
-    .deaths {
-      color: $font-color;
-      white-space: nowrap;
-      font-size: $font-size * 0.8;
+    & > div:last-child {
+      // outline: 1px solid chartreuse;
+      display: flex;
 
-      div:last-child {
-        font-size: $font-size * 0.7;
+      .year {
+        // background-color: coral;
+        display: flex;
+        align-items: center;
+        margin: 0 $spacing * 1.5 0 0;
+        justify-content: center;
+      }
+
+      .deaths {
+        text-align: right;
+        // color: $font-color;
+        white-space: nowrap;
+        font-size: $font-size * 0.8;
+
+        div:last-child {
+          font-size: $font-size * 0.7;
+        }
       }
     }
 

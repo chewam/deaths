@@ -21,10 +21,10 @@ const List = ({ years, toggleYear }) => (
             ></div>
           </div>
           <div>
-            <div>{year}</div>
+            <div className="year">{year}</div>
             <div className="deaths">
               <div>{getTotal(year)} décès</div>
-              <div>({getRatio(year)}% de la population totale)</div>
+              <div>{getRatio(year)}% de mortalité</div>
             </div>
           </div>
         </li>
