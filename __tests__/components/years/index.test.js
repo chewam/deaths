@@ -7,7 +7,7 @@ afterEach(cleanup)
 test("should enable list item on click", () => {
   render(<Years />)
   const listItems = screen.getAllByRole("listitem")
-  expect(listItems).toHaveLength(11)
+  expect(listItems.length).toBeGreaterThanOrEqual(21)
   const lastItem = listItems[listItems.length - 1]
   expect(lastItem.classList.contains("disabled")).toBe(true)
   fireEvent.click(lastItem)

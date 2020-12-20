@@ -32,7 +32,7 @@ exports[`should match snapshot 1`] = `
             <div>
               <div
                 class="dot"
-                style="border-color: #ff80ff; background-color: rgb(255, 128, 255);"
+                style="border-color: #ff80c5; background-color: rgb(255, 128, 197);"
               />
             </div>
             <div>
@@ -57,7 +57,7 @@ exports[`should match snapshot 1`] = `
             <div>
               <div
                 class="dot"
-                style="border-color: #bf80ff; background-color: rgb(191, 128, 255);"
+                style="border-color: #ff80e8; background-color: rgb(255, 128, 232);"
               />
             </div>
             <div>
@@ -82,7 +82,7 @@ exports[`should match snapshot 1`] = `
             <div>
               <div
                 class="dot"
-                style="border-color: #8080ff; background-color: rgb(128, 128, 255);"
+                style="border-color: #f380ff; background-color: rgb(243, 128, 255);"
               />
             </div>
             <div>
@@ -107,7 +107,7 @@ exports[`should match snapshot 1`] = `
             <div>
               <div
                 class="dot"
-                style="border-color: #80bfff; background-color: rgb(128, 191, 255);"
+                style="border-color: #d180ff; background-color: rgb(209, 128, 255);"
               />
             </div>
             <div>
@@ -132,7 +132,7 @@ exports[`should match snapshot 1`] = `
             <div>
               <div
                 class="dot"
-                style="border-color: #80ffff; background-color: rgb(128, 255, 255);"
+                style="border-color: #ae80ff; background-color: rgb(174, 128, 255);"
               />
             </div>
             <div>
@@ -157,7 +157,7 @@ exports[`should match snapshot 1`] = `
             <div>
               <div
                 class="dot"
-                style="border-color: #80ffbf; background-color: rgb(128, 255, 191);"
+                style="border-color: #8b80ff; background-color: rgb(139, 128, 255);"
               />
             </div>
             <div>
@@ -182,7 +182,7 @@ exports[`should match snapshot 1`] = `
             <div>
               <div
                 class="dot"
-                style="border-color: #80ff80; background-color: rgb(128, 255, 128);"
+                style="border-color: #8097ff; background-color: rgb(128, 151, 255);"
               />
             </div>
             <div>
@@ -207,7 +207,7 @@ exports[`should match snapshot 1`] = `
             <div>
               <div
                 class="dot"
-                style="border-color: #bfff80; background-color: rgb(191, 255, 128);"
+                style="border-color: #80b9ff; background-color: rgb(128, 185, 255);"
               />
             </div>
             <div>
@@ -232,7 +232,7 @@ exports[`should match snapshot 1`] = `
             <div>
               <div
                 class="dot"
-                style="border-color: #ffff80; background-color: rgb(255, 255, 128);"
+                style="border-color: #80dcff; background-color: rgb(128, 220, 255);"
               />
             </div>
             <div>
@@ -257,7 +257,7 @@ exports[`should match snapshot 1`] = `
             <div>
               <div
                 class="dot"
-                style="border-color: #ffbf80; background-color: rgb(255, 191, 128);"
+                style="border-color: #80ffff; background-color: rgb(128, 255, 255);"
               />
             </div>
             <div>
@@ -282,7 +282,7 @@ exports[`should match snapshot 1`] = `
             <div>
               <div
                 class="dot"
-                style="border-color: #ff8080; background-color: rgb(255, 128, 128);"
+                style="border-color: #80ffdc; background-color: rgb(128, 255, 220);"
               />
             </div>
             <div>
@@ -297,6 +297,256 @@ exports[`should match snapshot 1`] = `
                 </div>
                 <div>
                   (0.86% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #80ffb9; background-color: rgb(128, 255, 185);"
+              />
+            </div>
+            <div>
+              <div>
+                2009
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  555 745 décès
+                </div>
+                <div>
+                  (0.86% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #80ff97; background-color: rgb(128, 255, 151);"
+              />
+            </div>
+            <div>
+              <div>
+                2008
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  549 872 décès
+                </div>
+                <div>
+                  (0.86% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #8bff80; background-color: rgb(139, 255, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2007
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  538 196 décès
+                </div>
+                <div>
+                  (0.85% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #aeff80; background-color: rgb(174, 255, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2006
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  533 280 décès
+                </div>
+                <div>
+                  (0.84% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #d1ff80; background-color: rgb(209, 255, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2005
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  545 716 décès
+                </div>
+                <div>
+                  (0.87% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #f3ff80; background-color: rgb(243, 255, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2004
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  526 695 décès
+                </div>
+                <div>
+                  (0.85% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #ffe880; background-color: rgb(255, 232, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2003
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  570 654 décès
+                </div>
+                <div>
+                  (0.92% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #ffc580; background-color: rgb(255, 197, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2002
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  552 517 décès
+                </div>
+                <div>
+                  (0.90% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #ffa280; background-color: rgb(255, 162, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2001
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  548 158 décès
+                </div>
+                <div>
+                  (0.90% de la population totale)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="disabled"
+          >
+            <div>
+              <div
+                class="dot"
+                style="border-color: #ff8080; background-color: rgb(255, 128, 128);"
+              />
+            </div>
+            <div>
+              <div>
+                2000
+              </div>
+              <div
+                class="deaths"
+              >
+                <div>
+                  546 856 décès
+                </div>
+                <div>
+                  (0.90% de la population totale)
                 </div>
               </div>
             </div>
