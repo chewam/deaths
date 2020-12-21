@@ -9,6 +9,7 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts"
+import { FormattedMessage, useIntl } from "react-intl"
 
 import colors from "@data/colors"
 import deaths from "@data/deaths"
@@ -23,16 +24,25 @@ const styles = {
   margin: { top: 8, right: 0, bottom: 10, left: -10 },
 }
 
-const tickFormatter = (value) => new Intl.NumberFormat("fr-FR").format(value)
-
-const toolTipRenderer = (payload) =>
-  payload.reverse().map((item, i) => (
-    <div key={i} style={{ color: item.color }}>
-      {item.name}: {new Intl.NumberFormat("fr-FR").format(item.value)} décès
-    </div>
-  ))
-
 const Chart = ({ years }) => {
+  const intl = useIntl()
+
+  const YAxisTickFormatter = (value) => intl.formatNumber(value)
+
+  const XAxisTickFormatter = (value) => {
+    return `${intl.formatDate(new Date(2001, Months.indexOf(value)), {
+      month: "long",
+    })}`
+  }
+
+  const toolTipRenderer = (payload) =>
+    payload.reverse().map((item, i) => (
+      <div key={i} style={{ color: item.color }}>
+        {item.name}: {intl.formatNumber(item.value)}{" "}
+        {intl.formatMessage({ id: "deaths", defaultMessage: "décès" })}
+      </div>
+    ))
+
   const reference = deaths
     .map((month, i) => {
       const year = Object.keys(month).reduce((a, b) =>
@@ -41,6 +51,18 @@ const Chart = ({ years }) => {
       return { month: i, year, value: month[year] }
     })
     .reduce((a, b) => (a.value > b.value ? a : b))
+
+  const referenceLabel = `${intl.formatDate(
+    new Date(reference.year, reference.month, 15),
+    {
+      month: "long",
+    }
+  )} ${reference.year}: ${intl.formatNumber(
+    reference.value
+  )} ${intl.formatMessage({
+    id: "deaths",
+    defaultMessage: "décès",
+  })}`
 
   return (
     <ResponsiveContainer id="chart-resp-container">
@@ -53,11 +75,7 @@ const Chart = ({ years }) => {
               fill={"#ccc"}
               fontSize="80%"
               position="insideBottomRight"
-              value={`${Months[reference.month]} ${
-                reference.year
-              }: ${new Intl.NumberFormat("fr-FR").format(
-                reference.value
-              )} décès`}
+              value={referenceLabel}
             />
           }
           stroke={colors[reference.year]}
@@ -71,13 +89,14 @@ const Chart = ({ years }) => {
           tick={styles.tick}
           stroke={styles.stroke}
           padding={styles.padding}
+          tickFormatter={XAxisTickFormatter}
         />
         <YAxis
           dx={-5}
           type="number"
           tick={styles.tick}
           stroke={styles.stroke}
-          tickFormatter={tickFormatter}
+          tickFormatter={YAxisTickFormatter}
           domain={["dataMin - 5000", "dataMax + 5000"]}
         />
         {Object.keys(years).map((year, i) =>

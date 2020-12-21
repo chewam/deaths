@@ -11,8 +11,8 @@ module.exports = nextSourceMaps({
     VERCEL_GITHUB_COMMIT_SHA: process.env.VERCEL_GITHUB_COMMIT_SHA,
   },
   i18n: {
-    locales: ["en-US", "fr-FR"],
-    defaultLocale: "fr-FR",
+    locales: ["en", "fr"],
+    defaultLocale: "fr",
   },
   webpack: (config, { isServer, buildId }) => {
     config.plugins.push(

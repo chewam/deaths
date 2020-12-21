@@ -1,9 +1,11 @@
+import { FormattedMessage } from "react-intl"
+
 const Header = () => (
   <header>
     <h1>
-      Décès annuels en France
+      <FormattedMessage id="title" defaultMessage="Décès annuels en France" />
       <small>
-        Sources INSEE (
+        <FormattedMessage id="sources" defaultMessage="Sources INSEE" />:{" "}
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -11,7 +13,6 @@ const Header = () => (
         >
           data.gouv.fr
         </a>
-        )
       </small>
     </h1>
   </header>

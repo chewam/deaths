@@ -26,9 +26,11 @@ export const linearDeaths = deaths
           (months, key) => (
             key !== "month" &&
               months.push({
+                year: key,
                 value: death[key],
-                label: `${death.month.substring(0, 3)}. ${key}`,
-                date: new Date(key, Months.indexOf(death.month), 15),
+                month: death.month,
+                label: `${death.month} ${key}`,
+                date: new Date(key, Months.indexOf(death.month), 15).getTime(),
               }),
             months
           ),

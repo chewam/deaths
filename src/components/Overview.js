@@ -9,9 +9,10 @@ import {
   ReferenceLine,
   ResponsiveContainer,
 } from "recharts"
+import { useIntl } from "react-intl"
 
+import Months from "@data/months"
 import { linearDeaths } from "@utils/deaths"
-
 import CustomTooltip from "@components/Tooltip"
 
 const styles = {
@@ -22,13 +23,35 @@ const styles = {
   margin: { top: 8, right: 0, bottom: 10, left: -5 },
 }
 
-const tickFormatter = (value) => new Intl.NumberFormat("fr-FR").format(value)
-
-const toolTipRenderer = ([{ value }]) =>
-  `${new Intl.NumberFormat("fr-FR").format(value)} décès`
-
 const Overview = () => {
+  const intl = useIntl()
+
   const reference = linearDeaths.reduce((a, b) => (a.value > b.value ? a : b))
+
+  const referenceLabel = `${intl.formatDate(
+    new Date(reference.year, Months.indexOf(reference.month)),
+    { month: "long" }
+  )} ${reference.year}: ${intl.formatNumber(
+    reference.value
+  )} ${intl.formatMessage({
+    id: "deaths",
+    defaultMessage: "décès",
+  })}`
+
+  const YAxisTickFormatter = (value) => intl.formatNumber(value)
+
+  const XAxisTickFormatter = (value) => {
+    const [month, year] = value.split(" ")
+    return `${intl
+      .formatDate(new Date(year, Months.indexOf(month)), { month: "long" })
+      .substring(0, 3)}. ${year}`
+  }
+
+  const toolTipRenderer = ([{ value }]) =>
+    `${intl.formatNumber(value)} ${intl.formatMessage({
+      id: "deaths",
+      defaultMessage: "décès",
+    })}`
 
   return (
     <ResponsiveContainer id="overview-resp-container" className="overview">
@@ -42,13 +65,14 @@ const Overview = () => {
           stroke={styles.stroke}
           padding={styles.padding}
           interval="preserveStartEnd"
+          tickFormatter={XAxisTickFormatter}
         />
         <YAxis
           dx={-5}
           type="number"
           tick={styles.tick}
           stroke={styles.stroke}
-          tickFormatter={tickFormatter}
+          tickFormatter={YAxisTickFormatter}
           domain={["dataMin - 2000", "dataMax + 3000"]}
         />
         <ReferenceLine
@@ -58,9 +82,7 @@ const Overview = () => {
               fill={"#ccc"}
               fontSize="80%"
               position="insideBottomRight"
-              value={`${reference.label}: ${new Intl.NumberFormat(
-                "fr-FR"
-              ).format(reference.value)} décès`}
+              value={referenceLabel}
             />
           }
           stroke={styles.stroke}

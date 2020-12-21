@@ -1,18 +1,36 @@
 import NextHead from "next/head"
+import { useIntl } from "react-intl"
 
 const Head = () => {
   const VERCEL_URL = process.env.VERCEL_URL
   const ANALYTICS_ID = process.env.ANALYTICS_ID
 
+  const intl = useIntl()
+
   return (
     <NextHead>
-      <title>Décès annuels en France</title>
+      <title>
+        {intl.formatMessage({
+          id: "title",
+          defaultMessage: "Décès annuels en France",
+        })}
+      </title>
       <link rel="icon" href="/favicon.png" />
-      <meta property="og:title" content="Décès annuels en France" />
+      <meta
+        property="og:title"
+        content={intl.formatMessage({
+          id: "title",
+          defaultMessage: "Décès annuels en France",
+        })}
+      />
       <meta
         name="description"
         property="og:description"
-        content="Statistiques annuelles des décès en France de 2010 à nos jours, basées sur les données de l'INSEE."
+        content={intl.formatMessage({
+          id: "description",
+          defaultMessage:
+            "Statistiques annuelles des décès en France de 2000 à nos jours, basées sur les données de l'INSEE.",
+        })}
       />
       {VERCEL_URL && (
         <meta

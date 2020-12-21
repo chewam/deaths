@@ -8,11 +8,10 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts"
+import { useIntl } from "react-intl"
 
 import colors from "@data/colors"
-
 import { ratioDeaths } from "@utils/deaths"
-
 import CustomTooltip from "@components/Tooltip"
 
 const styles = {
@@ -23,48 +22,60 @@ const styles = {
   margin: { top: 8, right: 0, bottom: 10, left: -5 },
 }
 
-const tickFormatter = (value) => `${value}%`
+const Ratio = () => {
+  const intl = useIntl()
 
-const toolTipRenderer = ([{ value }]) =>
-  `${new Intl.NumberFormat("fr-FR").format(value)}% de mortalité`
+  const tickFormatter = (value) =>
+    `${intl.formatNumber(value, {
+      minimumFractionDigits: 2,
+    })}%`
 
-const Ratio = () => (
-  <ResponsiveContainer id="ratio-resp-container" className="ratio">
-    <BarChart data={ratioDeaths} margin={styles.margin}>
-      <CartesianGrid stroke={styles.gridStroke} strokeDasharray="3 3" />
-      <XAxis
-        dy={10}
-        angle={30}
-        dataKey="year"
-        tick={styles.tick}
-        stroke={styles.stroke}
-        padding={styles.padding}
-        interval="preserveStartEnd"
-      />
-      <YAxis
-        dx={-5}
-        type="number"
-        tick={styles.tick}
-        stroke={styles.stroke}
-        tickFormatter={tickFormatter}
-        domain={["dataMin - 0.07", "dataMax + 0.07"]}
-      />
-      <Tooltip
-        content={<CustomTooltip />}
-        cursor={{ fill: "#000", fillOpacity: "0.4" }}
-        renderer={toolTipRenderer}
-      />
-      <Bar dataKey="ratio">
-        {ratioDeaths.map((ratio, index) => (
-          <Cell
-            fillOpacity="0.4"
-            key={`cell-${index}`}
-            stroke={colors[ratio.year]}
-          />
-        ))}
-      </Bar>
-    </BarChart>
-  </ResponsiveContainer>
-)
+  const toolTipRenderer = ([{ value }]) =>
+    `${intl.formatNumber(value, {
+      minimumFractionDigits: 2,
+    })}% ${intl.formatMessage({
+      id: "mortality",
+      defaultMessage: "de mortalité",
+    })}`
+
+  return (
+    <ResponsiveContainer id="ratio-resp-container" className="ratio">
+      <BarChart data={ratioDeaths} margin={styles.margin}>
+        <CartesianGrid stroke={styles.gridStroke} strokeDasharray="3 3" />
+        <XAxis
+          dy={10}
+          angle={30}
+          dataKey="year"
+          tick={styles.tick}
+          stroke={styles.stroke}
+          padding={styles.padding}
+          interval="preserveStartEnd"
+        />
+        <YAxis
+          dx={-5}
+          type="number"
+          tick={styles.tick}
+          stroke={styles.stroke}
+          tickFormatter={tickFormatter}
+          domain={["dataMin - 0.07", "dataMax + 0.07"]}
+        />
+        <Tooltip
+          content={<CustomTooltip />}
+          cursor={{ fill: "#000", fillOpacity: "0.4" }}
+          renderer={toolTipRenderer}
+        />
+        <Bar dataKey="ratio">
+          {ratioDeaths.map((ratio, index) => (
+            <Cell
+              fillOpacity="0.4"
+              key={`cell-${index}`}
+              stroke={colors[ratio.year]}
+            />
+          ))}
+        </Bar>
+      </BarChart>
+    </ResponsiveContainer>
+  )
+}
 
 export default Ratio
