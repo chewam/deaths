@@ -19,6 +19,7 @@ module.exports = {
     "import/resolver": {
       alias: [
         ["@data", "./src/data"],
+        ["@lang", "./src/lang"],
         ["@utils", "./src/utils"],
         ["@styles", "./src/styles"],
         ["@components", "./src/components"],

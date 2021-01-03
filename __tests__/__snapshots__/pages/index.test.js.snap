@@ -6,7 +6,7 @@ exports[`should match snapshot 1`] = `
     <h1>
       Décès annuels en France
       <small>
-        Sources INSEE (
+        Sources INSEE: 
         <a
           href="https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees"
           rel="noopener noreferrer"
@@ -14,7 +14,6 @@ exports[`should match snapshot 1`] = `
         >
           data.gouv.fr
         </a>
-        )
       </small>
     </h1>
   </header>
@@ -36,7 +35,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2020
               </div>
               <div
@@ -46,7 +47,7 @@ exports[`should match snapshot 1`] = `
                   595 993 décès
                 </div>
                 <div>
-                  (0.89% de la population totale)
+                  0.89% de mortalité
                 </div>
               </div>
             </div>
@@ -61,7 +62,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2019
               </div>
               <div
@@ -71,7 +74,7 @@ exports[`should match snapshot 1`] = `
                   621 309 décès
                 </div>
                 <div>
-                  (0.93% de la population totale)
+                  0.93% de mortalité
                 </div>
               </div>
             </div>
@@ -86,7 +89,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2018
               </div>
               <div
@@ -96,7 +101,7 @@ exports[`should match snapshot 1`] = `
                   618 469 décès
                 </div>
                 <div>
-                  (0.92% de la population totale)
+                  0.92% de mortalité
                 </div>
               </div>
             </div>
@@ -111,7 +116,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2017
               </div>
               <div
@@ -121,7 +128,7 @@ exports[`should match snapshot 1`] = `
                   615 457 décès
                 </div>
                 <div>
-                  (0.92% de la population totale)
+                  0.92% de mortalité
                 </div>
               </div>
             </div>
@@ -136,7 +143,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2016
               </div>
               <div
@@ -146,7 +155,7 @@ exports[`should match snapshot 1`] = `
                   602 238 décès
                 </div>
                 <div>
-                  (0.90% de la population totale)
+                  0.90% de mortalité
                 </div>
               </div>
             </div>
@@ -161,7 +170,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2015
               </div>
               <div
@@ -171,7 +182,7 @@ exports[`should match snapshot 1`] = `
                   601 841 décès
                 </div>
                 <div>
-                  (0.91% de la population totale)
+                  0.91% de mortalité
                 </div>
               </div>
             </div>
@@ -186,7 +197,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2014
               </div>
               <div
@@ -196,7 +209,7 @@ exports[`should match snapshot 1`] = `
                   567 460 décès
                 </div>
                 <div>
-                  (0.86% de la population totale)
+                  0.86% de mortalité
                 </div>
               </div>
             </div>
@@ -211,7 +224,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2013
               </div>
               <div
@@ -221,7 +236,7 @@ exports[`should match snapshot 1`] = `
                   577 532 décès
                 </div>
                 <div>
-                  (0.88% de la population totale)
+                  0.88% de mortalité
                 </div>
               </div>
             </div>
@@ -236,7 +251,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2012
               </div>
               <div
@@ -246,7 +263,7 @@ exports[`should match snapshot 1`] = `
                   578 137 décès
                 </div>
                 <div>
-                  (0.89% de la population totale)
+                  0.89% de mortalité
                 </div>
               </div>
             </div>
@@ -261,7 +278,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2011
               </div>
               <div
@@ -271,7 +290,7 @@ exports[`should match snapshot 1`] = `
                   548 952 décès
                 </div>
                 <div>
-                  (0.85% de la population totale)
+                  0.85% de mortalité
                 </div>
               </div>
             </div>
@@ -286,7 +305,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2010
               </div>
               <div
@@ -296,7 +317,7 @@ exports[`should match snapshot 1`] = `
                   556 677 décès
                 </div>
                 <div>
-                  (0.86% de la population totale)
+                  0.86% de mortalité
                 </div>
               </div>
             </div>
@@ -311,7 +332,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2009
               </div>
               <div
@@ -321,7 +344,7 @@ exports[`should match snapshot 1`] = `
                   555 745 décès
                 </div>
                 <div>
-                  (0.86% de la population totale)
+                  0.86% de mortalité
                 </div>
               </div>
             </div>
@@ -336,7 +359,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2008
               </div>
               <div
@@ -346,7 +371,7 @@ exports[`should match snapshot 1`] = `
                   549 872 décès
                 </div>
                 <div>
-                  (0.86% de la population totale)
+                  0.86% de mortalité
                 </div>
               </div>
             </div>
@@ -361,7 +386,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2007
               </div>
               <div
@@ -371,7 +398,7 @@ exports[`should match snapshot 1`] = `
                   538 196 décès
                 </div>
                 <div>
-                  (0.85% de la population totale)
+                  0.85% de mortalité
                 </div>
               </div>
             </div>
@@ -386,7 +413,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2006
               </div>
               <div
@@ -396,7 +425,7 @@ exports[`should match snapshot 1`] = `
                   533 280 décès
                 </div>
                 <div>
-                  (0.84% de la population totale)
+                  0.84% de mortalité
                 </div>
               </div>
             </div>
@@ -411,7 +440,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2005
               </div>
               <div
@@ -421,7 +452,7 @@ exports[`should match snapshot 1`] = `
                   545 716 décès
                 </div>
                 <div>
-                  (0.87% de la population totale)
+                  0.87% de mortalité
                 </div>
               </div>
             </div>
@@ -436,7 +467,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2004
               </div>
               <div
@@ -446,7 +479,7 @@ exports[`should match snapshot 1`] = `
                   526 695 décès
                 </div>
                 <div>
-                  (0.85% de la population totale)
+                  0.85% de mortalité
                 </div>
               </div>
             </div>
@@ -461,7 +494,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2003
               </div>
               <div
@@ -471,7 +506,7 @@ exports[`should match snapshot 1`] = `
                   570 654 décès
                 </div>
                 <div>
-                  (0.92% de la population totale)
+                  0.92% de mortalité
                 </div>
               </div>
             </div>
@@ -486,7 +521,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2002
               </div>
               <div
@@ -496,7 +533,7 @@ exports[`should match snapshot 1`] = `
                   552 517 décès
                 </div>
                 <div>
-                  (0.90% de la population totale)
+                  0.90% de mortalité
                 </div>
               </div>
             </div>
@@ -511,7 +548,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2001
               </div>
               <div
@@ -521,7 +560,7 @@ exports[`should match snapshot 1`] = `
                   548 158 décès
                 </div>
                 <div>
-                  (0.90% de la population totale)
+                  0.90% de mortalité
                 </div>
               </div>
             </div>
@@ -536,7 +575,9 @@ exports[`should match snapshot 1`] = `
               />
             </div>
             <div>
-              <div>
+              <div
+                class="year"
+              >
                 2000
               </div>
               <div
@@ -546,7 +587,7 @@ exports[`should match snapshot 1`] = `
                   546 856 décès
                 </div>
                 <div>
-                  (0.90% de la population totale)
+                  0.90% de mortalité
                 </div>
               </div>
             </div>
@@ -577,7 +618,12 @@ exports[`should match snapshot 1`] = `
       Chewam © 2020
     </div>
     <div>
-      version 0.0.0 (
+      <a
+        href="/"
+      >
+        en
+      </a>
+       - version 0.0.0 (
       <a
         href="https://github.com/chewam/deaths/tree/dev"
         rel="noopener noreferrer"

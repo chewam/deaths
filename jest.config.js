@@ -16,6 +16,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     "@data/(.*)": "<rootDir>/src/data/$1",
+    "@lang/(.*)": "<rootDir>/src/lang/$1",
     "@utils/(.*)": "<rootDir>/src/utils/$1",
     "@styles/(.*)": "<rootDir>/src/styles/$1",
     "@components/(.*)": "<rootDir>/src/components/$1",

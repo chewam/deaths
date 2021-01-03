@@ -4,8 +4,8 @@ import { useRouter } from "next/router"
 
 import "@styles/index.scss"
 
-import en from "../lang/en.json"
-import fr from "../lang/fr.json"
+import en from "@lang/en.json"
+import fr from "@lang/fr.json"
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
