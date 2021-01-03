@@ -1,36 +1,21 @@
 import NextHead from "next/head"
-import { useIntl } from "react-intl"
+import useI18n from "@utils/i18n"
 
 const Head = () => {
   const VERCEL_URL = process.env.VERCEL_URL
   const ANALYTICS_ID = process.env.ANALYTICS_ID
 
-  const intl = useIntl()
+  const { f } = useI18n()
 
   return (
     <NextHead>
-      <title>
-        {intl.formatMessage({
-          id: "title",
-          defaultMessage: "Décès annuels en France",
-        })}
-      </title>
+      <title>{f("title")}</title>
       <link rel="icon" href="/favicon.png" />
-      <meta
-        property="og:title"
-        content={intl.formatMessage({
-          id: "title",
-          defaultMessage: "Décès annuels en France",
-        })}
-      />
+      <meta property="og:title" content={f("title")} />
       <meta
         name="description"
         property="og:description"
-        content={intl.formatMessage({
-          id: "description",
-          defaultMessage:
-            "Statistiques annuelles des décès en France de 2000 à nos jours, basées sur les données de l'INSEE.",
-        })}
+        content={f("description")}
       />
       {VERCEL_URL && (
         <meta
@@ -48,13 +33,13 @@ const Head = () => {
           <script
             dangerouslySetInnerHTML={{
               __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${ANALYTICS_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${ANALYTICS_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `,
             }}
           />
         </>

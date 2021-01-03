@@ -1,26 +1,17 @@
 import Head from "next/head"
-import { useIntl } from "react-intl"
+import useI18n from "@utils/i18n"
 
 const Custom404 = () => {
-  const intl = useIntl()
+  const { f } = useI18n()
 
   return (
     <>
       <Head>
-        <title>
-          {intl.formatMessage({
-            id: "title",
-            defaultMessage: "Décès annuels en France",
-          })}
-        </title>
+        <title>{f("title")}</title>
         <meta
           name="description"
           property="og:description"
-          content={intl.formatMessage({
-            id: "description",
-            defaultMessage:
-              "Statistiques annuelles des décès en France de 2000 à nos jours, basées sur les données de l'INSEE.",
-          })}
+          content={f("description")}
         />
       </Head>
       <h1>404 - Page Not Found</h1>

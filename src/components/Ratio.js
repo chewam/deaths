@@ -8,9 +8,9 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts"
-import { useIntl } from "react-intl"
 
 import colors from "@data/colors"
+import useI18n from "@utils/i18n"
 import { ratioDeaths } from "@utils/deaths"
 import CustomTooltip from "@components/Tooltip"
 
@@ -23,20 +23,17 @@ const styles = {
 }
 
 const Ratio = () => {
-  const intl = useIntl()
+  const { f, fn } = useI18n()
 
   const tickFormatter = (value) =>
-    `${intl.formatNumber(value, {
+    `${fn(value, {
       minimumFractionDigits: 2,
     })}%`
 
   const toolTipRenderer = ([{ value }]) =>
-    `${intl.formatNumber(value, {
+    `${fn(value, {
       minimumFractionDigits: 2,
-    })}% ${intl.formatMessage({
-      id: "mortality",
-      defaultMessage: "de mortalité",
-    })}`
+    })}% ${f("mortality")}`
 
   return (
     <ResponsiveContainer id="ratio-resp-container" className="ratio">

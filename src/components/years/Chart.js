@@ -9,12 +9,12 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts"
-import { FormattedMessage, useIntl } from "react-intl"
 
 import colors from "@data/colors"
 import deaths from "@data/deaths"
-import CustomTooltip from "@components/Tooltip"
 import Months from "@data/months"
+import useI18n from "@utils/i18n"
+import CustomTooltip from "@components/Tooltip"
 
 const styles = {
   stroke: "#b3b3b3",
@@ -25,12 +25,12 @@ const styles = {
 }
 
 const Chart = ({ years }) => {
-  const intl = useIntl()
+  const { f, fn, fd } = useI18n()
 
-  const YAxisTickFormatter = (value) => intl.formatNumber(value)
+  const YAxisTickFormatter = (value) => fn(value)
 
   const XAxisTickFormatter = (value) => {
-    return `${intl.formatDate(new Date(2001, Months.indexOf(value)), {
+    return `${fd(new Date(2001, Months.indexOf(value)), {
       month: "long",
     })}`
   }
@@ -38,8 +38,7 @@ const Chart = ({ years }) => {
   const toolTipRenderer = (payload) =>
     payload.reverse().map((item, i) => (
       <div key={i} style={{ color: item.color }}>
-        {item.name}: {intl.formatNumber(item.value)}{" "}
-        {intl.formatMessage({ id: "deaths", defaultMessage: "décès" })}
+        {item.name}: {fn(item.value)} {f("deaths")}
       </div>
     ))
 
@@ -52,17 +51,9 @@ const Chart = ({ years }) => {
     })
     .reduce((a, b) => (a.value > b.value ? a : b))
 
-  const referenceLabel = `${intl.formatDate(
-    new Date(reference.year, reference.month, 15),
-    {
-      month: "long",
-    }
-  )} ${reference.year}: ${intl.formatNumber(
-    reference.value
-  )} ${intl.formatMessage({
-    id: "deaths",
-    defaultMessage: "décès",
-  })}`
+  const referenceLabel = `${fd(new Date(reference.year, reference.month, 15), {
+    month: "long",
+  })} ${reference.year}: ${fn(reference.value)} ${f("deaths")}`
 
   return (
     <ResponsiveContainer id="chart-resp-container">

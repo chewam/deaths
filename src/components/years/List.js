@@ -1,9 +1,9 @@
 import colors from "@data/colors"
-import { useIntl } from "react-intl"
+import useI18n from "@utils/i18n"
 import { getRatio, getTotal } from "@utils/deaths"
 
 const List = ({ years, toggleYear }) => {
-  const intl = useIntl()
+  const { f } = useI18n()
 
   return (
     <ul className="list">
@@ -28,18 +28,10 @@ const List = ({ years, toggleYear }) => {
               <div className="year">{year}</div>
               <div className="deaths">
                 <div>
-                  {getTotal(year)}{" "}
-                  {intl.formatMessage({
-                    id: "deaths",
-                    defaultMessage: "décès",
-                  })}
+                  {getTotal(year)} {f("deaths")}
                 </div>
                 <div>
-                  {getRatio(year)}%{" "}
-                  {intl.formatMessage({
-                    id: "mortality",
-                    defaultMessage: "de mortalité",
-                  })}
+                  {getRatio(year)}% {f("mortality")}
                 </div>
               </div>
             </div>

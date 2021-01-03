@@ -1,0 +1,7 @@
+{
+  "title": "Décès annuels en France",
+  "sources": "Sources INSEE",
+  "mortality": "de mortalité",
+  "deaths": "décès",
+  "description": "Statistiques annuelles des décès en France de 2010 à nos jours, basées sur les données de l'INSEE."
+}

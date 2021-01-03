@@ -4,7 +4,8 @@ import { useRouter } from "next/router"
 
 import "@styles/index.scss"
 
-import messages from "../lang/en.json"
+import en from "../lang/en.json"
+import fr from "../lang/fr.json"
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -12,13 +13,14 @@ Sentry.init({
 
 function Deaths({ Component, pageProps }) {
   const router = useRouter()
+  const messages = { en, fr }
   const { locale, defaultLocale } = router
 
   return (
     <IntlProvider
       locale={locale}
-      messages={messages}
       defaultLocale={defaultLocale}
+      messages={messages[locale] || messages[defaultLocale]}
     >
       <Component {...pageProps} />
     </IntlProvider>

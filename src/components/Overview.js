@@ -9,9 +9,9 @@ import {
   ReferenceLine,
   ResponsiveContainer,
 } from "recharts"
-import { useIntl } from "react-intl"
 
 import Months from "@data/months"
+import useI18n from "@utils/i18n"
 import { linearDeaths } from "@utils/deaths"
 import CustomTooltip from "@components/Tooltip"
 
@@ -24,34 +24,25 @@ const styles = {
 }
 
 const Overview = () => {
-  const intl = useIntl()
+  const { f, fn, fd } = useI18n()
 
   const reference = linearDeaths.reduce((a, b) => (a.value > b.value ? a : b))
 
-  const referenceLabel = `${intl.formatDate(
+  const referenceLabel = `${fd(
     new Date(reference.year, Months.indexOf(reference.month)),
     { month: "long" }
-  )} ${reference.year}: ${intl.formatNumber(
-    reference.value
-  )} ${intl.formatMessage({
-    id: "deaths",
-    defaultMessage: "décès",
-  })}`
+  )} ${reference.year}: ${fn(reference.value)} ${f("deaths")}`
 
-  const YAxisTickFormatter = (value) => intl.formatNumber(value)
+  const YAxisTickFormatter = (value) => fn(value)
 
   const XAxisTickFormatter = (value) => {
     const [month, year] = value.split(" ")
-    return `${intl
-      .formatDate(new Date(year, Months.indexOf(month)), { month: "long" })
-      .substring(0, 3)}. ${year}`
+    return `${fd(new Date(year, Months.indexOf(month)), {
+      month: "long",
+    }).substring(0, 3)}. ${year}`
   }
 
-  const toolTipRenderer = ([{ value }]) =>
-    `${intl.formatNumber(value)} ${intl.formatMessage({
-      id: "deaths",
-      defaultMessage: "décès",
-    })}`
+  const toolTipRenderer = ([{ value }]) => `${fn(value)} ${f("deaths")}`
 
   return (
     <ResponsiveContainer id="overview-resp-container" className="overview">
@@ -92,7 +83,7 @@ const Overview = () => {
         <Line
           dataKey="value"
           type="monotone"
-          dot={{ fill: styles.stroke, fillOpacity: 0 }}
+          dot={{ stroke: styles.stroke, r: 1 }}
         />
       </LineChart>
     </ResponsiveContainer>
