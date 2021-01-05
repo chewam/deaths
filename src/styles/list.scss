@@ -66,11 +66,10 @@ ul.list {
 @media screen and (max-width: 1000px) {
   ul.list {
     flex-direction: row;
-    margin: 0 0 $spacing 0;
 
     li {
       height: 100%;
-      margin: 0 $spacing * 0.5 $spacing * 0 0;
+      margin: $spacing $spacing 0 $spacing;
     }
   }
 }

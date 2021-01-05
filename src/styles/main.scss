@@ -22,7 +22,7 @@ main {
       height: 33%;
       display: flex;
       flex-direction: row;
-      padding: $spacing $spacing * 1.5 0 $spacing;
+      padding: $spacing * 2 $spacing * 2 0 $spacing * 2;
       box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
     }
 
@@ -41,7 +41,13 @@ main {
 }
 
 @media screen and (max-width: 1000px) {
-  section.top {
-    flex-direction: column;
+  main {
+    section.top {
+      flex-direction: column;
+
+      figure {
+        padding: $spacing $spacing * 2 $spacing * 2;
+      }
+    }
   }
 }
