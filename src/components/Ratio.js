@@ -1,11 +1,13 @@
 import {
   Bar,
   Cell,
+  Label,
   XAxis,
   YAxis,
   Tooltip,
   BarChart,
   CartesianGrid,
+  ReferenceLine,
   ResponsiveContainer,
 } from "recharts"
 
@@ -24,6 +26,12 @@ const styles = {
 
 const Ratio = () => {
   const { f, fn } = useI18n()
+
+  const reference = ratioDeaths.reduce((a, b) => (a.ratio > b.ratio ? a : b))
+
+  const referenceLabel = `${reference.year}: ${fn(reference.ratio)}% ${f(
+    "mortality"
+  )}`
 
   const tickFormatter = (value) =>
     `${fn(value, {
@@ -54,7 +62,20 @@ const Ratio = () => {
           tick={styles.tick}
           stroke={styles.stroke}
           tickFormatter={tickFormatter}
-          domain={["dataMin - 0.07", "dataMax + 0.07"]}
+          domain={["dataMin - 0.09", "dataMax + 0.07"]}
+        />
+        <ReferenceLine
+          y={reference.ratio}
+          label={
+            <Label
+              fill={"#ccc"}
+              fontSize="80%"
+              value={referenceLabel}
+              position="insideBottomRight"
+            />
+          }
+          stroke={colors[reference.year]}
+          strokeDasharray="3 3"
         />
         <Tooltip
           content={<CustomTooltip />}

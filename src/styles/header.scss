@@ -1,19 +1,23 @@
 @use "./variables" as *;
 
 header {
-  margin: $spacing;
+  z-index: 1;
+  padding: $spacing;
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
 
   h1 {
     margin: 0;
+    display: flex;
     font-weight: 600;
+    align-items: center;
     font-size: $font-size * 2;
     line-height: $font-size * 2;
+    justify-content: space-between;
   }
 
   small {
     display: block;
     font-size: $font-size;
     line-height: $font-size;
-    margin-top: $spacing * 0.5;
   }
 }

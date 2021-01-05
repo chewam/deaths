@@ -4,7 +4,6 @@ main {
   flex: 1;
   display: flex;
   overflow: auto;
-  padding: $spacing / 2 $spacing;
   flex-direction: column;
 
   section {
@@ -12,13 +11,19 @@ main {
       flex: 1;
       display: flex;
       overflow: auto;
-      margin: $spacing * 0.5 0 $spacing * 2.5;
+      background-color: rgba(0, 0, 0, 0.3);
+
+      figure {
+        padding: $spacing $spacing * 2 $spacing 0;
+      }
     }
 
     &.bottom {
       height: 33%;
       display: flex;
       flex-direction: row;
+      padding: $spacing $spacing * 1.5 0 $spacing;
+      box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
     }
 
     figure {
@@ -30,8 +35,8 @@ main {
 
   aside {
     overflow: auto;
-    margin: 0 $spacing 0 0;
-    padding: 0 $spacing * 2 0 0;
+    margin: 0 $spacing / 2 0 0;
+    padding: 0 $spacing * 2 0 $spacing;
   }
 }
 

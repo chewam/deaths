@@ -65,8 +65,8 @@ const Chart = ({ years }) => {
             <Label
               fill={"#ccc"}
               fontSize="80%"
-              position="insideBottomRight"
               value={referenceLabel}
+              position="insideBottomRight"
             />
           }
           stroke={colors[reference.year]}

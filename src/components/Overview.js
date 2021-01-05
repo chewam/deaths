@@ -18,6 +18,7 @@ import CustomTooltip from "@components/Tooltip"
 const styles = {
   stroke: "#b3b3b3",
   gridStroke: "#666",
+  lineStroke: "#3182bd",
   tick: { fontSize: 12 },
   padding: { left: 0, right: 20 },
   margin: { top: 8, right: 0, bottom: 10, left: -5 },
@@ -72,17 +73,18 @@ const Overview = () => {
             <Label
               fill={"#ccc"}
               fontSize="80%"
-              position="insideBottomRight"
               value={referenceLabel}
+              position="insideBottomRight"
             />
           }
-          stroke={styles.stroke}
+          stroke={styles.lineStroke}
           strokeDasharray="3 3"
         />
         <Tooltip content={<CustomTooltip />} renderer={toolTipRenderer} />
         <Line
           dataKey="value"
           type="monotone"
+          stroke={styles.lineStroke}
           dot={{ stroke: styles.stroke, r: 1 }}
         />
       </LineChart>

@@ -6,7 +6,6 @@ ul.list {
   display: flex;
   list-style: none;
   flex-direction: column;
-  // background-color: cornsilk;
 
   li {
     flex: 1;
@@ -14,12 +13,8 @@ ul.list {
     cursor: pointer;
     position: relative;
     align-items: center;
-    margin: 0 0 $spacing * 1.5 0;
+    margin: $spacing 0;
     flex-direction: row;
-
-    // & > div:first-child {
-    // background-color: burlywood;
-    // }
 
     .dot {
       border-width: 1px;
@@ -33,11 +28,9 @@ ul.list {
     }
 
     & > div:last-child {
-      // outline: 1px solid chartreuse;
       display: flex;
 
       .year {
-        // background-color: coral;
         display: flex;
         align-items: center;
         margin: 0 $spacing * 1.5 0 0;
@@ -46,7 +39,6 @@ ul.list {
 
       .deaths {
         text-align: right;
-        // color: $font-color;
         white-space: nowrap;
         font-size: $font-size * 0.8;
 
