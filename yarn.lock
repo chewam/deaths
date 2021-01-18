@@ -408,10 +408,10 @@
     "@formatjs/ecma402-abstract" "1.5.1"
     tslib "^2.0.1"
 
-"@formatjs/intl@1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl/-/intl-1.6.0.tgz#30ccce6f55edec3fbb6f3491ddf798c12c6cfcef"
-  integrity sha512-JgatMmVFOsNjsNY3NCGn4ruDP/36CHyQThP6VXEYxYvxT+p+NPTRPUE84vXHU8/IQaI6hKR1yMgcKzOTS45nTw==
+"@formatjs/intl@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl/-/intl-1.6.1.tgz#6f6de1650136feb48c475409e7d77769ae851934"
+  integrity sha512-911RCkqyZuwbihUT98qBfVNsEmukdf5Y4DIVqAx+BGIyyPNUeS+JXpKx6M8awXx2L9UbeTHKKhjJbNzZlVFO+w==
   dependencies:
     "@formatjs/ecma402-abstract" "1.5.1"
     "@formatjs/intl-datetimeformat" "3.2.4"
@@ -821,10 +821,10 @@
     lz-string "^1.4.4"
     pretty-format "^26.6.2"
 
-"@testing-library/jest-dom@^5.11.8":
-  version "5.11.8"
-  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.11.8.tgz#433a84d6f9a089485101b9e112ef03e5c30bcbfc"
-  integrity sha512-ScyKrWQM5xNcr79PkSewnA79CLaoxVskE+f7knTOhDD9ftZSA1Jw8mj+pneqhEu3x37ncNfW84NUr7lqK+mXjA==
+"@testing-library/jest-dom@^5.11.9":
+  version "5.11.9"
+  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.11.9.tgz#e6b3cd687021f89f261bd53cbe367041fbd3e975"
+  integrity sha512-Mn2gnA9d1wStlAIT2NU8J15LNob0YFBVjs2aEQ3j8rsfRQo+lAs7/ui1i2TGaJjapLmuNPLTsrm+nPjmZDwpcQ==
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@types/testing-library__jest-dom" "^5.9.1"
@@ -6116,13 +6116,13 @@ react-dom@17.0.1:
     object-assign "^4.1.1"
     scheduler "^0.20.1"
 
-react-intl@^5.10.15:
-  version "5.10.15"
-  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-5.10.15.tgz#8d8a0a0235fc570af3a1428f1e30a711c3769832"
-  integrity sha512-yFGoCd2JcFyq4eKPc9U1GgotAYsAS/zCEkSRjVftPjgljnqA9V7JRuGbfEHjAWLsY7walXqkNpKWyAK2mjZGJA==
+react-intl@^5.10.16:
+  version "5.10.16"
+  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-5.10.16.tgz#2ccde74acd26cbe4f9e6e42765048a7f2f40e645"
+  integrity sha512-Cp0p9MGGWYNsl3hamJcrRqKid2HZun4MsdIlHV9fdmYVoLOII1+YynH6UBBwLuDlrLi8JrSniH1G1pqUlwQZMw==
   dependencies:
     "@formatjs/ecma402-abstract" "1.5.1"
-    "@formatjs/intl" "1.6.0"
+    "@formatjs/intl" "1.6.1"
     "@formatjs/intl-displaynames" "4.0.4"
     "@formatjs/intl-listformat" "5.0.4"
     "@formatjs/intl-relativetimeformat" "8.0.3"
@@ -6273,10 +6273,10 @@ recharts-scale@^0.4.2:
   dependencies:
     decimal.js-light "^2.4.1"
 
-recharts@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/recharts/-/recharts-2.0.2.tgz#6a6914e13252d5c92a150a1cdf55432ccc1bcea2"
-  integrity sha512-oDpAgG0UfvidQpDI4CHJV7GvGLVD/P3XxpJxwcakA76ln3gPWsOVtuXls2IseTXzeZZKPAEvSrdjdykjlCWGUw==
+recharts@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/recharts/-/recharts-2.0.3.tgz#70e4e60c3f032e73bf45589509fafcde23117349"
+  integrity sha512-cfdWQc9fZMjYyqyakNippEvAlHtvkbm3x3oJTLu9VzwdHAY97lPFL399C5XFkpwDJfU6Ep2FYOoIl24PIsabkg==
   dependencies:
     classnames "^2.2.5"
     d3-interpolate "^2.0.1"
