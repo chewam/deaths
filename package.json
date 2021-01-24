@@ -22,7 +22,7 @@
     "react-dom": "17.0.1",
     "react-intl": "^5.10.16",
     "recharts": "2.0.3",
-    "sass": "^1.32.4"
+    "sass": "^1.32.5"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
