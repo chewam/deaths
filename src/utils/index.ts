@@ -6,3 +6,6 @@ export const sumObjects = (a = {}, b = {}) => ({
     {}
   ),
 })
+
+export const sumYears = (years: number[][]) =>
+  years.reduce((r, a) => a.map((b, i) => (r[i] || 0) + b), [])

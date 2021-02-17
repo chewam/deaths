@@ -1,8 +1,6 @@
 import useSWR from "swr"
 import Deaths from "@/data/deaths.json"
-
-const sumYears = (years: number[][]) =>
-  years.reduce((r, a) => a.map((b, i) => (r[i] || 0) + b), [])
+import { sumYears } from "@/utils/index"
 
 const sumAgeGroups = (ageGroups: number[][][], start: number, end: number) =>
   ageGroups

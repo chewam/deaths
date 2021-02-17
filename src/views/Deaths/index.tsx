@@ -1,6 +1,6 @@
 import Chart from "./Chart"
-import Filters from "./Filters"
 import Panel from "@/components/Panel"
+import Filters from "@/components/Filters"
 
 const Deaths = () => {
   return (

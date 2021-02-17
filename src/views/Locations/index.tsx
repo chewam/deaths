@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react"
-import Panel from "@/components/Panel"
 import Map from "./Map"
-// import Filters from "./Filters"
-import Filters from "@/views/Deaths/Filters"
+import Panel from "@/components/Panel"
 import ReactTooltip from "react-tooltip"
+import Filters from "@/components/Filters"
+import { useEffect, useState } from "react"
 
 const Locations = () => {
   const [tooltip, setTooltip] = useState("")
@@ -19,7 +18,6 @@ const Locations = () => {
       <Map yearIndex={yearIndex} onOver={setTooltip} />
       {isMounted && <ReactTooltip>{tooltip}</ReactTooltip>}
       <Filters />
-      {/* <Filters onChange={(value) => setYearIndex(value)} /> */}
     </Panel>
   )
 }

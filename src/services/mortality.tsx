@@ -1,9 +1,7 @@
 import useSWR from "swr"
+import { sumYears } from "@/utils/index"
 import Mortality from "@/data/mortality.json"
 import Population from "@/data/population.json"
-
-const sumYears = (years: number[][]) =>
-  years.reduce((r, a) => a.map((b, i) => (r[i] || 0) + b), [])
 
 const getData = ({ ageGroup, gender }: Filters) => {
   const data = (gender
