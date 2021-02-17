@@ -2,5 +2,5 @@
 
 .panel.overview {
   flex-direction: column;
-  @include box.spacing(1, (1.5, 1, 1));
+  @include box.padding(1.5, 1, 1);
 }

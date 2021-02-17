@@ -1,0 +1,16 @@
+@use "../utils/box";
+
+.panel.locations {
+  flex-direction: column;
+
+  .button-group {
+    justify-content: center;
+
+    li {
+      flex: 0 0;
+    }
+    button {
+      @include box.margin(0.5);
+    }
+  }
+}

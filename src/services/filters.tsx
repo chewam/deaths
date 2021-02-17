@@ -2,6 +2,7 @@ import useSWR from "swr"
 import useDeaths from "@/services/deaths"
 import useOverview from "@/services/overview"
 import useMortality from "@/services/mortality"
+import useLocations from "@/services/locations"
 
 const initialData: Filters = {
   ageGroup: [0, 110],
@@ -12,6 +13,7 @@ const useFilters = () => {
   const [, applyDeathsFilters] = useDeaths()
   const [, setOverview] = useOverview()
   const [, applyMortalityFilters] = useMortality()
+  const [, applyLocationsFilters] = useLocations()
 
   const { data: filters, mutate } = useSWR("filters", null, {
     initialData,
@@ -22,6 +24,7 @@ const useFilters = () => {
     const deaths = applyDeathsFilters(filters)
     setOverview(deaths)
     applyMortalityFilters(filters)
+    applyLocationsFilters(filters)
   }
 
   return [filters, setFilters] as const
