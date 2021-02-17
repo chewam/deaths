@@ -22,9 +22,9 @@ function Page() {
       </Head>
       <Header />
       <Filters />
-      {/* <Deaths />
+      <Deaths />
       <Overview />
-      <Mortality /> */}
+      <Mortality />
       <Locations />
       {/* <div className="layout">
         <div className="wrapper">
