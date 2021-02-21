@@ -50,9 +50,9 @@ const Overview = () => {
 
   const annotations = max && [
     {
+      value: max,
       type: "line",
       borderWidth: 2,
-      value: max,
       mode: "horizontal",
       borderDash: [6, 3],
       scaleID: "y-axis-0",
