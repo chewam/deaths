@@ -1,3 +1,10 @@
+## [1.10.6](https://github.com/chewam/deaths/compare/v1.10.5...v1.10.6) (2021-03-31)
+
+
+### Bug Fixes
+
+* Add 2021 population count. ([c827d09](https://github.com/chewam/deaths/commit/c827d0967be11b0030d0c051434292f2aa53c0cd))
+
 ## [1.10.5](https://github.com/chewam/deaths/compare/v1.10.4...v1.10.5) (2021-03-22)
 
 
