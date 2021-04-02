@@ -1,3 +1,25 @@
+# [1.11.0-beta.1](https://github.com/chewam/deaths/compare/v1.10.4...v1.11.0-beta.1) (2021-04-02)
+
+
+### Bug Fixes
+
+* Add @semantic-release/git. ([921d0a9](https://github.com/chewam/deaths/commit/921d0a92492d63056d2c910c09f8aa09ed92456e))
+* Add semrel action. ([08d34c2](https://github.com/chewam/deaths/commit/08d34c2bb1ac8999db376602a6990c16d45bba4f))
+* Bump version. ([159b4ba](https://github.com/chewam/deaths/commit/159b4baea9def49b53948f42c74fd2a5e16881c9))
+* Map colors. ([1d5c01b](https://github.com/chewam/deaths/commit/1d5c01bc95554fb8086d075712338863101cf109))
+
+
+### Features
+
+* Add dashboard. ([29b09ed](https://github.com/chewam/deaths/commit/29b09ed1e717776ec7b63e677f764ae33f79ade5))
+* Add locations map. ([#78](https://github.com/chewam/deaths/issues/78)) ([40761ee](https://github.com/chewam/deaths/commit/40761ee7d809e410f05b56777ee8ab85d4839476))
+* Bump version. ([329fc24](https://github.com/chewam/deaths/commit/329fc244069b18ac4d059c375baa53927d31450d))
+* Bump version. ([27806f2](https://github.com/chewam/deaths/commit/27806f2639b7cc050448cd843caad505df42f170))
+* Create layout and menu. ([9e14320](https://github.com/chewam/deaths/commit/9e14320329ec6e520b0d705842aeda1127f28016))
+* Load deaths data from XHR. ([905904b](https://github.com/chewam/deaths/commit/905904bb652fe68931fb010d2f7a37ed8ac370fe))
+* Switch to Typescript. ([1c20ca8](https://github.com/chewam/deaths/commit/1c20ca857d09291313625bd01d095d7d426b590e))
+* Transition between views. ([434a1d5](https://github.com/chewam/deaths/commit/434a1d56cc5648fa49e002705d3f9eb87d31de80))
+
 # [1.11.0-alpha.8](https://github.com/chewam/deaths/compare/v1.11.0-alpha.7...v1.11.0-alpha.8) (2021-02-21)
 
 
