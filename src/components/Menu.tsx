@@ -1,14 +1,13 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
 
-const Menu = () => {
-  const {
-    query: { view },
-  } = useRouter()
+const Menu = (): JSX.Element => {
+  const { route } = useRouter()
+  const view = route.substring(1)
 
   const items = [
-    { label: "Tableau de board" },
-    { label: "Comparaison", view: "deaths" },
+    { label: "Tableau de board", view: "" },
+    { label: "Comparaison", view: "comparison" },
     { label: "Vue d'Ensemble", view: "overview" },
     { label: "Mortalité", view: "mortality" },
     { label: "Localisations", view: "locations" },
@@ -18,13 +17,7 @@ const Menu = () => {
     <ul className="menu">
       {items.map((item, i) => (
         <li key={i} className={`${view === items[i].view ? "active" : ""}`}>
-          <Link
-            href={{
-              pathname: "/",
-              query: items[i].view && { view: items[i].view },
-            }}
-            shallow={true}
-          >
+          <Link href={`/${encodeURIComponent(items[i].view)}`}>
             <a>{items[i].label}</a>
           </Link>
         </li>

@@ -2,7 +2,7 @@ import { useTheme } from "@/services/themes"
 import { useEffect, useState } from "react"
 import { FaMoon, FaSun } from "react-icons/fa"
 
-const Switch = () => {
+const Switch = (): JSX.Element | null => {
   const { theme, values, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 

@@ -1,26 +1,11 @@
-import Head from "next/head"
-import Menu from "@/components/Menu"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
+import Dashboard from "@/views/Months"
 
-import Views from "@/views/index"
+// import useRawDeaths from "@/services/raw-deaths"
 
-const Page = () => (
-  <>
-    <Head>
-      <title>French mortality figures</title>
-      <link
-        as="font"
-        rel="preload"
-        crossOrigin=""
-        href="/fonts/Roboto-Regular.ttf"
-      />
-    </Head>
-    <Header />
-    <Menu />
-    <Views />
-    <Footer />
-  </>
-)
+const Index = (): JSX.Element => {
+  // useRawDeaths()
 
-export default Page
+  return <Dashboard />
+}
+
+export default Index

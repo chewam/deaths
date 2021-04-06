@@ -1,9 +1,14 @@
 import useYears from "@/services/years"
 
-const Filters = () => {
+const Filters = (): JSX.Element => {
   const [years, setYears] = useYears()
+
+  const getYearStatus = (year: string | number) => {
+    return years && years[year]
+  }
+
   const toggle = (year: string) =>
-    setYears({ ...years, [year]: !years[year] }, false)
+    setYears({ ...years, [year]: !getYearStatus(year) })
 
   return (
     <ul className="filters button-group">
@@ -13,7 +18,7 @@ const Filters = () => {
           .map((year, i) => (
             <li key={i}>
               <button
-                className={`${years[year] ? "active" : ""}`}
+                className={`${getYearStatus(year) ? "active" : ""}`}
                 onClick={() => toggle(year)}
               >
                 {year}

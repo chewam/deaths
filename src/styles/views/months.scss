@@ -1,6 +1,7 @@
 @use "../utils/box";
 
 .months {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   @include box.margin(0, 0.5);

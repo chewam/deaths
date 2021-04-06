@@ -6,19 +6,29 @@ import Population from "@/data/population.json"
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
-const filter = (data, { gender, ageGroup }: Filters) => {
+const getYearPopulation = (year: number) => {
+  const p = Population as Population
+  return p[year]
+}
+
+const filter = (
+  data: MortalityRawData,
+  { gender, ageGroup }: Filters
+): Mortality => {
   const d = (gender ? data[gender].ageGroups : data.ageGroups).slice(
     ageGroup[0] / 10,
     ageGroup[1] / 10
   )
   return {
     data: d,
-    labels: data.ageGroups[0].map((group, i) => 2000 + i),
-    ratio: sumYears(d).map((count, i) => (count * 100) / Population[2000 + i]),
+    labels: data.ageGroups[0].map((group, i) => (2000 + i).toString()),
+    ratio: sumYears(d).map(
+      (count, i) => (count * 100) / getYearPopulation(2000 + i)
+    ),
   }
 }
 
-const useRawMortality = () => {
+const useRawMortality = (): Mortality[] => {
   const [filters] = useFilters()
   const [, setMortality] = useMortality()
   const { data } = useSWR("/data/mortality.json", fetcher, {
@@ -30,7 +40,7 @@ const useRawMortality = () => {
     setMortality(filteredData)
   }
 
-  return [data] as const
+  return [data]
 }
 
 export default useRawMortality

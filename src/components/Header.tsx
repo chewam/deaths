@@ -1,6 +1,6 @@
 import Switch from "@/components/Switch"
 
-const Header = () => (
+const Header = (): JSX.Element => (
   <div className="header">
     <h1>French Mortality Figures</h1>
     <Switch />

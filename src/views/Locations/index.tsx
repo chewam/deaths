@@ -4,9 +4,9 @@ import ReactTooltip from "react-tooltip"
 import Filters from "@/components/Filters"
 import { useEffect, useState } from "react"
 
-const Locations = () => {
+const Locations = (): JSX.Element => {
   const [tooltip, setTooltip] = useState("")
-  const [yearIndex, setYearIndex] = useState(0)
+  // const [yearIndex] = useState(0)
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Locations = () => {
   return (
     <Panel className="locations">
       <div style={{ flex: 1, position: "relative", overflow: "auto" }}>
-        <Map yearIndex={yearIndex} onOver={setTooltip} />
+        <Map onOver={setTooltip} />
       </div>
       {isMounted && <ReactTooltip>{tooltip}</ReactTooltip>}
       <Filters />

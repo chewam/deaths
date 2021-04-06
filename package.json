@@ -40,8 +40,12 @@
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
+    "@types/chart.js": "^2.9.31",
+    "@types/chartjs-plugin-annotation": "^0.5.1",
+    "@types/d3-scale": "^3.2.2",
     "@types/node": "^14.14.25",
     "@types/react": "^17.0.1",
+    "@types/react-simple-maps": "^1.0.3",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
     "date-fns": "^2.17.0",

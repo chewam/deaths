@@ -3,16 +3,20 @@ import Chart from "@/components/Chart"
 import Panel from "@/components/Panel"
 import { useTheme } from "@/services/themes"
 import useMortality from "@/services/mortality"
+// import { ChartDataSets, ChartOptions, ChartScales } from "chart.js"
+import { AnnotationOptions } from "chartjs-plugin-annotation"
+import { ChartDataSets, ChartOptions } from "chart.js"
 
-const average = (nums: [number]) => nums.reduce((a, b) => a + b) / nums.length
+// const average = (nums: [number]) => nums.reduce((a, b) => a + b) / nums.length
 
-const Mortality = () => {
+const Mortality = (): JSX.Element => {
   const { values: theme = {} } = useTheme()
-  const [{ labels, data, ratio }] = useMortality()
+  const [mortality] = useMortality()
+  const { labels, data, ratio } = mortality as Mortality
   const max = Math.max(...ratio)
   const defaultColor = "#ffffff"
 
-  const bars = data.map((ageGroup: number[][], i: number) => ({
+  const bars = data.map((ageGroup, i) => ({
     type: "bar",
     data: ageGroup,
     borderWidth: 2,
@@ -24,12 +28,12 @@ const Mortality = () => {
   const datasets = [
     {
       fill: false,
+      data: ratio,
       type: "line",
       label: "Ratio",
       borderWidth: 3,
       pointRadius: 5,
       yAxisID: "y-axis-2",
-      data: ratio,
       borderColor: theme.secondary,
       pointBorderColor: theme.secondary,
       pointBackgroundColor: theme.surface,
@@ -38,16 +42,16 @@ const Mortality = () => {
         anchor: "end",
         borderRadius: 4,
         color: theme["on-primary"],
-        display: ({ dataIndex }) => dataIndex % 2,
-        formatter: (value) => `${value.toFixed(2)}%`,
-        backgroundColor: ({ active }) =>
+        display: ({ dataIndex }: { dataIndex: number }) => dataIndex % 2,
+        formatter: (value: number) => `${value.toFixed(2)}%`,
+        backgroundColor: ({ active }: { active: boolean }) =>
           active
             ? hexToRgba(theme.secondary || defaultColor, 0.9)
             : hexToRgba(theme.secondary || defaultColor, 0.8),
       },
     },
     ...bars,
-  ]
+  ] as ChartDataSets[]
 
   const xAxes = [{ offset: true, stacked: true }]
 
@@ -66,30 +70,36 @@ const Mortality = () => {
     },
   ]
 
-  const annotations = max && [
-    {
-      value: max,
-      type: "line",
-      borderWidth: 2,
-      mode: "horizontal",
-      borderDash: [6, 3],
-      scaleID: "y-axis-2",
-      borderColor: theme.secondary,
-      drawTime: "afterDatasetsDraw",
-      label: {
-        enabled: true,
-        fontColor: theme["on-primary"],
-        backgroundColor: theme.secondary,
-        content: `${labels[ratio.indexOf(max)]}: ${max.toFixed(2)}% décès`,
-      },
-    },
-  ]
+  const annotations = (max
+    ? [
+        {
+          value: max,
+          type: "line",
+          borderWidth: 2,
+          mode: "horizontal",
+          borderDash: [6, 3],
+          scaleID: "y-axis-2",
+          borderColor: theme.secondary,
+          drawTime: "afterDatasetsDraw",
+          label: {
+            enabled: true,
+            fontColor: theme["on-primary"],
+            backgroundColor: theme.secondary,
+            content: `${labels[ratio.indexOf(max)]}: ${max.toFixed(2)}% décès`,
+          },
+        },
+      ]
+    : []) as AnnotationOptions[]
 
   const datalabels = {
-    color: ({ active }) => (active ? theme["on-primary"] : theme.primary),
-    display: ({ active, dataset, dataIndex, chart: { scales } }) => {
-      const end = scales["y-axis-1"].end
-      return active || dataset.data[dataIndex] > end * 0.05
+    color: ({ active }: { active: boolean }) =>
+      active ? theme["on-primary"] : theme.primary,
+    display: ({ active, dataset: { data }, dataIndex, chart }) => {
+      const { scales } = chart as ChartOptions
+      const s = scales as Record<string, Record<string, number>>
+      const end = s["y-axis-1"].end
+      const value = (data || [])[dataIndex] || 0
+      return !(active || value > end * 0.05)
     },
     backgroundColor: ({ active }) =>
       active
@@ -98,7 +108,7 @@ const Mortality = () => {
     font: {
       weight: "bold",
     },
-    formatter: (value, { active, datasetIndex, dataset: { data } }) =>
+    formatter: (value, { active, datasetIndex }) =>
       active
         ? `${datasetIndex * 10}${
             datasetIndex > 10 ? "+" : `-${datasetIndex * 10 + 10}`
@@ -106,7 +116,7 @@ const Mortality = () => {
         : value > 1000
         ? (value / 1000).toFixed() + "k"
         : Math.round,
-  }
+  } as ChartDataSets["datalabels"]
 
   return (
     <Panel className="mortality">

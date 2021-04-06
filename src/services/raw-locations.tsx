@@ -5,13 +5,16 @@ import useLocations from "@/services/locations"
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
-const filter = (data, { gender, ageGroup }: Filters) => {
+const filter = (
+  data: LocationsRawData,
+  { gender, ageGroup }: Filters
+): Locations => {
   const { ageGroups } = gender ? data[gender] : data
 
   return ageGroups
     .slice(ageGroup[0] / 10, ageGroup[1] / 10)
     .reduce(
-      (locations, group) => (
+      (locations: Locations, group) => (
         (locations = group.map((year, i) => sumObjects(year, locations[i]))),
         locations
       ),
@@ -19,7 +22,7 @@ const filter = (data, { gender, ageGroup }: Filters) => {
     )
 }
 
-const useRawLocations = () => {
+const useRawLocations = (): Locations[] => {
   const [filters] = useFilters()
   const [, setLocations] = useLocations()
   const { data } = useSWR("/data/locations.json", fetcher, {
@@ -31,7 +34,7 @@ const useRawLocations = () => {
     setLocations(filteredData)
   }
 
-  return [data] as const
+  return [data]
 }
 
 export default useRawLocations
