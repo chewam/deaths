@@ -12,13 +12,7 @@ const Map = ({ onOver }: { onOver: (label: string) => void }) => {
   const [locations] = useLocations()
   const { values: theme } = useTheme()
   const { scale } = theme || {}
-
-  const colorScale = scaleQuantize()
-    .domain([1, 10])
-    .range((scale || "").split(",").map((v) => parseInt(v, 10)))
-
-  const getColor = (count: number): string =>
-    colorScale(count ? Math.round((count * 10) / max) : 0).toString(16)
+  const colorRange = (scale || "").split(",")
 
   const data = (locations || []).reduce(
     (acc, year, i) => (
@@ -28,6 +22,11 @@ const Map = ({ onOver }: { onOver: (label: string) => void }) => {
   )
 
   const max = Math.max(...Object.keys(data).map((key) => data[key]))
+
+  const colorScale = scaleQuantize([1, 10], colorRange)
+
+  const getColor = (count: number): string =>
+    colorScale(count ? Math.round((count * 10) / max) : 0).toString()
 
   return (
     <>
