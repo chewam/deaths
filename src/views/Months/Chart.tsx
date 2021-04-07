@@ -7,8 +7,6 @@ interface Props {
   data: ChartDataSets["data"]
 }
 
-// type palette = () => void
-
 const Chart = ({ data }: Props): JSX.Element => {
   const { values: theme = {} } = useTheme()
 

@@ -10,6 +10,7 @@ const Menu = (): JSX.Element => {
     { label: "Comparaison", view: "comparison" },
     { label: "Vue d'Ensemble", view: "overview" },
     { label: "Mortalité", view: "mortality" },
+    { label: "Répartition", view: "distribution" },
     { label: "Localisations", view: "locations" },
   ]
 

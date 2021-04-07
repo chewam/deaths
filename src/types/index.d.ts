@@ -43,6 +43,7 @@ interface Mortality {
   labels: string[]
   ratio: number[]
   data: number[][]
+  ageGroups: number[]
 }
 
 // type LocationsAgeGroups = number[][][]

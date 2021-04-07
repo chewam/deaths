@@ -15,12 +15,13 @@ const filter = (
   data: MortalityRawData,
   { gender, ageGroup }: Filters
 ): Mortality => {
-  const d = (gender ? data[gender].ageGroups : data.ageGroups).slice(
-    ageGroup[0] / 10,
-    ageGroup[1] / 10
-  )
+  console.log("ageGroup", ageGroup)
+  const ageGroups = gender ? data[gender].ageGroups : data.ageGroups
+  const d = ageGroups.slice(ageGroup[0] / 10, ageGroup[1] / 10)
+
   return {
     data: d,
+    ageGroups: d.map((ags, i) => i * 10 + ageGroup[0]),
     labels: data.ageGroups[0].map((group, i) => (2000 + i).toString()),
     ratio: sumYears(d).map(
       (count, i) => (count * 100) / getYearPopulation(2000 + i)
