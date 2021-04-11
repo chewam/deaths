@@ -57,9 +57,6 @@ const Chart = ({ data }: Props): JSX.Element => {
         align: "bottom",
         borderColor: "white",
         font: { weight: "bold" },
-        // backgroundColor: ({ dataset: { backgroundColor } }) => backgroundColor,
-        // display: ({ active, dataset: { data }, dataIndex }) =>
-        //   active || data[dataIndex] > Math.max(...data) * 0.3,
         display: ({ active, dataset: { data }, dataIndex }) => {
           const d = data as number[]
           return active || d[dataIndex] > Math.max(...d) * 0.3

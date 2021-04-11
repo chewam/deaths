@@ -4,8 +4,6 @@
 .header {
   z-index: 1;
   display: flex;
-  // align-items: center;
-  // justify-content: space-between;
   @include box.padding(0, 1.5);
 
   .wrapper {

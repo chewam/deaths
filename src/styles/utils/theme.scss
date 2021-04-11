@@ -1,26 +1,16 @@
 @use "sass:color";
 
-// pink #e14eca
-// green #00f2c3
-// blue #1d8cf8
-
 $scheme: (
   "primary": (
     "light": #0366d6,
-    // "dark": #8a85ff,
-    // "dark": #316dca,
-    // "dark": #00A3F5,
     "dark": #539bf5,
   ),
   "secondary": (
     "light": #229a16,
-    // "dark": #03dac6,
-    // "dark": #347d39,
     "dark": #32936F,
   ),
   "color": (
     "light": #24292e,
-    // "light": #4B4A67,
     "dark": #adb0bb,
   ),
   "muted": (
@@ -30,22 +20,17 @@ $scheme: (
   "on-primary": (
     "light": white,
     "dark": white,
-    // "dark": #cdd9e5
-    // "dark": #adbac7,
   ),
   "on-primary-muted": (
     "light": color.scale(#1976d2, $lightness: -30%),
-    // "dark": color.scale(#7c3e80, $lightness: -30%),
     "dark": #768390,
   ),
   "background": (
     "light": #fafbfc,
-    // "dark": #1a2038,
     "dark": #22272e,
   ),
   "surface": (
     "light": white,
-    // "dark": #222a45,
     "dark": #2d333b,
   ),
   "link": (

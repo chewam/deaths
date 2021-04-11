@@ -7,14 +7,6 @@ const defaultYears = {
   "2003": true,
 }
 
-// const fetcher = (url: string) => fetch(url).then((res) => res.json())
-
-// const fetcher = (url: string) =>
-//   fetch(url).then(async (res) => ({
-//     ...(await res.json()),
-//     ...defaultYears,
-//   }))
-
 const useYears = (): [Years | undefined, (data: Years) => void] => {
   const { data, mutate } = useSWR("years", null, {
     revalidateOnFocus: false,

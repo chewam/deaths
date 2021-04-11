@@ -26,7 +26,6 @@ button {
   }
 
   &.active {
-    // @include box.shadow();
     color: theme.color("on-primary", $mode);
     border-color: theme.color("primary", $mode);
     background-color: theme.color("primary", $mode);

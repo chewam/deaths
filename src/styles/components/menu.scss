@@ -3,9 +3,6 @@
 
 .menu {
   display: flex;
-  // @include box.padding(0, 1.5);
-  // border: 1px solid red;
-  // justify-content: end;
   align-items: flex-end;
 
   a {
@@ -21,7 +18,6 @@
 }
 
 @include theme.apply(".menu") using ($mode) {
-  // box-shadow: theme.shadow($mode);
   background-color: theme.color("surface", $mode);
   a {
     color: theme.color("muted", $mode);

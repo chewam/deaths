@@ -2,7 +2,6 @@ import type { AppProps } from "next/app"
 import { Themes } from "@/services/themes"
 
 import Head from "next/head"
-// import Menu from "@/components/Menu"
 import Filters from "@/views/Filters"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
@@ -24,7 +23,6 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         />
       </Head>
       <Header />
-      {/* <Menu /> */}
       <Filters />
       <Component {...pageProps} />
       <Footer />

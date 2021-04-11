@@ -13,7 +13,6 @@ const Overview = (): JSX.Element => {
   const [overview] = useOverview()
   const { values: theme = {} } = useTheme()
   const { labels, data } = overview as Overview
-  console.log("data", data)
 
   const max = data.length ? Math.max(...data) : 0
   const xAxes = [{}]
@@ -21,7 +20,6 @@ const Overview = (): JSX.Element => {
   const yAxes = [
     {
       ticks: {
-        // stepSize: 5000,
         suggestedMax: max && max + (max * 5) / 100,
       },
     },
@@ -50,13 +48,6 @@ const Overview = (): JSX.Element => {
       },
     },
   ] as ChartDataSets[]
-
-  // const gradient: [number, string][] = [
-  //   [0, hexToRgba(theme.primary || defaultColor, 0.5)],
-  //   [0.2, hexToRgba(theme.primary || defaultColor, 0.2)],
-  //   [0.5, hexToRgba(theme.primary || defaultColor, 0)],
-  // ]
-  console.log("max", max)
 
   const annotations = (max
     ? [
@@ -104,7 +95,6 @@ const Overview = (): JSX.Element => {
           yAxes={yAxes}
           labels={labels}
           datasets={datasets}
-          // gradient={gradient}
           datalabels={datalabels}
           annotations={annotations}
         />

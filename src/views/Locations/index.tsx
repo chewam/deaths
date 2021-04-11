@@ -6,7 +6,6 @@ import { useEffect, useState } from "react"
 
 const Locations = (): JSX.Element => {
   const [tooltip, setTooltip] = useState("")
-  // const [yearIndex] = useState(0)
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {

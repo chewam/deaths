@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { FaMoon, FaSun } from "react-icons/fa"
 
 const Switch = (): JSX.Element | null => {
-  const { theme, values, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
@@ -13,17 +13,9 @@ const Switch = (): JSX.Element | null => {
   return (
     <div className="switch">
       {theme === "dark" ? (
-        <FaSun
-          size={24}
-          // color={values["on-primary"]}
-          onClick={() => setTheme("light")}
-        />
+        <FaSun size={24} onClick={() => setTheme("light")} />
       ) : (
-        <FaMoon
-          size={24}
-          // color={values["on-primary"]}
-          onClick={() => setTheme("dark")}
-        />
+        <FaMoon size={24} onClick={() => setTheme("dark")} />
       )}
     </div>
   )

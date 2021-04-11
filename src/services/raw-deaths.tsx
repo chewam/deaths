@@ -1,7 +1,6 @@
 import useSWR from "swr"
 import { sumYears } from "@/utils/index"
 import useDeaths from "@/services/deaths"
-// import useMonths from "@/services/months"
 import useFilters from "@/services/filters"
 import useOverview from "@/services/overview"
 

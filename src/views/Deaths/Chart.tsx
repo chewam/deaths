@@ -42,12 +42,6 @@ const Chart = (): JSX.Element => {
 
   const defaultColor = "#ffffff"
 
-  // const gradient: [number, string][] = [
-  //   [0, hexToRgba(theme.primary || defaultColor, 0.5)],
-  //   [0.2, hexToRgba(theme.primary || defaultColor, 0.2)],
-  //   [0.5, hexToRgba(theme.primary || defaultColor, 0)],
-  // ]
-
   const datasets = Object.keys(years || {}).reduce(
     (datasets: Record<string, unknown>[], year) => (
       years &&
@@ -116,7 +110,6 @@ const Chart = (): JSX.Element => {
     padding: 6,
     color: "white",
     borderRadius: 4,
-    // font: { weight: "bold" },
     backgroundColor: ({ active }: { active: boolean }) =>
       active
         ? hexToRgba(theme.primary || defaultColor, 0.9)
@@ -147,7 +140,6 @@ const Chart = (): JSX.Element => {
         yAxes={yAxes}
         labels={labels}
         datasets={datasets}
-        // gradient={gradient}
         datalabels={datalabels}
         annotations={annotations}
       />

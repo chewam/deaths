@@ -10,7 +10,6 @@ const filter = (
   data: MortalityRawData,
   { gender, ageGroup }: Filters
 ): Mortality => {
-  console.log("ageGroup", ageGroup)
   const ageGroups = gender ? data[gender].ageGroups : data.ageGroups
   const d = ageGroups.slice(ageGroup[0] / 10, ageGroup[1] / 10)
 

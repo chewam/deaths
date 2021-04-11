@@ -23,27 +23,17 @@ const Distribution = (): JSX.Element => {
     new Array((data[0] || []).length).fill(0)
   )
 
-  console.log("totals", totals)
-
   const bars = data.map((ageGroup, i) => {
-    console.log("ageGroup", ageGroup)
-    const total = ageGroup.reduce((a, b) => a + b)
-    console.log("total", total)
     const ageGroupRatios = ageGroup.map((group, j) => (group * 100) / totals[j])
-    console.log("ageGroupRatios", ageGroupRatios)
-    // const total2 = ageGroupRatios.reduce((a, b) => a + b)
-    // console.log("total2", total2)
+
     return {
       type: "bar",
-      data: ageGroupRatios,
       borderWidth: 0,
       label: `bar-${i}`,
       yAxisID: "y-axis-1",
+      data: ageGroupRatios,
       borderColor: theme.surface,
       backgroundColor: colors[i],
-      // backgroundColor: hexToRgba(theme.primary || defaultColor, 0.2),
-      // min: 0,
-      // max: 100,
     }
   })
 
