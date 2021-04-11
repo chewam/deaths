@@ -1,3 +1,10 @@
+# [1.11.0-alpha.9](https://github.com/chewam/deaths/compare/v1.11.0-alpha.8...v1.11.0-alpha.9) (2021-04-11)
+
+
+### Bug Fixes
+
+* Add missing types. ([#92](https://github.com/chewam/deaths/issues/92)) ([0fe13ca](https://github.com/chewam/deaths/commit/0fe13ca632ff81e742fcd4bb4459b419c49ca109))
+
 # [1.11.0-alpha.8](https://github.com/chewam/deaths/compare/v1.11.0-alpha.7...v1.11.0-alpha.8) (2021-02-21)
 
 
