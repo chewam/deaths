@@ -68,7 +68,7 @@ const Overview = (): JSX.Element => {
           borderDash: [6, 3],
           scaleID: "y-axis-0",
           borderColor: theme.secondary,
-          drawTime: "afterDatasetsDraw",
+          drawTime: "beforeDatasetsDraw",
           label: {
             enabled: true,
             fontColor: theme["on-primary"],
