@@ -4,12 +4,22 @@
 .header {
   z-index: 1;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @include box.padding(0.5, 1.5);
+  // align-items: center;
+  // justify-content: space-between;
+  @include box.padding(0, 1.5);
+
+  .wrapper {
+    flex: 1;
+    display: flex;
+
+    h1 {
+      flex: 1;
+    }
+  }
 }
 
 @include theme.apply(".header") using ($mode) {
+  box-shadow: theme.shadow($mode);
   color: theme.color("color", $mode);
   background-color: theme.color("surface", $mode);
 }

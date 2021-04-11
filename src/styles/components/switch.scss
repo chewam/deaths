@@ -1,10 +1,13 @@
+@use "../utils/box";
 @use "../utils/theme";
 
 .switch {
   display: flex;
   cursor: pointer;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  // border: 1px solid lime;
+  @include box.padding(0, 0, 0.5);
 }
 
 @include theme.apply(".switch") using ($mode) {
