@@ -1,6 +1,16 @@
+@use "../utils/theme";
+
 .switch {
   display: flex;
   cursor: pointer;
   align-items: center;
   justify-content: center;
+}
+
+@include theme.apply(".switch") using ($mode) {
+  color: theme.color("muted", $mode);
+}
+
+@include theme.apply(".switch:hover") using ($mode) {
+  color: theme.color("primary", $mode);
 }

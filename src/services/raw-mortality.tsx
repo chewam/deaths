@@ -2,14 +2,9 @@ import useSWR from "swr"
 import { sumYears } from "@/utils/index"
 import useFilters from "@/services/filters"
 import useMortality from "@/services/mortality"
-import Population from "@/data/population.json"
+import { getYearPopulation } from "../utils"
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
-
-const getYearPopulation = (year: number) => {
-  const p = Population as Population
-  return p[year]
-}
 
 const filter = (
   data: MortalityRawData,

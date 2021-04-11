@@ -1,11 +1,12 @@
-import Dashboard from "@/views/Months"
+// import Dashboard from "@/views/Months"
+import Overview from "@/views/Overview"
 
-// import useRawDeaths from "@/services/raw-deaths"
+import useRawDeaths from "@/services/raw-deaths"
 
 const Index = (): JSX.Element => {
-  // useRawDeaths()
+  useRawDeaths()
 
-  return <Dashboard />
+  return <Overview />
 }
 
 export default Index

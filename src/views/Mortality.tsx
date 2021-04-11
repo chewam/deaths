@@ -6,6 +6,8 @@ import useMortality from "@/services/mortality"
 // import { ChartDataSets, ChartOptions, ChartScales } from "chart.js"
 // import { AnnotationOptions } from "chartjs-plugin-annotation"
 import { ChartDataSets, ChartOptions } from "chart.js"
+// import palette from "google-palette"
+import { getYearPopulation } from "../utils"
 
 // const average = (nums: [number]) => nums.reduce((a, b) => a + b) / nums.length
 
@@ -13,7 +15,12 @@ const Mortality = (): JSX.Element => {
   const { values: theme = {} } = useTheme()
   const [mortality] = useMortality()
   const { labels, data, ratio, ageGroups } = mortality as Mortality
-  console.log("labels", labels, labels.length, ageGroups)
+  // const colorScale = theme.scale.split(", ")
+  console.log("labels", labels, labels.length, ageGroups, theme)
+
+  // const colorScale = palette("tol-dv", data.length, 0, 0.5)
+  //   .map((color: string) => `#${color}`)
+  //   .reverse()
 
   // const max = Math.max(...ratio)
   const defaultColor = "#ffffff"
@@ -23,8 +30,21 @@ const Mortality = (): JSX.Element => {
     data: ageGroup,
     label: `bar-${i}`,
     yAxisID: "y-axis-1",
-    borderWidth: { top: 2, right: 2, bottom: 0, left: 2 },
-    backgroundColor: hexToRgba(theme.primary || defaultColor, 0.2),
+    borderColor: theme.surface,
+    // backgroundColor: theme.background,
+    // backgroundColor: "rgba(0,0,0,0.35)",
+    // hoverBackgroundColor: hexToRgba(theme.primary || defaultColor, 0.8),
+    backgroundColor: hexToRgba(theme.primary || defaultColor, 0.35),
+    borderWidth: { top: 2, right: 0, bottom: 2, left: 0 },
+    // backgroundColor: ({ datasetIndex }) => colorScale[datasetIndex],
+    // color: ({ dataIndex }) => (dataIndex % 2 ? "#CA2B82" : theme.primary),
+    // borderColor: ({ datasetIndex }) =>
+    //   datasetIndex % 2 ? "#CA2B82" : theme.primary,
+    // backgroundColor: "#EFBCD5",
+    // backgroundColor: () =>
+    //   i === 6
+    //     ? hexToRgba("#EFBCD5", 0.6)
+    //     : hexToRgba(theme.primary || defaultColor, 0.2),
     // datalabels: {
     //   align: "center",
     //   anchor: "center",
@@ -47,14 +67,21 @@ const Mortality = (): JSX.Element => {
         align: "end",
         anchor: "end",
         borderRadius: 4,
+        borderWidth: 2,
+        borderColor: theme.surface,
         color: theme["on-primary"],
-        display: true,
-        // display: ({ dataIndex }: { dataIndex: number }) => dataIndex % 2,
-        formatter: (value: number) => `${value.toFixed(2)}%`,
-        backgroundColor: ({ active }: { active: boolean }) =>
+        display: ({ active }) => (active ? true : "auto"),
+        formatter: (value: number, { active, dataIndex }) =>
           active
-            ? hexToRgba(theme.secondary || defaultColor, 0.9)
-            : hexToRgba(theme.secondary || defaultColor, 0.8),
+            ? `${2000 + dataIndex}\nTaux de mortalité: ${value.toFixed(
+                2
+              )}%\nPopulation totale: ${getYearPopulation(2000 + dataIndex)}`
+            : `${value.toFixed(2)}%`,
+        backgroundColor: theme.secondary,
+        // backgroundColor: ({ active }: { active: boolean }) =>
+        //   active
+        //     ? hexToRgba(theme.secondary || defaultColor, 0.9)
+        //     : hexToRgba(theme.secondary || defaultColor, 0.8),
       },
     },
     ...bars,
@@ -109,27 +136,43 @@ const Mortality = (): JSX.Element => {
     // align: "right",
     // anchor: "start",
     textAlign: "center",
-    font: { size: 9, weight: "bold" },
-    color: ({ active }: { active: boolean }) =>
-      active ? theme["on-primary"] : theme.primary,
+    color: theme["on-primary"],
+    font: { size: 11 },
+    // color: ({ active }: { active: boolean }) =>
+    //   active ? theme["on-primary"] : theme.primary,
+    // color: ({ datasetIndex }) => (datasetIndex % 2 ? "#CA2B82" : theme.primary),
     display: ({ active, dataset: { data }, dataIndex, chart }) => {
       const { scales } = chart as ChartOptions
       const s = scales as Record<string, Record<string, number>>
       const end = s["y-axis-1"].end
       const value = (data || [])[dataIndex] || 0
-      return !!(active || value > end * 0.05)
+      // return !!(active || value > end * 0.05)
+      return active ? true : value > end * 0.05 ? "auto" : false
     },
+    borderRadius: 4,
+    // borderWidth: 2,
+    // borderColor: ({ active }) =>
+    //   active ? theme["on-primary"] : "rgba(0, 0, 0, 0)",
+    // backgroundColor: "rgba(0, 0, 0, 0)",
     backgroundColor: ({ active }) =>
       active
         ? hexToRgba(theme.primary || defaultColor, 0.9)
         : "rgba(0, 0, 0, 0)",
-    formatter: (value, { active, datasetIndex }) =>
+    // formatter: (value, { active, datasetIndex }) =>
+    //   `${(value / 1000).toFixed()}K\n${ageGroups[datasetIndex - 1]}-${
+    //     ageGroups[datasetIndex - 1] + 10
+    //   }`,
+    formatter: (value, { active, dataIndex, datasetIndex }) =>
       active
-        ? `${datasetIndex * 10}${
-            datasetIndex > 10 ? "+" : `-${datasetIndex * 10 + 10}`
-          }\n${value} décès`
+        ? `${dataIndex + 2000}\nNombe de décès: ${value}\nTranche d'âge: ${
+            ageGroups[datasetIndex - 1]
+          }${
+            datasetIndex > 10
+              ? "+"
+              : ` à ${ageGroups[datasetIndex - 1] + 9} ans`
+          }`
         : value > 1000
-        ? `${(value / 1000).toFixed()} k\n${ageGroups[datasetIndex - 1]}-${
+        ? `${(value / 1000).toFixed()}K\n${ageGroups[datasetIndex - 1]}-${
             ageGroups[datasetIndex - 1] + 10
           }`
         : Math.round(value),

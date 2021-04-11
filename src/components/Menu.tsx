@@ -6,12 +6,12 @@ const Menu = (): JSX.Element => {
   const view = route.substring(1)
 
   const items = [
-    { label: "Tableau de board", view: "" },
+    // { label: "Tableau de board", view: "" },
+    { label: "Vue d'Ensemble", view: "" },
     { label: "Comparaison", view: "comparison" },
-    { label: "Vue d'Ensemble", view: "overview" },
-    { label: "Mortalité", view: "mortality" },
-    { label: "Répartition", view: "distribution" },
-    { label: "Localisations", view: "locations" },
+    { label: "Répartition", view: "mortality" },
+    // { label: "Répartition", view: "distribution" },
+    // { label: "Localisations", view: "locations" },
   ]
 
   return (

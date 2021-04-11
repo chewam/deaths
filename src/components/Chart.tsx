@@ -5,6 +5,7 @@ import { useTheme } from "@/services/themes"
 import "chartjs-plugin-datalabels"
 import { ChartDataSets, ChartOptions, ChartXAxe, ChartYAxe } from "chart.js"
 import { AnnotationConfig } from "chartjs-plugin-annotation"
+import "chartjs-plugin-annotation"
 
 // defaults.global.animation = false
 
@@ -54,7 +55,7 @@ const MyChart = ({
     const defaultDataset = {
       pointRadius: 3,
       pointBorderWidth: 2,
-      borderColor: theme?.primary,
+      // borderColor: theme?.primary,
       pointBackgroundColor: theme?.primary,
       pointBorderColor: hexToRgba(theme?.background || "", 0.9),
     }
@@ -68,6 +69,7 @@ const MyChart = ({
       }),
     }
   }
+  console.log("annotations", annotations)
 
   const options = {
     responsive: true,
@@ -115,6 +117,7 @@ const MyChart = ({
       annotations: [...(annotations || [])],
     },
   } as ChartOptions
+  console.log("options", options)
 
   return <Line data={config} options={options} />
 }

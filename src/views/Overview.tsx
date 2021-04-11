@@ -13,14 +13,15 @@ const Overview = (): JSX.Element => {
   const [overview] = useOverview()
   const { values: theme = {} } = useTheme()
   const { labels, data } = overview as Overview
+  console.log("data", data)
 
-  const max = Math.max(...data)
-
+  const max = data.length ? Math.max(...data) : 0
   const xAxes = [{}]
 
   const yAxes = [
     {
       ticks: {
+        // stepSize: 5000,
         suggestedMax: max && max + (max * 5) / 100,
       },
     },
@@ -32,16 +33,19 @@ const Overview = (): JSX.Element => {
     {
       data,
       label: "Décès",
+      borderWidth: 2,
+      borderColor: theme?.primary,
       pointBorderColor: theme.primary,
       pointBackgroundColor: theme.surface,
       backgroundColor: hexToRgba(theme.primary || defaultColor, 0.15),
       datalabels: {
         align: "end",
         anchor: "end",
+        textAlign: "center",
         display: ({ active, dataIndex, dataset: { data } }) => {
           const d = data as number[]
           const avg = average(d)
-          return active || d[dataIndex] > avg + avg * 0.2
+          return active ? true : d[dataIndex] > avg + avg * 0.1 ? "auto" : false
         },
       },
     },
@@ -52,6 +56,7 @@ const Overview = (): JSX.Element => {
   //   [0.2, hexToRgba(theme.primary || defaultColor, 0.2)],
   //   [0.5, hexToRgba(theme.primary || defaultColor, 0)],
   // ]
+  console.log("max", max)
 
   const annotations = (max
     ? [

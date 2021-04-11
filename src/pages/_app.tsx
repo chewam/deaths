@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <Themes light={light} dark={dark}>
       <Head>
-        <title>French mortality figures</title>
+        <title>Mortalité en France</title>
         <link
           as="font"
           rel="preload"

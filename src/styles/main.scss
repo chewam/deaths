@@ -4,6 +4,8 @@
 
 html {
   height: 100%;
+  // -ms-text-size-adjust: 100%;
+  // -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -39,7 +41,7 @@ a {
     background-color: theme.color("background", "dark");
   }
   a {
-    color: theme.color("primary", "dark");
+    color: theme.color("link", "dark");
   }
 }
 
@@ -49,6 +51,6 @@ a {
     background-color: theme.color("background");
   }
   a {
-    color: theme.color("primary", "light");
+    color: theme.color("link", "light");
   }
 }

@@ -5,6 +5,7 @@ import { useTheme } from "@/services/themes"
 import DefaultChart from "@/components/Chart"
 import { ChartDataSets } from "chart.js"
 import { AnnotationOptions } from "chartjs-plugin-annotation"
+import Months from "@/data/months.json"
 
 const average = (nums: number[]) => nums.reduce((a, b) => a + b) / nums.length
 
@@ -53,7 +54,9 @@ const Chart = (): JSX.Element => {
         years[year] &&
         datasets.push({
           label: year,
-          pointRadius: 5,
+          pointRadius: 4,
+          borderWidth: 2,
+          borderColor: theme?.primary,
           pointBorderColor: theme.primary,
           data: (data || {})[+year - 2000],
           pointBackgroundColor: theme.surface,
@@ -69,6 +72,8 @@ const Chart = (): JSX.Element => {
       dataset.datalabels = {
         align: "end",
         anchor: "end",
+        textAlign: "center",
+        color: theme["on-primary"],
         display: ({
           active,
           dataIndex,
@@ -77,7 +82,12 @@ const Chart = (): JSX.Element => {
           active: boolean
           dataIndex: number
           dataset: { data: number[] }
-        }) => active || data[dataIndex] > average(data),
+        }) =>
+          active
+            ? true
+            : data[dataIndex] > average(data) * 0.9
+            ? "auto"
+            : false,
       }
     })
 
@@ -96,7 +106,7 @@ const Chart = (): JSX.Element => {
             enabled: true,
             fontColor: theme["on-primary"],
             backgroundColor: theme.secondary,
-            content: `${max.month}/${max.year}: ${max.value} décès`,
+            content: `${Months[max.month - 1]} ${max.year}: ${max.value} décès`,
           },
         },
       ]
@@ -106,7 +116,7 @@ const Chart = (): JSX.Element => {
     padding: 6,
     color: "white",
     borderRadius: 4,
-    font: { weight: "bold" },
+    // font: { weight: "bold" },
     backgroundColor: ({ active }: { active: boolean }) =>
       active
         ? hexToRgba(theme.primary || defaultColor, 0.9)
@@ -124,7 +134,7 @@ const Chart = (): JSX.Element => {
       }
     ) =>
       active
-        ? `${dataIndex + 1}/${label}\n${data[dataIndex]} décès`
+        ? `${Months[dataIndex]} ${label}\n${data[dataIndex]} décès`
         : value > 1000
         ? (value / 1000).toFixed() + "K"
         : value,

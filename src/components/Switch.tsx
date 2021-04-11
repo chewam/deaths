@@ -15,13 +15,13 @@ const Switch = (): JSX.Element | null => {
       {theme === "dark" ? (
         <FaSun
           size={24}
-          color={values["on-primary"]}
+          // color={values["on-primary"]}
           onClick={() => setTheme("light")}
         />
       ) : (
         <FaMoon
           size={24}
-          color={values["on-primary"]}
+          // color={values["on-primary"]}
           onClick={() => setTheme("dark")}
         />
       )}

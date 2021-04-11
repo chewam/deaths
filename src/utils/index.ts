@@ -1,3 +1,5 @@
+import Population from "@/data/population.json"
+
 export const sumObjects = (
   a: Record<string, number> = {},
   b: Record<string, number> = {}
@@ -12,3 +14,8 @@ export const sumObjects = (
 
 export const sumYears = (years: number[][]): number[] =>
   years.reduce((r, a) => a.map((b, i) => (r[i] || 0) + b), [])
+
+export const getYearPopulation = (year: number): number => {
+  const p = Population as Population
+  return p[year]
+}
