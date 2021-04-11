@@ -7,26 +7,26 @@ import France from "@/data/departements.json"
 import useLocations from "@/services/locations"
 import { ComposableMap, Geographies, Geography } from "react-simple-maps"
 
-const Map = ({ onOver, yearIndex }) => {
+const Map = ({ onOver }: { onOver: (label: string) => void }) => {
   const [years] = useYears()
   const [locations] = useLocations()
   const { values: theme } = useTheme()
+  const { scale } = theme || {}
+  const colorRange = (scale || "").split(",")
 
-  const colorScale = scaleQuantize()
-    .domain([1, 10])
-    .range(theme.scale.split(","))
-
-  const getColor = (count) =>
-    colorScale(count ? Math.round((count * 10) / max) : 0)
-
-  const data = locations.reduce(
+  const data = (locations || []).reduce(
     (acc, year, i) => (
-      (acc = years[2000 + i] ? sumObjects(year, acc) : acc), acc
+      (acc = years && years[2000 + i] ? sumObjects(year, acc) : acc), acc
     ),
     {}
   )
 
   const max = Math.max(...Object.keys(data).map((key) => data[key]))
+
+  const colorScale = scaleQuantize([1, 10], colorRange)
+
+  const getColor = (count: number): string =>
+    colorScale(count ? Math.round((count * 10) / max) : 0).toString()
 
   return (
     <>

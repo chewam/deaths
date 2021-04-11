@@ -10,6 +10,6 @@
 }
 
 @include theme.apply(".header") using ($mode) {
-  color: theme.color("on-primary", $mode);
-  background-color: theme.color("primary", $mode);
+  color: theme.color("color", $mode);
+  background-color: theme.color("surface", $mode);
 }

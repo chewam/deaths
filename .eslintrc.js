@@ -13,6 +13,7 @@ module.exports = {
       files: ["**/*.ts", "**/*.tsx"],
       parser: "@typescript-eslint/parser",
       settings: { react: { version: "detect" } },
+      plugins: ["react", "@typescript-eslint"],
       env: {
         browser: true,
         node: true,
@@ -24,7 +25,6 @@ module.exports = {
         "plugin:react/recommended", // React rules
         "plugin:react-hooks/recommended", // React hooks rules
         "plugin:jsx-a11y/recommended", // Accessibility rules
-        "prettier/@typescript-eslint", // Prettier plugin
         "plugin:prettier/recommended", // Prettier recommended rules
       ],
       rules: {
@@ -44,13 +44,13 @@ module.exports = {
         "@typescript-eslint/no-unused-vars": ["error"],
 
         // I suggest this setting for requiring return types on functions only where useful
-        "@typescript-eslint/explicit-function-return-type": [
-          "warn",
-          {
-            allowExpressions: true,
-            allowConciseArrowFunctionExpressionsStartingWithVoid: true,
-          },
-        ],
+        // "@typescript-eslint/explicit-function-return-type": [
+        //   "warn",
+        //   {
+        //     allowExpressions: true,
+        //     allowConciseArrowFunctionExpressionsStartingWithVoid: true,
+        //   },
+        // ],
       },
     },
   ],

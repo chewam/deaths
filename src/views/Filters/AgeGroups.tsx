@@ -1,5 +1,9 @@
 import Slider from "@material-ui/core/Slider"
 
+interface Props {
+  onChange: (value: [number, number]) => void
+}
+
 const marks = [
   { value: 0, label: "0" },
   { value: 10, label: "10" },
@@ -15,17 +19,15 @@ const marks = [
   { value: 110, label: "110+" },
 ]
 
-const AgeGroups = ({ onChange }) => {
-  return (
-    <Slider
-      step={10}
-      max={110}
-      marks={marks}
-      className="slider"
-      onChange={onChange}
-      defaultValue={[0, 110]}
-    />
-  )
-}
+const AgeGroups = ({ onChange }: Props): JSX.Element => (
+  <Slider
+    step={10}
+    max={110}
+    marks={marks}
+    className="slider"
+    defaultValue={[0, 110]}
+    onChange={(event, value) => onChange(value as [number, number])}
+  />
+)
 
 export default AgeGroups

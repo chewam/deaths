@@ -5,7 +5,7 @@ type Props = {
   className: string
 }
 
-const Panel = ({ children, className }: Props) => (
+const Panel = ({ children, className }: Props): JSX.Element => (
   <div className={`panel ${className}`}>{children}</div>
 )
 

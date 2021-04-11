@@ -9,7 +9,7 @@ const initialData: Filters = {
   gender: null,
 }
 
-const useFilters = () => {
+const useFilters = (): [Filters | undefined, (filters: Filters) => void] => {
   // const [, setOverview] = useOverview()
   // const [, applyDeathsFilters] = useDeaths()
   // const [, applyMortalityFilters] = useMortality()
@@ -19,7 +19,7 @@ const useFilters = () => {
     initialData,
   })
 
-  const setFilters = async (filters: Filters) => {
+  const setFilters = (filters: Filters): void => {
     mutate(filters)
     // const deaths = await applyDeathsFilters(filters)
     // deaths && setOverview(deaths)
@@ -27,7 +27,7 @@ const useFilters = () => {
     // applyLocationsFilters(filters)
   }
 
-  return [filters, setFilters] as const
+  return [filters, setFilters]
 }
 
 export default useFilters

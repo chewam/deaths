@@ -19,14 +19,18 @@
 
 @include theme.apply(".menu") using ($mode) {
   box-shadow: theme.shadow($mode);
-  background-color: theme.color("primary", $mode);
+  background-color: theme.color("surface", $mode);
   a {
-    color: theme.color("on-primary-muted", $mode);
+    color: theme.color("muted", $mode);
+  }
+  a:hover {
+    color: theme.color("primary", $mode);
   }
   li.active {
     a {
-      color: theme.color("on-primary", $mode);
-      border-bottom-color: theme.color("on-primary", $mode);
+      font-weight: bold;
+      color: theme.color("color", $mode);
+      border-bottom-color: theme.color("color", $mode);
     }
   }
 }

@@ -1,12 +1,11 @@
-// import Dashboard from "@/views/Months"
 import Overview from "@/views/Overview"
 
 import useRawDeaths from "@/services/raw-deaths"
 
-const Index = (): JSX.Element => {
+const Page = (): JSX.Element => {
   useRawDeaths()
 
   return <Overview />
 }
 
-export default Index
+export default Page

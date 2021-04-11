@@ -3,13 +3,15 @@ import AgeGroups from "./AgeGroups"
 import Panel from "@/components/Panel"
 import useFilters from "@/services/filters"
 
-const Deaths = () => {
-  const [{ ageGroup, gender }, setFilters] = useFilters()
+const Deaths = (): JSX.Element => {
+  const [filters, setFilters] = useFilters()
 
-  const handleGenderChange = (gender: string) =>
+  const { ageGroup, gender } = filters as Filters
+
+  const handleGenderChange = (gender: Gender) =>
     setFilters({ ageGroup, gender })
 
-  const handleAgeGroupChange = (event: any, newValue: [number, number]) =>
+  const handleAgeGroupChange = (newValue: [number, number]) =>
     setFilters({ ageGroup: newValue, gender })
 
   return (

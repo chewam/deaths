@@ -1,16 +1,21 @@
 import useSWR from "swr"
 
-const useMortality = () => {
+const useMortality = (): [Mortality | undefined, (data: Mortality) => void] => {
   const { data, mutate } = useSWR("mortality", null, {
     revalidateOnFocus: false,
-    initialData: { labels: [], data: [], ratio: [] },
+    initialData: {
+      labels: [],
+      data: [],
+      ratio: [],
+      ageGroups: [],
+    } as Mortality,
   })
 
-  const setData = (data) => {
+  const setData = (data: Mortality) => {
     mutate(data, false)
   }
 
-  return [data, setData] as const
+  return [data, setData]
 }
 
 export default useMortality

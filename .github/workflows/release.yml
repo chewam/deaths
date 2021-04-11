@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 14
       - name: Install dependencies
-        run: yarn
+        run: yarn --frozen-lockfile --perfer-offline
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
