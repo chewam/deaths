@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: 14
 
+      - name: Yarn cache setup
+        uses: c-hive/gha-yarn-cache@v1
+
       - name: Install dependencies
         run: yarn --frozen-lockfile --perfer-offline
 
@@ -46,30 +49,57 @@ jobs:
   #
 
   lighthouse:
-    name: Lighthouse
-    # needs: test
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+
+      - name: Wait for Vercel preview deployment to be ready
+        uses: patrickedqvist/wait-for-vercel-preview@master
+        id: waitForVercelPreviewDeployment
         with:
-          fetch-depth: 0
-          persist-credentials: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_timeout: 60
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
+      - name: Audit Vercel preview URL using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
         with:
-          node-version: 14
+          urls: |
+            ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
+          # budgetPath: ./services/website/budget.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true 
 
-      - name: Install dependencies
-        run: yarn --frozen-lockfile --perfer-offline
+  # lighthouse:
+  #   name: Lighthouse
+  #   # needs: test
+  #   runs-on: ubuntu-18.04
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+  #       with:
+  #         fetch-depth: 0
+  #         persist-credentials: false
 
-      - name: Build
-        run: yarn build
+  #     - name: Setup Node.js
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 14
 
-      - name: run Lighthouse CI
-        run: |
-          npm install -g @lhci/cli@0.5.x
-          lhci autorun
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+  #     - name: Yarn cache setup
+  #       uses: c-hive/gha-yarn-cache@v1
+
+  #     - name: Install dependencies
+  #       run: yarn --frozen-lockfile --perfer-offline
+
+  #     - name: Build
+  #       run: yarn build
+
+  #     - name: Export
+  #       run: yarn export
+
+  #     - name: run Lighthouse CI
+  #       run: |
+  #         npm install -g @lhci/cli@0.5.x
+  #         lhci autorun
+  #       env:
+  #         LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
