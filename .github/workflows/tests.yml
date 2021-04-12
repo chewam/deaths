@@ -48,26 +48,37 @@ jobs:
 
   #
 
-  lighthouse:
+  lighthouseci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm install && npm install -g @lhci/cli@0.6.x
+      - run: npm run build
+      - run: lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
-      - name: Wait for Vercel preview deployment to be ready
-        uses: patrickedqvist/wait-for-vercel-preview@master
-        id: waitForVercelPreviewDeployment
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          max_timeout: 60
+  # lighthouse:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
 
-      - name: Audit Vercel preview URL using Lighthouse
-        uses: treosh/lighthouse-ci-action@v3
-        with:
-          urls: |
-            ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
-          # budgetPath: ./services/website/budget.json
-          uploadArtifacts: true
-          temporaryPublicStorage: true 
+  #     - name: Wait for Vercel preview deployment to be ready
+  #       uses: patrickedqvist/wait-for-vercel-preview@master
+  #       id: waitForVercelPreviewDeployment
+  #       with:
+  #         token: ${{ secrets.GITHUB_TOKEN }}
+  #         max_timeout: 60
+
+  #     - name: Audit Vercel preview URL using Lighthouse
+  #       uses: treosh/lighthouse-ci-action@v3
+  #       with:
+  #         urls: |
+  #           ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
+  #         # budgetPath: ./services/website/budget.json
+  #         uploadArtifacts: true
+  #         temporaryPublicStorage: true 
 
   # lighthouse:
   #   name: Lighthouse
