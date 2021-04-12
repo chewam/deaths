@@ -33,6 +33,9 @@ jobs:
       - name: Check types
         run: yarn type-check
 
+      - name: Run tests
+        run: yarn test
+
       - name: Publish code coverage
         uses: codecov/codecov-action@v1
         with:
