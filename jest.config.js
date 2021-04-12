@@ -1,0 +1,50 @@
+module.exports = {
+  collectCoverage: true,
+  coverageThreshold: {
+    global: {
+      branches: 50,
+      functions: 50,
+      lines: 50,
+      statements: 50,
+    },
+  },
+  collectCoverageFrom: [
+    "src/**/**.tsx",
+    "!**/node_modules/**",
+    "!<rootDir>/src/pages/_*.tsx",
+    "!<rootDir>/src/utils/sentry.js",
+  ],
+  // moduleNameMapper: {
+  //   "@data/(.*)": "<rootDir>/src/data/$1",
+  //   "@lang/(.*)": "<rootDir>/src/lang/$1",
+  //   "@utils/(.*)": "<rootDir>/src/utils/$1",
+  //   "@styles/(.*)": "<rootDir>/src/styles/$1",
+  //   "@components/(.*)": "<rootDir>/src/components/$1",
+  // },
+  // testPathIgnorePatterns: ["/node_modules/", "/.next/"],
+  // transform: {
+  //   "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+  // },
+  // transformIgnorePatterns: ["/node_modules/"]
+  setupFilesAfterEnv: ["./jest/setup.tsx"],
+  // snapshotResolver: "./jest/resolver.js",
+  roots: ['<rootDir>'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
+  testPathIgnorePatterns: ['<rootDir>[/\\\\](node_modules|.next)[/\\\\]'],
+  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$'],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'babel-jest',
+  },
+  watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
+  moduleNameMapper: {
+    '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
+    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
+    "@/data/(.*)": "<rootDir>/src/data/$1",
+  //   "@lang/(.*)": "<rootDir>/src/lang/$1",
+    "@/views/(.*)": "<rootDir>/src/views/$1",
+    "@/utils/(.*)": "<rootDir>/src/utils/$1",
+    "@/styles/(.*)": "<rootDir>/src/styles/$1",
+    "@/services/(.*)": "<rootDir>/src/services/$1",
+    "@/components/(.*)": "<rootDir>/src/components/$1",
+  },
+}
