@@ -48,16 +48,17 @@ jobs:
 
   #
 
-  lighthouseci:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install && npm install -g @lhci/cli@0.6.x
-      - run: npm run build
-      - run: lhci autorun
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+  # lighthouseci:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/setup-node@v1
+  #     - run: yarn --frozen-lockfile --perfer-offline
+  #     - run: npm install && yarn add -g @lhci/cli@0.6.x
+  #     - run: npm run build
+  #     - run: lhci autorun
+  #       env:
+  #         LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
   # lighthouse:
   #   runs-on: ubuntu-latest
@@ -80,37 +81,37 @@ jobs:
   #         uploadArtifacts: true
   #         temporaryPublicStorage: true 
 
-  # lighthouse:
-  #   name: Lighthouse
-  #   # needs: test
-  #   runs-on: ubuntu-18.04
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
-  #       with:
-  #         fetch-depth: 0
-  #         persist-credentials: false
+  lighthouse:
+    name: Lighthouse
+    # needs: test
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
-  #     - name: Setup Node.js
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 14
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
 
-  #     - name: Yarn cache setup
-  #       uses: c-hive/gha-yarn-cache@v1
+      - name: Yarn cache setup
+        uses: c-hive/gha-yarn-cache@v1
 
-  #     - name: Install dependencies
-  #       run: yarn --frozen-lockfile --perfer-offline
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --perfer-offline
 
-  #     - name: Build
-  #       run: yarn build
+      - name: Build
+        run: yarn build
 
-  #     - name: Export
-  #       run: yarn export
+      - name: Export
+        run: yarn export
 
-  #     - name: run Lighthouse CI
-  #       run: |
-  #         npm install -g @lhci/cli@0.5.x
-  #         lhci autorun
-  #       env:
-  #         LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      - name: run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.6.x
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
