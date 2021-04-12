@@ -11,9 +11,13 @@
     text-decoration: none;
     border-bottom-width: 3px;
     border-bottom-style: solid;
-    @include box.padding(0, 0, 0.5);
+    @include box.padding(0, 0, 1);
     @include box.margin(0, 2, 0, 0);
     border-bottom-color: transparent;
+  }
+
+  li:last-child a {
+    @include box.margin(0);
   }
 }
 

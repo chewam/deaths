@@ -13,9 +13,9 @@ const Switch = (): JSX.Element | null => {
   return (
     <div className="switch">
       {theme === "dark" ? (
-        <FaSun size={24} onClick={() => setTheme("light")} />
+        <FaSun size={12} onClick={() => setTheme("light")} />
       ) : (
-        <FaMoon size={24} onClick={() => setTheme("dark")} />
+        <FaMoon size={12} onClick={() => setTheme("dark")} />
       )}
     </div>
   )

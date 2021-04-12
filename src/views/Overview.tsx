@@ -89,16 +89,16 @@ const Overview = (): JSX.Element => {
 
   return (
     <Panel className="overview">
-      <div style={{ flex: 1 }}>
-        <Chart
-          xAxes={xAxes}
-          yAxes={yAxes}
-          labels={labels}
-          datasets={datasets}
-          datalabels={datalabels}
-          annotations={annotations}
-        />
-      </div>
+      {/* <div style={{ flex: 1 }}> */}
+      <Chart
+        xAxes={xAxes}
+        yAxes={yAxes}
+        labels={labels}
+        datasets={datasets}
+        datalabels={datalabels}
+        annotations={annotations}
+      />
+      {/* </div> */}
     </Panel>
   )
 }

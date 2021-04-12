@@ -1,4 +1,4 @@
-import Switch from "@/components/Switch"
+// import Switch from "@/components/Switch"
 import Menu from "./Menu"
 
 const Header = (): JSX.Element => (
@@ -7,7 +7,7 @@ const Header = (): JSX.Element => (
       <h1>Mortalité en France</h1>
       <Menu />
     </div>
-    <Switch />
+    {/* <Switch /> */}
   </div>
 )
 
