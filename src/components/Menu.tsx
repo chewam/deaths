@@ -2,9 +2,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 
 const Menu = (): JSX.Element => {
-  // const router = useRouter()
   const { route } = useRouter() || {}
-  // const { route } = useRouter()
   const view = (route || "").substring(1)
 
   const items = [

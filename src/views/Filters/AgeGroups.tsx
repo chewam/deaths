@@ -19,15 +19,22 @@ const marks = [
   { value: 110, label: "110+" },
 ]
 
-const AgeGroups = ({ onChange }: Props): JSX.Element => (
-  <Slider
-    step={10}
-    max={110}
-    marks={marks}
-    className="slider"
-    defaultValue={[0, 110]}
-    onChange={(event, value) => onChange(value as [number, number])}
-  />
-)
+const AgeGroups = ({ onChange }: Props): JSX.Element => {
+  const getTextValue = (value: number) => `${value}`
+
+  return (
+    <Slider
+      step={10}
+      max={110}
+      marks={marks}
+      className="slider"
+      defaultValue={[0, 110]}
+      getAriaLabel={() => "slider"}
+      getAriaValueText={getTextValue}
+      // aria-labelledby="age-groups-slider"
+      onChange={(event, value) => onChange(value as [number, number])}
+    />
+  )
+}
 
 export default AgeGroups
