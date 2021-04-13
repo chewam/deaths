@@ -218,10 +218,12 @@ exports[`should match snapshot 1`] = `
         110+
       </span>
       <span
+        aria-label="slider"
         aria-orientation="horizontal"
         aria-valuemax="110"
         aria-valuemin="0"
         aria-valuenow="0"
+        aria-valuetext="0"
         class="MuiSlider-thumb MuiSlider-thumbColorPrimary"
         data-index="0"
         role="slider"
@@ -229,10 +231,12 @@ exports[`should match snapshot 1`] = `
         tabindex="0"
       />
       <span
+        aria-label="slider"
         aria-orientation="horizontal"
         aria-valuemax="110"
         aria-valuemin="0"
         aria-valuenow="110"
+        aria-valuetext="110"
         class="MuiSlider-thumb MuiSlider-thumbColorPrimary"
         data-index="1"
         role="slider"
