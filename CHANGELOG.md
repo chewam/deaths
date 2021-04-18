@@ -1,3 +1,10 @@
+# [1.11.0-alpha.17](https://github.com/chewam/deaths/compare/v1.11.0-alpha.16...v1.11.0-alpha.17) (2021-04-18)
+
+
+### Bug Fixes
+
+* tsconfig. ([3bf687a](https://github.com/chewam/deaths/commit/3bf687a9e6fbdbbc2b96c483a626ce1f4a4db1be))
+
 # [1.11.0-alpha.16](https://github.com/chewam/deaths/compare/v1.11.0-alpha.15...v1.11.0-alpha.16) (2021-04-18)
 
 
