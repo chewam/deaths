@@ -14,7 +14,10 @@ const Head = (): JSX.Element => {
         crossOrigin=""
         href="/fonts/Roboto-Regular.ttf"
       />
-      <meta property="og:title" content="Mortalité en France" />
+      <meta
+        property="og:title"
+        content="Les chiffres de la mortalité en France"
+      />
       <meta
         name="description"
         property="og:description"
@@ -26,6 +29,7 @@ const Head = (): JSX.Element => {
           content={`https://${VERCEL_URL}/screenshot.png`}
         />
       )}
+      <meta name="twitter:card" content="summary_large_image"></meta>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {ANALYTICS_ID && (
         <>
