@@ -38,7 +38,7 @@ jobs:
         uses: zentered/vercel-preview-url@v1.0.0
         id: vercel
         env:
-          VERCEL_TOKEN: ${{ secrets.PAT }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         with:
           vercel_team_id: 'chewam'
           vercel_project_id: 'deaths'
