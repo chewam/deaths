@@ -20,7 +20,7 @@ const Mortality = (): JSX.Element => {
     yAxisID: "y-axis-1",
     borderColor: theme.surface,
     borderWidth: { top: 2, right: 0, bottom: 2, left: 0 },
-    backgroundColor: hexToRgba(theme.primary || defaultColor, 0.35),
+    backgroundColor: hexToRgba(theme.primary || defaultColor, 0.5),
   }))
 
   const datasets = [
