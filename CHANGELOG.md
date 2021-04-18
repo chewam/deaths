@@ -1,3 +1,11 @@
+# [1.11.0-alpha.10](https://github.com/chewam/deaths/compare/v1.11.0-alpha.9...v1.11.0-alpha.10) (2021-04-18)
+
+
+### Bug Fixes
+
+* Add @semantic-release/changelog. ([a7ab5f4](https://github.com/chewam/deaths/commit/a7ab5f47b0800af68d5a2e8a5d215708ca0459f7))
+* Remove useless dependencies. ([3e348fe](https://github.com/chewam/deaths/commit/3e348fe7821d2fba6619a2e775b9a22faa0bf0ee))
+
 # [1.11.0-alpha.9](https://github.com/chewam/deaths/compare/v1.11.0-alpha.8...v1.11.0-alpha.9) (2021-04-11)
 
 
