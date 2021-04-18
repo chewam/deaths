@@ -103,15 +103,27 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile --perfer-offline
 
-      - name: Build
-        run: yarn build
-
-      - name: Export
-        run: yarn export
+      - name: Wait for Vercel preview deployment to be ready
+        uses: patrickedqvist/wait-for-vercel-preview@master
+        id: waitForVercelPreviewDeployment
+        with:
+          max_timeout: 60
+          token: ${{ secrets.PAT }}
 
       - name: run Lighthouse CI
-        run: |
-          npm install -g @lhci/cli@0.6.x
-          lhci autorun
+        run: yarn lhci --collect.url=${{ steps.waitForVercelPreviewDeployment.outputs.url }}
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      # - name: Build
+      #   run: yarn build
+
+      # - name: Export
+      #   run: yarn export
+
+      # - name: run Lighthouse CI
+      #   run: |
+      #     npm install -g @lhci/cli@0.6.x
+      #     lhci autorun --collect.url=
+      #   env:
+      #     LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

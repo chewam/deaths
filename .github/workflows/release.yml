@@ -12,17 +12,48 @@ jobs:
     name: Release
     runs-on: ubuntu-18.04
     steps:
+
       - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
+
+      - name: Wait for Vercel preview deployment to be ready
+        uses: patrickedqvist/wait-for-vercel-preview@master
+        id: waitForVercelPreviewDeployment
         with:
-          node-version: 14
-      - name: Install dependencies
-        run: yarn --frozen-lockfile --perfer-offline
+          max_timeout: 60
+          token: ${{ secrets.PAT }}
+
+      - name: Take screenshot
+        id: screenshot
+        uses: swinton/screenshot-website@v1.x
+        with:
+          delay: 5
+          width: 900
+          height: 472
+          overwrite: true
+          disable-animations: true
+          source: ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
+
+      - name: Copy screenshot
+        run: |
+          echo ${{ steps.screenshot.outputs.path }}
+          cp ${{ steps.screenshot.outputs.path }} ./public/
+          ls -la ./public/
+
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 14
+
+      # - name: Yarn cache setup
+      #   uses: c-hive/gha-yarn-cache@v1
+
+      # - name: Install dependencies
+      #   run: yarn --frozen-lockfile --perfer-offline
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
