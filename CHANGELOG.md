@@ -1,3 +1,10 @@
+# [1.11.0-alpha.16](https://github.com/chewam/deaths/compare/v1.11.0-alpha.15...v1.11.0-alpha.16) (2021-04-18)
+
+
+### Bug Fixes
+
+* Update meta tags. ([245acf3](https://github.com/chewam/deaths/commit/245acf3b0d36531efed56202329d0a3e6213f221))
+
 # [1.11.0-alpha.15](https://github.com/chewam/deaths/compare/v1.11.0-alpha.14...v1.11.0-alpha.15) (2021-04-18)
 
 
