@@ -105,13 +105,13 @@ jobs:
 
       - name: Wait for Vercel preview deployment to be ready
         uses: patrickedqvist/wait-for-vercel-preview@master
-        id: waitForVercelPreviewDeployment
+        id: vercel
         with:
           max_timeout: 60
           token: ${{ secrets.PAT }}
 
       - name: run Lighthouse CI
-        run: yarn lhci --collect.url=${{ steps.waitForVercelPreviewDeployment.outputs.url }}
+        run: yarn lhci --collect.url=${{ steps.vercel.outputs.url }}
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 

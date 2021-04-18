@@ -19,9 +19,14 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
       - name: Wait for Vercel preview deployment to be ready
         uses: patrickedqvist/wait-for-vercel-preview@master
-        id: waitForVercelPreviewDeployment
+        id: vercel
         with:
           max_timeout: 60
           token: ${{ secrets.PAT }}
@@ -35,7 +40,7 @@ jobs:
           height: 472
           overwrite: true
           disable-animations: true
-          source: ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
+          source: ${{ steps.vercel.outputs.url }}
 
       - name: Copy screenshot
         run: |
