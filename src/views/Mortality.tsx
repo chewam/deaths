@@ -103,7 +103,7 @@ const Mortality = (): JSX.Element => {
   const datalabels = {
     textAlign: "center",
     color: theme["on-primary"],
-    font: { size: 11 },
+    font: { size: 11, weight: "bold" },
     display: ({ active, dataset: { data }, dataIndex, chart }) => {
       const { scales } = chart as ChartOptions
       const s = scales as Record<string, Record<string, number>>

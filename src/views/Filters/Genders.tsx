@@ -14,11 +14,13 @@ const Genders = ({ onChange }: Props): JSX.Element => {
     <div className="genders">
       <IoMaleSharp
         size={28}
+        title="hommes"
         className={`icon ${gender === "male" ? "active" : ""}`}
         onClick={() => setGender(gender === "male" ? null : "male")}
       />
       <IoFemaleSharp
         size={28}
+        title="femmes"
         className={`icon ${gender === "female" ? "active" : ""}`}
         onClick={() => setGender(gender === "female" ? null : "female")}
       />

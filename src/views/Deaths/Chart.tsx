@@ -110,6 +110,7 @@ const Chart = (): JSX.Element => {
     padding: 6,
     color: "white",
     borderRadius: 4,
+    font: { size: 11, weight: "bold" },
     backgroundColor: ({ active }: { active: boolean }) =>
       active
         ? hexToRgba(theme.primary || defaultColor, 0.9)
