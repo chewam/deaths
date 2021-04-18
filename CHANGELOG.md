@@ -1,3 +1,11 @@
+# [1.11.0-beta.2](https://github.com/chewam/deaths/compare/v1.11.0-beta.1...v1.11.0-beta.2) (2021-04-18)
+
+
+### Bug Fixes
+
+* Add missing types. ([#92](https://github.com/chewam/deaths/issues/92)) ([#93](https://github.com/chewam/deaths/issues/93)) ([e78f2ee](https://github.com/chewam/deaths/commit/e78f2ee5d138404937336adf68ddd7f7e52c5cf2))
+* Add renovate configuration. ([cde2e63](https://github.com/chewam/deaths/commit/cde2e636102992d66e2836e803ededb9ced55eb9))
+
 # [1.11.0-alpha.18](https://github.com/chewam/deaths/compare/v1.11.0-alpha.17...v1.11.0-alpha.18) (2021-04-18)
 
 
