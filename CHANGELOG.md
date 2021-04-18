@@ -1,3 +1,10 @@
+# [1.11.0-alpha.18](https://github.com/chewam/deaths/compare/v1.11.0-alpha.17...v1.11.0-alpha.18) (2021-04-18)
+
+
+### Bug Fixes
+
+* Various fixes. ([a08a1f3](https://github.com/chewam/deaths/commit/a08a1f33a592777303a266e9d8c20d6cf7d12053))
+
 # [1.11.0-alpha.17](https://github.com/chewam/deaths/compare/v1.11.0-alpha.16...v1.11.0-alpha.17) (2021-04-18)
 
 
