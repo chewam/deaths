@@ -1,7 +1,7 @@
 name: Release
 
 on:
-  pull_request:
+  push:
     branches: [master, alpha, beta, next]
 
 jobs:
@@ -38,7 +38,7 @@ jobs:
         uses: zentered/vercel-preview-url@v1.0.0
         id: vercel
         env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_TOKEN: ${{ secrets.PAT }}
         with:
           vercel_team_id: 'chewam'
           vercel_project_id: 'deaths'
