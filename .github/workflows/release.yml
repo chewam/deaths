@@ -16,10 +16,10 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 14
 
       - name: Wait for Vercel preview deployment to be ready
         uses: patrickedqvist/wait-for-vercel-preview@master
