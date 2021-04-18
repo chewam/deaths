@@ -1,3 +1,10 @@
+# [1.11.0-alpha.12](https://github.com/chewam/deaths/compare/v1.11.0-alpha.11...v1.11.0-alpha.12) (2021-04-18)
+
+
+### Bug Fixes
+
+* debug screenshot url. ([0f4da99](https://github.com/chewam/deaths/commit/0f4da99a9e7756ea411f6811477cb6265b934bde))
+
 # [1.11.0-alpha.11](https://github.com/chewam/deaths/compare/v1.11.0-alpha.10...v1.11.0-alpha.11) (2021-04-18)
 
 
