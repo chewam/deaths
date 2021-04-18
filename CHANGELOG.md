@@ -1,3 +1,10 @@
+# [1.11.0-alpha.15](https://github.com/chewam/deaths/compare/v1.11.0-alpha.14...v1.11.0-alpha.15) (2021-04-18)
+
+
+### Bug Fixes
+
+* Set screenshot image size, again. ([2701212](https://github.com/chewam/deaths/commit/27012120ffe58c4021f272e6ba7eaad05fb76a41))
+
 # [1.11.0-alpha.14](https://github.com/chewam/deaths/compare/v1.11.0-alpha.13...v1.11.0-alpha.14) (2021-04-18)
 
 
