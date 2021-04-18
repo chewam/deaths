@@ -4,10 +4,7 @@ on:
   pull_request:
     branches: [master, alpha, beta, next]
 
-#
-
 jobs:
-  #
 
   test:
     name: Tests
