@@ -1,3 +1,10 @@
+# [1.11.0-alpha.11](https://github.com/chewam/deaths/compare/v1.11.0-alpha.10...v1.11.0-alpha.11) (2021-04-18)
+
+
+### Bug Fixes
+
+* Add screenshot to semrel assets. ([5ce6de5](https://github.com/chewam/deaths/commit/5ce6de5e77dc86b9b551361942a5cd9fed280f91))
+
 # [1.11.0-alpha.10](https://github.com/chewam/deaths/compare/v1.11.0-alpha.9...v1.11.0-alpha.10) (2021-04-18)
 
 
