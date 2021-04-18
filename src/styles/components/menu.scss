@@ -1,0 +1,39 @@
+@use "../utils/box";
+@use "../utils/theme";
+
+.menu {
+  display: flex;
+  align-items: flex-end;
+
+  a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    @include box.padding(0, 0, 1);
+    @include box.margin(0, 2, 0, 0);
+    border-bottom-color: transparent;
+  }
+
+  li:last-child a {
+    @include box.margin(0);
+  }
+}
+
+@include theme.apply(".menu") using ($mode) {
+  background-color: theme.color("surface", $mode);
+  a {
+    color: theme.color("muted", $mode);
+  }
+  a:hover {
+    color: theme.color("primary", $mode);
+  }
+  li.active {
+    a {
+      font-weight: bold;
+      color: theme.color("color", $mode);
+      border-bottom-color: theme.color("color", $mode);
+    }
+  }
+}

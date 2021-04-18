@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Head should create Head with image preview and analytics 1`] = `<DocumentFragment />`;
+
+exports[`Head should create Head without image preview and analytics 1`] = `<DocumentFragment />`;

@@ -1,4 +1,4 @@
-name: Update Data
+name: Update deaths datasets
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   udpate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -14,18 +14,13 @@ jobs:
           ref: master
           token: ${{ secrets.PAT }}
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Get yarn cache
-        uses: actions/cache@v2
-        id: yarn-cache
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version: 14
+
+      - name: Yarn cache setup
+        uses: c-hive/gha-yarn-cache@v1
 
       - name: Install
         run: yarn --frozen-lockfile --perfer-offline
@@ -36,4 +31,4 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update deaths data
+          commit_message: Update deaths datasets

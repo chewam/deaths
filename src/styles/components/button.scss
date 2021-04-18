@@ -17,13 +17,17 @@ button {
 }
 
 @include theme.apply("button") using ($mode) {
-  color: theme.color("primary", $mode);
-  border-color: theme.color("primary", $mode);
+  color: theme.color("muted", $mode);
+  border-color: theme.color("muted", $mode);
 
-  &:hover,
+  &:hover {
+    color: theme.color("primary", $mode);
+    border-color: theme.color("primary", $mode);
+  }
+
   &.active {
-    @include box.shadow();
     color: theme.color("on-primary", $mode);
+    border-color: theme.color("primary", $mode);
     background-color: theme.color("primary", $mode);
   }
 }

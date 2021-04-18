@@ -1,0 +1,16 @@
+{
+  "ci": {
+    "assert": {
+      "preset": "lighthouse:no-pwa",
+      "assertions": {
+        "errors-in-console": "off",
+        "is-crawlable": ["warn", {"minScore": 0}],
+        "unused-javascript": ["warn", {"minScore": 0}],
+        "uses-passive-event-listeners": ["warn", {"minScore": 0.9}]
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}

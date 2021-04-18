@@ -1,7 +1,6 @@
 import useSWR from "swr"
 import { sumYears } from "@/utils/index"
 import useDeaths from "@/services/deaths"
-import useMonths from "@/services/months"
 import useFilters from "@/services/filters"
 import useOverview from "@/services/overview"
 
@@ -15,32 +14,34 @@ const sumAgeGroups = (ageGroups: number[][][], start: number, end: number) =>
       []
     )
 
-const getMonthsData = (ageGroups: number[][][], start: number, end: number) =>
-  ageGroups
-    ?.slice(start, end)
-    .reduce(
-      (data, group) => (
-        data.push([].concat.apply([], group).slice(-12).reverse()), data
-      ),
-      []
-    )
+// const getMonthsData = (ageGroups: number[][][], start: number, end: number) =>
+//   console.log("ageGroups", ageGroups) ||
+//   ageGroups?.slice(start, end).reduce(
+//     (data, group) => (
+//       // data.push([].concat.apply([], group).slice(-12).reverse()), data
+//       console.log("group", group) ||
+//         data.push([].concat(group).slice(-12).reverse()),
+//       data
+//     ),
+//     []
+//   )
 
-const filterMonths = (data, { gender, ageGroup }: Filters) => {
-  const d =
-    gender && ageGroup
-      ? getMonthsData(
-          data[gender].ageGroups,
-          ageGroup[0] / 10,
-          ageGroup[1] / 10
-        )
-      : gender
-      ? getMonthsData(data[gender].global, ageGroup[0] / 10, ageGroup[1] / 10)
-      : getMonthsData(data?.ageGroups, ageGroup[0] / 10, ageGroup[1] / 10)
+// const filterMonths = (data: RawData, { gender, ageGroup }: Filters): Data => {
+//   const d =
+//     gender && ageGroup
+//       ? getMonthsData(
+//           data[gender].ageGroups,
+//           ageGroup[0] / 10,
+//           ageGroup[1] / 10
+//         )
+//       : // : gender
+//         // ? getMonthsData(data[gender].global, ageGroup[0] / 10, ageGroup[1] / 10)
+//         getMonthsData(data?.ageGroups, ageGroup[0] / 10, ageGroup[1] / 10)
 
-  return { labels: data.labels, data: d }
-}
+//   return { labels: data.labels, data: d }
+// }
 
-const filter = (data, { gender, ageGroup }: Filters) => {
+const filter = (data: DeathsRawData, { gender, ageGroup }: Filters): Deaths => {
   const d =
     gender && ageGroup
       ? sumAgeGroups(data[gender].ageGroups, ageGroup[0] / 10, ageGroup[1] / 10)
@@ -51,10 +52,10 @@ const filter = (data, { gender, ageGroup }: Filters) => {
   return { labels: data.labels, data: d }
 }
 
-const useRawDeaths = () => {
+const useRawDeaths = (): Deaths[] => {
   const [filters] = useFilters()
   const [, setDeaths] = useDeaths()
-  const [, setMonths] = useMonths()
+  // const [, setMonths] = useMonths()
   const [, setOverview] = useOverview()
   const { data } = useSWR("/data/deaths.json", fetcher, {
     revalidateOnFocus: false,
@@ -62,13 +63,13 @@ const useRawDeaths = () => {
 
   if (data && filters) {
     const filteredData = filter(data, filters)
-    const filteredData2 = filterMonths(data, filters)
+    // const filteredData2 = filterMonths(data, filters)
     setDeaths(filteredData)
-    setMonths(filteredData2)
+    // setMonths(filteredData2)
     setOverview(filteredData)
   }
 
-  return [data] as const
+  return [data]
 }
 
 export default useRawDeaths

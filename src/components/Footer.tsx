@@ -1,7 +1,9 @@
+import Switch from "./Switch"
+
 const version = process.env.APP_VERSION || "0.0.0"
 const sha = process.env.VERCEL_GITHUB_COMMIT_SHA || "dev"
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <footer>
       <div>
@@ -16,8 +18,8 @@ const Footer = () => {
         )
       </div>
 
-      <div>
-        version {version} (
+      <div className="wrapper">
+        <Switch /> | version {version} (
         <a
           target="_blank"
           rel="noopener noreferrer"

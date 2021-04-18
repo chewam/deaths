@@ -1,9 +1,13 @@
-import Switch from "@/components/Switch"
+// import Switch from "@/components/Switch"
+import Menu from "./Menu"
 
-const Header = () => (
+const Header = (): JSX.Element => (
   <div className="header">
-    <h1>French Mortality Figures</h1>
-    <Switch />
+    <div className="wrapper">
+      <h1>Mortalité en France</h1>
+      <Menu />
+    </div>
+    {/* <Switch /> */}
   </div>
 )
 

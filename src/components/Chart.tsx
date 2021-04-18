@@ -2,53 +2,35 @@ import merge from "deepmerge"
 import hexToRgba from "hex-to-rgba"
 import { Line } from "react-chartjs-2"
 import { useTheme } from "@/services/themes"
-import "chartjs-plugin-annotation"
 import "chartjs-plugin-datalabels"
+import { ChartDataSets, ChartOptions, ChartXAxe, ChartYAxe } from "chart.js"
+import { AnnotationConfig } from "chartjs-plugin-annotation"
+import "chartjs-plugin-annotation"
 
-// defaults.global.animation = false
-
-type Chart = {
-  xAxes: Array<Object>
-  yAxes: Array<Object>
-  labels: Array<any>
-  datasets: Array<Object>
+interface ChartProps {
+  labels: string[]
+  xAxes: ChartXAxe[]
+  yAxes: ChartYAxe[]
+  datasets: ChartDataSets[]
   gradient?: [number, string][]
-  annotations?: Array<Object>
-  datalabels?: Object
+  annotations?: AnnotationConfig["annotations"]
+  datalabels?: ChartDataSets["datalabels"]
 }
 
-const getBackground = (
-  canvas: HTMLCanvasElement,
-  gradient: [number, string][]
-) => {
-  if (gradient) {
-    const ctx = canvas.getContext("2d")
-    const g = ctx.createLinearGradient(0, 0, 0, canvas.clientWidth)
-
-    gradient.map(([offset, color]) => g.addColorStop(offset, color))
-
-    return g
-  }
-
-  return "rgba(0, 0, 0, 0.1)"
-}
-
-const Chart = ({
+const MyChart = ({
   xAxes,
   yAxes,
   datasets,
   labels,
-  gradient,
   annotations,
   datalabels,
-}: Chart) => {
+}: ChartProps): JSX.Element => {
   const { values: theme } = useTheme()
 
-  const config = (canvas: HTMLCanvasElement) => {
+  const config = () => {
     const defaultDataset = {
       pointRadius: 3,
       pointBorderWidth: 2,
-      borderColor: theme?.primary,
       pointBackgroundColor: theme?.primary,
       pointBorderColor: hexToRgba(theme?.background || "", 0.9),
     }
@@ -57,7 +39,7 @@ const Chart = ({
       labels,
       datasets: datasets?.map((dataset) => {
         const obj = merge(defaultDataset, dataset)
-        return { backgroundColor: getBackground(canvas, gradient), ...obj }
+        return { ...obj }
       }),
     }
   }
@@ -107,9 +89,9 @@ const Chart = ({
     annotation: {
       annotations: [...(annotations || [])],
     },
-  }
+  } as ChartOptions
 
   return <Line data={config} options={options} />
 }
 
-export default Chart
+export default MyChart

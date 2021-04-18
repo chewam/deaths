@@ -1,26 +1,20 @@
-import Head from "next/head"
-import Menu from "@/components/Menu"
+import Filters from "@/views/Filters"
+import Overview from "@/views/Overview"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import useRawDeaths from "@/services/raw-deaths"
 
-import Views from "@/views/index"
+const Index = (): JSX.Element => {
+  useRawDeaths()
 
-const Page = () => (
-  <>
-    <Head>
-      <title>French mortality figures</title>
-      <link
-        as="font"
-        rel="preload"
-        crossOrigin=""
-        href="/fonts/Roboto-Regular.ttf"
-      />
-    </Head>
-    <Header />
-    <Menu />
-    <Views />
-    <Footer />
-  </>
-)
+  return (
+    <>
+      <Header />
+      <Filters />
+      <Overview />
+      <Footer />
+    </>
+  )
+}
 
-export default Page
+export default Index

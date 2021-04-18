@@ -3,33 +3,35 @@ import Chart from "@/components/Chart"
 import Panel from "@/components/Panel"
 import { useTheme } from "@/services/themes"
 import useMortality from "@/services/mortality"
+import { ChartDataSets, ChartOptions } from "chart.js"
+import { getYearPopulation } from "../utils"
 
-const average = (nums: [number]) => nums.reduce((a, b) => a + b) / nums.length
-
-const Mortality = () => {
+const Mortality = (): JSX.Element => {
   const { values: theme = {} } = useTheme()
-  const [{ labels, data, ratio }] = useMortality()
-  const max = Math.max(...ratio)
+  const [mortality] = useMortality()
+  const { labels, data, ratio, ageGroups } = mortality as Mortality
+
   const defaultColor = "#ffffff"
 
-  const bars = data.map((ageGroup: number[][], i: number) => ({
+  const bars = data.map((ageGroup, i) => ({
     type: "bar",
     data: ageGroup,
-    borderWidth: 2,
     label: `bar-${i}`,
     yAxisID: "y-axis-1",
-    backgroundColor: hexToRgba(theme.primary || defaultColor, 0.2),
+    borderColor: theme.surface,
+    borderWidth: { top: 2, right: 0, bottom: 2, left: 0 },
+    backgroundColor: hexToRgba(theme.primary || defaultColor, 0.5),
   }))
 
   const datasets = [
     {
       fill: false,
+      data: ratio,
       type: "line",
       label: "Ratio",
       borderWidth: 3,
       pointRadius: 5,
       yAxisID: "y-axis-2",
-      data: ratio,
       borderColor: theme.secondary,
       pointBorderColor: theme.secondary,
       pointBackgroundColor: theme.surface,
@@ -37,17 +39,21 @@ const Mortality = () => {
         align: "end",
         anchor: "end",
         borderRadius: 4,
+        borderWidth: 2,
+        borderColor: theme.surface,
         color: theme["on-primary"],
-        display: ({ dataIndex }) => dataIndex % 2,
-        formatter: (value) => `${value.toFixed(2)}%`,
-        backgroundColor: ({ active }) =>
+        display: ({ active }) => (active ? true : "auto"),
+        formatter: (value: number, { active, dataIndex }) =>
           active
-            ? hexToRgba(theme.secondary || defaultColor, 0.9)
-            : hexToRgba(theme.secondary || defaultColor, 0.8),
+            ? `${2000 + dataIndex}\nTaux de mortalité: ${value.toFixed(
+                2
+              )}%\nPopulation totale: ${getYearPopulation(2000 + dataIndex)}`
+            : `${value.toFixed(2)}%`,
+        backgroundColor: theme.secondary,
       },
     },
     ...bars,
-  ]
+  ] as ChartDataSets[]
 
   const xAxes = [{ offset: true, stacked: true }]
 
@@ -57,56 +63,74 @@ const Mortality = () => {
       id: "y-axis-1",
       type: "linear",
       position: "left",
+      ticks: {
+        callback: (value: number) => (value ? `${value / 1000}K` : 0),
+      },
     },
     {
       id: "y-axis-2",
       type: "linear",
       position: "right",
       gridLines: { drawOnChartArea: false },
-    },
-  ]
-
-  const annotations = max && [
-    {
-      value: max,
-      type: "line",
-      borderWidth: 2,
-      mode: "horizontal",
-      borderDash: [6, 3],
-      scaleID: "y-axis-2",
-      borderColor: theme.secondary,
-      drawTime: "afterDatasetsDraw",
-      label: {
-        enabled: true,
-        fontColor: theme["on-primary"],
-        backgroundColor: theme.secondary,
-        content: `${labels[ratio.indexOf(max)]}: ${max.toFixed(2)}% décès`,
+      ticks: {
+        stepSize: 0.05,
+        callback: (value: number) => `${value.toFixed(2)}%`,
       },
     },
   ]
 
+  // const annotations = (max
+  //   ? [
+  //       {
+  //         value: max,
+  //         type: "line",
+  //         borderWidth: 2,
+  //         mode: "horizontal",
+  //         borderDash: [6, 3],
+  //         scaleID: "y-axis-2",
+  //         borderColor: theme.secondary,
+  //         drawTime: "afterDatasetsDraw",
+  //         label: {
+  //           enabled: true,
+  //           fontColor: theme["on-primary"],
+  //           backgroundColor: theme.secondary,
+  //           content: `${labels[ratio.indexOf(max)]}: ${max.toFixed(2)}% décès`,
+  //         },
+  //       },
+  //     ]
+  //   : []) as AnnotationOptions[]
+
   const datalabels = {
-    color: ({ active }) => (active ? theme["on-primary"] : theme.primary),
-    display: ({ active, dataset, dataIndex, chart: { scales } }) => {
-      const end = scales["y-axis-1"].end
-      return active || dataset.data[dataIndex] > end * 0.05
+    textAlign: "center",
+    color: theme["on-primary"],
+    font: { size: 11, weight: "bold" },
+    display: ({ active, dataset: { data }, dataIndex, chart }) => {
+      const { scales } = chart as ChartOptions
+      const s = scales as Record<string, Record<string, number>>
+      const end = s["y-axis-1"].end
+      const value = (data || [])[dataIndex] || 0
+      return active ? true : value > end * 0.05 ? "auto" : false
     },
+    borderRadius: 4,
     backgroundColor: ({ active }) =>
       active
         ? hexToRgba(theme.primary || defaultColor, 0.9)
         : "rgba(0, 0, 0, 0)",
-    font: {
-      weight: "bold",
-    },
-    formatter: (value, { active, datasetIndex, dataset: { data } }) =>
+    formatter: (value, { active, dataIndex, datasetIndex }) =>
       active
-        ? `${datasetIndex * 10}${
-            datasetIndex > 10 ? "+" : `-${datasetIndex * 10 + 10}`
-          }\n${value} décès`
+        ? `${dataIndex + 2000}\nNombe de décès: ${value}\nTranche d'âge: ${
+            ageGroups[datasetIndex - 1]
+          }${
+            datasetIndex > 10
+              ? "+"
+              : ` à ${ageGroups[datasetIndex - 1] + 9} ans`
+          }`
         : value > 1000
-        ? (value / 1000).toFixed() + "k"
-        : Math.round,
-  }
+        ? `${(value / 1000).toFixed()}K\n${ageGroups[datasetIndex - 1]}-${
+            ageGroups[datasetIndex - 1] + 10
+          }`
+        : Math.round(value),
+  } as ChartDataSets["datalabels"]
 
   return (
     <Panel className="mortality">
@@ -117,7 +141,7 @@ const Mortality = () => {
           labels={labels}
           datasets={datasets}
           datalabels={datalabels}
-          annotations={annotations}
+          // annotations={annotations}
         />
       </div>
     </Panel>

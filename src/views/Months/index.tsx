@@ -3,9 +3,10 @@ import Panel from "@/components/Panel"
 import useMonths from "@/services/months"
 import useOverview from "@/services/overview"
 
-const Months = () => {
+const Months = (): JSX.Element => {
   const [monthsData] = useMonths()
-  const [{ labels, data }] = useOverview()
+  const [overview] = useOverview()
+  const { labels, data } = overview as Overview
 
   const months = {
     data: data.slice(-12).reverse(),
@@ -23,7 +24,9 @@ const Months = () => {
               ))}
             </div>
             <div className="chart">
-              <Chart data={monthsData.data.map((group) => group[i])} />
+              <Chart
+                data={monthsData.data.map((group: number[]) => group[i])}
+              />
               <div className="count">
                 <div>{months.data[i]}</div>
                 <div>décès</div>

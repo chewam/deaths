@@ -1,8 +1,73 @@
-# [1.11.0-beta.1](https://github.com/chewam/deaths/compare/v1.10.4...v1.11.0-beta.1) (2021-04-02)
+# [1.11.0-alpha.18](https://github.com/chewam/deaths/compare/v1.11.0-alpha.17...v1.11.0-alpha.18) (2021-04-18)
 
 
 ### Bug Fixes
 
+* Various fixes. ([a08a1f3](https://github.com/chewam/deaths/commit/a08a1f33a592777303a266e9d8c20d6cf7d12053))
+
+# [1.11.0-alpha.17](https://github.com/chewam/deaths/compare/v1.11.0-alpha.16...v1.11.0-alpha.17) (2021-04-18)
+
+
+### Bug Fixes
+
+* tsconfig. ([3bf687a](https://github.com/chewam/deaths/commit/3bf687a9e6fbdbbc2b96c483a626ce1f4a4db1be))
+
+# [1.11.0-alpha.16](https://github.com/chewam/deaths/compare/v1.11.0-alpha.15...v1.11.0-alpha.16) (2021-04-18)
+
+
+### Bug Fixes
+
+* Update meta tags. ([245acf3](https://github.com/chewam/deaths/commit/245acf3b0d36531efed56202329d0a3e6213f221))
+
+# [1.11.0-alpha.15](https://github.com/chewam/deaths/compare/v1.11.0-alpha.14...v1.11.0-alpha.15) (2021-04-18)
+
+
+### Bug Fixes
+
+* Set screenshot image size, again. ([2701212](https://github.com/chewam/deaths/commit/27012120ffe58c4021f272e6ba7eaad05fb76a41))
+
+# [1.11.0-alpha.14](https://github.com/chewam/deaths/compare/v1.11.0-alpha.13...v1.11.0-alpha.14) (2021-04-18)
+
+
+### Bug Fixes
+
+* Set screenshot image size. ([4854962](https://github.com/chewam/deaths/commit/4854962814c538748ec150b62b67b215645441f4))
+
+# [1.11.0-alpha.13](https://github.com/chewam/deaths/compare/v1.11.0-alpha.12...v1.11.0-alpha.13) (2021-04-18)
+
+
+### Bug Fixes
+
+* Wait for Vercel deployment. ([59afda3](https://github.com/chewam/deaths/commit/59afda3f3f70cad50f125a8bf252abb9467c3a69))
+
+# [1.11.0-alpha.12](https://github.com/chewam/deaths/compare/v1.11.0-alpha.11...v1.11.0-alpha.12) (2021-04-18)
+
+
+### Bug Fixes
+
+* debug screenshot url. ([0f4da99](https://github.com/chewam/deaths/commit/0f4da99a9e7756ea411f6811477cb6265b934bde))
+
+# [1.11.0-alpha.11](https://github.com/chewam/deaths/compare/v1.11.0-alpha.10...v1.11.0-alpha.11) (2021-04-18)
+
+
+### Bug Fixes
+
+* Add screenshot to semrel assets. ([5ce6de5](https://github.com/chewam/deaths/commit/5ce6de5e77dc86b9b551361942a5cd9fed280f91))
+
+# [1.11.0-alpha.10](https://github.com/chewam/deaths/compare/v1.11.0-alpha.9...v1.11.0-alpha.10) (2021-04-18)
+
+
+### Bug Fixes
+
+* Add @semantic-release/changelog. ([a7ab5f4](https://github.com/chewam/deaths/commit/a7ab5f47b0800af68d5a2e8a5d215708ca0459f7))
+* Remove useless dependencies. ([3e348fe](https://github.com/chewam/deaths/commit/3e348fe7821d2fba6619a2e775b9a22faa0bf0ee))
+
+# [1.11.0-alpha.9](https://github.com/chewam/deaths/compare/v1.11.0-alpha.8...v1.11.0-alpha.9) (2021-04-11)
+
+
+### Bug Fixes
+
+* Add missing types. ([#92](https://github.com/chewam/deaths/issues/92)) ([0fe13ca](https://github.com/chewam/deaths/commit/0fe13ca632ff81e742fcd4bb4459b419c49ca109))
 * Add @semantic-release/git. ([921d0a9](https://github.com/chewam/deaths/commit/921d0a92492d63056d2c910c09f8aa09ed92456e))
 * Add semrel action. ([08d34c2](https://github.com/chewam/deaths/commit/08d34c2bb1ac8999db376602a6990c16d45bba4f))
 * Bump version. ([159b4ba](https://github.com/chewam/deaths/commit/159b4baea9def49b53948f42c74fd2a5e16881c9))
