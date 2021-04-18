@@ -27,13 +27,6 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile --perfer-offline
 
-      # - name: Wait for Vercel preview deployment to be ready
-      #   uses: patrickedqvist/wait-for-vercel-preview@master
-      #   id: vercel
-      #   with:
-      #     max_timeout: 60
-      #     token: ${{ secrets.PAT }}
-
       - name: Vercel environment url
         uses: zentered/vercel-preview-url@v1.0.0
         id: vercel
@@ -52,31 +45,16 @@ jobs:
         id: screenshot
         uses: swinton/screenshot-website@v1.x
         with:
-          # delay: 5
           width: 1200
           height: 630
           overwrite: true
-          # disable-animations: true
-          # full-page: true
           source: https://${{ steps.vercel.outputs.preview_url }}
-          # source: ${{ steps.vercel.outputs.url }}
 
       - name: Copy screenshot
         run: |
           echo ${{ steps.screenshot.outputs.path }}
           cp ${{ steps.screenshot.outputs.path }} ./public/
           ls -la ./public/
-
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: 14
-
-      # - name: Yarn cache setup
-      #   uses: c-hive/gha-yarn-cache@v1
-
-      # - name: Install dependencies
-      #   run: yarn --frozen-lockfile --perfer-offline
 
       - name: Release
         env:

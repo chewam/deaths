@@ -43,44 +43,8 @@ jobs:
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
 
-  #
-
-  # lighthouseci:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v1
-  #     - run: yarn --frozen-lockfile --perfer-offline
-  #     - run: npm install && yarn add -g @lhci/cli@0.6.x
-  #     - run: npm run build
-  #     - run: lhci autorun
-  #       env:
-  #         LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-
-  # lighthouse:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-
-  #     - name: Wait for Vercel preview deployment to be ready
-  #       uses: patrickedqvist/wait-for-vercel-preview@master
-  #       id: waitForVercelPreviewDeployment
-  #       with:
-  #         token: ${{ secrets.GITHUB_TOKEN }}
-  #         max_timeout: 60
-
-  #     - name: Audit Vercel preview URL using Lighthouse
-  #       uses: treosh/lighthouse-ci-action@v3
-  #       with:
-  #         urls: |
-  #           ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
-  #         # budgetPath: ./services/website/budget.json
-  #         uploadArtifacts: true
-  #         temporaryPublicStorage: true 
-
   lighthouse:
     name: Lighthouse
-    # needs: test
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
@@ -111,16 +75,3 @@ jobs:
         run: yarn lhci --collect.url=${{ steps.vercel.outputs.url }}
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-
-      # - name: Build
-      #   run: yarn build
-
-      # - name: Export
-      #   run: yarn export
-
-      # - name: run Lighthouse CI
-      #   run: |
-      #     npm install -g @lhci/cli@0.6.x
-      #     lhci autorun --collect.url=
-      #   env:
-      #     LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
