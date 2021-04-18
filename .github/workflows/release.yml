@@ -47,11 +47,12 @@ jobs:
         id: screenshot
         uses: swinton/screenshot-website@v1.x
         with:
-          delay: 5
-          width: 900
-          height: 472
-          overwrite: true
-          disable-animations: true
+          # delay: 5
+          # width: 900
+          # height: 472
+          # overwrite: true
+          # disable-animations: true
+          full-page: true
           source: https://${{ steps.vercel.outputs.preview_url }}
           # source: ${{ steps.vercel.outputs.url }}
 
