@@ -34,7 +34,7 @@ jobs:
       #     max_timeout: 60
       #     token: ${{ secrets.PAT }}
 
-      - name: vercel-preview-url
+      - name: Vercel environment url
         uses: zentered/vercel-preview-url@v1.0.0
         id: vercel
         env:
@@ -53,8 +53,8 @@ jobs:
         uses: swinton/screenshot-website@v1.x
         with:
           # delay: 5
-          width: 900
-          height: 472
+          width: 1200
+          height: 630
           overwrite: true
           # disable-animations: true
           # full-page: true
