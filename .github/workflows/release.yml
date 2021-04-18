@@ -27,12 +27,21 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile --perfer-offline
 
-      - name: Wait for Vercel preview deployment to be ready
-        uses: patrickedqvist/wait-for-vercel-preview@master
+      # - name: Wait for Vercel preview deployment to be ready
+      #   uses: patrickedqvist/wait-for-vercel-preview@master
+      #   id: vercel
+      #   with:
+      #     max_timeout: 60
+      #     token: ${{ secrets.PAT }}
+
+      - name: vercel-preview-url
+        uses: zentered/vercel-preview-url@v1.0.0
         id: vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         with:
-          max_timeout: 60
-          token: ${{ secrets.PAT }}
+          vercel_team_id: 'chewam'
+          vercel_project_id: 'deaths'
 
       - name: Take screenshot
         id: screenshot
@@ -43,7 +52,8 @@ jobs:
           height: 472
           overwrite: true
           disable-animations: true
-          source: ${{ steps.vercel.outputs.url }}
+          source: https://${{ steps.vercel.outputs.preview_url }}
+          # source: ${{ steps.vercel.outputs.url }}
 
       - name: Copy screenshot
         run: |
