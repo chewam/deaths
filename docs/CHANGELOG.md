@@ -1,3 +1,10 @@
+## [1.10.8](https://github.com/chewam/deaths/compare/v1.10.7...v1.10.8) (2021-04-18)
+
+
+### Bug Fixes
+
+* Last v1 tag. ([1a6832b](https://github.com/chewam/deaths/commit/1a6832b43fef00b4f3496450653e432ef9ae62b9))
+
 ## [1.10.7](https://github.com/chewam/deaths/compare/v1.10.6...v1.10.7) (2021-03-31)
 
 
