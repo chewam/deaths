@@ -43,6 +43,9 @@ jobs:
           vercel_team_id: 'chewam'
           vercel_project_id: 'deaths'
 
+      - name: debug screenshot
+        run: echo **${{ steps.vercel.outputs.preview_url }}**
+
       - name: Take screenshot
         id: screenshot
         uses: swinton/screenshot-website@v1.x
