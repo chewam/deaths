@@ -1,3 +1,10 @@
+## [1.10.9](https://github.com/chewam/deaths/compare/v1.10.8...v1.10.9) (2021-04-19)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([f688bce](https://github.com/chewam/deaths/commit/f688bce643317cb34f70288b8b416e5a128f38f8))
+
 ## [1.10.8](https://github.com/chewam/deaths/compare/v1.10.7...v1.10.8) (2021-04-18)
 
 
