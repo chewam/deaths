@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/chewam/deaths/compare/v1.11.0...v1.11.1) (2021-04-21)
+
+
+### Bug Fixes
+
+* Favicon + vercel preview timeout. ([cc0ff7a](https://github.com/chewam/deaths/commit/cc0ff7a00c59ff1e0bd7b963e04c0ac1fd397ae2))
+
 # [1.11.0](https://github.com/chewam/deaths/compare/v1.10.4...v1.11.0) (2021-04-21)
 
 
