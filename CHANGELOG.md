@@ -1,3 +1,10 @@
+## [1.11.2](https://github.com/chewam/deaths/compare/v1.11.1...v1.11.2) (2021-04-21)
+
+
+### Bug Fixes
+
+* Remove non used views. ([#103](https://github.com/chewam/deaths/issues/103)) ([2a58e0f](https://github.com/chewam/deaths/commit/2a58e0f9fe358270f1006f073a359477b994b120))
+
 ## [1.11.1](https://github.com/chewam/deaths/compare/v1.11.0...v1.11.1) (2021-04-21)
 
 
