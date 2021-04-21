@@ -68,7 +68,7 @@ jobs:
         uses: patrickedqvist/wait-for-vercel-preview@master
         id: vercel
         with:
-          max_timeout: 60
+          max_timeout: 120
           token: ${{ secrets.PAT }}
 
       - name: run Lighthouse CI
