@@ -38,7 +38,7 @@
     "react-transition-group": "4.4.1",
     "sass": "1.32.6",
     "swr": "0.4.1",
-    "tslib": "2.1.0"
+    "tslib": "2.2.0"
   },
   "devDependencies": {
     "@lhci/cli": "0.7.1",
