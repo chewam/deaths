@@ -37,7 +37,7 @@
     "react-tooltip": "4.2.14",
     "react-transition-group": "4.4.1",
     "sass": "1.32.6",
-    "swr": "0.4.1",
+    "swr": "0.5.5",
     "tslib": "2.1.0"
   },
   "devDependencies": {
