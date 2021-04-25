@@ -20,7 +20,7 @@
   "dependencies": {
     "@material-ui/core": "4.11.3",
     "chart.js": "2.9.4",
-    "chartjs-plugin-annotation": "0.5.7",
+    "chartjs-plugin-annotation": "1.0.1",
     "chartjs-plugin-datalabels": "0.7.0",
     "d3-scale": "3.2.3",
     "deepmerge": "4.2.2",
