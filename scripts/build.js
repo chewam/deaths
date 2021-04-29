@@ -229,7 +229,8 @@ const readLine = (line) => [
 ]
 
 const processLine = (line) => {
-  const [gender, dob, country, year, month, day, department] = readLine(line)
+  // const [gender, dob, country, year, month, day, department] = readLine(line)
+  const [gender, dob, year, month, day] = readLine(line)
   const start = new Date(dob[0], dob[1] - 1, dob[2])
   const end = new Date(year, month - 1, day)
   const { years: age } =
@@ -243,8 +244,8 @@ const processLine = (line) => {
       age,
       year,
       month,
-      department,
-      country: country.trim(),
+      // department,
+      // country: country.trim(),
     })
   }
 }
@@ -297,14 +298,14 @@ const main = async () => {
     resultFolderPath + "mortality.json",
     JSON.stringify(json.mortality)
   )
-  fs.writeFileSync(
-    resultFolderPath + "locations.json",
-    JSON.stringify(json.locations)
-  )
-  fs.writeFileSync(
-    resultFolderPath + "countries.json",
-    JSON.stringify(json.countries)
-  )
+  // fs.writeFileSync(
+  //   resultFolderPath + "locations.json",
+  //   JSON.stringify(json.locations)
+  // )
+  // fs.writeFileSync(
+  //   resultFolderPath + "countries.json",
+  //   JSON.stringify(json.countries)
+  // )
   fs.writeFileSync(resultFolderPath + "years.json", JSON.stringify(json.years))
 
   // fs.writeFileSync(resultFolderPath + "data.json", JSON.stringify([...data]))
