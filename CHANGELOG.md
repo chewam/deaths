@@ -1,3 +1,10 @@
+## [1.11.4](https://github.com/chewam/deaths/compare/v1.11.3...v1.11.4) (2021-04-29)
+
+
+### Bug Fixes
+
+* Add base datasets. ([bb5c714](https://github.com/chewam/deaths/commit/bb5c714aab0de4d35f0a09d5524b0e03f9d368ed))
+
 ## [1.11.3](https://github.com/chewam/deaths/compare/v1.11.2...v1.11.3) (2021-04-29)
 
 
