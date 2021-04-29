@@ -1,6 +1,6 @@
 /.next
 /node_modules
-/data
+/data/*.txt
 /.vscode
 /coverage
 /out
