@@ -1,3 +1,10 @@
+## [1.11.5](https://github.com/chewam/deaths/compare/v1.11.4...v1.11.5) (2021-04-29)
+
+
+### Bug Fixes
+
+* Remove departments and countries datasets. ([8ed18bc](https://github.com/chewam/deaths/commit/8ed18bca7c56d06f263e20cba5fc95ee8349f749))
+
 ## [1.11.4](https://github.com/chewam/deaths/compare/v1.11.3...v1.11.4) (2021-04-29)
 
 
