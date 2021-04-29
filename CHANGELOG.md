@@ -1,3 +1,10 @@
+## [1.11.7](https://github.com/chewam/deaths/compare/v1.11.6...v1.11.7) (2021-04-29)
+
+
+### Bug Fixes
+
+* Years dataset generation. ([51e22a2](https://github.com/chewam/deaths/commit/51e22a27079f5107aacf8c89c361e1fc9ff26f0a))
+
 ## [1.11.6](https://github.com/chewam/deaths/compare/v1.11.5...v1.11.6) (2021-04-29)
 
 
