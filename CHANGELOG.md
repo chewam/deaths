@@ -1,3 +1,10 @@
+## [1.11.6](https://github.com/chewam/deaths/compare/v1.11.5...v1.11.6) (2021-04-29)
+
+
+### Bug Fixes
+
+* Add workflow_dispatch to datasets update workflow. ([f2d15c5](https://github.com/chewam/deaths/commit/f2d15c5b480e08c661dd209801d49f2f0ce689a0))
+
 ## [1.11.5](https://github.com/chewam/deaths/compare/v1.11.4...v1.11.5) (2021-04-29)
 
 
