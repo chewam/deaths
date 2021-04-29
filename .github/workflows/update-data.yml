@@ -3,6 +3,7 @@ name: Update deaths datasets
 on:
   schedule:
     - cron: "42 23 * * *"
+  workflow_dispatch:
 
 jobs:
   udpate:
