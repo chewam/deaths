@@ -1,3 +1,10 @@
+## [1.11.3](https://github.com/chewam/deaths/compare/v1.11.2...v1.11.3) (2021-04-29)
+
+
+### Bug Fixes
+
+* Add data folder. ([2395548](https://github.com/chewam/deaths/commit/23955482679f913566d9f5cb9670282de8e10a39))
+
 ## [1.11.2](https://github.com/chewam/deaths/compare/v1.11.1...v1.11.2) (2021-04-21)
 
 
