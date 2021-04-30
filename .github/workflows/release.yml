@@ -28,7 +28,7 @@ jobs:
         run: yarn --frozen-lockfile --perfer-offline
 
       - name: Vercel environment url
-        uses: zentered/vercel-preview-url@v1.0.0
+        uses: zentered/vercel-preview-url@v1.0.1
         id: vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
