@@ -239,6 +239,8 @@ const processLine = (line) => {
       ? intervalToDuration({ start, end })
       : { years: -1 }
 
+      // console.log("MASTA", gender, dob, year, month, day, age);
+
   if (Number.isInteger(year) && Number.isInteger(month) && year >= 2000) {
     data.set(getLineHash(line), {
       gender,
@@ -275,7 +277,7 @@ const getFiles = () => {
   return new Promise((resolve) => {
     fs.readdir(baseDir, (err, files) => {
       if (err) {
-        console.error("Could not list the directory.", err)
+        console.error("Cannot read directory.", err)
         process.exit(1)
       }
       resolve(files.filter((file) => file.match(/^.+\.txt$/)))
@@ -286,17 +288,20 @@ const getFiles = () => {
 const main = async () => {
   const files = await getFiles()
   const resultFolderPath = `${__dirname}/../src/data/`
+  const resultPublicFolderPath = `${__dirname}/../public/data/`
   await getFilesData(files)
   console.log("File processing done:", data.size, "records found.")
+  // console.log("data", data);
 
   const json = getChartsData(data)
 
+
   fs.writeFileSync(
-    resultFolderPath + "deaths.json",
+    resultPublicFolderPath + "deaths.json",
     JSON.stringify(json.deaths)
   )
   fs.writeFileSync(
-    resultFolderPath + "mortality.json",
+    resultPublicFolderPath + "mortality.json",
     JSON.stringify(json.mortality)
   )
   // fs.writeFileSync(

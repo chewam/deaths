@@ -61,6 +61,8 @@ const useRawDeaths = (): Deaths[] => {
     revalidateOnFocus: false,
   })
 
+  console.log("data", data)
+
   if (data && filters) {
     const filteredData = filter(data, filters)
     // const filteredData2 = filterMonths(data, filters)

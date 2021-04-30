@@ -13,7 +13,7 @@ export const sumObjects = (
 })
 
 export const sumYears = (years: number[][]): number[] =>
-  years.reduce((r, a) => a.map((b, i) => (r[i] || 0) + b), [])
+  years.reduce((r, a) => a?.map((b, i) => (r[i] || 0) + b), [])
 
 export const getYearPopulation = (year: number): number => {
   const p = Population as Population

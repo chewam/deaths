@@ -12,8 +12,8 @@ const average = (nums: number[]) => nums.reduce((a, b) => a + b) / nums.length
 const getMaximum = (data: Deaths["data"]) => {
   if (!data) return {}
   const maximums = data.reduce((acc, year, i) => {
-    const max = Math.max(...year)
-    const index = year.indexOf(max)
+    const max = Math.max(...(year || []))
+    const index = year?.indexOf(max)
     acc[max] = { year: 2000 + i, month: index + 1, value: max }
     return acc
   }, {} as { [key: number]: Record<string, number> })
