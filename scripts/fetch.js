@@ -80,7 +80,7 @@ const main = async () => {
   await downloadFiles(urls)
 
   const currentHash = hash(
-    fs.readFileSync(`${__dirname}/../src/data/deaths.json`)
+    fs.readFileSync(`${__dirname}/../public/data/deaths.json`)
   )
 
   console.log("Current json file hash:", currentHash)
