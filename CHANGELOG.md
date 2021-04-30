@@ -1,3 +1,10 @@
+## [1.11.9](https://github.com/chewam/deaths/compare/v1.11.8...v1.11.9) (2021-04-30)
+
+
+### Bug Fixes
+
+* Check deaths dataset changes. ([ccaeed9](https://github.com/chewam/deaths/commit/ccaeed92f1833c6904b84e40f76004af299c1149))
+
 ## [1.11.8](https://github.com/chewam/deaths/compare/v1.11.7...v1.11.8) (2021-04-30)
 
 
