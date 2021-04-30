@@ -1,3 +1,10 @@
+## [1.11.10](https://github.com/chewam/deaths/compare/v1.11.9...v1.11.10) (2021-04-30)
+
+
+### Bug Fixes
+
+* Share filters state accross pages. ([79f6aa4](https://github.com/chewam/deaths/commit/79f6aa48acade23bc8f858752fb9d901cd3c373b))
+
 ## [1.11.9](https://github.com/chewam/deaths/compare/v1.11.8...v1.11.9) (2021-04-30)
 
 
