@@ -1,3 +1,10 @@
+## [1.11.8](https://github.com/chewam/deaths/compare/v1.11.7...v1.11.8) (2021-04-30)
+
+
+### Bug Fixes
+
+* Move datasets to /public. ([94dfe56](https://github.com/chewam/deaths/commit/94dfe56e515d0b0cec8581a27c610607676ec959))
+
 ## [1.11.7](https://github.com/chewam/deaths/compare/v1.11.6...v1.11.7) (2021-04-29)
 
 
