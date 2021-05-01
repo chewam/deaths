@@ -1,3 +1,10 @@
+## [1.11.12](https://github.com/chewam/deaths/compare/v1.11.11...v1.11.12) (2021-05-01)
+
+
+### Bug Fixes
+
+* Avoid slider glitch on render. ([27a0ae8](https://github.com/chewam/deaths/commit/27a0ae8fa4dccd0c4b29c9b01d6d6f41539c4a10))
+
 ## [1.11.11](https://github.com/chewam/deaths/compare/v1.11.10...v1.11.11) (2021-05-01)
 
 
