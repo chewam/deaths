@@ -3,7 +3,7 @@ import AgeGroups from "./AgeGroups"
 import Panel from "@/components/Panel"
 import useFilters from "@/services/filters"
 
-const Deaths = (): JSX.Element => {
+const Filters = (): JSX.Element => {
   const [filters, setFilters] = useFilters()
 
   const { ageGroup, gender } = filters as Filters
@@ -22,4 +22,4 @@ const Deaths = (): JSX.Element => {
   )
 }
 
-export default Deaths
+export default Filters

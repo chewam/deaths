@@ -9,7 +9,18 @@ import "@/styles/index.scss"
 import dark from "@/styles/themes/dark.module.scss"
 import light from "@/styles/themes/light.module.scss"
 
+import { useEffect } from "react"
+
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  // Remove the server-side injected CSS to avoid Material-UI slider flickering
+  useEffect(() => {
+    const jssStyles = document.querySelector("#jss-server-side")
+    if (jssStyles) {
+      const { parentElement } = jssStyles
+      parentElement?.removeChild(jssStyles)
+    }
+  }, [])
+
   return (
     <Themes light={light} dark={dark}>
       <Head />
