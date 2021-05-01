@@ -1,3 +1,10 @@
+## [1.11.13](https://github.com/chewam/deaths/compare/v1.11.12...v1.11.13) (2021-05-01)
+
+
+### Bug Fixes
+
+* Data page load warnings. ([5cd86c7](https://github.com/chewam/deaths/commit/5cd86c7635dfd4495587cb40eb7967aead31a476))
+
 ## [1.11.12](https://github.com/chewam/deaths/compare/v1.11.11...v1.11.12) (2021-05-01)
 
 
