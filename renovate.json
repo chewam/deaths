@@ -2,6 +2,7 @@
   "enabled": true,
   "extends": ["config:base"],
   "schedule": "every weekend",
+  "separateMinorPatch": true,
   "packageRules": [
     {
       "depTypeList": ["dependencies"],
