@@ -6,10 +6,13 @@ import useOverview from "@/services/overview"
 import { ChartDataSets } from "chart.js"
 import { AnnotationOptions } from "chartjs-plugin-annotation"
 
+import useRawDeaths from "@/services/raw-deaths"
+
 const average = (nums: number[]): number =>
   nums.reduce((a, b) => a + b) / nums.length
 
 const Overview = (): JSX.Element => {
+  useRawDeaths()
   const [overview] = useOverview()
   const { values: theme = {} } = useTheme()
   const { labels, data } = overview as Overview

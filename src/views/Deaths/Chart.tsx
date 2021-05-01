@@ -7,6 +7,8 @@ import { ChartDataSets } from "chart.js"
 import { AnnotationOptions } from "chartjs-plugin-annotation"
 import Months from "@/data/months.json"
 
+import useRawDeaths from "@/services/raw-deaths"
+
 const average = (nums: number[]) => nums.reduce((a, b) => a + b) / nums.length
 
 const getMaximum = (data: Deaths["data"]) => {
@@ -23,6 +25,7 @@ const getMaximum = (data: Deaths["data"]) => {
 }
 
 const Chart = (): JSX.Element => {
+  useRawDeaths()
   const [years] = useYears()
   const [deaths] = useDeaths()
   const { labels, data } = deaths as Deaths

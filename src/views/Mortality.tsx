@@ -6,7 +6,10 @@ import useMortality from "@/services/mortality"
 import { ChartDataSets, ChartOptions } from "chart.js"
 import { getYearPopulation } from "../utils"
 
+import useRawMortality from "@/services/raw-mortality"
+
 const Mortality = (): JSX.Element => {
+  useRawMortality()
   const { values: theme = {} } = useTheme()
   const [mortality] = useMortality()
   const { labels, data, ratio, ageGroups } = mortality as Mortality
