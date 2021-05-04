@@ -9,7 +9,7 @@ const Menu = (): JSX.Element => {
     // { label: "Tableau de board", view: "" },
     { label: "Vue d'Ensemble", view: "" },
     { label: "Comparaison", view: "comparison" },
-    { label: "Répartition", view: "mortality" },
+    { label: "Répartition", view: "distribution" },
     // { label: "Répartition", view: "distribution" },
     // { label: "Localisations", view: "locations" },
   ]

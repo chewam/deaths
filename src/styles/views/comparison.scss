@@ -1,14 +1,13 @@
 @use "../utils/box";
 
-.panel.deaths {
+.panel.comparison {
   flex: 1;
   flex-direction: column;
-  @include box.padding(1.5, 1, 1);
-  @include box.margin(0.5, 1, 0.5);
 
   .chart {
     flex: 1;
     overflow: auto;
+    position: relative;
   }
 
   .filters {
