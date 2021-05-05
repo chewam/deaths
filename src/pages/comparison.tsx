@@ -1,5 +1,5 @@
 import Panel from "@/components/Panel"
-import Filters from "@/components/Filters"
+import Years from "@/components/filters/Years"
 import Comparison from "@/components/charts/Comparison"
 
 const Page = (): JSX.Element => {
@@ -8,7 +8,7 @@ const Page = (): JSX.Element => {
       <div className="chart">
         <Comparison />
       </div>
-      <Filters />
+      <Years />
     </Panel>
   )
 }

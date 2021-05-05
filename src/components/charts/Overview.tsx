@@ -22,7 +22,6 @@ const Overview = (): JSX.Element => {
   const { labels, data } = overview as Overview
 
   const max = data.length ? Math.max(...data) : 0
-  console.log("MAX:", max)
 
   const defaultColor = "#ffffff"
 
