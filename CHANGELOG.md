@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/chewam/deaths/compare/v2.0.4...v2.0.5) (2021-05-06)
+
+
+### Bug Fixes
+
+* Screenshot on release. ([#133](https://github.com/chewam/deaths/issues/133)) ([0c2a5df](https://github.com/chewam/deaths/commit/0c2a5dfe29c2dabcd5f7ca12e859cbf8de7c1253))
+
 ## [2.0.4](https://github.com/chewam/deaths/compare/v2.0.3...v2.0.4) (2021-05-06)
 
 
