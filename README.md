@@ -1,6 +1,8 @@
-##### Credits
+## Deaths
 
-France svg map: https://france-geojson.gregoiredavid.fr/
+A web page to show statistics about deaths in France from year 2000 up to now, based on INSEE data.
+
+![Preview](public/screenshot.png)
 
 ##### Install dependencies
 
@@ -20,6 +22,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ```bash
 yarn lint
+```
+
+##### Run types check
+
+```bash
+yarn type-check
 ```
 
 ##### Run tests
