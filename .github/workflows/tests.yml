@@ -8,45 +8,8 @@ on:
 
 jobs:
 
-  test:
-    name: Tests
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 2
-          persist-credentials: false
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14
-
-      - name: Yarn cache setup
-        uses: c-hive/gha-yarn-cache@v1
-
-      - name: Install dependencies
-        run: yarn --frozen-lockfile --perfer-offline
-
-      - name: Lint code
-        run: yarn lint
-
-      - name: Check types
-        run: yarn type-check
-
-      - name: Run tests
-        run: yarn test
-
-      - name: Publish code coverage
-        uses: codecov/codecov-action@v1
-        with:
-          directory: coverage
-          fail_ci_if_error: true
-          token: ${{ secrets.CODECOV_TOKEN }}
-
-  lighthouse:
-    name: Lighthouse
+  setup:
+    name: Setup
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
@@ -66,14 +29,164 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile --perfer-offline
 
-      - name: Wait for Vercel preview deployment to be ready
-        uses: patrickedqvist/wait-for-vercel-preview@master
-        id: vercel
+  lint:
+    name: Lint
+    needs: [setup]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          max_timeout: 120
-          token: ${{ secrets.PAT }}
+          fetch-depth: 0
+          persist-credentials: false
 
-      - name: run Lighthouse CI
-        run: yarn lhci --collect.url=${{ steps.vercel.outputs.url }}
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Yarn cache setup
+        uses: c-hive/gha-yarn-cache@v1
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --perfer-offline
+
+      - name: Lint code
+        run: yarn lint
+
+  types:
+    needs: [setup]
+    name: Types check
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Yarn cache setup
+        uses: c-hive/gha-yarn-cache@v1
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --perfer-offline
+
+      - name: Check types
+        run: yarn type-check
+
+  tests:
+    name: Tests
+    needs: [setup]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Yarn cache setup
+        uses: c-hive/gha-yarn-cache@v1
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --perfer-offline
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Check
+        run: |
+          ls -lah
+          ls -lah ./coverage
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage
+
+  codecov:
+    name: Code coverage
+    runs-on: ubuntu-18.04
+    needs: [lint, types, tests]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+
+      - name: Download coverage
+        uses: actions/download-artifact@v2
+        with:
+          name: coverage
+          path: ./coverage/
+
+      - name: Check
+        run: |
+          ls -lah
+          ls -lah ./coverage
+
+      - name: Publish code coverage
+        uses: codecov/codecov-action@v1
+        with:
+          directory: coverage
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+  # lighthouse:
+  #   name: Lighthouse
+  #   runs-on: ubuntu-18.04
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+  #       with:
+  #         fetch-depth: 0
+  #         persist-credentials: false
+
+  #     - name: Setup Node.js
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 14
+
+  #     - name: Yarn cache setup
+  #       uses: c-hive/gha-yarn-cache@v1
+
+  #     - name: Install dependencies
+  #       run: yarn --frozen-lockfile --perfer-offline
+
+  #     # - name: Wait for Vercel preview deployment to be ready
+  #     #   uses: patrickedqvist/wait-for-vercel-preview@master
+  #     #   id: vercel
+  #     #   with:
+  #     #     max_timeout: 120
+  #     #     token: ${{ secrets.PAT }}
+  #     - name: Vercel environment url
+  #       uses: zentered/vercel-preview-url@v1.0.1
+  #       id: vercel
+  #       env:
+  #         VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  #       with:
+  #         vercel_team_id: 'chewam'
+  #         vercel_project_id: 'deaths'
+
+  #     - name: Wait for Vercel deployment
+  #       run: |
+  #         echo domain: ${{ steps.vercel.outputs.preview_url }}
+  #         sleep 30
+
+  #     - name: run Lighthouse CI
+  #       # run: yarn lhci --collect.url=${{ steps.vercel.outputs.url }}
+  #       run: yarn lhci --collect.url=${{ steps.vercel.outputs.preview_url }}
+  #       env:
+  #         LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
