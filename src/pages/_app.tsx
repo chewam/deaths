@@ -1,4 +1,3 @@
-import App from "next/app"
 import { useEffect } from "react"
 import ErrorPage from "next/error"
 import Head from "@/components/Head"
@@ -6,7 +5,7 @@ import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Themes } from "@/services/themes"
 import FiltersBar from "@/components/FiltersBar"
-import type { AppProps, AppContext } from "next/app"
+import type { AppProps } from "next/app"
 
 import "@/styles/index.scss"
 import dark from "@/styles/themes/dark.module.scss"
