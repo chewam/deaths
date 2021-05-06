@@ -2639,11 +2639,6 @@ core-js-pure@^3.0.0:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.9.0.tgz#326cc74e1fef8b7443a6a793ddb0adfcd81f9efb"
   integrity sha512-3pEcmMZC9Cq0D4ZBh3pe2HLtqxpGNJBLXF/kZ2YzK17RbKp94w0HFbdbSx8H8kAlZG5k76hvLrkPm57Uyef+kg==
 
-core-js@^3.6.5:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.9.0.tgz#790b1bb11553a2272b36e2625c7179db345492f8"
-  integrity sha512-PyFBJaLq93FlyYdsndE5VaueA9K5cNB7CGzeCj191YYLhkQM0gdZR2SKihM70oF0wdqKSKClv/tEBOpoRmdOVQ==
-
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -4541,11 +4536,6 @@ internmap@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/internmap/-/internmap-1.0.0.tgz#3c6bf0944b0eae457698000412108752bbfddb56"
   integrity sha512-SdoDWwNOTE2n4JWUsLn4KXZGuZPjPF9yyOGc8bnfWnBQh7BD/l80rzSznKc/r4Y0aQ7z3RTk9X+tV4tHBpu+dA==
-
-intersection-observer@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.11.0.tgz#f4ea067070326f68393ee161cc0a2ca4c0040c6f"
-  integrity sha512-KZArj2QVnmdud9zTpKf279m2bbGfG+4/kn16UU0NL3pTVl52ZHiJ9IRNSsnn6jaHrL9EGLFM5eWjTx2fz/+zoQ==
 
 intl-messageformat-parser@^1.8.1:
   version "1.8.1"
@@ -7028,19 +7018,16 @@ react-chartjs-2@3.0.3:
   dependencies:
     lodash "^4.17.19"
 
-react-component-transition@1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/react-component-transition/-/react-component-transition-1.1.6.tgz#61247953b2e945b1c1047777f397a3a2483d22b2"
-  integrity sha512-Tu9Cl4B4ugcb+6JJ86lW8RMa4K+Sf/JJkFRn1yX5A8hnH1lFqN4yrKk2uvKAp9VZqb6QOmaQK7HusWEPJRyMYA==
+react-component-transition@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-component-transition/-/react-component-transition-2.0.1.tgz#4d90aa62d20478de57d1f95ddac99cbd2d6c76b9"
+  integrity sha512-mwdoGyr+7hFd2+QA/qNS9AWCLefUx8C9Fgyzq+uvHOvk2m+VxsGehwexLJiheVk/O30fllLA+NVCtBSL5yb0kw==
   dependencies:
     "@types/classnames" "^2.2.10"
     "@types/uniqid" "^5.2.0"
     classnames "^2.2.6"
-    core-js "^3.6.5"
-    intersection-observer "^0.11.0"
     react-intersection-observer "^8.26.2"
     uniqid "^5.2.0"
-    web-animations-js "^2.3.2"
 
 react-dom@17.0.1:
   version "17.0.1"
@@ -8723,11 +8710,6 @@ watchpack@2.1.1:
   dependencies:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
-
-web-animations-js@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/web-animations-js/-/web-animations-js-2.3.2.tgz#a51963a359c543f97b47c7d4bc2d811f9fc9e153"
-  integrity sha512-TOMFWtQdxzjWp8qx4DAraTWTsdhxVSiWa6NkPFSaPtZ1diKUxTn4yTix73A1euG1WbSOMMPcY51cnjTIHrGtDA==
 
 webidl-conversions@^4.0.2:
   version "4.0.2"
