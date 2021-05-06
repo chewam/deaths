@@ -98,7 +98,8 @@ const Overview = (): JSX.Element => {
       x: {
         grid: { display: false },
         ticks: {
-          color: theme.muted,
+          padding: 0,
+          color: theme.color,
         },
       },
       y: {
@@ -106,15 +107,31 @@ const Overview = (): JSX.Element => {
         suggestedMax: max && max + (max * 5) / 100,
         ticks: {
           padding: 10,
-          color: theme.muted,
+          color: theme.color,
         },
         grid: {
           lineWidth: 1,
           drawTicks: false,
           drawBorder: false,
           borderDash: [3, 3],
-          color: theme.muted,
-          zeroLineColor: theme.muted,
+          // color: theme.muted,
+          // zeroLineColor: theme.muted,
+
+          // display: true,
+          // drawBorder: true,
+          // drawOnChartArea: true,
+          // drawTicks: true,
+
+          // borderDash: (context) => context.tick.value > 0 ? [3, 3] : [1, 1],
+          color: (context) =>
+            context.tick.value > 0 ? theme.muted : theme.surface,
+          //     return Utils.CHART_COLORS.green;
+          //   } else if (context.tick.value < 0) {
+          //     return Utils.CHART_COLORS.red;
+          //   }
+
+          //   return '#000000';
+          // },
         },
       },
     },

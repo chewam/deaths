@@ -23,18 +23,15 @@ const Distribution = (): JSX.Element => {
     borderWidth: { top: 2, right: 0, bottom: 2, left: 0 },
     backgroundColor: hexToRgba(theme.primary || defaultColor, 0.8),
     datalabels: {
-      // offset: 3,
-      // clamp: true,
-      // align: "end",
-      // anchor: "end",
-      // display: "auto",
-      // borderRadius: 4,
+      borderRadius: 4,
       textAlign: "center",
-      // font: { weight: "bold" },
       color: theme["on-primary"],
-      // backgroundColor: theme.secondary,
-      // padding: { top: 4, right: 5, bottom: 4, left: 5 },
-      // formatter: (value: number) => (value / 1000).toFixed() + "K",
+      font: { size: 11, weight: "bold" },
+      backgroundColor: ({ active }: Context) =>
+        active
+          ? hexToRgba(theme.primary || defaultColor, 0.9)
+          : "rgba(0, 0, 0, 0)",
+      padding: { top: 4, right: 5, bottom: 4, left: 5 },
       display: ({ active, dataset: { data }, dataIndex, chart }: Context) => {
         const { scales } = chart as ChartOptions
         const s = scales as Record<string, Record<string, number>>
@@ -108,14 +105,13 @@ const Distribution = (): JSX.Element => {
       x: {
         // offset: true,
         stacked: true,
-        grid: { display: false },
+        grid: {
+          display: false,
+          drawBorder: false,
+        },
         ticks: {
           color: theme.muted,
         },
-        // gridLines: { display: false },
-        // ticks: {
-        // padding: 5,
-        // },
       },
       y: {
         type: "linear",
@@ -129,8 +125,8 @@ const Distribution = (): JSX.Element => {
           drawTicks: false,
           drawBorder: false,
           borderDash: [3, 3],
-          color: theme.muted,
-          zeroLineColor: theme.muted,
+          color: (context) =>
+            context.tick.value > 0 ? theme.muted : theme.surface,
         },
       },
       y2: {
@@ -140,8 +136,12 @@ const Distribution = (): JSX.Element => {
           padding: 10,
           stepSize: 0.1,
           color: theme.muted,
+          callback: (value: number) => `${value.toFixed(2)}%`,
         },
-        grid: { display: false, zeroLineColor: theme.surface },
+        grid: {
+          display: false,
+          drawBorder: false,
+        },
       },
     },
   } as ChartOptions
