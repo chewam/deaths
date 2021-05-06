@@ -17,6 +17,7 @@ body {
 #__next {
   flex: 1;
   display: flex;
+  overflow: auto;
   flex-direction: column;
 }
 

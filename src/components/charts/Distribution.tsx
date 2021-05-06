@@ -93,7 +93,6 @@ const Distribution = (): JSX.Element => {
   const plugins = [ChartDataLabels]
 
   const options = {
-    respnsive: true,
     maintainAspectRatio: false,
     animation: { duration: 0 },
     interaction: { mode: "nearest" },
@@ -103,7 +102,6 @@ const Distribution = (): JSX.Element => {
     },
     scales: {
       x: {
-        // offset: true,
         stacked: true,
         grid: {
           display: false,
