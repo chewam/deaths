@@ -1,3 +1,10 @@
+## [1.11.14](https://github.com/chewam/deaths/compare/v1.11.13...v1.11.14) (2021-05-06)
+
+
+### Bug Fixes
+
+* Handle error pages. ([#128](https://github.com/chewam/deaths/issues/128)) ([3fc9d42](https://github.com/chewam/deaths/commit/3fc9d42717ec22c1e3089bd0f7c85f484f6e07f1))
+
 ## [1.11.13](https://github.com/chewam/deaths/compare/v1.11.12...v1.11.13) (2021-05-01)
 
 
