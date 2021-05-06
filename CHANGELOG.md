@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/chewam/deaths/compare/v1.11.14...v2.0.0) (2021-05-06)
+
+
+### Bug Fixes
+
+* LHCI job. ([#129](https://github.com/chewam/deaths/issues/129)) ([5f3a124](https://github.com/chewam/deaths/commit/5f3a12429623d76f369415a721e5eea35ae0700f))
+
+
+### BREAKING CHANGES
+
+* bump version.
+
 ## [1.11.14](https://github.com/chewam/deaths/compare/v1.11.13...v1.11.14) (2021-05-06)
 
 
