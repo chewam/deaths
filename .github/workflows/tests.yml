@@ -8,8 +8,30 @@ on:
 
 jobs:
 
+  setup:
+    name: Setup
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Yarn cache setup
+        uses: c-hive/gha-yarn-cache@v1
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --perfer-offline
+
   lint:
     name: Lint
+    needs: [setup]
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
@@ -33,6 +55,7 @@ jobs:
         run: yarn lint
 
   types:
+    needs: [setup]
     name: Types check
     runs-on: ubuntu-18.04
     steps:
@@ -58,6 +81,7 @@ jobs:
 
   tests:
     name: Tests
+    needs: [setup]
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
@@ -80,12 +104,16 @@ jobs:
       - name: Run tests
         run: yarn test
 
-      - name: Publish code coverage
-        uses: codecov/codecov-action@v1
+      - name: Check
+        run: |
+          ls -lah
+          ls -lah ./coverage
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
         with:
-          directory: coverage
-          fail_ci_if_error: true
-          token: ${{ secrets.CODECOV_TOKEN }}
+          name: coverage
+          path: coverage
 
   codecov:
     name: Code coverage
@@ -97,6 +125,17 @@ jobs:
         with:
           fetch-depth: 2
           persist-credentials: false
+
+      - name: Download coverage
+        uses: actions/download-artifact@v2
+        with:
+          name: coverage
+          path: ./coverage/
+
+      - name: Check
+        run: |
+          ls -lah
+          ls -lah ./coverage
 
       - name: Publish code coverage
         uses: codecov/codecov-action@v1
