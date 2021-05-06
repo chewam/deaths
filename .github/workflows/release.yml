@@ -55,6 +55,7 @@ jobs:
           echo ${{ steps.screenshot.outputs.path }}
           cp ${{ steps.screenshot.outputs.path }} ./public/
           ls -la ./public/
+          git status
 
       - name: Release
         env:
