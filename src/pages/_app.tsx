@@ -1,9 +1,9 @@
 import Head from "@/components/Head"
-import Filters from "@/views/Filters"
 import type { AppProps } from "next/app"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Themes } from "@/services/themes"
+import FiltersBar from "@/components/FiltersBar"
 
 import "@/styles/index.scss"
 import dark from "@/styles/themes/dark.module.scss"
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     <Themes light={light} dark={dark}>
       <Head />
       <Header />
-      <Filters />
+      <FiltersBar />
       <Component {...pageProps} />
       <Footer />
     </Themes>

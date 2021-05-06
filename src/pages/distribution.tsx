@@ -1,10 +1,10 @@
 import Panel from "@/components/Panel"
-import Overview from "@/components/charts/Overview"
+import Distribution from "@/components/charts/Distribution"
 
 const Page = (): JSX.Element => {
   return (
-    <Panel className="overview">
-      <Overview />
+    <Panel className="distribution">
+      <Distribution />
     </Panel>
   )
 }

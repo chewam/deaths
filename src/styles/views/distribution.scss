@@ -1,6 +1,6 @@
 @use "../utils/box";
 
-.panel.overview {
+.panel.distribution {
   flex: 1;
   @include box.margin(0.5, 1);
 }

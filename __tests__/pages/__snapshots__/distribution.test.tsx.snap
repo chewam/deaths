@@ -3,11 +3,7 @@
 exports[`should match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="panel mortality"
-  >
-    <div
-      style="flex: 1;"
-    />
-  </div>
+    class="panel distribution"
+  />
 </DocumentFragment>
 `;
