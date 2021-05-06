@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/chewam/deaths/compare/v2.0.2...v2.0.3) (2021-05-06)
+
+
+### Bug Fixes
+
+* **deps:** update all patch dependencies (patch) ([#126](https://github.com/chewam/deaths/issues/126)) ([e669eca](https://github.com/chewam/deaths/commit/e669ecae9030bd430e7ac98f5f5c6574941e171f))
+
 ## [2.0.2](https://github.com/chewam/deaths/compare/v2.0.1...v2.0.2) (2021-05-06)
 
 
