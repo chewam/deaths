@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/chewam/deaths/compare/v2.0.1...v2.0.2) (2021-05-06)
+
+
+### Bug Fixes
+
+* Charts resizing. ([807386b](https://github.com/chewam/deaths/commit/807386b81abbf0047d6ff24306aa2b800250cb22))
+
 ## [2.0.1](https://github.com/chewam/deaths/compare/v2.0.0...v2.0.1) (2021-05-06)
 
 
