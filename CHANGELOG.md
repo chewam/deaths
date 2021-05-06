@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/chewam/deaths/compare/v2.0.0...v2.0.1) (2021-05-06)
+
+
+### Bug Fixes
+
+* Add Github plugin for SemRel. ([80d5cae](https://github.com/chewam/deaths/commit/80d5cae0725913f5b8a14e42461973763321a479))
+
 # [2.0.0](https://github.com/chewam/deaths/compare/v1.11.14...v2.0.0) (2021-05-06)
 
 
