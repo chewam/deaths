@@ -66,14 +66,28 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile --perfer-offline
 
-      - name: Wait for Vercel preview deployment to be ready
-        uses: patrickedqvist/wait-for-vercel-preview@master
+      # - name: Wait for Vercel preview deployment to be ready
+      #   uses: patrickedqvist/wait-for-vercel-preview@master
+      #   id: vercel
+      #   with:
+      #     max_timeout: 120
+      #     token: ${{ secrets.PAT }}
+      - name: Vercel environment url
+        uses: zentered/vercel-preview-url@v1.0.1
         id: vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         with:
-          max_timeout: 120
-          token: ${{ secrets.PAT }}
+          vercel_team_id: 'chewam'
+          vercel_project_id: 'deaths'
+
+      - name: Wait for Vercel deployment
+        run: |
+          echo domain: ${{ steps.vercel.outputs.preview_url }}
+          sleep 30
 
       - name: run Lighthouse CI
-        run: yarn lhci --collect.url=${{ steps.vercel.outputs.url }}
+        # run: yarn lhci --collect.url=${{ steps.vercel.outputs.url }}
+        run: yarn lhci --collect.url=${{ steps.vercel.outputs.preview_url }}
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
