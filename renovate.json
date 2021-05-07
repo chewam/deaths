@@ -7,28 +7,24 @@
     {
       "depTypeList": ["dependencies"],
       "updateTypes": ["minor"],
-      "rangeStrategy": "pin",
       "groupName": "all minor dependencies",
       "groupSlug": "all-minor"
     },
     {
       "depTypeList": ["dependencies"],
       "updateTypes": ["patch"],
-      "rangeStrategy": "pin",
       "groupName": "all patch dependencies",
       "groupSlug": "all-patch"
     },
     {
       "depTypeList": ["devDependencies"],
       "updateTypes": ["minor"],
-      "rangeStrategy": "pin",
       "groupName": "all minor devDependencies",
       "groupSlug": "all-minor-dev-tools"
     },
     {
       "depTypeList": ["devDependencies"],
       "updateTypes": ["patch"],
-      "rangeStrategy": "pin",
       "groupName": "all patch devDependencies",
       "groupSlug": "all-patch-dev-tools"
     }
