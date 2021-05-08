@@ -1,7 +1,13 @@
+import { palette } from "@/utils/index"
 import useYears from "@/services/years"
 
-const Filters = (): JSX.Element => {
+const Years = (): JSX.Element => {
   const [years, setYears] = useYears()
+  console.log("years", years)
+
+  const paletteSubset = palette
+    .slice(0, Object.keys(years || {}).length)
+    .reverse()
 
   const getYearStatus = (year: string | number) => {
     return years && years[year]
@@ -18,6 +24,14 @@ const Filters = (): JSX.Element => {
           .map((year, i) => (
             <li key={i}>
               <button
+                style={{
+                  backgroundColor: getYearStatus(year)
+                    ? paletteSubset[i]
+                    : "transparent",
+                  borderColor: getYearStatus(year)
+                    ? paletteSubset[i]
+                    : "inherit",
+                }}
                 className={`${getYearStatus(year) ? "active" : ""}`}
                 onClick={() => toggle(year)}
               >
@@ -29,4 +43,4 @@ const Filters = (): JSX.Element => {
   )
 }
 
-export default Filters
+export default Years

@@ -46,7 +46,6 @@ interface Mortality {
   ageGroups: number[]
 }
 
-// type LocationsAgeGroups = number[][][]
 type LocationsAgeGroups = Record<number, number>[][]
 
 interface LocationsRawData {

@@ -1,20 +1,23 @@
+import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { Line } from "react-chartjs-2"
+import { palette } from "@/utils/index"
 import useYears from "@/services/years"
 import Months from "@/data/months.json"
 import useDeaths from "@/services/deaths"
-import { Chart, ChartOptions } from "chart.js"
 import { useTheme } from "@/services/themes"
 import useRawDeaths from "@/services/raw-deaths"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-import annotationPlugin, {
+import annotationPlugin from "chartjs-plugin-annotation"
+
+import type { Context } from "chartjs-plugin-datalabels"
+import type { ChartDataset, ChartOptions } from "chart.js"
+import type {
   LabelOptions,
   LineAnnotationOptions,
 } from "chartjs-plugin-annotation"
 
 Chart.register(annotationPlugin)
-
-// const average = (nums: number[]) => nums.reduce((a, b) => a + b) / nums.length
 
 const getMaximum = (data: Deaths["data"]) => {
   if (!data) return {}
@@ -40,21 +43,37 @@ const Overview = (): JSX.Element => {
 
   const defaultColor = "#ffffff"
 
+  const paletteSubset = palette.slice(0, Object.keys(years || {}).length)
+
+  const getDataSet = (year: string, index: number): ChartDataset => ({
+    label: year,
+    tension: 0.4,
+    pointRadius: 4,
+    borderWidth: 2,
+    data: (data || {})[+year - 2000],
+    borderColor: paletteSubset[index],
+    pointBackgroundColor: theme.surface,
+    pointBorderColor: paletteSubset[index],
+    backgroundColor: hexToRgba(theme.primary || defaultColor, 0.1),
+    datalabels: {
+      offset: 3,
+      clamp: true,
+      align: "end",
+      anchor: "end",
+      borderRadius: 4,
+      textAlign: "center",
+      font: { weight: "bold" },
+      color: theme["on-primary"],
+      backgroundColor: paletteSubset[index],
+      padding: { top: 4, right: 5, bottom: 4, left: 5 },
+      display: ({ active }: Context) => (active ? true : "auto"),
+      formatter: (value: number) => (value / 1000).toFixed() + "K",
+    },
+  })
+
   const datasets = Object.keys(years || {}).reduce(
-    (datasets: Record<string, unknown>[], year) => (
-      years &&
-        years[year] &&
-        datasets.push({
-          label: year,
-          pointRadius: 4,
-          borderWidth: 2,
-          borderColor: theme?.primary,
-          pointBorderColor: theme.primary,
-          data: (data || {})[+year - 2000],
-          pointBackgroundColor: theme.surface,
-          backgroundColor: hexToRgba(theme.primary || defaultColor, 0.1),
-        }),
-      datasets
+    (datasets: ChartDataset[], year, i) => (
+      years && years[year] && datasets.push(getDataSet(year, i)), datasets
     ),
     []
   )
@@ -83,7 +102,6 @@ const Overview = (): JSX.Element => {
   } as LineAnnotationOptions
 
   const options = {
-    fill: true,
     responsive: true,
     maintainAspectRatio: false,
     animation: { duration: 0 },
@@ -92,20 +110,6 @@ const Overview = (): JSX.Element => {
       tooltip: { enabled: false },
       annotation: {
         annotations: { maxAnnotation },
-      },
-      datalabels: {
-        offset: 3,
-        clamp: true,
-        align: "end",
-        anchor: "end",
-        borderRadius: 4,
-        textAlign: "center",
-        font: { weight: "bold" },
-        color: theme["on-primary"],
-        backgroundColor: theme.primary,
-        padding: { top: 4, right: 5, bottom: 4, left: 5 },
-        formatter: (value: number) => (value / 1000).toFixed() + "K",
-        display: ({ active }) => (active ? true : "auto"),
       },
     },
     scales: {

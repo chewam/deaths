@@ -31,7 +31,6 @@ const AgeGroups = ({ onChange }: Props): JSX.Element => {
       defaultValue={[0, 110]}
       getAriaLabel={() => "slider"}
       getAriaValueText={getTextValue}
-      // aria-labelledby="age-groups-slider"
       onChange={(event, value) => onChange(value as [number, number])}
     />
   )

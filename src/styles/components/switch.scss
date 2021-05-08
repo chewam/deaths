@@ -7,7 +7,6 @@
   align-items: flex-end;
   justify-content: center;
   @include box.margin(0, 0.2, 0.2, 0)
-  // @include box.padding(0, 0, 0.85);
 }
 
 @include theme.apply(".switch") using ($mode) {

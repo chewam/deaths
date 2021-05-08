@@ -1,10 +1,12 @@
 import hexToRgba from "hex-to-rgba"
 import { Bar } from "react-chartjs-2"
-import { ChartOptions } from "chart.js"
 import { useTheme } from "@/services/themes"
 import useMortality from "@/services/mortality"
 import useRawMortality from "@/services/raw-mortality"
-import ChartDataLabels, { Context } from "chartjs-plugin-datalabels"
+import ChartDataLabels from "chartjs-plugin-datalabels"
+
+import type { Context } from "chartjs-plugin-datalabels"
+import type { Chart, ChartDataset, ChartOptions } from "chart.js"
 
 const Distribution = (): JSX.Element => {
   useRawMortality()
@@ -33,11 +35,11 @@ const Distribution = (): JSX.Element => {
           : "rgba(0, 0, 0, 0)",
       padding: { top: 4, right: 5, bottom: 4, left: 5 },
       display: ({ active, dataset: { data }, dataIndex, chart }: Context) => {
-        const { scales } = chart as ChartOptions
-        const s = scales as Record<string, Record<string, number>>
-        const end = s["y"].end
+        const { scales } = chart as Chart
+        const scale = scales["y"]
+        const { max } = scale
         const value = (data || [])[dataIndex] || 0
-        return active ? true : value > end * 0.05 ? "auto" : false
+        return active ? true : value > max * 0.05 ? "auto" : false
       },
       formatter: (
         value: number,
@@ -62,6 +64,7 @@ const Distribution = (): JSX.Element => {
   const datasets = [
     {
       data: ratio,
+      tension: 0.4,
       type: "line",
       yAxisID: "y2",
       label: "Ratio",
@@ -86,7 +89,7 @@ const Distribution = (): JSX.Element => {
       },
     },
     ...bars,
-  ]
+  ] as ChartDataset[]
 
   const chartData = { labels, datasets }
 

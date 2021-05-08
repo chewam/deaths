@@ -1,10 +1,10 @@
 import hexToRgba from "hex-to-rgba"
 import { Line } from "react-chartjs-2"
-import { Chart, ChartDataset, ChartOptions } from "chart.js"
 import { useTheme } from "@/services/themes"
 import useOverview from "@/services/overview"
 import useRawDeaths from "@/services/raw-deaths"
 import ChartDataLabels from "chartjs-plugin-datalabels"
+import { Chart, ChartDataset, ChartOptions } from "chart.js"
 import annotationPlugin, {
   LabelOptions,
   LineAnnotationOptions,
@@ -114,24 +114,8 @@ const Overview = (): JSX.Element => {
           drawTicks: false,
           drawBorder: false,
           borderDash: [3, 3],
-          // color: theme.muted,
-          // zeroLineColor: theme.muted,
-
-          // display: true,
-          // drawBorder: true,
-          // drawOnChartArea: true,
-          // drawTicks: true,
-
-          // borderDash: (context) => context.tick.value > 0 ? [3, 3] : [1, 1],
           color: (context) =>
             context.tick.value > 0 ? theme.muted : theme.surface,
-          //     return Utils.CHART_COLORS.green;
-          //   } else if (context.tick.value < 0) {
-          //     return Utils.CHART_COLORS.red;
-          //   }
-
-          //   return '#000000';
-          // },
         },
       },
     },
