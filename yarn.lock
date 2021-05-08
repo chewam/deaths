@@ -851,7 +851,7 @@
     micromatch "^4.0.0"
     p-reduce "^2.0.0"
 
-"@semantic-release/github@^7.2.2":
+"@semantic-release/github@7.2.2":
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/@semantic-release/github/-/github-7.2.2.tgz#aa51ba7098c812de4acd73145660164705f5c05d"
   integrity sha512-nYKxp0sfoFrHn2uNbhkon8oAxIffWPfu5LEEVs8I5Eqv/0IHvU+Kr3u8l4BTD+NNHA9ATTdy2bhQqQrZJ7wTvQ==
@@ -934,7 +934,7 @@
     "@sentry/types" "6.3.5"
     tslib "^1.9.3"
 
-"@sentry/nextjs@^6.3.5":
+"@sentry/nextjs@6.3.5":
   version "6.3.5"
   resolved "https://registry.yarnpkg.com/@sentry/nextjs/-/nextjs-6.3.5.tgz#aeca7d6d752c9b9516a532b5eff767b6a0e9b5ba"
   integrity sha512-ZJYoUIj+hkB+jmpGR8pzF/9afwYGUUPusAqf3MLtOshMOX+bwFw8fA1Osb5Wj5ZaY/ttFNmMnxPiJ2iiY3O8Zw==
@@ -1110,7 +1110,7 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/chart.js@*", "@types/chart.js@^2.9.32":
+"@types/chart.js@*", "@types/chart.js@2.9.32":
   version "2.9.32"
   resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.9.32.tgz#b17d9a8c41ad348183a2ce041ebdeef892998251"
   integrity sha512-d45JiRQwEOlZiKwukjqmqpbqbYzUX2yrXdH9qVn6kXpPDsTYCo6YbfFOlnUaJ8S/DhJwbBJiLsMjKpW5oP8B2A==
