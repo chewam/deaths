@@ -6,7 +6,11 @@ import useOverview from "@/services/overview"
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
-const sumAgeGroups = (ageGroups: number[][][], start: number, end: number) =>
+export const sumAgeGroups = (
+  ageGroups: number[][][],
+  start: number,
+  end: number
+) =>
   ageGroups
     ?.slice(start, end)
     .reduce(
@@ -15,14 +19,14 @@ const sumAgeGroups = (ageGroups: number[][][], start: number, end: number) =>
     )
 
 const filter = (data: DeathsRawData, { gender, ageGroup }: Filters): Deaths => {
-  const d =
+  const filteredData =
     gender && ageGroup
       ? sumAgeGroups(data[gender].ageGroups, ageGroup[0] / 10, ageGroup[1] / 10)
       : gender
       ? data[gender].global
       : sumAgeGroups(data?.ageGroups, ageGroup[0] / 10, ageGroup[1] / 10)
 
-  return { labels: data.labels, data: d }
+  return { labels: data.labels, data: filteredData }
 }
 
 const useRawDeaths = (): Deaths[] => {

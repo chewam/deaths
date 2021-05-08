@@ -1,12 +1,16 @@
-import { ReactNode } from "react"
+import type { ReactNode } from "react"
+import Container from "@/components/Container"
 
 type Props = {
+  className?: string
+  hidden?: boolean
   children?: ReactNode
-  className: string
 }
 
-const Panel = ({ children, className }: Props): JSX.Element => (
-  <div className={`panel ${className}`}>{children}</div>
+const Panel = ({ children, className, hidden }: Props): JSX.Element => (
+  <Container className={`panel ${className || ""}`} hidden={hidden}>
+    {children}
+  </Container>
 )
 
 export default Panel

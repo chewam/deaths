@@ -1,0 +1,106 @@
+@use "../utils/box";
+@use "../utils/text";
+
+.container.dashboard {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  @include box.spacing(0.5);
+
+  .wrapper {
+    display: flex;
+    flex: 1 0 33.333%;
+    max-width: 33.333%;
+    // background-color: pink;
+    // outline: 1px solid black;
+    
+    .panel {
+      flex: 1;
+      // flex-direction: row;
+      @include box.margin(0.5);
+
+      .left {
+        flex: 1;
+        display: flex;
+        overflow: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        .top {
+          display: flex;
+        //   flex-direction: row;
+          align-items: center;
+          // margin-bottom: 0.5rem;
+          // justify-content: space-between;
+
+          .year {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+          }
+
+          .trend {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            margin-left: 0.5rem;
+          }
+        }
+
+        .value {
+          font-size: 1.2rem;
+          margin-top: 0.5rem;
+          line-height: 1.2rem;
+        }
+
+        .label {
+          font-size: 0.7rem;
+          font-weight: bold;
+          // margin-bottom: 0.5rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .right {
+        flex: 1;
+        // display: inline;
+        overflow: auto;
+        position: relative;
+        // padding: 2px;
+        // background-color: aquamarine;
+      }
+    }
+
+    &:first-child {
+      flex: 1 0 100%;
+      max-width: 100%;
+
+      .panel {
+        border: none;
+        box-shadow: none;
+        @include box.padding(1, 2);
+        background-color: transparent;
+
+        .left {
+          // background-color: lime;
+          text-align: right;
+          .top {
+            justify-content: flex-start;
+            flex-direction: row-reverse;
+            // background-color: violet;
+            .year {
+              font-size: 5rem;
+              line-height: 5rem;
+            }
+          }
+        }
+
+        .right {
+          // flex: none;
+          // background-color: pink;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
