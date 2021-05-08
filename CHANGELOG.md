@@ -1,3 +1,10 @@
+## [2.0.6](https://github.com/chewam/deaths/compare/v2.0.5...v2.0.6) (2021-05-08)
+
+
+### Bug Fixes
+
+* Colorize comparison chart lines. ([988deb2](https://github.com/chewam/deaths/commit/988deb2a7465893403924eb722fdcf28f07881aa))
+
 ## [2.0.5](https://github.com/chewam/deaths/compare/v2.0.4...v2.0.5) (2021-05-06)
 
 
