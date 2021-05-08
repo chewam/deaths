@@ -5,7 +5,8 @@
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  @include box.spacing(0.5);
+  @include box.margin(0);
+  @include box.padding(0.5, 0.5, 0, 0.5);
 
   .wrapper {
     display: flex;
@@ -111,3 +112,40 @@
     }
   }
 }
+
+@media screen and (max-width: 650px) {
+  .container.dashboard {
+    .wrapper {
+      flex: 1 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .container.dashboard {
+    .wrapper {
+      flex: 1 0 50%;
+      max-width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .container.dashboard {
+    .wrapper {
+      flex: 1 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .container.dashboard {
+    .wrapper {
+      flex: 1 0 25%;
+      max-width: 25%;
+    }
+  }
+}
+

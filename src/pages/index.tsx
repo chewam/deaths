@@ -30,7 +30,6 @@ const Chart = ({ ageGroups }): JSX.Element => {
         label: "# of Votes",
         data: groups,
         backgroundColor: [
-          // "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
           "rgba(255, 206, 86, 0.2)",
           "rgba(75, 192, 192, 0.2)",
@@ -38,7 +37,6 @@ const Chart = ({ ageGroups }): JSX.Element => {
           "rgba(255, 159, 64, 0.2)",
         ],
         borderColor: [
-          // "rgba(255, 99, 132, 1)",
           "rgba(54, 162, 235, 1)",
           "rgba(255, 206, 86, 1)",
           "rgba(75, 192, 192, 1)",
@@ -81,14 +79,16 @@ const Chart = ({ ageGroups }): JSX.Element => {
             },
             formatter: (value, { dataIndex }) => {
               return ["0-69", "70-79", "80-89", "90+"][dataIndex]
-              // return `${(dataIndex + 6) * 10}-${(dataIndex + 6) * 10 + 9}`
             },
           },
         },
       },
     },
   } as ChartOptions
-  return <Doughnut data={data} options={options} plugins={plugins} />
+
+  return (
+    <Doughnut type="doughnut" data={data} options={options} plugins={plugins} />
+  )
 }
 
 const Year = ({
@@ -147,8 +147,9 @@ const Year = ({
 const Years = (): JSX.Element => {
   const previous = {}
   const [years] = useYears()
-  const yearsList = Object.keys(years)
-  const [{ ageGroups } = {}] = useRawDeaths()
+  const yearsList = Object.keys(years || {})
+  const [deaths = {}] = useRawDeaths()
+  const { ageGroups } = deaths
   const groups = sumAgeGroups(ageGroups)
 
   const average =
