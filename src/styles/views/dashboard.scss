@@ -11,12 +11,9 @@
     display: flex;
     flex: 1 0 33.333%;
     max-width: 33.333%;
-    // background-color: pink;
-    // outline: 1px solid black;
     
     .panel {
       flex: 1;
-      // flex-direction: row;
       @include box.margin(0.5);
 
       .left {
@@ -27,10 +24,7 @@
         justify-content: space-between;
         .top {
           display: flex;
-        //   flex-direction: row;
           align-items: center;
-          // margin-bottom: 0.5rem;
-          // justify-content: space-between;
 
           .year {
             font-size: 2.5rem;
@@ -53,18 +47,14 @@
         .label {
           font-size: 0.7rem;
           font-weight: bold;
-          // margin-bottom: 0.5rem;
           text-transform: uppercase;
         }
       }
 
       .right {
         flex: 1;
-        // display: inline;
         overflow: auto;
         position: relative;
-        // padding: 2px;
-        // background-color: aquamarine;
       }
     }
 
@@ -75,30 +65,47 @@
       .panel {
         border: none;
         box-shadow: none;
+        justify-content: center;
         @include box.padding(1, 2);
         background-color: transparent;
 
         .left {
-          // background-color: lime;
+          flex: none;
           text-align: right;
           .top {
             justify-content: flex-start;
-            flex-direction: row-reverse;
-            // background-color: violet;
             .year {
               font-size: 5rem;
               line-height: 5rem;
             }
+
+            .trend {
+              svg {
+                width: 45px;
+                height: 45px;
+              }
+            }
+          }
+
+          .value {
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+            line-height: 1.5rem;
+          }
+  
+          .label {
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
           }
         }
 
         .right {
-          // flex: none;
-          // background-color: pink;
+          flex: none;
           display: flex;
-          justify-content: flex-start;
-          align-items: flex-start;
           text-align: left;
+          align-items: flex-start;
+          justify-content: flex-start;
         }
       }
     }

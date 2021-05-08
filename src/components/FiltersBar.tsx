@@ -17,7 +17,7 @@ const Filters = (): JSX.Element => {
     setFilters({ ageGroup, gender })
 
   return (
-    <Panel className="filters" hidden={route === "/dashboard"}>
+    <Panel className="filters" hidden={route === "/"}>
       <AgeGroups onChange={handleAgeGroupChange} />
       <Genders onChange={handleGenderChange} />
     </Panel>
