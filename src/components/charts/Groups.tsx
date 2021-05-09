@@ -52,6 +52,7 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
   }
 
   const options = {
+    events: [],
     cutout: "30%",
     aspectRatio: 1,
     responsive: true,
