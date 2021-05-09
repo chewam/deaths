@@ -29,6 +29,9 @@ export const palette = [
   "#52b2cf",
 ]
 
+export const sumArray = (arr: number[] = []): number =>
+  arr.reduce((a, b) => a + b, 0)
+
 export const sumObjects = (
   a: Record<string, number> = {},
   b: Record<string, number> = {}
