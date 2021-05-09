@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/chewam/deaths/compare/v2.1.1...v2.1.2) (2021-05-09)
+
+
+### Bug Fixes
+
+* Change groups chart colors. ([a4ede7e](https://github.com/chewam/deaths/commit/a4ede7e7ffa1b65faba1aa79d900d04a70177922))
+
 ## [2.1.1](https://github.com/chewam/deaths/compare/v2.1.0...v2.1.1) (2021-05-09)
 
 
