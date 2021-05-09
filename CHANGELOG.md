@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/chewam/deaths/compare/v2.0.6...v2.1.0) (2021-05-09)
+
+
+### Features
+
+* Add dashboard page. ([#137](https://github.com/chewam/deaths/issues/137)) ([bbb306f](https://github.com/chewam/deaths/commit/bbb306fdfa4336dcf674d34277455e86002a0355))
+
 ## [2.0.6](https://github.com/chewam/deaths/compare/v2.0.5...v2.0.6) (2021-05-08)
 
 
