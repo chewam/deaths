@@ -1,6 +1,6 @@
-import Chart from "./Chart"
 import Panel from "@/components/Panel"
 import { useTheme } from "@/services/themes"
+import AgeGroups from "@/components/charts/Groups"
 import { ImArrowDownRight, ImArrowUpRight } from "react-icons/im"
 
 interface Props {
@@ -61,7 +61,7 @@ const Year = ({
           </div>
         </div>
         <div className="right">
-          <Chart ageGroups={ageGroups} big={main} />
+          <AgeGroups ageGroups={ageGroups} big={main} />
         </div>
       </Panel>
     </div>

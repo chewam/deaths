@@ -17,8 +17,6 @@ import type {
   LineAnnotationOptions,
 } from "chartjs-plugin-annotation"
 
-Chart.register(annotationPlugin)
-
 const getMaximum = (data: Deaths["data"]) => {
   if (!data) return {}
   const maximums = data.reduce((acc, year, i) => {
@@ -36,14 +34,13 @@ const Overview = (): JSX.Element => {
   useRawDeaths()
   const [years] = useYears()
   const [deaths] = useDeaths()
+  const defaultColor = "#ffffff"
   const { labels, data } = deaths as Deaths
   const { values: theme = {} } = useTheme()
-
   const max = getMaximum(data)
-
-  const defaultColor = "#ffffff"
-
   const paletteSubset = palette.slice(0, Object.keys(years || {}).length)
+
+  Chart.register(annotationPlugin)
 
   const getDataSet = (year: string, index: number): ChartDataset => ({
     label: year,

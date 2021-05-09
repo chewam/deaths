@@ -4,12 +4,14 @@ import { Doughnut } from "react-chartjs-2"
 import { useTheme } from "@/services/themes"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 
+import type { ChartDataset } from "chart.js"
+
 interface Props {
   ageGroups: number[]
   big: boolean
 }
 
-const Chartx = ({ ageGroups, big }: Props): JSX.Element => {
+const Groups = ({ ageGroups, big }: Props): JSX.Element => {
   const { values: theme = {} } = useTheme()
 
   const groups = [
@@ -19,30 +21,32 @@ const Chartx = ({ ageGroups, big }: Props): JSX.Element => {
   ]
 
   const plugins = [ChartDataLabels]
-  const data = {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-    datasets: [
-      {
-        label: "# of Votes",
-        data: groups,
-        backgroundColor: [
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-          "rgba(255, 159, 64, 0.2)",
-        ],
-        borderColor: [
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(75, 192, 192, 1)",
-          "rgba(153, 102, 255, 1)",
-          "rgba(255, 159, 64, 1)",
-        ],
-        borderWidth: 1,
-      },
+
+  const dataset = {
+    label: "# of Votes",
+    data: groups,
+    backgroundColor: [
+      "rgba(54, 162, 235, 0.2)",
+      "rgba(255, 206, 86, 0.2)",
+      "rgba(75, 192, 192, 0.2)",
+      "rgba(153, 102, 255, 0.2)",
+      "rgba(255, 159, 64, 0.2)",
     ],
+    borderColor: [
+      "rgba(54, 162, 235, 1)",
+      "rgba(255, 206, 86, 1)",
+      "rgba(75, 192, 192, 1)",
+      "rgba(153, 102, 255, 1)",
+      "rgba(255, 159, 64, 1)",
+    ],
+    borderWidth: 1,
+  } as ChartDataset
+
+  const data = {
+    datasets: [dataset],
+    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
   }
+
   const options = {
     cutout: "30%",
     aspectRatio: 1,
@@ -60,7 +64,7 @@ const Chartx = ({ ageGroups, big }: Props): JSX.Element => {
         labels: {
           title: {
             align: "top",
-            font: { weight: "bold", size: big ? 20 : 16 },
+            font: { weight: "bold", size: big ? 19 : 15 },
             display: ({ dataIndex }) => {
               return groups[dataIndex] > 20000 ? true : false
             },
@@ -70,7 +74,7 @@ const Chartx = ({ ageGroups, big }: Props): JSX.Element => {
           },
           ageGroup: {
             align: "bottom",
-            font: { weight: "bold", size: big ? 18 : 14 },
+            font: { weight: "bold", size: big ? 17 : 13 },
             display: ({ dataIndex }) => {
               return groups[dataIndex] > 20000 ? true : false
             },
@@ -88,4 +92,4 @@ const Chartx = ({ ageGroups, big }: Props): JSX.Element => {
   )
 }
 
-export default Chartx
+export default Groups

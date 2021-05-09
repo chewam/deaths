@@ -10,20 +10,18 @@ import annotationPlugin, {
   LineAnnotationOptions,
 } from "chartjs-plugin-annotation"
 
-Chart.register(annotationPlugin)
-
 const average = (nums: number[]): number =>
   nums.reduce((a, b) => a + b) / nums.length
 
 const Overview = (): JSX.Element => {
   useRawDeaths()
+  const defaultColor = "#ffffff"
   const [overview] = useOverview()
   const { values: theme = {} } = useTheme()
   const { labels, data } = overview as Overview
-
   const max = data.length ? Math.max(...data) : 0
 
-  const defaultColor = "#ffffff"
+  Chart.register(annotationPlugin)
 
   const datasets = [
     {
