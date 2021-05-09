@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/chewam/deaths/compare/v2.1.0...v2.1.1) (2021-05-09)
+
+
+### Bug Fixes
+
+* Register annotation chart plugin within components. ([ed5b82f](https://github.com/chewam/deaths/commit/ed5b82f2d0f2d8814f8d95c2b0a3d2e11d553e46))
+
 # [2.1.0](https://github.com/chewam/deaths/compare/v2.0.6...v2.1.0) (2021-05-09)
 
 
