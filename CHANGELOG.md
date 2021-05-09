@@ -1,3 +1,10 @@
+## [2.1.4](https://github.com/chewam/deaths/compare/v2.1.3...v2.1.4) (2021-05-09)
+
+
+### Bug Fixes
+
+* Increase dashboard labels font size. ([e98bade](https://github.com/chewam/deaths/commit/e98bade295c8b3ca405020f27c32f74d9224474c))
+
 ## [2.1.3](https://github.com/chewam/deaths/compare/v2.1.2...v2.1.3) (2021-05-09)
 
 
