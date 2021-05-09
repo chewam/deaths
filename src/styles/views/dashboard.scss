@@ -35,8 +35,6 @@
           .trend {
             display: flex;
             margin-left: 0.5rem;
-            // align-items: center;
-            // justify-content: center;
             
             svg {
               width: 24px;
@@ -52,7 +50,7 @@
         }
 
         .label {
-          font-size: 0.7rem;
+          font-size: 0.75rem;
           font-weight: bold;
           text-transform: uppercase;
         }

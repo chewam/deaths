@@ -8,6 +8,9 @@ const moduleExports = {
     ANALYTICS_ID: process.env.ANALYTICS_ID,
     VERCEL_GITHUB_COMMIT_SHA: process.env.VERCEL_GITHUB_COMMIT_SHA,
   },
+  // output: {
+  //   sourceMapFilename: process.env ? '[name].[hash].js.map' : '[file].map',
+  // }
 };
 
 const SentryWebpackPluginOptions = {};
