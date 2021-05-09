@@ -1,11 +1,11 @@
-import Panel from "@/components/Panel"
-import Overview from "@/components/charts/Overview"
+import Container from "@/components/Container"
+import Dashboard from "@/components/dashboard"
 
 const Page = (): JSX.Element => {
   return (
-    <Panel className="overview">
-      <Overview />
-    </Panel>
+    <Container className="dashboard">
+      <Dashboard />
+    </Container>
   )
 }
 

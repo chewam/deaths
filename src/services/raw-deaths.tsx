@@ -15,17 +15,17 @@ const sumAgeGroups = (ageGroups: number[][][], start: number, end: number) =>
     )
 
 const filter = (data: DeathsRawData, { gender, ageGroup }: Filters): Deaths => {
-  const d =
+  const filteredData =
     gender && ageGroup
       ? sumAgeGroups(data[gender].ageGroups, ageGroup[0] / 10, ageGroup[1] / 10)
       : gender
       ? data[gender].global
       : sumAgeGroups(data?.ageGroups, ageGroup[0] / 10, ageGroup[1] / 10)
 
-  return { labels: data.labels, data: d }
+  return { labels: data.labels, data: filteredData }
 }
 
-const useRawDeaths = (): Deaths[] => {
+const useRawDeaths = (): DeathsRawData[] => {
   const [filters] = useFilters()
   const [, setDeaths] = useDeaths()
   const [, setOverview] = useOverview()

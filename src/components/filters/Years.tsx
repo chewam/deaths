@@ -3,7 +3,6 @@ import useYears from "@/services/years"
 
 const Years = (): JSX.Element => {
   const [years, setYears] = useYears()
-  console.log("years", years)
 
   const paletteSubset = palette
     .slice(0, Object.keys(years || {}).length)

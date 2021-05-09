@@ -6,7 +6,7 @@ const Menu = (): JSX.Element => {
   const view = (route || "").substring(1)
 
   const items = [
-    { label: "Vue d'Ensemble", view: "" },
+    { label: "Vue d'Ensemble", view: "overview" },
     { label: "Comparaison", view: "comparison" },
     { label: "Répartition", view: "distribution" },
   ]

@@ -2,13 +2,9 @@
 @use "../utils/theme";
 
 .panel {
-  display: flex;
-  overflow: auto;
   border-width: 1px;
-  position: relative;
   border-style: solid;
   @include box.radius();
-  @include box.spacing(1, 1);
 }
 
 @include theme.apply(".panel") using ($mode) {
