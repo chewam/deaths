@@ -22,29 +22,33 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
 
   const plugins = [ChartDataLabels]
 
+  const labels = ["0-69", "70-79", "80-89", "90+"]
+
+  const lightPalette = [
+    "rgba(205,180,219, 0.5)",
+    "rgba(255,175,204, 0.5)",
+    "rgba(189,224,254, 0.5)",
+    "rgba(162,210,255, 0.5)",
+  ]
+
+  const darkPalette = [
+    "rgba(175,150,189, 1)",
+    "rgba(225,145,174, 1)",
+    "rgba(159,194,224, 1)",
+    "rgba(132,180,225, 1)",
+  ]
+
   const dataset = {
-    label: "# of Votes",
     data: groups,
-    backgroundColor: [
-      "rgba(54, 162, 235, 0.2)",
-      "rgba(255, 206, 86, 0.2)",
-      "rgba(75, 192, 192, 0.2)",
-      "rgba(153, 102, 255, 0.2)",
-      "rgba(255, 159, 64, 0.2)",
-    ],
-    borderColor: [
-      "rgba(54, 162, 235, 1)",
-      "rgba(255, 206, 86, 1)",
-      "rgba(75, 192, 192, 1)",
-      "rgba(153, 102, 255, 1)",
-      "rgba(255, 159, 64, 1)",
-    ],
     borderWidth: 1,
+    label: "# of Votes",
+    borderColor: darkPalette,
+    backgroundColor: lightPalette,
   } as ChartDataset
 
   const data = {
+    labels,
     datasets: [dataset],
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
   }
 
   const options = {
@@ -64,6 +68,7 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
         labels: {
           title: {
             align: "top",
+            color: ({ dataIndex }) => darkPalette[dataIndex],
             font: { weight: "bold", size: big ? 19 : 15 },
             display: ({ dataIndex }) => {
               return groups[dataIndex] > 20000 ? true : false
@@ -75,11 +80,12 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
           ageGroup: {
             align: "bottom",
             font: { weight: "bold", size: big ? 17 : 13 },
+            color: ({ dataIndex }) => darkPalette[dataIndex],
             display: ({ dataIndex }) => {
               return groups[dataIndex] > 20000 ? true : false
             },
             formatter: (value, { dataIndex }) => {
-              return ["0-69", "70-79", "80-89", "90+"][dataIndex]
+              return labels[dataIndex]
             },
           },
         },
