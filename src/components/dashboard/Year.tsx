@@ -11,6 +11,7 @@ interface Props {
   mortality: number
   ageGroups: number[]
   population: number
+  main: boolean
 }
 
 const Year = ({
@@ -21,6 +22,7 @@ const Year = ({
   mortality,
   ageGroups,
   population,
+  main,
 }: Props): JSX.Element => {
   const { values: theme = {} } = useTheme()
 
@@ -32,9 +34,9 @@ const Year = ({
             <div className="year">{year}</div>
             <div className="trend">
               {trend ? (
-                <ImArrowDownRight size={24} color={theme.secondary} />
+                <ImArrowDownRight color={theme.secondary} />
               ) : (
-                <ImArrowUpRight size={24} color={theme.important} />
+                <ImArrowUpRight color={theme.important} />
               )}
             </div>
           </div>
@@ -59,7 +61,7 @@ const Year = ({
           </div>
         </div>
         <div className="right">
-          <Chart ageGroups={ageGroups} />
+          <Chart ageGroups={ageGroups} big={main} />
         </div>
       </Panel>
     </div>

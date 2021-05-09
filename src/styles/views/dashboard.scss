@@ -33,9 +33,15 @@
           }
 
           .trend {
-            font-size: 2.5rem;
-            line-height: 2.5rem;
+            display: flex;
             margin-left: 0.5rem;
+            // align-items: center;
+            // justify-content: center;
+            
+            svg {
+              width: 24px;
+              height: 24px;
+            }
           }
         }
 
@@ -76,14 +82,14 @@
           .top {
             justify-content: flex-start;
             .year {
-              font-size: 5rem;
-              line-height: 5rem;
+              font-size: 4rem;
+              line-height: 4rem;
             }
 
             .trend {
               svg {
-                width: 45px;
-                height: 45px;
+                width: 38px;
+                height: 38px;
               }
             }
           }

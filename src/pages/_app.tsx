@@ -20,7 +20,6 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       parentElement?.removeChild(jssStyles)
     }
   }, [])
-  console.log("pageProps", pageProps, Component)
 
   if (pageProps?.statusCode >= 400) {
     return <ErrorPage statusCode={pageProps.statusCode} />

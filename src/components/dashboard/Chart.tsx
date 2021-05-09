@@ -6,9 +6,10 @@ import ChartDataLabels from "chartjs-plugin-datalabels"
 
 interface Props {
   ageGroups: number[]
+  big: boolean
 }
 
-const Chartx = ({ ageGroups }: Props): JSX.Element => {
+const Chartx = ({ ageGroups, big }: Props): JSX.Element => {
   const { values: theme = {} } = useTheme()
 
   const groups = [
@@ -59,7 +60,7 @@ const Chartx = ({ ageGroups }: Props): JSX.Element => {
         labels: {
           title: {
             align: "top",
-            font: { weight: "bold" },
+            font: { weight: "bold", size: big ? 20 : 16 },
             display: ({ dataIndex }) => {
               return groups[dataIndex] > 20000 ? true : false
             },
@@ -69,6 +70,7 @@ const Chartx = ({ ageGroups }: Props): JSX.Element => {
           },
           ageGroup: {
             align: "bottom",
+            font: { weight: "bold", size: big ? 18 : 14 },
             display: ({ dataIndex }) => {
               return groups[dataIndex] > 20000 ? true : false
             },

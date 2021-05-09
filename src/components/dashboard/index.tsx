@@ -11,7 +11,6 @@ const sumAgeGroups = (ageGroups: number[][][] = []): number[][] =>
   )
 
 const Dashboard = (): JSX.Element => {
-  // const previous = {}
   const previous: number[] = []
   const [years] = useYears()
   const yearsList = Object.keys(years || {})
@@ -55,6 +54,7 @@ const Dashboard = (): JSX.Element => {
         average={average}
         mortality={mortality}
         population={population}
+        main={i === yearsList.length - 1}
         ageGroups={getAgeGroups(ageGroups, i)}
         trend={previous[i - 1] ? mortality <= previous[i - 1] : null}
       />
