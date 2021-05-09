@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/chewam/deaths/compare/v2.1.2...v2.1.3) (2021-05-09)
+
+
+### Bug Fixes
+
+* Disable groups charts events. ([faad5a6](https://github.com/chewam/deaths/commit/faad5a662c32e262593d5344cbcb61bdfab93f00))
+
 ## [2.1.2](https://github.com/chewam/deaths/compare/v2.1.1...v2.1.2) (2021-05-09)
 
 
