@@ -8,30 +8,8 @@ on:
 
 jobs:
 
-  setup:
-    name: Setup
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14
-
-      - name: Yarn cache setup
-        uses: c-hive/gha-yarn-cache@v1
-
-      - name: Install dependencies
-        run: yarn --frozen-lockfile --perfer-offline
-
   lint:
     name: Lint
-    needs: [setup]
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
@@ -55,7 +33,6 @@ jobs:
         run: yarn lint
 
   types:
-    needs: [setup]
     name: Types check
     runs-on: ubuntu-18.04
     steps:
@@ -81,7 +58,6 @@ jobs:
 
   tests:
     name: Tests
-    needs: [setup]
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
