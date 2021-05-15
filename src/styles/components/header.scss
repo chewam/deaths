@@ -1,4 +1,5 @@
 @use "../utils/box";
+@use "../utils/text";
 @use "../utils/theme";
 
 .header {
@@ -12,6 +13,9 @@
 
     h1 {
       flex: 1;
+      @include text.size("xxl");
+      @include box.margin(1, 0);
+
       a:hover {
         text-decoration: none;
       }

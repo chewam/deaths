@@ -1,6 +1,7 @@
 import Panel from "@/components/Panel"
 import { useTheme } from "@/services/themes"
 import AgeGroups from "@/components/charts/Groups"
+import { FormattedMessage as Trans, FormattedNumber as Num } from "react-intl"
 import { ImArrowDownRight, ImArrowUpRight } from "react-icons/im"
 
 interface Props {
@@ -47,17 +48,27 @@ const Year = ({
                 color: mortality > average ? theme.important : theme.secondary,
               }}
             >
-              {mortality.toFixed(3)}%
+              <Num value={Number(mortality.toFixed(3))} />%
             </div>
-            <div className="label">Taux de mortalité</div>
+            <div className="label">
+              <Trans id="Mortality rate" />
+            </div>
           </div>
           <div className="deaths">
-            <div className="value">{deaths}</div>
-            <div className="label">Nombre de décès</div>
+            <div className="value">
+              <Num value={Number(deaths)} />
+            </div>
+            <div className="label">
+              <Trans id="Deaths count" />
+            </div>
           </div>
           <div className="population">
-            <div className="value">{population}</div>
-            <div className="label">Poulation totale</div>
+            <div className="value">
+              <Num value={Number(population)} />
+            </div>
+            <div className="label">
+              <Trans id="Total population" />
+            </div>
           </div>
         </div>
         <div className="right">

@@ -1,4 +1,5 @@
 import hexToRgba from "hex-to-rgba"
+import { useIntl } from "react-intl"
 import { Bar } from "react-chartjs-2"
 import { useTheme } from "@/services/themes"
 import useMortality from "@/services/mortality"
@@ -12,6 +13,7 @@ const Distribution = (): JSX.Element => {
   useRawMortality()
   const [mortality] = useMortality()
   const { values: theme = {} } = useTheme()
+  const { formatMessage: fm, formatNumber: fn } = useIntl()
   const { labels, data, ratio, ageGroups } = mortality as Mortality
 
   const defaultColor = "#ffffff"
@@ -46,18 +48,22 @@ const Distribution = (): JSX.Element => {
         { active, dataIndex, datasetIndex }: Context
       ) =>
         active
-          ? `${dataIndex + 2000}\nNombe de décès: ${value}\nTranche d'âge: ${
+          ? `${dataIndex + 2000}\n${fm({
+              id: "Deaths count",
+            })}: ${fn(value)}\n${fm({ id: "Age group" })}: ${
               ageGroups[datasetIndex - 1]
             }${
               datasetIndex > 10
                 ? "+"
-                : ` à ${ageGroups[datasetIndex - 1] + 9} ans`
+                : ` ${fm({ id: "to" })} ${
+                    ageGroups[datasetIndex - 1] + 9
+                  } ${fm({ id: "years old" })}`
             }`
           : value > 1000
           ? `${(value / 1000).toFixed()}K\n${ageGroups[datasetIndex - 1]}-${
               ageGroups[datasetIndex - 1] + 10
             }`
-          : Math.round(value),
+          : fn(Math.round(value)),
     },
   }))
 

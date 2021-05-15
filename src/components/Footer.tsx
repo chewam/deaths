@@ -1,4 +1,6 @@
-import Switch from "./Switch"
+import Lang from "@/components/Lang"
+import Switch from "@/components/Switch"
+import { FormattedMessage as Trans } from "react-intl"
 
 const version = process.env.APP_VERSION || "0.0.0"
 const sha = process.env.VERCEL_GITHUB_COMMIT_SHA || "dev"
@@ -7,7 +9,10 @@ const Footer = (): JSX.Element => {
   return (
     <footer>
       <div>
-        <span>Chewam © 2020 - Données INSEE </span>(
+        <span>
+          Chewam © 2020 - <Trans id="INSEE data" />{" "}
+        </span>
+        (
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -19,7 +24,10 @@ const Footer = (): JSX.Element => {
       </div>
 
       <div className="wrapper">
-        <Switch /> | version {version} (
+        <Switch />
+        &nbsp; | &nbsp;
+        <Lang />
+        &nbsp; | &nbsp; version {version} (
         <a
           target="_blank"
           rel="noopener noreferrer"

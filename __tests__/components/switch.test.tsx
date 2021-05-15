@@ -1,6 +1,8 @@
-import { render } from "@testing-library/react"
-import { ThemeProvider } from "next-themes"
+import messages from "@/lang/fr.json"
 import Switch from "@/components/Switch"
+import { IntlProvider } from "react-intl"
+import { ThemeProvider } from "next-themes"
+import { render } from "@testing-library/react"
 
 Object.defineProperty(window, "matchMedia", {
   writable: true,
@@ -16,25 +18,38 @@ Object.defineProperty(window, "matchMedia", {
   })),
 })
 
+jest.mock("next/router", () => ({
+  useRouter() {
+    return {
+      locale: "fr",
+      defaultLocale: "fr",
+    }
+  },
+}))
+
 describe("Switch", () => {
   test("should create a Switch in light mode", () => {
     const { asFragment } = render(
-      <ThemeProvider defaultTheme="light">
-        <Switch />
-      </ThemeProvider>
+      <IntlProvider locale="fr" messages={messages}>
+        <ThemeProvider defaultTheme="light">
+          <Switch />
+        </ThemeProvider>
+      </IntlProvider>
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test("should create a Switch in dark mode", () => {
     const { asFragment } = render(
-      <ThemeProvider
-        defaultTheme="dark"
-        forcedTheme="dark"
-        themes={["light", "dark"]}
-      >
-        <Switch />
-      </ThemeProvider>
+      <IntlProvider locale="fr" messages={messages}>
+        <ThemeProvider
+          defaultTheme="dark"
+          forcedTheme="dark"
+          themes={["light", "dark"]}
+        >
+          <Switch />
+        </ThemeProvider>
+      </IntlProvider>
     )
     expect(asFragment()).toMatchSnapshot()
   })

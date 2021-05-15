@@ -1,5 +1,6 @@
 import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
+import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
 import { palette } from "@/utils/index"
 import useYears from "@/services/years"
@@ -38,6 +39,7 @@ const Overview = (): JSX.Element => {
   const { labels, data } = deaths as Deaths
   const { values: theme = {} } = useTheme()
   const max = getMaximum(data)
+  const { formatMessage: fm, formatNumber: fn } = useIntl()
   const paletteSubset = palette.slice(0, Object.keys(years || {}).length)
 
   Chart.register(annotationPlugin)
@@ -79,13 +81,21 @@ const Overview = (): JSX.Element => {
 
   const plugins = [ChartDataLabels]
 
+  const getAnnotationContent = () => {
+    const month = Months[max?.month - 1] || "January"
+
+    return `${fm({ id: month })} ${max?.year}: ${fn(max?.value)} ${fm({
+      id: "deaths",
+    })}`
+  }
+
   const maxAnnotationLabel = {
     width: 0,
     height: 0,
     enabled: true,
     fontColor: theme["on-primary"],
+    content: getAnnotationContent(),
     backgroundColor: theme.secondary,
-    content: `${Months[max?.month - 1]} ${max?.year}: ${max?.value} décès`,
   } as LabelOptions
 
   const maxAnnotation = {

@@ -2,34 +2,32 @@ $base-font-size: 1rem;
 $base-line-height: 1.25 * $base-font-size;
 
 $text-settings: (
-  "xs": (
+  "xs": ( // 12px
     font-size: 0.75rem,
-    // 12px
     line-height: $base-line-height,
   ),
-  "sm": (
+  "sm": ( // 14px
     font-size: 0.875rem,
-    // 14px
     line-height: $base-line-height,
   ),
-  "base": (
+  "base": ( // 16px
     font-size: 1rem,
-    // 16px
     line-height: $base-line-height,
   ),
-  "md": (
+  "md": ( // 18px
     font-size: 1.125rem,
-    // 18px
     line-height: $base-line-height * 2,
   ),
-  "lg": (
+  "lg": ( // 20px
     font-size: 1.25rem,
-    // 20px
     line-height: $base-line-height * 2,
   ),
-  "xl": (
+  "xl": ( // 24px
     font-size: 1.5rem,
-    // 24px
+    line-height: $base-line-height * 2,
+  ),
+  "xxl": ( // 32px
+    font-size: 2rem,
     line-height: $base-line-height * 2,
   ),
 );

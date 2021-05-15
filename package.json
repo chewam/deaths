@@ -32,6 +32,7 @@
     "react-chartjs-2": "3.0.3",
     "react-dom": "17.0.2",
     "react-icons": "4.2.0",
+    "react-intl": "^5.17.6",
     "sass": "1.32.12",
     "swr": "0.5.6",
     "tslib": "2.2.0"
@@ -50,6 +51,7 @@
     "@types/jest": "26.0.23",
     "@types/node": "14.14.44",
     "@types/react": "17.0.5",
+    "@types/react-intl": "^3.0.0",
     "@types/react-simple-maps": "1.0.3",
     "@types/react-test-renderer": "17.0.1",
     "@typescript-eslint/eslint-plugin": "4.22.1",

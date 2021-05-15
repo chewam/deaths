@@ -47,7 +47,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -75,12 +75,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              67063703
+              67 063 703
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -159,12 +159,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              67063703
+              67 063 703
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -243,12 +243,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              66977703
+              66 977 703
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -299,7 +299,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -327,12 +327,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              66883761
+              66 883 761
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -383,7 +383,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -411,12 +411,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              66774482
+              66 774 482
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -467,7 +467,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -495,12 +495,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              66602645
+              66 602 645
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -551,7 +551,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -579,12 +579,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              66422469
+              66 422 469
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -635,7 +635,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -663,12 +663,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              66130873
+              66 130 873
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -719,7 +719,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -747,12 +747,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              65564756
+              65 564 756
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -803,7 +803,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -831,12 +831,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              65241241
+              65 241 241
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -887,7 +887,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -915,12 +915,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              64933400
+              64 933 400
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -971,7 +971,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -999,12 +999,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              64612939
+              64 612 939
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -1055,7 +1055,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -1083,12 +1083,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              64304500
+              64 304 500
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -1139,7 +1139,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -1167,12 +1167,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              63961859
+              63 961 859
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -1223,7 +1223,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -1251,12 +1251,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              63600690
+              63 600 690
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -1307,7 +1307,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -1335,12 +1335,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              63186117
+              63 186 117
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -1391,7 +1391,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -1419,12 +1419,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              62730537
+              62 730 537
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -1475,7 +1475,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -1503,12 +1503,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              62251062
+              62 251 062
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -1559,7 +1559,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -1587,12 +1587,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              61824030
+              61 824 030
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -1643,7 +1643,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -1671,12 +1671,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              61385070
+              61 385 070
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -1727,7 +1727,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -1755,12 +1755,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              60941410
+              60 941 410
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
@@ -1811,7 +1811,7 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              0.000%
+              0%
             </div>
             <div
               class="label"
@@ -1839,12 +1839,12 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="value"
             >
-              60508150
+              60 508 150
             </div>
             <div
               class="label"
             >
-              Poulation totale
+              Population totale
             </div>
           </div>
         </div>
