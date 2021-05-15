@@ -2,10 +2,30 @@
 @use "../utils/text";
 
 footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
+  position: absolute;
   @include text.size("xs");
-  @include box.margin(0, 1, 0.5);
+  @include box.margin(0, 1, 0);
   justify-content: space-between;
+  background: rgb(255,255,255);
+  @include box.padding(0.5, 0, 0.3);
+  background: linear-gradient(
+    0deg,
+    rgba(255,255,255,1) 50%,
+    rgba(255,255,255,0.9) 60%,
+    rgba(255,255,255,0.8) 65%,
+    rgba(255,255,255,0.7) 70%,
+    rgba(255,255,255,0.6) 75%,
+    rgba(255,255,255,0.5) 80%,
+    rgba(255,255,255,0.4) 85%,
+    rgba(255,255,255,0.3) 90%,
+    rgba(255,255,255,0.2) 95%,
+    rgba(255,255,255,0.1) 98%,
+    rgba(255,255,255,0) 100%
+  );
 
   .wrapper {
     display: flex;
