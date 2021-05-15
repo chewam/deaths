@@ -3,7 +3,6 @@ import { useRouter } from "next/router"
 
 const Lang = (): JSX.Element => {
   const router = useRouter()
-  console.log("router", router)
   const { locale, pathname } = router
   const lang = locale === "fr" ? "en" : "fr"
 

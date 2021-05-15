@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should create a Menu in english 1`] = `
+<DocumentFragment>
+  <ul
+    class="menu"
+  >
+    <li
+      class=""
+    >
+      <a
+        href="/overview"
+      >
+        Overview
+      </a>
+    </li>
+    <li
+      class=""
+    >
+      <a
+        href="/comparison"
+      >
+        Comparison
+      </a>
+    </li>
+    <li
+      class=""
+    >
+      <a
+        href="/distribution"
+      >
+        Distribution
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`Menu should create a Menu in french 1`] = `
+<DocumentFragment>
+  <ul
+    class="menu"
+  >
+    <li
+      class=""
+    >
+      <a
+        href="/overview"
+      >
+        Vue d'Ensemble
+      </a>
+    </li>
+    <li
+      class=""
+    >
+      <a
+        href="/comparison"
+      >
+        Comparaison
+      </a>
+    </li>
+    <li
+      class=""
+    >
+      <a
+        href="/distribution"
+      >
+        Répartition
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
