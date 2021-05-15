@@ -4,9 +4,6 @@
 .switch {
   display: flex;
   cursor: pointer;
-  align-items: flex-end;
-  justify-content: center;
-  @include box.margin(0, 0.2, 0.2, 0)
 }
 
 @include theme.apply(".switch") using ($mode) {

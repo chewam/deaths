@@ -1,22 +1,30 @@
 @use "../utils/box";
+@use "../utils/text";
 @use "../utils/theme";
 
 .menu {
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
+  @include text.size("md");
 
-  a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
+  li {
+    display: flex;
+    align-items: center;
     border-bottom-width: 3px;
     border-bottom-style: solid;
-    @include box.padding(0, 0, 1);
     @include box.margin(0, 2, 0, 0);
     border-bottom-color: transparent;
+
+    a {
+      display: flex;
+      margin-top: 3px;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+    }
   }
 
-  li:last-child a {
+  li:last-child {
     @include box.margin(0);
   }
 }
@@ -30,10 +38,10 @@
     color: theme.color("primary", $mode);
   }
   li.active {
+    border-bottom-color: theme.color("color", $mode);
     a {
       font-weight: bold;
       color: theme.color("color", $mode);
-      border-bottom-color: theme.color("color", $mode);
     }
   }
 }

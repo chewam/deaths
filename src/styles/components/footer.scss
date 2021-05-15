@@ -3,11 +3,16 @@
 
 footer {
   display: flex;
-  @include text.size("sm");
+  @include text.size("xs");
   @include box.margin(0, 1, 0.5);
   justify-content: space-between;
 
   .wrapper {
     display: flex;
+    align-items: center;
+  }
+
+  .lang {
+    text-transform: uppercase;
   }
 }

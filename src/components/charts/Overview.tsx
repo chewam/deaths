@@ -1,4 +1,5 @@
 import hexToRgba from "hex-to-rgba"
+import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
 import { useTheme } from "@/services/themes"
 import useOverview from "@/services/overview"
@@ -20,6 +21,7 @@ const Overview = (): JSX.Element => {
   const { values: theme = {} } = useTheme()
   const { labels, data } = overview as Overview
   const max = data.length ? Math.max(...data) : 0
+  const { formatMessage: fm, formatNumber: fn } = useIntl()
 
   Chart.register(annotationPlugin)
 
@@ -40,13 +42,20 @@ const Overview = (): JSX.Element => {
 
   const plugins = [ChartDataLabels]
 
+  const getAnnotationContent = () => {
+    const label = labels[data.indexOf(max)]
+    const [month, year] = (label || "January 2000").split(" ")
+
+    return `${fm({ id: month })} ${year}: ${fn(max)} ${fm({ id: "deaths" })}`
+  }
+
   const maxAnnotationLabel = {
     width: 0,
     height: 0,
     enabled: true,
     fontColor: theme["on-primary"],
+    content: getAnnotationContent(),
     backgroundColor: theme.secondary,
-    content: `${labels[data.indexOf(max)]}: ${max} décès`,
   } as LabelOptions
 
   const maxAnnotation = {
