@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/chewam/deaths/compare/v2.1.4...v2.2.0) (2021-05-15)
+
+
+### Features
+
+* Add i18n. ([#141](https://github.com/chewam/deaths/issues/141)) ([77e1feb](https://github.com/chewam/deaths/commit/77e1feb40948a39b28e81b944f8aef97bf33cb67))
+
 ## [2.1.4](https://github.com/chewam/deaths/compare/v2.1.3...v2.1.4) (2021-05-09)
 
 
