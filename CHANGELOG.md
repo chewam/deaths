@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/chewam/deaths/compare/v2.2.0...v2.2.1) (2021-05-15)
+
+
+### Bug Fixes
+
+* Footer color gradient ([#143](https://github.com/chewam/deaths/issues/143)) ([da8d0fd](https://github.com/chewam/deaths/commit/da8d0fdd7b74d46214f351f7b76f49ee986d2e13))
+
 # [2.2.0](https://github.com/chewam/deaths/compare/v2.1.4...v2.2.0) (2021-05-15)
 
 
