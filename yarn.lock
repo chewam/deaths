@@ -1299,7 +1299,7 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
 
-"@types/react-intl@^3.0.0":
+"@types/react-intl@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/react-intl/-/react-intl-3.0.0.tgz#a2cce0024b6cfe403be28ccf67f49d720fa810ec"
   integrity sha512-k8F3d05XQGEqSWIfK97bBjZe4z9RruXU9Wa7OZ2iUC5pdeIpzuQDZe/9C2J3Xir5//ZtAkhcv08Wfx3n5TBTQg==
@@ -7008,7 +7008,7 @@ react-icons@4.2.0:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
   integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
 
-react-intl@*, react-intl@^5.17.6:
+react-intl@*, react-intl@5.17.6:
   version "5.17.6"
   resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-5.17.6.tgz#359c44fdfcbeab5172d9048a220092a05487a3ff"
   integrity sha512-JaYgsnME9AvJHfSzkdbc1a+Iyj77h/xD0LrOuZCGFVYySmxr+NSETw56E+V39PUA4TRQru97XVu8GNoGsCaCPA==
