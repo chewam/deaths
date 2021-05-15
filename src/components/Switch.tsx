@@ -5,8 +5,8 @@ import { FaMoon, FaSun } from "react-icons/fa"
 
 const Switch = (): JSX.Element | null => {
   const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
   const { formatMessage: fm } = useIntl()
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
 

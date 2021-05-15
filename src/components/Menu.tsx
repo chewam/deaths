@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 import { FormattedMessage as Trans } from "react-intl"
 
 const Menu = (): JSX.Element => {
-  const { route } = useRouter() || {}
+  const { route } = useRouter()
   const view = (route || "").substring(1)
 
   const items = [
