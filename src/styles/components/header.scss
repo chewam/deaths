@@ -5,7 +5,7 @@
 .header {
   z-index: 1;
   display: flex;
-  @include box.padding(0, 1.5);
+  @include box.padding(0, 1);
 
   .wrapper {
     flex: 1;

@@ -68,15 +68,29 @@ $scheme: (
 );
 
 $shadows: (
-  "dark": (
-    0px 3px 3px -2px rgba(0, 0, 0, 0.06),
-    0px 3px 4px 0px rgba(0, 0, 0, 0.042),
-    0px 1px 8px 0px rgba(0, 0, 0, 0.036),
+  "top": (
+    "dark": (
+      0px -3px 3px -2px rgba(0, 0, 0, 0.03),
+      0px -3px 4px 0px rgba(0, 0, 0, 0.021),
+      0px -1px 8px 0px rgba(0, 0, 0, 0.018),
+    ),
+    "light": (
+      0px -3px 3px -2px rgba(0, 0, 0, 0.03),
+      0px -3px 4px 0px rgba(0, 0, 0, 0.021),
+      0px -1px 8px 0px rgba(0, 0, 0, 0.018),
+    ),
   ),
-  "light": (
-    0px 3px 3px -2px rgba(0, 0, 0, 0.06),
-    0px 3px 4px 0px rgba(0, 0, 0, 0.042),
-    0px 1px 8px 0px rgba(0, 0, 0, 0.036),
+  "bottom": (
+    "dark": (
+      0px 3px 3px -2px rgba(0, 0, 0, 0.06),
+      0px 3px 4px 0px rgba(0, 0, 0, 0.042),
+      0px 1px 8px 0px rgba(0, 0, 0, 0.036),
+    ),
+    "light": (
+      0px 3px 3px -2px rgba(0, 0, 0, 0.06),
+      0px 3px 4px 0px rgba(0, 0, 0, 0.042),
+      0px 1px 8px 0px rgba(0, 0, 0, 0.036),
+    ),
   ),
 );
 
@@ -102,6 +116,7 @@ $shadows: (
   }
 }
 
-@function shadow($mode: "light") {
-  @return map-get($shadows, $mode);
+@function shadow($mode: "light", $direction: "bottom") {
+  $map: map-get($shadows, $direction);
+  @return map-get($map, $mode);
 }

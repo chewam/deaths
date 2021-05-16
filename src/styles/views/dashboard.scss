@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   @include box.margin(0);
-  @include box.padding(0.5, 0.5, 1.5, 0.5);
+  @include box.padding(0.5, 0.5, 2, 0.5);
 
   .wrapper {
     display: flex;
@@ -76,9 +76,27 @@
 
         .left {
           flex: none;
+          flex-wrap: wrap;
           text-align: right;
+          flex-direction: row;
+          @include box.margin(1);
+          max-width: 30rem;
+
+          &>div {
+            display: flex;
+            flex: 1 0 50%;
+            max-width: 50%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            @include box.padding(0.5, 0);
+            outline: 1px dashed lighten(#71768B, 45);
+          }
+
           .top {
-            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
             .year {
               font-size: 4rem;
               line-height: 4rem;
@@ -93,15 +111,17 @@
           }
 
           .value {
-            font-size: 1.5rem;
-            margin-top: 0.5rem;
-            line-height: 1.5rem;
+            font-size: 2.5rem;
+            margin-top: 0rem;
+            line-height: 2.5rem;
           }
   
           .label {
             font-size: 1rem;
             font-weight: bold;
+            line-height: 1rem;
             text-transform: uppercase;
+            @include box.margin(0.3, 0, 0);
           }
         }
 

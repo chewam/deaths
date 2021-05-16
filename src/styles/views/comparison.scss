@@ -3,7 +3,7 @@
 .panel.comparison {
   flex: 1;
   flex-direction: column;
-  @include box.margin(0.5, 1, 2);
+  @include box.margin(0.5, 1, 2.5);
 
   .chart {
     flex: 1;

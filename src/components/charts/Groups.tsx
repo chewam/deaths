@@ -25,17 +25,17 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
   const labels = ["0-69", "70-79", "80-89", "90+"]
 
   const lightPalette = [
-    "rgba(205,180,219, 0.5)",
-    "rgba(255,175,204, 0.5)",
     "rgba(189,224,254, 0.5)",
     "rgba(162,210,255, 0.5)",
+    "rgba(205,180,219, 0.5)",
+    "rgba(255,175,204, 0.5)",
   ]
 
   const darkPalette = [
-    "rgba(175,150,189, 1)",
-    "rgba(225,145,174, 1)",
     "rgba(159,194,224, 1)",
     "rgba(132,180,225, 1)",
+    "rgba(175,150,189, 1)",
+    "rgba(225,145,174, 1)",
   ]
 
   const dataset = {
