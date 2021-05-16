@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/chewam/deaths/compare/v2.2.1...v2.2.2) (2021-05-16)
+
+
+### Bug Fixes
+
+* Visual modifications for dashboard and footer. ([0b7508c](https://github.com/chewam/deaths/commit/0b7508cf6bb203decfe271d49d86f476a9bc44a8))
+
 ## [2.2.1](https://github.com/chewam/deaths/compare/v2.2.0...v2.2.1) (2021-05-15)
 
 
