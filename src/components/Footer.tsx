@@ -25,9 +25,9 @@ const Footer = (): JSX.Element => {
 
       <div className="wrapper">
         <Switch />
-        &nbsp; | &nbsp;
+        &nbsp;&nbsp;|&nbsp;&nbsp;
         <Lang />
-        &nbsp; | &nbsp; version {version} (
+        &nbsp;&nbsp;|&nbsp;&nbsp;version {version} (
         <a
           target="_blank"
           rel="noopener noreferrer"
