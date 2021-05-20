@@ -1,8 +1,6 @@
 const { version } = require("./package.json")
 const { withSentryConfig } = require('@sentry/nextjs');
 
-console.log("process.env.VERCEL_GITHUB_COMMIT_SHA", process.env.VERCEL_GITHUB_COMMIT_SHA)
-
 const moduleExports = {
   env: {
     APP_VERSION: version,
