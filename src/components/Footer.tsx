@@ -2,10 +2,10 @@ import Lang from "@/components/Lang"
 import Switch from "@/components/Switch"
 import { FormattedMessage as Trans } from "react-intl"
 
-const version = process.env.APP_VERSION || "0.0.0"
-const sha = process.env.VERCEL_GITHUB_COMMIT_SHA || "dev"
-
 const Footer = (): JSX.Element => {
+  const version = process.env.APP_VERSION || "0.0.0"
+  const sha = process.env.VERCEL_GITHUB_COMMIT_SHA || "dev"
+
   return (
     <footer>
       <div>
