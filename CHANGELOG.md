@@ -1,3 +1,10 @@
+## [2.2.3](https://github.com/chewam/deaths/compare/v2.2.2...v2.2.3) (2021-05-20)
+
+
+### Bug Fixes
+
+* Show app version in footer. ([#145](https://github.com/chewam/deaths/issues/145)) ([327dc9b](https://github.com/chewam/deaths/commit/327dc9b5f7cc22ef387c11be5f07f9812d2e4ce8))
+
 ## [2.2.2](https://github.com/chewam/deaths/compare/v2.2.1...v2.2.2) (2021-05-16)
 
 
