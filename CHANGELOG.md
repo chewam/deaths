@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/chewam/deaths/compare/v2.2.3...v2.2.4) (2021-05-20)
+
+
+### Bug Fixes
+
+* Use NEXT_PUBLIC env variables for commit sha and app url. ([effd223](https://github.com/chewam/deaths/commit/effd223f26c7971f87e85d4bf44bbdc25e307ab8))
+
 ## [2.2.3](https://github.com/chewam/deaths/compare/v2.2.2...v2.2.3) (2021-05-20)
 
 
