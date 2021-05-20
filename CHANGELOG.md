@@ -1,3 +1,10 @@
+## [2.2.5](https://github.com/chewam/deaths/compare/v2.2.4...v2.2.5) (2021-05-20)
+
+
+### Bug Fixes
+
+* Elements spacing in footer. ([1ac0ecb](https://github.com/chewam/deaths/commit/1ac0ecb698e2ee48eee9f88ac8c8c0b7e2dda397))
+
 ## [2.2.4](https://github.com/chewam/deaths/compare/v2.2.3...v2.2.4) (2021-05-20)
 
 
