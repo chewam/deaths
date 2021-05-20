@@ -1,8 +1,8 @@
 import NextHead from "next/head"
 
 const Head = (): JSX.Element => {
-  const VERCEL_URL = process.env.VERCEL_URL
-  const ANALYTICS_ID = process.env.ANALYTICS_ID
+  const VERCEL_URL = process.env.NEXT_PUBLIC_VERCEL_URL
+  const ANALYTICS_ID = process.env.NEXT_PUBLIC_ANALYTICS_ID
 
   return (
     <NextHead>

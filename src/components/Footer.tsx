@@ -4,7 +4,7 @@ import { FormattedMessage as Trans } from "react-intl"
 
 const Footer = (): JSX.Element => {
   const version = process.env.APP_VERSION || "0.0.0"
-  const sha = process.env.VERCEL_GITHUB_COMMIT_SHA || "dev"
+  const sha = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA || "dev"
 
   return (
     <footer>
