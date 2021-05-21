@@ -2,6 +2,10 @@ import Lang from "@/components/Lang"
 import Switch from "@/components/Switch"
 import { FormattedMessage as Trans } from "react-intl"
 
+const Spacer = (): JSX.Element => (
+  <span className="spacer">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+)
+
 const Footer = (): JSX.Element => {
   const version = process.env.APP_VERSION || "0.0.0"
   const sha = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA || "dev"
@@ -9,10 +13,9 @@ const Footer = (): JSX.Element => {
   return (
     <footer>
       <div>
-        <span>
-          Chewam © 2020 - <Trans id="INSEE data" />{" "}
-        </span>
-        (
+        Chewam © 2020
+        <Spacer />
+        <Trans id="INSEE data" /> (
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -25,9 +28,10 @@ const Footer = (): JSX.Element => {
 
       <div className="wrapper">
         <Switch />
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Spacer />
         <Lang />
-        &nbsp;&nbsp;|&nbsp;&nbsp;version {version} (
+        <Spacer />
+        version {version} (
         <a
           target="_blank"
           rel="noopener noreferrer"

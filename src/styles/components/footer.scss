@@ -10,7 +10,7 @@ footer {
   position: absolute;
   @include text.size("xs");
   justify-content: space-between;
-  @include box.padding(0.1, 0.5);
+  @include box.padding(0.4, 0.5);
 
   .wrapper {
     display: flex;
@@ -19,7 +19,6 @@ footer {
 
   .lang {
     margin-top: 1px;
-    line-height: 12px;
     position: relative;
     text-transform: uppercase;
   }
@@ -28,4 +27,7 @@ footer {
 @include theme.apply("footer") using ($mode) {
   box-shadow: theme.shadow($mode, "top");
   background-color: theme.color("surface", $mode);
+  .spacer {
+    color: theme.color("muted", $mode);
+  }
 }
