@@ -1,3 +1,10 @@
+## [2.2.6](https://github.com/chewam/deaths/compare/v2.2.5...v2.2.6) (2021-05-21)
+
+
+### Bug Fixes
+
+* Add Spacer components to footer. ([047f011](https://github.com/chewam/deaths/commit/047f011c53aca1bbab5dc6f3caaf188f89409e55))
+
 ## [2.2.5](https://github.com/chewam/deaths/compare/v2.2.4...v2.2.5) (2021-05-20)
 
 
