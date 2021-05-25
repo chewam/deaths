@@ -4,10 +4,13 @@ exports[`Footer should create a Footer in english 1`] = `
 <DocumentFragment>
   <footer>
     <div>
-      <span>
-        Chewam © 2020 - INSEE data 
+      Chewam © 2020
+      <span
+        class="spacer"
+      >
+          |  
       </span>
-      (
+      INSEE data (
       <a
         href="https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees"
         rel="noopener noreferrer"
@@ -40,14 +43,23 @@ exports[`Footer should create a Footer in english 1`] = `
           />
         </svg>
       </div>
-        |  
+      <span
+        class="spacer"
+      >
+          |  
+      </span>
       <a
         class="lang"
         href="/"
       >
         fr
       </a>
-        |   version 0.0.0 (
+      <span
+        class="spacer"
+      >
+          |  
+      </span>
+      version 0.0.0 (
       <a
         href="https://github.com/chewam/deaths/tree/dev"
         rel="noopener noreferrer"
@@ -65,10 +77,13 @@ exports[`Footer should create a Footer in french 1`] = `
 <DocumentFragment>
   <footer>
     <div>
-      <span>
-        Chewam © 2020 - Données INSEE 
+      Chewam © 2020
+      <span
+        class="spacer"
+      >
+          |  
       </span>
-      (
+      Données INSEE (
       <a
         href="https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees"
         rel="noopener noreferrer"
@@ -101,14 +116,23 @@ exports[`Footer should create a Footer in french 1`] = `
           />
         </svg>
       </div>
-        |  
+      <span
+        class="spacer"
+      >
+          |  
+      </span>
       <a
         class="lang"
         href="/"
       >
         en
       </a>
-        |   version 0.0.0 (
+      <span
+        class="spacer"
+      >
+          |  
+      </span>
+      version 0.0.0 (
       <a
         href="https://github.com/chewam/deaths/tree/dev"
         rel="noopener noreferrer"
