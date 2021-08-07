@@ -1,3 +1,11 @@
+# 1.0.0-alpha.1 (2021-08-07)
+
+
+### Bug Fixes
+
+* Remove npm token from release workflow. ([a11ad9e](https://github.com/chewam/deaths/commit/a11ad9e3dfc0a791e56b8bd878ff593f4b7d7e3f))
+* Remove screenshot from release workflow. ([d839a25](https://github.com/chewam/deaths/commit/d839a25507dcf4e0b6dd564d3a9e66c2cbd5ac60))
+
 ## [2.2.8](https://github.com/chewam/deaths/compare/v2.2.7...v2.2.8) (2021-07-31)
 
 
