@@ -24,36 +24,6 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile --perfer-offline
 
-      - name: Vercel environment url
-        uses: zentered/vercel-preview-url@v1.0.1
-        id: vercel
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        with:
-          vercel_team_id: 'chewam'
-          vercel_project_id: 'deaths'
-
-      - name: Wait for Vercel deployment
-        run: |
-          echo domain: ${{ steps.vercel.outputs.preview_url }}
-          sleep 30
-
-      - name: Take screenshot
-        id: screenshot
-        uses: swinton/screenshot-website@v1.x
-        with:
-          width: 1200
-          height: 630
-          overwrite: true
-          source: https://${{ steps.vercel.outputs.preview_url }}
-
-      - name: Copy screenshot
-        run: |
-          echo ${{ steps.screenshot.outputs.path }}
-          cp ${{ steps.screenshot.outputs.path }} ./public/
-          ls -la ./public/
-          git status
-
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
