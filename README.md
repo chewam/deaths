@@ -53,12 +53,6 @@ yarn start --port 3001
 
 Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
 
-#### Run Lighthouse on built version
-
-```bash
-yarn lhci autorun --collect.url=http://localhost:3001
-```
-
 ### Update datasets
 
 #### Download and process data files
