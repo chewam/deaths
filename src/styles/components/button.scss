@@ -1,0 +1,33 @@
+@use "../utils/box";
+@use "../utils/text";
+@use "../utils/theme";
+
+button {
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  @include box.radius();
+  @include text.size("base");
+  background-color: transparent;
+  @include box.padding(0.5, 0.8);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@include theme.apply("button") using ($mode) {
+  color: theme.color("muted", $mode);
+  border-color: theme.color("muted", $mode);
+
+  &:hover {
+    color: theme.color("primary", $mode);
+    border-color: theme.color("primary", $mode);
+  }
+
+  &.active {
+    color: theme.color("on-primary", $mode);
+    border-color: theme.color("primary", $mode);
+    background-color: theme.color("primary", $mode);
+  }
+}

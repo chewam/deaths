@@ -1,0 +1,309 @@
+0000000000000000000000000000000000000000 105bbf054deaedad6b63b4a7c67456b4da10b1cc chewam <gary@chewam.com> 1617151168 +0200	clone: from git@github.com:chewam/deaths.git
+105bbf054deaedad6b63b4a7c67456b4da10b1cc 409cdb490c0a4c77b3a0cd8bd8509649b6beab2a chewam <gary@chewam.com> 1617154727 +0200	commit: fix: Add 2021 population count.
+409cdb490c0a4c77b3a0cd8bd8509649b6beab2a c827d0967be11b0030d0c051434292f2aa53c0cd chewam <gary@chewam.com> 1617155022 +0200	commit (amend): fix: Add 2021 population count.
+c827d0967be11b0030d0c051434292f2aa53c0cd a4f2bd41777abe33c036a3a0fd79a7699b85664a chewam <gary@chewam.com> 1617389942 +0200	checkout: moving from master to alpha
+a4f2bd41777abe33c036a3a0fd79a7699b85664a a32681d3bad944138d49e9d59461f40b9e54db39 chewam <gary@chewam.com> 1617391821 +0200	checkout: moving from alpha to beta
+a32681d3bad944138d49e9d59461f40b9e54db39 a4f2bd41777abe33c036a3a0fd79a7699b85664a chewam <gary@chewam.com> 1617391851 +0200	reset: moving to alpha
+a4f2bd41777abe33c036a3a0fd79a7699b85664a a4f2bd41777abe33c036a3a0fd79a7699b85664a chewam <gary@chewam.com> 1617392014 +0200	checkout: moving from beta to alpha
+a4f2bd41777abe33c036a3a0fd79a7699b85664a a4f2bd41777abe33c036a3a0fd79a7699b85664a chewam <gary@chewam.com> 1617419206 +0200	checkout: moving from alpha to alpha-refacto
+a4f2bd41777abe33c036a3a0fd79a7699b85664a f070db76262f4262d9066963cc0ca57651b0243e chewam <gary@chewam.com> 1617671027 +0200	commit: fix: Add missing types.
+f070db76262f4262d9066963cc0ca57651b0243e 0e6c258e8a977fdba56779508183cbf2d142c199 chewam <gary@chewam.com> 1617700358 +0200	commit: chore: Add tests workflow.
+0e6c258e8a977fdba56779508183cbf2d142c199 4bde4210177e2430eb12df7ecc050c887eee81cf chewam <gary@chewam.com> 1617700891 +0200	commit (amend): chore: Add tests workflow.
+4bde4210177e2430eb12df7ecc050c887eee81cf 4bde4210177e2430eb12df7ecc050c887eee81cf chewam <gary@chewam.com> 1617702269 +0200	reset: moving to HEAD
+4bde4210177e2430eb12df7ecc050c887eee81cf a4f2bd41777abe33c036a3a0fd79a7699b85664a chewam <gary@chewam.com> 1617702269 +0200	checkout: moving from alpha-refacto to alpha
+a4f2bd41777abe33c036a3a0fd79a7699b85664a 4bde4210177e2430eb12df7ecc050c887eee81cf chewam <gary@chewam.com> 1617702560 +0200	checkout: moving from alpha to alpha-refacto
+4bde4210177e2430eb12df7ecc050c887eee81cf a6b60f41b53cae0a2a934eaca7a8691eeba5cadb chewam <gary@chewam.com> 1617723803 +0200	commit: Fix locations view.
+a6b60f41b53cae0a2a934eaca7a8691eeba5cadb 97a1eab6c918ec54afa744dd91552c7a975c484a chewam <gary@chewam.com> 1617814607 +0200	commit: Add distribution chart.
+97a1eab6c918ec54afa744dd91552c7a975c484a b9ec13607fa2001cceda0782dc318e162ee8f623 chewam <gary@chewam.com> 1618169015 +0200	commit: Minimal version setup.
+b9ec13607fa2001cceda0782dc318e162ee8f623 0338a104760813a876634f6d610c3c4c417052d9 chewam <gary@chewam.com> 1618169335 +0200	commit: Display anotations before datasets.
+0338a104760813a876634f6d610c3c4c417052d9 862b34f95564a6a3a4fcd10a5917139d74c2534c chewam <gary@chewam.com> 1618172337 +0200	commit: Change dark primary color.
+862b34f95564a6a3a4fcd10a5917139d74c2534c a4f2bd41777abe33c036a3a0fd79a7699b85664a chewam <gary@chewam.com> 1618174128 +0200	checkout: moving from alpha-refacto to alpha
+a4f2bd41777abe33c036a3a0fd79a7699b85664a 0fe13ca632ff81e742fcd4bb4459b419c49ca109 chewam <gary@chewam.com> 1618174138 +0200	pull origin alpha: Fast-forward
+0fe13ca632ff81e742fcd4bb4459b419c49ca109 5932dcfa080ac6a2b4ae756f160b3e1e33cf858a chewam <gary@chewam.com> 1618176565 +0200	commit: Compact header.
+5932dcfa080ac6a2b4ae756f160b3e1e33cf858a 4e4aa963380e5409fbbaf9abe94d650d08e16821 chewam <gary@chewam.com> 1618177331 +0200	commit: Cleaning.
+4e4aa963380e5409fbbaf9abe94d650d08e16821 39183cd27a17503461950d374199455f6cc92da3 chewam <gary@chewam.com> 1618177748 +0200	commit: Typo.
+39183cd27a17503461950d374199455f6cc92da3 81501ebe95e99ef878d4f647e8aee48ef2aaaa8f chewam <gary@chewam.com> 1618177829 +0200	pull --rebase origin alpha: checkout 81501ebe95e99ef878d4f647e8aee48ef2aaaa8f
+81501ebe95e99ef878d4f647e8aee48ef2aaaa8f 9ed791ea2fc5be299346ab31f56474f77059eb4a chewam <gary@chewam.com> 1618177829 +0200	pull --rebase origin alpha: Typo.
+9ed791ea2fc5be299346ab31f56474f77059eb4a 9ed791ea2fc5be299346ab31f56474f77059eb4a chewam <gary@chewam.com> 1618177829 +0200	rebase finished: returning to refs/heads/alpha
+9ed791ea2fc5be299346ab31f56474f77059eb4a c827d0967be11b0030d0c051434292f2aa53c0cd chewam <gary@chewam.com> 1618178271 +0200	checkout: moving from alpha to master
+c827d0967be11b0030d0c051434292f2aa53c0cd a308dc4c3b186f3e0e4745465fb927faec26d1b1 chewam <gary@chewam.com> 1618178283 +0200	pull origin master: Fast-forward
+a308dc4c3b186f3e0e4745465fb927faec26d1b1 9ed791ea2fc5be299346ab31f56474f77059eb4a chewam <gary@chewam.com> 1618180323 +0200	checkout: moving from master to alpha
+9ed791ea2fc5be299346ab31f56474f77059eb4a 8a5fb29cbaba74c0b82e27fa0cae45f6a5d1e3d2 chewam <gary@chewam.com> 1618190704 +0200	commit: Add index page snapshot test.
+8a5fb29cbaba74c0b82e27fa0cae45f6a5d1e3d2 a5e8224b67422e57163159cf4a191698c3bcff8c chewam <gary@chewam.com> 1618190753 +0200	commit (amend): Add index page snapshot test.
+a5e8224b67422e57163159cf4a191698c3bcff8c 7741b4f341323c83d99fa43c15c57b2b70255d23 chewam <gary@chewam.com> 1618191052 +0200	commit: Add test job.
+7741b4f341323c83d99fa43c15c57b2b70255d23 99331a147bfde70b983f7493f36cb1ed4c7f6bff chewam <gary@chewam.com> 1618191589 +0200	commit: Reduce coverage tresholds.
+99331a147bfde70b983f7493f36cb1ed4c7f6bff 62bd2bcd0cf0759c8e0c764c8e4f439b813a1b6b chewam <gary@chewam.com> 1618193212 +0200	commit: Fix lighthouse job.
+62bd2bcd0cf0759c8e0c764c8e4f439b813a1b6b 9e6d371db220c52c9bfb43990191f0ff5d5c22d0 chewam <gary@chewam.com> 1618194950 +0200	commit: Restore LHCI previous job.
+9e6d371db220c52c9bfb43990191f0ff5d5c22d0 6058cb63164497ae94de55beb3ee495463e90f3a chewam <gary@chewam.com> 1618195397 +0200	commit: Add LHCI config.
+6058cb63164497ae94de55beb3ee495463e90f3a 2de7096c2ba09ea1129afdb40f18e7dcd6749a3c chewam <gary@chewam.com> 1618195422 +0200	commit (amend): Add LHCI config.
+2de7096c2ba09ea1129afdb40f18e7dcd6749a3c f86bdfb69dc1cad613ad9a52fe7ae1924f850693 chewam <gary@chewam.com> 1618269658 +0200	commit: Add head meta tags.
+f86bdfb69dc1cad613ad9a52fe7ae1924f850693 e14950518cf31c3bc4da144a15bf30c9474c0ca4 chewam <gary@chewam.com> 1618270858 +0200	commit: Update tests.
+e14950518cf31c3bc4da144a15bf30c9474c0ca4 0e5dc1a7235507652231964ce1eaff67de424aa3 chewam <gary@chewam.com> 1618274902 +0200	commit: Fix LHCI errors.
+0e5dc1a7235507652231964ce1eaff67de424aa3 f18f29d27c3870dda1c04038e23073c22ad906de chewam <gary@chewam.com> 1618275195 +0200	commit: Update test snapshot.
+f18f29d27c3870dda1c04038e23073c22ad906de 03b5625cb8a66bc7e48702219065a96277339631 chewam <gary@chewam.com> 1618340024 +0200	commit: Update LCHI config.
+03b5625cb8a66bc7e48702219065a96277339631 1390ea827d187cd4de0806f22164f4288927bd55 chewam <gary@chewam.com> 1618741488 +0200	commit: Add tests.
+1390ea827d187cd4de0806f22164f4288927bd55 95bab4ea9f1bcd9024cb0b52f2f444c60b0bf3b2 chewam <gary@chewam.com> 1618744532 +0200	commit: Various fixes.
+95bab4ea9f1bcd9024cb0b52f2f444c60b0bf3b2 e8063ff50b5f56db9158aa0e5874875ee2dd03bf chewam <gary@chewam.com> 1618744984 +0200	commit: Mortality bars color.
+e8063ff50b5f56db9158aa0e5874875ee2dd03bf 2c862d66b60e76d05648be53d93283975d48ec7c chewam <gary@chewam.com> 1618750089 +0200	commit: Update workflow actions.
+2c862d66b60e76d05648be53d93283975d48ec7c 3516f46be97000808508c03ae4f3991f0788b818 chewam <gary@chewam.com> 1618750599 +0200	commit: Fix workflows config.
+3516f46be97000808508c03ae4f3991f0788b818 fe84bd4cf1dddb5d94ca2ffa758270954ad1072c chewam <gary@chewam.com> 1618750901 +0200	commit: Fix workflows config, again.
+fe84bd4cf1dddb5d94ca2ffa758270954ad1072c 489aee22e283bea2811e66b304d7d0877f79f870 chewam <gary@chewam.com> 1618751282 +0200	commit: Add semrel plugin.
+489aee22e283bea2811e66b304d7d0877f79f870 8ae22fdae8747bbef488fef38cb9682c9ab06bfd chewam <gary@chewam.com> 1618751736 +0200	commit: Fix release action.
+8ae22fdae8747bbef488fef38cb9682c9ab06bfd 5da13ed5941bf2c5a6dc6564a7f96a01ceb48945 chewam <gary@chewam.com> 1618753187 +0200	commit: Fix screenshot action.
+5da13ed5941bf2c5a6dc6564a7f96a01ceb48945 522ba2d56ae282bbf9ddc1f00fe652087ad64542 chewam <gary@chewam.com> 1618753660 +0200	commit: Fix screenshot action, again.
+522ba2d56ae282bbf9ddc1f00fe652087ad64542 367f7fbc91be93b1d72ab1f96e040b043db4bb59 chewam <gary@chewam.com> 1618756666 +0200	commit: Add VERCEL_TOKEN env var.
+367f7fbc91be93b1d72ab1f96e040b043db4bb59 3e348fe7821d2fba6619a2e775b9a22faa0bf0ee chewam <gary@chewam.com> 1618757362 +0200	commit: fix: Remove useless dependencies.
+3e348fe7821d2fba6619a2e775b9a22faa0bf0ee a7ab5f47b0800af68d5a2e8a5d215708ca0459f7 chewam <gary@chewam.com> 1618757878 +0200	commit: fix: Add @semantic-release/changelog.
+a7ab5f47b0800af68d5a2e8a5d215708ca0459f7 8da79419d8ef45032d40eaa8e85b08ce56be1b3a chewam <gary@chewam.com> 1618758227 +0200	pull origin alpha: Fast-forward
+8da79419d8ef45032d40eaa8e85b08ce56be1b3a 5ce6de5e77dc86b9b551361942a5cd9fed280f91 chewam <gary@chewam.com> 1618758536 +0200	commit: fix: Add screenshot to semrel assets.
+5ce6de5e77dc86b9b551361942a5cd9fed280f91 ccd183436a7f0cbcc50f3a90f721f0e8b33f4479 chewam <gary@chewam.com> 1618758761 +0200	pull origin alpha: Fast-forward
+ccd183436a7f0cbcc50f3a90f721f0e8b33f4479 0f4da99a9e7756ea411f6811477cb6265b934bde chewam <gary@chewam.com> 1618758869 +0200	commit: fix: debug screenshot url.
+0f4da99a9e7756ea411f6811477cb6265b934bde e9bd74b363f84e59a0875eb0630e9914c29118ee chewam <gary@chewam.com> 1618759581 +0200	commit: fix: Wait for Vercel deployment.
+e9bd74b363f84e59a0875eb0630e9914c29118ee a771e1f70ab8e43629fcd3437e87942a1c3f216b chewam <gary@chewam.com> 1618759591 +0200	pull --rebase origin alpha: checkout a771e1f70ab8e43629fcd3437e87942a1c3f216b
+a771e1f70ab8e43629fcd3437e87942a1c3f216b 59afda3f3f70cad50f125a8bf252abb9467c3a69 chewam <gary@chewam.com> 1618759591 +0200	pull --rebase origin alpha: fix: Wait for Vercel deployment.
+59afda3f3f70cad50f125a8bf252abb9467c3a69 59afda3f3f70cad50f125a8bf252abb9467c3a69 chewam <gary@chewam.com> 1618759591 +0200	rebase finished: returning to refs/heads/alpha
+59afda3f3f70cad50f125a8bf252abb9467c3a69 f7df94cf9f30775643fb278c005cb83811152917 chewam <gary@chewam.com> 1618759830 +0200	pull origin alpha: Fast-forward
+f7df94cf9f30775643fb278c005cb83811152917 4854962814c538748ec150b62b67b215645441f4 chewam <gary@chewam.com> 1618760176 +0200	commit: fix: Set screenshot image size.
+4854962814c538748ec150b62b67b215645441f4 96e1b0cd8e23297fc25a5af5f58fb5ef1090e786 chewam <gary@chewam.com> 1618761368 +0200	commit: fix: Set screenshot image size, again.
+96e1b0cd8e23297fc25a5af5f58fb5ef1090e786 2d34a96f8231043c28df9e94cb76ff544b8cb637 chewam <gary@chewam.com> 1618761373 +0200	pull --rebase origin alpha: checkout 2d34a96f8231043c28df9e94cb76ff544b8cb637
+2d34a96f8231043c28df9e94cb76ff544b8cb637 27012120ffe58c4021f272e6ba7eaad05fb76a41 chewam <gary@chewam.com> 1618761373 +0200	pull --rebase origin alpha: fix: Set screenshot image size, again.
+27012120ffe58c4021f272e6ba7eaad05fb76a41 27012120ffe58c4021f272e6ba7eaad05fb76a41 chewam <gary@chewam.com> 1618761373 +0200	rebase finished: returning to refs/heads/alpha
+27012120ffe58c4021f272e6ba7eaad05fb76a41 65d550525389be076f8e3bc21693fa1ede3e860a chewam <gary@chewam.com> 1618763246 +0200	commit: fix: Update meta tags.
+65d550525389be076f8e3bc21693fa1ede3e860a e37dab7be8a124a0b798e131597b80f89a4c22de chewam <gary@chewam.com> 1618763251 +0200	pull --rebase origin alpha: checkout e37dab7be8a124a0b798e131597b80f89a4c22de
+e37dab7be8a124a0b798e131597b80f89a4c22de 245acf3b0d36531efed56202329d0a3e6213f221 chewam <gary@chewam.com> 1618763251 +0200	pull --rebase origin alpha: fix: Update meta tags.
+245acf3b0d36531efed56202329d0a3e6213f221 245acf3b0d36531efed56202329d0a3e6213f221 chewam <gary@chewam.com> 1618763251 +0200	rebase finished: returning to refs/heads/alpha
+245acf3b0d36531efed56202329d0a3e6213f221 f5431b24eb853cff1a21da51a13195b90179aac6 chewam <gary@chewam.com> 1618764013 +0200	pull origin alpha: Fast-forward
+f5431b24eb853cff1a21da51a13195b90179aac6 3bf687a9e6fbdbbc2b96c483a626ce1f4a4db1be chewam <gary@chewam.com> 1618764042 +0200	commit: fix: tsconfig.
+3bf687a9e6fbdbbc2b96c483a626ce1f4a4db1be c869de37bb64323255938941b7803aa773c3c5c5 chewam <gary@chewam.com> 1618764449 +0200	commit: fix: Various fixes.
+c869de37bb64323255938941b7803aa773c3c5c5 7dbc33eb65ca04b2dc258e5f3a560cfc6e7eee2d chewam <gary@chewam.com> 1618764456 +0200	pull --rebase origin alpha: checkout 7dbc33eb65ca04b2dc258e5f3a560cfc6e7eee2d
+7dbc33eb65ca04b2dc258e5f3a560cfc6e7eee2d a08a1f33a592777303a266e9d8c20d6cf7d12053 chewam <gary@chewam.com> 1618764456 +0200	pull --rebase origin alpha: fix: Various fixes.
+a08a1f33a592777303a266e9d8c20d6cf7d12053 a08a1f33a592777303a266e9d8c20d6cf7d12053 chewam <gary@chewam.com> 1618764456 +0200	rebase finished: returning to refs/heads/alpha
+a08a1f33a592777303a266e9d8c20d6cf7d12053 e8baac80a513351c111d5b4d9ab4d25d2c2a2171 chewam <gary@chewam.com> 1618767468 +0200	pull --rebase origin alpha: Fast-forward
+e8baac80a513351c111d5b4d9ab4d25d2c2a2171 a4f2bd41777abe33c036a3a0fd79a7699b85664a chewam <gary@chewam.com> 1618767489 +0200	checkout: moving from alpha to beta
+a4f2bd41777abe33c036a3a0fd79a7699b85664a e78f2ee5d138404937336adf68ddd7f7e52c5cf2 chewam <gary@chewam.com> 1618767497 +0200	pull origin beta: Fast-forward
+e78f2ee5d138404937336adf68ddd7f7e52c5cf2 cde2e636102992d66e2836e803ededb9ced55eb9 chewam <gary@chewam.com> 1618767525 +0200	commit: fix: Add renovate configuration.
+cde2e636102992d66e2836e803ededb9ced55eb9 a308dc4c3b186f3e0e4745465fb927faec26d1b1 chewam <gary@chewam.com> 1618767681 +0200	checkout: moving from beta to master
+a308dc4c3b186f3e0e4745465fb927faec26d1b1 aee689c1bb7fb01eecc8f8b37ecac7e6ca7c22a7 chewam <gary@chewam.com> 1618767691 +0200	pull origin master: Fast-forward
+aee689c1bb7fb01eecc8f8b37ecac7e6ca7c22a7 1a6832b43fef00b4f3496450653e432ef9ae62b9 chewam <gary@chewam.com> 1618767795 +0200	commit: fix: Last v1 tag.
+1a6832b43fef00b4f3496450653e432ef9ae62b9 cde2e636102992d66e2836e803ededb9ced55eb9 chewam <gary@chewam.com> 1619034485 +0200	checkout: moving from master to beta
+cde2e636102992d66e2836e803ededb9ced55eb9 1a6832b43fef00b4f3496450653e432ef9ae62b9 chewam <gary@chewam.com> 1619034549 +0200	checkout: moving from beta to master
+1a6832b43fef00b4f3496450653e432ef9ae62b9 c58c06d2c190211bc3a53a994ef52081a3bfb358 chewam <gary@chewam.com> 1619034556 +0200	pull origin master: Fast-forward
+c58c06d2c190211bc3a53a994ef52081a3bfb358 cde2e636102992d66e2836e803ededb9ced55eb9 chewam <gary@chewam.com> 1619034639 +0200	checkout: moving from master to beta
+cde2e636102992d66e2836e803ededb9ced55eb9 c58c06d2c190211bc3a53a994ef52081a3bfb358 chewam <gary@chewam.com> 1619034879 +0200	checkout: moving from beta to master
+c58c06d2c190211bc3a53a994ef52081a3bfb358 c58c06d2c190211bc3a53a994ef52081a3bfb358 chewam <gary@chewam.com> 1619034905 +0200	checkout: moving from master to backup
+c58c06d2c190211bc3a53a994ef52081a3bfb358 c58c06d2c190211bc3a53a994ef52081a3bfb358 chewam <gary@chewam.com> 1619034910 +0200	checkout: moving from backup to master
+c58c06d2c190211bc3a53a994ef52081a3bfb358 cde2e636102992d66e2836e803ededb9ced55eb9 chewam <gary@chewam.com> 1619034935 +0200	reset: moving to beta
+cde2e636102992d66e2836e803ededb9ced55eb9 02660bf0a6cd4846ab8c710e8891a57057d88457 chewam <gary@chewam.com> 1619037798 +0200	checkout: moving from master to v1.10.4
+02660bf0a6cd4846ab8c710e8891a57057d88457 cde2e636102992d66e2836e803ededb9ced55eb9 chewam <gary@chewam.com> 1619037830 +0200	checkout: moving from 02660bf0a6cd4846ab8c710e8891a57057d88457 to master
+cde2e636102992d66e2836e803ededb9ced55eb9 cde2e636102992d66e2836e803ededb9ced55eb9 chewam <gary@chewam.com> 1619037879 +0200	checkout: moving from master to codecov
+cde2e636102992d66e2836e803ededb9ced55eb9 2885a2e4bf49e5f1591f587019352dc3119af3e2 chewam <gary@chewam.com> 1619038034 +0200	commit (amend): fix: Add renovate configuration.
+2885a2e4bf49e5f1591f587019352dc3119af3e2 35d1048040cee9afcadb4ebe7871145460473095 chewam <gary@chewam.com> 1619038053 +0200	checkout: moving from codecov to v1.10.5
+35d1048040cee9afcadb4ebe7871145460473095 cde2e636102992d66e2836e803ededb9ced55eb9 chewam <gary@chewam.com> 1619038092 +0200	checkout: moving from 35d1048040cee9afcadb4ebe7871145460473095 to master
+cde2e636102992d66e2836e803ededb9ced55eb9 f207ac29e445353155c166c98c33ac7e68c49680 chewam <gary@chewam.com> 1619038348 +0200	checkout: moving from master to renovate/pin-dependencies
+f207ac29e445353155c166c98c33ac7e68c49680 f2e1acd5d4978f927afca5f2eb7c799928781c50 chewam <gary@chewam.com> 1619038397 +0200	commit: Add codecov config.
+f2e1acd5d4978f927afca5f2eb7c799928781c50 cde2e636102992d66e2836e803ededb9ced55eb9 chewam <gary@chewam.com> 1619038603 +0200	checkout: moving from renovate/pin-dependencies to master
+cde2e636102992d66e2836e803ededb9ced55eb9 5670414af5a3ced1edfb137b748c6e0d9d4e80bb chewam <gary@chewam.com> 1619038619 +0200	pull origin master: Fast-forward
+5670414af5a3ced1edfb137b748c6e0d9d4e80bb 85076325c43f24bdb80a43895592ea9c4872c2bb chewam <gary@chewam.com> 1619040424 +0200	pull origin master: Fast-forward
+85076325c43f24bdb80a43895592ea9c4872c2bb 9c047bc71e2eef66db3500736127a63cc6dce673 chewam <gary@chewam.com> 1619040859 +0200	commit: fix: Favicon + vercel preview timeout.
+9c047bc71e2eef66db3500736127a63cc6dce673 a1fa0a13fdf7857984804d993c29549c66a9fb2e chewam <gary@chewam.com> 1619040868 +0200	pull --rebase origin master: checkout a1fa0a13fdf7857984804d993c29549c66a9fb2e
+a1fa0a13fdf7857984804d993c29549c66a9fb2e cc0ff7a00c59ff1e0bd7b963e04c0ac1fd397ae2 chewam <gary@chewam.com> 1619040868 +0200	pull --rebase origin master: fix: Favicon + vercel preview timeout.
+cc0ff7a00c59ff1e0bd7b963e04c0ac1fd397ae2 cc0ff7a00c59ff1e0bd7b963e04c0ac1fd397ae2 chewam <gary@chewam.com> 1619040868 +0200	rebase finished: returning to refs/heads/master
+cc0ff7a00c59ff1e0bd7b963e04c0ac1fd397ae2 5ef60c26e4df615941f6424bc0d4ca02e4a744ff chewam <gary@chewam.com> 1619041406 +0200	pull origin master: Fast-forward
+5ef60c26e4df615941f6424bc0d4ca02e4a744ff 5ef60c26e4df615941f6424bc0d4ca02e4a744ff chewam <gary@chewam.com> 1619042830 +0200	checkout: moving from master to locations
+5ef60c26e4df615941f6424bc0d4ca02e4a744ff 5ef60c26e4df615941f6424bc0d4ca02e4a744ff chewam <gary@chewam.com> 1619042858 +0200	checkout: moving from locations to master
+5ef60c26e4df615941f6424bc0d4ca02e4a744ff 5ef60c26e4df615941f6424bc0d4ca02e4a744ff chewam <gary@chewam.com> 1619042922 +0200	checkout: moving from master to codecov
+5ef60c26e4df615941f6424bc0d4ca02e4a744ff 65294eae5b8c1e02ee53be4943c4e23aa96f7b47 chewam <gary@chewam.com> 1619043384 +0200	commit: fix: Remove non used views.
+65294eae5b8c1e02ee53be4943c4e23aa96f7b47 acfbce520ac260a22012e0d7e7a9be116eddf8d4 chewam <gary@chewam.com> 1619043753 +0200	commit: Remove services and views.
+acfbce520ac260a22012e0d7e7a9be116eddf8d4 5ef60c26e4df615941f6424bc0d4ca02e4a744ff chewam <gary@chewam.com> 1619044014 +0200	checkout: moving from codecov to master
+5ef60c26e4df615941f6424bc0d4ca02e4a744ff 2a58e0f9fe358270f1006f073a359477b994b120 chewam <gary@chewam.com> 1619044020 +0200	pull origin master: Fast-forward
+2a58e0f9fe358270f1006f073a359477b994b120 68adb153689963bae57cb28e4b6791a54a83008b chewam <gary@chewam.com> 1619662520 +0200	commit: fix: Add data folder.
+68adb153689963bae57cb28e4b6791a54a83008b 0bfaae3e1dec4832f0bfe2b07bf39c8832024848 chewam <gary@chewam.com> 1619662525 +0200	pull --rebase origin master: checkout 0bfaae3e1dec4832f0bfe2b07bf39c8832024848
+0bfaae3e1dec4832f0bfe2b07bf39c8832024848 23955482679f913566d9f5cb9670282de8e10a39 chewam <gary@chewam.com> 1619662525 +0200	pull --rebase origin master: fix: Add data folder.
+23955482679f913566d9f5cb9670282de8e10a39 23955482679f913566d9f5cb9670282de8e10a39 chewam <gary@chewam.com> 1619662525 +0200	rebase finished: returning to refs/heads/master
+23955482679f913566d9f5cb9670282de8e10a39 6709afab4d16a635e9747d37aa266c8ad40ad659 chewam <gary@chewam.com> 1619663486 +0200	commit: fix: Add base datasets.
+6709afab4d16a635e9747d37aa266c8ad40ad659 35b3166a635df68a7939348af3a9a8cacf2fa863 chewam <gary@chewam.com> 1619663494 +0200	pull --rebase origin master: checkout 35b3166a635df68a7939348af3a9a8cacf2fa863
+35b3166a635df68a7939348af3a9a8cacf2fa863 bb5c714aab0de4d35f0a09d5524b0e03f9d368ed chewam <gary@chewam.com> 1619663495 +0200	pull --rebase origin master: fix: Add base datasets.
+bb5c714aab0de4d35f0a09d5524b0e03f9d368ed bb5c714aab0de4d35f0a09d5524b0e03f9d368ed chewam <gary@chewam.com> 1619663494 +0200	rebase finished: returning to refs/heads/master
+bb5c714aab0de4d35f0a09d5524b0e03f9d368ed 93a6bb05c004af0fa55c6823fcaafd00b8bdde41 chewam <gary@chewam.com> 1619710309 +0200	commit: Remove departments and countries datasets.
+93a6bb05c004af0fa55c6823fcaafd00b8bdde41 5ab50051f1937c934be8ef50f82f42d5d79fb241 chewam <gary@chewam.com> 1619710314 +0200	pull --rebase origin master: checkout 5ab50051f1937c934be8ef50f82f42d5d79fb241
+5ab50051f1937c934be8ef50f82f42d5d79fb241 4094d7fd5022b33d7991fc92137f98c497210175 chewam <gary@chewam.com> 1619710314 +0200	pull --rebase origin master: Remove departments and countries datasets.
+4094d7fd5022b33d7991fc92137f98c497210175 4094d7fd5022b33d7991fc92137f98c497210175 chewam <gary@chewam.com> 1619710314 +0200	rebase finished: returning to refs/heads/master
+4094d7fd5022b33d7991fc92137f98c497210175 8ed18bca7c56d06f263e20cba5fc95ee8349f749 chewam <gary@chewam.com> 1619710324 +0200	commit (amend): fix: Remove departments and countries datasets.
+8ed18bca7c56d06f263e20cba5fc95ee8349f749 44d7180f40be13ae197fe83b2644a3f5346500fe chewam <gary@chewam.com> 1619730520 +0200	commit: fix: Add workflow_dispatch to datasets update workflow.
+44d7180f40be13ae197fe83b2644a3f5346500fe 7fb17fe842508b1bad0f5fcb8a65c185647de4aa chewam <gary@chewam.com> 1619730525 +0200	pull --rebase origin master: checkout 7fb17fe842508b1bad0f5fcb8a65c185647de4aa
+7fb17fe842508b1bad0f5fcb8a65c185647de4aa f2d15c5b480e08c661dd209801d49f2f0ce689a0 chewam <gary@chewam.com> 1619730525 +0200	pull --rebase origin master: fix: Add workflow_dispatch to datasets update workflow.
+f2d15c5b480e08c661dd209801d49f2f0ce689a0 f2d15c5b480e08c661dd209801d49f2f0ce689a0 chewam <gary@chewam.com> 1619730525 +0200	rebase finished: returning to refs/heads/master
+f2d15c5b480e08c661dd209801d49f2f0ce689a0 11619679f520473b563c2d74a6ea6796e1b5e998 chewam <gary@chewam.com> 1619732746 +0200	pull origin master: Fast-forward
+11619679f520473b563c2d74a6ea6796e1b5e998 51e22a27079f5107aacf8c89c361e1fc9ff26f0a chewam <gary@chewam.com> 1619733253 +0200	commit: fix: Years dataset generation.
+51e22a27079f5107aacf8c89c361e1fc9ff26f0a 48f2e0a93d6eb7027cfe120d4003ecb0a373cb74 chewam <gary@chewam.com> 1619733768 +0200	pull origin master: Fast-forward
+48f2e0a93d6eb7027cfe120d4003ecb0a373cb74 bec561c4b2ebb7cb9cb25d80d18186dd63786f69 chewam <gary@chewam.com> 1619742174 +0200	commit: fix: Move datasets to /public.
+bec561c4b2ebb7cb9cb25d80d18186dd63786f69 dd159fa139f1a46bc386c3c54a56756ff3ec37fd chewam <gary@chewam.com> 1619742181 +0200	pull --rebase origin master: checkout dd159fa139f1a46bc386c3c54a56756ff3ec37fd
+dd159fa139f1a46bc386c3c54a56756ff3ec37fd 94dfe56e515d0b0cec8581a27c610607676ec959 chewam <gary@chewam.com> 1619742227 +0200	rebase: fix: Move datasets to /public.
+94dfe56e515d0b0cec8581a27c610607676ec959 94dfe56e515d0b0cec8581a27c610607676ec959 chewam <gary@chewam.com> 1619742227 +0200	rebase finished: returning to refs/heads/master
+94dfe56e515d0b0cec8581a27c610607676ec959 0e20870542776dd724f16ebe39b15878d0d4d64c chewam <gary@chewam.com> 1619743174 +0200	commit: fix: Check deaths dataset changes.
+0e20870542776dd724f16ebe39b15878d0d4d64c bef2566e47d4a84ab848951b68dc4789ac237fa1 chewam <gary@chewam.com> 1619743181 +0200	pull --rebase origin master: checkout bef2566e47d4a84ab848951b68dc4789ac237fa1
+bef2566e47d4a84ab848951b68dc4789ac237fa1 ccaeed92f1833c6904b84e40f76004af299c1149 chewam <gary@chewam.com> 1619743181 +0200	pull --rebase origin master: fix: Check deaths dataset changes.
+ccaeed92f1833c6904b84e40f76004af299c1149 ccaeed92f1833c6904b84e40f76004af299c1149 chewam <gary@chewam.com> 1619743181 +0200	rebase finished: returning to refs/heads/master
+ccaeed92f1833c6904b84e40f76004af299c1149 a2ced7375ab92f67e01309e464b6704525afe106 chewam <gary@chewam.com> 1619744686 +0200	commit: chore(renovate): Group non major updates.
+a2ced7375ab92f67e01309e464b6704525afe106 8a044e7ec001a1e3911e04c90a7917085c91381b chewam <gary@chewam.com> 1619744692 +0200	pull --rebase origin master: checkout 8a044e7ec001a1e3911e04c90a7917085c91381b
+8a044e7ec001a1e3911e04c90a7917085c91381b 25d317223d3d49d021d0cc9d99f8bc956e3714d1 chewam <gary@chewam.com> 1619744692 +0200	pull --rebase origin master: chore(renovate): Group non major updates.
+25d317223d3d49d021d0cc9d99f8bc956e3714d1 25d317223d3d49d021d0cc9d99f8bc956e3714d1 chewam <gary@chewam.com> 1619744692 +0200	rebase finished: returning to refs/heads/master
+25d317223d3d49d021d0cc9d99f8bc956e3714d1 7c462f8b318958b905355bea5754350b6bc1214c chewam <gary@chewam.com> 1619819481 +0200	commit: fix: Share filters state accross pages.
+7c462f8b318958b905355bea5754350b6bc1214c 9f3544ae8a71457fbbe6a5025352ac69593137ec chewam <gary@chewam.com> 1619819486 +0200	pull --rebase origin master: checkout 9f3544ae8a71457fbbe6a5025352ac69593137ec
+9f3544ae8a71457fbbe6a5025352ac69593137ec 79f6aa48acade23bc8f858752fb9d901cd3c373b chewam <gary@chewam.com> 1619819486 +0200	pull --rebase origin master: fix: Share filters state accross pages.
+79f6aa48acade23bc8f858752fb9d901cd3c373b 79f6aa48acade23bc8f858752fb9d901cd3c373b chewam <gary@chewam.com> 1619819486 +0200	rebase finished: returning to refs/heads/master
+79f6aa48acade23bc8f858752fb9d901cd3c373b 71b0ed25dfdf34e70009eee099a681ce1a6b80b2 chewam <gary@chewam.com> 1619820541 +0200	commit: chore: Trigger codeQL action on push.
+71b0ed25dfdf34e70009eee099a681ce1a6b80b2 063abe2335457a26adb8c531d02d9a0edd0a5b80 chewam <gary@chewam.com> 1619820546 +0200	pull --rebase origin master: checkout 063abe2335457a26adb8c531d02d9a0edd0a5b80
+063abe2335457a26adb8c531d02d9a0edd0a5b80 d048eabce44a6b12f7e08cd07f5a54ccee2625ec chewam <gary@chewam.com> 1619820546 +0200	pull --rebase origin master: chore: Trigger codeQL action on push.
+d048eabce44a6b12f7e08cd07f5a54ccee2625ec d048eabce44a6b12f7e08cd07f5a54ccee2625ec chewam <gary@chewam.com> 1619820546 +0200	rebase finished: returning to refs/heads/master
+d048eabce44a6b12f7e08cd07f5a54ccee2625ec df61ee9636c1eb3db8d20dbadbd960dd69531be9 chewam <gary@chewam.com> 1619865653 +0200	commit: chore(renovate): Separate minors and patches.
+df61ee9636c1eb3db8d20dbadbd960dd69531be9 cd76aa87599e76e3488f6dae930135e7cb75a6f0 chewam <gary@chewam.com> 1619865657 +0200	pull --rebase origin master: checkout cd76aa87599e76e3488f6dae930135e7cb75a6f0
+cd76aa87599e76e3488f6dae930135e7cb75a6f0 b2d480a72c09de69e2b866d9d02502cc66abed3a chewam <gary@chewam.com> 1619865657 +0200	pull --rebase origin master: chore(renovate): Separate minors and patches.
+b2d480a72c09de69e2b866d9d02502cc66abed3a b2d480a72c09de69e2b866d9d02502cc66abed3a chewam <gary@chewam.com> 1619865657 +0200	rebase finished: returning to refs/heads/master
+b2d480a72c09de69e2b866d9d02502cc66abed3a e19ba45ec233ac122b935917c87fe03abcb6e1ae chewam <gary@chewam.com> 1619870747 +0200	commit: fix: Avoid slider glitch on render.
+e19ba45ec233ac122b935917c87fe03abcb6e1ae 4321e9c2bfb4c881606c1eae946f8b5f533c3d41 chewam <gary@chewam.com> 1619870751 +0200	pull --rebase origin master: checkout 4321e9c2bfb4c881606c1eae946f8b5f533c3d41
+4321e9c2bfb4c881606c1eae946f8b5f533c3d41 27a0ae8fa4dccd0c4b29c9b01d6d6f41539c4a10 chewam <gary@chewam.com> 1619870751 +0200	pull --rebase origin master: fix: Avoid slider glitch on render.
+27a0ae8fa4dccd0c4b29c9b01d6d6f41539c4a10 27a0ae8fa4dccd0c4b29c9b01d6d6f41539c4a10 chewam <gary@chewam.com> 1619870751 +0200	rebase finished: returning to refs/heads/master
+27a0ae8fa4dccd0c4b29c9b01d6d6f41539c4a10 e3a7bcb3188b82b0aa553bce97c32c36727558f4 chewam <gary@chewam.com> 1619874691 +0200	commit: fix: Data page load warnings.
+e3a7bcb3188b82b0aa553bce97c32c36727558f4 1f572d1c0c646acd7d44f6673056c2ec58a5025d chewam <gary@chewam.com> 1619874695 +0200	pull --rebase origin master: checkout 1f572d1c0c646acd7d44f6673056c2ec58a5025d
+1f572d1c0c646acd7d44f6673056c2ec58a5025d 5cd86c7635dfd4495587cb40eb7967aead31a476 chewam <gary@chewam.com> 1619874695 +0200	pull --rebase origin master: fix: Data page load warnings.
+5cd86c7635dfd4495587cb40eb7967aead31a476 5cd86c7635dfd4495587cb40eb7967aead31a476 chewam <gary@chewam.com> 1619874695 +0200	rebase finished: returning to refs/heads/master
+5cd86c7635dfd4495587cb40eb7967aead31a476 4e7bf5bc75c83eae5881a7ea83b1a8e3272034c0 chewam <gary@chewam.com> 1619876217 +0200	pull --rebase origin master: Fast-forward
+4e7bf5bc75c83eae5881a7ea83b1a8e3272034c0 4e7bf5bc75c83eae5881a7ea83b1a8e3272034c0 chewam <gary@chewam.com> 1619877979 +0200	checkout: moving from master to chart-v3
+4e7bf5bc75c83eae5881a7ea83b1a8e3272034c0 117f316a726f6ffa2be8a86d7eb8e24489903f3f chewam <gary@chewam.com> 1620093517 +0200	commit: Chartjs v3
+117f316a726f6ffa2be8a86d7eb8e24489903f3f 74f7856f5cbf5c1cc01930823fcd6ff49ebc5478 chewam <gary@chewam.com> 1620248623 +0200	commit: Migrate charts configurations.
+74f7856f5cbf5c1cc01930823fcd6ff49ebc5478 11a4f360c4a4ab603acb672d7a061d5d95b29db4 chewam <gary@chewam.com> 1620248765 +0200	commit: Update tests.
+11a4f360c4a4ab603acb672d7a061d5d95b29db4 06abe61cb2f193525eefb27a68e8d7a2fa87fb12 chewam <gary@chewam.com> 1620250386 +0200	commit: Remove legacy chart component.
+06abe61cb2f193525eefb27a68e8d7a2fa87fb12 1cc4daac45e15f41edbb6f6aae6e460bb3f585c0 chewam <gary@chewam.com> 1620252034 +0200	commit: Increase checkout depth for codecov.
+1cc4daac45e15f41edbb6f6aae6e460bb3f585c0 3e9a0e81c673b5df9264564b13e88fe6338b9936 chewam <gary@chewam.com> 1620260961 +0200	commit: Charts visual fixes.
+3e9a0e81c673b5df9264564b13e88fe6338b9936 4e7bf5bc75c83eae5881a7ea83b1a8e3272034c0 chewam <gary@chewam.com> 1620261426 +0200	checkout: moving from chart-v3 to master
+4e7bf5bc75c83eae5881a7ea83b1a8e3272034c0 357ff30f1c49e9ebbbcd5a511b8f38c4f11b1dd0 chewam <gary@chewam.com> 1620261472 +0200	pull origin master: Fast-forward
+357ff30f1c49e9ebbbcd5a511b8f38c4f11b1dd0 357ff30f1c49e9ebbbcd5a511b8f38c4f11b1dd0 chewam <gary@chewam.com> 1620263029 +0200	checkout: moving from master to error-page
+357ff30f1c49e9ebbbcd5a511b8f38c4f11b1dd0 3624e4587274a131508e5cc481ae8456abec7d17 chewam <gary@chewam.com> 1620263060 +0200	commit: fix: Handle error pages.
+3624e4587274a131508e5cc481ae8456abec7d17 fc2fe308ba6bdae6cbdca54eb0bce19458ca22d1 chewam <gary@chewam.com> 1620264613 +0200	commit: Setup tests to run when pushing to master branch.
+fc2fe308ba6bdae6cbdca54eb0bce19458ca22d1 357ff30f1c49e9ebbbcd5a511b8f38c4f11b1dd0 chewam <gary@chewam.com> 1620265493 +0200	checkout: moving from error-page to master
+357ff30f1c49e9ebbbcd5a511b8f38c4f11b1dd0 ed06e5223ecef7e5aebf1624792e6a12707a0dea chewam <gary@chewam.com> 1620265497 +0200	pull origin master: Fast-forward
+ed06e5223ecef7e5aebf1624792e6a12707a0dea ed06e5223ecef7e5aebf1624792e6a12707a0dea chewam <gary@chewam.com> 1620265732 +0200	checkout: moving from master to lighthouse
+ed06e5223ecef7e5aebf1624792e6a12707a0dea c862b241bc5df933c297465208ebffc97c2b734c chewam <gary@chewam.com> 1620265787 +0200	commit: fix: LHCI job.
+c862b241bc5df933c297465208ebffc97c2b734c d8c960dc62d0ffd108853b5e6e5507fc0d75c979 chewam <gary@chewam.com> 1620267716 +0200	commit: Split quality jobs.
+d8c960dc62d0ffd108853b5e6e5507fc0d75c979 459f7394d21a52ca51f4eb3736c98fe15f49c656 chewam <gary@chewam.com> 1620268213 +0200	commit: Run codecov at last.
+459f7394d21a52ca51f4eb3736c98fe15f49c656 8d38ca2ef9988364eb7c0880e5d7fa027d197d81 chewam <gary@chewam.com> 1620268622 +0200	commit: Use artifacts.
+8d38ca2ef9988364eb7c0880e5d7fa027d197d81 c4648468ac48f7dfa3c6b1dfc3777f816630c6da chewam <gary@chewam.com> 1620268934 +0200	commit (amend): Use artifacts.
+c4648468ac48f7dfa3c6b1dfc3777f816630c6da 58fa29bd4eb7c0b5fed351f7eb977666a8cc95ba chewam <gary@chewam.com> 1620269189 +0200	commit (amend): Use artifacts.
+58fa29bd4eb7c0b5fed351f7eb977666a8cc95ba ed06e5223ecef7e5aebf1624792e6a12707a0dea chewam <gary@chewam.com> 1620270709 +0200	checkout: moving from lighthouse to master
+ed06e5223ecef7e5aebf1624792e6a12707a0dea 0ff0259392b9942e578560205a12f94f9b30c9d0 chewam <gary@chewam.com> 1620270713 +0200	pull origin master: Fast-forward
+0ff0259392b9942e578560205a12f94f9b30c9d0 80d5cae0725913f5b8a14e42461973763321a479 chewam <gary@chewam.com> 1620270884 +0200	commit: fix: Add Github plugin for SemRel.
+80d5cae0725913f5b8a14e42461973763321a479 3d611382b83553a06bf2dfac46e8a9df2ac1f79e chewam <gary@chewam.com> 1620299395 +0200	commit: fix: Charts resizing.
+3d611382b83553a06bf2dfac46e8a9df2ac1f79e 8d8bee3fe4df23fdbfa928497255bc07e1ea0971 chewam <gary@chewam.com> 1620299403 +0200	pull --rebase origin master: checkout 8d8bee3fe4df23fdbfa928497255bc07e1ea0971
+8d8bee3fe4df23fdbfa928497255bc07e1ea0971 807386b81abbf0047d6ff24306aa2b800250cb22 chewam <gary@chewam.com> 1620299403 +0200	pull --rebase origin master: fix: Charts resizing.
+807386b81abbf0047d6ff24306aa2b800250cb22 807386b81abbf0047d6ff24306aa2b800250cb22 chewam <gary@chewam.com> 1620299403 +0200	rebase finished: returning to refs/heads/master
+807386b81abbf0047d6ff24306aa2b800250cb22 940d492631aee3227855d2248a60b4c2835f6ba6 chewam <gary@chewam.com> 1620333874 +0200	pull origin master: Fast-forward
+940d492631aee3227855d2248a60b4c2835f6ba6 940d492631aee3227855d2248a60b4c2835f6ba6 chewam <gary@chewam.com> 1620333893 +0200	checkout: moving from master to sentry
+940d492631aee3227855d2248a60b4c2835f6ba6 9aac69e954d09aafcf01f7e7c4cb49a78abf95a7 chewam <gary@chewam.com> 1620334712 +0200	commit: chore: Add sentry plugin for nextjs.
+9aac69e954d09aafcf01f7e7c4cb49a78abf95a7 940d492631aee3227855d2248a60b4c2835f6ba6 chewam <gary@chewam.com> 1620337155 +0200	checkout: moving from sentry to master
+940d492631aee3227855d2248a60b4c2835f6ba6 fb7948b61b298a9f1d4304232888ecc5b53fb259 chewam <gary@chewam.com> 1620337161 +0200	pull origin master: Fast-forward
+fb7948b61b298a9f1d4304232888ecc5b53fb259 fb7948b61b298a9f1d4304232888ecc5b53fb259 chewam <gary@chewam.com> 1620337250 +0200	checkout: moving from master to clean-deps
+fb7948b61b298a9f1d4304232888ecc5b53fb259 a0ef8ef6a90b45699d59751bb342fe4802643eed chewam <gary@chewam.com> 1620337273 +0200	commit: chore: Remove useless dependencies.
+a0ef8ef6a90b45699d59751bb342fe4802643eed fb7948b61b298a9f1d4304232888ecc5b53fb259 chewam <gary@chewam.com> 1620337889 +0200	checkout: moving from clean-deps to master
+fb7948b61b298a9f1d4304232888ecc5b53fb259 c2e08f42f48206738c549a758f4291709fd8a243 chewam <gary@chewam.com> 1620337894 +0200	pull origin master: Fast-forward
+c2e08f42f48206738c549a758f4291709fd8a243 a38ed0d64f130d375251aa2b74b67b00cd2a41ca chewam <gary@chewam.com> 1620337913 +0200	checkout: moving from master to renovate/patch-all-patch
+a38ed0d64f130d375251aa2b74b67b00cd2a41ca d4e9108ec48b5285161d55c66963242be51b5255 chewam <gary@chewam.com> 1620338064 +0200	commit: Update tests snapshots.
+d4e9108ec48b5285161d55c66963242be51b5255 c2e08f42f48206738c549a758f4291709fd8a243 chewam <gary@chewam.com> 1620339036 +0200	checkout: moving from renovate/patch-all-patch to master
+c2e08f42f48206738c549a758f4291709fd8a243 5ee5ff4c5110a06df9b45389e50ff48515fc3bae chewam <gary@chewam.com> 1620339043 +0200	pull origin master: Fast-forward
+5ee5ff4c5110a06df9b45389e50ff48515fc3bae 9f8368a4a3d5cc62ce7397a71e5fff7788c52c20 chewam <gary@chewam.com> 1620339573 +0200	commit: fix: Update README.
+9f8368a4a3d5cc62ce7397a71e5fff7788c52c20 d2004de6645f41bb76f0f93502e6b6199ef6f570 chewam <gary@chewam.com> 1620340316 +0200	pull origin master: Fast-forward
+d2004de6645f41bb76f0f93502e6b6199ef6f570 d2004de6645f41bb76f0f93502e6b6199ef6f570 chewam <gary@chewam.com> 1620340350 +0200	checkout: moving from master to screenshot
+d2004de6645f41bb76f0f93502e6b6199ef6f570 ee8e36bda1b7fc7216beaedcb1f713eebeeda2a8 chewam <gary@chewam.com> 1620340373 +0200	commit: fix: Screenshot on release.
+ee8e36bda1b7fc7216beaedcb1f713eebeeda2a8 d2004de6645f41bb76f0f93502e6b6199ef6f570 chewam <gary@chewam.com> 1620379307 +0200	checkout: moving from screenshot to master
+d2004de6645f41bb76f0f93502e6b6199ef6f570 8c3fa1841604948d3bb1835f1f1004a228c8a3ac chewam <gary@chewam.com> 1620379312 +0200	pull origin master: Fast-forward
+8c3fa1841604948d3bb1835f1f1004a228c8a3ac 5c47a1298984c3708a28e2fee8d3dae9f9084ce3 chewam <gary@chewam.com> 1620420380 +0200	commit: chore: Fix renovate config.
+5c47a1298984c3708a28e2fee8d3dae9f9084ce3 1a2a52facd82156c65cb7eb79d87fa1956edabca chewam <gary@chewam.com> 1620482482 +0200	commit: fix: Various fixes.
+1a2a52facd82156c65cb7eb79d87fa1956edabca 2c39eb1cd650b0b2acd6683c40bb6c3adf78a0b9 chewam <gary@chewam.com> 1620482499 +0200	pull --rebase origin master: checkout 2c39eb1cd650b0b2acd6683c40bb6c3adf78a0b9
+2c39eb1cd650b0b2acd6683c40bb6c3adf78a0b9 0b6c0c001c455dd5240d0e50cb0adde79ab0c7b6 chewam <gary@chewam.com> 1620482499 +0200	pull --rebase origin master: fix: Various fixes.
+0b6c0c001c455dd5240d0e50cb0adde79ab0c7b6 0b6c0c001c455dd5240d0e50cb0adde79ab0c7b6 chewam <gary@chewam.com> 1620482499 +0200	rebase finished: returning to refs/heads/master
+0b6c0c001c455dd5240d0e50cb0adde79ab0c7b6 988deb2a7465893403924eb722fdcf28f07881aa chewam <gary@chewam.com> 1620482507 +0200	commit (amend): fix: Colorize comparison chart lines.
+988deb2a7465893403924eb722fdcf28f07881aa 988deb2a7465893403924eb722fdcf28f07881aa chewam <gary@chewam.com> 1620512169 +0200	checkout: moving from master to dashboard
+988deb2a7465893403924eb722fdcf28f07881aa 27ec2cc0e6bb9cc0923e0b6cf2a24fc4ad832ebf chewam <gary@chewam.com> 1620512231 +0200	commit: feat: Add dashboard page.
+27ec2cc0e6bb9cc0923e0b6cf2a24fc4ad832ebf 9f06c6bb9c8eb80f6023d99d271948f2e6e2bb8b chewam <gary@chewam.com> 1620514400 +0200	commit: Set dashboard as landing page.
+9f06c6bb9c8eb80f6023d99d271948f2e6e2bb8b d48e6d0ef1c5c730d7b4278a98b48ec0b91e5a7b chewam <gary@chewam.com> 1620515951 +0200	commit: Add responsive rules.
+d48e6d0ef1c5c730d7b4278a98b48ec0b91e5a7b da12a48b352ebff3ca754516048b3401bcab9871 chewam <gary@chewam.com> 1620520558 +0200	commit: Fix types and tests.
+da12a48b352ebff3ca754516048b3401bcab9871 cedd9ca28132c99f4b1c79dea538377c1b63a7a2 chewam <gary@chewam.com> 1620522604 +0200	commit: Visual fixes.
+cedd9ca28132c99f4b1c79dea538377c1b63a7a2 44df28dd283c005732cfbe5aa6c2b969a51372f3 chewam <gary@chewam.com> 1620522658 +0200	commit (amend): Visual fixes.
+44df28dd283c005732cfbe5aa6c2b969a51372f3 661e8fcbe7e4e011891416ef172cbdcc2cebd534 chewam <gary@chewam.com> 1620523252 +0200	commit: Update tests snapshots.
+661e8fcbe7e4e011891416ef172cbdcc2cebd534 988deb2a7465893403924eb722fdcf28f07881aa chewam <gary@chewam.com> 1620560270 +0200	checkout: moving from dashboard to master
+988deb2a7465893403924eb722fdcf28f07881aa f541d5d67544fbf2a0d75c85d4d115d424b1c31e chewam <gary@chewam.com> 1620560277 +0200	pull origin master: Fast-forward
+f541d5d67544fbf2a0d75c85d4d115d424b1c31e ed5b82f2d0f2d8814f8d95c2b0a3d2e11d553e46 chewam <gary@chewam.com> 1620567960 +0200	commit: fix: Register annotation chart plugin within components.
+ed5b82f2d0f2d8814f8d95c2b0a3d2e11d553e46 ae7362560824588629f7858c1850ed80c2d20ced chewam <gary@chewam.com> 1620570298 +0200	commit: fix: Change groups chart colors.
+ae7362560824588629f7858c1850ed80c2d20ced 55df94bb6984eaa46ad290d109524f2f8f6a13d8 chewam <gary@chewam.com> 1620570306 +0200	pull --rebase origin master: checkout 55df94bb6984eaa46ad290d109524f2f8f6a13d8
+55df94bb6984eaa46ad290d109524f2f8f6a13d8 a4ede7e7ffa1b65faba1aa79d900d04a70177922 chewam <gary@chewam.com> 1620570306 +0200	pull --rebase origin master: fix: Change groups chart colors.
+a4ede7e7ffa1b65faba1aa79d900d04a70177922 a4ede7e7ffa1b65faba1aa79d900d04a70177922 chewam <gary@chewam.com> 1620570306 +0200	rebase finished: returning to refs/heads/master
+a4ede7e7ffa1b65faba1aa79d900d04a70177922 7a9c38de07dceada2f8b5b07ab83f22c28c32317 chewam <gary@chewam.com> 1620570635 +0200	commit: fix: Disable groups charts events.
+7a9c38de07dceada2f8b5b07ab83f22c28c32317 73fa41ac101bc57610322235207c1299fadcfba6 chewam <gary@chewam.com> 1620570640 +0200	pull --rebase origin master: checkout 73fa41ac101bc57610322235207c1299fadcfba6
+73fa41ac101bc57610322235207c1299fadcfba6 faad5a662c32e262593d5344cbcb61bdfab93f00 chewam <gary@chewam.com> 1620570640 +0200	pull --rebase origin master: fix: Disable groups charts events.
+faad5a662c32e262593d5344cbcb61bdfab93f00 faad5a662c32e262593d5344cbcb61bdfab93f00 chewam <gary@chewam.com> 1620570640 +0200	rebase finished: returning to refs/heads/master
+faad5a662c32e262593d5344cbcb61bdfab93f00 5e99c695d5106db79c182c484c6df84ef3e343f1 chewam <gary@chewam.com> 1620573082 +0200	commit: chore(workflows): Run lchi on deployment_status.
+5e99c695d5106db79c182c484c6df84ef3e343f1 f784641ec181ca512c1823a6f6ee1b505e03e61b chewam <gary@chewam.com> 1620573100 +0200	commit (amend): chore(workflows): Run lchi on deployment_status.
+f784641ec181ca512c1823a6f6ee1b505e03e61b cda3a2603474ad51ad1b15dbb09547c1d2f447cb chewam <gary@chewam.com> 1620573107 +0200	pull --rebase origin master: checkout cda3a2603474ad51ad1b15dbb09547c1d2f447cb
+cda3a2603474ad51ad1b15dbb09547c1d2f447cb 00198f0b61a24c8e20a6ccd59042d0cb1d1daa69 chewam <gary@chewam.com> 1620573107 +0200	pull --rebase origin master: chore(workflows): Run lchi on deployment_status.
+00198f0b61a24c8e20a6ccd59042d0cb1d1daa69 00198f0b61a24c8e20a6ccd59042d0cb1d1daa69 chewam <gary@chewam.com> 1620573107 +0200	rebase finished: returning to refs/heads/master
+00198f0b61a24c8e20a6ccd59042d0cb1d1daa69 d8980be1a6f17b9091cdf299b3150600055a10c5 chewam <gary@chewam.com> 1620573319 +0200	commit: chore(workflows): Run lchi on all environments.
+d8980be1a6f17b9091cdf299b3150600055a10c5 16f4c23d9d0ab926012e7e4cc1b7d6ed52f2df06 chewam <gary@chewam.com> 1620573558 +0200	commit: chore(workflows): Set explicit lhci version.
+16f4c23d9d0ab926012e7e4cc1b7d6ed52f2df06 0516115a52a4ac7ce122d552e11eba19ac9c8ddb chewam <gary@chewam.com> 1620573803 +0200	commit: chore(workflows): Add lhci rules.
+0516115a52a4ac7ce122d552e11eba19ac9c8ddb 23b955d1f1876da32045c8c21de1cf1a3cba843b chewam <gary@chewam.com> 1620574089 +0200	commit: chore(workflows): Disable yarn cache in lhci workflow.
+23b955d1f1876da32045c8c21de1cf1a3cba843b e98bade295c8b3ca405020f27c32f74d9224474c chewam <gary@chewam.com> 1620575074 +0200	commit: fix: Increase dashboard labels font size.
+e98bade295c8b3ca405020f27c32f74d9224474c 98c4c3a6a0b95e6a5d8e4083fa8bc68d0422f5ae chewam <gary@chewam.com> 1621036526 +0200	pull origin master: Fast-forward
+98c4c3a6a0b95e6a5d8e4083fa8bc68d0422f5ae 98c4c3a6a0b95e6a5d8e4083fa8bc68d0422f5ae chewam <gary@chewam.com> 1621036555 +0200	checkout: moving from master to i18n
+98c4c3a6a0b95e6a5d8e4083fa8bc68d0422f5ae cb1051eb81e716e8eb6f51bc0c2564d2baae506c chewam <gary@chewam.com> 1621072992 +0200	commit: feat: Add i18n.
+cb1051eb81e716e8eb6f51bc0c2564d2baae506c e6b5fc69ca8dddf63b673b30cbf635290cefc02d chewam <gary@chewam.com> 1621075285 +0200	commit: Fix text color contrast.
+e6b5fc69ca8dddf63b673b30cbf635290cefc02d c566aa033d6772dbb24cb1d7020464cf90a91967 chewam <gary@chewam.com> 1621078890 +0200	commit: Improve tests.
+c566aa033d6772dbb24cb1d7020464cf90a91967 98c4c3a6a0b95e6a5d8e4083fa8bc68d0422f5ae chewam <gary@chewam.com> 1621084934 +0200	checkout: moving from i18n to master
+98c4c3a6a0b95e6a5d8e4083fa8bc68d0422f5ae 98c4c3a6a0b95e6a5d8e4083fa8bc68d0422f5ae chewam <gary@chewam.com> 1621088851 +0200	reset: moving to HEAD
+98c4c3a6a0b95e6a5d8e4083fa8bc68d0422f5ae efdcae51b6f77ee80e82830be38c907c06db0d5f chewam <gary@chewam.com> 1621088859 +0200	pull origin master: Fast-forward
+efdcae51b6f77ee80e82830be38c907c06db0d5f efdcae51b6f77ee80e82830be38c907c06db0d5f chewam <gary@chewam.com> 1621088991 +0200	checkout: moving from master to footer
+efdcae51b6f77ee80e82830be38c907c06db0d5f 19aa02fb4de1d57de452e378998721231a22fec5 chewam <gary@chewam.com> 1621089082 +0200	commit: fix: Footer color gradient
+19aa02fb4de1d57de452e378998721231a22fec5 8b205c20b03cce2b92c23ce898e4a2af00a386b4 chewam <gary@chewam.com> 1621092118 +0200	commit: Improve tests.
+8b205c20b03cce2b92c23ce898e4a2af00a386b4 700ea1253b488865721a68c7d2ca0a8920816e63 chewam <gary@chewam.com> 1621092160 +0200	commit (amend): Improve tests.
+700ea1253b488865721a68c7d2ca0a8920816e63 efdcae51b6f77ee80e82830be38c907c06db0d5f chewam <gary@chewam.com> 1621171029 +0200	checkout: moving from footer to master
+efdcae51b6f77ee80e82830be38c907c06db0d5f 5a18db0473769d8f069cb6aacf743f72190af8ec chewam <gary@chewam.com> 1621171037 +0200	pull origin master: Fast-forward
+5a18db0473769d8f069cb6aacf743f72190af8ec ab7297998271c9a41701b5ae73c04fa3345c9702 chewam <gary@chewam.com> 1621171771 +0200	commit: chore: Update README.
+ab7297998271c9a41701b5ae73c04fa3345c9702 0b7508cf6bb203decfe271d49d86f476a9bc44a8 chewam <gary@chewam.com> 1621189887 +0200	commit: fix: Visual modifications for dashboard and footer.
+0b7508cf6bb203decfe271d49d86f476a9bc44a8 91c2ec86b96eb648a10c02bc28310b3221812921 chewam <gary@chewam.com> 1621546446 +0200	pull origin master: Fast-forward
+91c2ec86b96eb648a10c02bc28310b3221812921 91c2ec86b96eb648a10c02bc28310b3221812921 chewam <gary@chewam.com> 1621546933 +0200	checkout: moving from master to version
+91c2ec86b96eb648a10c02bc28310b3221812921 b89a74c2ebaade52b5afbb8ce7fc57d770e083f6 chewam <gary@chewam.com> 1621546997 +0200	commit: fix: Show app version in footer.
+b89a74c2ebaade52b5afbb8ce7fc57d770e083f6 91c2ec86b96eb648a10c02bc28310b3221812921 chewam <gary@chewam.com> 1621549297 +0200	checkout: moving from version to master
+91c2ec86b96eb648a10c02bc28310b3221812921 9ab2a1a753ca816d127a48cad0b69fcdb61a0ecf chewam <gary@chewam.com> 1621549302 +0200	pull origin master: Fast-forward
+9ab2a1a753ca816d127a48cad0b69fcdb61a0ecf bb1f60771904f2b7852977443e86d3edd7dd8db5 chewam <gary@chewam.com> 1621549344 +0200	commit: chore: Log VERCEL_GITHUB_COMMIT_SHA.
+bb1f60771904f2b7852977443e86d3edd7dd8db5 b747b5dc31665ded90434e7ec0f5b3921962f0c7 chewam <gary@chewam.com> 1621549875 +0200	commit: chore: Replace VERCEL_GITHUB_COMMIT_SHA by VERCEL_GIT_COMMIT_SHA.
+b747b5dc31665ded90434e7ec0f5b3921962f0c7 a5ebeb11b728be6188bfd9255b728c8c4b772ac8 chewam <gary@chewam.com> 1621550086 +0200	commit: chore: Use NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA env var.
+a5ebeb11b728be6188bfd9255b728c8c4b772ac8 89b53fd66d5de55bf86d3242a585da42bdce58c9 chewam <gary@chewam.com> 1621550336 +0200	commit (amend): chore: Use NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA env var.
+89b53fd66d5de55bf86d3242a585da42bdce58c9 58497187c178f5a4b829f790a94a58cd0c0ce526 chewam <gary@chewam.com> 1621551594 +0200	commit: chore: Use exposed env vars.
+58497187c178f5a4b829f790a94a58cd0c0ce526 128dd659ce0090e36afa388fc43faf3068010ba8 chewam <gary@chewam.com> 1621552133 +0200	commit: chore: Use NEXT_PUBLIC env vars.
+128dd659ce0090e36afa388fc43faf3068010ba8 5361846711a175419c9c20bfa5366dbdb49745a5 chewam <gary@chewam.com> 1621552342 +0200	commit: chore: Remove console.log.
+5361846711a175419c9c20bfa5366dbdb49745a5 bb1f60771904f2b7852977443e86d3edd7dd8db5 chewam <gary@chewam.com> 1621552395 +0200	rebase -i (start): checkout 9ab2a1a753ca816d127a48cad0b69fcdb61a0ecf
+bb1f60771904f2b7852977443e86d3edd7dd8db5 e807f244df8be949061177fb8dc91b00aa34702a chewam <gary@chewam.com> 1621552395 +0200	rebase -i (squash): # This is a combination of 2 commits.
+e807f244df8be949061177fb8dc91b00aa34702a 2f956f598bc534f493bc98860c30ab010fa05f47 chewam <gary@chewam.com> 1621552395 +0200	rebase -i (squash): # This is a combination of 3 commits.
+2f956f598bc534f493bc98860c30ab010fa05f47 4f847c012e69603d1bea9e4c40ff4983b91cf71d chewam <gary@chewam.com> 1621552395 +0200	rebase -i (squash): # This is a combination of 4 commits.
+4f847c012e69603d1bea9e4c40ff4983b91cf71d ddb4df2d1173204f5ef1f5a28633d857ea2eaa07 chewam <gary@chewam.com> 1621552395 +0200	rebase -i (squash): # This is a combination of 5 commits.
+ddb4df2d1173204f5ef1f5a28633d857ea2eaa07 effd223f26c7971f87e85d4bf44bbdc25e307ab8 chewam <gary@chewam.com> 1621552395 +0200	rebase -i (squash): fix: Use NEXT_PUBLIC env variables for commit sha and app url.
+effd223f26c7971f87e85d4bf44bbdc25e307ab8 effd223f26c7971f87e85d4bf44bbdc25e307ab8 chewam <gary@chewam.com> 1621552395 +0200	rebase -i (finish): returning to refs/heads/master
+effd223f26c7971f87e85d4bf44bbdc25e307ab8 f9f7eb5868af82b4099a7c43473f0fb9ff8b5519 chewam <gary@chewam.com> 1621554969 +0200	commit: fix: Elements spacing in footer.
+f9f7eb5868af82b4099a7c43473f0fb9ff8b5519 16db0cfec501c576065f7741bf46d5942a123ba9 chewam <gary@chewam.com> 1621554981 +0200	pull --rebase origin master: checkout 16db0cfec501c576065f7741bf46d5942a123ba9
+16db0cfec501c576065f7741bf46d5942a123ba9 1ac0ecb698e2ee48eee9f88ac8c8c0b7e2dda397 chewam <gary@chewam.com> 1621554981 +0200	pull --rebase origin master: fix: Elements spacing in footer.
+1ac0ecb698e2ee48eee9f88ac8c8c0b7e2dda397 1ac0ecb698e2ee48eee9f88ac8c8c0b7e2dda397 chewam <gary@chewam.com> 1621554981 +0200	rebase finished: returning to refs/heads/master
+1ac0ecb698e2ee48eee9f88ac8c8c0b7e2dda397 77244bddaf4ab86b11b9d9f6303138ffbffadf6d chewam <gary@chewam.com> 1621556493 +0200	commit: fix: Add Spacer components to footer.
+77244bddaf4ab86b11b9d9f6303138ffbffadf6d 5e26d27900df11c2bc5d75c67f7a862894e0b617 chewam <gary@chewam.com> 1621556497 +0200	pull --rebase origin master: checkout 5e26d27900df11c2bc5d75c67f7a862894e0b617
+5e26d27900df11c2bc5d75c67f7a862894e0b617 047f011c53aca1bbab5dc6f3caaf188f89409e55 chewam <gary@chewam.com> 1621556497 +0200	pull --rebase origin master: fix: Add Spacer components to footer.
+047f011c53aca1bbab5dc6f3caaf188f89409e55 047f011c53aca1bbab5dc6f3caaf188f89409e55 chewam <gary@chewam.com> 1621556497 +0200	rebase finished: returning to refs/heads/master
+047f011c53aca1bbab5dc6f3caaf188f89409e55 4d1da8758d38df083030c9a783e25ee22057a363 chewam <gary@chewam.com> 1621983823 +0200	commit: chore: Set checkout ref on pull request.
+4d1da8758d38df083030c9a783e25ee22057a363 eac4b370894b22fa162f52473f9778fa01fa9bf0 chewam <gary@chewam.com> 1621983829 +0200	pull --rebase origin master: checkout eac4b370894b22fa162f52473f9778fa01fa9bf0
+eac4b370894b22fa162f52473f9778fa01fa9bf0 fddf1fe2936228b15aee05abd5ebe2992302a3ef chewam <gary@chewam.com> 1621983829 +0200	pull --rebase origin master: chore: Set checkout ref on pull request.
+fddf1fe2936228b15aee05abd5ebe2992302a3ef fddf1fe2936228b15aee05abd5ebe2992302a3ef chewam <gary@chewam.com> 1621983829 +0200	rebase finished: returning to refs/heads/master
+fddf1fe2936228b15aee05abd5ebe2992302a3ef a0bb1e61c55cca83f2ff6d4a6868090ef6623b5b chewam <gary@chewam.com> 1621983905 +0200	commit (amend): chore: Set checkout ref on pull request.
+a0bb1e61c55cca83f2ff6d4a6868090ef6623b5b cce5f48458194411555be3ba2c6017b0c68c746c chewam <gary@chewam.com> 1627732239 +0200	pull origin master: Fast-forward
+cce5f48458194411555be3ba2c6017b0c68c746c 5ab33e38d96050c7cb2759bd3577ac4432619597 chewam <gary@chewam.com> 1627732291 +0200	checkout: moving from master to renovate/all-minor-dev-tools
+5ab33e38d96050c7cb2759bd3577ac4432619597 44db7b6ea7df98368b0115edcf039d03c83d393a chewam <gary@chewam.com> 1627733255 +0200	checkout: moving from renovate/all-minor-dev-tools to renovate/major-nextjs-monorepo
+44db7b6ea7df98368b0115edcf039d03c83d393a db21c9f87d5b1db84e5616f0e4968c581a15c4f8 chewam <gary@chewam.com> 1627733659 +0200	commit: fix: Add NextJS lint and upgrade typescript version.
+db21c9f87d5b1db84e5616f0e4968c581a15c4f8 cce5f48458194411555be3ba2c6017b0c68c746c chewam <gary@chewam.com> 1627734640 +0200	checkout: moving from renovate/major-nextjs-monorepo to master
+cce5f48458194411555be3ba2c6017b0c68c746c ef5c3640a348899ec40c1e39854df5f0ab3685b0 chewam <gary@chewam.com> 1627734645 +0200	pull origin master: Fast-forward
+ef5c3640a348899ec40c1e39854df5f0ab3685b0 0dc97eb8b21101579f92cac5d500827eb31236ed semantic-release-bot <semantic-release-bot@martynus.net> 1627734257 +0000	filter-branch: rewrite
+0dc97eb8b21101579f92cac5d500827eb31236ed adb97962c779df460402cfa41f6874f5502e200f chewam <gary@chewam.com> 1627735594 +0200	commit: fix: Replace screenshot.

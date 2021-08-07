@@ -1,0 +1,32 @@
+@use "sass:list";
+$base-radius: 4px;
+$base-spacing: 1rem;
+
+@function combine($sizes) {
+  $result: ();
+  @each $size in $sizes {
+    $result: list.append($result, $size * $base-spacing);
+  }
+  @return $result;
+}
+
+@mixin margin($args...) {
+  margin: combine($args);
+}
+
+@mixin padding($args...) {
+  padding: combine($args);
+}
+
+@mixin spacing($margin: 0, $padding: 0) {
+  @include margin($margin...);
+  @include padding($padding...);
+}
+
+@mixin radius($margin: 0, $padding: 0) {
+  border-radius: $base-radius;
+}
+
+@mixin shadow() {
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.7), 0 3px 4px -2px rgba(0, 0, 0, 0.5);
+}

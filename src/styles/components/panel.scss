@@ -1,0 +1,14 @@
+@use "../utils/box";
+@use "../utils/theme";
+
+.panel {
+  border-width: 1px;
+  border-style: solid;
+  @include box.radius();
+}
+
+@include theme.apply(".panel") using ($mode) {
+  box-shadow: theme.shadow($mode);
+  border-color: theme.color("surface", $mode);
+  background-color: theme.color("surface", $mode);
+}

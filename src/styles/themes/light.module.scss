@@ -1,0 +1,5 @@
+@use "../utils/theme";
+
+:export {
+  @include theme.colors("light");
+}

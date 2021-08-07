@@ -1,0 +1,46 @@
+$base-font-size: 1rem;
+$base-line-height: 1.25 * $base-font-size;
+
+$text-settings: (
+  "xs": ( // 12px
+    font-size: 0.75rem,
+    line-height: 0.75rem,
+  ),
+  "sm": ( // 14px
+    font-size: 0.875rem,
+    line-height: $base-line-height,
+  ),
+  "base": ( // 16px
+    font-size: 1rem,
+    line-height: $base-line-height,
+  ),
+  "md": ( // 18px
+    font-size: 1.125rem,
+    line-height: $base-line-height * 2,
+  ),
+  "lg": ( // 20px
+    font-size: 1.25rem,
+    line-height: $base-line-height * 2,
+  ),
+  "xl": ( // 24px
+    font-size: 1.5rem,
+    line-height: $base-line-height * 2,
+  ),
+  "xxl": ( // 32px
+    font-size: 2rem,
+    line-height: $base-line-height * 2,
+  ),
+);
+
+@function text-scale($level) {
+  @return map-get(map-get($text-settings, $level), "font-size");
+}
+
+@function line-height($level) {
+  @return map-get(map-get($text-settings, $level), "line-height");
+}
+
+@mixin size($level) {
+  font-size: text-scale($level);
+  line-height: line-height($level);
+}

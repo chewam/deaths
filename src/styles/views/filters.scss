@@ -1,0 +1,71 @@
+@use "../utils/box";
+@use "../utils/theme";
+
+.panel.filters {
+  align-items: center;
+  @include box.padding(1);
+  @include box.margin(1, 1, 0.5);
+
+  .genders {
+    display: flex;
+
+    .icon {
+      cursor: pointer;
+      @include box.margin(0, 0, 0, 0.5);
+
+      &:first-child {
+        left: 2px;
+        position: relative;
+      }
+    }
+  }
+
+  .slider {
+    flex: 1;
+    @include box.margin(0, 1.5, 1, 1);
+
+    .MuiSlider-markLabelActive {
+      opacity: 1 !important;
+    }
+
+    .MuiSlider-rail,
+    .MuiSlider-track {
+      height: 4px;
+    }
+
+    .MuiSlider-mark {
+      width: 4px;
+      height: 4px;
+    }
+
+    .MuiSlider-thumb {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+@include theme.apply(".panel.filters .genders .icon") using ($mode) {
+  color: theme.color("muted", $mode);
+}
+
+@include theme.apply(
+    ".panel.filters .genders .icon:hover, .panel.filters .genders .icon.active"
+  )
+  using ($mode) {
+  color: theme.color("primary", $mode);
+}
+
+@include theme.apply(".MuiSlider-colorPrimary") using ($mode) {
+  color: theme.color("primary", $mode);
+}
+
+@include theme.apply(".MuiSlider-markLabel") using ($mode) {
+  opacity: 0.5;
+  color: theme.color("color", $mode);
+}
+
+@include theme.apply(".MuiSlider-markActive") using ($mode) {
+  opacity: 1;
+  background-color: theme.color("surface", $mode);
+}

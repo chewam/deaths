@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 98c4c3a6a0b95e6a5d8e4083fa8bc68d0422f5ae chewam <gary@chewam.com> 1621036555 +0200	branch: Created from HEAD
+98c4c3a6a0b95e6a5d8e4083fa8bc68d0422f5ae cb1051eb81e716e8eb6f51bc0c2564d2baae506c chewam <gary@chewam.com> 1621072992 +0200	commit: feat: Add i18n.
+cb1051eb81e716e8eb6f51bc0c2564d2baae506c e6b5fc69ca8dddf63b673b30cbf635290cefc02d chewam <gary@chewam.com> 1621075285 +0200	commit: Fix text color contrast.
+e6b5fc69ca8dddf63b673b30cbf635290cefc02d c566aa033d6772dbb24cb1d7020464cf90a91967 chewam <gary@chewam.com> 1621078890 +0200	commit: Improve tests.
+c566aa033d6772dbb24cb1d7020464cf90a91967 38c1d489ba80be1fbfd89b50ea82001e688bdf97 semantic-release-bot <semantic-release-bot@martynus.net> 1627734257 +0000	filter-branch: rewrite

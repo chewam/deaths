@@ -1,0 +1,7 @@
+/.next
+/node_modules
+/data/*.txt
+/.vscode
+/coverage
+/out
+/.lighthouseci

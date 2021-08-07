@@ -1,0 +1,61 @@
+name: Release
+
+on:
+  push:
+    branches: [master, alpha, beta, next]
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-18.04
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Yarn cache setup
+        uses: c-hive/gha-yarn-cache@v1
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --perfer-offline
+
+      - name: Vercel environment url
+        uses: zentered/vercel-preview-url@v1.0.1
+        id: vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        with:
+          vercel_team_id: 'chewam'
+          vercel_project_id: 'deaths'
+
+      - name: Wait for Vercel deployment
+        run: |
+          echo domain: ${{ steps.vercel.outputs.preview_url }}
+          sleep 30
+
+      - name: Take screenshot
+        id: screenshot
+        uses: swinton/screenshot-website@v1.x
+        with:
+          width: 1200
+          height: 630
+          overwrite: true
+          source: https://${{ steps.vercel.outputs.preview_url }}
+
+      - name: Copy screenshot
+        run: |
+          echo ${{ steps.screenshot.outputs.path }}
+          cp ${{ steps.screenshot.outputs.path }} ./public/
+          ls -la ./public/
+          git status
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release

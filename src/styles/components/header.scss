@@ -1,0 +1,36 @@
+@use "../utils/box";
+@use "../utils/text";
+@use "../utils/theme";
+
+.header {
+  z-index: 1;
+  display: flex;
+  @include box.padding(0, 1);
+
+  .wrapper {
+    flex: 1;
+    display: flex;
+
+    h1 {
+      flex: 1;
+      @include text.size("xxl");
+      @include box.margin(1, 0);
+
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@include theme.apply(".header") using ($mode) {
+  box-shadow: theme.shadow($mode);
+  background-color: theme.color("surface", $mode);
+  a {
+    color: theme.color("color", $mode);
+
+    &:hover {
+      color: theme.color("link", $mode);
+    }
+  }
+}

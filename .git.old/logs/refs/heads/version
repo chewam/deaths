@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 91c2ec86b96eb648a10c02bc28310b3221812921 chewam <gary@chewam.com> 1621546933 +0200	branch: Created from HEAD
+91c2ec86b96eb648a10c02bc28310b3221812921 b89a74c2ebaade52b5afbb8ce7fc57d770e083f6 chewam <gary@chewam.com> 1621546997 +0200	commit: fix: Show app version in footer.
+b89a74c2ebaade52b5afbb8ce7fc57d770e083f6 84755e08d58bbadb6e8f56d822156422684f63e9 semantic-release-bot <semantic-release-bot@martynus.net> 1627734257 +0000	filter-branch: rewrite

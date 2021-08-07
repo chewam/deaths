@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 a4f2bd41777abe33c036a3a0fd79a7699b85664a chewam <gary@chewam.com> 1617419206 +0200	branch: Created from HEAD
+a4f2bd41777abe33c036a3a0fd79a7699b85664a f070db76262f4262d9066963cc0ca57651b0243e chewam <gary@chewam.com> 1617671027 +0200	commit: fix: Add missing types.
+f070db76262f4262d9066963cc0ca57651b0243e 0e6c258e8a977fdba56779508183cbf2d142c199 chewam <gary@chewam.com> 1617700358 +0200	commit: chore: Add tests workflow.
+0e6c258e8a977fdba56779508183cbf2d142c199 4bde4210177e2430eb12df7ecc050c887eee81cf chewam <gary@chewam.com> 1617700891 +0200	commit (amend): chore: Add tests workflow.
+4bde4210177e2430eb12df7ecc050c887eee81cf a6b60f41b53cae0a2a934eaca7a8691eeba5cadb chewam <gary@chewam.com> 1617723803 +0200	commit: Fix locations view.
+a6b60f41b53cae0a2a934eaca7a8691eeba5cadb 97a1eab6c918ec54afa744dd91552c7a975c484a chewam <gary@chewam.com> 1617814607 +0200	commit: Add distribution chart.
+97a1eab6c918ec54afa744dd91552c7a975c484a b9ec13607fa2001cceda0782dc318e162ee8f623 chewam <gary@chewam.com> 1618169015 +0200	commit: Minimal version setup.
+b9ec13607fa2001cceda0782dc318e162ee8f623 0338a104760813a876634f6d610c3c4c417052d9 chewam <gary@chewam.com> 1618169335 +0200	commit: Display anotations before datasets.
+0338a104760813a876634f6d610c3c4c417052d9 862b34f95564a6a3a4fcd10a5917139d74c2534c chewam <gary@chewam.com> 1618172337 +0200	commit: Change dark primary color.
+862b34f95564a6a3a4fcd10a5917139d74c2534c da5a299564b6918be1adf5fe39c859936d522f6d semantic-release-bot <semantic-release-bot@martynus.net> 1627734257 +0000	filter-branch: rewrite

@@ -1,0 +1,25 @@
+name: Lighthouse
+
+on: deployment_status
+
+jobs:
+  lhci:
+    name: Run lhci on deployed environment
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --perfer-offline
+
+      - name: run lhci
+        run: yarn lhci --collect.url=${{ github.event.deployment_status.target_url }}
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
