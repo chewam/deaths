@@ -1510,10 +1510,10 @@
   dependencies:
     "@types/geojson" "*"
 
-"@types/d3-scale@3.2.3":
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/@types/d3-scale/-/d3-scale-3.2.3.tgz#e33f1b9778cce647c8c8c67c212c4c1e9721f421"
-  integrity sha512-ghfaWBFew5pqbGEnR+cCcqROxyRdxoeul9tURw4Li2hsxnW+wfU4RnPuitA6wFskqQCtg8JmsT3b+7/1Ftp0sQ==
+"@types/d3-scale@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@types/d3-scale/-/d3-scale-4.0.1.tgz#fbe8238e2eff27af577d2b7d0b933ae50a546970"
+  integrity sha512-GDuXcRcR6mKcpUVMhPNttpOzHi2dP6YcDqLZYSZHgwTZ+sfCa8e9q0VEBwZomblAPNMYpVqxojnSyIEb4s/Pwg==
   dependencies:
     "@types/d3-time" "*"
 
