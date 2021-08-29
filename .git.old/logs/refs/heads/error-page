@@ -1,4 +1,0 @@
-0000000000000000000000000000000000000000 357ff30f1c49e9ebbbcd5a511b8f38c4f11b1dd0 chewam <gary@chewam.com> 1620263029 +0200	branch: Created from HEAD
-357ff30f1c49e9ebbbcd5a511b8f38c4f11b1dd0 3624e4587274a131508e5cc481ae8456abec7d17 chewam <gary@chewam.com> 1620263060 +0200	commit: fix: Handle error pages.
-3624e4587274a131508e5cc481ae8456abec7d17 fc2fe308ba6bdae6cbdca54eb0bce19458ca22d1 chewam <gary@chewam.com> 1620264613 +0200	commit: Setup tests to run when pushing to master branch.
-fc2fe308ba6bdae6cbdca54eb0bce19458ca22d1 b7b38b77ac03f1c5b30e9d0d9e1354eebcc055a5 semantic-release-bot <semantic-release-bot@martynus.net> 1627734257 +0000	filter-branch: rewrite

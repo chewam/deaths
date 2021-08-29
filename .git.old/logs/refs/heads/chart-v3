@@ -1,8 +1,0 @@
-0000000000000000000000000000000000000000 4e7bf5bc75c83eae5881a7ea83b1a8e3272034c0 chewam <gary@chewam.com> 1619877979 +0200	branch: Created from HEAD
-4e7bf5bc75c83eae5881a7ea83b1a8e3272034c0 117f316a726f6ffa2be8a86d7eb8e24489903f3f chewam <gary@chewam.com> 1620093517 +0200	commit: Chartjs v3
-117f316a726f6ffa2be8a86d7eb8e24489903f3f 74f7856f5cbf5c1cc01930823fcd6ff49ebc5478 chewam <gary@chewam.com> 1620248623 +0200	commit: Migrate charts configurations.
-74f7856f5cbf5c1cc01930823fcd6ff49ebc5478 11a4f360c4a4ab603acb672d7a061d5d95b29db4 chewam <gary@chewam.com> 1620248765 +0200	commit: Update tests.
-11a4f360c4a4ab603acb672d7a061d5d95b29db4 06abe61cb2f193525eefb27a68e8d7a2fa87fb12 chewam <gary@chewam.com> 1620250386 +0200	commit: Remove legacy chart component.
-06abe61cb2f193525eefb27a68e8d7a2fa87fb12 1cc4daac45e15f41edbb6f6aae6e460bb3f585c0 chewam <gary@chewam.com> 1620252034 +0200	commit: Increase checkout depth for codecov.
-1cc4daac45e15f41edbb6f6aae6e460bb3f585c0 3e9a0e81c673b5df9264564b13e88fe6338b9936 chewam <gary@chewam.com> 1620260961 +0200	commit: Charts visual fixes.
-3e9a0e81c673b5df9264564b13e88fe6338b9936 1b25ccd9571c4dbc1f9f681bfef59f3abe2636af semantic-release-bot <semantic-release-bot@martynus.net> 1627734257 +0000	filter-branch: rewrite

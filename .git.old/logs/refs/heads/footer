@@ -1,5 +1,0 @@
-0000000000000000000000000000000000000000 efdcae51b6f77ee80e82830be38c907c06db0d5f chewam <gary@chewam.com> 1621088991 +0200	branch: Created from HEAD
-efdcae51b6f77ee80e82830be38c907c06db0d5f 19aa02fb4de1d57de452e378998721231a22fec5 chewam <gary@chewam.com> 1621089082 +0200	commit: fix: Footer color gradient
-19aa02fb4de1d57de452e378998721231a22fec5 8b205c20b03cce2b92c23ce898e4a2af00a386b4 chewam <gary@chewam.com> 1621092118 +0200	commit: Improve tests.
-8b205c20b03cce2b92c23ce898e4a2af00a386b4 700ea1253b488865721a68c7d2ca0a8920816e63 chewam <gary@chewam.com> 1621092160 +0200	commit (amend): Improve tests.
-700ea1253b488865721a68c7d2ca0a8920816e63 457b674aca590dfc7b9d02cbad1e83eb8422dd2d semantic-release-bot <semantic-release-bot@martynus.net> 1627734257 +0000	filter-branch: rewrite

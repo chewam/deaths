@@ -2,9 +2,9 @@ import useSWR from "swr"
 import YearsData from "@/data/years.json"
 
 const defaultYears = {
+  "2021": true,
   "2020": true,
   "2017": true,
-  "2003": true,
 }
 
 const useYears = (): [Years | undefined, (data: Years) => void] => {

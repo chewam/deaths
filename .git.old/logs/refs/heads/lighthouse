@@ -1,8 +1,0 @@
-0000000000000000000000000000000000000000 ed06e5223ecef7e5aebf1624792e6a12707a0dea chewam <gary@chewam.com> 1620265732 +0200	branch: Created from HEAD
-ed06e5223ecef7e5aebf1624792e6a12707a0dea c862b241bc5df933c297465208ebffc97c2b734c chewam <gary@chewam.com> 1620265787 +0200	commit: fix: LHCI job.
-c862b241bc5df933c297465208ebffc97c2b734c d8c960dc62d0ffd108853b5e6e5507fc0d75c979 chewam <gary@chewam.com> 1620267716 +0200	commit: Split quality jobs.
-d8c960dc62d0ffd108853b5e6e5507fc0d75c979 459f7394d21a52ca51f4eb3736c98fe15f49c656 chewam <gary@chewam.com> 1620268213 +0200	commit: Run codecov at last.
-459f7394d21a52ca51f4eb3736c98fe15f49c656 8d38ca2ef9988364eb7c0880e5d7fa027d197d81 chewam <gary@chewam.com> 1620268622 +0200	commit: Use artifacts.
-8d38ca2ef9988364eb7c0880e5d7fa027d197d81 c4648468ac48f7dfa3c6b1dfc3777f816630c6da chewam <gary@chewam.com> 1620268934 +0200	commit (amend): Use artifacts.
-c4648468ac48f7dfa3c6b1dfc3777f816630c6da 58fa29bd4eb7c0b5fed351f7eb977666a8cc95ba chewam <gary@chewam.com> 1620269189 +0200	commit (amend): Use artifacts.
-58fa29bd4eb7c0b5fed351f7eb977666a8cc95ba 17e367d43af7ad40b03c52d75901d3499c4748c0 semantic-release-bot <semantic-release-bot@martynus.net> 1627734257 +0000	filter-branch: rewrite

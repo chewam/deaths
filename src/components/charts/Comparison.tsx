@@ -31,7 +31,7 @@ const getMaximum = (data: Deaths["data"]) => {
   return maximums[maxValue]
 }
 
-const Overview = (): JSX.Element => {
+const Comparison = (): JSX.Element => {
   useRawDeaths()
   const [years] = useYears()
   const [deaths] = useDeaths()
@@ -150,4 +150,4 @@ const Overview = (): JSX.Element => {
   )
 }
 
-export default Overview
+export default Comparison

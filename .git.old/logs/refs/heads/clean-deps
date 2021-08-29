@@ -1,3 +1,0 @@
-0000000000000000000000000000000000000000 fb7948b61b298a9f1d4304232888ecc5b53fb259 chewam <gary@chewam.com> 1620337250 +0200	branch: Created from HEAD
-fb7948b61b298a9f1d4304232888ecc5b53fb259 a0ef8ef6a90b45699d59751bb342fe4802643eed chewam <gary@chewam.com> 1620337273 +0200	commit: chore: Remove useless dependencies.
-a0ef8ef6a90b45699d59751bb342fe4802643eed 9fd50989eb3d27c715fee52b0e791d22a3c2d295 semantic-release-bot <semantic-release-bot@martynus.net> 1627734257 +0000	filter-branch: rewrite

@@ -1,4 +1,0 @@
-0000000000000000000000000000000000000000 5ef60c26e4df615941f6424bc0d4ca02e4a744ff chewam <gary@chewam.com> 1619042922 +0200	branch: Created from HEAD
-5ef60c26e4df615941f6424bc0d4ca02e4a744ff 65294eae5b8c1e02ee53be4943c4e23aa96f7b47 chewam <gary@chewam.com> 1619043384 +0200	commit: fix: Remove non used views.
-65294eae5b8c1e02ee53be4943c4e23aa96f7b47 acfbce520ac260a22012e0d7e7a9be116eddf8d4 chewam <gary@chewam.com> 1619043753 +0200	commit: Remove services and views.
-acfbce520ac260a22012e0d7e7a9be116eddf8d4 9049964e0a354c22cfbf5804f1b95fef452f02a8 semantic-release-bot <semantic-release-bot@martynus.net> 1627734257 +0000	filter-branch: rewrite

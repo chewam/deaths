@@ -1,3 +1,0 @@
-0000000000000000000000000000000000000000 a38ed0d64f130d375251aa2b74b67b00cd2a41ca chewam <gary@chewam.com> 1620337913 +0200	branch: Created from refs/remotes/origin/renovate/patch-all-patch
-a38ed0d64f130d375251aa2b74b67b00cd2a41ca d4e9108ec48b5285161d55c66963242be51b5255 chewam <gary@chewam.com> 1620338064 +0200	commit: Update tests snapshots.
-d4e9108ec48b5285161d55c66963242be51b5255 4b03d43a44c61dd67cd3fc186b2f4b15aee2dba5 semantic-release-bot <semantic-release-bot@martynus.net> 1627734257 +0000	filter-branch: rewrite
