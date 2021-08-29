@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/chewam/deaths/compare/v1.0.0...v1.0.1) (2021-08-29)
+
+
+### Bug Fixes
+
+* Change comparison default selected years. ([c2fe057](https://github.com/chewam/deaths/commit/c2fe057a17ac0e2200f35200ddf02ed682dc7ec1))
+
 # 1.0.0 (2021-08-07)
 
 
