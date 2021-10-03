@@ -4,7 +4,10 @@ on:
   push:
     branches: [master, alpha, beta, next]
   pull_request:
-    branches: [master, alpha, beta, next]
+
+concurrency:
+  cancel-in-progress: true
+  group: tests-${{ github.ref }}
 
 jobs:
 
