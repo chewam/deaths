@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/chewam/deaths/compare/v1.0.6...v1.0.7) (2021-10-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency swr to v1 ([84e456d](https://github.com/chewam/deaths/commit/84e456da556d9ca8979263e93cfa858ee87d7c24))
+
 ## [1.0.6](https://github.com/chewam/deaths/compare/v1.0.5...v1.0.6) (2021-10-03)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "deaths",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Annual deaths in France.",
   "main": "index.js",
   "repository": "https://github.com/chewam/deaths",
