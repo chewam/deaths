@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import messages from "@/lang/fr.json"
 import { IntlProvider } from "react-intl"
 import { render } from "@testing-library/react"

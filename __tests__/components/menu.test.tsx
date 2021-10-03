@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import fr from "@/lang/fr.json"
 import en from "@/lang/en.json"
 import Menu from "@/components/Menu"
