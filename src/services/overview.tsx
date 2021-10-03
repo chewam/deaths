@@ -13,7 +13,7 @@ const getData = (deaths: Deaths): Overview => {
 const useOverview = (): [Overview | undefined, (deaths: Deaths) => void] => {
   const { data, mutate } = useSWR("overview", null, {
     revalidateOnFocus: false,
-    initialData: { labels: [], data: [] } as Overview,
+    fallbackData: { labels: [], data: [] } as Overview,
   })
 
   const setData = (deaths: Deaths) => {
