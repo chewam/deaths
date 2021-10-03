@@ -69,6 +69,7 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
         color: theme.color,
         labels: {
           title: {
+            offset: -5,
             align: "top",
             color: ({ dataIndex }) => darkPalette[dataIndex],
             font: { weight: "bold", size: big ? 19 : 15 },
@@ -80,6 +81,7 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
             },
           },
           ageGroup: {
+            offset: -5,
             align: "bottom",
             font: { weight: "bold", size: big ? 17 : 13 },
             color: ({ dataIndex }) => darkPalette[dataIndex],
