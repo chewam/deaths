@@ -10,7 +10,7 @@ const defaultYears = {
 const useYears = (): [Years | undefined, (data: Years) => void] => {
   const { data, mutate } = useSWR("years", null, {
     revalidateOnFocus: false,
-    initialData: { ...YearsData, ...defaultYears } as Years,
+    fallbackData: { ...YearsData, ...defaultYears } as Years,
   })
 
   const setData = (data: Years) => {

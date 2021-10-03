@@ -5,7 +5,7 @@ export const useTheme = (): Theme => {
   const { resolvedTheme: theme, setTheme } = useThemes()
 
   const { data, mutate } = useSWR("theme", null, {
-    initialData: {} as Record<string, unknown>,
+    fallbackData: {} as Record<string, unknown>,
   })
 
   const values = (data && theme ? data[theme] : {}) as Record<string, string>

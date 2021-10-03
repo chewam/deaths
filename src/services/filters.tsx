@@ -1,13 +1,13 @@
 import useSWR from "swr"
 
-const initialData: Filters = {
+const fallbackData: Filters = {
   ageGroup: [0, 110],
   gender: null,
 }
 
 const useFilters = (): [Filters | undefined, (filters: Filters) => void] => {
   const { data: filters, mutate } = useSWR("filters", null, {
-    initialData,
+    fallbackData,
   })
 
   const setFilters = (filters: Filters): void => {
