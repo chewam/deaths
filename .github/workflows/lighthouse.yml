@@ -2,6 +2,10 @@ name: Lighthouse
 
 on: deployment_status
 
+concurrency:
+  cancel-in-progress: true
+  group: lighthouse-${{ github.ref }}
+
 jobs:
   lhci:
     name: Run lhci on deployed environment

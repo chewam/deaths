@@ -2,6 +2,11 @@ name: Screenshots
 
 on: deployment_status
 
+concurrency:
+  cancel-in-progress: true
+  group: screenshots-${{ github.ref }}
+
+
 jobs:
   devices:
     name: Capture multi devices
