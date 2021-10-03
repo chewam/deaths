@@ -1,3 +1,4 @@
+import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
@@ -5,7 +6,7 @@ import { useTheme } from "@/services/themes"
 import useOverview from "@/services/overview"
 import useRawDeaths from "@/services/raw-deaths"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-import { Chart, ChartDataset, ChartOptions } from "chart.js"
+import type { ChartDataset, ChartOptions } from "chart.js"
 import annotationPlugin, {
   LabelOptions,
   LineAnnotationOptions,
@@ -23,6 +24,7 @@ const Overview = (): JSX.Element => {
   const max = data.length ? Math.max(...data) : 0
   const { formatMessage: fm, formatNumber: fn } = useIntl()
 
+  Chart.register(ChartDataLabels)
   Chart.register(annotationPlugin)
 
   const datasets = [
@@ -39,8 +41,6 @@ const Overview = (): JSX.Element => {
   ] as ChartDataset[]
 
   const chartData = { labels, datasets }
-
-  const plugins = [ChartDataLabels]
 
   const getAnnotationContent = () => {
     const label = labels[data.indexOf(max)]
@@ -128,9 +128,7 @@ const Overview = (): JSX.Element => {
     },
   } as ChartOptions
 
-  return (
-    <Line type="line" data={chartData} options={options} plugins={plugins} />
-  )
+  return <Line data={chartData} options={options} />
 }
 
 export default Overview

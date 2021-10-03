@@ -1,3 +1,4 @@
+import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Bar } from "react-chartjs-2"
@@ -7,16 +8,17 @@ import useRawMortality from "@/services/raw-mortality"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 
 import type { Context } from "chartjs-plugin-datalabels"
-import type { Chart, ChartDataset, ChartOptions } from "chart.js"
+import type { ChartDataset, ChartOptions } from "chart.js"
 
 const Distribution = (): JSX.Element => {
   useRawMortality()
+  const defaultColor = "#ffffff"
   const [mortality] = useMortality()
   const { values: theme = {} } = useTheme()
   const { formatMessage: fm, formatNumber: fn } = useIntl()
   const { labels, data, ratio, ageGroups } = mortality as Mortality
 
-  const defaultColor = "#ffffff"
+  Chart.register(ChartDataLabels)
 
   const bars = data.map((ageGroup, i) => ({
     type: "bar",
@@ -99,8 +101,6 @@ const Distribution = (): JSX.Element => {
 
   const chartData = { labels, datasets }
 
-  const plugins = [ChartDataLabels]
-
   const options = {
     maintainAspectRatio: false,
     animation: { duration: 0 },
@@ -153,7 +153,8 @@ const Distribution = (): JSX.Element => {
     },
   } as ChartOptions
 
-  return <Bar type="bar" data={chartData} options={options} plugins={plugins} />
+  // return <Bar type="bar" data={chartData} options={options} plugins={plugins} />
+  return <Bar data={chartData} options={options} />
 }
 
 export default Distribution
