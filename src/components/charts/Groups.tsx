@@ -1,3 +1,4 @@
+import { Chart } from "chart.js"
 import { sumArray } from "@/utils/index"
 import type { ChartOptions } from "chart.js"
 import { Doughnut } from "react-chartjs-2"
@@ -14,13 +15,13 @@ interface Props {
 const Groups = ({ ageGroups, big }: Props): JSX.Element => {
   const { values: theme = {} } = useTheme()
 
+  Chart.register(ChartDataLabels)
+
   const groups = [
     sumArray(ageGroups.slice(0, 7)),
     ...ageGroups.slice(7, ageGroups.length - 2),
     sumArray(ageGroups.slice(ageGroups.length - 2, ageGroups.length)),
   ]
-
-  const plugins = [ChartDataLabels]
 
   const labels = ["0-69", "70-79", "80-89", "90+"]
 
@@ -94,9 +95,7 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
     },
   } as ChartOptions
 
-  return (
-    <Doughnut type="doughnut" data={data} options={options} plugins={plugins} />
-  )
+  return <Doughnut data={data} options={options} />
 }
 
 export default Groups

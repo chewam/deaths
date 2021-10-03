@@ -43,6 +43,7 @@ const Comparison = (): JSX.Element => {
   const paletteSubset = palette.slice(0, Object.keys(years || {}).length)
 
   Chart.register(annotationPlugin)
+  Chart.register(ChartDataLabels)
 
   const getDataSet = (year: string, index: number): ChartDataset => ({
     label: year,
@@ -78,8 +79,6 @@ const Comparison = (): JSX.Element => {
   )
 
   const chartData = { labels, datasets }
-
-  const plugins = [ChartDataLabels]
 
   const getAnnotationContent = () => {
     const month = Months[max?.month - 1] || "January"
@@ -145,9 +144,7 @@ const Comparison = (): JSX.Element => {
     },
   } as ChartOptions
 
-  return (
-    <Line type="line" data={chartData} options={options} plugins={plugins} />
-  )
+  return <Line data={chartData} options={options} />
 }
 
 export default Comparison

@@ -1,10 +1,10 @@
 const { version } = require("./package.json")
 const { withSentryConfig } = require('@sentry/nextjs');
 
-const securityHeaders = [{
-  key: "Content-Security-Policy",
-  value: "default-src 'self' *.googletagmanager.com *.sentry.io"
-}]
+// const securityHeaders = [{
+//   key: "Content-Security-Policy",
+//   value: "default-src 'self' *.googletagmanager.com *.sentry.io"
+// }]
 
 const moduleExports = {
   env: { APP_VERSION: version },
@@ -12,14 +12,14 @@ const moduleExports = {
     defaultLocale: "en",
     locales: ["fr", "en"],
   },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: securityHeaders,
-      },
-    ]
-  }
+  // async headers() {
+  //   return [
+  //     {
+  //       source: '/(.*)',
+  //       headers: securityHeaders,
+  //     },
+  //   ]
+  // }
 };
 
 const SentryWebpackPluginOptions = {};
