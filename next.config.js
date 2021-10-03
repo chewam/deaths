@@ -3,7 +3,7 @@ const { withSentryConfig } = require('@sentry/nextjs');
 
 const securityHeaders = [{
   key: "Content-Security-Policy",
-  value: "default-src 'self'"
+  value: "default-src 'self' *.googletagmanager.com *.sentry.io"
 }]
 
 const moduleExports = {
