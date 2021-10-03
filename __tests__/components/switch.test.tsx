@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import messages from "@/lang/fr.json"
 import Switch from "@/components/Switch"
 import { IntlProvider } from "react-intl"

@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import messages from "@/lang/fr.json"
 import FiltersBar from "@/components/FiltersBar"
 import { IntlProvider } from "react-intl"
