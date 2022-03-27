@@ -19,14 +19,30 @@ const Genders = ({ onChange }: Props): JSX.Element => {
         className={`icon ${gender === "male" ? "active" : ""}`}
         onClick={() => setGender(gender === "male" ? null : "male")}
       /> */}
-      <i className="ri-men-line"></i>
+      <i
+        tabIndex={0}
+        role="checkbox"
+        aria-hidden="true"
+        aria-checked="false"
+        title={fm({ id: "males" })}
+        onClick={() => setGender(gender === "male" ? null : "male")}
+        className={`ri-men-line ${gender === "male" ? "active" : ""}`}
+      ></i>
       {/* <IoFemaleSharp
         size={28}
         title={fm({ id: "females" })}
         className={`icon ${gender === "female" ? "active" : ""}`}
         onClick={() => setGender(gender === "female" ? null : "female")}
       /> */}
-      <i className="ri-women-line"></i>
+      <i
+        tabIndex={0}
+        role="checkbox"
+        aria-hidden="true"
+        aria-checked="false"
+        title={fm({ id: "females" })}
+        onClick={() => setGender(gender === "female" ? null : "female")}
+        className={`ri-women-line ${gender === "male" ? "active" : ""}`}
+      ></i>
     </div>
   )
 }

@@ -25,13 +25,6 @@ exports[`Footer should create a Footer in english 1`] = `
     <div
       class="right"
     >
-      <div
-        class="switch"
-      >
-        <i
-          class="ri-moon-line"
-        />
-      </div>
       <span
         class="spacer"
       >
@@ -87,13 +80,6 @@ exports[`Footer should create a Footer in french 1`] = `
     <div
       class="right"
     >
-      <div
-        class="switch"
-      >
-        <i
-          class="ri-moon-line"
-        />
-      </div>
       <span
         class="spacer"
       >

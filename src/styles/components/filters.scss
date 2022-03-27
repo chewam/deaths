@@ -1,11 +1,47 @@
 .filters {
   @apply
     py-2
-    px-4
+    pr-4
+    pl-6
     my-4
+    flex
     shadow
     mx-auto
     container
+    items-center
     bg-white
     dark:bg-gray-800;
+
+  .genders {
+    @apply ml-6;
+  }
+
+  .rc-slider {
+    .rc-slider-rail {
+      @apply dark:bg-gray-300;
+    }
+
+    .rc-slider-track {
+      @apply dark:bg-blue-400;
+    }
+
+    .rc-slider-handle {
+      @apply
+        dark:bg-gray-300
+        dark:border-blue-400;
+    }
+
+    .rc-slider-step {
+      .rc-slider-dot {
+        @apply
+          dark:bg-gray-300
+          dark:border-gray-400;
+      }
+
+      .rc-slider-dot-active {
+        @apply
+          dark:border-blue-400;
+      }
+    }
+  }
 }
