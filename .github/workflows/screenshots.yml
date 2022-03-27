@@ -4,8 +4,7 @@ on: deployment_status
 
 concurrency:
   cancel-in-progress: true
-  group: screenshots-${{ github.ref }}
-
+  group: screenshots-${{ github.event.deployment_status.deployment_id }}
 
 jobs:
   devices:

@@ -4,7 +4,7 @@ on: deployment_status
 
 concurrency:
   cancel-in-progress: true
-  group: lighthouse-${{ github.ref }}
+  group: lighthouse-${{ github.event.deployment_status.deployment_id }}
 
 jobs:
   lhci:
@@ -15,15 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
-
-      - name: Install dependencies
-        run: yarn --frozen-lockfile --perfer-offline
-
       - name: run lhci
-        run: yarn lhci --collect.url=${{ github.event.deployment_status.target_url }}
+        run: npx --yes @lhci/cli@latest autorun --collect.url=${{ github.event.deployment_status.target_url }}
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
