@@ -1,5 +1,9 @@
-@use "./components/link.scss";
+@use "./common/link.scss";
+@use "./common/button.scss";
 @use "./components/footer.scss";
 @use "./components/header.scss";
 @use "./components/filters.scss";
+@use "./components/overview.scss";
 @use "./components/dashboard.scss";
+@use "./components/comparison.scss";
+@use "./components/distribution.scss";

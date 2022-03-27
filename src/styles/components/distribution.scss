@@ -1,0 +1,9 @@
+.distribution {
+  @apply
+    shadow
+    mx-auto
+    container
+    dark:bg-gray-800;
+
+  height: calc(100vh - 13rem);
+}

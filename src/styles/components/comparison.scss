@@ -1,0 +1,35 @@
+.comparison {
+  @apply
+    flex
+    shadow
+    mx-auto
+    flex-col
+    container
+    dark:bg-gray-800;
+
+  height: calc(100vh - 13rem);
+
+  .chart {
+    @apply flex-1;
+  }
+
+  .years {
+    @apply
+      m-4
+      flex
+      flex-wrap
+      ;
+
+      // grid
+      // grid-flow-col-dense
+      // auto-cols-fr
+
+    li {
+      @apply p-1;
+
+      button {
+        @apply px-1 rounded-sm bg-gray-900;
+      }
+    }
+  }
+}

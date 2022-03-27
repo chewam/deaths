@@ -1,11 +1,11 @@
-import Panel from "@/components/Panel"
+// import Panel from "@/components/Panel"
 import Overview from "@/components/charts/Overview"
 
 const Page = (): JSX.Element => {
   return (
-    <Panel className="overview">
+    <div className="overview">
       <Overview />
-    </Panel>
+    </div>
   )
 }
 

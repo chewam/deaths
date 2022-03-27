@@ -28,7 +28,7 @@ const Footer = (): JSX.Element => {
 
       <div className="right">
         {/* <Switch /> */}
-        <Spacer />
+        {/* <Spacer /> */}
         <Lang />
         <Spacer />
         version {version} (
