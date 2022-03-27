@@ -1,9 +1,0 @@
-@use "../utils/box";
-
-ul {
-  @include box.spacing();
-
-  li {
-    list-style: none;
-  }
-}

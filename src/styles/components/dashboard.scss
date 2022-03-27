@@ -1,0 +1,21 @@
+.dashboard {
+  @apply
+    grid
+    gap-4
+    mx-auto
+    container
+    grid-cols-3;
+
+  .tile {
+    @apply
+      p-4
+      grid
+      shadow
+      text-sm
+      grid-cols-2;
+
+    .left, .right {
+      // @apply flex-auto;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+a[href] {
+  @apply
+    text-blue-400
+    hover:text-blue-500
+    visited:text-blue-400;
+
+  &:visited {
+    @apply text-blue-400;
+  }
+}
