@@ -20,6 +20,90 @@ exports[`Page snapshot: index 1`] = `
             <div
               class="year"
             >
+              2022
+            </div>
+            <div
+              class="trend"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="mortality"
+          >
+            <div
+              class="value"
+            >
+              0%
+            </div>
+            <div
+              class="label"
+            >
+              Taux de mortalité
+            </div>
+          </div>
+          <div
+            class="deaths"
+          >
+            <div
+              class="value"
+            >
+              0
+            </div>
+            <div
+              class="label"
+            >
+              Nombre de décès
+            </div>
+          </div>
+          <div
+            class="population"
+          >
+            <div
+              class="value"
+            >
+              67 813 396
+            </div>
+            <div
+              class="label"
+            >
+              Population totale
+            </div>
+          </div>
+        </div>
+        <div
+          class="right"
+        />
+      </div>
+    </div>
+    <div
+      class="wrapper"
+    >
+      <div
+        class="container panel  "
+      >
+        <div
+          class="left"
+        >
+          <div
+            class="top"
+          >
+            <div
+              class="year"
+            >
               2021
             </div>
             <div
