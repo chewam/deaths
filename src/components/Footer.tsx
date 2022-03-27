@@ -12,7 +12,7 @@ const Footer = (): JSX.Element => {
 
   return (
     <footer>
-      <div>
+      <div className="left">
         Chewam © 2020
         <Spacer />
         <Trans id="INSEE data" /> (
@@ -26,7 +26,7 @@ const Footer = (): JSX.Element => {
         )
       </div>
 
-      <div className="wrapper">
+      <div className="right">
         <Switch />
         <Spacer />
         <Lang />

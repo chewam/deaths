@@ -1,15 +1,24 @@
 .header {
   @apply
     p-4
-    flex
     shadow
-    justify-between;
+    bg-white
+    dark:bg-gray-800;
 
-  .menu {
-    @apply flex;
+  .wrapper {
+    @apply
+      flex
+      mx-auto
+      container
+      items-center
+      justify-between;
 
-    li {
-      @apply ml-4;
+    .menu {
+      @apply flex;
+  
+      li {
+        @apply ml-4;
+      }
     }
   }
 }

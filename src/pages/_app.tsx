@@ -13,6 +13,7 @@ import FiltersBar from "@/components/FiltersBar"
 // import dark from "@/styles/themes/dark.module.scss"
 // import light from "@/styles/themes/light.module.scss"
 
+import "remixicon/fonts/remixicon.css"
 import "@/styles/tailwind.scss"
 import "@/styles/globals.scss"
 

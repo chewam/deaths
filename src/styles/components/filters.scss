@@ -1,6 +1,11 @@
 .filters {
   @apply
+    py-2
+    px-4
+    my-4
+    shadow
     mx-auto
     container
-    bg-red-50;
+    bg-white
+    dark:bg-gray-800;
 }

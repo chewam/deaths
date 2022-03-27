@@ -1,8 +1,7 @@
-// import Panel from "@/components/Panel"
 import { useTheme } from "@/services/themes"
 import AgeGroups from "@/components/charts/Groups"
 import { FormattedMessage as Trans, FormattedNumber as Num } from "react-intl"
-import { ImArrowDownRight, ImArrowUpRight } from "react-icons/im"
+// import { ImArrowDownRight, ImArrowUpRight } from "react-icons/im"
 
 interface Props {
   year: string
@@ -15,7 +14,7 @@ interface Props {
   main: boolean
 }
 
-const Year = ({
+const Tile = ({
   year,
   trend,
   deaths,
@@ -28,21 +27,21 @@ const Year = ({
   const { values: theme = {} } = useTheme()
 
   return (
-    // <div className="wrapper">
-    // <Panel>
     <div className="tile">
       <div className="left">
-        <div className="top">
+        <h3>
           <div className="year">{year}</div>
-          <div className="trend">
-            {trend ? (
-              <ImArrowDownRight color={theme.secondary} />
-            ) : (
-              <ImArrowUpRight color={theme.important} />
-            )}
-          </div>
-        </div>
-        <div className="mortality">
+          {/* <div className="trend"> */}
+          {trend ? (
+            // <ImArrowDownRight color={theme.secondary} />
+            <i className="ri-arrow-right-down-line" title="mortality drop"></i>
+          ) : (
+            // <ImArrowUpRight color={theme.important} />
+            <i className="ri-arrow-right-up-line" title="mortality raise"></i>
+          )}
+          {/* </div> */}
+        </h3>
+        <div className="stat">
           <div
             className="value"
             style={{
@@ -55,7 +54,7 @@ const Year = ({
             <Trans id="Mortality rate" />
           </div>
         </div>
-        <div className="deaths">
+        <div className="stat">
           <div className="value">
             <Num value={Number(deaths)} />
           </div>
@@ -63,7 +62,7 @@ const Year = ({
             <Trans id="Deaths count" />
           </div>
         </div>
-        <div className="population">
+        <div className="stat">
           <div className="value">
             <Num value={Number(population)} />
           </div>
@@ -76,9 +75,7 @@ const Year = ({
         <AgeGroups ageGroups={ageGroups} big={main} />
       </div>
     </div>
-    // </Panel>
-    // </div>
   )
 }
 
-export default Year
+export default Tile

@@ -1,0 +1,13 @@
+footer {
+  @apply
+    py-4
+    flex
+    mx-auto
+    text-sm
+    container
+    justify-between;
+
+  .left, .right {
+    @apply flex items-center;
+  }
+}
