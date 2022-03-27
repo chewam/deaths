@@ -3,7 +3,7 @@
 exports[`Page snapshot: distribution 1`] = `
 <DocumentFragment>
   <div
-    class="container panel distribution "
+    class="distribution"
   />
 </DocumentFragment>
 `;
