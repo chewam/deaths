@@ -1,5 +1,6 @@
 .comparison {
   @apply
+    p-4
     flex
     shadow
     mx-auto
@@ -15,7 +16,7 @@
 
   .years {
     @apply
-      m-4
+      mt-4
       flex
       flex-wrap
       ;
