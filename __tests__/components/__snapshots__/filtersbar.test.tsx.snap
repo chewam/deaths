@@ -6,14 +6,14 @@ exports[`Filters Bar should create a hidden Filters Bar 1`] = `
     class="filters"
   >
     <div
-      class="rc-slider rc-slider-horizontal"
+      class="rc-slider rc-slider-horizontal rc-slider-with-marks"
     >
       <div
         class="rc-slider-rail"
       />
       <div
         class="rc-slider-track rc-slider-track-1"
-        style="left: 0%; width: 20%;"
+        style="left: 0%; width: 100%;"
       />
       <div
         class="rc-slider-step"
@@ -24,28 +24,52 @@ exports[`Filters Bar should create a hidden Filters Bar 1`] = `
         />
         <span
           class="rc-slider-dot rc-slider-dot-active"
-          style="left: 20%; transform: translateX(-50%);"
+          style="left: 9.090909090909092%; transform: translateX(-50%);"
         />
         <span
-          class="rc-slider-dot"
-          style="left: 40%; transform: translateX(-50%);"
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 18.181818181818183%; transform: translateX(-50%);"
         />
         <span
-          class="rc-slider-dot"
-          style="left: 60%; transform: translateX(-50%);"
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 27.27272727272727%; transform: translateX(-50%);"
         />
         <span
-          class="rc-slider-dot"
-          style="left: 80%; transform: translateX(-50%);"
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 36.36363636363637%; transform: translateX(-50%);"
         />
         <span
-          class="rc-slider-dot"
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 45.45454545454545%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 54.54545454545454%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 63.63636363636363%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 72.72727272727273%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 81.81818181818183%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 90.9090909090909%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
           style="left: 100%; transform: translateX(-50%);"
         />
       </div>
       <div
         aria-disabled="false"
-        aria-valuemax="100"
+        aria-valuemax="110"
         aria-valuemin="0"
         aria-valuenow="0"
         class="rc-slider-handle rc-slider-handle-1"
@@ -55,14 +79,90 @@ exports[`Filters Bar should create a hidden Filters Bar 1`] = `
       />
       <div
         aria-disabled="false"
-        aria-valuemax="100"
+        aria-valuemax="110"
         aria-valuemin="0"
-        aria-valuenow="20"
+        aria-valuenow="110"
         class="rc-slider-handle rc-slider-handle-2"
         role="slider"
-        style="left: 20%; transform: translateX(-50%);"
+        style="left: 100%; transform: translateX(-50%);"
         tabindex="0"
       />
+      <div
+        class="rc-slider-mark"
+      >
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 0%; transform: translateX(-50%);"
+        >
+          0
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 9.090909090909092%; transform: translateX(-50%);"
+        >
+          10
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 18.181818181818183%; transform: translateX(-50%);"
+        >
+          20
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 27.27272727272727%; transform: translateX(-50%);"
+        >
+          30
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 36.36363636363637%; transform: translateX(-50%);"
+        >
+          40
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 45.45454545454545%; transform: translateX(-50%);"
+        >
+          50
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 54.54545454545454%; transform: translateX(-50%);"
+        >
+          60
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 63.63636363636363%; transform: translateX(-50%);"
+        >
+          70
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 72.72727272727273%; transform: translateX(-50%);"
+        >
+          80
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 81.81818181818183%; transform: translateX(-50%);"
+        >
+          90
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 90.9090909090909%; transform: translateX(-50%);"
+        >
+          100
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 100%; transform: translateX(-50%);"
+        >
+          110+
+        </span>
+      </div>
     </div>
     <div
       class="genders"
@@ -94,14 +194,14 @@ exports[`Filters Bar should create a visible Filters Bar 1`] = `
     class="filters"
   >
     <div
-      class="rc-slider rc-slider-horizontal"
+      class="rc-slider rc-slider-horizontal rc-slider-with-marks"
     >
       <div
         class="rc-slider-rail"
       />
       <div
         class="rc-slider-track rc-slider-track-1"
-        style="left: 0%; width: 20%;"
+        style="left: 0%; width: 100%;"
       />
       <div
         class="rc-slider-step"
@@ -112,28 +212,52 @@ exports[`Filters Bar should create a visible Filters Bar 1`] = `
         />
         <span
           class="rc-slider-dot rc-slider-dot-active"
-          style="left: 20%; transform: translateX(-50%);"
+          style="left: 9.090909090909092%; transform: translateX(-50%);"
         />
         <span
-          class="rc-slider-dot"
-          style="left: 40%; transform: translateX(-50%);"
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 18.181818181818183%; transform: translateX(-50%);"
         />
         <span
-          class="rc-slider-dot"
-          style="left: 60%; transform: translateX(-50%);"
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 27.27272727272727%; transform: translateX(-50%);"
         />
         <span
-          class="rc-slider-dot"
-          style="left: 80%; transform: translateX(-50%);"
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 36.36363636363637%; transform: translateX(-50%);"
         />
         <span
-          class="rc-slider-dot"
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 45.45454545454545%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 54.54545454545454%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 63.63636363636363%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 72.72727272727273%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 81.81818181818183%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
+          style="left: 90.9090909090909%; transform: translateX(-50%);"
+        />
+        <span
+          class="rc-slider-dot rc-slider-dot-active"
           style="left: 100%; transform: translateX(-50%);"
         />
       </div>
       <div
         aria-disabled="false"
-        aria-valuemax="100"
+        aria-valuemax="110"
         aria-valuemin="0"
         aria-valuenow="0"
         class="rc-slider-handle rc-slider-handle-1"
@@ -143,14 +267,90 @@ exports[`Filters Bar should create a visible Filters Bar 1`] = `
       />
       <div
         aria-disabled="false"
-        aria-valuemax="100"
+        aria-valuemax="110"
         aria-valuemin="0"
-        aria-valuenow="20"
+        aria-valuenow="110"
         class="rc-slider-handle rc-slider-handle-2"
         role="slider"
-        style="left: 20%; transform: translateX(-50%);"
+        style="left: 100%; transform: translateX(-50%);"
         tabindex="0"
       />
+      <div
+        class="rc-slider-mark"
+      >
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 0%; transform: translateX(-50%);"
+        >
+          0
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 9.090909090909092%; transform: translateX(-50%);"
+        >
+          10
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 18.181818181818183%; transform: translateX(-50%);"
+        >
+          20
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 27.27272727272727%; transform: translateX(-50%);"
+        >
+          30
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 36.36363636363637%; transform: translateX(-50%);"
+        >
+          40
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 45.45454545454545%; transform: translateX(-50%);"
+        >
+          50
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 54.54545454545454%; transform: translateX(-50%);"
+        >
+          60
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 63.63636363636363%; transform: translateX(-50%);"
+        >
+          70
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 72.72727272727273%; transform: translateX(-50%);"
+        >
+          80
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 81.81818181818183%; transform: translateX(-50%);"
+        >
+          90
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 90.9090909090909%; transform: translateX(-50%);"
+        >
+          100
+        </span>
+        <span
+          class="rc-slider-mark-text rc-slider-mark-text-active"
+          style="left: 100%; transform: translateX(-50%);"
+        >
+          110+
+        </span>
+      </div>
     </div>
     <div
       class="genders"

@@ -9,7 +9,7 @@ exports[`Page snapshot: comparison 1`] = `
       class="chart"
     />
     <ul
-      class="years button-group"
+      class="years"
     >
       <li>
         <button
