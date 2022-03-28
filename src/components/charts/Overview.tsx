@@ -2,7 +2,6 @@ import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
-// import { useTheme } from "@/services/themes"
 import useOverview from "@/services/overview"
 import useRawDeaths from "@/services/raw-deaths"
 import ChartDataLabels from "chartjs-plugin-datalabels"
@@ -19,7 +18,6 @@ const Overview = (): JSX.Element => {
   useRawDeaths()
   const defaultColor = "#ffffff"
   const [overview] = useOverview()
-  // const { values: theme = {} } = useTheme()
   const { labels, data } = overview as Overview
   const max = data.length ? Math.max(...data) : 0
   const { formatMessage: fm, formatNumber: fn } = useIntl()
@@ -129,7 +127,6 @@ const Overview = (): JSX.Element => {
           drawBorder: false,
           borderDash: [3, 3],
           color: theme.border,
-          // color: (context) => (context.tick.value > 0 ? theme.border : "lime"),
         },
       },
     },

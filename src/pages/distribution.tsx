@@ -1,4 +1,3 @@
-// import Panel from "@/components/Panel"
 import Distribution from "@/components/charts/Distribution"
 
 const Page = (): JSX.Element => {

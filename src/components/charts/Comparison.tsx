@@ -6,7 +6,6 @@ import { palette } from "@/utils/index"
 import useYears from "@/services/years"
 import Months from "@/data/months.json"
 import useDeaths from "@/services/deaths"
-// import { useTheme } from "@/services/themes"
 import useRawDeaths from "@/services/raw-deaths"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import annotationPlugin from "chartjs-plugin-annotation"
@@ -37,7 +36,6 @@ const Comparison = (): JSX.Element => {
   const [deaths] = useDeaths()
   const defaultColor = "#ffffff"
   const { labels, data } = deaths as Deaths
-  // const { values: theme = {} } = useTheme()
   const max = getMaximum(data)
   const { formatMessage: fm, formatNumber: fn } = useIntl()
   const paletteSubset = palette.slice(0, Object.keys(years || {}).length)
@@ -59,7 +57,6 @@ const Comparison = (): JSX.Element => {
     borderWidth: 2,
     data: (data || {})[+year - 2000],
     borderColor: paletteSubset[index],
-    // pointBackgroundColor: theme.surface,
     pointBorderColor: paletteSubset[index],
     backgroundColor: hexToRgba(theme.base || defaultColor, 0.1),
     datalabels: {

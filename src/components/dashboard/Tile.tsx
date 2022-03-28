@@ -1,7 +1,5 @@
-import { useTheme } from "@/services/themes"
 import AgeGroups from "@/components/charts/Groups"
 import { FormattedMessage as Trans, FormattedNumber as Num } from "react-intl"
-// import { ImArrowDownRight, ImArrowUpRight } from "react-icons/im"
 
 interface Props {
   year: string
@@ -14,6 +12,13 @@ interface Props {
   main: boolean
 }
 
+const theme = {
+  base: "#60a5fa",
+  text: "#d1d5db",
+  border: "#4b5563",
+  secondary: "#16a34a",
+}
+
 const Tile = ({
   year,
   trend,
@@ -24,8 +29,6 @@ const Tile = ({
   population,
   main,
 }: Props): JSX.Element => {
-  const { values: theme = {} } = useTheme()
-
   return (
     <div className="tile">
       <div className="left">
@@ -45,7 +48,7 @@ const Tile = ({
           <div
             className="value"
             style={{
-              color: mortality > average ? theme.important : theme.secondary,
+              color: mortality > average ? theme.base : theme.secondary,
             }}
           >
             <Num value={Number(mortality.toFixed(3))} />%

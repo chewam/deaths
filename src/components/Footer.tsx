@@ -1,5 +1,4 @@
 import Lang from "@/components/Lang"
-// import Switch from "@/components/Switch"
 import { FormattedMessage as Trans } from "react-intl"
 
 const Spacer = (): JSX.Element => (
@@ -27,8 +26,6 @@ const Footer = (): JSX.Element => {
       </div>
 
       <div className="right">
-        {/* <Switch /> */}
-        {/* <Spacer /> */}
         <Lang />
         <Spacer />
         version {version} (
