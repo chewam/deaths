@@ -22,17 +22,34 @@ interface Props {
 //   { value: 110, label: "110+" },
 // ]
 
+const marks = {
+  "0": "0",
+  10: "10",
+  20: "20",
+  30: "30",
+  40: "40",
+  50: "50",
+  60: "60",
+  70: "70",
+  80: "80",
+  90: "90",
+  100: "100",
+  110: "110+",
+}
+
 const AgeGroups = ({ onChange }: Props): JSX.Element => {
   // const getTextValue = (value: number) => `${value}`
 
   return (
     <>
       <Slider
-        dots
         range
-        step={20}
+        min={0}
+        max={110}
+        step={null}
+        marks={marks}
         allowCross={false}
-        defaultValue={[0, 20]}
+        defaultValue={[0, 110]}
         // onChange={(value) => console.log(value)}
         onChange={(value) => onChange(value as [number, number])}
       />

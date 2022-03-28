@@ -1,26 +1,48 @@
 #__next > .filters { /* stylelint-disable-line */
   @apply
-    py-2
-    pr-4
-    pl-6
+    pt-4
+    pb-6
+    px-6
     mb-4
     flex
     z-10
     mt-24
     shadow
     mx-auto
+    relative
     container
     items-center
     bg-white
     dark:bg-gray-800;
 
   .genders {
-    @apply ml-6;
+    @apply
+      ml-8
+      flex
+      flex-row
+      leading-none
+      items-center;
+
+    i {
+      @apply
+        text-2xl
+        last:ml-2
+        cursor-pointer
+        dark:text-gray-600
+        leading-5
+        ;
+      
+      &.active {
+        @apply dark:text-blue-400;
+      }
+    }
   }
 
   .rc-slider {
+    @apply flex-1;
+
     .rc-slider-rail {
-      @apply dark:bg-gray-300;
+      @apply dark:bg-gray-600;
     }
 
     .rc-slider-track {
@@ -29,20 +51,32 @@
 
     .rc-slider-handle {
       @apply
-        dark:bg-gray-300
+        dark:bg-gray-600
         dark:border-blue-400;
     }
 
     .rc-slider-step {
       .rc-slider-dot {
         @apply
-          dark:bg-gray-300
-          dark:border-gray-400;
+          dark:bg-gray-600
+          dark:border-gray-500;
       }
 
       .rc-slider-dot-active {
         @apply
           dark:border-blue-400;
+      }
+    }
+
+    .rc-slider-mark {
+      @apply leading-none relative top-3;
+
+      .rc-slider-mark-text {
+        @apply dark:text-gray-600;
+      }
+
+      .rc-slider-mark-text-active {
+        @apply dark:text-gray-300;
       }
     }
   }

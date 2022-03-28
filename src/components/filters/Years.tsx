@@ -16,7 +16,7 @@ const Years = (): JSX.Element => {
     setYears({ ...years, [year]: !getYearStatus(year) })
 
   return (
-    <ul className="years button-group">
+    <ul className="years">
       {years &&
         Object.keys(years)
           .sort((a, b) => +b - +a)

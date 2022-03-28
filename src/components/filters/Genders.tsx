@@ -41,7 +41,7 @@ const Genders = ({ onChange }: Props): JSX.Element => {
         aria-checked="false"
         title={fm({ id: "females" })}
         onClick={() => setGender(gender === "female" ? null : "female")}
-        className={`ri-women-line ${gender === "male" ? "active" : ""}`}
+        className={`ri-women-line ${gender === "female" ? "active" : ""}`}
       ></i>
     </div>
   )

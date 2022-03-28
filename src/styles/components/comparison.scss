@@ -5,7 +5,7 @@
     flex-col
     container;
 
-  height: calc(100vh - 13rem);
+  height: calc(100vh - 14rem);
 
   .chart {
     @apply
@@ -23,6 +23,7 @@
       gap-2
       shadow
       flex-wrap
+      justify-evenly
       dark:bg-gray-800;
 
     li {
