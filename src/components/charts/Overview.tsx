@@ -34,8 +34,6 @@ const Overview = (): JSX.Element => {
     secondary: "#16a34a",
   }
 
-  console.log("THEME", theme)
-
   const datasets = [
     {
       data,

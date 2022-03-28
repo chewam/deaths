@@ -1,35 +1,33 @@
 .comparison {
   @apply
-    p-4
     flex
-    shadow
     mx-auto
     flex-col
-    container
-    dark:bg-gray-800;
+    container;
 
   height: calc(100vh - 13rem);
 
   .chart {
-    @apply flex-1;
+    @apply
+      p-4
+      flex-1
+      shadow
+      dark:bg-gray-800;
   }
 
   .years {
     @apply
+      p-4
       mt-4
       flex
+      gap-2
+      shadow
       flex-wrap
-      ;
-
-      // grid
-      // grid-flow-col-dense
-      // auto-cols-fr
+      dark:bg-gray-800;
 
     li {
-      @apply p-1;
-
       button {
-        @apply px-1 rounded-sm bg-gray-900;
+        @apply px-2 py-0.5 rounded-sm bg-gray-900 hover:bg-gray-900;
       }
     }
   }
