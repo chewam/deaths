@@ -2,7 +2,6 @@ import { Chart } from "chart.js"
 import { sumArray } from "@/utils/index"
 import type { ChartOptions } from "chart.js"
 import { Doughnut } from "react-chartjs-2"
-import { useTheme } from "@/services/themes"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 
 import type { ChartDataset } from "chart.js"
@@ -13,7 +12,12 @@ interface Props {
 }
 
 const Groups = ({ ageGroups, big }: Props): JSX.Element => {
-  const { values: theme = {} } = useTheme()
+  const theme = {
+    base: "#60a5fa",
+    text: "#d1d5db",
+    border: "#4b5563",
+    secondary: "#16a34a",
+  }
 
   Chart.register(ChartDataLabels)
 
@@ -66,7 +70,7 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
       legend: { display: false },
       tooltip: { enabled: false },
       datalabels: {
-        color: theme.color,
+        color: theme.base,
         labels: {
           title: {
             offset: -5,

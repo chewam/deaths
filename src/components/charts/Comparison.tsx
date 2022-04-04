@@ -6,7 +6,6 @@ import { palette } from "@/utils/index"
 import useYears from "@/services/years"
 import Months from "@/data/months.json"
 import useDeaths from "@/services/deaths"
-import { useTheme } from "@/services/themes"
 import useRawDeaths from "@/services/raw-deaths"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import annotationPlugin from "chartjs-plugin-annotation"
@@ -37,10 +36,17 @@ const Comparison = (): JSX.Element => {
   const [deaths] = useDeaths()
   const defaultColor = "#ffffff"
   const { labels, data } = deaths as Deaths
-  const { values: theme = {} } = useTheme()
   const max = getMaximum(data)
   const { formatMessage: fm, formatNumber: fn } = useIntl()
   const paletteSubset = palette.slice(0, Object.keys(years || {}).length)
+
+  const theme = {
+    base: "#60a5fa",
+    text: "#111827",
+    border: "#d1d5db",
+    secondary: "#16a34a",
+    label: "#fff",
+  }
 
   Chart.register(annotationPlugin)
   Chart.register(ChartDataLabels)
@@ -52,18 +58,17 @@ const Comparison = (): JSX.Element => {
     borderWidth: 2,
     data: (data || {})[+year - 2000],
     borderColor: paletteSubset[index],
-    pointBackgroundColor: theme.surface,
     pointBorderColor: paletteSubset[index],
-    backgroundColor: hexToRgba(theme.primary || defaultColor, 0.1),
+    backgroundColor: hexToRgba(theme.base || defaultColor, 0.1),
     datalabels: {
       offset: 3,
       clamp: true,
       align: "end",
       anchor: "end",
       borderRadius: 4,
+      color: theme.label,
       textAlign: "center",
       font: { weight: "bold" },
-      color: theme["on-primary"],
       backgroundColor: paletteSubset[index],
       padding: { top: 4, right: 5, bottom: 4, left: 5 },
       display: ({ active }: Context) => (active ? true : "auto"),
@@ -92,7 +97,7 @@ const Comparison = (): JSX.Element => {
     width: 0,
     height: 0,
     enabled: true,
-    fontColor: theme["on-primary"],
+    fontColor: theme.label,
     content: getAnnotationContent(),
     backgroundColor: theme.secondary,
   } as LabelOptions
@@ -122,7 +127,7 @@ const Comparison = (): JSX.Element => {
       x: {
         grid: { display: false },
         ticks: {
-          color: theme.muted,
+          color: theme.text,
         },
       },
       y: {
@@ -130,15 +135,15 @@ const Comparison = (): JSX.Element => {
         suggestedMax: max && max.value + (max.value * 5) / 100,
         ticks: {
           padding: 10,
-          color: theme.muted,
+          color: theme.text,
         },
         grid: {
           lineWidth: 1,
           drawTicks: false,
           drawBorder: false,
           borderDash: [3, 3],
-          color: theme.muted,
-          zeroLineColor: theme.muted,
+          color: theme.border,
+          zeroLineColor: theme.border,
         },
       },
     },

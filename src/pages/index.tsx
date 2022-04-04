@@ -1,11 +1,10 @@
-import Container from "@/components/Container"
 import Dashboard from "@/components/dashboard"
 
 const Page = (): JSX.Element => {
   return (
-    <Container className="dashboard">
+    <div className="dashboard">
       <Dashboard />
-    </Container>
+    </div>
   )
 }
 

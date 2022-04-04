@@ -1,0 +1,40 @@
+.comparison {
+  @apply
+    flex
+    mx-auto
+    flex-col
+    container;
+
+  height: calc(100vh - 14rem);
+
+  .chart {
+    @apply
+      p-4
+      flex-1
+      shadow
+      dark:bg-gray-800;
+  }
+
+  .years {
+    @apply
+      p-4
+      mt-4
+      flex
+      gap-2
+      shadow
+      flex-wrap
+      drop-shadow
+      dark:bg-gray-800;
+
+    li {
+      button {
+        @apply
+          px-2
+          py-0.5
+          rounded
+          bg-gray-900
+          hover:bg-gray-900;
+      }
+    }
+  }
+}

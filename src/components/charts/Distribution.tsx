@@ -2,7 +2,6 @@ import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Bar } from "react-chartjs-2"
-import { useTheme } from "@/services/themes"
 import useMortality from "@/services/mortality"
 import useRawMortality from "@/services/raw-mortality"
 import ChartDataLabels from "chartjs-plugin-datalabels"
@@ -14,9 +13,16 @@ const Distribution = (): JSX.Element => {
   useRawMortality()
   const defaultColor = "#ffffff"
   const [mortality] = useMortality()
-  const { values: theme = {} } = useTheme()
   const { formatMessage: fm, formatNumber: fn } = useIntl()
   const { labels, data, ratio, ageGroups } = mortality as Mortality
+
+  const theme = {
+    base: "#60a5fa",
+    text: "#111827",
+    border: "#d1d5db",
+    secondary: "#16a34a",
+    label: "#fff",
+  }
 
   Chart.register(ChartDataLabels)
 
@@ -25,17 +31,17 @@ const Distribution = (): JSX.Element => {
     yAxisID: "y",
     data: ageGroup,
     label: `bar-${i}`,
-    borderColor: theme.surface,
+    borderColor: "transparent",
     borderWidth: { top: 2, right: 0, bottom: 2, left: 0 },
-    backgroundColor: hexToRgba(theme.primary || defaultColor, 0.8),
+    backgroundColor: hexToRgba(theme.base || defaultColor, 0.8),
     datalabels: {
       borderRadius: 4,
       textAlign: "center",
-      color: theme["on-primary"],
+      color: theme.label,
       font: { size: 11, weight: "bold" },
       backgroundColor: ({ active }: Context) =>
         active
-          ? hexToRgba(theme.primary || defaultColor, 0.9)
+          ? hexToRgba(theme.base || defaultColor, 0.9)
           : "rgba(0, 0, 0, 0)",
       padding: { top: 4, right: 5, bottom: 4, left: 5 },
       display: ({ active, dataset: { data }, dataIndex, chart }: Context) => {
@@ -80,16 +86,16 @@ const Distribution = (): JSX.Element => {
       pointRadius: 5,
       borderColor: theme.secondary,
       pointBorderColor: theme.secondary,
-      pointBackgroundColor: theme["on-primary"],
+      pointBackgroundColor: theme.secondary,
       datalabels: {
         offset: 3,
         clamp: true,
         align: "end",
         anchor: "end",
         borderRadius: 4,
+        color: theme.label,
         textAlign: "center",
         font: { weight: "bold" },
-        color: theme["on-primary"],
         backgroundColor: theme.secondary,
         padding: { top: 4, right: 5, bottom: 4, left: 5 },
         formatter: (value: number) => value.toFixed(2) + "%",
@@ -117,7 +123,7 @@ const Distribution = (): JSX.Element => {
           drawBorder: false,
         },
         ticks: {
-          color: theme.muted,
+          color: theme.text,
         },
       },
       y: {
@@ -125,15 +131,14 @@ const Distribution = (): JSX.Element => {
         stacked: true,
         ticks: {
           padding: 10,
-          color: theme.muted,
+          color: theme.text,
         },
         grid: {
           lineWidth: 1,
           drawTicks: false,
           drawBorder: false,
           borderDash: [3, 3],
-          color: (context) =>
-            context.tick.value > 0 ? theme.muted : theme.surface,
+          color: theme.border,
         },
       },
       y2: {
@@ -142,7 +147,7 @@ const Distribution = (): JSX.Element => {
         ticks: {
           padding: 10,
           stepSize: 0.1,
-          color: theme.muted,
+          color: theme.text,
           callback: (value: number) => `${value.toFixed(2)}%`,
         },
         grid: {
@@ -153,7 +158,6 @@ const Distribution = (): JSX.Element => {
     },
   } as ChartOptions
 
-  // return <Bar type="bar" data={chartData} options={options} plugins={plugins} />
   return <Bar data={chartData} options={options} />
 }
 

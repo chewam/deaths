@@ -3,1939 +3,1502 @@
 exports[`Page snapshot: index 1`] = `
 <DocumentFragment>
   <div
-    class="container dashboard "
+    class="dashboard"
   >
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2022
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2022
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              67 813 396
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            67 813 396
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2021
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2021
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              67 063 703
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            67 063 703
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2020
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2020
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              67 063 703
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            67 063 703
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2019
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2019
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              66 977 703
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            66 977 703
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2018
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2018
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              66 883 761
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            66 883 761
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2017
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2017
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              66 774 482
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            66 774 482
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2016
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2016
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              66 602 645
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            66 602 645
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2015
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2015
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              66 422 469
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            66 422 469
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2014
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2014
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              66 130 873
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            66 130 873
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2013
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2013
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              65 564 756
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            65 564 756
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2012
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2012
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              65 241 241
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            65 241 241
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2011
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2011
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              64 933 400
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            64 933 400
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2010
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2010
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              64 612 939
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            64 612 939
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2009
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2009
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              64 304 500
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            64 304 500
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2008
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2008
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              63 961 859
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            63 961 859
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2007
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2007
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              63 600 690
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            63 600 690
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2006
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2006
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              63 186 117
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            63 186 117
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2005
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2005
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              62 730 537
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            62 730 537
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2004
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2004
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              62 251 062
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            62 251 062
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2003
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2003
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              61 824 030
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            61 824 030
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2002
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2002
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              61 385 070
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            61 385 070
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2001
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2001
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              60 941 410
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            60 941 410
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
     <div
-      class="wrapper"
+      class="tile"
     >
       <div
-        class="container panel  "
+        class="left"
       >
+        <h3>
+          <div
+            class="year"
+          >
+            2000
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </h3>
         <div
-          class="left"
+          class="stat"
         >
           <div
-            class="top"
+            class="value"
+            style="color: rgb(22, 163, 74);"
           >
-            <div
-              class="year"
-            >
-              2000
-            </div>
-            <div
-              class="trend"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                version="1.1"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 0l4 4-8.5 8.5 3.5 3.5 8.5-8.5 4 4v-11.5h-11.5z"
-                />
-              </svg>
-            </div>
+            0%
           </div>
           <div
-            class="mortality"
+            class="label"
           >
-            <div
-              class="value"
-            >
-              0%
-            </div>
-            <div
-              class="label"
-            >
-              Taux de mortalité
-            </div>
-          </div>
-          <div
-            class="deaths"
-          >
-            <div
-              class="value"
-            >
-              0
-            </div>
-            <div
-              class="label"
-            >
-              Nombre de décès
-            </div>
-          </div>
-          <div
-            class="population"
-          >
-            <div
-              class="value"
-            >
-              60 508 150
-            </div>
-            <div
-              class="label"
-            >
-              Population totale
-            </div>
+            Taux de mortalité
           </div>
         </div>
         <div
-          class="right"
-        />
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            60 508 150
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
       </div>
+      <div
+        class="right"
+      />
     </div>
   </div>
 </DocumentFragment>

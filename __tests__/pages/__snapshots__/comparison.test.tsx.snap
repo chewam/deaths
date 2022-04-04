@@ -3,13 +3,13 @@
 exports[`Page snapshot: comparison 1`] = `
 <DocumentFragment>
   <div
-    class="container panel comparison "
+    class="comparison"
   >
     <div
       class="chart"
     />
     <ul
-      class="filters button-group"
+      class="years"
     >
       <li>
         <button

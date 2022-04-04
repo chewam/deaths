@@ -6,3 +6,4 @@
 /out
 /.lighthouseci
 /tsconfig.tsbuildinfo
+/yarn-error.log

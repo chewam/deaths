@@ -1,36 +1,29 @@
-@use "../utils/box";
-@use "../utils/text";
-@use "../utils/theme";
-
-.header {
-  z-index: 1;
-  display: flex;
-  @include box.padding(0, 1);
+#__next > .header { /* stylelint-disable-line */
+  @apply
+    p-4
+    z-10
+    fixed
+    top-0
+    left-0
+    shadow
+    right-0
+    bg-white
+    dark:bg-gray-800;
 
   .wrapper {
-    flex: 1;
-    display: flex;
+    @apply
+      flex
+      mx-auto
+      container
+      items-center
+      justify-between;
 
-    h1 {
-      flex: 1;
-      @include text.size("xxl");
-      @include box.margin(1, 0);
-
-      a:hover {
-        text-decoration: none;
+    .menu {
+      @apply flex;
+  
+      li {
+        @apply ml-4;
       }
-    }
-  }
-}
-
-@include theme.apply(".header") using ($mode) {
-  box-shadow: theme.shadow($mode);
-  background-color: theme.color("surface", $mode);
-  a {
-    color: theme.color("color", $mode);
-
-    &:hover {
-      color: theme.color("link", $mode);
     }
   }
 }

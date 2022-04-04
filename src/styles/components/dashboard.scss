@@ -1,0 +1,66 @@
+#__next > .dashboard { /* stylelint-disable-line */
+  @apply
+    grid
+    gap-4
+    mx-auto
+    container
+    sm:grid-cols-2
+    md:grid-cols-2
+    lg:grid-cols-3
+    xl:grid-cols-4
+    2xl:grid-cols-5;
+
+  .tile {
+    @apply
+      p-4
+      shadow
+
+      grid
+      grid-cols-3
+      grid-flow-col-dense
+
+
+      bg-white
+      dark:bg-gray-800
+      ;
+
+    .right {
+      @apply col-span-2;
+    }
+
+    .left {
+      h3 {
+        @apply
+          flex
+          mb-2
+          items-center;
+        
+        i {
+          @apply text-2xl;
+
+          &.ri-arrow-right-down-line {
+            @apply text-green-600;
+          }
+
+          &.ri-arrow-right-up-line {
+            @apply text-red-600;
+          }
+        }
+      }
+
+      .stat {
+        @apply
+          mb-2
+          last:mb-0;
+
+        .label {
+          @apply text-xs;
+        }
+
+        .value {
+          @apply leading-tight;
+        }
+      }
+    }
+  }
+}

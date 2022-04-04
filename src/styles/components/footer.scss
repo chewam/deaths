@@ -1,33 +1,13 @@
-@use "../utils/box";
-@use "../utils/text";
-@use "../utils/theme";
+#__next > footer { /* stylelint-disable-line */
+  @apply
+    py-4
+    flex
+    mx-auto
+    text-sm
+    container
+    justify-between;
 
-footer {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  position: absolute;
-  @include text.size("xs");
-  justify-content: space-between;
-  @include box.padding(0.4, 0.5);
-
-  .wrapper {
-    display: flex;
-    align-items: center;
-  }
-
-  .lang {
-    margin-top: 1px;
-    position: relative;
-    text-transform: uppercase;
-  }
-}
-
-@include theme.apply("footer") using ($mode) {
-  box-shadow: theme.shadow($mode, "top");
-  background-color: theme.color("surface", $mode);
-  .spacer {
-    color: theme.color("muted", $mode);
+  .left, .right {
+    @apply flex items-center;
   }
 }

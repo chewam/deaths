@@ -2,7 +2,6 @@ import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
-import { useTheme } from "@/services/themes"
 import useOverview from "@/services/overview"
 import useRawDeaths from "@/services/raw-deaths"
 import ChartDataLabels from "chartjs-plugin-datalabels"
@@ -19,7 +18,6 @@ const Overview = (): JSX.Element => {
   useRawDeaths()
   const defaultColor = "#ffffff"
   const [overview] = useOverview()
-  const { values: theme = {} } = useTheme()
   const { labels, data } = overview as Overview
   const max = data.length ? Math.max(...data) : 0
   const { formatMessage: fm, formatNumber: fn } = useIntl()
@@ -27,16 +25,24 @@ const Overview = (): JSX.Element => {
   Chart.register(ChartDataLabels)
   Chart.register(annotationPlugin)
 
+  const theme = {
+    base: "#60a5fa",
+    text: "#111827",
+    border: "#d1d5db",
+    secondary: "#16a34a",
+    label: "#fff",
+  }
+
   const datasets = [
     {
       data,
       tension: 0.4,
       label: "Décès",
       borderWidth: 2,
-      borderColor: theme.primary,
-      pointBorderColor: theme.primary,
-      pointBackgroundColor: theme.surface,
-      backgroundColor: hexToRgba(theme.primary || defaultColor, 0.15),
+      borderColor: theme.base,
+      pointBorderColor: theme.base,
+      pointBackgroundColor: theme.base,
+      backgroundColor: hexToRgba(theme.base || defaultColor, 0.15),
     },
   ] as ChartDataset[]
 
@@ -53,7 +59,7 @@ const Overview = (): JSX.Element => {
     width: 0,
     height: 0,
     enabled: true,
-    fontColor: theme["on-primary"],
+    fontColor: theme.label,
     content: getAnnotationContent(),
     backgroundColor: theme.secondary,
   } as LabelOptions
@@ -90,8 +96,8 @@ const Overview = (): JSX.Element => {
         borderRadius: 4,
         textAlign: "center",
         font: { weight: "bold" },
-        color: theme["on-primary"],
-        backgroundColor: theme.primary,
+        color: theme.label,
+        backgroundColor: theme.base,
         padding: { top: 4, right: 5, bottom: 4, left: 5 },
         formatter: (value: number) => (value / 1000).toFixed() + "K",
         display: ({ active, dataIndex, dataset: { data } }) => {
@@ -106,7 +112,7 @@ const Overview = (): JSX.Element => {
         grid: { display: false },
         ticks: {
           padding: 0,
-          color: theme.color,
+          color: theme.text,
         },
       },
       y: {
@@ -114,15 +120,14 @@ const Overview = (): JSX.Element => {
         suggestedMax: max && max + (max * 5) / 100,
         ticks: {
           padding: 10,
-          color: theme.color,
+          color: theme.text,
         },
         grid: {
           lineWidth: 1,
           drawTicks: false,
           drawBorder: false,
           borderDash: [3, 3],
-          color: (context) =>
-            context.tick.value > 0 ? theme.muted : theme.surface,
+          color: theme.border,
         },
       },
     },

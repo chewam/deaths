@@ -1,4 +1,4 @@
-import Year from "./Year"
+import Year from "./Tile"
 import useYears from "@/services/years"
 import { sumArray } from "@/utils/index"
 import useRawDeaths from "@/services/raw-deaths"

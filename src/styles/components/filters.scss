@@ -1,0 +1,99 @@
+#__next > .filters { /* stylelint-disable-line */
+  @apply
+    pt-4
+    pb-6
+    px-6
+    mb-4
+    flex
+    z-10
+    mt-24
+    shadow
+    mx-auto
+    relative
+    container
+    items-center
+    bg-white
+    dark:bg-gray-800;
+
+  .genders {
+    @apply
+      ml-8
+      flex
+      flex-row
+      leading-none
+      items-center;
+
+    i {
+      @apply
+        text-2xl
+        last:ml-2
+        cursor-pointer
+        text-gray-300
+        dark:text-gray-600
+        leading-5
+        ;
+      
+      &.active {
+        @apply
+          text-blue-900
+          dark:text-blue-400;
+      }
+    }
+  }
+
+  .rc-slider {
+    @apply flex-1;
+
+    .rc-slider-rail {
+      @apply
+      bg-gray-300
+      dark:bg-gray-600;
+    }
+
+    .rc-slider-track {
+      @apply
+        bg-blue-900
+        dark:bg-blue-400;
+    }
+
+    .rc-slider-handle {
+      @apply
+        bg-white
+        border-blue-900
+        dark:bg-gray-600
+        dark:border-blue-400;
+    }
+
+    .rc-slider-step {
+      .rc-slider-dot {
+        @apply
+          bg-white
+          border-gray-300
+          dark:bg-gray-600
+          dark:border-gray-500;
+      }
+
+      .rc-slider-dot-active {
+        @apply
+          border-blue-900
+          dark:border-blue-400;
+      }
+    }
+
+    .rc-slider-mark {
+      @apply leading-none relative top-3;
+
+      .rc-slider-mark-text {
+        @apply
+          text-gray-400
+          dark:text-gray-600;
+      }
+
+      .rc-slider-mark-text-active {
+        @apply
+          text-gray-900
+          dark:text-gray-300;
+      }
+    }
+  }
+}

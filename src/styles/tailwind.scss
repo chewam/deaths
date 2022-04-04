@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply
+      text-base
+      font-roboto
+      font-normal
+      antialiased
+      bg-white
+      text-gray-900
+      dark:bg-gray-900
+      dark:text-gray-300;
+
+    text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl font-bold;
+  }
+
+  @font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    font-family: Roboto;
+    src: url("/fonts/Roboto-Regular.ttf");
+  }
+  
+  @font-face {
+    font-weight: 300;
+    font-display: swap;
+    font-style: italic;
+    font-family: Roboto;
+    src: url("/fonts/Roboto-Italic.ttf");
+  }
+
+  @font-face {
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+    font-family: Roboto;
+    src: url("/fonts/Roboto-Bold.ttf");
+  }
+}
