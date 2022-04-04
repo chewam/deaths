@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/chewam/deaths/compare/v1.0.9...v1.1.0) (2022-04-04)
+
+
+### Features
+
+* Look and feel update ([7f07fdd](https://github.com/chewam/deaths/commit/7f07fdd0364eeff76d1e32a1b9a25ed12ade1813))
+
 ## [1.0.9](https://github.com/chewam/deaths/compare/v1.0.8...v1.0.9) (2022-03-27)
 
 
