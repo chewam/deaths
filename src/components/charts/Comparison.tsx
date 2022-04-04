@@ -42,9 +42,10 @@ const Comparison = (): JSX.Element => {
 
   const theme = {
     base: "#60a5fa",
-    text: "#d1d5db",
-    border: "#4b5563",
+    text: "#111827",
+    border: "#d1d5db",
     secondary: "#16a34a",
+    label: "#fff",
   }
 
   Chart.register(annotationPlugin)
@@ -65,9 +66,9 @@ const Comparison = (): JSX.Element => {
       align: "end",
       anchor: "end",
       borderRadius: 4,
+      color: theme.label,
       textAlign: "center",
       font: { weight: "bold" },
-      color: theme.text,
       backgroundColor: paletteSubset[index],
       padding: { top: 4, right: 5, bottom: 4, left: 5 },
       display: ({ active }: Context) => (active ? true : "auto"),
@@ -96,7 +97,7 @@ const Comparison = (): JSX.Element => {
     width: 0,
     height: 0,
     enabled: true,
-    fontColor: theme.text,
+    fontColor: theme.label,
     content: getAnnotationContent(),
     backgroundColor: theme.secondary,
   } as LabelOptions

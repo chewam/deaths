@@ -27,9 +27,10 @@ const Overview = (): JSX.Element => {
 
   const theme = {
     base: "#60a5fa",
-    text: "#d1d5db",
-    border: "#4b5563",
+    text: "#111827",
+    border: "#d1d5db",
     secondary: "#16a34a",
+    label: "#fff",
   }
 
   const datasets = [
@@ -58,7 +59,7 @@ const Overview = (): JSX.Element => {
     width: 0,
     height: 0,
     enabled: true,
-    fontColor: theme.text,
+    fontColor: theme.label,
     content: getAnnotationContent(),
     backgroundColor: theme.secondary,
   } as LabelOptions
@@ -95,7 +96,7 @@ const Overview = (): JSX.Element => {
         borderRadius: 4,
         textAlign: "center",
         font: { weight: "bold" },
-        color: theme.text,
+        color: theme.label,
         backgroundColor: theme.base,
         padding: { top: 4, right: 5, bottom: 4, left: 5 },
         formatter: (value: number) => (value / 1000).toFixed() + "K",

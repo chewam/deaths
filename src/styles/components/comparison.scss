@@ -23,12 +23,17 @@
       gap-2
       shadow
       flex-wrap
-      justify-evenly
+      drop-shadow
       dark:bg-gray-800;
 
     li {
       button {
-        @apply px-2 py-0.5 rounded-sm bg-gray-900 hover:bg-gray-900;
+        @apply
+          px-2
+          py-0.5
+          rounded
+          bg-gray-900
+          hover:bg-gray-900;
       }
     }
   }

@@ -1,10 +1,6 @@
 a[href] {
   @apply
-    text-blue-400
-    hover:text-blue-500
-    visited:text-blue-400;
-
-  &:visited {
-    @apply text-blue-400;
-  }
+    text-blue-900
+    hover:text-blue-600
+    visited:text-blue-900;
 }

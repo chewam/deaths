@@ -18,9 +18,10 @@ const Distribution = (): JSX.Element => {
 
   const theme = {
     base: "#60a5fa",
-    text: "#d1d5db",
-    border: "#4b5563",
+    text: "#111827",
+    border: "#d1d5db",
     secondary: "#16a34a",
+    label: "#fff",
   }
 
   Chart.register(ChartDataLabels)
@@ -30,13 +31,13 @@ const Distribution = (): JSX.Element => {
     yAxisID: "y",
     data: ageGroup,
     label: `bar-${i}`,
-    borderColor: theme.border,
+    borderColor: "transparent",
     borderWidth: { top: 2, right: 0, bottom: 2, left: 0 },
     backgroundColor: hexToRgba(theme.base || defaultColor, 0.8),
     datalabels: {
       borderRadius: 4,
       textAlign: "center",
-      color: theme.text,
+      color: theme.label,
       font: { size: 11, weight: "bold" },
       backgroundColor: ({ active }: Context) =>
         active
@@ -92,9 +93,9 @@ const Distribution = (): JSX.Element => {
         align: "end",
         anchor: "end",
         borderRadius: 4,
+        color: theme.label,
         textAlign: "center",
         font: { weight: "bold" },
-        color: theme.text,
         backgroundColor: theme.secondary,
         padding: { top: 4, right: 5, bottom: 4, left: 5 },
         formatter: (value: number) => value.toFixed(2) + "%",
