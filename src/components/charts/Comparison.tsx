@@ -2,20 +2,21 @@ import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
-import { palette } from "@/utils/index"
-import useYears from "@/services/years"
-import Months from "@/data/months.json"
-import useDeaths from "@/services/deaths"
-import useRawDeaths from "@/services/raw-deaths"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-import annotationPlugin from "chartjs-plugin-annotation"
-
 import type { Context } from "chartjs-plugin-datalabels"
+import annotationPlugin from "chartjs-plugin-annotation"
 import type { ChartDataset, ChartOptions } from "chart.js"
 import type {
   LabelOptions,
   LineAnnotationOptions,
 } from "chartjs-plugin-annotation"
+
+import { palette } from "@/utils/index"
+import useYears from "@/services/years"
+import Months from "@/data/months.json"
+import useDeaths from "@/services/deaths"
+import useRawDeaths from "@/services/raw-deaths"
+import useColorScheme from "@/services/use-color-scheme"
 
 const getMaximum = (data: Deaths["data"]) => {
   if (!data) return {}
@@ -35,6 +36,7 @@ const Comparison = (): JSX.Element => {
   const [years] = useYears()
   const [deaths] = useDeaths()
   const defaultColor = "#ffffff"
+  const darkMode = useColorScheme()
   const { labels, data } = deaths as Deaths
   const max = getMaximum(data)
   const { formatMessage: fm, formatNumber: fn } = useIntl()
@@ -42,10 +44,10 @@ const Comparison = (): JSX.Element => {
 
   const theme = {
     base: "#60a5fa",
-    text: "#111827",
-    border: "#d1d5db",
+    label: "#ffffff",
     secondary: "#16a34a",
-    label: "#fff",
+    text: darkMode ? "#d1d5db" : "#111827",
+    border: darkMode ? "#4b5563" : "#d1d5db",
   }
 
   Chart.register(annotationPlugin)
