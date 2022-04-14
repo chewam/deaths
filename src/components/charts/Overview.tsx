@@ -2,14 +2,16 @@ import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
-import useOverview from "@/services/overview"
-import useRawDeaths from "@/services/raw-deaths"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import type { ChartDataset, ChartOptions } from "chart.js"
 import annotationPlugin, {
   LabelOptions,
   LineAnnotationOptions,
 } from "chartjs-plugin-annotation"
+
+import useOverview from "@/services/overview"
+import useRawDeaths from "@/services/raw-deaths"
+import useColorScheme from "@/services/use-color-scheme"
 
 const average = (nums: number[]): number =>
   nums.reduce((a, b) => a + b) / nums.length
@@ -18,6 +20,7 @@ const Overview = (): JSX.Element => {
   useRawDeaths()
   const defaultColor = "#ffffff"
   const [overview] = useOverview()
+  const darkMode = useColorScheme()
   const { labels, data } = overview as Overview
   const max = data.length ? Math.max(...data) : 0
   const { formatMessage: fm, formatNumber: fn } = useIntl()
@@ -27,10 +30,10 @@ const Overview = (): JSX.Element => {
 
   const theme = {
     base: "#60a5fa",
-    text: "#111827",
-    border: "#d1d5db",
+    label: "#ffffff",
     secondary: "#16a34a",
-    label: "#fff",
+    text: darkMode ? "#d1d5db" : "#111827",
+    border: darkMode ? "#4b5563" : "#d1d5db",
   }
 
   const datasets = [

@@ -2,26 +2,28 @@ import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Bar } from "react-chartjs-2"
-import useMortality from "@/services/mortality"
-import useRawMortality from "@/services/raw-mortality"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-
 import type { Context } from "chartjs-plugin-datalabels"
 import type { ChartDataset, ChartOptions } from "chart.js"
+
+import useMortality from "@/services/mortality"
+import useRawMortality from "@/services/raw-mortality"
+import useColorScheme from "@/services/use-color-scheme"
 
 const Distribution = (): JSX.Element => {
   useRawMortality()
   const defaultColor = "#ffffff"
+  const darkMode = useColorScheme()
   const [mortality] = useMortality()
   const { formatMessage: fm, formatNumber: fn } = useIntl()
   const { labels, data, ratio, ageGroups } = mortality as Mortality
 
   const theme = {
     base: "#60a5fa",
-    text: "#111827",
-    border: "#d1d5db",
+    label: "#ffffff",
     secondary: "#16a34a",
-    label: "#fff",
+    text: darkMode ? "#d1d5db" : "#111827",
+    border: darkMode ? "#4b5563" : "#d1d5db",
   }
 
   Chart.register(ChartDataLabels)

@@ -1,9 +1,7 @@
 .comparison {
   @apply
     flex
-    mx-auto
-    flex-col
-    container;
+    flex-col;
 
   height: calc(100vh - 14rem);
 

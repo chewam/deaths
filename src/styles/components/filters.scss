@@ -1,4 +1,4 @@
-#__next > .filters { /* stylelint-disable-line */
+#__next > .container > .filters { /* stylelint-disable-line */
   @apply
     pt-4
     pb-6
@@ -6,11 +6,8 @@
     mb-4
     flex
     z-10
-    mt-24
     shadow
-    mx-auto
     relative
-    container
     items-center
     bg-white
     dark:bg-gray-800;

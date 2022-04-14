@@ -2,8 +2,10 @@ import Distribution from "@/components/charts/Distribution"
 
 const Page = (): JSX.Element => {
   return (
-    <div className="distribution">
-      <Distribution />
+    <div className="container mx-auto px-6">
+      <div className="distribution">
+        <Distribution />
+      </div>
     </div>
   )
 }

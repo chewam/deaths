@@ -3,7 +3,11 @@
 exports[`Page snapshot: overview 1`] = `
 <DocumentFragment>
   <div
-    class="overview"
-  />
+    class="container mx-auto px-6"
+  >
+    <div
+      class="overview"
+    />
+  </div>
 </DocumentFragment>
 `;
