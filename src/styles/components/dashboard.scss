@@ -1,7 +1,9 @@
 #__next > .dashboard { /* stylelint-disable-line */
   @apply
     grid
+    px-6
     gap-4
+    mt-24
     mx-auto
     container
     sm:grid-cols-2
