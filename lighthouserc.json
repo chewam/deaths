@@ -3,11 +3,24 @@
     "assert": {
       "preset": "lighthouse:no-pwa",
       "assertions": {
-        "errors-in-console": "off",
-        "is-crawlable": ["warn", {"minScore": 0}],
-        "unused-javascript": ["warn", {"minScore": 0}],
-        "uses-passive-event-listeners": ["warn", {"minScore": 0.9}],
-        "csp-xss": "off"
+        "unused-javascript": [
+          "warn"
+        ],
+        "csp-xss": [
+          "warn"
+        ],
+        "color-contrast": [
+          "warn"
+        ],
+        "heading-order": [
+          "warn"
+        ],
+        "tap-targets": [
+          "warn"
+        ],
+        "unused-css-rules": [
+          "warn"
+        ]
       }
     },
     "upload": {

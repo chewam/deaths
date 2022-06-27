@@ -35,7 +35,7 @@ class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang="en">
-        <Head />
+        <Head nonce={process.env.NONCE} />
         <body>
           <Main />
           <NextScript />

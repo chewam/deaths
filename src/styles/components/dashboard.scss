@@ -16,15 +16,11 @@
     @apply
       p-4
       shadow
-
       grid
       grid-cols-3
       grid-flow-col-dense
-
-
       bg-white
-      dark:bg-gray-800
-      ;
+      dark:bg-gray-800;
 
     .right {
       @apply col-span-2;
@@ -56,11 +52,19 @@
           last:mb-0;
 
         .label {
-          @apply text-xs;
+          @apply text-xs text-neutral-500;
         }
 
-        .value {
-          @apply leading-tight;
+        &.mortality-rate {
+          .value {
+            @apply
+              leading-tight 
+              text-green-600;
+  
+            &.raise {
+              @apply text-red-600;
+            }
+          }
         }
       }
     }
