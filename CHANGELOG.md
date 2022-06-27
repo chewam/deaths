@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/chewam/deaths/compare/v1.1.0...v1.1.1) (2022-06-27)
+
+
+### Bug Fixes
+
+* lhci blocking checks ([e9a04e7](https://github.com/chewam/deaths/commit/e9a04e7e97d20721b9763e0a185c9815a3b22169))
+
 # [1.1.0](https://github.com/chewam/deaths/compare/v1.0.9...v1.1.0) (2022-04-04)
 
 
