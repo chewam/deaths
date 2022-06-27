@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/chewam/deaths/compare/v1.1.2...v1.1.3) (2022-06-27)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([9a4f764](https://github.com/chewam/deaths/commit/9a4f764634b86c3202b66e7dc630f725c19046d1))
+
 ## [1.1.2](https://github.com/chewam/deaths/compare/v1.1.1...v1.1.2) (2022-06-27)
 
 
