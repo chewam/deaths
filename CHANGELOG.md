@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/chewam/deaths/compare/v1.1.1...v1.1.2) (2022-06-27)
+
+
+### Bug Fixes
+
+* **deps:** update all patch dependencies ([ee8f49f](https://github.com/chewam/deaths/commit/ee8f49f5124817211407d0447231feb25c9945b4))
+
 ## [1.1.1](https://github.com/chewam/deaths/compare/v1.1.0...v1.1.1) (2022-06-27)
 
 
