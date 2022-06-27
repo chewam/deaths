@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/chewam/deaths/compare/v1.1.3...v1.1.4) (2022-06-27)
+
+
+### Bug Fixes
+
+* **deps:** update react monorepo to v18 ([bfd89d7](https://github.com/chewam/deaths/commit/bfd89d7baad9502187ebcb61feafcca7707aeeba))
+
 ## [1.1.3](https://github.com/chewam/deaths/compare/v1.1.2...v1.1.3) (2022-06-27)
 
 
