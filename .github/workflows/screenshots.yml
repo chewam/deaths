@@ -24,7 +24,7 @@ jobs:
           devices: iPhone X,iPhone X landscape,iPhone 6,iPhone 6 landscape,Galaxy S5,Galaxy S5 landscape,Nexus 10,Nexus 10 landscape,iPad,iPad landscape
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           path: screenshots
           name: test-screenshots
