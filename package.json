@@ -70,7 +70,7 @@
     "jest-watch-typeahead": "1.1.0",
     "postcss": "8.4.14",
     "prettier": "2.7.1",
-    "prettier-eslint": "13.0.0",
+    "prettier-eslint": "15.0.1",
     "react-test-renderer": "18.2.0",
     "stylelint": "14.9.1",
     "stylelint-config-prettier-scss": "0.0.1",
