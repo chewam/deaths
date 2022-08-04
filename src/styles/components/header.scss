@@ -12,18 +12,36 @@
   .wrapper {
     @apply
       px-6
-      py-4
       flex
       mx-auto
       container
-      items-center
       justify-between;
 
+    h1 {
+      @apply py-4;
+    }
+
     .menu {
-      @apply flex;
+      @apply flex gap-x-8;
   
       li {
-        @apply ml-4;
+        @apply flex;
+
+        a {
+          @apply
+            flex
+            items-center
+            border-blue-900
+            dark:border-blue-400
+            hover:border-blue-600
+            hover:dark:border-blue-300;
+        }
+
+        &.active {
+          a {
+            @apply border-b;
+          }
+        }
       }
     }
   }
