@@ -1,13 +1,13 @@
-import Distribution from "@/components/charts/Distribution"
+import DistributionChart from "@/components/charts/Distribution"
 
-const Page = (): JSX.Element => {
+const Distribution = (): JSX.Element => {
   return (
     <div className="container mx-auto px-6">
       <div className="distribution">
-        <Distribution />
+        <DistributionChart />
       </div>
     </div>
   )
 }
 
-export default Page
+export default Distribution

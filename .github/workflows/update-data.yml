@@ -15,11 +15,6 @@ jobs:
           ref: master
           token: ${{ secrets.PAT }}
 
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 14
-
       - name: Yarn cache setup
         uses: c-hive/gha-yarn-cache@v2
 
