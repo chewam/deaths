@@ -14,7 +14,7 @@ const Menu = (): JSX.Element => {
 
   return (
     <ul className="menu">
-      {items.map((item, i) => (
+      {items.map((_item, i) => (
         <li key={i} className={`${view === items[i].view ? "active" : ""}`}>
           <Link href={`/${encodeURIComponent(items[i].view)}`}>
             <a>
