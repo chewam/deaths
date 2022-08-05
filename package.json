@@ -67,7 +67,7 @@
     "event-stream": "4.0.1",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.5.1",
-    "jest-watch-typeahead": "1.1.0",
+    "jest-watch-typeahead": "2.0.0",
     "postcss": "8.4.14",
     "prettier": "2.7.1",
     "prettier-eslint": "13.0.0",
