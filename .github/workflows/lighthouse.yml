@@ -19,9 +19,11 @@ jobs:
         run: |
           echo "deployment_status: ${{ github.event.deployment_status }}"
           echo "deployment_status.deployment_id: ${{ github.event.deployment_status.deployment_id }}"
+          echo "deployment_status.id: ${{ github.event.deployment_status.id }}"
           echo "workflow: ${{ github.workflow }}"
           echo "event_name: ${{ github.event_name }}"
           echo "event.ref: ${{ github.event.ref }}"
+          echo "event.head_ref: ${{ github.event.head_ref }}"
 
       - name: run lhci
         run: npx --yes @lhci/cli@latest autorun --collect.url=${{ github.event.deployment_status.target_url }}
