@@ -54,7 +54,6 @@ const Dashboard = (): JSX.Element => {
         average={average}
         mortality={mortality}
         population={population}
-        main={i === yearsList.length - 1}
         ageGroups={getAgeGroups(ageGroups, i)}
         trend={previous[i - 1] ? mortality <= previous[i - 1] : null}
       />
