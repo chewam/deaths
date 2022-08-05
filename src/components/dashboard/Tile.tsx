@@ -5,11 +5,11 @@ interface Props {
   year: string
   trend: boolean | null
   deaths: number
+  main?: boolean
   average: number
   mortality: number
   ageGroups: number[]
   population: number
-  main: boolean
 }
 
 const theme = {
@@ -27,7 +27,7 @@ const Tile = ({
   mortality,
   ageGroups,
   population,
-  main,
+  main = false,
 }: Props): JSX.Element => {
   return (
     <div className="tile">
