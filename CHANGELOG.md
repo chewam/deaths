@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/chewam/deaths/compare/v1.2.1...v1.2.2) (2022-08-05)
+
+
+### Bug Fixes
+
+* resize first tile chart labels ([#87](https://github.com/chewam/deaths/issues/87)) ([9e79eb9](https://github.com/chewam/deaths/commit/9e79eb93ca67bca4230808be0d3dd66d338af52c))
+
 ## [1.2.1](https://github.com/chewam/deaths/compare/v1.2.0...v1.2.1) (2022-08-05)
 
 
