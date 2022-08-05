@@ -1,12 +1,12 @@
 import Years from "@/components/filters/Years"
-import Comparison from "@/components/charts/Comparison"
+import ComparisonChart from "@/components/charts/Comparison"
 
-const Page = (): JSX.Element => {
+const Comparison = (): JSX.Element => {
   return (
     <div className="container mx-auto px-6">
       <div className="comparison">
         <div className="chart">
-          <Comparison />
+          <ComparisonChart />
         </div>
         <Years />
       </div>
@@ -14,4 +14,4 @@ const Page = (): JSX.Element => {
   )
 }
 
-export default Page
+export default Comparison
