@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/chewam/deaths/compare/v1.1.4...v1.2.0) (2022-08-05)
+
+
+### Features
+
+* **menu:** underline selected menu item ([#73](https://github.com/chewam/deaths/issues/73)) ([f8efc7a](https://github.com/chewam/deaths/commit/f8efc7adaf557ffa7e5ec52902f746a80bbd1d94))
+
 ## [1.1.4](https://github.com/chewam/deaths/compare/v1.1.3...v1.1.4) (2022-06-27)
 
 
