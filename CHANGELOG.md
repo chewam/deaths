@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/chewam/deaths/compare/v1.2.0...v1.2.1) (2022-08-05)
+
+
+### Bug Fixes
+
+* add 2022 as default selected year ([#83](https://github.com/chewam/deaths/issues/83)) ([6b7c051](https://github.com/chewam/deaths/commit/6b7c051b3dfa228391492688e55a2f64d6027e06))
+
 # [1.2.0](https://github.com/chewam/deaths/compare/v1.1.4...v1.2.0) (2022-08-05)
 
 
