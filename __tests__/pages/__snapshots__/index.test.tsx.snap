@@ -26,8 +26,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -91,8 +90,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -156,8 +154,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -221,8 +218,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -286,8 +282,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -351,8 +346,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -416,8 +410,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -481,8 +474,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -546,8 +538,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -611,8 +602,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -676,8 +666,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -741,8 +730,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -806,8 +794,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -871,8 +858,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -936,8 +922,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1001,8 +986,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1066,8 +1050,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1131,8 +1114,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1196,8 +1178,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1261,8 +1242,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1326,8 +1306,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1391,8 +1370,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1456,8 +1434,7 @@ exports[`Page snapshot: index 1`] = `
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
