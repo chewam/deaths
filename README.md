@@ -62,4 +62,4 @@ yarn update-data
 ```
 ---
 
-[![codecov](https://codecov.io/gh/chewam/deaths/branch/master/graph/badge.svg?token=AYKKEFMQVK)](https://codecov.io/gh/chewam/deaths) &nbsp; [![github](https://github.com/chewam/deaths/workflows/Quality/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3AQuality) &nbsp; [![github](https://github.com/chewam/deaths/workflows/Release/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3ARelease) &nbsp; [![github](https://github.com/chewam/deaths/workflows/CodeQL/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3ACodeQL)
+[![github](https://github.com/chewam/deaths/workflows/Quality/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3AQuality) &nbsp; [![github](https://github.com/chewam/deaths/workflows/Release/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3ARelease) &nbsp; [![github](https://github.com/chewam/deaths/workflows/CodeQL/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3ACodeQL)
