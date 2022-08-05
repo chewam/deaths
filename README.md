@@ -62,4 +62,4 @@ yarn update-data
 ```
 ---
 
-[![github](https://github.com/chewam/deaths/workflows/Quality/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3AQuality) &nbsp; [![github](https://github.com/chewam/deaths/workflows/Release/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3ARelease) &nbsp; [![github](https://github.com/chewam/deaths/workflows/CodeQL/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3ACodeQL)
+[![github](https://github.com/chewam/deaths/workflows/Quality/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3AQuality) &nbsp; [![github](https://github.com/chewam/deaths/workflows/Release/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3ARelease) &nbsp; [![github](https://github.com/chewam/deaths/workflows/CodeQL/badge.svg)](https://github.com/chewam/deaths/actions?query=workflow%3ACodeQL) &nbsp; [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=chewam_deaths&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=chewam_deaths)
