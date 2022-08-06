@@ -13,7 +13,7 @@ if (analyzerEnabled) {
 
   const ContentSecurityPolicy = `
     default-src 'self';
-    script-src 'self' *.sentry.io *.googletagmanager.com 'sha256-Knm+Tl38SOjwUxvDOr3uFM81svhZ9Twnt6mYVgF2K9s=';
+    script-src 'self' *.sentry.io *.googletagmanager.com www.google-analytics.com 'sha256-Knm+Tl38SOjwUxvDOr3uFM81svhZ9Twnt6mYVgF2K9s=';
     style-src 'self' ${stylesHashes} 'unsafe-hashes';
     font-src 'self';
     connect-src 'self' *.sentry.io vitals.vercel-insights.com;
