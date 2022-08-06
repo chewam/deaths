@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/chewam/deaths/compare/v1.2.2...v1.2.3) (2022-08-06)
+
+
+### Bug Fixes
+
+* performances and accessibility ([#88](https://github.com/chewam/deaths/issues/88)) ([c00d9d2](https://github.com/chewam/deaths/commit/c00d9d24673864d1b61b3edf2c76155442f2ac31))
+
 ## [1.2.2](https://github.com/chewam/deaths/compare/v1.2.1...v1.2.2) (2022-08-05)
 
 
