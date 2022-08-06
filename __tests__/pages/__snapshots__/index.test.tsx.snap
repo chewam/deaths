@@ -11,7 +11,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -21,13 +23,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -76,7 +77,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -86,13 +89,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -141,7 +143,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -151,13 +155,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -206,7 +209,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -216,13 +221,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -271,7 +275,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -281,13 +287,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -336,7 +341,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -346,13 +353,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -401,7 +407,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -411,13 +419,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -466,7 +473,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -476,13 +485,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -531,7 +539,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -541,13 +551,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -596,7 +605,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -606,13 +617,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -661,7 +671,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -671,13 +683,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -726,7 +737,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -736,13 +749,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -791,7 +803,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -801,13 +815,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -856,7 +869,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -866,13 +881,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -921,7 +935,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -931,13 +947,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -986,7 +1001,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -996,13 +1013,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1051,7 +1067,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1061,13 +1079,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1116,7 +1133,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1126,13 +1145,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1181,7 +1199,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1191,13 +1211,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1246,7 +1265,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1256,13 +1277,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1311,7 +1331,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1321,13 +1343,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1376,7 +1397,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1386,13 +1409,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>
@@ -1441,7 +1463,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1451,13 +1475,12 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
           <div
-            class="value"
-            style="color: rgb(22, 163, 74);"
+            class="value below"
           >
             0%
           </div>

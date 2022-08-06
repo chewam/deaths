@@ -4,14 +4,14 @@ A web page to show statistics about deaths in France from year 2000 up to now, b
 
 ![Preview](public/screenshot.png)
 
-### Install
-#### Install dependencies
+## Install
+### Install dependencies
 
 ```bash
 yarn
 ```
-### Development
-#### Run development version
+## Development
+### Run development version
 
 ```bash
 yarn dev
@@ -19,33 +19,33 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Tests
-#### Run code linter
+## Tests
+### Run code linter
 
 ```bash
 yarn lint
 ```
 
-#### Run types check
+### Run types check
 
 ```bash
 yarn type-check
 ```
 
-#### Run tests
+### Run tests
 
 ```bash
 yarn test
 ```
 
-### Built version
-#### Build application
+## Built version
+### Build application
 
 ```bash
 yarn build
 ```
 
-#### Run built version
+### Run built version
 
 ```bash
 yarn start --port 3001
@@ -53,9 +53,15 @@ yarn start --port 3001
 
 Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
 
-### Update datasets
+### Analyze Built version
 
-#### Download and process data files
+```bash
+yarn analyze
+```
+
+## Update datasets
+
+### Download and process data files
 
 ```bash
 yarn update-data

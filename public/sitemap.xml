@@ -1,0 +1,29 @@
+<!-- public/sitemap.xml -->
+<xml version="1.0" encoding="UTF-8">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://deaths.chewam.com/</loc>
+  </url>
+  <url>
+    <loc>https://deaths.chewam.com/overview</loc>
+  </url>
+  <url>
+    <loc>https://deaths.chewam.com/comparison</loc>
+  </url>
+  <url>
+    <loc>https://deaths.chewam.com/distribution</loc>
+  </url>
+  <url>
+    <loc>https://deaths.chewam.com/fr</loc>
+  </url>
+  <url>
+    <loc>https://deaths.chewam.com/fr/overview</loc>
+  </url>
+  <url>
+    <loc>https://deaths.chewam.com/fr/comparison</loc>
+  </url>
+  <url>
+    <loc>https://deaths.chewam.com/fr/distribution</loc>
+  </url>
+</urlset>
+</xml>

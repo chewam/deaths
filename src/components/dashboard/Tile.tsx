@@ -12,13 +12,6 @@ interface Props {
   population: number
 }
 
-const theme = {
-  base: "#60a5fa",
-  text: "#d1d5db",
-  border: "#4b5563",
-  secondary: "#16a34a",
-}
-
 const Tile = ({
   year,
   trend,
@@ -32,25 +25,16 @@ const Tile = ({
   return (
     <div className="tile">
       <div className="left">
-        <h3>
+        <div className="year-trend">
           <div className="year">{year}</div>
-          {/* <div className="trend"> */}
           {trend ? (
-            // <ImArrowDownRight color={theme.secondary} />
             <i className="ri-arrow-right-down-line" title="mortality drop"></i>
           ) : (
-            // <ImArrowUpRight color={theme.important} />
             <i className="ri-arrow-right-up-line" title="mortality raise"></i>
           )}
-          {/* </div> */}
-        </h3>
+        </div>
         <div className="stat">
-          <div
-            className="value"
-            style={{
-              color: mortality > average ? theme.base : theme.secondary,
-            }}
-          >
+          <div className={`value ${mortality > average ? "above" : "below"}`}>
             <Num value={Number(mortality.toFixed(3))} />%
           </div>
           <div className="label">

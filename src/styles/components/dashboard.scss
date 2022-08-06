@@ -15,26 +15,24 @@
   .tile {
     @apply
       p-4
-      shadow
-
       grid
-      grid-cols-3
-      grid-flow-col-dense
-
-
+      shadow
       bg-white
+      grid-cols-3
       dark:bg-gray-800
-      ;
+      grid-flow-col-dense;
 
     .right {
       @apply col-span-2;
     }
 
     .left {
-      h3 {
+      .year-trend {
         @apply
           flex
           mb-2
+          text-xl
+          font-bold
           items-center;
         
         i {
@@ -61,6 +59,14 @@
 
         .value {
           @apply leading-tight;
+
+          &.above {
+            @apply text-blue-900 dark:text-blue-400;
+          }
+
+          &.below {
+            @apply text-green-900 dark:text-green-400;
+          }
         }
       }
     }
