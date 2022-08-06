@@ -16,7 +16,7 @@ if (analyzerEnabled) {
     default-src 'self';
     img-src 'self' www.google-analytics.com;
     style-src 'self' ${stylesHashes} 'unsafe-hashes';
-    connect-src 'self' *.sentry.io vitals.vercel-insights.com;
+    connect-src 'self' *.sentry.io vitals.vercel-insights.com www.google-analytics.com;
     script-src 'self' *.sentry.io *.googletagmanager.com www.google-analytics.com 'sha256-Knm+Tl38SOjwUxvDOr3uFM81svhZ9Twnt6mYVgF2K9s=';
   `
 
