@@ -7,6 +7,7 @@ const Head = (): JSX.Element => {
   return (
     <NextHead>
       <title>Mortalité en France</title>
+      <meta name="robots" content="all" />
       <link rel="icon" href="/favicon.ico" />
       <link
         as="font"
