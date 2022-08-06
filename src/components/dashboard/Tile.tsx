@@ -25,14 +25,14 @@ const Tile = ({
   return (
     <div className="tile">
       <div className="left">
-        <h3>
+        <div className="year-trend">
           <div className="year">{year}</div>
           {trend ? (
             <i className="ri-arrow-right-down-line" title="mortality drop"></i>
           ) : (
             <i className="ri-arrow-right-up-line" title="mortality raise"></i>
           )}
-        </h3>
+        </div>
         <div className="stat">
           <div className={`value ${mortality > average ? "above" : "below"}`}>
             <Num value={Number(mortality.toFixed(3))} />%

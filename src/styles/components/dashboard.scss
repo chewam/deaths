@@ -27,10 +27,12 @@
     }
 
     .left {
-      h3 {
+      .year-trend {
         @apply
           flex
           mb-2
+          text-xl
+          font-bold
           items-center;
         
         i {

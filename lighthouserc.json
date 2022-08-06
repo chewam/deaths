@@ -3,7 +3,9 @@
     "assert": {
       "preset": "lighthouse:no-pwa",
       "assertions": {
-        
+        "tap-targets": ["warn"],
+        "unused-css-rules": ["warn"],
+        "unused-javascript": ["warn"]
       }
     },
     "upload": {
