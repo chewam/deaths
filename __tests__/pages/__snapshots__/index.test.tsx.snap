@@ -11,7 +11,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -21,7 +23,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -75,7 +77,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -85,7 +89,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -139,7 +143,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -149,7 +155,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -203,7 +209,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -213,7 +221,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -267,7 +275,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -277,7 +287,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -331,7 +341,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -341,7 +353,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -395,7 +407,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -405,7 +419,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -459,7 +473,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -469,7 +485,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -523,7 +539,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -533,7 +551,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -587,7 +605,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -597,7 +617,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -651,7 +671,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -661,7 +683,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -715,7 +737,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -725,7 +749,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -779,7 +803,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -789,7 +815,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -843,7 +869,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -853,7 +881,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -907,7 +935,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -917,7 +947,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -971,7 +1001,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -981,7 +1013,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -1035,7 +1067,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1045,7 +1079,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -1099,7 +1133,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1109,7 +1145,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -1163,7 +1199,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1173,7 +1211,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -1227,7 +1265,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1237,7 +1277,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -1291,7 +1331,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1301,7 +1343,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -1355,7 +1397,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1365,7 +1409,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
@@ -1419,7 +1463,9 @@ exports[`Page snapshot: index 1`] = `
       <div
         class="left"
       >
-        <h3>
+        <div
+          class="year-trend"
+        >
           <div
             class="year"
           >
@@ -1429,7 +1475,7 @@ exports[`Page snapshot: index 1`] = `
             class="ri-arrow-right-up-line"
             title="mortality raise"
           />
-        </h3>
+        </div>
         <div
           class="stat"
         >
