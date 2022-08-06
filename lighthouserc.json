@@ -3,7 +3,9 @@
     "assert": {
       "preset": "lighthouse:no-pwa",
       "assertions": {
+        "csp-xss": ["warn"],
         "tap-targets": ["warn"],
+        "is-crawlable": ["warn"],
         "unused-css-rules": ["warn"],
         "unused-javascript": ["warn"]
       }
