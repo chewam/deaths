@@ -1,15 +1,17 @@
-import { Chart } from "chart.js"
 import { sumArray } from "@/utils/index"
-import type { ChartOptions } from "chart.js"
 import { Doughnut } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js"
 
 import type { ChartDataset } from "chart.js"
+import type { ChartOptions } from "chart.js"
 
 interface Props {
   ageGroups: number[]
   big: boolean
 }
+
+ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels)
 
 const Groups = ({ ageGroups, big }: Props): JSX.Element => {
   const theme = {
@@ -18,8 +20,6 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
     border: "#4b5563",
     secondary: "#16a34a",
   }
-
-  Chart.register(ChartDataLabels)
 
   const groups = [
     sumArray(ageGroups.slice(0, 7)),
@@ -101,6 +101,7 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
     },
   } as ChartOptions
 
+  // @ts-expect-error: datalabels types
   return <Doughnut data={data} options={options} />
 }
 

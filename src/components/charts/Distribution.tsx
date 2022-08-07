@@ -1,14 +1,34 @@
-import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Bar } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
+
+import {
+  Title,
+  BarElement,
+  LineElement,
+  LinearScale,
+  PointElement,
+  CategoryScale,
+  Chart as ChartJS,
+} from "chart.js"
+
 import type { Context } from "chartjs-plugin-datalabels"
-import type { ChartDataset, ChartOptions } from "chart.js"
+import type { ChartDataset } from "chart.js"
 
 import useMortality from "@/services/mortality"
 import useRawMortality from "@/services/raw-mortality"
 import useColorScheme from "@/services/use-color-scheme"
+
+ChartJS.register(
+  Title,
+  BarElement,
+  LineElement,
+  LinearScale,
+  PointElement,
+  CategoryScale,
+  ChartDataLabels
+)
 
 const Distribution = (): JSX.Element => {
   useRawMortality()
@@ -25,8 +45,6 @@ const Distribution = (): JSX.Element => {
     text: darkMode ? "#d1d5db" : "#111827",
     border: darkMode ? "#4b5563" : "#d1d5db",
   }
-
-  Chart.register(ChartDataLabels)
 
   const bars = data.map((ageGroup, i) => ({
     type: "bar",
@@ -47,7 +65,7 @@ const Distribution = (): JSX.Element => {
           : "rgba(0, 0, 0, 0)",
       padding: { top: 4, right: 5, bottom: 4, left: 5 },
       display: ({ active, dataset: { data }, dataIndex, chart }: Context) => {
-        const { scales } = chart as Chart
+        const { scales } = chart as ChartJS
         const scale = scales["y"]
         const { max } = scale
         const value = (data || [])[dataIndex] || 0
@@ -158,8 +176,9 @@ const Distribution = (): JSX.Element => {
         },
       },
     },
-  } as ChartOptions
+  }
 
+  // @ts-expect-error: chartdataset and options types
   return <Bar data={chartData} options={options} />
 }
 

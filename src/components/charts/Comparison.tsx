@@ -1,11 +1,20 @@
-import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-import type { Context } from "chartjs-plugin-datalabels"
 import annotationPlugin from "chartjs-plugin-annotation"
-import type { ChartDataset, ChartOptions } from "chart.js"
+
+import {
+  Title,
+  LineElement,
+  LinearScale,
+  PointElement,
+  CategoryScale,
+  Chart as ChartJS,
+} from "chart.js"
+
+import type { Context } from "chartjs-plugin-datalabels"
+import type { ChartDataset } from "chart.js"
 import type {
   LabelOptions,
   LineAnnotationOptions,
@@ -17,6 +26,16 @@ import Months from "@/data/months.json"
 import useDeaths from "@/services/deaths"
 import useRawDeaths from "@/services/raw-deaths"
 import useColorScheme from "@/services/use-color-scheme"
+
+ChartJS.register(
+  Title,
+  LineElement,
+  LinearScale,
+  PointElement,
+  CategoryScale,
+  ChartDataLabels,
+  annotationPlugin
+)
 
 const getMaximum = (data: Deaths["data"]) => {
   if (!data) return {}
@@ -50,10 +69,8 @@ const Comparison = (): JSX.Element => {
     border: darkMode ? "#4b5563" : "#d1d5db",
   }
 
-  Chart.register(annotationPlugin)
-  Chart.register(ChartDataLabels)
-
   const getDataSet = (year: string, index: number): ChartDataset => ({
+    type: "line",
     label: year,
     tension: 0.4,
     pointRadius: 4,
@@ -98,13 +115,15 @@ const Comparison = (): JSX.Element => {
   const maxAnnotationLabel = {
     width: 0,
     height: 0,
-    enabled: true,
-    fontColor: theme.label,
+    type: "label",
+    display: true,
+    borderRadius: 4,
+    color: theme.label,
     content: getAnnotationContent(),
     backgroundColor: theme.secondary,
   } as LabelOptions
 
-  const maxAnnotation = {
+  const maxAnnotationLine = {
     type: "line",
     scaleID: "y",
     borderWidth: 2,
@@ -122,7 +141,7 @@ const Comparison = (): JSX.Element => {
       legend: { display: false },
       tooltip: { enabled: false },
       annotation: {
-        annotations: { maxAnnotation },
+        annotations: { maxAnnotationLine },
       },
     },
     scales: {
@@ -149,8 +168,9 @@ const Comparison = (): JSX.Element => {
         },
       },
     },
-  } as ChartOptions
+  }
 
+  // @ts-expect-error: chartdataset types
   return <Line data={chartData} options={options} />
 }
 

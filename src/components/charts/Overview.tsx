@@ -1,10 +1,19 @@
-import { Chart } from "chart.js"
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-import type { ChartDataset, ChartOptions } from "chart.js"
-import annotationPlugin, {
+import annotationPlugin from "chartjs-plugin-annotation"
+import {
+  Title,
+  LineElement,
+  LinearScale,
+  PointElement,
+  CategoryScale,
+  Chart as ChartJS,
+} from "chart.js"
+
+import type { Context } from "chartjs-plugin-datalabels"
+import type {
   LabelOptions,
   LineAnnotationOptions,
 } from "chartjs-plugin-annotation"
@@ -13,8 +22,28 @@ import useOverview from "@/services/overview"
 import useRawDeaths from "@/services/raw-deaths"
 import useColorScheme from "@/services/use-color-scheme"
 
+ChartJS.register(
+  Title,
+  LineElement,
+  LinearScale,
+  PointElement,
+  CategoryScale,
+  ChartDataLabels,
+  annotationPlugin
+)
+
 const average = (nums: number[]): number =>
   nums.reduce((a, b) => a + b) / nums.length
+
+const getDatalabelsDisplay = ({
+  active,
+  dataIndex,
+  dataset: { data },
+}: Context) => {
+  const d = data as number[]
+  const avg = average(d)
+  return active ? true : d[dataIndex] > avg + avg * 0.1 ? "auto" : false
+}
 
 const Overview = (): JSX.Element => {
   useRawDeaths()
@@ -24,9 +53,6 @@ const Overview = (): JSX.Element => {
   const { labels, data } = overview as Overview
   const max = data.length ? Math.max(...data) : 0
   const { formatMessage: fm, formatNumber: fn } = useIntl()
-
-  Chart.register(ChartDataLabels)
-  Chart.register(annotationPlugin)
 
   const theme = {
     base: "#60a5fa",
@@ -47,7 +73,7 @@ const Overview = (): JSX.Element => {
       pointBackgroundColor: theme.base,
       backgroundColor: hexToRgba(theme.base || defaultColor, 0.15),
     },
-  ] as ChartDataset[]
+  ]
 
   const chartData = { labels, datasets }
 
@@ -61,21 +87,38 @@ const Overview = (): JSX.Element => {
   const maxAnnotationLabel = {
     width: 0,
     height: 0,
-    enabled: true,
-    fontColor: theme.label,
+    type: "label",
+    display: true,
+    borderRadius: 4,
+    color: theme.label,
     content: getAnnotationContent(),
     backgroundColor: theme.secondary,
   } as LabelOptions
 
-  const maxAnnotation = {
+  const maxAnnotationLine = {
     value: max,
     type: "line",
     scaleID: "y",
     borderWidth: 2,
     borderDash: [6, 3],
-    borderColor: theme.secondary,
     label: maxAnnotationLabel,
+    borderColor: theme.secondary,
   } as LineAnnotationOptions
+
+  const datalabels = {
+    offset: 3,
+    clamp: true,
+    align: "end",
+    anchor: "end",
+    borderRadius: 4,
+    color: theme.label,
+    textAlign: "center",
+    font: { weight: "bold" },
+    backgroundColor: theme.base,
+    display: getDatalabelsDisplay,
+    padding: { top: 4, right: 5, bottom: 4, left: 5 },
+    formatter: (value: number) => (value / 1000).toFixed() + "K",
+  }
 
   const options = {
     fill: true,
@@ -86,32 +129,16 @@ const Overview = (): JSX.Element => {
       padding: { top: 0, right: 30, bottom: 0, left: 0 },
     },
     plugins: {
+      datalabels,
       legend: { display: false },
       tooltip: { enabled: false },
       annotation: {
-        annotations: { maxAnnotation },
-      },
-      datalabels: {
-        offset: 3,
-        clamp: true,
-        align: "end",
-        anchor: "end",
-        borderRadius: 4,
-        textAlign: "center",
-        font: { weight: "bold" },
-        color: theme.label,
-        backgroundColor: theme.base,
-        padding: { top: 4, right: 5, bottom: 4, left: 5 },
-        formatter: (value: number) => (value / 1000).toFixed() + "K",
-        display: ({ active, dataIndex, dataset: { data } }) => {
-          const d = data as number[]
-          const avg = average(d)
-          return active ? true : d[dataIndex] > avg + avg * 0.1 ? "auto" : false
-        },
+        annotations: { maxAnnotationLine },
       },
     },
     scales: {
       x: {
+        display: true,
         grid: { display: false },
         ticks: {
           padding: 0,
@@ -134,8 +161,9 @@ const Overview = (): JSX.Element => {
         },
       },
     },
-  } as ChartOptions
+  }
 
+  // @ts-expect-error: datalabels types
   return <Line data={chartData} options={options} />
 }
 
