@@ -1,9 +1,9 @@
-import type { ChartOptions } from "chart.js"
+import type { ChartDataset, ChartOptions } from "chart.js"
 import type { Context } from "chartjs-plugin-datalabels"
 
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
-import { Chart } from "react-chartjs-2"
+import { Bar } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import {
   Title,
@@ -130,7 +130,7 @@ const Distribution = (): JSX.Element => {
       },
     },
     ...bars,
-  ]
+  ] as ChartDataset<"bar">[]
 
   const options = {
     maintainAspectRatio: false,
@@ -182,9 +182,9 @@ const Distribution = (): JSX.Element => {
         },
       },
     },
-  } as ChartOptions
+  } as ChartOptions<"bar">
 
-  return <Chart type="bar" data={{ labels, datasets }} options={options} />
+  return <Bar data={{ labels, datasets }} options={options} />
 }
 
 export default Distribution
