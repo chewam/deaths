@@ -3,8 +3,7 @@ import { Doughnut } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js"
 
-import type { ChartDataset } from "chart.js"
-import type { ChartOptions } from "chart.js"
+import type { Context } from "chartjs-plugin-datalabels"
 
 interface Props {
   ageGroups: number[]
@@ -49,7 +48,7 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
     label: "# of Votes",
     borderColor: darkPalette,
     backgroundColor: lightPalette,
-  } as ChartDataset
+  }
 
   const data = {
     labels,
@@ -75,12 +74,12 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
           title: {
             offset: -5,
             align: "top",
-            color: ({ dataIndex }) => darkPalette[dataIndex],
+            color: ({ dataIndex }: Context) => darkPalette[dataIndex],
             font: { weight: "bold", size: big ? 19 : 15 },
-            display: ({ dataIndex }) => {
+            display: ({ dataIndex }: Context) => {
               return groups[dataIndex] > 20000 ? true : false
             },
-            formatter: (value, { dataIndex }) => {
+            formatter: (value: number, { dataIndex }: Context) => {
               return `${(groups[dataIndex] / 1000).toFixed(0)}K`
             },
           },
@@ -88,20 +87,20 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
             offset: -5,
             align: "bottom",
             font: { weight: "bold", size: big ? 17 : 13 },
-            color: ({ dataIndex }) => darkPalette[dataIndex],
-            display: ({ dataIndex }) => {
+            color: ({ dataIndex }: Context) => darkPalette[dataIndex],
+            display: ({ dataIndex }: Context) => {
               return groups[dataIndex] > 20000 ? true : false
             },
-            formatter: (value, { dataIndex }) => {
+            formatter: (value: number, { dataIndex }: Context) => {
               return labels[dataIndex]
             },
           },
         },
       },
     },
-  } as ChartOptions
+  }
 
-  // @ts-expect-error: datalabels types
+  // @ts-expect-error: options types
   return <Doughnut data={data} options={options} />
 }
 
