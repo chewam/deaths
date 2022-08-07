@@ -1,3 +1,9 @@
+import type { Context } from "chartjs-plugin-datalabels"
+import type {
+  LabelOptions,
+  LineAnnotationOptions,
+} from "chartjs-plugin-annotation"
+
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
@@ -11,12 +17,6 @@ import {
   CategoryScale,
   Chart as ChartJS,
 } from "chart.js"
-
-import type { Context } from "chartjs-plugin-datalabels"
-import type {
-  LabelOptions,
-  LineAnnotationOptions,
-} from "chartjs-plugin-annotation"
 
 import useOverview from "@/services/overview"
 import useRawDeaths from "@/services/raw-deaths"
@@ -75,8 +75,6 @@ const Overview = (): JSX.Element => {
     },
   ]
 
-  const chartData = { labels, datasets }
-
   const getAnnotationContent = () => {
     const label = labels[data.indexOf(max)]
     const [month, year] = (label || "January 2000").split(" ")
@@ -108,14 +106,14 @@ const Overview = (): JSX.Element => {
   const datalabels = {
     offset: 3,
     clamp: true,
-    align: "end",
-    anchor: "end",
     borderRadius: 4,
     color: theme.label,
-    textAlign: "center",
-    font: { weight: "bold" },
+    align: "end" as const,
+    anchor: "end" as const,
     backgroundColor: theme.base,
+    textAlign: "center" as const,
     display: getDatalabelsDisplay,
+    font: { weight: "bold" as const },
     padding: { top: 4, right: 5, bottom: 4, left: 5 },
     formatter: (value: number) => (value / 1000).toFixed() + "K",
   }
@@ -163,8 +161,7 @@ const Overview = (): JSX.Element => {
     },
   }
 
-  // @ts-expect-error: datalabels types
-  return <Line data={chartData} options={options} />
+  return <Line data={{ labels, datasets }} options={options} />
 }
 
 export default Overview

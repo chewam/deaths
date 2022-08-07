@@ -1,9 +1,10 @@
+import type { ChartOptions } from "chart.js"
+import type { Context } from "chartjs-plugin-datalabels"
+
 import { sumArray } from "@/utils/index"
 import { Doughnut } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js"
-
-import type { Context } from "chartjs-plugin-datalabels"
 
 interface Props {
   ageGroups: number[]
@@ -98,9 +99,8 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
         },
       },
     },
-  }
+  } as ChartOptions<"doughnut">
 
-  // @ts-expect-error: options types
   return <Doughnut data={data} options={options} />
 }
 

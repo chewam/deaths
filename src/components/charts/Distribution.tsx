@@ -1,8 +1,10 @@
+import type { ChartOptions } from "chart.js"
+import type { Context } from "chartjs-plugin-datalabels"
+
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
-import { Bar } from "react-chartjs-2"
+import { Chart } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-
 import {
   Title,
   BarElement,
@@ -12,9 +14,6 @@ import {
   CategoryScale,
   Chart as ChartJS,
 } from "chart.js"
-
-import type { Context } from "chartjs-plugin-datalabels"
-import type { ChartDataset } from "chart.js"
 
 import useMortality from "@/services/mortality"
 import useRawMortality from "@/services/raw-mortality"
@@ -46,8 +45,45 @@ const Distribution = (): JSX.Element => {
     border: darkMode ? "#4b5563" : "#d1d5db",
   }
 
+  const getBarBackgroundColor = ({ active }: Context) =>
+    active ? hexToRgba(theme.base || defaultColor, 0.9) : "rgba(0, 0, 0, 0)"
+
+  const getBarDisplay = ({
+    chart,
+    active,
+    dataIndex,
+    dataset: { data },
+  }: Context) => {
+    const { scales } = chart as ChartJS
+    const scale = scales["y"]
+    const { max } = scale
+    const value = (data || [])[dataIndex] || 0
+    return active ? true : value > max * 0.05 ? "auto" : false
+  }
+
+  const getBarFormatter = (
+    value: number,
+    { active, dataIndex, datasetIndex }: Context
+  ) =>
+    active
+      ? `${dataIndex + 2000}\n${fm({
+          id: "Deaths count",
+        })}: ${fn(value)}\n${fm({ id: "Age group" })}: ${
+          ageGroups[datasetIndex - 1]
+        }${
+          datasetIndex > 10
+            ? "+"
+            : ` ${fm({ id: "to" })} ${ageGroups[datasetIndex - 1] + 9} ${fm({
+                id: "years old",
+              })}`
+        }`
+      : value > 1000
+      ? `${(value / 1000).toFixed()}K\n${ageGroups[datasetIndex - 1]}-${
+          ageGroups[datasetIndex - 1] + 10
+        }`
+      : fn(Math.round(value))
+
   const bars = data.map((ageGroup, i) => ({
-    type: "bar",
     yAxisID: "y",
     data: ageGroup,
     label: `bar-${i}`,
@@ -56,42 +92,13 @@ const Distribution = (): JSX.Element => {
     backgroundColor: hexToRgba(theme.base || defaultColor, 0.8),
     datalabels: {
       borderRadius: 4,
-      textAlign: "center",
       color: theme.label,
-      font: { size: 11, weight: "bold" },
-      backgroundColor: ({ active }: Context) =>
-        active
-          ? hexToRgba(theme.base || defaultColor, 0.9)
-          : "rgba(0, 0, 0, 0)",
+      display: getBarDisplay,
+      formatter: getBarFormatter,
+      textAlign: "center" as const,
+      backgroundColor: getBarBackgroundColor,
+      font: { size: 11, weight: "bold" as const },
       padding: { top: 4, right: 5, bottom: 4, left: 5 },
-      display: ({ active, dataset: { data }, dataIndex, chart }: Context) => {
-        const { scales } = chart as ChartJS
-        const scale = scales["y"]
-        const { max } = scale
-        const value = (data || [])[dataIndex] || 0
-        return active ? true : value > max * 0.05 ? "auto" : false
-      },
-      formatter: (
-        value: number,
-        { active, dataIndex, datasetIndex }: Context
-      ) =>
-        active
-          ? `${dataIndex + 2000}\n${fm({
-              id: "Deaths count",
-            })}: ${fn(value)}\n${fm({ id: "Age group" })}: ${
-              ageGroups[datasetIndex - 1]
-            }${
-              datasetIndex > 10
-                ? "+"
-                : ` ${fm({ id: "to" })} ${ageGroups[datasetIndex - 1] + 9} ${fm(
-                    { id: "years old" }
-                  )}`
-            }`
-          : value > 1000
-          ? `${(value / 1000).toFixed()}K\n${ageGroups[datasetIndex - 1]}-${
-              ageGroups[datasetIndex - 1] + 10
-            }`
-          : fn(Math.round(value)),
     },
   }))
 
@@ -99,44 +106,43 @@ const Distribution = (): JSX.Element => {
     {
       data: ratio,
       tension: 0.4,
-      type: "line",
       yAxisID: "y2",
       label: "Ratio",
       borderWidth: 3,
       pointRadius: 5,
+      type: "line" as const,
       borderColor: theme.secondary,
       pointBorderColor: theme.secondary,
       pointBackgroundColor: theme.secondary,
       datalabels: {
         offset: 3,
         clamp: true,
-        align: "end",
-        anchor: "end",
         borderRadius: 4,
         color: theme.label,
-        textAlign: "center",
-        font: { weight: "bold" },
+        align: "end" as const,
+        anchor: "end" as const,
+        textAlign: "center" as const,
         backgroundColor: theme.secondary,
+        font: { weight: "bold" as const },
         padding: { top: 4, right: 5, bottom: 4, left: 5 },
         formatter: (value: number) => value.toFixed(2) + "%",
         display: ({ active }: Context) => (active ? true : "auto"),
       },
     },
     ...bars,
-  ] as ChartDataset[]
-
-  const chartData = { labels, datasets }
+  ]
 
   const options = {
     maintainAspectRatio: false,
     animation: { duration: 0 },
-    interaction: { mode: "nearest" },
+    interaction: { mode: "nearest" as const },
     plugins: {
       legend: { display: false },
       tooltip: { enabled: false },
     },
     scales: {
       x: {
+        type: "category" as const,
         stacked: true,
         grid: {
           display: false,
@@ -147,8 +153,8 @@ const Distribution = (): JSX.Element => {
         },
       },
       y: {
-        type: "linear",
         stacked: true,
+        type: "linear" as const,
         ticks: {
           padding: 10,
           color: theme.text,
@@ -162,8 +168,8 @@ const Distribution = (): JSX.Element => {
         },
       },
       y2: {
-        type: "linear",
-        position: "right",
+        type: "linear" as const,
+        position: "right" as const,
         ticks: {
           padding: 10,
           stepSize: 0.1,
@@ -176,10 +182,9 @@ const Distribution = (): JSX.Element => {
         },
       },
     },
-  }
+  } as ChartOptions
 
-  // @ts-expect-error: chartdataset and options types
-  return <Bar data={chartData} options={options} />
+  return <Chart type="bar" data={{ labels, datasets }} options={options} />
 }
 
 export default Distribution

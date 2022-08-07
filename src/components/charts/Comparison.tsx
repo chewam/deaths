@@ -1,9 +1,15 @@
+import type { ChartDataset } from "chart.js"
+import type { Context } from "chartjs-plugin-datalabels"
+import type {
+  LabelOptions,
+  LineAnnotationOptions,
+} from "chartjs-plugin-annotation"
+
 import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import annotationPlugin from "chartjs-plugin-annotation"
-
 import {
   Title,
   LineElement,
@@ -12,13 +18,6 @@ import {
   CategoryScale,
   Chart as ChartJS,
 } from "chart.js"
-
-import type { Context } from "chartjs-plugin-datalabels"
-import type { ChartDataset } from "chart.js"
-import type {
-  LabelOptions,
-  LineAnnotationOptions,
-} from "chartjs-plugin-annotation"
 
 import { palette } from "@/utils/index"
 import useYears from "@/services/years"
@@ -69,8 +68,8 @@ const Comparison = (): JSX.Element => {
     border: darkMode ? "#4b5563" : "#d1d5db",
   }
 
-  const getDataSet = (year: string, index: number): ChartDataset => ({
-    type: "line",
+  const getDataSet = (year: string, index: number): ChartDataset<"line"> => ({
+    type: "line" as const,
     label: year,
     tension: 0.4,
     pointRadius: 4,
@@ -82,12 +81,12 @@ const Comparison = (): JSX.Element => {
     datalabels: {
       offset: 3,
       clamp: true,
-      align: "end",
-      anchor: "end",
       borderRadius: 4,
       color: theme.label,
-      textAlign: "center",
-      font: { weight: "bold" },
+      align: "end" as const,
+      anchor: "end" as const,
+      textAlign: "center" as const,
+      font: { weight: "bold" as const },
       backgroundColor: paletteSubset[index],
       padding: { top: 4, right: 5, bottom: 4, left: 5 },
       display: ({ active }: Context) => (active ? true : "auto"),
@@ -96,13 +95,11 @@ const Comparison = (): JSX.Element => {
   })
 
   const datasets = Object.keys(years || {}).reduce(
-    (datasets: ChartDataset[], year, i) => (
+    (datasets: ChartDataset<"line">[], year, i) => (
       years && years[year] && datasets.push(getDataSet(year, i)), datasets
     ),
     []
   )
-
-  const chartData = { labels, datasets }
 
   const getAnnotationContent = () => {
     const month = Months[max?.month - 1] || "January"
@@ -129,8 +126,8 @@ const Comparison = (): JSX.Element => {
     borderWidth: 2,
     value: max?.value,
     borderDash: [6, 3],
-    borderColor: theme.secondary,
     label: maxAnnotationLabel,
+    borderColor: theme.secondary,
   } as LineAnnotationOptions
 
   const options = {
@@ -170,8 +167,7 @@ const Comparison = (): JSX.Element => {
     },
   }
 
-  // @ts-expect-error: chartdataset types
-  return <Line data={chartData} options={options} />
+  return <Line data={{ labels, datasets }} options={options} />
 }
 
 export default Comparison
