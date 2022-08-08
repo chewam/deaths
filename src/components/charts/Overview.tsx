@@ -32,10 +32,10 @@ ChartJS.register(
   annotationPlugin
 )
 
-const average = (nums: number[]): number =>
+export const average = (nums: number[]): number =>
   nums.reduce((a, b) => a + b) / nums.length
 
-const getDatalabelsDisplay = ({
+export const getDatalabelsDisplay = ({
   active,
   dataIndex,
   dataset: { data },

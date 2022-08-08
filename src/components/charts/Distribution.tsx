@@ -40,14 +40,11 @@ export const getBarDisplay = ({
   dataIndex,
   dataset: { data },
 }: Context) => {
-  console.log("data", data)
   const { scales } = chart as ChartJS
   const scale = scales["y"]
   const { max } = scale
   const value = (data || [])[dataIndex] || 0
-  console.log("value", value)
-  console.log("max", max)
-  console.log("check", value > max * 0.05)
+
   return active ? true : value > max * 0.05 ? "auto" : false
 }
 
