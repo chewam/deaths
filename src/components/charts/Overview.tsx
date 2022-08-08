@@ -11,6 +11,7 @@ import ChartDataLabels from "chartjs-plugin-datalabels"
 import annotationPlugin from "chartjs-plugin-annotation"
 import {
   Title,
+  Filler,
   LineElement,
   LinearScale,
   PointElement,
@@ -24,6 +25,7 @@ import useColorScheme from "@/services/use-color-scheme"
 
 ChartJS.register(
   Title,
+  Filler,
   LineElement,
   LinearScale,
   PointElement,
@@ -65,6 +67,7 @@ const Overview = (): JSX.Element => {
   const datasets = [
     {
       data,
+      fill: true,
       tension: 0.4,
       label: "Décès",
       borderWidth: 2,
