@@ -29,6 +29,28 @@ ChartJS.register(
   ChartDataLabels
 )
 
+export const getBarBackgroundColor =
+  (color: string) =>
+  ({ active }: Context) =>
+    active ? hexToRgba(color, 0.9) : "rgba(0, 0, 0, 0)"
+
+export const getBarDisplay = ({
+  chart,
+  active,
+  dataIndex,
+  dataset: { data },
+}: Context) => {
+  console.log("data", data)
+  const { scales } = chart as ChartJS
+  const scale = scales["y"]
+  const { max } = scale
+  const value = (data || [])[dataIndex] || 0
+  console.log("value", value)
+  console.log("max", max)
+  console.log("check", value > max * 0.05)
+  return active ? true : value > max * 0.05 ? "auto" : false
+}
+
 const Distribution = (): JSX.Element => {
   useRawMortality()
   const defaultColor = "#ffffff"
@@ -43,22 +65,6 @@ const Distribution = (): JSX.Element => {
     secondary: "#16a34a",
     text: darkMode ? "#d1d5db" : "#111827",
     border: darkMode ? "#4b5563" : "#d1d5db",
-  }
-
-  const getBarBackgroundColor = ({ active }: Context) =>
-    active ? hexToRgba(theme.base || defaultColor, 0.9) : "rgba(0, 0, 0, 0)"
-
-  const getBarDisplay = ({
-    chart,
-    active,
-    dataIndex,
-    dataset: { data },
-  }: Context) => {
-    const { scales } = chart as ChartJS
-    const scale = scales["y"]
-    const { max } = scale
-    const value = (data || [])[dataIndex] || 0
-    return active ? true : value > max * 0.05 ? "auto" : false
   }
 
   const getBarFormatter = (
@@ -96,9 +102,9 @@ const Distribution = (): JSX.Element => {
       display: getBarDisplay,
       formatter: getBarFormatter,
       textAlign: "center" as const,
-      backgroundColor: getBarBackgroundColor,
       font: { size: 11, weight: "bold" as const },
       padding: { top: 4, right: 5, bottom: 4, left: 5 },
+      backgroundColor: getBarBackgroundColor(theme.base || defaultColor),
     },
   }))
 
