@@ -48,6 +48,10 @@ export const getBarDisplay = ({
   return active ? true : value > max * 0.05 ? "auto" : false
 }
 
+export const labelFormatter = (value: number) => `${value.toFixed(2)}%`
+
+export const labelDisplay = ({ active }: Context) => (active ? true : "auto")
+
 const Distribution = (): JSX.Element => {
   useRawMortality()
   const defaultColor = "#ffffff"
@@ -123,13 +127,13 @@ const Distribution = (): JSX.Element => {
         borderRadius: 4,
         color: theme.label,
         align: "end" as const,
+        display: labelDisplay,
         anchor: "end" as const,
+        formatter: labelFormatter,
         textAlign: "center" as const,
         backgroundColor: theme.secondary,
         font: { weight: "bold" as const },
         padding: { top: 4, right: 5, bottom: 4, left: 5 },
-        formatter: (value: number) => value.toFixed(2) + "%",
-        display: ({ active }: Context) => (active ? true : "auto"),
       },
     },
     ...bars,
@@ -177,7 +181,7 @@ const Distribution = (): JSX.Element => {
           padding: 10,
           stepSize: 0.1,
           color: theme.text,
-          callback: (value: number) => `${value.toFixed(2)}%`,
+          callback: labelFormatter,
         },
         grid: {
           display: false,

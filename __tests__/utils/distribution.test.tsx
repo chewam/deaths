@@ -1,6 +1,8 @@
 import type { Context } from "chartjs-plugin-datalabels"
 import {
+  labelDisplay,
   getBarDisplay,
+  labelFormatter,
   getBarBackgroundColor,
 } from "../../src/components/charts/Distribution"
 
@@ -53,5 +55,24 @@ describe("Test getBarDisplay()", () => {
       dataset: { data },
     } as unknown as Context)
     expect(res).toBe(false)
+  })
+})
+
+describe("Test labelFormatter()", () => {
+  test("labelFormatter(10.456789) => 10.46%", () => {
+    const res = labelFormatter(10.456789)
+    expect(res).toBe("10.46%")
+  })
+})
+
+describe("Test labelDisplay()", () => {
+  test("labelDisplay({ active: true }) => true", () => {
+    const res = labelDisplay({ active: true } as Context)
+    expect(res).toBe(true)
+  })
+
+  test("labelDisplay({ active: false }) => auto", () => {
+    const res = labelDisplay({ active: false } as Context)
+    expect(res).toBe("auto")
   })
 })
