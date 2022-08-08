@@ -15,22 +15,12 @@ ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels)
 
 export const getAgeGroupFormatter =
   (labels: string[]) =>
-  (value: number, { dataIndex }: Context) =>
+  (_value: number, { dataIndex }: Context) =>
     labels[dataIndex]
-
-export const getAgeGroupDisplay =
-  (groups: number[]) =>
-  ({ dataIndex }: Context) =>
-    groups[dataIndex] > 20000 ? true : false
-
-export const getAgeGroupColor =
-  (darkPalette: string[]) =>
-  ({ dataIndex }: Context) =>
-    darkPalette[dataIndex]
 
 export const getLabelsFormatter =
   (groups: number[]) =>
-  (value: number, { dataIndex }: Context) =>
+  (_value: number, { dataIndex }: Context) =>
     `${(groups[dataIndex] / 1000).toFixed(0)}K`
 
 export const getLabelsDisplay =
@@ -113,8 +103,8 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
           ageGroup: {
             offset: -5,
             align: "bottom",
-            display: getAgeGroupDisplay(groups),
-            color: getAgeGroupColor(darkPalette),
+            display: getLabelsDisplay(groups),
+            color: getLabelsColor(darkPalette),
             formatter: getAgeGroupFormatter(labels),
             font: { weight: "bold", size: big ? 17 : 13 },
           },
