@@ -13,6 +13,36 @@ interface Props {
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels)
 
+export const getAgeGroupFormatter =
+  (labels: string[]) =>
+  (value: number, { dataIndex }: Context) =>
+    labels[dataIndex]
+
+export const getAgeGroupDisplay =
+  (groups: number[]) =>
+  ({ dataIndex }: Context) =>
+    groups[dataIndex] > 20000 ? true : false
+
+export const getAgeGroupColor =
+  (darkPalette: string[]) =>
+  ({ dataIndex }: Context) =>
+    darkPalette[dataIndex]
+
+export const getLabelsFormatter =
+  (groups: number[]) =>
+  (value: number, { dataIndex }: Context) =>
+    `${(groups[dataIndex] / 1000).toFixed(0)}K`
+
+export const getLabelsDisplay =
+  (groups: number[]) =>
+  ({ dataIndex }: Context) =>
+    groups[dataIndex] > 20000 ? true : false
+
+export const getLabelsColor =
+  (darkPalette: string[]) =>
+  ({ dataIndex }: Context) =>
+    darkPalette[dataIndex]
+
 const Groups = ({ ageGroups, big }: Props): JSX.Element => {
   const theme = {
     base: "#60a5fa",
@@ -75,26 +105,18 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
           title: {
             offset: -5,
             align: "top",
-            color: ({ dataIndex }: Context) => darkPalette[dataIndex],
+            color: getLabelsColor(darkPalette),
+            display: getLabelsDisplay(groups),
+            formatter: getLabelsFormatter(groups),
             font: { weight: "bold", size: big ? 19 : 15 },
-            display: ({ dataIndex }: Context) => {
-              return groups[dataIndex] > 20000 ? true : false
-            },
-            formatter: (value: number, { dataIndex }: Context) => {
-              return `${(groups[dataIndex] / 1000).toFixed(0)}K`
-            },
           },
           ageGroup: {
             offset: -5,
             align: "bottom",
+            display: getAgeGroupDisplay(groups),
+            color: getAgeGroupColor(darkPalette),
+            formatter: getAgeGroupFormatter(labels),
             font: { weight: "bold", size: big ? 17 : 13 },
-            color: ({ dataIndex }: Context) => darkPalette[dataIndex],
-            display: ({ dataIndex }: Context) => {
-              return groups[dataIndex] > 20000 ? true : false
-            },
-            formatter: (value: number, { dataIndex }: Context) => {
-              return labels[dataIndex]
-            },
           },
         },
       },
