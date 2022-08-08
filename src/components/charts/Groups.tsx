@@ -1,15 +1,37 @@
-import { Chart } from "chart.js"
-import { sumArray } from "@/utils/index"
 import type { ChartOptions } from "chart.js"
+import type { Context } from "chartjs-plugin-datalabels"
+
+import { sumArray } from "@/utils/index"
 import { Doughnut } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-
-import type { ChartDataset } from "chart.js"
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js"
 
 interface Props {
   ageGroups: number[]
   big: boolean
 }
+
+ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels)
+
+export const getAgeGroupFormatter =
+  (labels: string[]) =>
+  (_value: number, { dataIndex }: Context) =>
+    labels[dataIndex]
+
+export const getLabelsFormatter =
+  (groups: number[]) =>
+  (_value: number, { dataIndex }: Context) =>
+    `${(groups[dataIndex] / 1000).toFixed(0)}K`
+
+export const getLabelsDisplay =
+  (groups: number[]) =>
+  ({ dataIndex }: Context) =>
+    groups[dataIndex] > 20000 ? true : false
+
+export const getLabelsColor =
+  (darkPalette: string[]) =>
+  ({ dataIndex }: Context) =>
+    darkPalette[dataIndex]
 
 const Groups = ({ ageGroups, big }: Props): JSX.Element => {
   const theme = {
@@ -18,8 +40,6 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
     border: "#4b5563",
     secondary: "#16a34a",
   }
-
-  Chart.register(ChartDataLabels)
 
   const groups = [
     sumArray(ageGroups.slice(0, 7)),
@@ -49,7 +69,7 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
     label: "# of Votes",
     borderColor: darkPalette,
     backgroundColor: lightPalette,
-  } as ChartDataset
+  }
 
   const data = {
     labels,
@@ -75,31 +95,23 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
           title: {
             offset: -5,
             align: "top",
-            color: ({ dataIndex }) => darkPalette[dataIndex],
+            color: getLabelsColor(darkPalette),
+            display: getLabelsDisplay(groups),
+            formatter: getLabelsFormatter(groups),
             font: { weight: "bold", size: big ? 19 : 15 },
-            display: ({ dataIndex }) => {
-              return groups[dataIndex] > 20000 ? true : false
-            },
-            formatter: (value, { dataIndex }) => {
-              return `${(groups[dataIndex] / 1000).toFixed(0)}K`
-            },
           },
           ageGroup: {
             offset: -5,
             align: "bottom",
+            display: getLabelsDisplay(groups),
+            color: getLabelsColor(darkPalette),
+            formatter: getAgeGroupFormatter(labels),
             font: { weight: "bold", size: big ? 17 : 13 },
-            color: ({ dataIndex }) => darkPalette[dataIndex],
-            display: ({ dataIndex }) => {
-              return groups[dataIndex] > 20000 ? true : false
-            },
-            formatter: (value, { dataIndex }) => {
-              return labels[dataIndex]
-            },
           },
         },
       },
     },
-  } as ChartOptions
+  } as ChartOptions<"doughnut">
 
   return <Doughnut data={data} options={options} />
 }

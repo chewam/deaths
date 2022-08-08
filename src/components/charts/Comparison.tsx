@@ -1,15 +1,23 @@
-import { Chart } from "chart.js"
-import hexToRgba from "hex-to-rgba"
-import { useIntl } from "react-intl"
-import { Line } from "react-chartjs-2"
-import ChartDataLabels from "chartjs-plugin-datalabels"
+import type { ChartDataset } from "chart.js"
 import type { Context } from "chartjs-plugin-datalabels"
-import annotationPlugin from "chartjs-plugin-annotation"
-import type { ChartDataset, ChartOptions } from "chart.js"
 import type {
   LabelOptions,
   LineAnnotationOptions,
 } from "chartjs-plugin-annotation"
+
+import hexToRgba from "hex-to-rgba"
+import { useIntl } from "react-intl"
+import { Line } from "react-chartjs-2"
+import ChartDataLabels from "chartjs-plugin-datalabels"
+import annotationPlugin from "chartjs-plugin-annotation"
+import {
+  Title,
+  LineElement,
+  LinearScale,
+  PointElement,
+  CategoryScale,
+  Chart as ChartJS,
+} from "chart.js"
 
 import { palette } from "@/utils/index"
 import useYears from "@/services/years"
@@ -18,7 +26,17 @@ import useDeaths from "@/services/deaths"
 import useRawDeaths from "@/services/raw-deaths"
 import useColorScheme from "@/services/use-color-scheme"
 
-const getMaximum = (data: Deaths["data"]) => {
+ChartJS.register(
+  Title,
+  LineElement,
+  LinearScale,
+  PointElement,
+  CategoryScale,
+  ChartDataLabels,
+  annotationPlugin
+)
+
+export const getMaximum = (data: Deaths["data"]) => {
   if (!data) return {}
   const maximums = data.reduce((acc, year, i) => {
     const max = Math.max(...(year || []))
@@ -50,10 +68,8 @@ const Comparison = (): JSX.Element => {
     border: darkMode ? "#4b5563" : "#d1d5db",
   }
 
-  Chart.register(annotationPlugin)
-  Chart.register(ChartDataLabels)
-
-  const getDataSet = (year: string, index: number): ChartDataset => ({
+  const getDataSet = (year: string, index: number): ChartDataset<"line"> => ({
+    type: "line" as const,
     label: year,
     tension: 0.4,
     pointRadius: 4,
@@ -65,12 +81,12 @@ const Comparison = (): JSX.Element => {
     datalabels: {
       offset: 3,
       clamp: true,
-      align: "end",
-      anchor: "end",
       borderRadius: 4,
       color: theme.label,
-      textAlign: "center",
-      font: { weight: "bold" },
+      align: "end" as const,
+      anchor: "end" as const,
+      textAlign: "center" as const,
+      font: { weight: "bold" as const },
       backgroundColor: paletteSubset[index],
       padding: { top: 4, right: 5, bottom: 4, left: 5 },
       display: ({ active }: Context) => (active ? true : "auto"),
@@ -79,13 +95,11 @@ const Comparison = (): JSX.Element => {
   })
 
   const datasets = Object.keys(years || {}).reduce(
-    (datasets: ChartDataset[], year, i) => (
-      years && years[year] && datasets.push(getDataSet(year, i)), datasets
+    (dataset: ChartDataset<"line">[], year, i) => (
+      years && years[year] && dataset.push(getDataSet(year, i)), dataset
     ),
     []
   )
-
-  const chartData = { labels, datasets }
 
   const getAnnotationContent = () => {
     const month = Months[max?.month - 1] || "January"
@@ -98,20 +112,22 @@ const Comparison = (): JSX.Element => {
   const maxAnnotationLabel = {
     width: 0,
     height: 0,
-    enabled: true,
-    fontColor: theme.label,
+    type: "label",
+    display: true,
+    borderRadius: 4,
+    color: theme.label,
     content: getAnnotationContent(),
     backgroundColor: theme.secondary,
   } as LabelOptions
 
-  const maxAnnotation = {
+  const maxAnnotationLine = {
     type: "line",
     scaleID: "y",
     borderWidth: 2,
     value: max?.value,
     borderDash: [6, 3],
-    borderColor: theme.secondary,
     label: maxAnnotationLabel,
+    borderColor: theme.secondary,
   } as LineAnnotationOptions
 
   const options = {
@@ -122,7 +138,7 @@ const Comparison = (): JSX.Element => {
       legend: { display: false },
       tooltip: { enabled: false },
       annotation: {
-        annotations: { maxAnnotation },
+        annotations: { maxAnnotationLine },
       },
     },
     scales: {
@@ -149,9 +165,9 @@ const Comparison = (): JSX.Element => {
         },
       },
     },
-  } as ChartOptions
+  }
 
-  return <Line data={chartData} options={options} />
+  return <Line data={{ labels, datasets }} options={options} />
 }
 
 export default Comparison
