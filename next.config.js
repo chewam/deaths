@@ -20,6 +20,7 @@ const stylesHashes = [
   "'sha256-Wv5RXCTyjvK2OrnPPrU6iMmTnyw3xdCd40/FpWVFgAQ='",
   "'sha256-bT/CA3fTHVdEDYhJTsSLDP5WEIryQFzpCZ+IABLW0yM='",
   "'sha256-+9pJuW2tBVknv7iJPxx6rNkJe8zVH1V4SWxBTFpU1e0='",
+  "'sha256-Amz/A5NR0IjfESIo1ta5y98hz4trJubtd7JXm85Byb8='",
 ].join(" ")
 
 const ContentSecurityPolicy = process.env.NODE_ENV === "production" ? `
