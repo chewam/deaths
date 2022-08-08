@@ -36,7 +36,7 @@ ChartJS.register(
   annotationPlugin
 )
 
-const getMaximum = (data: Deaths["data"]) => {
+export const getMaximum = (data: Deaths["data"]) => {
   if (!data) return {}
   const maximums = data.reduce((acc, year, i) => {
     const max = Math.max(...(year || []))
@@ -95,8 +95,8 @@ const Comparison = (): JSX.Element => {
   })
 
   const datasets = Object.keys(years || {}).reduce(
-    (datasets: ChartDataset<"line">[], year, i) => (
-      years && years[year] && datasets.push(getDataSet(year, i)), datasets
+    (dataset: ChartDataset<"line">[], year, i) => (
+      years && years[year] && dataset.push(getDataSet(year, i)), dataset
     ),
     []
   )
