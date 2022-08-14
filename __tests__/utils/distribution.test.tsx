@@ -1,34 +1,34 @@
 import type { Context } from "chartjs-plugin-datalabels"
 import {
-  labelDisplay,
-  getBarDisplay,
-  labelFormatter,
-  getBarBackgroundColor,
+  getLineLabelDisplay,
+  getBarLabelDisplay,
+  getFormattedLineLabel,
+  getBarLabelBackgroundColor,
 } from "../../src/components/charts/Distribution"
 
-describe("Test getBarBackgroundColor()", () => {
-  test("getBarBackgroundColor() => func({active: false})", () => {
-    const func = getBarBackgroundColor("#ffffff")
+describe("Test getBarLabelBackgroundColor()", () => {
+  test("getBarLabelBackgroundColor() => func({active: false})", () => {
+    const func = getBarLabelBackgroundColor()
     expect(typeof func).toBe("function")
     expect(func({ active: false } as Context)).toBe("rgba(0, 0, 0, 0)")
   })
 
-  test("getBarBackgroundColor() => func({active: true})", () => {
-    const func = getBarBackgroundColor("#ffffff")
+  test("getBarLabelBackgroundColor() => func({active: true})", () => {
+    const func = getBarLabelBackgroundColor()
     expect(typeof func).toBe("function")
-    expect(func({ active: true } as Context)).toBe("rgba(255, 255, 255, 0.9)")
+    expect(func({ active: true } as Context)).toBe("rgb(30, 58, 138)")
   })
 })
 
-describe("Test getBarDisplay()", () => {
+describe("Test getBarLabelDisplay()", () => {
   const data = [
     135735, 133292, 132138, 133322, 123045, 123451, 118190, 115158, 114334,
     110766, 107466, 101719, 101859, 99352, 95805, 98871, 98867, 101879, 104918,
     108202, 122073, 128953, 63272,
   ]
 
-  test("getBarDisplay() => true", () => {
-    const res = getBarDisplay({
+  test("getBarLabelDisplay() => true", () => {
+    const res = getBarLabelDisplay({
       chart: { scales: { y: { max: 42 } } },
       active: true,
       dataIndex: 0,
@@ -37,8 +37,8 @@ describe("Test getBarDisplay()", () => {
     expect(res).toBe(true)
   })
 
-  test("getBarDisplay() => auto", () => {
-    const res = getBarDisplay({
+  test("getBarLabelDisplay() => auto", () => {
+    const res = getBarLabelDisplay({
       chart: { scales: { y: { max: 42 } } },
       active: false,
       dataIndex: 0,
@@ -47,8 +47,8 @@ describe("Test getBarDisplay()", () => {
     expect(res).toBe("auto")
   })
 
-  test("getBarDisplay() => false", () => {
-    const res = getBarDisplay({
+  test("getBarLabelDisplay() => false", () => {
+    const res = getBarLabelDisplay({
       chart: { scales: { y: { max: 10000000 } } },
       active: false,
       dataIndex: 0,
@@ -58,21 +58,21 @@ describe("Test getBarDisplay()", () => {
   })
 })
 
-describe("Test labelFormatter()", () => {
-  test("labelFormatter(10.456789) => 10.46%", () => {
-    const res = labelFormatter(10.456789)
+describe("Test getFormattedLineLabel()", () => {
+  test("getFormattedLineLabel(10.456789) => 10.46%", () => {
+    const res = getFormattedLineLabel(10.456789)
     expect(res).toBe("10.46%")
   })
 })
 
-describe("Test labelDisplay()", () => {
-  test("labelDisplay({ active: true }) => true", () => {
-    const res = labelDisplay({ active: true } as Context)
+describe("Test getLineLabelDisplay()", () => {
+  test("getLineLabelDisplay({ active: true }) => true", () => {
+    const res = getLineLabelDisplay({ active: true } as Context)
     expect(res).toBe(true)
   })
 
-  test("labelDisplay({ active: false }) => auto", () => {
-    const res = labelDisplay({ active: false } as Context)
+  test("getLineLabelDisplay({ active: false }) => auto", () => {
+    const res = getLineLabelDisplay({ active: false } as Context)
     expect(res).toBe("auto")
   })
 })
