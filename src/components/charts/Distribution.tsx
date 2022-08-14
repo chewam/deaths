@@ -29,12 +29,17 @@ ChartJS.register(
   ChartDataLabels
 )
 
-export const getBarBackgroundColor =
-  (color: string) =>
+export const getBarLabelBackgroundColor =
+  () =>
   ({ active }: Context) =>
-    active ? hexToRgba(color, 0.9) : "rgba(0, 0, 0, 0)"
+    active ? "rgb(30, 58, 138)" : "rgba(0, 0, 0, 0)"
 
-export const getBarDisplay = ({
+// export const getBarLabelBackgroundColor =
+//   (color: string) =>
+//   ({ active }: Context) =>
+//     active ? hexToRgba(color, 1) : "rgba(0, 0, 0, 0)"
+
+export const getBarLabelDisplay = ({
   chart,
   active,
   dataIndex,
@@ -48,13 +53,13 @@ export const getBarDisplay = ({
   return active ? true : value > max * 0.05 ? "auto" : false
 }
 
-export const labelFormatter = (value: number) => `${value.toFixed(2)}%`
+export const getFormattedLineLabel = (value: number) => `${value.toFixed(2)}%`
 
-export const labelDisplay = ({ active }: Context) => (active ? true : "auto")
+export const getLineLabelDisplay = ({ active }: Context) =>
+  active ? true : "auto"
 
 const Distribution = (): JSX.Element => {
   useRawMortality()
-  const defaultColor = "#ffffff"
   const darkMode = useColorScheme()
   const [mortality] = useMortality()
   const { formatMessage: fm, formatNumber: fn } = useIntl()
@@ -68,44 +73,69 @@ const Distribution = (): JSX.Element => {
     border: darkMode ? "#4b5563" : "#d1d5db",
   }
 
-  const getBarFormatter = (
+  const tr = (str: string) => fm({ id: str })
+
+  const getAgeGroup = (datasetIndex: number) => {
+    const ageGroup = ageGroups[datasetIndex - 1]
+
+    return `${ageGroup}${
+      datasetIndex > 10
+        ? "+"
+        : ` ${tr("to")} ${ageGroup + 9} ${tr("years old")}`
+    }`
+  }
+
+  const getLongFormat = (
+    dataIndex: number,
+    datasetIndex: number,
+    value: number
+  ) => {
+    return `${dataIndex + 2000}
+${tr("Deaths count")}: ${fn(value)}
+${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
+  }
+
+  const getShortFormat = (datasetIndex: number, value: number) => {
+    const ageGroup = ageGroups[datasetIndex - 1]
+    return `${(value / 1000).toFixed()}K\n${ageGroup}-${ageGroup + 10}`
+  }
+
+  const getFormattedBarLabel = (
     value: number,
     { active, dataIndex, datasetIndex }: Context
-  ) =>
-    active
-      ? `${dataIndex + 2000}\n${fm({
-          id: "Deaths count",
-        })}: ${fn(value)}\n${fm({ id: "Age group" })}: ${
-          ageGroups[datasetIndex - 1]
-        }${
-          datasetIndex > 10
-            ? "+"
-            : ` ${fm({ id: "to" })} ${ageGroups[datasetIndex - 1] + 9} ${fm({
-                id: "years old",
-              })}`
-        }`
-      : value > 1000
-      ? `${(value / 1000).toFixed()}K\n${ageGroups[datasetIndex - 1]}-${
-          ageGroups[datasetIndex - 1] + 10
-        }`
-      : fn(Math.round(value))
+  ) => {
+    if (active) {
+      return getLongFormat(dataIndex, datasetIndex, value)
+    } else if (value > 1000) {
+      return getShortFormat(datasetIndex, value)
+    }
+    return fn(Math.round(value))
+  }
 
   const bars = data.map((ageGroup, i) => ({
     yAxisID: "y",
     data: ageGroup,
     label: `bar-${i}`,
     borderColor: "transparent",
-    borderWidth: { top: 2, right: 0, bottom: 2, left: 0 },
-    backgroundColor: hexToRgba(theme.base || defaultColor, 0.8),
+    // borderColor: "red",
+    hoverBackgroundColor: "rgb(30, 58, 138)",
+    backgroundColor: hexToRgba(theme.base, 0.8),
+    // hoverBorderColor: hexToRgba(theme.base, 0.8),
+    // borderWidth: { top: 2, right: 0, bottom: 2, left: 0 },
+    borderWidth: { top: 1, right: 0, bottom: 0, left: 0 },
+    // hoverBorderWidth: 2,
+    // hoverBorderWidth: { top: 2, right: 2, bottom: 2, left: 2 },
     datalabels: {
       borderRadius: 4,
       color: theme.label,
-      display: getBarDisplay,
-      formatter: getBarFormatter,
+      display: getBarLabelDisplay,
       textAlign: "center" as const,
-      font: { size: 11, weight: "bold" as const },
-      padding: { top: 4, right: 5, bottom: 4, left: 5 },
-      backgroundColor: getBarBackgroundColor(theme.base || defaultColor),
+      formatter: getFormattedBarLabel,
+      // font: { size: 11, weight: "bold" as const },
+      font: { size: 10, weight: "bold" as const },
+      // padding: { top: 4, right: 5, bottom: 4, left: 5 },
+      backgroundColor: getBarLabelBackgroundColor(),
+      // backgroundColor: theme.base,
     },
   }))
 
@@ -127,10 +157,10 @@ const Distribution = (): JSX.Element => {
         borderRadius: 4,
         color: theme.label,
         align: "end" as const,
-        display: labelDisplay,
         anchor: "end" as const,
-        formatter: labelFormatter,
+        display: getLineLabelDisplay,
         textAlign: "center" as const,
+        formatter: getFormattedLineLabel,
         backgroundColor: theme.secondary,
         font: { weight: "bold" as const },
         padding: { top: 4, right: 5, bottom: 4, left: 5 },
@@ -181,7 +211,7 @@ const Distribution = (): JSX.Element => {
           padding: 10,
           stepSize: 0.1,
           color: theme.text,
-          callback: labelFormatter,
+          callback: getFormattedLineLabel,
         },
         grid: {
           display: false,

@@ -8,7 +8,7 @@ import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-import annotationPlugin from "chartjs-plugin-annotation"
+import AnnotationPlugin from "chartjs-plugin-annotation"
 import {
   Title,
   Filler,
@@ -31,7 +31,7 @@ ChartJS.register(
   PointElement,
   CategoryScale,
   ChartDataLabels,
-  annotationPlugin
+  AnnotationPlugin
 )
 
 export const average = (nums: number[]): number =>
