@@ -5,6 +5,7 @@ import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Bar } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
+import AnnotationPlugin from "chartjs-plugin-annotation"
 import {
   Title,
   BarElement,
@@ -26,7 +27,8 @@ ChartJS.register(
   LinearScale,
   PointElement,
   CategoryScale,
-  ChartDataLabels
+  ChartDataLabels,
+  AnnotationPlugin
 )
 
 export const getBarLabelBackgroundColor =

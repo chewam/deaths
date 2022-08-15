@@ -5,13 +5,14 @@ import { sumArray } from "@/utils/index"
 import { Doughnut } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js"
+import AnnotationPlugin from "chartjs-plugin-annotation"
 
 interface Props {
   ageGroups: number[]
   big: boolean
 }
 
-ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels)
+ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels, AnnotationPlugin)
 
 export const getAgeGroupFormatter =
   (labels: string[]) =>
@@ -89,7 +90,6 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
     plugins: {
       legend: { display: false },
       tooltip: { enabled: false },
-      annotation: { annotations: {} },
       datalabels: {
         color: theme.base,
         labels: {
