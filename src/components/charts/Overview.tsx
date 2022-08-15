@@ -18,9 +18,9 @@ import {
   Chart as ChartJS,
 } from "chart.js"
 
-import useTheme from "@/services/useTheme"
 import useOverview from "@/services/overview"
 import useRawDeaths from "@/services/raw-deaths"
+import useTheme from "@/services/use-charts-theme"
 
 ChartJS.register(
   Title,

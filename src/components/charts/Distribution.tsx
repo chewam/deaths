@@ -16,8 +16,8 @@ import {
   Chart as ChartJS,
 } from "chart.js"
 
-import useTheme from "@/services/useTheme"
 import useMortality from "@/services/mortality"
+import useTheme from "@/services/use-charts-theme"
 import useRawMortality from "@/services/raw-mortality"
 
 ChartJS.register(

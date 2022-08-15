@@ -20,7 +20,7 @@ interface Theme {
   scale: Partial<ChartItem>
 }
 
-const useTheme = (): Theme => {
+const useChartsTheme = (): Theme => {
   const darkMode = useColorScheme()
   const styles = resolveConfig({} as Config)
   const colors = styles.theme?.colors
@@ -40,13 +40,6 @@ const useTheme = (): Theme => {
     } = colors
 
     const theme = {
-      // line: {
-      //   border: green,
-      //   label: {
-      //     text: white,
-      //     background: green,
-      //   },
-      // },
       secondary: {
         border: green,
         label: {
@@ -54,13 +47,6 @@ const useTheme = (): Theme => {
           background: green,
         },
       },
-      // donut: {
-      //   border: green,
-      //   label: {
-      //     text: white,
-      //     background: green,
-      //   },
-      // },
       primary: {
         border: blue,
         background: blue,
@@ -84,12 +70,10 @@ const useTheme = (): Theme => {
       },
     }
 
-    console.log("fullConfig.theme", colors, blue)
-
     return theme
   }
 
   return {} as Theme
 }
 
-export default useTheme
+export default useChartsTheme

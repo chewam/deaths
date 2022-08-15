@@ -5,7 +5,6 @@ import type {
   LineAnnotationOptions,
 } from "chartjs-plugin-annotation"
 
-// import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
@@ -23,8 +22,8 @@ import { palette } from "@/utils/index"
 import useYears from "@/services/years"
 import Months from "@/data/months.json"
 import useDeaths from "@/services/deaths"
-import useTheme from "@/services/useTheme"
 import useRawDeaths from "@/services/raw-deaths"
+import useTheme from "@/services/use-charts-theme"
 
 ChartJS.register(
   Title,
