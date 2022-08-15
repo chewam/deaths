@@ -3,22 +3,22 @@ import {
   getLineLabelDisplay,
   getBarLabelDisplay,
   getFormattedLineLabel,
-  getBarLabelBackgroundColor,
+  // getBarLabelBackgroundColor,
 } from "../../src/components/charts/Distribution"
 
-describe("Test getBarLabelBackgroundColor()", () => {
-  test("getBarLabelBackgroundColor() => func({active: false})", () => {
-    const func = getBarLabelBackgroundColor()
-    expect(typeof func).toBe("function")
-    expect(func({ active: false } as Context)).toBe("rgba(0, 0, 0, 0)")
-  })
+// describe("Test getBarLabelBackgroundColor()", () => {
+//   test("getBarLabelBackgroundColor() => func({active: false})", () => {
+//     const func = getBarLabelBackgroundColor()
+//     expect(typeof func).toBe("function")
+//     expect(func({ active: false } as Context)).toBe("rgba(0, 0, 0, 0)")
+//   })
 
-  test("getBarLabelBackgroundColor() => func({active: true})", () => {
-    const func = getBarLabelBackgroundColor()
-    expect(typeof func).toBe("function")
-    expect(func({ active: true } as Context)).toBe("rgb(30, 58, 138)")
-  })
-})
+//   test("getBarLabelBackgroundColor() => func({active: true})", () => {
+//     const func = getBarLabelBackgroundColor()
+//     expect(typeof func).toBe("function")
+//     expect(func({ active: true } as Context)).toBe("rgb(30, 58, 138)")
+//   })
+// })
 
 describe("Test getBarLabelDisplay()", () => {
   const data = [

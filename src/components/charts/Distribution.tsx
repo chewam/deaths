@@ -1,9 +1,9 @@
 import type { ChartDataset, ChartOptions } from "chart.js"
 import type { Context } from "chartjs-plugin-datalabels"
 
-import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Bar } from "react-chartjs-2"
+
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import AnnotationPlugin from "chartjs-plugin-annotation"
 import {
@@ -16,9 +16,9 @@ import {
   Chart as ChartJS,
 } from "chart.js"
 
+import useTheme from "@/services/useTheme"
 import useMortality from "@/services/mortality"
 import useRawMortality from "@/services/raw-mortality"
-import useColorScheme from "@/services/use-color-scheme"
 
 ChartJS.register(
   Title,
@@ -30,11 +30,6 @@ ChartJS.register(
   ChartDataLabels,
   AnnotationPlugin
 )
-
-export const getBarLabelBackgroundColor =
-  () =>
-  ({ active }: Context) =>
-    active ? "rgb(30, 58, 138)" : "rgba(0, 0, 0, 0)"
 
 export const getBarLabelDisplay = ({
   chart,
@@ -57,18 +52,10 @@ export const getLineLabelDisplay = ({ active }: Context) =>
 
 const Distribution = (): JSX.Element => {
   useRawMortality()
-  const darkMode = useColorScheme()
+  const theme = useTheme()
   const [mortality] = useMortality()
   const { formatMessage: fm, formatNumber: fn } = useIntl()
   const { labels, data, ratio, ageGroups } = mortality as Mortality
-
-  const theme = {
-    base: "#60a5fa",
-    label: "#ffffff",
-    secondary: "#16a34a",
-    text: darkMode ? "#d1d5db" : "#111827",
-    border: darkMode ? "#4b5563" : "#d1d5db",
-  }
 
   const tr = (str: string) => fm({ id: str })
 
@@ -113,18 +100,23 @@ ${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
     yAxisID: "y",
     data: ageGroup,
     label: `bar-${i}`,
-    borderColor: "transparent",
-    hoverBackgroundColor: "rgb(30, 58, 138)",
-    backgroundColor: hexToRgba(theme.base, 0.8),
+    backgroundColor: theme.bar.background,
+    hoverBackgroundColor: theme.bar.hover?.background,
     borderWidth: { top: 1, right: 0, bottom: 0, left: 0 },
     datalabels: {
       borderRadius: 4,
-      color: theme.label,
       display: getBarLabelDisplay,
       textAlign: "center" as const,
       formatter: getFormattedBarLabel,
+      borderColor: theme.bar.label?.hover?.border,
       font: { size: 10, weight: "bold" as const },
-      backgroundColor: getBarLabelBackgroundColor(),
+      borderWidth: ({ active }: Context) => (active ? 2 : 0),
+      backgroundColor: ({ active }: Context) =>
+        active
+          ? theme.bar.label?.hover?.background
+          : theme.bar.label?.background,
+      color: ({ active }: Context) =>
+        active ? theme.bar.label?.hover?.text : theme.bar.label?.text,
     },
   }))
 
@@ -137,21 +129,20 @@ ${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
       borderWidth: 3,
       pointRadius: 5,
       type: "line" as const,
-      borderColor: theme.secondary,
-      pointBorderColor: theme.secondary,
-      pointBackgroundColor: theme.secondary,
+      borderColor: theme.line.border,
+      pointBackgroundColor: theme.line.border,
       datalabels: {
         offset: 3,
         clamp: true,
         borderRadius: 4,
-        color: theme.label,
         align: "end" as const,
         anchor: "end" as const,
+        color: theme.line.label?.text,
         display: getLineLabelDisplay,
         textAlign: "center" as const,
         formatter: getFormattedLineLabel,
-        backgroundColor: theme.secondary,
         font: { weight: "bold" as const },
+        backgroundColor: theme.line.label?.background,
         padding: { top: 4, right: 5, bottom: 4, left: 5 },
       },
     },
@@ -165,7 +156,6 @@ ${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
     plugins: {
       legend: { display: false },
       tooltip: { enabled: false },
-      annotation: { annotations: {} },
     },
     scales: {
       x: {
@@ -176,7 +166,7 @@ ${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
           drawBorder: false,
         },
         ticks: {
-          color: theme.text,
+          color: theme.scale.text,
         },
       },
       y: {
@@ -184,14 +174,14 @@ ${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
         type: "linear" as const,
         ticks: {
           padding: 10,
-          color: theme.text,
+          color: theme.scale.text,
         },
         grid: {
           lineWidth: 1,
           drawTicks: false,
           drawBorder: false,
           borderDash: [3, 3],
-          color: theme.border,
+          color: theme.scale.border,
         },
       },
       y2: {
@@ -200,7 +190,7 @@ ${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
         ticks: {
           padding: 10,
           stepSize: 0.1,
-          color: theme.text,
+          color: theme.scale.text,
           callback: getFormattedLineLabel,
         },
         grid: {
