@@ -89,7 +89,7 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
     plugins: {
       legend: { display: false },
       tooltip: { enabled: false },
-      annotation: { enabled: false },
+      annotation: { annotations: {} },
       datalabels: {
         color: theme.base,
         labels: {

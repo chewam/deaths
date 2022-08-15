@@ -163,7 +163,7 @@ ${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
     plugins: {
       legend: { display: false },
       tooltip: { enabled: false },
-      annotation: { enabled: false },
+      annotation: { annotations: {} },
     },
     scales: {
       x: {
