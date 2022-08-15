@@ -34,11 +34,6 @@ export const getBarLabelBackgroundColor =
   ({ active }: Context) =>
     active ? "rgb(30, 58, 138)" : "rgba(0, 0, 0, 0)"
 
-// export const getBarLabelBackgroundColor =
-//   (color: string) =>
-//   ({ active }: Context) =>
-//     active ? hexToRgba(color, 1) : "rgba(0, 0, 0, 0)"
-
 export const getBarLabelDisplay = ({
   chart,
   active,
@@ -117,25 +112,17 @@ ${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
     data: ageGroup,
     label: `bar-${i}`,
     borderColor: "transparent",
-    // borderColor: "red",
     hoverBackgroundColor: "rgb(30, 58, 138)",
     backgroundColor: hexToRgba(theme.base, 0.8),
-    // hoverBorderColor: hexToRgba(theme.base, 0.8),
-    // borderWidth: { top: 2, right: 0, bottom: 2, left: 0 },
     borderWidth: { top: 1, right: 0, bottom: 0, left: 0 },
-    // hoverBorderWidth: 2,
-    // hoverBorderWidth: { top: 2, right: 2, bottom: 2, left: 2 },
     datalabels: {
       borderRadius: 4,
       color: theme.label,
       display: getBarLabelDisplay,
       textAlign: "center" as const,
       formatter: getFormattedBarLabel,
-      // font: { size: 11, weight: "bold" as const },
       font: { size: 10, weight: "bold" as const },
-      // padding: { top: 4, right: 5, bottom: 4, left: 5 },
       backgroundColor: getBarLabelBackgroundColor(),
-      // backgroundColor: theme.base,
     },
   }))
 
@@ -176,6 +163,7 @@ ${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
     plugins: {
       legend: { display: false },
       tooltip: { enabled: false },
+      annotation: { enabled: false },
     },
     scales: {
       x: {
