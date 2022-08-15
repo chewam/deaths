@@ -100,23 +100,23 @@ ${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
     yAxisID: "y",
     data: ageGroup,
     label: `bar-${i}`,
-    backgroundColor: theme.bar.background,
-    hoverBackgroundColor: theme.bar.hover?.background,
+    backgroundColor: theme.primary.background,
+    hoverBackgroundColor: theme.primary.hover?.background,
     borderWidth: { top: 1, right: 0, bottom: 0, left: 0 },
     datalabels: {
       borderRadius: 4,
       display: getBarLabelDisplay,
       textAlign: "center" as const,
       formatter: getFormattedBarLabel,
-      borderColor: theme.bar.label?.hover?.border,
+      borderColor: theme.primary.label?.hover?.border,
       font: { size: 10, weight: "bold" as const },
       borderWidth: ({ active }: Context) => (active ? 2 : 0),
       backgroundColor: ({ active }: Context) =>
         active
-          ? theme.bar.label?.hover?.background
-          : theme.bar.label?.background,
+          ? theme.primary.label?.hover?.background
+          : theme.primary.label?.background,
       color: ({ active }: Context) =>
-        active ? theme.bar.label?.hover?.text : theme.bar.label?.text,
+        active ? theme.primary.label?.hover?.text : theme.primary.label?.text,
     },
   }))
 
@@ -129,20 +129,20 @@ ${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
       borderWidth: 3,
       pointRadius: 5,
       type: "line" as const,
-      borderColor: theme.line.border,
-      pointBackgroundColor: theme.line.border,
+      borderColor: theme.secondary.border,
+      pointBackgroundColor: theme.secondary.border,
       datalabels: {
         offset: 3,
         clamp: true,
         borderRadius: 4,
         align: "end" as const,
         anchor: "end" as const,
-        color: theme.line.label?.text,
+        color: theme.secondary.label?.text,
         display: getLineLabelDisplay,
         textAlign: "center" as const,
         formatter: getFormattedLineLabel,
         font: { weight: "bold" as const },
-        backgroundColor: theme.line.label?.background,
+        backgroundColor: theme.secondary.label?.background,
         padding: { top: 4, right: 5, bottom: 4, left: 5 },
       },
     },

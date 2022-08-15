@@ -15,8 +15,8 @@ interface ChartItem extends ChartItemOptions {
 }
 
 interface Theme {
-  line: Partial<ChartItem>
-  bar: Partial<ChartItem>
+  primary: Partial<ChartItem>
+  secondary: Partial<ChartItem>
   scale: Partial<ChartItem>
 }
 
@@ -40,14 +40,29 @@ const useTheme = (): Theme => {
     } = colors
 
     const theme = {
-      line: {
+      // line: {
+      //   border: green,
+      //   label: {
+      //     text: white,
+      //     background: green,
+      //   },
+      // },
+      secondary: {
         border: green,
         label: {
           text: white,
           background: green,
         },
       },
-      bar: {
+      // donut: {
+      //   border: green,
+      //   label: {
+      //     text: white,
+      //     background: green,
+      //   },
+      // },
+      primary: {
+        border: blue,
         background: blue,
         label: {
           text: white,
@@ -59,6 +74,7 @@ const useTheme = (): Theme => {
           },
         },
         hover: {
+          border: darkblue,
           background: darkblue,
         },
       },
