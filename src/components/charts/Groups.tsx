@@ -5,13 +5,14 @@ import { sumArray } from "@/utils/index"
 import { Doughnut } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js"
+import AnnotationPlugin from "chartjs-plugin-annotation"
 
 interface Props {
   ageGroups: number[]
   big: boolean
 }
 
-ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels)
+ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels, AnnotationPlugin)
 
 export const getAgeGroupFormatter =
   (labels: string[]) =>
@@ -34,13 +35,6 @@ export const getLabelsColor =
     darkPalette[dataIndex]
 
 const Groups = ({ ageGroups, big }: Props): JSX.Element => {
-  const theme = {
-    base: "#60a5fa",
-    text: "#d1d5db",
-    border: "#4b5563",
-    secondary: "#16a34a",
-  }
-
   const groups = [
     sumArray(ageGroups.slice(0, 7)),
     ...ageGroups.slice(7, ageGroups.length - 2),
@@ -90,7 +84,6 @@ const Groups = ({ ageGroups, big }: Props): JSX.Element => {
       legend: { display: false },
       tooltip: { enabled: false },
       datalabels: {
-        color: theme.base,
         labels: {
           title: {
             offset: -5,

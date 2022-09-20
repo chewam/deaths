@@ -4,11 +4,10 @@ import type {
   LineAnnotationOptions,
 } from "chartjs-plugin-annotation"
 
-import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-import annotationPlugin from "chartjs-plugin-annotation"
+import AnnotationPlugin from "chartjs-plugin-annotation"
 import {
   Title,
   Filler,
@@ -21,7 +20,7 @@ import {
 
 import useOverview from "@/services/overview"
 import useRawDeaths from "@/services/raw-deaths"
-import useColorScheme from "@/services/use-color-scheme"
+import useTheme from "@/services/use-charts-theme"
 
 ChartJS.register(
   Title,
@@ -31,7 +30,7 @@ ChartJS.register(
   PointElement,
   CategoryScale,
   ChartDataLabels,
-  annotationPlugin
+  AnnotationPlugin
 )
 
 export const average = (nums: number[]): number =>
@@ -49,20 +48,11 @@ export const getDatalabelsDisplay = ({
 
 const Overview = (): JSX.Element => {
   useRawDeaths()
-  const defaultColor = "#ffffff"
+  const theme = useTheme()
   const [overview] = useOverview()
-  const darkMode = useColorScheme()
   const { labels, data } = overview as Overview
   const max = data.length ? Math.max(...data) : 0
   const { formatMessage: fm, formatNumber: fn } = useIntl()
-
-  const theme = {
-    base: "#60a5fa",
-    label: "#ffffff",
-    secondary: "#16a34a",
-    text: darkMode ? "#d1d5db" : "#111827",
-    border: darkMode ? "#4b5563" : "#d1d5db",
-  }
 
   const datasets = [
     {
@@ -71,10 +61,11 @@ const Overview = (): JSX.Element => {
       tension: 0.4,
       label: "Décès",
       borderWidth: 2,
-      borderColor: theme.base,
-      pointBorderColor: theme.base,
-      pointBackgroundColor: theme.base,
-      backgroundColor: hexToRgba(theme.base || defaultColor, 0.15),
+      pointBorderWidth: 2,
+      borderColor: theme.primary.border,
+      pointBorderColor: theme.primary.background,
+      pointBackgroundColor: theme.primary.label?.text,
+      // backgroundColor: hexToRgba(theme.base || defaultColor, 0.15),
     },
   ]
 
@@ -91,9 +82,9 @@ const Overview = (): JSX.Element => {
     type: "label",
     display: true,
     borderRadius: 4,
-    color: theme.label,
     content: getAnnotationContent(),
-    backgroundColor: theme.secondary,
+    color: theme.secondary.label?.text,
+    backgroundColor: theme.secondary.label?.background,
   } as LabelOptions
 
   const maxAnnotationLine = {
@@ -103,20 +94,20 @@ const Overview = (): JSX.Element => {
     borderWidth: 2,
     borderDash: [6, 3],
     label: maxAnnotationLabel,
-    borderColor: theme.secondary,
+    borderColor: theme.secondary.border,
   } as LineAnnotationOptions
 
   const datalabels = {
     offset: 3,
     clamp: true,
     borderRadius: 4,
-    color: theme.label,
     align: "end" as const,
     anchor: "end" as const,
-    backgroundColor: theme.base,
     textAlign: "center" as const,
     display: getDatalabelsDisplay,
+    color: theme.primary.label?.text,
     font: { weight: "bold" as const },
+    backgroundColor: theme.primary.background,
     padding: { top: 4, right: 5, bottom: 4, left: 5 },
     formatter: (value: number) => (value / 1000).toFixed() + "K",
   }
@@ -143,7 +134,7 @@ const Overview = (): JSX.Element => {
         grid: { display: false },
         ticks: {
           padding: 0,
-          color: theme.text,
+          color: theme.scale.text,
         },
       },
       y: {
@@ -151,14 +142,14 @@ const Overview = (): JSX.Element => {
         suggestedMax: max && max + (max * 5) / 100,
         ticks: {
           padding: 10,
-          color: theme.text,
+          color: theme.scale.text,
         },
         grid: {
           lineWidth: 1,
           drawTicks: false,
           drawBorder: false,
           borderDash: [3, 3],
-          color: theme.border,
+          color: theme.scale.border,
         },
       },
     },

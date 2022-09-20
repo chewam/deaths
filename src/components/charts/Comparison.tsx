@@ -5,11 +5,10 @@ import type {
   LineAnnotationOptions,
 } from "chartjs-plugin-annotation"
 
-import hexToRgba from "hex-to-rgba"
 import { useIntl } from "react-intl"
 import { Line } from "react-chartjs-2"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-import annotationPlugin from "chartjs-plugin-annotation"
+import AnnotationPlugin from "chartjs-plugin-annotation"
 import {
   Title,
   LineElement,
@@ -24,7 +23,7 @@ import useYears from "@/services/years"
 import Months from "@/data/months.json"
 import useDeaths from "@/services/deaths"
 import useRawDeaths from "@/services/raw-deaths"
-import useColorScheme from "@/services/use-color-scheme"
+import useTheme from "@/services/use-charts-theme"
 
 ChartJS.register(
   Title,
@@ -33,7 +32,7 @@ ChartJS.register(
   PointElement,
   CategoryScale,
   ChartDataLabels,
-  annotationPlugin
+  AnnotationPlugin
 )
 
 export const getMaximum = (data: Deaths["data"]) => {
@@ -51,22 +50,13 @@ export const getMaximum = (data: Deaths["data"]) => {
 
 const Comparison = (): JSX.Element => {
   useRawDeaths()
+  const theme = useTheme()
   const [years] = useYears()
   const [deaths] = useDeaths()
-  const defaultColor = "#ffffff"
-  const darkMode = useColorScheme()
   const { labels, data } = deaths as Deaths
   const max = getMaximum(data)
   const { formatMessage: fm, formatNumber: fn } = useIntl()
   const paletteSubset = palette.slice(0, Object.keys(years || {}).length)
-
-  const theme = {
-    base: "#60a5fa",
-    label: "#ffffff",
-    secondary: "#16a34a",
-    text: darkMode ? "#d1d5db" : "#111827",
-    border: darkMode ? "#4b5563" : "#d1d5db",
-  }
 
   const getDataSet = (year: string, index: number): ChartDataset<"line"> => ({
     type: "line" as const,
@@ -77,15 +67,15 @@ const Comparison = (): JSX.Element => {
     data: (data || {})[+year - 2000],
     borderColor: paletteSubset[index],
     pointBorderColor: paletteSubset[index],
-    backgroundColor: hexToRgba(theme.base || defaultColor, 0.1),
+    backgroundColor: theme.primary.background,
     datalabels: {
       offset: 3,
       clamp: true,
       borderRadius: 4,
-      color: theme.label,
       align: "end" as const,
       anchor: "end" as const,
       textAlign: "center" as const,
+      color: theme.primary.label?.text,
       font: { weight: "bold" as const },
       backgroundColor: paletteSubset[index],
       padding: { top: 4, right: 5, bottom: 4, left: 5 },
@@ -115,9 +105,9 @@ const Comparison = (): JSX.Element => {
     type: "label",
     display: true,
     borderRadius: 4,
-    color: theme.label,
     content: getAnnotationContent(),
-    backgroundColor: theme.secondary,
+    color: theme.primary.label?.text,
+    backgroundColor: theme.secondary.label?.background,
   } as LabelOptions
 
   const maxAnnotationLine = {
@@ -127,7 +117,7 @@ const Comparison = (): JSX.Element => {
     value: max?.value,
     borderDash: [6, 3],
     label: maxAnnotationLabel,
-    borderColor: theme.secondary,
+    borderColor: theme.secondary.border,
   } as LineAnnotationOptions
 
   const options = {
@@ -145,7 +135,7 @@ const Comparison = (): JSX.Element => {
       x: {
         grid: { display: false },
         ticks: {
-          color: theme.text,
+          color: theme.scale.text,
         },
       },
       y: {
@@ -153,15 +143,15 @@ const Comparison = (): JSX.Element => {
         suggestedMax: max && max.value + (max.value * 5) / 100,
         ticks: {
           padding: 10,
-          color: theme.text,
+          color: theme.scale.text,
         },
         grid: {
           lineWidth: 1,
           drawTicks: false,
           drawBorder: false,
           borderDash: [3, 3],
-          color: theme.border,
-          zeroLineColor: theme.border,
+          color: theme.scale.border,
+          zeroLineColor: theme.scale.border,
         },
       },
     },
