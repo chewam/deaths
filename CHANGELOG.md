@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/chewam/deaths/compare/v1.2.3...v1.3.0) (2022-09-20)
+
+
+### Features
+
+* bring out distribution hovered segment color ([#95](https://github.com/chewam/deaths/issues/95)) ([fca8eae](https://github.com/chewam/deaths/commit/fca8eae5ed19127aff44f46aa8d4b108616020d3))
+
 ## [1.2.3](https://github.com/chewam/deaths/compare/v1.2.2...v1.2.3) (2022-08-06)
 
 
