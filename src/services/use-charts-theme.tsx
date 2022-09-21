@@ -11,6 +11,7 @@ interface ChartItemOptions {
 
 interface ChartItem extends ChartItemOptions {
   hover: Partial<ChartItemOptions>
+  point: Partial<ChartItemOptions>
   label: Partial<ChartItemOptions & { hover: Partial<ChartItemOptions> }>
 }
 
@@ -36,7 +37,7 @@ const useChartsTheme = (): Theme => {
       // @ts-expect-error: wrong type definition from tailwindcss
       blue: { 400: blue, 900: darkblue },
       // @ts-expect-error: wrong type definition from tailwindcss
-      gray: { 300: lightgray, 600: gray, 900: darkgray },
+      gray: { 300: lightgray, 600: gray, 800: backgray, 900: darkgray },
     } = colors
 
     const theme = {
@@ -58,6 +59,9 @@ const useChartsTheme = (): Theme => {
             border: darkblue,
             background: white,
           },
+        },
+        point: {
+          background: backgray,
         },
         hover: {
           border: darkblue,
