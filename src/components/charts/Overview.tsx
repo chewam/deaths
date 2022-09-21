@@ -61,11 +61,10 @@ const Overview = (): JSX.Element => {
       tension: 0.4,
       label: "Décès",
       borderWidth: 2,
-      pointBorderWidth: 2,
+      pointRadius: 4,
       borderColor: theme.primary.border,
       pointBorderColor: theme.primary.background,
-      pointBackgroundColor: theme.primary.label?.text,
-      // backgroundColor: hexToRgba(theme.base || defaultColor, 0.15),
+      pointBackgroundColor: theme.primary.point?.background,
     },
   ]
 
