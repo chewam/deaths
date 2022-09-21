@@ -67,8 +67,8 @@ const Comparison = (): JSX.Element => {
     data: (data || {})[+year - 2000],
     borderColor: paletteSubset[index],
     pointBorderColor: paletteSubset[index],
-    pointBackgroundColor: theme.primary.point?.background,
     backgroundColor: theme.primary.background,
+    pointBackgroundColor: theme.primary.point?.background,
     datalabels: {
       offset: 3,
       clamp: true,
