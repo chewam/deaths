@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/chewam/deaths/compare/v1.3.1...v1.3.2) (2022-09-21)
+
+
+### Bug Fixes
+
+* overview points background color ([#117](https://github.com/chewam/deaths/issues/117)) ([027448f](https://github.com/chewam/deaths/commit/027448fa1aa306fc00f025d20488b8585172a572))
+
 ## [1.3.1](https://github.com/chewam/deaths/compare/v1.3.0...v1.3.1) (2022-09-21)
 
 
