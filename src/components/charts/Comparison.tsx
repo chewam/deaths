@@ -59,14 +59,15 @@ const Comparison = (): JSX.Element => {
   const paletteSubset = palette.slice(0, Object.keys(years || {}).length)
 
   const getDataSet = (year: string, index: number): ChartDataset<"line"> => ({
-    type: "line" as const,
     label: year,
     tension: 0.4,
     pointRadius: 4,
     borderWidth: 2,
+    type: "line" as const,
     data: (data || {})[+year - 2000],
     borderColor: paletteSubset[index],
     pointBorderColor: paletteSubset[index],
+    pointBackgroundColor: theme.primary.point?.background,
     backgroundColor: theme.primary.background,
     datalabels: {
       offset: 3,
