@@ -28,6 +28,7 @@ exports[`Footer should create a Footer in english 1`] = `
       <a
         class="lang"
         href="/"
+        title="français"
       >
         fr
       </a>
@@ -78,6 +79,7 @@ exports[`Footer should create a Footer in french 1`] = `
       <a
         class="lang"
         href="/"
+        title="english"
       >
         en
       </a>
