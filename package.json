@@ -46,7 +46,7 @@
     "@testing-library/react": "13.3.0",
     "@types/d3-scale": "4.0.2",
     "@types/jest": "28.1.6",
-    "@types/node": "16.11.41",
+    "@types/node": "18.11.9",
     "@types/react": "18.0.16",
     "@types/react-dom": "18.0.6",
     "@types/react-simple-maps": "1.0.8",
