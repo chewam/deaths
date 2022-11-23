@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/chewam/deaths/compare/v1.3.3...v1.3.4) (2022-11-23)
+
+
+### Bug Fixes
+
+* title translation ([94904ec](https://github.com/chewam/deaths/commit/94904ecd7f33d93b0a97fe418fa5c4628f0f7505))
+
 ## [1.3.3](https://github.com/chewam/deaths/compare/v1.3.2...v1.3.3) (2022-11-23)
 
 
