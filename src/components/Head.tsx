@@ -1,12 +1,14 @@
 import NextHead from "next/head"
+import { useIntl } from "react-intl"
 
 const Head = (): JSX.Element => {
+  const { formatMessage: fm } = useIntl()
   const VERCEL_URL = process.env.NEXT_PUBLIC_VERCEL_URL
   const ANALYTICS_ID = process.env.NEXT_PUBLIC_ANALYTICS_ID
 
   return (
     <NextHead>
-      <title>Mortalité en France</title>
+      <title>{fm({ id: "Mortality in France" })}</title>
       <meta name="robots" content="all" />
       <link rel="icon" href="/favicon.ico" />
       <link
