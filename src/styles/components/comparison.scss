@@ -33,6 +33,10 @@
           rounded
           bg-gray-900
           hover:bg-gray-900;
+
+        &.active {
+          @apply text-gray-800;
+        }
       }
     }
   }

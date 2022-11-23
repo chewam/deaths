@@ -16,6 +16,7 @@ interface ChartItem extends ChartItemOptions {
 }
 
 interface Theme {
+  main: string
   primary: Partial<ChartItem>
   secondary: Partial<ChartItem>
   scale: Partial<ChartItem>
@@ -41,6 +42,7 @@ const useChartsTheme = (): Theme => {
     } = colors
 
     const theme = {
+      main: darkMode ? backgray : white,
       secondary: {
         border: green,
         label: {
