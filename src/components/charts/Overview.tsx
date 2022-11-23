@@ -62,9 +62,9 @@ const Overview = (): JSX.Element => {
       label: "Décès",
       borderWidth: 2,
       pointRadius: 4,
+      pointBackgroundColor: theme.main,
       borderColor: theme.primary.border,
       pointBorderColor: theme.primary.background,
-      pointBackgroundColor: theme.primary.point?.background,
     },
   ]
 
