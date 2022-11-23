@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/chewam/deaths/compare/v1.3.2...v1.3.3) (2022-11-23)
+
+
+### Bug Fixes
+
+* charts and labels colors ([#131](https://github.com/chewam/deaths/issues/131)) ([b5dbfe1](https://github.com/chewam/deaths/commit/b5dbfe193c042c5555a2dc93176c5782c72ecaf5))
+
 ## [1.3.2](https://github.com/chewam/deaths/compare/v1.3.1...v1.3.2) (2022-09-21)
 
 
