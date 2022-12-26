@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/chewam/deaths/compare/v1.3.4...v1.3.5) (2022-12-26)
+
+
+### Bug Fixes
+
+* add title to language links ([#118](https://github.com/chewam/deaths/issues/118)) ([040a673](https://github.com/chewam/deaths/commit/040a67342601ecc5840f8044ec6922d5e26e485b))
+
 ## [1.3.4](https://github.com/chewam/deaths/compare/v1.3.3...v1.3.4) (2022-11-23)
 
 
