@@ -4,7 +4,7 @@ import useFilters from "@/services/filters"
 import Genders from "@/components/filters/Genders"
 import AgeGroups from "@/components/filters/AgeGroups"
 
-const FiltersBar = (): JSX.Element => {
+const FiltersBar = () => {
   const { route } = useRouter()
   const [filters, setFilters] = useFilters()
 

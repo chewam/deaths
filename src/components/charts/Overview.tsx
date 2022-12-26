@@ -46,7 +46,7 @@ export const getDatalabelsDisplay = ({
   return active ? true : d[dataIndex] > avg + avg * 0.1 ? "auto" : false
 }
 
-const Overview = (): JSX.Element => {
+const Overview = () => {
   useRawDeaths()
   const theme = useTheme()
   const [overview] = useOverview()
@@ -62,9 +62,9 @@ const Overview = (): JSX.Element => {
       label: "Décès",
       borderWidth: 2,
       pointRadius: 4,
+      pointBackgroundColor: theme.main,
       borderColor: theme.primary.border,
       pointBorderColor: theme.primary.background,
-      pointBackgroundColor: theme.primary.point?.background,
     },
   ]
 

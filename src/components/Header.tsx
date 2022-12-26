@@ -2,14 +2,12 @@ import Menu from "./Menu"
 import Link from "next/link"
 import { FormattedMessage as Trans } from "react-intl"
 
-const Header = (): JSX.Element => (
+const Header = () => (
   <div className="header">
     <div className="wrapper">
       <h1>
         <Link href="/">
-          <a>
-            <Trans id="Mortality in France" />
-          </a>
+          <Trans id="Mortality in France" />
         </Link>
       </h1>
       <Menu />

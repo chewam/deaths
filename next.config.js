@@ -26,10 +26,11 @@ const stylesHashes = [
 const ContentSecurityPolicy = process.env.NODE_ENV === "production" ? `
   font-src 'self';
   default-src 'self';
-  img-src 'self' www.google-analytics.com;
   style-src 'self' ${stylesHashes} 'unsafe-hashes';
-  connect-src 'self' *.sentry.io vitals.vercel-insights.com www.google-analytics.com;
-  script-src 'self' *.sentry.io *.googletagmanager.com www.google-analytics.com 'sha256-Knm+Tl38SOjwUxvDOr3uFM81svhZ9Twnt6mYVgF2K9s=' 'unsafe-inline';
+  frame-src https://vercel.live/ https://vercel.com;
+  img-src 'self' www.google-analytics.com https://vercel.live/ https://vercel.com https://sockjs-mt1.pusher.com/ data: blob:;
+  connect-src 'self' *.sentry.io vitals.vercel-insights.com www.google-analytics.com https://vercel.live/ https://vercel.com https://sockjs-mt1.pusher.com/ wss://ws-mt1.pusher.com/;
+  script-src 'self' *.sentry.io *.googletagmanager.com www.google-analytics.com 'sha256-Knm+Tl38SOjwUxvDOr3uFM81svhZ9Twnt6mYVgF2K9s=' https://vercel.live/ https://vercel.com 'unsafe-inline';
 ` : ""
 
 const securityHeaders = [{

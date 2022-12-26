@@ -1,6 +1,6 @@
 import Dashboard from "@/components/dashboard"
 
-const Page = (): JSX.Element => {
+const Page = () => {
   return (
     <div className="dashboard">
       <Dashboard />

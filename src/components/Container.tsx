@@ -6,7 +6,7 @@ type Props = {
   children?: ReactNode
 }
 
-const Container = ({ children, className, hidden }: Props): JSX.Element => (
+const Container = ({ children, className, hidden }: Props) => (
   <div className={`container ${className} ${hidden ? "hidden" : ""}`}>
     {children}
   </div>

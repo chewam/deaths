@@ -48,7 +48,7 @@ export const getMaximum = (data: Deaths["data"]) => {
   return maximums[maxValue]
 }
 
-const Comparison = (): JSX.Element => {
+const Comparison = () => {
   useRawDeaths()
   const theme = useTheme()
   const [years] = useYears()
@@ -65,10 +65,10 @@ const Comparison = (): JSX.Element => {
     borderWidth: 2,
     type: "line" as const,
     data: (data || {})[+year - 2000],
+    pointBackgroundColor: theme.main,
     borderColor: paletteSubset[index],
     pointBorderColor: paletteSubset[index],
     backgroundColor: theme.primary.background,
-    pointBackgroundColor: theme.primary.point?.background,
     datalabels: {
       offset: 3,
       clamp: true,

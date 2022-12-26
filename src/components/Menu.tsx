@@ -2,7 +2,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { FormattedMessage as Trans } from "react-intl"
 
-const Menu = (): JSX.Element => {
+const Menu = () => {
   const { route } = useRouter()
   const view = (route || "").substring(1)
 
@@ -17,9 +17,7 @@ const Menu = (): JSX.Element => {
       {items.map((_item, i) => (
         <li key={i} className={`${view === items[i].view ? "active" : ""}`}>
           <Link href={`/${encodeURIComponent(items[i].view)}`}>
-            <a>
-              <Trans id={items[i].view} />
-            </a>
+            <Trans id={items[i].view} />
           </Link>
         </li>
       ))}
