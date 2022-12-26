@@ -1,7 +1,7 @@
 import { palette } from "@/utils/index"
 import useYears from "@/services/years"
 
-const Years = (): JSX.Element => {
+const Years = () => {
   const [years, setYears] = useYears()
 
   const paletteSubset = palette

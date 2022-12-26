@@ -21,7 +21,7 @@ const marks = {
   110: "110+",
 }
 
-const AgeGroups = ({ onChange }: Props): JSX.Element => (
+const AgeGroups = ({ onChange }: Props) => (
   <>
     <Slider
       range

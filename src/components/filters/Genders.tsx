@@ -5,7 +5,7 @@ interface Props {
   onChange: (gender: Gender) => void
 }
 
-const Genders = ({ onChange }: Props): JSX.Element => {
+const Genders = ({ onChange }: Props) => {
   const { formatMessage: fm } = useIntl()
   const [gender, setGender] = useState(null as Gender)
 

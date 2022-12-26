@@ -1,6 +1,6 @@
 import DistributionChart from "@/components/charts/Distribution"
 
-const Distribution = (): JSX.Element => {
+const Distribution = () => {
   return (
     <div className="container mx-auto px-6">
       <div className="distribution">

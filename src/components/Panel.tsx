@@ -7,7 +7,7 @@ type Props = {
   children?: ReactNode
 }
 
-const Panel = ({ children, className, hidden }: Props): JSX.Element => (
+const Panel = ({ children, className, hidden }: Props) => (
   <Container className={`panel ${className || ""}`} hidden={hidden}>
     {children}
   </Container>

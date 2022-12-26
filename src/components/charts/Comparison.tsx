@@ -48,7 +48,7 @@ export const getMaximum = (data: Deaths["data"]) => {
   return maximums[maxValue]
 }
 
-const Comparison = (): JSX.Element => {
+const Comparison = () => {
   useRawDeaths()
   const theme = useTheme()
   const [years] = useYears()

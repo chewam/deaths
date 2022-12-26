@@ -1,11 +1,9 @@
 import Lang from "@/components/Lang"
 import { FormattedMessage as Trans } from "react-intl"
 
-const Spacer = (): JSX.Element => (
-  <span className="spacer">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-)
+const Spacer = () => <span className="spacer">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 
-const Footer = (): JSX.Element => {
+const Footer = () => {
   const version = process.env.APP_VERSION || "0.0.0"
   const sha = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA || "dev"
 
