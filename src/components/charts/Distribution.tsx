@@ -50,7 +50,7 @@ export const getFormattedLineLabel = (value: number) => `${value.toFixed(2)}%`
 export const getLineLabelDisplay = ({ active }: Context) =>
   active ? true : "auto"
 
-const Distribution = (): JSX.Element => {
+const Distribution = () => {
   useRawMortality()
   const theme = useTheme()
   const [mortality] = useMortality()

@@ -21,7 +21,7 @@ const Tile = ({
   ageGroups,
   population,
   main = false,
-}: Props): JSX.Element => {
+}: Props) => {
   return (
     <div className="tile">
       <div className="left">

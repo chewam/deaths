@@ -34,7 +34,7 @@ export const getLabelsColor =
   ({ dataIndex }: Context) =>
     darkPalette[dataIndex]
 
-const Groups = ({ ageGroups, big }: Props): JSX.Element => {
+const Groups = ({ ageGroups, big }: Props) => {
   const groups = [
     sumArray(ageGroups.slice(0, 7)),
     ...ageGroups.slice(7, ageGroups.length - 2),

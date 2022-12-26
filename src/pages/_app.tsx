@@ -14,7 +14,7 @@ import "@/styles/globals.scss"
 import en from "@/lang/en.json"
 import fr from "@/lang/fr.json"
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   const { locale = "", defaultLocale = "" } = router
   const messages = { en, fr } as Record<string, Record<string, string>>

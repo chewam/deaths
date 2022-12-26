@@ -46,7 +46,7 @@ export const getDatalabelsDisplay = ({
   return active ? true : d[dataIndex] > avg + avg * 0.1 ? "auto" : false
 }
 
-const Overview = (): JSX.Element => {
+const Overview = () => {
   useRawDeaths()
   const theme = useTheme()
   const [overview] = useOverview()
