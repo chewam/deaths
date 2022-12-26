@@ -1,7 +1,7 @@
 import NextHead from "next/head"
 import { useIntl } from "react-intl"
 
-const Head = (): JSX.Element => {
+const Head = () => {
   const { formatMessage: fm } = useIntl()
   const VERCEL_URL = process.env.NEXT_PUBLIC_VERCEL_URL
   const ANALYTICS_ID = process.env.NEXT_PUBLIC_ANALYTICS_ID

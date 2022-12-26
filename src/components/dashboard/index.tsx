@@ -10,7 +10,7 @@ const sumAgeGroups = (ageGroups: number[][][] = []): number[][] =>
     []
   )
 
-const Dashboard = (): JSX.Element => {
+const Dashboard = () => {
   const previous: number[] = []
   const [years] = useYears()
   const yearsList = Object.keys(years || {})
