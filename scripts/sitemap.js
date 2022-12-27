@@ -16,7 +16,8 @@ const urls = fs
     ].includes(pages)
   })
   .map((page) => {
-    return `${BASE_URL}/${path.parse(page).name}`
+    const name = path.parse(page).name
+    return `${BASE_URL}/${name === "index" ? "" : name}`
   })
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
