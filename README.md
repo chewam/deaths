@@ -59,6 +59,12 @@ Open [http://localhost:3001](http://localhost:3001) with your browser to see the
 yarn analyze
 ```
 
+### Generate sitemap
+
+```bash
+yarn postbuild
+```
+
 ## Update datasets
 
 ### Download and process data files
