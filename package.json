@@ -8,11 +8,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "jest",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export",
+    "test": "jest --collect-coverage",
     "update-data": "./scripts/fetch.js",
     "postbuild": "./scripts/sitemap.js",
     "analyze": "ANALYZE=true yarn build",
@@ -38,7 +38,7 @@
     "swr": "1.0.1"
   },
   "devDependencies": {
-    "@juggle/resize-observer": "^3.4.0",
+    "@juggle/resize-observer": "3.4.0",
     "@next/bundle-analyzer": "12.2.4",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "10.0.1",
