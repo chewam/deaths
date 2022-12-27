@@ -69,7 +69,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -135,7 +142,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -201,7 +215,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -267,7 +288,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -333,7 +361,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -399,7 +434,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -465,7 +507,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -531,7 +580,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -597,7 +653,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -663,7 +726,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -729,7 +799,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -795,7 +872,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -861,7 +945,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -927,7 +1018,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -993,7 +1091,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -1059,7 +1164,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -1125,7 +1237,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -1191,7 +1310,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -1257,7 +1383,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -1323,7 +1456,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -1389,7 +1529,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -1455,7 +1602,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
     <div
       class="tile"
@@ -1521,7 +1675,14 @@ exports[`Page snapshot: index 1`] = `
       </div>
       <div
         class="right"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>

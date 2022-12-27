@@ -7,7 +7,14 @@ exports[`Page snapshot: distribution 1`] = `
   >
     <div
       class="distribution"
-    />
+    >
+      <canvas
+        height="0"
+        role="img"
+        style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+        width="0"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;

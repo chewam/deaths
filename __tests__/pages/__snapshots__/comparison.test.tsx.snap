@@ -10,7 +10,14 @@ exports[`Page snapshot: comparison 1`] = `
     >
       <div
         class="chart"
-      />
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
       <ul
         class="years"
       >
