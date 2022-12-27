@@ -14,6 +14,7 @@
     "start": "next start",
     "export": "next export",
     "update-data": "./scripts/fetch.js",
+    "postbuild": "./scripts/sitemap.js",
     "analyze": "ANALYZE=true yarn build",
     "lint": "eslint --ext js,jsx,ts,tsx --fix",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit"
