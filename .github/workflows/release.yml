@@ -16,9 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-
-      - name: Yarn cache setup
-        uses: c-hive/gha-yarn-cache@v2
+          cache: "yarn"
 
       - name: Install dependencies
         run: yarn --frozen-lockfile --perfer-offline
