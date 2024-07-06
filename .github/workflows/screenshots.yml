@@ -10,7 +10,7 @@ jobs:
   devices:
     name: Capture multi devices
     if: github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Preview'
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Install puppeteer-headful
         uses: mujo-code/puppeteer-headful@master
