@@ -17,6 +17,79 @@ exports[`Page snapshot: index 1`] = `
           <div
             class="year"
           >
+            2024
+          </div>
+          <i
+            class="ri-arrow-right-up-line"
+            title="mortality raise"
+          />
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value below"
+          >
+            NaN%
+          </div>
+          <div
+            class="label"
+          >
+            Taux de mortalité
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            0
+          </div>
+          <div
+            class="label"
+          >
+            Nombre de décès
+          </div>
+        </div>
+        <div
+          class="stat"
+        >
+          <div
+            class="value"
+          >
+            NaN
+          </div>
+          <div
+            class="label"
+          >
+            Population totale
+          </div>
+        </div>
+      </div>
+      <div
+        class="right"
+      >
+        <canvas
+          height="0"
+          role="img"
+          style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
+          width="0"
+        />
+      </div>
+    </div>
+    <div
+      class="tile"
+    >
+      <div
+        class="left"
+      >
+        <div
+          class="year-trend"
+        >
+          <div
+            class="year"
+          >
             2023
           </div>
           <i
