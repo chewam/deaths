@@ -23,6 +23,14 @@ exports[`Page snapshot: comparison 1`] = `
       >
         <li>
           <button
+            class=""
+            style="background-color: transparent;"
+          >
+            2024
+          </button>
+        </li>
+        <li>
+          <button
             class="active"
             style="background-color: rgb(156, 173, 206); border-color: #9cadce;"
           >
