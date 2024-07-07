@@ -68,7 +68,7 @@ jobs:
           ls -lah ./coverage
 
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: coverage
           path: coverage
