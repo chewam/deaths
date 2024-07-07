@@ -23,8 +23,8 @@ exports[`Page snapshot: comparison 1`] = `
       >
         <li>
           <button
-            class=""
-            style="background-color: transparent;"
+            class="active"
+            style="background-color: rgb(126, 196, 207); border-color: #7ec4cf;"
           >
             2024
           </button>
@@ -79,8 +79,8 @@ exports[`Page snapshot: comparison 1`] = `
         </li>
         <li>
           <button
-            class="active"
-            style="background-color: rgb(254, 147, 140); border-color: #fe938c;"
+            class=""
+            style="background-color: transparent;"
           >
             2017
           </button>
