@@ -18,8 +18,8 @@ jobs:
           node-version: 20
           cache: "yarn"
 
-      - name: Add semantic release dependencies
-        run: yarn add @semantic-release/changelog @semantic-release/git @semantic-release/github
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --perfer-offline
 
       - name: Release
         env:
