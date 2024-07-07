@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/chewam/deaths/compare/v1.3.5...v1.3.6) (2024-07-07)
+
+
+### Bug Fixes
+
+* add 2024 total population ([#189](https://github.com/chewam/deaths/issues/189)) ([3768f31](https://github.com/chewam/deaths/commit/3768f314bda2ae5d9b46eaea17408e9874f44663))
+
 ## [1.3.5](https://github.com/chewam/deaths/compare/v1.3.4...v1.3.5) (2022-12-26)
 
 
