@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/chewam/deaths/compare/v1.3.6...v1.3.7) (2024-07-07)
+
+
+### Bug Fixes
+
+* update comparison default years ([abd322c](https://github.com/chewam/deaths/commit/abd322cb5a0b02c8a6c77f017dd8ed957406cfaa))
+
 ## [1.3.6](https://github.com/chewam/deaths/compare/v1.3.5...v1.3.6) (2024-07-07)
 
 
