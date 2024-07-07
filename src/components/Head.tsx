@@ -4,7 +4,6 @@ import { useIntl } from "react-intl"
 const Head = () => {
   const { formatMessage: fm } = useIntl()
   const VERCEL_URL = process.env.NEXT_PUBLIC_VERCEL_URL
-  const ANALYTICS_ID = process.env.NEXT_PUBLIC_ANALYTICS_ID
 
   return (
     <NextHead>
@@ -34,26 +33,6 @@ const Head = () => {
       )}
       <meta name="twitter:card" content="summary_large_image"></meta>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      {ANALYTICS_ID && (
-        <>
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${ANALYTICS_ID}', {
-                  page_path: window.location.pathname,
-                });
-              `,
-            }}
-          />
-        </>
-      )}
     </NextHead>
   )
 }

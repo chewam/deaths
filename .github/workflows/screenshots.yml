@@ -10,21 +10,23 @@ jobs:
   devices:
     name: Capture multi devices
     if: github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Preview'
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Install puppeteer-headful
-        uses: mujo-code/puppeteer-headful@master
+        uses: mujo-code/puppeteer-headful@18.9.0
         env:
           CI: "true"
+        with:
+          args:
 
       - name: Take screenshots
-        uses: flameddd/screenshots-ci-action@v1.1.1
+        uses: flameddd/screenshots-ci-action@v2.1.0
         with:
           url: ${{ github.event.deployment_status.target_url }}
           devices: iPhone X,iPhone X landscape,iPhone 6,iPhone 6 landscape,Galaxy S5,Galaxy S5 landscape,Nexus 10,Nexus 10 landscape,iPad,iPad landscape
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: screenshots
           name: test-screenshots
