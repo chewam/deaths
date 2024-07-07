@@ -30,7 +30,7 @@ exports[`Page snapshot: index 1`] = `
           <div
             class="value below"
           >
-            NaN%
+            0%
           </div>
           <div
             class="label"
@@ -58,7 +58,7 @@ exports[`Page snapshot: index 1`] = `
           <div
             class="value"
           >
-            NaN
+            68 373 433
           </div>
           <div
             class="label"

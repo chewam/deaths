@@ -11,12 +11,12 @@ const sumAgeGroups = (ageGroups: number[][][] = []): number[][] =>
   )
 
 const Dashboard = () => {
-  const previous: number[] = []
   const [years] = useYears()
-  const yearsList = Object.keys(years || {})
+  const previous: number[] = []
   const [deaths] = useRawDeaths()
   const { ageGroups } = deaths || {}
   const groups = sumAgeGroups(ageGroups)
+  const yearsList = Object.keys(years || {})
 
   const average =
     groups
