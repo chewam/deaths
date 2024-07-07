@@ -9,14 +9,15 @@ jobs:
   udpate:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: master
           token: ${{ secrets.PAT }}
 
-      - name: Yarn cache setup
-        uses: c-hive/gha-yarn-cache@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: yarn
 
       - name: Install
         run: yarn --frozen-lockfile --perfer-offline
