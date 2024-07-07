@@ -2,13 +2,6 @@ import { NextRequest, NextResponse } from "next/server"
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
     {
       source: "/((?!api|_next/static|_next/image|favicon.ico).*)",
       missing: [
@@ -33,7 +26,7 @@ export function middleware(request: NextRequest) {
     frame-ancestors 'none';
     upgrade-insecure-requests;
 `
-  // Replace newline characters and spaces
+
   const contentSecurityPolicyHeaderValue = cspHeader
     .replace(/\s{2,}/g, " ")
     .trim()

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer"
 import type { AppProps } from "next/app"
 import { IntlProvider } from "react-intl"
 import FiltersBar from "@/components/FiltersBar"
+import { Analytics } from "@vercel/analytics/react"
 
 import "remixicon/fonts/remixicon.css"
 import "@/styles/tailwind.scss"
@@ -24,17 +25,20 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <IntlProvider
-      locale={locale}
-      defaultLocale={defaultLocale}
-      messages={messages[locale] || messages[defaultLocale]}
-    >
-      <Head />
-      <Header />
-      <FiltersBar />
-      <Component {...pageProps} />
-      <Footer />
-    </IntlProvider>
+    <>
+      <IntlProvider
+        locale={locale}
+        defaultLocale={defaultLocale}
+        messages={messages[locale] || messages[defaultLocale]}
+      >
+        <Head />
+        <Header />
+        <FiltersBar />
+        <Component {...pageProps} />
+        <Footer />
+      </IntlProvider>
+      <Analytics />
+    </>
   )
 }
 
