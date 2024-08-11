@@ -1,3 +1,10 @@
+## [1.3.8](https://github.com/chewam/deaths/compare/v1.3.7...v1.3.8) (2024-08-11)
+
+
+### Bug Fixes
+
+* **csp:** remove nonce ([d83ea63](https://github.com/chewam/deaths/commit/d83ea63b86888dc0cfb46a7b4542d3095c5888d4))
+
 ## [1.3.7](https://github.com/chewam/deaths/compare/v1.3.6...v1.3.7) (2024-07-07)
 
 
