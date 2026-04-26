@@ -1,3 +1,5 @@
+## [1.3.9](https://github.com/chewam/deaths/compare/v1.3.8...v1.3.9) (2026-04-26)
+
 ## [1.3.8](https://github.com/chewam/deaths/compare/v1.3.7...v1.3.8) (2024-08-11)
 
 
