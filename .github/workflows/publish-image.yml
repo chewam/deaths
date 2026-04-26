@@ -11,7 +11,9 @@ concurrency:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    # Runner ARM natif (gratuit pour repos publics depuis 2024).
+    # Build linux/arm64 sans QEMU = ~30s vs ~5min via émulation.
+    runs-on: ubuntu-24.04-arm
     permissions:
       contents: read
       packages: write
@@ -37,6 +39,7 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           context: .
+          platforms: linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
