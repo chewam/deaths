@@ -23,10 +23,18 @@ exports[`Page snapshot: comparison 1`] = `
       >
         <li>
           <button
-            class="active"
-            style="background-color: rgb(126, 196, 207); border-color: #7ec4cf;"
+            class=""
+            style="background-color: transparent;"
           >
-            2024
+            2026
+          </button>
+        </li>
+        <li>
+          <button
+            class=""
+            style="background-color: transparent;"
+          >
+            2025
           </button>
         </li>
         <li>
@@ -34,7 +42,7 @@ exports[`Page snapshot: comparison 1`] = `
             class="active"
             style="background-color: rgb(156, 173, 206); border-color: #9cadce;"
           >
-            2023
+            2024
           </button>
         </li>
         <li>
@@ -42,7 +50,7 @@ exports[`Page snapshot: comparison 1`] = `
             class="active"
             style="background-color: rgb(209, 207, 226); border-color: #d1cfe2;"
           >
-            2022
+            2023
           </button>
         </li>
         <li>
@@ -50,13 +58,21 @@ exports[`Page snapshot: comparison 1`] = `
             class="active"
             style="background-color: rgb(212, 175, 185); border-color: #d4afb9;"
           >
-            2021
+            2022
           </button>
         </li>
         <li>
           <button
             class="active"
             style="background-color: rgb(66, 129, 164); border-color: #4281a4;"
+          >
+            2021
+          </button>
+        </li>
+        <li>
+          <button
+            class="active"
+            style="background-color: rgb(156, 175, 183); border-color: #9cafb7;"
           >
             2020
           </button>
