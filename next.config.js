@@ -2,6 +2,7 @@ const { version } = require("./package.json")
 const { withSentryConfig } = require('@sentry/nextjs');
 
 const moduleExports = {
+  output: "standalone",
   env: { APP_VERSION: version },
   i18n: {
     defaultLocale: "en",
