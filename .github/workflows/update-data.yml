@@ -25,6 +25,9 @@ jobs:
       - name: Download files
         run: ./scripts/fetch.js
 
+      - name: Refresh test snapshots
+        run: yarn test -u
+
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
