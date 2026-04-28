@@ -75,6 +75,18 @@ The `NEW_VERSION/` directory is the **design reference** (a Babel-standalone HTM
 | `/comparison` | comparison | `08-comparison.png` |
 | `/distribution` | distribution | `09-distribution.png` |
 
+## Starting a task — RUN THIS FIRST
+
+When picking up any sub-issue, **invoke `/start-task <issue-number>` before doing anything else**. The skill at `.claude/skills/start-task/SKILL.md` runs the pre-flight checklist:
+
+1. Loads CLAUDE.md and the issue + parent.
+2. Validates scope, deliverable, test strategy, referenced files, upstream dependencies.
+3. Proposes (and applies, with your confirmation) ticket improvements if anything is fuzzy.
+4. Marks the board status `In progress`.
+5. Plans the implementation with TodoWrite.
+
+This is the contract for parallel sessions: every session starts from the same baseline.
+
 ## How to navigate work
 
 - 8 parent issues #217–#224, one per Lot. Each is type `Feature`, labeled `lot-N`.
