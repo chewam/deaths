@@ -5,6 +5,9 @@
 /coverage
 /out
 /.lighthouseci
+/test-results
+/playwright-report
+/playwright/.cache
 /tsconfig.tsbuildinfo
 /yarn-error.log
 /.claude/settings.local.json

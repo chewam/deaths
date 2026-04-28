@@ -13,6 +13,8 @@
     "start": "next start",
     "export": "next export",
     "test": "jest --collect-coverage",
+    "e2e": "playwright test --project=e2e-behavior",
+    "e2e:visual": "playwright test --project=e2e-visual --pass-with-no-tests",
     "update-data": "./scripts/fetch.js",
     "postbuild": "./scripts/sitemap.js",
     "analyze": "ANALYZE=true yarn build",
@@ -41,6 +43,7 @@
   "devDependencies": {
     "@juggle/resize-observer": "3.4.0",
     "@next/bundle-analyzer": "12.2.4",
+    "@playwright/test": "^1.59.1",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "8.0.4",
