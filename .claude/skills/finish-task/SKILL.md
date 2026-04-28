@@ -17,8 +17,9 @@ The user invoked `/finish-task <num>`. If missing, infer from recent context (wh
 
 - Re-read the sub-issue body to find which net validates this work: `yarn test` (Vitest unit), `yarn e2e` (Playwright behavior), or `yarn e2e:visual` (Playwright screenshots).
 - If the body is fuzzy on the test command: this is a `/start-task` failure — fix the issue body now, then continue.
-- Run the relevant command(s). If a test fails, **fix or report** — don't proceed to PR.
-- Also run `yarn type-check` and `yarn lint` if they're not already part of CI.
+- **Always run `yarn test` and `yarn type-check` and `yarn lint`** in addition to the issue's nominated net. These are the CI gates — running them locally is the only way to avoid round-tripping a red CI.
+- **If the diff touches test infrastructure** (jest/vitest/playwright config, anything under `e2e/`, new test files, test deps), run **all three nets** (`yarn test`, `yarn e2e`, `yarn e2e:visual`). A new file in one runner can break the discovery rules of another — e.g. PR #259 added `e2e/smoke.spec.ts`, which Jest's default `**/*.spec.ts` greedily picked up and ran with the wrong runner.
+- If a test fails, **fix or report** — don't proceed to PR.
 
 ### 2. Verify diff scope
 
