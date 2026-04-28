@@ -7,3 +7,6 @@
 /.lighthouseci
 /tsconfig.tsbuildinfo
 /yarn-error.log
+/.claude/settings.local.json
+/.claude/worktrees
+.DS_Store
