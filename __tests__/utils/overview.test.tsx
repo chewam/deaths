@@ -3,11 +3,29 @@ import {
   average,
   getDatalabelsDisplay,
 } from "../../src/components/charts/Overview"
+import deaths from "../../public/data/deaths.json"
+
+const male = (deaths as DeathsRawData).male.global
+const female = (deaths as DeathsRawData).female.global
 
 describe("Test average()", () => {
   test("average([0, 10]) => 5", () => {
     const res = average([0, 10])
     expect(res).toBe(5)
+  })
+
+  test("regression: average of 2000 male monthly = 23431.667", () => {
+    expect(average(male[0])).toBeCloseTo(23431.6667, 4)
+  })
+
+  test("regression: average of 2010 m+f monthly = 46396.5", () => {
+    const mf = male[10].map((m, i) => m + female[10][i])
+    expect(average(mf)).toBeCloseTo(46396.5, 4)
+  })
+
+  test("regression: 2020 m+f monthly avg = 56510.417 (COVID year)", () => {
+    const mf = male[20].map((m, i) => m + female[20][i])
+    expect(average(mf)).toBeCloseTo(56510.4167, 4)
   })
 })
 
