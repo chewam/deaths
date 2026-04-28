@@ -39,7 +39,7 @@ exports[`Footer should create a Footer in english 1`] = `
       </span>
       version 0.0.0 (
       <a
-        href="https://github.com/chewam/deaths/tree/dev"
+        href="https://github.com/chewam/mortality/tree/dev"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -90,7 +90,7 @@ exports[`Footer should create a Footer in french 1`] = `
       </span>
       version 0.0.0 (
       <a
-        href="https://github.com/chewam/deaths/tree/dev"
+        href="https://github.com/chewam/mortality/tree/dev"
         rel="noopener noreferrer"
         target="_blank"
       >

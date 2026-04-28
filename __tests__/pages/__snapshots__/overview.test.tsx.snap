@@ -9,10 +9,9 @@ exports[`Page snapshot: overview 1`] = `
       class="overview"
     >
       <canvas
-        height="0"
+        height="150"
         role="img"
-        style="display: block; box-sizing: border-box; height: 0px; width: 0px;"
-        width="0"
+        width="300"
       />
     </div>
   </div>

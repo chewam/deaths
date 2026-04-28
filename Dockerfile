@@ -6,8 +6,7 @@ FROM node:20-alpine AS deps
 WORKDIR /app
 RUN apk add --no-cache libc6-compat
 COPY package.json yarn.lock ./
-# --ignore-scripts : skip postinstall (notamment 'canvas' devDep qui demande
-# cairo/pango natifs absents d'alpine, et qui ne sert qu'aux tests Jest).
+# --ignore-scripts : skip postinstall (perfs build, deps natives non requises).
 RUN yarn install --frozen-lockfile --ignore-scripts
 
 # ── 2. Build ─────────────────────────────────────────────────────────────
@@ -16,9 +15,10 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-# Sentry pourrait essayer d'upload des sourcemaps si SENTRY_AUTH_TOKEN existe.
-# Sans token (cas par défaut), build passe sans upload (juste un warning).
-RUN yarn build
+# Token Sentry monté en BuildKit secret (jamais persisté dans une couche).
+# Absent en local → upload sourcemaps skip avec warning, build OK.
+RUN --mount=type=secret,id=sentry_auth_token,env=SENTRY_AUTH_TOKEN \
+    yarn build
 
 # ── 3. Runtime minimal ───────────────────────────────────────────────────
 FROM node:20-alpine AS runner
