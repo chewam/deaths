@@ -1,0 +1,62 @@
+name: Claude Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [alpha]
+  issue_comment:
+    types: [created]
+
+concurrency:
+  group: claude-review-${{ github.event_name }}-${{ github.event.pull_request.number || github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    name: Claude review
+    if: |
+      github.event_name == 'pull_request' ||
+      (github.event_name == 'issue_comment' &&
+       github.event.issue.pull_request != null &&
+       contains(github.event.comment.body, '@claude'))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      # id-token: required for the action's OIDC -> GitHub App token exchange
+      # used to post comments. Independent of CLAUDE_CODE_OAUTH_TOKEN, which
+      # only authenticates to the Anthropic API.
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          track_progress: true
+          prompt: |
+            REPO: ${{ github.repository }}
+            PR NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
+
+            Lis d'abord `CLAUDE.md` à la racine du repo : il décrit le contexte du refactor v2 en cours, les conventions (i18n via `react-intl`, commentaires uniquement pour le WHY non-évident, pas de mention Claude dans les commits, pas de `--no-verify`), les choix de stack figés (Next 15 / React 19 / Tailwind 4 / Vitest / Playwright / charts SVG), et le découpage en lots.
+
+            Fais une revue de la PR avec ce focus, dans cet ordre :
+
+            1. **Scope** — l'issue fermée par la PR (cherche `Closes #<num>` dans la description) définit le périmètre. Signale toute dérive : refactor opportuniste, fichiers hors-scope, abstractions prématurées, fonctionnalités non demandées.
+            2. **Conventions du repo** — vérifie l'application des règles de `CLAUDE.md` (i18n, commentaires, pas de Co-Authored-By Claude, stack figée).
+            3. **ISO-fonctionnel** — si la PR touche au comportement utilisateur, les golden paths Playwright doivent rester verts à l'identique vs master. Signale tout écart de comportement.
+            4. **Qualité de code** — bugs potentiels, sécurité, perf, lisibilité, dead code.
+            5. **Tests** — la PR a-t-elle les tests exigés par l'issue (unit Vitest / e2e Playwright / visual selon le lot) ?
+
+            Pour explorer le diff, passe systématiquement par `gh pr diff` et `gh pr view` plutôt que de te fier au working directory : sur l'event `pull_request` la PR est checkoutée, mais sur l'event `issue_comment` (mention `@claude`) le working directory est l'état par défaut du repo, pas le head de la PR.
+
+            Pour publier la review :
+            - `gh pr comment` pour le résumé top-level (un seul commentaire de synthèse).
+            - `mcp__github_inline_comment__create_inline_comment` (avec `confirmed: true`) pour les remarques ligne-à-ligne.
+            - Ne renvoie jamais le texte de la review en message — uniquement via les commentaires GitHub.
+
+          claude_args: |
+            --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*),Bash(gh issue view:*),Read,Grep,Glob"
