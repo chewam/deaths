@@ -17,8 +17,9 @@ The user invoked `/finish-task <num>`. If missing, infer from recent context (wh
 
 - Re-read the sub-issue body to find which net validates this work: `yarn test` (Vitest unit), `yarn e2e` (Playwright behavior), or `yarn e2e:visual` (Playwright screenshots).
 - If the body is fuzzy on the test command: this is a `/start-task` failure — fix the issue body now, then continue.
-- Run the relevant command(s). If a test fails, **fix or report** — don't proceed to PR.
-- Also run `yarn type-check` and `yarn lint` if they're not already part of CI.
+- **Always run `yarn test` and `yarn type-check` and `yarn lint`** in addition to the issue's nominated net. These are the CI gates — running them locally is the only way to avoid round-tripping a red CI.
+- **If the diff touches test infrastructure** (jest/vitest/playwright config, anything under `e2e/`, new test files, test deps), run **all three nets** (`yarn test`, `yarn e2e`, `yarn e2e:visual`). A new file in one runner can break the discovery rules of another — e.g. PR #259 added `e2e/smoke.spec.ts`, which Jest's default `**/*.spec.ts` greedily picked up and ran with the wrong runner.
+- If a test fails, **fix or report** — don't proceed to PR.
 
 ### 2. Verify diff scope
 
@@ -67,26 +68,40 @@ EOF
 )"
 ```
 
-The `Closes #<num>` line is mandatory — it auto-closes the sub-issue on merge and links the PR in the project board.
+The `Closes #<num>` line is **not** what creates the link in the issue's *Development* section — that's only formed when the branch was created via `gh issue develop` in `/start-task` step 6. The keyword is kept in the body for reviewer context and for the auto-close-on-merge behaviour, which still fires once the link exists.
 
-### 5. Move the board status to `In review`
+### 5. Move the sub-issue to `In review` on the board
+
+The PR will appear automatically in the project board's *Linked pull requests* column for this sub-issue (provided the branch was created via `gh issue develop`). Don't add the PR as a separate board item — that creates duplication.
 
 ```bash
-# Status field id: PVTSSF_lADOEK53uc4BV7t2zhRT0Qk on project PVT_kwDOEK53uc4BV7t2
-# Fetch In review option id and item id, then update.
-gh api graphql -f query='query {
-  node(id: "PVT_kwDOEK53uc4BV7t2") {
-    ... on ProjectV2 {
-      items(first: 100) { nodes { id content { ... on Issue { number } } } }
-      field(name: "Status") {
-        ... on ProjectV2SingleSelectField { options { id name } }
-      }
-    }
-  }
-}'
+# Cached IDs (stable for this project):
+#   Project:        PVT_kwDOEK53uc4BV7t2
+#   Status field:   PVTSSF_lADOEK53uc4BV7t2zhRT0Qk
+#   Status options: Backlog f75ad846, Ready 08afe404, In progress 47fc9ee4,
+#                   In review 4cc61d42, Done 98236657
+
+gh api graphql -f query='
+mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: String!) {
+  updateProjectV2ItemFieldValue(input: {
+    projectId: $projectId, itemId: $itemId, fieldId: $fieldId,
+    value: { singleSelectOptionId: $optionId }
+  }) { projectV2Item { id } }
+}' -f projectId=PVT_kwDOEK53uc4BV7t2 \
+   -f itemId="<issue_item_id>" \
+   -f fieldId=PVTSSF_lADOEK53uc4BV7t2zhRT0Qk \
+   -f optionId=4cc61d42
 ```
 
-Then `updateProjectV2ItemFieldValue` with the `In review` option id. If marking fails, surface as a warning, don't block.
+The sub-issue's item id is cached during `/start-task` step 5; if not, look it up via:
+
+```bash
+gh api graphql -f query='query { node(id: "PVT_kwDOEK53uc4BV7t2") {
+  ... on ProjectV2 { items(first:100) { nodes { id content { ... on Issue { number } } } } }
+}}'
+```
+
+If the board update fails, surface as a warning — don't block the PR from existing.
 
 ## Don't
 
