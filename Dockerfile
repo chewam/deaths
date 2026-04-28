@@ -6,8 +6,7 @@ FROM node:20-alpine AS deps
 WORKDIR /app
 RUN apk add --no-cache libc6-compat
 COPY package.json yarn.lock ./
-# --ignore-scripts : skip postinstall (notamment 'canvas' devDep qui demande
-# cairo/pango natifs absents d'alpine, et qui ne sert qu'aux tests Jest).
+# --ignore-scripts : skip postinstall (perfs build, deps natives non requises).
 RUN yarn install --frozen-lockfile --ignore-scripts
 
 # ── 2. Build ─────────────────────────────────────────────────────────────
