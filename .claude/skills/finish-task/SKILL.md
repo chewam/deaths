@@ -53,6 +53,8 @@ gh pr create --repo chewam/mortality \
   --base alpha --head <branch> \
   --title "<concise title under 70 chars>" \
   --body "$(cat <<'EOF'
+Closes #<num>
+
 ## Summary
 <1-2 sentences on what changed and why>
 
@@ -62,13 +64,32 @@ gh pr create --repo chewam/mortality \
 
 ## Notes
 <anything reviewer should know — tradeoffs, follow-ups>
-
-Closes #<num>
 EOF
 )"
 ```
 
-The `Closes #<num>` line is **not** what creates the link in the issue's *Development* section — that's only formed when the branch was created via `gh issue develop` in `/start-task` step 6. The keyword is kept in the body for reviewer context and for the auto-close-on-merge behaviour, which still fires once the link exists.
+**Put `Closes #<num>` on the very first line of the body, above any heading.**
+
+### Force the formal PR ↔ issue link to register
+
+GitHub's auto-linker (the one that populates `closingIssuesReferences` and creates the `ConnectedEvent` so the PR shows up properly under the issue's *Development* section, like #259 ↔ #225) **only fires when the PR base is the repository's default branch** (`master`). Our PRs target `alpha`, so opening them with `--base alpha` leaves the keyword in the body but never creates the formal link.
+
+The workaround: after the PR is created, flip the base to `master` and back. The linker fires on the `master` flip, and the link **persists** when you switch back to `alpha`. This is the only known way to create the link programmatically — there is no public GraphQL/REST mutation for it (the web UI's *"Link an issue"* button uses a private mutation).
+
+```bash
+# Right after gh pr create
+gh pr edit <pr_num> --repo chewam/mortality --base master
+sleep 3
+gh pr edit <pr_num> --repo chewam/mortality --base alpha
+sleep 2
+
+# Verify — should print 1
+gh api graphql -f query='query($num: Int!) { repository(owner:"chewam", name:"mortality") { pullRequest(number: $num) { closingIssuesReferences(first:1) { nodes { number } } } } }' -F num=<pr_num> --jq '.data.repository.pullRequest.closingIssuesReferences.nodes | length'
+```
+
+If the verification returns `0`, the flip didn't take — usually means GitHub didn't see the keyword. Confirm `Closes #<num>` is on the first line of the body and re-run the flip.
+
+The branch ↔ issue link from `gh issue develop` (in `/start-task` step 6) is a *separate* artifact (the branch row in the *Development* section). Both are needed for a fully wired sub-issue.
 
 ### 5. Move the sub-issue to `In review` on the board
 
