@@ -75,17 +75,27 @@ The `NEW_VERSION/` directory is the **design reference** (a Babel-standalone HTM
 | `/comparison` | comparison | `08-comparison.png` |
 | `/distribution` | distribution | `09-distribution.png` |
 
-## Starting a task — RUN THIS FIRST
+## Starting and finishing a task — RUN THESE
 
-When picking up any sub-issue, **invoke `/start-task <issue-number>` before doing anything else**. The skill at `.claude/skills/start-task/SKILL.md` runs the pre-flight checklist:
+When picking up any sub-issue, **invoke `/start-task <issue-number>` before doing anything else**. When you're done, **invoke `/finish-task <issue-number>` before declaring it done**. These are the contract for parallel sessions — every session starts and ends from the same baseline.
 
-1. Loads CLAUDE.md and the issue + parent.
+The skills live in `.claude/skills/`. The `SessionStart` hook in `.claude/settings.json` injects a one-line reminder of these commands into the model's context when a session opens this repo.
+
+**`/start-task <num>`** — pre-flight checklist:
+
+1. Loads CLAUDE.md + the issue + its parent.
 2. Validates scope, deliverable, test strategy, referenced files, upstream dependencies.
 3. Proposes (and applies, with your confirmation) ticket improvements if anything is fuzzy.
 4. Marks the board status `In progress`.
 5. Plans the implementation with TodoWrite.
 
-This is the contract for parallel sessions: every session starts from the same baseline.
+**`/finish-task <num>`** — post-flight checklist:
+
+1. Runs the test net specified in the issue, fails loudly if anything is red.
+2. Checks the diff stays in scope.
+3. Self-reviews against the conventions below.
+4. Opens a PR onto `alpha` with `Closes #<num>`.
+5. Moves the board status to `In review`.
 
 ## How to navigate work
 
