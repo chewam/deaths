@@ -30,7 +30,7 @@ const Footer = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={`https://github.com/chewam/deaths/tree/${sha}`}
+          href={`https://github.com/chewam/mortality/tree/${sha}`}
         >
           {sha.substring(0, 7)}
         </a>
