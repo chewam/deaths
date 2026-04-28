@@ -84,11 +84,25 @@ gh api graphql -f query='query { node(id: "PVT_kwDOEK53uc4BV7t2") {
 
 If marking the status fails, surface it as a warning but **don't block the work**.
 
-### 6. Plan with TodoWrite
+### 6. Create the feature branch via `gh issue develop`
+
+**Do not** use `git checkout -b`. Use `gh issue develop` so GitHub records the branch as a *linked branch* on the issue — the PR opened from it then appears automatically in the issue's **Development** section and in the project board's **Linked pull requests** column.
+
+```bash
+# Branch naming: <lot>/<short-slug>, e.g. lot-0/setup-playwright
+gh issue develop <num> --repo chewam/mortality \
+  --name <lot>/<short-slug> \
+  --base alpha \
+  --checkout
+```
+
+The link is only created **at branch-creation time** (`createLinkedBranch` mutation). There is no public API to retroactively link an existing branch or PR — neither `Closes #N` keywords nor any GraphQL mutation populate the Development section after the fact (that's a private GitHub UI capability). If you forget and use `git checkout -b`, the only fix is to delete the branch (which closes any open PR) and redo this step.
+
+### 7. Plan with TodoWrite
 
 Create a TodoWrite list with the implementation steps. Start with **the test step** (write the test first when applicable — TDD is the default for this refactor).
 
-### 7. Then start coding
+### 8. Then start coding
 
 Open the relevant files, implement, run the test net specified in step 3.
 

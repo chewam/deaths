@@ -68,54 +68,40 @@ EOF
 )"
 ```
 
-The `Closes #<num>` line is mandatory — it auto-closes the sub-issue on merge. **It does not add the PR to the project board** — that's step 5.
+The `Closes #<num>` line is **not** what creates the link in the issue's *Development* section — that's only formed when the branch was created via `gh issue develop` in `/start-task` step 6. The keyword is kept in the body for reviewer context and for the auto-close-on-merge behaviour, which still fires once the link exists.
 
-### 5. Update the project board
+### 5. Move the sub-issue to `In review` on the board
 
-Two things to do, in order:
-
-**(a) Add the new PR to the project board.** GitHub does not do this automatically; without this step the PR doesn't show up next to its sub-issue on the board.
-
-```bash
-PR_NODE_ID=$(gh pr view <pr-num> --repo chewam/mortality --json id -q .id)
-
-PR_ITEM_ID=$(gh api graphql -f query='
-mutation($projectId: ID!, $contentId: ID!) {
-  addProjectV2ItemById(input: { projectId: $projectId, contentId: $contentId }) {
-    item { id }
-  }
-}' -f projectId=PVT_kwDOEK53uc4BV7t2 -f contentId="$PR_NODE_ID" -q .data.addProjectV2ItemById.item.id)
-```
-
-**(b) Set both the sub-issue and the PR to `In review` on the board.**
+The PR will appear automatically in the project board's *Linked pull requests* column for this sub-issue (provided the branch was created via `gh issue develop`). Don't add the PR as a separate board item — that creates duplication.
 
 ```bash
 # Cached IDs (stable for this project):
-#   Project:           PVT_kwDOEK53uc4BV7t2
-#   Status field:      PVTSSF_lADOEK53uc4BV7t2zhRT0Qk
-#   Status options:    Backlog f75ad846, Ready 08afe404, In progress 47fc9ee4,
-#                      In review 4cc61d42, Done 98236657
-#
-# Look up the sub-issue's item id (or use the one cached during /start-task) via:
-#   gh api graphql -f query='query { node(id: "PVT_kwDOEK53uc4BV7t2") {
-#     ... on ProjectV2 { items(first:100) { nodes { id content { ... on Issue { number } } } } }
-#   }}'
+#   Project:        PVT_kwDOEK53uc4BV7t2
+#   Status field:   PVTSSF_lADOEK53uc4BV7t2zhRT0Qk
+#   Status options: Backlog f75ad846, Ready 08afe404, In progress 47fc9ee4,
+#                   In review 4cc61d42, Done 98236657
 
-for ITEM_ID in "$ISSUE_ITEM_ID" "$PR_ITEM_ID"; do
-  gh api graphql -f query='
-  mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: String!) {
-    updateProjectV2ItemFieldValue(input: {
-      projectId: $projectId, itemId: $itemId, fieldId: $fieldId,
-      value: { singleSelectOptionId: $optionId }
-    }) { projectV2Item { id } }
-  }' -f projectId=PVT_kwDOEK53uc4BV7t2 \
-     -f itemId="$ITEM_ID" \
-     -f fieldId=PVTSSF_lADOEK53uc4BV7t2zhRT0Qk \
-     -f optionId=4cc61d42
-done
+gh api graphql -f query='
+mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: String!) {
+  updateProjectV2ItemFieldValue(input: {
+    projectId: $projectId, itemId: $itemId, fieldId: $fieldId,
+    value: { singleSelectOptionId: $optionId }
+  }) { projectV2Item { id } }
+}' -f projectId=PVT_kwDOEK53uc4BV7t2 \
+   -f itemId="<issue_item_id>" \
+   -f fieldId=PVTSSF_lADOEK53uc4BV7t2zhRT0Qk \
+   -f optionId=4cc61d42
 ```
 
-If any board update fails, surface as a warning — don't block the PR from existing.
+The sub-issue's item id is cached during `/start-task` step 5; if not, look it up via:
+
+```bash
+gh api graphql -f query='query { node(id: "PVT_kwDOEK53uc4BV7t2") {
+  ... on ProjectV2 { items(first:100) { nodes { id content { ... on Issue { number } } } } }
+}}'
+```
+
+If the board update fails, surface as a warning — don't block the PR from existing.
 
 ## Don't
 
