@@ -24,6 +24,9 @@ jobs:
       contents: read
       pull-requests: write
       issues: write
+      # id-token: required for the action's OIDC -> GitHub App token exchange
+      # used to post comments. Independent of CLAUDE_CODE_OAUTH_TOKEN, which
+      # only authenticates to the Anthropic API.
       id-token: write
     steps:
       - uses: actions/checkout@v4
@@ -48,7 +51,9 @@ jobs:
             4. **Qualité de code** — bugs potentiels, sécurité, perf, lisibilité, dead code.
             5. **Tests** — la PR a-t-elle les tests exigés par l'issue (unit Vitest / e2e Playwright / visual selon le lot) ?
 
-            La branche PR est déjà checkoutée. Pour publier la review :
+            Pour explorer le diff, passe systématiquement par `gh pr diff` et `gh pr view` plutôt que de te fier au working directory : sur l'event `pull_request` la PR est checkoutée, mais sur l'event `issue_comment` (mention `@claude`) le working directory est l'état par défaut du repo, pas le head de la PR.
+
+            Pour publier la review :
             - `gh pr comment` pour le résumé top-level (un seul commentaire de synthèse).
             - `mcp__github_inline_comment__create_inline_comment` (avec `confirmed: true`) pour les remarques ligne-à-ligne.
             - Ne renvoie jamais le texte de la review en message — uniquement via les commentaires GitHub.
