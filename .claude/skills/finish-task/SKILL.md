@@ -124,9 +124,50 @@ gh api graphql -f query='query { node(id: "PVT_kwDOEK53uc4BV7t2") {
 
 If the board update fails, surface as a warning — don't block the PR from existing.
 
+### 6. Wait for the Claude Review workflow
+
+The PR open event auto-fires the `Claude Review` workflow. Block on its result before declaring done — its findings drive step 7.
+
+```bash
+RUN_ID=$(gh run list --repo chewam/mortality \
+  --branch <head-branch> --workflow "Claude Review" \
+  --limit 1 --json databaseId --jq '.[0].databaseId')
+
+gh run watch "$RUN_ID" --repo chewam/mortality --exit-status
+```
+
+Run via the Bash tool with `timeout: 600000` (review typically takes 1–3 min, can queue longer).
+
+If the run fails, inspect `gh run view "$RUN_ID" --log-failed`. The most common cause is a transient validation drift between master and the PR head — `gh run rerun "$RUN_ID"` once master/alpha are aligned usually fixes it. Surface other failures to the user, don't loop.
+
+### 7. Process the review (one pass)
+
+Claude's review is one sticky top-level comment by user `claude` (verdict + findings) plus optional inline comments.
+
+```bash
+gh pr view <num> --repo chewam/mortality --json comments \
+  --jq '.comments[] | select(.author.login == "claude") | .body'
+
+gh api "repos/chewam/mortality/pulls/<num>/comments" \
+  --jq '.[] | select(.user.login == "claude") | {path, line, body, id}'
+```
+
+For each finding, classify and act:
+
+- **Actionable + correct** → fix the code, commit. No need to reply on the comment — the next review will see the fix is in.
+- **False positive** (the review misread the code) → reply on the comment with a one-line justification. `gh pr comment` for top-level, `gh api repos/.../pulls/<num>/comments/<id>/replies` for inline. Don't argue at length.
+- **Out-of-scope** (legitimate concern but not for this PR) → one-line reply with the rationale, plus call `mcp__ccd_session__spawn_task` to capture the follow-up.
+
+If any fix was made, `git push`.
+
+**Stop after one pass.** Pushing re-triggers the workflow and a new review will run; don't wait for it and don't enter a loop. Hand control back to the user — they inspect the second review and decide whether to engage Claude again (via `@claude` mention on the PR or another `/finish-task` cycle) or merge as-is.
+
+If the first review was clean (no actionable findings), tell the user the PR is ready and stop.
+
 ## Don't
 
 - **Don't merge** — the user reviews and merges.
 - **Don't push to `alpha` directly** — always via PR.
 - **Don't close the sub-issue manually** — it'll auto-close when the PR merges (thanks to `Closes #N`).
 - **Don't add `Co-Authored-By: Claude`** anywhere.
+- **Don't auto-loop on reviews** — process the first one, push fixes once, hand off. Subsequent reviews are for the user to decide on.
