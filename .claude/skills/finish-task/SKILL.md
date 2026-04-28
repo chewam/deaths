@@ -68,26 +68,54 @@ EOF
 )"
 ```
 
-The `Closes #<num>` line is mandatory — it auto-closes the sub-issue on merge and links the PR in the project board.
+The `Closes #<num>` line is mandatory — it auto-closes the sub-issue on merge. **It does not add the PR to the project board** — that's step 5.
 
-### 5. Move the board status to `In review`
+### 5. Update the project board
+
+Two things to do, in order:
+
+**(a) Add the new PR to the project board.** GitHub does not do this automatically; without this step the PR doesn't show up next to its sub-issue on the board.
 
 ```bash
-# Status field id: PVTSSF_lADOEK53uc4BV7t2zhRT0Qk on project PVT_kwDOEK53uc4BV7t2
-# Fetch In review option id and item id, then update.
-gh api graphql -f query='query {
-  node(id: "PVT_kwDOEK53uc4BV7t2") {
-    ... on ProjectV2 {
-      items(first: 100) { nodes { id content { ... on Issue { number } } } }
-      field(name: "Status") {
-        ... on ProjectV2SingleSelectField { options { id name } }
-      }
-    }
+PR_NODE_ID=$(gh pr view <pr-num> --repo chewam/mortality --json id -q .id)
+
+PR_ITEM_ID=$(gh api graphql -f query='
+mutation($projectId: ID!, $contentId: ID!) {
+  addProjectV2ItemById(input: { projectId: $projectId, contentId: $contentId }) {
+    item { id }
   }
-}'
+}' -f projectId=PVT_kwDOEK53uc4BV7t2 -f contentId="$PR_NODE_ID" -q .data.addProjectV2ItemById.item.id)
 ```
 
-Then `updateProjectV2ItemFieldValue` with the `In review` option id. If marking fails, surface as a warning, don't block.
+**(b) Set both the sub-issue and the PR to `In review` on the board.**
+
+```bash
+# Cached IDs (stable for this project):
+#   Project:           PVT_kwDOEK53uc4BV7t2
+#   Status field:      PVTSSF_lADOEK53uc4BV7t2zhRT0Qk
+#   Status options:    Backlog f75ad846, Ready 08afe404, In progress 47fc9ee4,
+#                      In review 4cc61d42, Done 98236657
+#
+# Look up the sub-issue's item id (or use the one cached during /start-task) via:
+#   gh api graphql -f query='query { node(id: "PVT_kwDOEK53uc4BV7t2") {
+#     ... on ProjectV2 { items(first:100) { nodes { id content { ... on Issue { number } } } } }
+#   }}'
+
+for ITEM_ID in "$ISSUE_ITEM_ID" "$PR_ITEM_ID"; do
+  gh api graphql -f query='
+  mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: String!) {
+    updateProjectV2ItemFieldValue(input: {
+      projectId: $projectId, itemId: $itemId, fieldId: $fieldId,
+      value: { singleSelectOptionId: $optionId }
+    }) { projectV2Item { id } }
+  }' -f projectId=PVT_kwDOEK53uc4BV7t2 \
+     -f itemId="$ITEM_ID" \
+     -f fieldId=PVTSSF_lADOEK53uc4BV7t2zhRT0Qk \
+     -f optionId=4cc61d42
+done
+```
+
+If any board update fails, surface as a warning — don't block the PR from existing.
 
 ## Don't
 
