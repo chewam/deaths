@@ -1,9 +1,9 @@
 {
-  "name": "deaths",
+  "name": "mortality",
   "version": "1.3.10",
   "description": "Annual deaths in France.",
   "main": "index.js",
-  "repository": "https://github.com/chewam/deaths",
+  "repository": "https://github.com/chewam/mortality",
   "author": "Chewam",
   "license": "MIT",
   "private": true,
