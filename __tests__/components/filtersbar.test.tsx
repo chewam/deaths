@@ -3,6 +3,7 @@ import FiltersBar from "@/components/FiltersBar"
 import { IntlProvider } from "react-intl"
 import { ThemeProvider } from "next-themes"
 import { render } from "@testing-library/react"
+import { useRouter } from "next/router"
 
 Object.defineProperty(window, "matchMedia", {
   writable: true,
@@ -19,21 +20,18 @@ Object.defineProperty(window, "matchMedia", {
 })
 
 vi.mock("next/router", () => ({
-  useRouter() {
-    return {
-      route: "/",
-      locale: "fr",
-      defaultLocale: "en",
-    }
-  },
+  useRouter: vi.fn(() => ({
+    route: "/",
+    locale: "fr",
+    defaultLocale: "en",
+  })),
 }))
 
-/* eslint @typescript-eslint/no-var-requires: "off" */
-const useRouter = vi.spyOn(require("next/router"), "useRouter")
+const mockUseRouter = vi.mocked(useRouter) as unknown as ReturnType<typeof vi.fn>
 
 describe("Filters Bar", () => {
   test("should create a visible Filters Bar", () => {
-    useRouter.mockImplementation(() => ({
+    mockUseRouter.mockImplementation(() => ({
       route: "/comparison",
     }))
     const { asFragment } = render(
@@ -47,7 +45,7 @@ describe("Filters Bar", () => {
   })
 
   test("should create a hidden Filters Bar", () => {
-    useRouter.mockImplementation(() => ({
+    mockUseRouter.mockImplementation(() => ({
       route: "/",
     }))
     const { asFragment } = render(

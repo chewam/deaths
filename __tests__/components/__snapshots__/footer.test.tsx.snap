@@ -28,9 +28,9 @@ exports[`Footer > should create a Footer in english 1`] = `
       <a
         class="lang"
         href="/"
-        title="english"
+        title="français"
       >
-        en
+        fr
       </a>
       <span
         class="spacer"
