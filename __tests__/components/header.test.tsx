@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import fr from "@/lang/fr.json"
 import en from "@/lang/en.json"
 import Header from "@/components/Header"
@@ -9,7 +6,7 @@ import { render } from "@testing-library/react"
 
 const messages = { en, fr }
 
-jest.mock("next/router", () => ({
+vi.mock("next/router", () => ({
   useRouter() {
     return {
       route: "/",
@@ -20,7 +17,7 @@ jest.mock("next/router", () => ({
 }))
 
 /* eslint @typescript-eslint/no-var-requires: "off" */
-const useRouter = jest.spyOn(require("next/router"), "useRouter")
+const useRouter = vi.spyOn(require("next/router"), "useRouter")
 
 describe("Header", () => {
   test("should create a Header in french", () => {

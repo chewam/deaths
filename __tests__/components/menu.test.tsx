@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import fr from "@/lang/fr.json"
 import en from "@/lang/en.json"
 import Menu from "@/components/Menu"
@@ -9,7 +6,7 @@ import { render } from "@testing-library/react"
 
 const messages = { en, fr }
 
-jest.mock("next/router", () => ({
+vi.mock("next/router", () => ({
   useRouter() {
     return {
       route: "/",
@@ -20,7 +17,7 @@ jest.mock("next/router", () => ({
 }))
 
 /* eslint @typescript-eslint/no-var-requires: "off" */
-const useRouter = jest.spyOn(require("next/router"), "useRouter")
+const useRouter = vi.spyOn(require("next/router"), "useRouter")
 
 describe("Menu", () => {
   test("should create a Menu in french", () => {

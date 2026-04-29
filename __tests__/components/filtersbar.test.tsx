@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import messages from "@/lang/fr.json"
 import FiltersBar from "@/components/FiltersBar"
 import { IntlProvider } from "react-intl"
@@ -9,19 +6,19 @@ import { render } from "@testing-library/react"
 
 Object.defineProperty(window, "matchMedia", {
   writable: true,
-  value: jest.fn().mockImplementation((query) => ({
+  value: vi.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // Deprecated
-    removeListener: jest.fn(), // Deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
+    addListener: vi.fn(), // Deprecated
+    removeListener: vi.fn(), // Deprecated
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    dispatchEvent: vi.fn(),
   })),
 })
 
-jest.mock("next/router", () => ({
+vi.mock("next/router", () => ({
   useRouter() {
     return {
       route: "/",
@@ -32,7 +29,7 @@ jest.mock("next/router", () => ({
 }))
 
 /* eslint @typescript-eslint/no-var-requires: "off" */
-const useRouter = jest.spyOn(require("next/router"), "useRouter")
+const useRouter = vi.spyOn(require("next/router"), "useRouter")
 
 describe("Filters Bar", () => {
   test("should create a visible Filters Bar", () => {

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Footer should create a Footer in english 1`] = `
+exports[`Footer > should create a Footer in english 1`] = `
 <DocumentFragment>
   <footer>
     <div
@@ -28,9 +28,9 @@ exports[`Footer should create a Footer in english 1`] = `
       <a
         class="lang"
         href="/"
-        title="français"
+        title="english"
       >
-        fr
+        en
       </a>
       <span
         class="spacer"
@@ -51,7 +51,7 @@ exports[`Footer should create a Footer in english 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Footer should create a Footer in french 1`] = `
+exports[`Footer > should create a Footer in french 1`] = `
 <DocumentFragment>
   <footer>
     <div

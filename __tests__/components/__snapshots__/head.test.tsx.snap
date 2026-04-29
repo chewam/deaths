@@ -1,5 +1,5 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Head should create Head with image preview and analytics 1`] = `<DocumentFragment />`;
+exports[`Head > should create Head with image preview and analytics 1`] = `<DocumentFragment />`;
 
-exports[`Head should create Head without image preview and analytics 1`] = `<DocumentFragment />`;
+exports[`Head > should create Head without image preview and analytics 1`] = `<DocumentFragment />`;
