@@ -10,7 +10,6 @@ concurrency:
   group: tests-${{ github.ref }}
 
 jobs:
-
   lint:
     name: Lint
     runs-on: ubuntu-latest
@@ -189,4 +188,4 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any

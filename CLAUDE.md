@@ -25,17 +25,17 @@ The app is being rewritten on the `alpha` branch. The work is tracked on the **[
 
 Decided and validated by the user — do not relitigate.
 
-| | Current | Target |
-|---|---|---|
-| Framework | Next 14 (Pages) | Next 15 (Pages Router kept) |
-| React | 18.2 | 19 |
-| TypeScript | 4.7 | 5.x |
-| Styling | SCSS + Tailwind 3 | Tailwind 4 only (purge SCSS) |
-| Tests | Jest 29 | Vitest |
-| E2E | none | Playwright (behavior + visual) |
-| i18n | react-intl 6 | **kept** |
-| Charts | chart.js + react-chartjs-2 | **SVG inline custom** (port of `NEW_VERSION/charts-*.jsx`) |
-| Sentry | 7.8 | latest |
+|            | Current                    | Target                                                     |
+| ---------- | -------------------------- | ---------------------------------------------------------- |
+| Framework  | Next 14 (Pages)            | Next 15 (Pages Router kept)                                |
+| React      | 18.2                       | 19                                                         |
+| TypeScript | 4.7                        | 5.x                                                        |
+| Styling    | SCSS + Tailwind 3          | Tailwind 4 only (purge SCSS)                               |
+| Tests      | Jest 29                    | Vitest                                                     |
+| E2E        | none                       | Playwright (behavior + visual)                             |
+| i18n       | react-intl 6               | **kept**                                                   |
+| Charts     | chart.js + react-chartjs-2 | **SVG inline custom** (port of `NEW_VERSION/charts-*.jsx`) |
+| Sentry     | 7.8                        | latest                                                     |
 
 ### Test strategy — three nets
 
@@ -51,29 +51,29 @@ CI must run all three on every PR onto `alpha`.
 
 The `NEW_VERSION/` directory is the **design reference** (a Babel-standalone HTML prototype produced by the design tool). When implementing a view, port the structure and styling from there.
 
-| File | Purpose |
-|---|---|
-| `Mortality in France.html` | Entry point, fonts loaded |
-| `app.jsx` | App shell, header, global filters |
-| `views.jsx` | OverviewView (year detail), ComparisonView, DistributionView |
-| `view-overview-grid.jsx` | OverviewGridView (years grid) |
-| `charts-trend.jsx` | TrendChart (multi-year line/area) |
-| `charts-monthly.jsx` | MonthlyChart (single + compare modes) |
-| `charts-distribution.jsx` | DistributionChart (deaths by age) |
-| `data.js` | Fake data — **DO NOT PORT**, use real services |
-| `i18n.js` | Translations — port to `src/lang/{en,fr}.json` |
-| `tweaks-panel.jsx` | Design exploration tool — **DO NOT PORT** |
-| `screenshots/01-09*.png` | Pixel-perfect reference for visual regression |
-| `uploads/` | Source/inspiration images, ignore |
+| File                       | Purpose                                                      |
+| -------------------------- | ------------------------------------------------------------ |
+| `Mortality in France.html` | Entry point, fonts loaded                                    |
+| `app.jsx`                  | App shell, header, global filters                            |
+| `views.jsx`                | OverviewView (year detail), ComparisonView, DistributionView |
+| `view-overview-grid.jsx`   | OverviewGridView (years grid)                                |
+| `charts-trend.jsx`         | TrendChart (multi-year line/area)                            |
+| `charts-monthly.jsx`       | MonthlyChart (single + compare modes)                        |
+| `charts-distribution.jsx`  | DistributionChart (deaths by age)                            |
+| `data.js`                  | Fake data — **DO NOT PORT**, use real services               |
+| `i18n.js`                  | Translations — port to `src/lang/{en,fr}.json`               |
+| `tweaks-panel.jsx`         | Design exploration tool — **DO NOT PORT**                    |
+| `screenshots/01-09*.png`   | Pixel-perfect reference for visual regression                |
+| `uploads/`                 | Source/inspiration images, ignore                            |
 
 ### Mapping screens
 
-| Route | NEW_VERSION view | Reference screenshot |
-|---|---|---|
-| `/` | overview (years grid) | `03-overview.png` |
-| `/overview` | year (stats + trend + monthly + events) | `04` to `07-trend.png` |
-| `/comparison` | comparison | `08-comparison.png` |
-| `/distribution` | distribution | `09-distribution.png` |
+| Route           | NEW_VERSION view                        | Reference screenshot   |
+| --------------- | --------------------------------------- | ---------------------- |
+| `/`             | overview (years grid)                   | `03-overview.png`      |
+| `/overview`     | year (stats + trend + monthly + events) | `04` to `07-trend.png` |
+| `/comparison`   | comparison                              | `08-comparison.png`    |
+| `/distribution` | distribution                            | `09-distribution.png`  |
 
 ## Starting and finishing a task — RUN THESE
 
@@ -105,16 +105,16 @@ The skills live in `.claude/skills/`. The `SessionStart` hook in `.claude/settin
 
 ### Lots (chronological order)
 
-| # | Lot | Window | Note |
-|---|---|---|---|
+| #    | Lot                                               | Window        | Note                                                                                           |
+| ---- | ------------------------------------------------- | ------------- | ---------------------------------------------------------------------------------------------- |
 | #217 | Lot 0 — Filet de sécurité (tests before refactor) | 28/04 → 05/05 | Foundation: Playwright + golden paths + frozen calc snapshots. Everything else relies on this. |
-| #218 | Lot 1 — Modernisation stack | 06/05 → 12/05 | Net 0 must keep passing. |
-| #219 | Lot 2 — Fondations design (tokens, atoms, layout) | 13/05 → 18/05 | |
-| #220 | Lot 3 — Charts SVG (Trend, Monthly, Distribution) | 19/05 → 25/05 | Port from `NEW_VERSION/charts-*.jsx`. |
-| #221 | Lot 4 — Vues (4 routes pixel-perfect) | 26/05 → 02/06 | Visual regression vs `NEW_VERSION/screenshots/`. |
-| #222 | Lot 5 — Wiring real data, filters, i18n | 03/06 → 08/06 | Plug `services/*` into new views. ISO contract verified here. |
-| #223 | Lot 6 — Finitions (cleanup, a11y, perf, docs) | 09/06 → 11/06 | |
-| #224 | Lot 7 — Release (alpha → master) | 12/06 | semantic-release publishes 2.0.0. |
+| #218 | Lot 1 — Modernisation stack                       | 06/05 → 12/05 | Net 0 must keep passing.                                                                       |
+| #219 | Lot 2 — Fondations design (tokens, atoms, layout) | 13/05 → 18/05 |                                                                                                |
+| #220 | Lot 3 — Charts SVG (Trend, Monthly, Distribution) | 19/05 → 25/05 | Port from `NEW_VERSION/charts-*.jsx`.                                                          |
+| #221 | Lot 4 — Vues (4 routes pixel-perfect)             | 26/05 → 02/06 | Visual regression vs `NEW_VERSION/screenshots/`.                                               |
+| #222 | Lot 5 — Wiring real data, filters, i18n           | 03/06 → 08/06 | Plug `services/*` into new views. ISO contract verified here.                                  |
+| #223 | Lot 6 — Finitions (cleanup, a11y, perf, docs)     | 09/06 → 11/06 |                                                                                                |
+| #224 | Lot 7 — Release (alpha → master)                  | 12/06         | semantic-release publishes 2.0.0.                                                              |
 
 Dates are indicative — adjust on the board (`Start date` / `Target date` fields) as work progresses.
 
@@ -159,6 +159,7 @@ gh project view 1 --owner chewam
 ```
 
 GraphQL IDs (stable):
+
 - Project: `PVT_kwDOEK53uc4BV7t2`
 - Repo: `MDEwOlJlcG9zaXRvcnkzOTM4MDkxMjc=`
 - Issue Types: Feature `IT_kwDOEK53uc4B-aD3`, Task `IT_kwDOEK53uc4B-aD1`, Bug `IT_kwDOEK53uc4B-aD2`

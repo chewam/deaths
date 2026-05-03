@@ -6,8 +6,7 @@
 
 @layer base {
   body {
-    @apply
-      text-base
+    @apply text-base
       font-roboto
       font-normal
       antialiased
