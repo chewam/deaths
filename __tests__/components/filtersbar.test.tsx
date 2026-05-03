@@ -27,7 +27,9 @@ vi.mock("next/router", () => ({
   })),
 }))
 
-const mockUseRouter = vi.mocked(useRouter) as unknown as ReturnType<typeof vi.fn>
+const mockUseRouter = vi.mocked(useRouter) as unknown as ReturnType<
+  typeof vi.fn
+>
 
 describe("Filters Bar", () => {
   test("should create a visible Filters Bar", () => {

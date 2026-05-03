@@ -15,7 +15,9 @@ vi.mock("next/router", () => ({
   })),
 }))
 
-const mockUseRouter = vi.mocked(useRouter) as unknown as ReturnType<typeof vi.fn>
+const mockUseRouter = vi.mocked(useRouter) as unknown as ReturnType<
+  typeof vi.fn
+>
 
 describe("Menu", () => {
   test("should create a Menu in french", () => {

@@ -24,12 +24,18 @@ export default defineConfig({
       name: "e2e-behavior",
       testMatch: /.*\.spec\.ts$/,
       testIgnore: /.*\.visual\.spec\.ts$/,
-      use: { ...devices["Desktop Chrome"], viewport: { width: 1280, height: 800 } },
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 1280, height: 800 },
+      },
     },
     {
       name: "e2e-visual",
       testMatch: /.*\.visual\.spec\.ts$/,
-      use: { ...devices["Desktop Chrome"], viewport: { width: 1280, height: 800 } },
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 1280, height: 800 },
+      },
       expect: { toHaveScreenshot: { maxDiffPixelRatio: 0.01 } },
     },
   ],

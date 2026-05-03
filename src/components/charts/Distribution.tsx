@@ -40,7 +40,7 @@ export const getBarLabelDisplay = ({
   const { scales } = chart as ChartJS
   const scale = scales["y"]
   const { max } = scale
-  const value = (data || [])[dataIndex] || 0
+  const value = ((data || [])[dataIndex] || 0) as number
 
   return active ? true : value > max * 0.05 ? "auto" : false
 }
