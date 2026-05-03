@@ -8,7 +8,17 @@ module.exports = {
     ecmaVersion: 8,
     sourceType: "module",
   },
-  ignorePatterns: ["node_modules/*", ".next/*", ".out/*", "!.prettierrc.js"],
+  ignorePatterns: [
+    "node_modules/*",
+    ".next/*",
+    ".out/*",
+    "NEW_VERSION/*",
+    "next-env.d.ts",
+    "coverage/*",
+    "playwright-report/*",
+    "test-results/*",
+    "!.prettierrc.js",
+  ],
   extends: ["eslint:recommended"],
   overrides: [
     {
