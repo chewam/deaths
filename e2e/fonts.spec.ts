@@ -1,7 +1,7 @@
 import { test, expect } from "./fixtures"
 
 test.describe("fonts — Lot 2 / 2.1 next/font", () => {
-  test("--display, --body, --mono CSS variables are exposed on :root", async ({
+  test("--font-display, --font-body, --font-mono CSS variables are exposed on :root", async ({
     page,
   }) => {
     await page.goto("/")
@@ -9,9 +9,9 @@ test.describe("fonts — Lot 2 / 2.1 next/font", () => {
     const vars = await page.evaluate(() => {
       const cs = getComputedStyle(document.documentElement)
       return {
-        display: cs.getPropertyValue("--display").trim(),
-        body: cs.getPropertyValue("--body").trim(),
-        mono: cs.getPropertyValue("--mono").trim(),
+        display: cs.getPropertyValue("--font-display").trim(),
+        body: cs.getPropertyValue("--font-body").trim(),
+        mono: cs.getPropertyValue("--font-mono").trim(),
         fontInter: cs.getPropertyValue("--font-inter").trim(),
         fontInterTight: cs.getPropertyValue("--font-inter-tight").trim(),
         fontFraunces: cs.getPropertyValue("--font-fraunces").trim(),
