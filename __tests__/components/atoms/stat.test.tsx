@@ -43,6 +43,13 @@ describe("Stat", () => {
     expect(delta.textContent).toMatch(/↓/)
   })
 
+  test("renders zero delta as neutral (em-dash, no up/down arrow)", () => {
+    render(<Stat label="vs avg" value="1.234" delta={0} />)
+    const delta = screen.getByText(/0\.00%/)
+    expect(delta.textContent).toMatch(/—/)
+    expect(delta.textContent).not.toMatch(/[↑↓]/)
+  })
+
   test("colorize >0.5 marks value as danger", () => {
     const { container } = render(<Stat label="rate" value="1.5" colorize={1} />)
     expect(container.querySelector(".text-danger")).toBeInTheDocument()

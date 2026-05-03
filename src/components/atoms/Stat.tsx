@@ -37,11 +37,16 @@ const Stat = ({
     big ? "text-[22px]" : "text-[16px]",
   ].join(" ")
 
-  const deltaPositive = delta != null && delta >= 0
+  const deltaSign = delta == null ? 0 : Math.sign(delta)
   const deltaCls = [
     "font-mono tabular-nums text-[11px] mt-1",
-    deltaPositive ? "text-danger" : "text-green-600",
+    deltaSign > 0
+      ? "text-danger"
+      : deltaSign < 0
+        ? "text-green-600"
+        : "text-text-dim",
   ].join(" ")
+  const deltaArrow = deltaSign > 0 ? "↑" : deltaSign < 0 ? "↓" : "—"
 
   return (
     <div className="bg-surface flex flex-col gap-2 px-7 py-6">
@@ -57,7 +62,7 @@ const Stat = ({
       )}
       {delta != null && (
         <div className={deltaCls}>
-          {deltaPositive ? "↑" : "↓"} {Math.abs(delta).toFixed(2)}%{" "}
+          {deltaArrow} {Math.abs(delta).toFixed(2)}%{" "}
           {deltaLabel && <span className="text-text-faint">{deltaLabel}</span>}
         </div>
       )}
