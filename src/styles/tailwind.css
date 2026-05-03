@@ -4,6 +4,13 @@
   --font-roboto: Roboto, arial, sans-serif;
 }
 
+:root {
+  --display:
+    var(--font-inter-tight), var(--font-inter), -apple-system, sans-serif;
+  --body: var(--font-inter), -apple-system, sans-serif;
+  --mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
 @layer base {
   body {
     @apply text-base
