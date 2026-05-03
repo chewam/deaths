@@ -1,6 +1,6 @@
 @reference "tailwindcss";
 
-#__next > footer { /* stylelint-disable-line */
+#__next > footer {
   @apply
     py-4
     px-6

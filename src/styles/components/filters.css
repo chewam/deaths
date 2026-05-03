@@ -1,6 +1,6 @@
 @reference "tailwindcss";
 
-#__next > .container > .filters { /* stylelint-disable-line */
+#__next > .container > .filters {
   @apply
     flex
     mb-4

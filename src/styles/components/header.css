@@ -1,6 +1,6 @@
 @reference "tailwindcss";
 
-#__next > .header { /* stylelint-disable-line */
+#__next > .header {
   @apply
     z-10
     fixed

@@ -1,6 +1,6 @@
 @reference "tailwindcss";
 
-#__next > .dashboard { /* stylelint-disable-line */
+#__next > .dashboard {
   @apply
     grid
     px-6
