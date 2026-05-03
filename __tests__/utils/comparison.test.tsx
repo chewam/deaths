@@ -1,4 +1,6 @@
 import { getMaximum } from "../../src/components/charts/Comparison"
+import { sumYears } from "../../src/utils/index"
+import deaths from "../../public/data/deaths.json"
 
 describe("Test getMaximum()", () => {
   const data = [
@@ -96,5 +98,19 @@ describe("Test getMaximum()", () => {
   test("getMaximum(data) => { month: 1, value: 68974, year: 2017 }", () => {
     const res = getMaximum(data)
     expect(res).toEqual({ month: 1, value: 68974, year: 2017 })
+  })
+})
+
+describe("Test getMaximum() on real deaths.json", () => {
+  const male = (deaths as DeathsRawData).male.global
+  const female = (deaths as DeathsRawData).female.global
+  const mf = male.map((year, i) => sumYears([year, female[i]]))
+
+  test("regression: peak m+f month 2000-2024 = December 2022 (71484)", () => {
+    expect(getMaximum(mf.slice(0, 25))).toEqual({
+      month: 12,
+      value: 71484,
+      year: 2022,
+    })
   })
 })
