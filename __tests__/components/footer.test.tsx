@@ -1,32 +1,27 @@
-/**
- * @jest-environment jsdom
- */
 import fr from "@/lang/fr.json"
 import en from "@/lang/en.json"
 import Footer from "@/components/Footer"
 import { IntlProvider } from "react-intl"
 import { render } from "@testing-library/react"
+import { useRouter } from "next/router"
 
 const messages = { en, fr }
 
-jest.mock("next/router", () => ({
-  useRouter() {
-    return {
-      locale: "fr",
-      pathname: "/",
-      defaultLocale: "en",
-    }
-  },
+vi.mock("next/router", () => ({
+  useRouter: vi.fn(() => ({
+    locale: "fr",
+    pathname: "/",
+    defaultLocale: "en",
+  })),
 }))
 
-/* eslint @typescript-eslint/no-var-requires: "off" */
-const useRouter = jest.spyOn(require("next/router"), "useRouter")
+const mockUseRouter = vi.mocked(useRouter) as unknown as ReturnType<typeof vi.fn>
 
 describe("Footer", () => {
   test("should create a Footer in french", () => {
     const lang = "fr"
 
-    useRouter.mockImplementation(() => ({
+    mockUseRouter.mockImplementation(() => ({
       locale: lang,
       pathname: "/",
     }))
@@ -42,7 +37,7 @@ describe("Footer", () => {
   test("should create a Footer in english", () => {
     const lang = "en"
 
-    useRouter.mockImplementation(() => ({
+    mockUseRouter.mockImplementation(() => ({
       locale: lang,
       pathname: "/",
     }))

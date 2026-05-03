@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Page snapshot: comparison 1`] = `
 <DocumentFragment>
@@ -23,7 +23,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2026
           </button>
@@ -31,7 +31,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2025
           </button>
@@ -39,7 +39,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class="active"
-            style="background-color: rgb(156, 173, 206); border-color: #9cadce;"
+            style="background-color: rgb(156, 173, 206); border-color: rgb(156, 173, 206);"
           >
             2024
           </button>
@@ -47,7 +47,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class="active"
-            style="background-color: rgb(209, 207, 226); border-color: #d1cfe2;"
+            style="background-color: rgb(209, 207, 226); border-color: rgb(209, 207, 226);"
           >
             2023
           </button>
@@ -55,7 +55,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class="active"
-            style="background-color: rgb(212, 175, 185); border-color: #d4afb9;"
+            style="background-color: rgb(212, 175, 185); border-color: rgb(212, 175, 185);"
           >
             2022
           </button>
@@ -63,7 +63,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class="active"
-            style="background-color: rgb(66, 129, 164); border-color: #4281a4;"
+            style="background-color: rgb(66, 129, 164); border-color: rgb(66, 129, 164);"
           >
             2021
           </button>
@@ -71,7 +71,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class="active"
-            style="background-color: rgb(156, 175, 183); border-color: #9cafb7;"
+            style="background-color: rgb(156, 175, 183); border-color: rgb(156, 175, 183);"
           >
             2020
           </button>
@@ -79,7 +79,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2019
           </button>
@@ -87,7 +87,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2018
           </button>
@@ -95,7 +95,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2017
           </button>
@@ -103,7 +103,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2016
           </button>
@@ -111,7 +111,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2015
           </button>
@@ -119,7 +119,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2014
           </button>
@@ -127,7 +127,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2013
           </button>
@@ -135,7 +135,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2012
           </button>
@@ -143,7 +143,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2011
           </button>
@@ -151,7 +151,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2010
           </button>
@@ -159,7 +159,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2009
           </button>
@@ -167,7 +167,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2008
           </button>
@@ -175,7 +175,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2007
           </button>
@@ -183,7 +183,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2006
           </button>
@@ -191,7 +191,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2005
           </button>
@@ -199,7 +199,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2004
           </button>
@@ -207,7 +207,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2003
           </button>
@@ -215,7 +215,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2002
           </button>
@@ -223,7 +223,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2001
           </button>
@@ -231,7 +231,7 @@ exports[`Page snapshot: comparison 1`] = `
         <li>
           <button
             class=""
-            style="background-color: transparent;"
+            style="background-color: transparent; border-color: inherit;"
           >
             2000
           </button>

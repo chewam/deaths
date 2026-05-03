@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Menu should create a Menu in english 1`] = `
+exports[`Menu > should create a Menu in english 1`] = `
 <DocumentFragment>
   <ul
     class="menu"
@@ -36,7 +36,7 @@ exports[`Menu should create a Menu in english 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Menu should create a Menu in french 1`] = `
+exports[`Menu > should create a Menu in french 1`] = `
 <DocumentFragment>
   <ul
     class="menu"

@@ -1,32 +1,27 @@
-/**
- * @jest-environment jsdom
- */
 import fr from "@/lang/fr.json"
 import en from "@/lang/en.json"
 import Menu from "@/components/Menu"
 import { IntlProvider } from "react-intl"
 import { render } from "@testing-library/react"
+import { useRouter } from "next/router"
 
 const messages = { en, fr }
 
-jest.mock("next/router", () => ({
-  useRouter() {
-    return {
-      route: "/",
-      locale: "fr",
-      defaultLocale: "en",
-    }
-  },
+vi.mock("next/router", () => ({
+  useRouter: vi.fn(() => ({
+    route: "/",
+    locale: "fr",
+    defaultLocale: "en",
+  })),
 }))
 
-/* eslint @typescript-eslint/no-var-requires: "off" */
-const useRouter = jest.spyOn(require("next/router"), "useRouter")
+const mockUseRouter = vi.mocked(useRouter) as unknown as ReturnType<typeof vi.fn>
 
 describe("Menu", () => {
   test("should create a Menu in french", () => {
     const lang = "fr"
 
-    useRouter.mockImplementation(() => ({
+    mockUseRouter.mockImplementation(() => ({
       route: "/",
     }))
 
@@ -41,7 +36,7 @@ describe("Menu", () => {
   test("should create a Menu in english", () => {
     const lang = "en"
 
-    useRouter.mockImplementation(() => ({
+    mockUseRouter.mockImplementation(() => ({
       route: "/",
     }))
 
