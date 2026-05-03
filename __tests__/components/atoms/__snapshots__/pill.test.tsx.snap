@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Pill > applies active variant 1`] = `
+<DocumentFragment>
+  <button
+    class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+    type="button"
+  >
+    EN
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Pill > renders default state 1`] = `
+<DocumentFragment>
+  <button
+    class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint"
+    type="button"
+  >
+    EN
+  </button>
+</DocumentFragment>
+`;

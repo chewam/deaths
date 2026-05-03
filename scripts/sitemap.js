@@ -10,7 +10,7 @@ const BASE_URL = "https://deaths.chewam.com"
 const urls = fs
   .readdirSync("src/pages")
   .filter((pages) => {
-    return !["_app.tsx", "_document.tsx"].includes(pages)
+    return !["_app.tsx", "_document.tsx", "playground.tsx"].includes(pages)
   })
   .map((page) => {
     const name = path.parse(page).name

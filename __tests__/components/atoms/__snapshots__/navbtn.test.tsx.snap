@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NavBtn > applies active variant 1`] = `
+<DocumentFragment>
+  <button
+    class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text text-text border-border bg-surface"
+    type="button"
+  >
+    Year
+  </button>
+</DocumentFragment>
+`;
+
+exports[`NavBtn > renders default state 1`] = `
+<DocumentFragment>
+  <button
+    class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+    type="button"
+  >
+    Overview
+  </button>
+</DocumentFragment>
+`;
