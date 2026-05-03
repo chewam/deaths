@@ -1,3 +1,5 @@
+@reference "tailwindcss";
+
 .comparison {
   @apply
     flex
@@ -5,7 +7,7 @@
 
   height: calc(100vh - 14rem);
 
-  .chart {
+  & .chart {
     @apply
       p-4
       flex-1
@@ -14,7 +16,7 @@
       dark:bg-gray-800;
   }
 
-  .years {
+  & .years {
     @apply
       p-4
       mt-4
@@ -25,8 +27,8 @@
       bg-white
       dark:bg-gray-800;
 
-    li {
-      button {
+    & li {
+      & button {
         @apply
           px-2
           py-0.5

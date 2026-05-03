@@ -1,4 +1,6 @@
-#__next > .dashboard { /* stylelint-disable-line */
+@reference "tailwindcss";
+
+#__next > .dashboard {
   @apply
     grid
     px-6
@@ -12,7 +14,7 @@
     xl:grid-cols-4
     2xl:grid-cols-5;
 
-  .tile {
+  & .tile {
     @apply
       p-4
       grid
@@ -22,20 +24,20 @@
       dark:bg-gray-800
       grid-flow-col-dense;
 
-    .right {
+    & .right {
       @apply col-span-2;
     }
 
-    .left {
-      .year-trend {
+    & .left {
+      & .year-trend {
         @apply
           flex
           mb-2
           text-xl
           font-bold
           items-center;
-        
-        i {
+
+        & i {
           @apply text-2xl;
 
           &.ri-arrow-right-down-line {
@@ -48,16 +50,16 @@
         }
       }
 
-      .stat {
+      & .stat {
         @apply
           mb-2
           last:mb-0;
 
-        .label {
+        & .label {
           @apply text-xs;
         }
 
-        .value {
+        & .value {
           @apply leading-tight;
 
           &.above {

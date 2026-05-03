@@ -9,8 +9,8 @@ import FiltersBar from "@/components/FiltersBar"
 import { Analytics } from "@vercel/analytics/react"
 
 import "remixicon/fonts/remixicon.css"
-import "@/styles/tailwind.scss"
-import "@/styles/globals.scss"
+import "@/styles/tailwind.css"
+import "@/styles/globals.css"
 
 import en from "@/lang/en.json"
 import fr from "@/lang/fr.json"

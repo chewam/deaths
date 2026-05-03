@@ -1,4 +1,6 @@
-#__next > footer { /* stylelint-disable-line */
+@reference "tailwindcss";
+
+#__next > footer {
   @apply
     py-4
     px-6
@@ -8,7 +10,7 @@
     container
     justify-between;
 
-  .left, .right {
+  & .left, & .right {
     @apply flex items-center;
   }
 }

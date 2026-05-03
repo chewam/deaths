@@ -1,3 +1,5 @@
+@reference "tailwindcss";
+
 a[href] {
   @apply
     text-blue-900

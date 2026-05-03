@@ -1,4 +1,6 @@
-#__next > .container > .filters { /* stylelint-disable-line */
+@reference "tailwindcss";
+
+#__next > .container > .filters {
   @apply
     flex
     mb-4
@@ -9,14 +11,14 @@
     bg-white
     dark:bg-gray-800;
 
-  .genders {
+  & .genders {
     @apply
-    flex
-    ml-6
-    flex-row
-    leading-none;
+      flex
+      ml-6
+      flex-row
+      leading-none;
 
-    i {
+    & i {
       @apply
         flex
         ml-2
@@ -27,7 +29,7 @@
         cursor-pointer
         text-gray-300
         dark:text-gray-600;
-      
+
       &.active {
         @apply
           text-blue-900
@@ -36,22 +38,22 @@
     }
   }
 
-  .rc-slider {
+  & .rc-slider {
     @apply flex-1 pt-6 pb-9;
 
-    .rc-slider-rail {
+    & .rc-slider-rail {
       @apply
-      bg-gray-300
-      dark:bg-gray-600;
+        bg-gray-300
+        dark:bg-gray-600;
     }
 
-    .rc-slider-track {
+    & .rc-slider-track {
       @apply
         bg-blue-900
         dark:bg-blue-400;
     }
 
-    .rc-slider-handle {
+    & .rc-slider-handle {
       @apply
         bg-white
         border-blue-900
@@ -59,8 +61,8 @@
         dark:border-blue-400;
     }
 
-    .rc-slider-step {
-      .rc-slider-dot {
+    & .rc-slider-step {
+      & .rc-slider-dot {
         @apply
           bg-white
           border-gray-300
@@ -68,23 +70,23 @@
           dark:border-gray-500;
       }
 
-      .rc-slider-dot-active {
+      & .rc-slider-dot-active {
         @apply
           border-blue-900
           dark:border-blue-400;
       }
     }
 
-    .rc-slider-mark {
+    & .rc-slider-mark {
       @apply leading-none relative top-3;
 
-      .rc-slider-mark-text {
+      & .rc-slider-mark-text {
         @apply
           text-gray-400
           dark:text-gray-600;
       }
 
-      .rc-slider-mark-text-active {
+      & .rc-slider-mark-text-active {
         @apply
           text-gray-900
           dark:text-gray-300;

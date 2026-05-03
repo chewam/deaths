@@ -1,3 +1,5 @@
+@reference "tailwindcss";
+
 button {
   @apply cursor-pointer;
 }

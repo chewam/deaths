@@ -1,4 +1,6 @@
-#__next > .header { /* stylelint-disable-line */
+@reference "tailwindcss";
+
+#__next > .header {
   @apply
     z-10
     fixed
@@ -9,7 +11,7 @@
     bg-white
     dark:bg-gray-800;
 
-  .wrapper {
+  & .wrapper {
     @apply
       px-6
       flex
@@ -17,17 +19,17 @@
       container
       justify-between;
 
-    h1 {
+    & h1 {
       @apply py-4;
     }
 
-    .menu {
+    & .menu {
       @apply flex gap-x-8;
-  
-      li {
+
+      & li {
         @apply flex;
 
-        a {
+        & a {
           @apply
             flex
             items-center
@@ -38,7 +40,7 @@
         }
 
         &.active {
-          a {
+          & a {
             @apply border-b;
           }
         }
