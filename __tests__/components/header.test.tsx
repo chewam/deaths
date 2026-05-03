@@ -10,7 +10,8 @@ const messages = { en, fr }
 vi.mock("next/router", () => ({
   useRouter: vi.fn(() => ({
     route: "/",
-    locale: "fr",
+    pathname: "/",
+    locale: "en",
     defaultLocale: "en",
   })),
 }))
@@ -25,6 +26,8 @@ describe("Header", () => {
 
     mockUseRouter.mockImplementation(() => ({
       route: "/",
+      pathname: "/",
+      locale: lang,
     }))
 
     const { asFragment } = render(
@@ -40,6 +43,8 @@ describe("Header", () => {
 
     mockUseRouter.mockImplementation(() => ({
       route: "/",
+      pathname: "/",
+      locale: lang,
     }))
 
     const { asFragment } = render(

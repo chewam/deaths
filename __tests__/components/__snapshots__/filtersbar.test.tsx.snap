@@ -1,21 +1,20 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Filters Bar > should create a hidden Filters Bar 1`] = `
-<DocumentFragment>
-  <div
-    class="container mx-auto mt-24 px-6"
-  />
-</DocumentFragment>
-`;
+exports[`Filters Bar > should create a hidden Filters Bar 1`] = `<DocumentFragment />`;
 
 exports[`Filters Bar > should create a visible Filters Bar 1`] = `
 <DocumentFragment>
   <div
-    class="container mx-auto mt-24 px-6"
+    class="border-border border-b px-12 py-3.5 flex flex-wrap items-center gap-8"
   >
     <div
-      class="filters"
+      class="flex flex-col gap-1.5 min-w-[220px] flex-1"
     >
+      <span
+        class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-faint"
+      >
+        Âge
+      </span>
       <div
         class="rc-slider rc-slider-horizontal rc-slider-with-marks"
       >
@@ -175,6 +174,15 @@ exports[`Filters Bar > should create a visible Filters Bar 1`] = `
           </span>
         </div>
       </div>
+    </div>
+    <div
+      class="flex items-center gap-2"
+    >
+      <span
+        class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-faint"
+      >
+        Sexe
+      </span>
       <div
         class="genders"
       >
