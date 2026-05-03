@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState } from "react"
 
 import {
   TREND_PADDING,
+  TREND_RATE_DOMAIN,
   buildTrendGeometry,
   type TrendYear,
 } from "./trend-geometry"
@@ -66,9 +67,10 @@ const Trend = ({
   const { innerW, innerH, xs, ys, avg, avgY, linePath, areaPath } =
     buildTrendGeometry(years, width, height)
 
+  const { min: minRate, max: maxRate } = TREND_RATE_DOMAIN
   const projectTickY = (rate: number): number => {
-    const span = 1.05 - 0.8
-    return padT + innerH * (1 - (rate - 0.8) / span)
+    const span = maxRate - minRate
+    return padT + innerH * (1 - (rate - minRate) / span)
   }
 
   const hoveredIndex =
@@ -222,7 +224,7 @@ const Trend = ({
 
       {hovered && (
         <div
-          className="font-body bg-surface border-border text-text pointer-events-none absolute"
+          className="font-body bg-surface text-text pointer-events-none absolute"
           style={{
             left: Math.min(width - 200, Math.max(8, xs[hoveredIndex] + 12)),
             top: Math.max(8, ys[hoveredIndex] - 70),
