@@ -14,6 +14,7 @@ const labels = {
   mortalityRate: "Mortality rate",
   deathsCount: "Deaths",
   population: "Population",
+  avgLabel: "AVG",
 }
 
 const baseProps = {

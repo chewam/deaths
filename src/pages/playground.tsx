@@ -45,6 +45,7 @@ const TREND_LABELS = {
   mortalityRate: "Mortality rate",
   deathsCount: "Deaths",
   population: "Population",
+  avgLabel: "AVG",
 }
 
 const Playground = () => {

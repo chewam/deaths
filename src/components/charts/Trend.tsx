@@ -13,6 +13,7 @@ export type TrendLabels = {
   mortalityRate: string
   deathsCount: string
   population: string
+  avgLabel: string
 }
 
 export type TrendProps = {
@@ -145,7 +146,7 @@ const Trend = ({
               fill="var(--color-text-dim)"
               letterSpacing="0.05em"
             >
-              AVG {avg.toFixed(3)}
+              {labels.avgLabel} {avg.toFixed(3)}
             </text>
           </>
         )}
