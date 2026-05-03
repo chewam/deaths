@@ -2,102 +2,70 @@
 
 exports[`Footer > should create a Footer in english 1`] = `
 <DocumentFragment>
-  <footer>
-    <div
-      class="left"
+  <footer
+    class="border-border border-t px-12 py-3.5 flex items-center justify-between flex-wrap gap-4"
+  >
+    <span
+      class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-faint"
     >
-      Chewam © 2020
-      <span
-        class="spacer"
-      >
-          |  
-      </span>
-      INSEE data (
+      Source: INSEE via 
       <a
+        class="underline-offset-2 hover:text-text hover:underline"
         href="https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees"
         rel="noopener noreferrer"
         target="_blank"
       >
         data.gouv.fr
       </a>
-      )
-    </div>
-    <div
-      class="right"
+    </span>
+    <span
+      class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-faint"
     >
+      v0.0.0 · 
       <a
-        class="lang"
-        href="/"
-        title="français"
-      >
-        fr
-      </a>
-      <span
-        class="spacer"
-      >
-          |  
-      </span>
-      version 0.0.0 (
-      <a
+        class="underline-offset-2 hover:text-text hover:underline"
         href="https://github.com/chewam/mortality/tree/dev"
         rel="noopener noreferrer"
         target="_blank"
       >
         dev
       </a>
-      )
-    </div>
+    </span>
   </footer>
 </DocumentFragment>
 `;
 
 exports[`Footer > should create a Footer in french 1`] = `
 <DocumentFragment>
-  <footer>
-    <div
-      class="left"
+  <footer
+    class="border-border border-t px-12 py-3.5 flex items-center justify-between flex-wrap gap-4"
+  >
+    <span
+      class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-faint"
     >
-      Chewam © 2020
-      <span
-        class="spacer"
-      >
-          |  
-      </span>
-      Données INSEE (
+      Source : INSEE via 
       <a
+        class="underline-offset-2 hover:text-text hover:underline"
         href="https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees"
         rel="noopener noreferrer"
         target="_blank"
       >
         data.gouv.fr
       </a>
-      )
-    </div>
-    <div
-      class="right"
+    </span>
+    <span
+      class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-faint"
     >
+      v0.0.0 · 
       <a
-        class="lang"
-        href="/"
-        title="english"
-      >
-        en
-      </a>
-      <span
-        class="spacer"
-      >
-          |  
-      </span>
-      version 0.0.0 (
-      <a
+        class="underline-offset-2 hover:text-text hover:underline"
         href="https://github.com/chewam/mortality/tree/dev"
         rel="noopener noreferrer"
         target="_blank"
       >
         dev
       </a>
-      )
-    </div>
+    </span>
   </footer>
 </DocumentFragment>
 `;

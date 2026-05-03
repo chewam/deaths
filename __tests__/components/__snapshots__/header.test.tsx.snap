@@ -2,102 +2,134 @@
 
 exports[`Header > should create a Header in english 1`] = `
 <DocumentFragment>
-  <div
-    class="header"
+  <header
+    class="sticky top-0 z-20 bg-bg/80 backdrop-blur-md border-border border-b px-12 py-4 flex flex-wrap items-center justify-between gap-6"
   >
     <div
-      class="wrapper"
+      class="flex items-baseline gap-3.5"
     >
-      <h1>
+      <h1
+        class="font-display tracking-display text-text text-[22px] leading-none"
+      >
         <a
           href="/"
         >
           Mortality in France
         </a>
       </h1>
-      <ul
-        class="menu"
+      <span
+        class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-faint"
       >
-        <li
-          class=""
-        >
-          <a
-            href="/overview"
-          >
-            Overview
-          </a>
-        </li>
-        <li
-          class=""
-        >
-          <a
-            href="/comparison"
-          >
-            Comparison
-          </a>
-        </li>
-        <li
-          class=""
-        >
-          <a
-            href="/distribution"
-          >
-            Distribution
-          </a>
-        </li>
-      </ul>
+        INSEE data · 2000—2026
+      </span>
     </div>
-  </div>
+    <nav
+      class="flex gap-1"
+    >
+      <a
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        href="/overview"
+      >
+        Overview
+      </a>
+      <a
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        href="/comparison"
+      >
+        Comparison
+      </a>
+      <a
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        href="/distribution"
+      >
+        Distribution
+      </a>
+    </nav>
+    <div
+      class="flex items-center gap-1.5"
+    >
+      <a
+        class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+        href="/"
+        title="english"
+      >
+        EN
+      </a>
+      <a
+        class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint"
+        href="/"
+        title="français"
+      >
+        FR
+      </a>
+    </div>
+  </header>
 </DocumentFragment>
 `;
 
 exports[`Header > should create a Header in french 1`] = `
 <DocumentFragment>
-  <div
-    class="header"
+  <header
+    class="sticky top-0 z-20 bg-bg/80 backdrop-blur-md border-border border-b px-12 py-4 flex flex-wrap items-center justify-between gap-6"
   >
     <div
-      class="wrapper"
+      class="flex items-baseline gap-3.5"
     >
-      <h1>
+      <h1
+        class="font-display tracking-display text-text text-[22px] leading-none"
+      >
         <a
           href="/"
         >
           Mortalité en France
         </a>
       </h1>
-      <ul
-        class="menu"
+      <span
+        class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-faint"
       >
-        <li
-          class=""
-        >
-          <a
-            href="/overview"
-          >
-            Vue d'Ensemble
-          </a>
-        </li>
-        <li
-          class=""
-        >
-          <a
-            href="/comparison"
-          >
-            Comparaison
-          </a>
-        </li>
-        <li
-          class=""
-        >
-          <a
-            href="/distribution"
-          >
-            Répartition
-          </a>
-        </li>
-      </ul>
+        Données INSEE · 2000—2026
+      </span>
     </div>
-  </div>
+    <nav
+      class="flex gap-1"
+    >
+      <a
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        href="/overview"
+      >
+        Vue d'Ensemble
+      </a>
+      <a
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        href="/comparison"
+      >
+        Comparaison
+      </a>
+      <a
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        href="/distribution"
+      >
+        Répartition
+      </a>
+    </nav>
+    <div
+      class="flex items-center gap-1.5"
+    >
+      <a
+        class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint"
+        href="/"
+        title="english"
+      >
+        EN
+      </a>
+      <a
+        class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+        href="/"
+        title="français"
+      >
+        FR
+      </a>
+    </div>
+  </header>
 </DocumentFragment>
 `;
