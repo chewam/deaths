@@ -1,4 +1,6 @@
-.overview {
+@reference "tailwindcss";
+
+.distribution {
   @apply
     p-4
     shadow

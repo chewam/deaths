@@ -1,7 +1,6 @@
 import messages from "@/lang/fr.json"
 import FiltersBar from "@/components/FiltersBar"
 import { IntlProvider } from "react-intl"
-import { ThemeProvider } from "next-themes"
 import { render } from "@testing-library/react"
 import { useRouter } from "next/router"
 
@@ -38,9 +37,7 @@ describe("Filters Bar", () => {
     }))
     const { asFragment } = render(
       <IntlProvider locale="fr" messages={messages}>
-        <ThemeProvider defaultTheme="light">
-          <FiltersBar />
-        </ThemeProvider>
+        <FiltersBar />
       </IntlProvider>
     )
     expect(asFragment()).toMatchSnapshot()
@@ -52,13 +49,7 @@ describe("Filters Bar", () => {
     }))
     const { asFragment } = render(
       <IntlProvider locale="fr" messages={messages}>
-        <ThemeProvider
-          defaultTheme="dark"
-          forcedTheme="dark"
-          themes={["light", "dark"]}
-        >
-          <FiltersBar />
-        </ThemeProvider>
+        <FiltersBar />
       </IntlProvider>
     )
     expect(asFragment()).toMatchSnapshot()

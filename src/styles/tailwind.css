@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: Roboto, arial, sans-serif;
+}
 
 @layer base {
   body {
@@ -37,7 +39,7 @@
     font-family: Roboto;
     src: url("/fonts/Roboto-Regular.ttf");
   }
-  
+
   @font-face {
     font-weight: 300;
     font-display: swap;
