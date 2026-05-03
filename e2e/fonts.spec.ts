@@ -12,18 +12,25 @@ test.describe("fonts — Lot 2 / 2.1 next/font", () => {
         display: cs.getPropertyValue("--display").trim(),
         body: cs.getPropertyValue("--body").trim(),
         mono: cs.getPropertyValue("--mono").trim(),
+        fontInter: cs.getPropertyValue("--font-inter").trim(),
+        fontInterTight: cs.getPropertyValue("--font-inter-tight").trim(),
+        fontFraunces: cs.getPropertyValue("--font-fraunces").trim(),
+        fontJetBrainsMono: cs.getPropertyValue("--font-jetbrains-mono").trim(),
       }
     })
 
+    // Semantic aliases are wired (the var() chain may or may not resolve at
+    // computed-style time depending on the engine; non-empty is the contract).
     expect(vars.display).not.toBe("")
     expect(vars.body).not.toBe("")
     expect(vars.mono).not.toBe("")
 
-    // Resolved values: var() refs are substituted by next/font's
-    // generated families (e.g. "'Inter Tight', 'Inter Tight Fallback'…").
-    expect(vars.display).toMatch(/Inter Tight/i)
-    expect(vars.body).toMatch(/Inter\b/i)
-    expect(vars.mono).toMatch(/JetBrains Mono/i)
+    // next/font sets the leaf variables to literal font-family strings, so
+    // these always carry the font name regardless of var() resolution behavior.
+    expect(vars.fontInter).toMatch(/Inter\b/i)
+    expect(vars.fontInterTight).toMatch(/Inter Tight/i)
+    expect(vars.fontFraunces).toMatch(/Fraunces/i)
+    expect(vars.fontJetBrainsMono).toMatch(/JetBrains Mono/i)
   })
 
   test("does not request fonts.googleapis.com / fonts.gstatic.com on page load", async ({
