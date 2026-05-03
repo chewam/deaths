@@ -34,9 +34,11 @@ jobs:
             # Tags semver ne s'activent que sur ref de tag (release).
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
-            # :latest réservé aux releases publiées + workflow_dispatch depuis master
-            # (préserve l'option de re-tag manuel sans casser la prod via une branche).
-            type=raw,value=latest,enable=${{ github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master') }}
+            # :latest réservé aux releases publiées sur master + workflow_dispatch depuis master.
+            # Exclusion explicite des refs contenant 'alpha' : semantic-release publie des
+            # GitHub releases pour les tags v2.0.0-alpha.N depuis la branche alpha, et sans
+            # ce garde-fou `:latest` pointerait sur une image alpha.
+            type=raw,value=latest,enable=${{ (github.event_name == 'release' && !contains(github.ref, 'alpha')) || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master') }}
             # :alpha poussé uniquement depuis la branche alpha → review env k8s.
             type=raw,value=alpha,enable=${{ github.ref == 'refs/heads/alpha' }}
 
