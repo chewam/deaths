@@ -1,8 +1,7 @@
 @reference "tailwindcss";
 
 #__next > footer {
-  @apply
-    py-4
+  @apply py-4
     px-6
     flex
     mx-auto
@@ -10,7 +9,8 @@
     container
     justify-between;
 
-  & .left, & .right {
+  & .left,
+  & .right {
     @apply flex items-center;
   }
 }

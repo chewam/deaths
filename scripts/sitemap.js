@@ -10,10 +10,7 @@ const BASE_URL = "https://deaths.chewam.com"
 const urls = fs
   .readdirSync("src/pages")
   .filter((pages) => {
-    return ![
-      "_app.tsx",
-      "_document.tsx"
-    ].includes(pages)
+    return !["_app.tsx", "_document.tsx"].includes(pages)
   })
   .map((page) => {
     const name = path.parse(page).name
@@ -31,10 +28,10 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
             <changefreq>monthly</changefreq>
             <priority>1.0</priority>
           </url>
-        `;
+        `
       })
       .join("")}
   </urlset>
-`;
+`
 
-fs.writeFileSync('public/sitemap.xml', sitemap)
+fs.writeFileSync("public/sitemap.xml", sitemap)

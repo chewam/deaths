@@ -1,8 +1,7 @@
 @reference "tailwindcss";
 
 #__next > .header {
-  @apply
-    z-10
+  @apply z-10
     fixed
     top-0
     left-0
@@ -12,8 +11,7 @@
     dark:bg-gray-800;
 
   & .wrapper {
-    @apply
-      px-6
+    @apply px-6
       flex
       mx-auto
       container
@@ -30,8 +28,7 @@
         @apply flex;
 
         & a {
-          @apply
-            flex
+          @apply flex
             items-center
             border-blue-900
             dark:border-blue-400

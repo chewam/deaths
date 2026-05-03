@@ -5,12 +5,15 @@ A web page to show statistics about deaths in France from year 2000 up to now, b
 ![Preview](public/screenshot.png)
 
 ## Install
+
 ### Install dependencies
 
 ```bash
 yarn
 ```
+
 ## Development
+
 ### Run development version
 
 ```bash
@@ -20,6 +23,7 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Tests
+
 ### Run code linter
 
 ```bash
@@ -39,6 +43,7 @@ yarn test
 ```
 
 ## Built version
+
 ### Build application
 
 ```bash
@@ -66,6 +71,7 @@ yarn analyze
 ```bash
 yarn update-data
 ```
+
 ---
 
 [![github](https://github.com/chewam/mortality/workflows/Quality/badge.svg)](https://github.com/chewam/mortality/actions?query=workflow%3AQuality) &nbsp; [![github](https://github.com/chewam/mortality/workflows/Release/badge.svg)](https://github.com/chewam/mortality/actions?query=workflow%3ARelease) &nbsp; [![github](https://github.com/chewam/mortality/workflows/CodeQL/badge.svg)](https://github.com/chewam/mortality/actions?query=workflow%3ACodeQL) &nbsp; [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=chewam_deaths&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=chewam_deaths)

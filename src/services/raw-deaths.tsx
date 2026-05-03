@@ -19,8 +19,8 @@ const filter = (data: DeathsRawData, { gender, ageGroup }: Filters): Deaths => {
     gender && ageGroup
       ? sumAgeGroups(data[gender].ageGroups, ageGroup[0] / 10, ageGroup[1] / 10)
       : gender
-      ? data[gender].global
-      : sumAgeGroups(data?.ageGroups, ageGroup[0] / 10, ageGroup[1] / 10)
+        ? data[gender].global
+        : sumAgeGroups(data?.ageGroups, ageGroup[0] / 10, ageGroup[1] / 10)
 
   return { labels: data.labels, data: filteredData }
 }

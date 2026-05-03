@@ -1,8 +1,7 @@
 @reference "tailwindcss";
 
 #__next > .container > .filters {
-  @apply
-    flex
+  @apply flex
     mb-4
     pl-6
     z-10
@@ -12,15 +11,13 @@
     dark:bg-gray-800;
 
   & .genders {
-    @apply
-      flex
+    @apply flex
       ml-6
       flex-row
       leading-none;
 
     & i {
-      @apply
-        flex
+      @apply flex
         ml-2
         text-2xl
         leading-5
@@ -31,8 +28,7 @@
         dark:text-gray-600;
 
       &.active {
-        @apply
-          text-blue-900
+        @apply text-blue-900
           dark:text-blue-400;
       }
     }
@@ -42,20 +38,17 @@
     @apply flex-1 pt-6 pb-9;
 
     & .rc-slider-rail {
-      @apply
-        bg-gray-300
+      @apply bg-gray-300
         dark:bg-gray-600;
     }
 
     & .rc-slider-track {
-      @apply
-        bg-blue-900
+      @apply bg-blue-900
         dark:bg-blue-400;
     }
 
     & .rc-slider-handle {
-      @apply
-        bg-white
+      @apply bg-white
         border-blue-900
         dark:bg-gray-600
         dark:border-blue-400;
@@ -63,16 +56,14 @@
 
     & .rc-slider-step {
       & .rc-slider-dot {
-        @apply
-          bg-white
+        @apply bg-white
           border-gray-300
           dark:bg-gray-600
           dark:border-gray-500;
       }
 
       & .rc-slider-dot-active {
-        @apply
-          border-blue-900
+        @apply border-blue-900
           dark:border-blue-400;
       }
     }
@@ -81,14 +72,12 @@
       @apply leading-none relative top-3;
 
       & .rc-slider-mark-text {
-        @apply
-          text-gray-400
+        @apply text-gray-400
           dark:text-gray-600;
       }
 
       & .rc-slider-mark-text-active {
-        @apply
-          text-gray-900
+        @apply text-gray-900
           dark:text-gray-300;
       }
     }

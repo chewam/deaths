@@ -2,34 +2,16 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@/data/*": [
-        "data/*"
-      ],
-      "@/lang/*": [
-        "lang/*"
-      ],
-      "@/views/*": [
-        "views/*"
-      ],
-      "@/utils/*": [
-        "utils/*"
-      ],
-      "@/styles/*": [
-        "styles/*"
-      ],
-      "@/services/*": [
-        "services/*"
-      ],
-      "@/components/*": [
-        "components/*"
-      ]
+      "@/data/*": ["data/*"],
+      "@/lang/*": ["lang/*"],
+      "@/views/*": ["views/*"],
+      "@/utils/*": ["utils/*"],
+      "@/styles/*": ["styles/*"],
+      "@/services/*": ["services/*"],
+      "@/components/*": ["components/*"]
     },
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -43,11 +25,7 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules",
     "tsconfig.json",

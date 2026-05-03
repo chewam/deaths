@@ -1,8 +1,7 @@
 @reference "tailwindcss";
 
 .distribution {
-  @apply
-    p-4
+  @apply p-4
     shadow
     bg-white
     dark:bg-gray-800;

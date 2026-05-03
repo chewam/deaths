@@ -37,12 +37,15 @@ ChartJS.register(
 
 export const getMaximum = (data: Deaths["data"]) => {
   if (!data) return {}
-  const maximums = data.reduce((acc, year, i) => {
-    const max = Math.max(...(year || []))
-    const index = year?.indexOf(max)
-    acc[max] = { year: 2000 + i, month: index + 1, value: max }
-    return acc
-  }, {} as { [key: number]: Record<string, number> })
+  const maximums = data.reduce(
+    (acc, year, i) => {
+      const max = Math.max(...(year || []))
+      const index = year?.indexOf(max)
+      acc[max] = { year: 2000 + i, month: index + 1, value: max }
+      return acc
+    },
+    {} as { [key: number]: Record<string, number> }
+  )
   const keys = Object.keys(maximums).map(Number)
   const maxValue = Math.max(...keys)
   return maximums[maxValue]
@@ -87,7 +90,8 @@ const Comparison = () => {
 
   const datasets = Object.keys(years || {}).reduce(
     (dataset: ChartDataset<"line">[], year, i) => (
-      years && years[year] && dataset.push(getDataSet(year, i)), dataset
+      years && years[year] && dataset.push(getDataSet(year, i)),
+      dataset
     ),
     []
   )
