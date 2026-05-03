@@ -1,19 +1,6 @@
 const { version } = require("./package.json")
 const { withSentryConfig } = require("@sentry/nextjs")
 
-const moduleExports = {
-  output: "standalone",
-  env: { APP_VERSION: version },
-  i18n: {
-    defaultLocale: "en",
-    locales: ["fr", "en"],
-  },
-}
-
-const SentryWebpackPluginOptions = {}
-
-const config = withSentryConfig(moduleExports, SentryWebpackPluginOptions)
-
 const cspHeader = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline';
@@ -27,7 +14,13 @@ const cspHeader = `
     upgrade-insecure-requests;
 `
 
-module.exports = {
+const nextConfig = {
+  output: "standalone",
+  env: { APP_VERSION: version },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["fr", "en"],
+  },
   async headers() {
     return [
       {
@@ -43,12 +36,14 @@ module.exports = {
   },
 }
 
-const analyzerEnabled = process.env.ANALYZE === "true"
+const sentryBuildOptions = {
+  silent: !process.env.CI,
+}
 
-if (analyzerEnabled) {
-  const withBundleAnalyzer = require("@next/bundle-analyzer")({
-    enabled: true,
-  })
+const config = withSentryConfig(nextConfig, sentryBuildOptions)
+
+if (process.env.ANALYZE === "true") {
+  const withBundleAnalyzer = require("@next/bundle-analyzer")({ enabled: true })
   module.exports = withBundleAnalyzer(config)
 } else {
   module.exports = config
