@@ -52,19 +52,19 @@ describe("@theme tokens (Graphite palette + modern typography)", () => {
 
   test("--font-display references Inter Tight then Inter", () => {
     expect(tokens["--font-display"]).toBe(
-      "var(--font-inter-tight), var(--font-inter), -apple-system, sans-serif",
+      "var(--font-inter-tight), var(--font-inter), -apple-system, sans-serif"
     )
   })
 
   test("--font-body references Inter", () => {
     expect(tokens["--font-body"]).toBe(
-      "var(--font-inter), -apple-system, sans-serif",
+      "var(--font-inter), -apple-system, sans-serif"
     )
   })
 
   test("--font-mono references JetBrains Mono", () => {
     expect(tokens["--font-mono"]).toBe(
-      "var(--font-jetbrains-mono), ui-monospace, monospace",
+      "var(--font-jetbrains-mono), ui-monospace, monospace"
     )
   })
 
