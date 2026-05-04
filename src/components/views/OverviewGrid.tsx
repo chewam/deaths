@@ -1,3 +1,5 @@
+import type { ReactNode } from "react"
+
 export type OverviewYear = {
   year: number
   rate: number
@@ -216,7 +218,7 @@ const OverviewGrid = ({
   )
 }
 
-const Label = ({ children }: { children: React.ReactNode }) => (
+const Label = ({ children }: { children: ReactNode }) => (
   <div
     className="font-mono text-text-faint uppercase"
     style={{ fontSize: 10, letterSpacing: "0.1em" }}

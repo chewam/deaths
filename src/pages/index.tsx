@@ -9,13 +9,12 @@ import useYears from "@/services/years"
 import useRawDeaths from "@/services/raw-deaths"
 import { sumArray, getYearPopulation } from "@/utils/index"
 
-const PARTIAL_YEAR = new Date().getFullYear()
-
 const Page = () => {
   const router = useRouter()
   const intl = useIntl()
   const [years] = useYears()
   const [deaths] = useRawDeaths()
+  const partialYear = new Date().getFullYear()
 
   const ageGroups = deaths?.ageGroups ?? []
   const yearsList = Object.keys(years || {})
@@ -56,7 +55,7 @@ const Page = () => {
       years={data}
       labels={labels}
       locale={router.locale || "en"}
-      partialYear={PARTIAL_YEAR}
+      partialYear={partialYear}
       onSelectYear={handleSelectYear}
     />
   )
