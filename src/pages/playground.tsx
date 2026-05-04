@@ -1,5 +1,14 @@
 import { useState } from "react"
 import { Card, Label, Mini, NavBtn, Pill, Stat } from "@/components/atoms"
+import Monthly, {
+  type MonthlyLabels,
+  type MonthlyMode,
+} from "@/components/charts/Monthly"
+import type {
+  MonthlyEvent,
+  MonthlyHover,
+  MonthlyYear,
+} from "@/components/charts/monthly-geometry"
 import Trend, { type TrendChartType } from "@/components/charts/Trend"
 import type { TrendYear } from "@/components/charts/trend-geometry"
 
@@ -48,6 +57,74 @@ const TREND_LABELS = {
   avgLabel: "AVG",
 }
 
+const MONTHLY_SAMPLE: MonthlyYear[] = [
+  {
+    year: 2018,
+    monthly: [
+      57_842, 64_119, 56_996, 50_874, 47_249, 45_523, 47_178, 47_044, 45_890,
+      50_140, 51_344, 53_401,
+    ],
+  },
+  {
+    year: 2019,
+    monthly: [
+      59_173, 51_607, 51_810, 49_419, 49_259, 48_268, 50_511, 47_366, 47_152,
+      52_257, 51_507, 53_676,
+    ],
+  },
+  {
+    year: 2020,
+    monthly: [
+      55_503, 50_192, 65_405, 78_625, 50_899, 47_519, 47_837, 47_995, 47_887,
+      54_403, 64_135, 65_560,
+    ],
+  },
+  {
+    year: 2021,
+    monthly: [
+      66_830, 53_690, 56_274, 56_400, 50_640, 49_054, 50_138, 49_853, 47_708,
+      50_794, 53_220, 55_625,
+    ],
+  },
+]
+
+const MONTHLY_LABELS: MonthlyLabels = {
+  months: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ],
+  monthsLong: [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ],
+  deathsCount: "Deaths",
+}
+
+const MONTHLY_EVENTS: MonthlyEvent[] = [
+  { year: 2020, month: 2, label: "COVID-19" },
+  { year: 2020, month: 10, label: "2nd wave" },
+]
+
 const Playground = () => {
   const [locale, setLocale] = useState<"en" | "fr">("en")
   const [view, setView] = useState<"overview" | "year" | "comparison">(
@@ -55,6 +132,15 @@ const Playground = () => {
   )
   const [chartType, setChartType] = useState<TrendChartType>("area")
   const [hoveredYear, setHoveredYear] = useState<number | null>(null)
+  const [monthlyMode, setMonthlyMode] = useState<MonthlyMode>("single")
+  const [monthlySelected, setMonthlySelected] = useState<number[]>([2018, 2020])
+  const [monthlyHover, setMonthlyHover] = useState<MonthlyHover | null>(null)
+
+  const toggleSelected = (year: number) => {
+    setMonthlySelected((prev) =>
+      prev.includes(year) ? prev.filter((y) => y !== year) : [...prev, year]
+    )
+  }
 
   return (
     <main className="flex flex-col gap-12 p-12">
@@ -148,6 +234,47 @@ const Playground = () => {
             hoveredYear={hoveredYear}
             setHoveredYear={setHoveredYear}
             labels={TREND_LABELS}
+          />
+        </Card>
+      </Section>
+
+      <Section title="MonthlyChart — single / compare">
+        <div className="flex gap-2">
+          <Pill
+            active={monthlyMode === "single"}
+            onClick={() => setMonthlyMode("single")}
+          >
+            single
+          </Pill>
+          <Pill
+            active={monthlyMode === "compare"}
+            onClick={() => setMonthlyMode("compare")}
+          >
+            compare
+          </Pill>
+        </div>
+        {monthlyMode === "compare" && (
+          <div className="flex flex-wrap gap-2">
+            {MONTHLY_SAMPLE.map((y) => (
+              <Pill
+                key={y.year}
+                active={monthlySelected.includes(y.year)}
+                onClick={() => toggleSelected(y.year)}
+              >
+                {y.year}
+              </Pill>
+            ))}
+          </div>
+        )}
+        <Card className="w-full">
+          <Monthly
+            years={MONTHLY_SAMPLE}
+            mode={monthlyMode}
+            selected={monthlySelected}
+            events={MONTHLY_EVENTS}
+            hovered={monthlyHover}
+            setHovered={setMonthlyHover}
+            labels={MONTHLY_LABELS}
           />
         </Card>
       </Section>
