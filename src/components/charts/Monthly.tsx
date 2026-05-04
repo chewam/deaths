@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react"
 
 import {
   MONTHLY_PADDING,
-  MONTHLY_Y_TICKS,
   buildMonthlyGeometry,
   projectMonthlyTickY,
   type MonthlyEvent,
@@ -74,7 +73,7 @@ const Monthly = ({
   }, [])
 
   const { left: padL, top: padT } = MONTHLY_PADDING
-  const { innerW, innerH, maxV, xs, series } = buildMonthlyGeometry(
+  const { innerW, innerH, maxV, xs, yTicks, series } = buildMonthlyGeometry(
     years,
     width,
     height
@@ -118,7 +117,7 @@ const Monthly = ({
         height={height}
         style={{ display: "block", overflow: "visible" }}
       >
-        {MONTHLY_Y_TICKS.map((v) => {
+        {yTicks.map((v) => {
           const y = projectMonthlyTickY(v, maxV, innerH)
           return (
             <g key={v}>

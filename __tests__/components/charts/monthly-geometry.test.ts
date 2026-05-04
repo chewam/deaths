@@ -3,9 +3,10 @@ import { describe, expect, test } from "vitest"
 import {
   MONTHLY_DEFAULT_DOMAIN_MAX,
   MONTHLY_PADDING,
-  MONTHLY_Y_TICKS,
+  MONTHLY_TICK_COUNT,
   buildMonthlyGeometry,
   computeMonthlyDomainMax,
+  computeMonthlyYTicks,
   type MonthlyYear,
 } from "@/components/charts/monthly-geometry"
 
@@ -110,7 +111,31 @@ describe("buildMonthlyGeometry", () => {
     expect(g.xs).toHaveLength(12)
   })
 
-  test("ticks are five evenly-spaced steps from 0 to 80k", () => {
-    expect(MONTHLY_Y_TICKS).toEqual([0, 20_000, 40_000, 60_000, 80_000])
+  test("yTicks span [0, maxV] in evenly-spaced steps and adapt to the domain", () => {
+    const at80k = buildMonthlyGeometry(
+      [{ year: 2018, monthly: Array.from({ length: 12 }, () => 50_000) }],
+      900,
+      420
+    )
+    expect(at80k.yTicks).toEqual([0, 20_000, 40_000, 60_000, 80_000])
+
+    // COVID-style peak: max snaps to 100k, ticks rescale.
+    const atPeak = buildMonthlyGeometry(
+      [{ year: 2020, monthly: [...Array(11).fill(60_000), 95_000] }],
+      900,
+      420
+    )
+    expect(atPeak.yTicks).toEqual([0, 25_000, 50_000, 75_000, 100_000])
+  })
+})
+
+describe("computeMonthlyYTicks", () => {
+  test(`returns ${MONTHLY_TICK_COUNT} evenly-spaced ticks from 0 to maxV inclusive`, () => {
+    expect(computeMonthlyYTicks(80_000)).toEqual([
+      0, 20_000, 40_000, 60_000, 80_000,
+    ])
+    expect(computeMonthlyYTicks(120_000)).toEqual([
+      0, 30_000, 60_000, 90_000, 120_000,
+    ])
   })
 })

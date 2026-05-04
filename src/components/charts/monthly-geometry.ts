@@ -21,8 +21,8 @@ export const MONTHLY_PADDING = {
   bottom: 50,
 } as const
 
-export const MONTHLY_Y_TICKS = [0, 20_000, 40_000, 60_000, 80_000] as const
 export const MONTHLY_DEFAULT_DOMAIN_MAX = 80_000
+export const MONTHLY_TICK_COUNT = 5
 
 const MIN_INNER_WIDTH = 100
 const DOMAIN_STEP = 10_000
@@ -34,6 +34,14 @@ export const computeMonthlyDomainMax = (years: MonthlyYear[]): number => {
   return Math.max(
     MONTHLY_DEFAULT_DOMAIN_MAX,
     Math.ceil(max / DOMAIN_STEP) * DOMAIN_STEP
+  )
+}
+
+export const computeMonthlyYTicks = (maxV: number): number[] => {
+  const intervals = MONTHLY_TICK_COUNT - 1
+  return Array.from(
+    { length: MONTHLY_TICK_COUNT },
+    (_, i) => (maxV * i) / intervals
   )
 }
 
@@ -49,6 +57,7 @@ export type MonthlyGeometry = {
   innerH: number
   maxV: number
   xs: number[]
+  yTicks: number[]
   series: MonthlySeries[]
 }
 
@@ -65,6 +74,7 @@ export const buildMonthlyGeometry = (
   const projectY = (v: number): number => padT + innerH * (1 - v / maxV)
 
   const xs = Array.from({ length: 12 }, (_, m) => padL + (innerW * m) / 11)
+  const yTicks = computeMonthlyYTicks(maxV)
 
   const series: MonthlySeries[] = years.map((y) => {
     const values = y.monthly
@@ -77,7 +87,7 @@ export const buildMonthlyGeometry = (
     return { year: y.year, values, ys, linePath }
   })
 
-  return { innerW, innerH, maxV, xs, series }
+  return { innerW, innerH, maxV, xs, yTicks, series }
 }
 
 export const projectMonthlyTickY = (
