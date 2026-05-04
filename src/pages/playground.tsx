@@ -22,6 +22,8 @@ import OverviewGrid, {
   type OverviewGridLabels,
   type OverviewYear,
 } from "@/components/views/OverviewGrid"
+import Year, { type YearData, type YearLabels } from "@/components/views/Year"
+import type { YearEvent } from "@/data/events"
 
 const Section = ({
   title,
@@ -328,6 +330,127 @@ const OVERVIEW_GRID_LABELS: OverviewGridLabels = {
   partial: "Partial",
 }
 
+const YEAR_SAMPLE: YearData[] = [
+  {
+    year: 2018,
+    rate: 0.91,
+    deaths: 609_648,
+    pop: 66_977_107,
+    monthly: [
+      57_842, 64_119, 56_996, 50_874, 47_249, 45_523, 47_178, 47_044, 45_890,
+      50_140, 51_344, 53_401,
+    ],
+  },
+  {
+    year: 2019,
+    rate: 0.914,
+    deaths: 613_243,
+    pop: 67_063_703,
+    monthly: [
+      59_173, 51_607, 51_810, 49_419, 49_259, 48_268, 50_511, 47_366, 47_152,
+      52_257, 51_507, 53_676,
+    ],
+  },
+  {
+    year: 2020,
+    rate: 0.994,
+    deaths: 668_922,
+    pop: 67_287_241,
+    monthly: [
+      55_503, 50_192, 65_405, 78_625, 50_899, 47_519, 47_837, 47_995, 47_887,
+      54_403, 64_135, 65_560,
+    ],
+  },
+  {
+    year: 2021,
+    rate: 0.978,
+    deaths: 660_168,
+    pop: 67_499_343,
+    monthly: [
+      66_830, 53_690, 56_274, 56_400, 50_640, 49_054, 50_138, 49_853, 47_708,
+      50_794, 53_220, 55_625,
+    ],
+  },
+  {
+    year: 2022,
+    rate: 1.005,
+    deaths: 679_190,
+    pop: 67_580_000,
+    monthly: [
+      66_720, 54_310, 56_020, 53_440, 50_010, 51_230, 56_780, 58_910, 49_450,
+      51_820, 53_870, 56_640,
+    ],
+  },
+]
+
+const YEAR_LABELS: YearLabels = {
+  mortalityRate: "Mortality rate",
+  deathsCount: "Deaths",
+  population: "Population",
+  yearOverYear: "Year-over-year",
+  partial: "PARTIAL",
+  sinceAvg: "since avg",
+  trend: "Trend",
+  trendSubtitle: "Annual rate over the selected window",
+  rateMin: "Rate min",
+  rateMax: "Rate max",
+  avgLabel: "AVG",
+  monthlyDeaths: "Monthly deaths",
+  monthlySubtitle: "Compared to previous years (in grey)",
+  peak: "Peak",
+  months: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ],
+  monthsLong: [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ],
+  notableEvents: "Notable events",
+  yearLabel: "Year",
+}
+
+const YEAR_EVENTS: YearEvent[] = [
+  {
+    year: 2020,
+    month: 4,
+    label: "COVID-19 first wave",
+    desc: "Initial pandemic wave; first lockdown",
+  },
+  {
+    year: 2020,
+    month: 11,
+    label: "COVID-19 second wave",
+    desc: "Autumn 2020 pandemic resurgence",
+  },
+  {
+    year: 2022,
+    month: 7,
+    label: "Summer 2022 heatwaves",
+    desc: "Multiple heatwaves across summer",
+  },
+]
+
 const DISTRIBUTION_LABELS: DistributionLabels = {
   deathsCount: "Deaths",
   mortalityRate: "Mortality rate",
@@ -360,6 +483,7 @@ const Playground = () => {
   const [distributionHover, setDistributionHover] = useState<number | null>(
     null
   )
+  const [yearActive, setYearActive] = useState<number>(2020)
 
   const toggleSelected = (year: number) => {
     setMonthlySelected((prev) =>
@@ -546,6 +670,20 @@ const Playground = () => {
             labels={DISTRIBUTION_LABELS}
           />
         </Card>
+      </Section>
+
+      <Section title="Year view — scrubber + headline + trend + monthly + events">
+        <div className="w-full">
+          <Year
+            years={YEAR_SAMPLE}
+            activeYear={yearActive}
+            onActiveYearChange={setYearActive}
+            events={YEAR_EVENTS}
+            labels={YEAR_LABELS}
+            locale="en"
+            chartType="area"
+          />
+        </div>
       </Section>
     </main>
   )

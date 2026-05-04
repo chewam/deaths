@@ -63,7 +63,10 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
   test("gender filter toggles active state and triggers chart re-render", async ({
     page,
   }) => {
-    await page.goto("/overview")
+    // /overview now renders the SVG Year view; legacy chart.js still backs
+    // /comparison until Lot 5 ports those routes. Verify the filter ↔ chart
+    // contract against the route that still has a canvas.
+    await page.goto("/comparison")
 
     const canvas = page.locator("canvas").first()
     await expect(canvas).toBeVisible()
@@ -90,7 +93,9 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
   })
 
   test("age range slider triggers chart re-render", async ({ page }) => {
-    await page.goto("/overview")
+    // See note above — checked against /comparison until Lot 5 wires global
+    // filters into the SVG Year view.
+    await page.goto("/comparison")
 
     const canvas = page.locator("canvas").first()
     await expect(canvas).toBeVisible()
