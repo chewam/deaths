@@ -27,18 +27,7 @@ export type DistributionProps = {
   formatCompact?: (n: number) => string
 }
 
-const BUCKET_OPACITY_PERCENT = [
-  null,
-  6,
-  12,
-  19,
-  27,
-  35,
-  46,
-  58,
-  75,
-  100,
-] as const
+const BUCKET_OPACITY_PERCENT = [3, 6, 12, 19, 27, 35, 46, 58, 75, 100] as const
 
 const VERTICAL_X_LABEL_THRESHOLD = 18
 const X_LABEL_OFFSET = 20
@@ -48,16 +37,13 @@ const VALUE_LABEL_MIN_RATIO = 0.05
 const VALUE_LABEL_MIN_BAR_WIDTH = 18
 
 const defaultFormatCompact = (n: number): string =>
-  new Intl.NumberFormat("en-US", {
+  new Intl.NumberFormat(undefined, {
     notation: "compact",
     maximumFractionDigits: 1,
   }).format(n)
 
-const fillForBucket = (i: number): string => {
-  const pct = BUCKET_OPACITY_PERCENT[i]
-  if (pct == null) return "var(--color-grid)"
-  return `color-mix(in srgb, var(--color-accent) ${pct}%, transparent)`
-}
+const fillForBucket = (i: number): string =>
+  `color-mix(in srgb, var(--color-accent) ${BUCKET_OPACITY_PERCENT[i] ?? 0}%, transparent)`
 
 const Distribution = ({
   years,
