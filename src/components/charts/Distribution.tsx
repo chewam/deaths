@@ -1,207 +1,324 @@
-import type { ChartDataset, ChartOptions } from "chart.js"
-import type { Context } from "chartjs-plugin-datalabels"
+import { useEffect, useRef, useState } from "react"
 
-import { useIntl } from "react-intl"
-import { Bar } from "react-chartjs-2"
-
-import ChartDataLabels from "chartjs-plugin-datalabels"
-import AnnotationPlugin from "chartjs-plugin-annotation"
 import {
-  Title,
-  BarElement,
-  LineElement,
-  LinearScale,
-  PointElement,
-  CategoryScale,
-  Chart as ChartJS,
-} from "chart.js"
+  DISTRIBUTION_BUCKET_COUNT,
+  DISTRIBUTION_PADDING,
+  applyGenderFilter,
+  buildDistributionGeometry,
+  projectDistributionRateY,
+  projectDistributionValueY,
+  type DistributionGender,
+  type DistributionYear,
+} from "./distribution-geometry"
 
-import useMortality from "@/services/mortality"
-import useTheme from "@/services/use-charts-theme"
-import useRawMortality from "@/services/raw-mortality"
-
-ChartJS.register(
-  Title,
-  BarElement,
-  LineElement,
-  LinearScale,
-  PointElement,
-  CategoryScale,
-  ChartDataLabels,
-  AnnotationPlugin
-)
-
-export const getBarLabelDisplay = ({
-  chart,
-  active,
-  dataIndex,
-  dataset: { data },
-}: Context) => {
-  const { scales } = chart as ChartJS
-  const scale = scales["y"]
-  const { max } = scale
-  const value = ((data || [])[dataIndex] || 0) as number
-
-  return active ? true : value > max * 0.05 ? "auto" : false
+export type DistributionLabels = {
+  deathsCount: string
+  mortalityRate: string
+  ageBuckets: string[]
 }
 
-export const getFormattedLineLabel = (value: number) => `${value.toFixed(2)}%`
+export type DistributionProps = {
+  years: DistributionYear[]
+  gender: DistributionGender
+  hovered: number | null
+  setHovered: (year: number | null) => void
+  labels: DistributionLabels
+  height?: number
+  formatCompact?: (n: number) => string
+}
 
-export const getLineLabelDisplay = ({ active }: Context) =>
-  active ? true : "auto"
+const BUCKET_OPACITY_PERCENT = [
+  null,
+  6,
+  12,
+  19,
+  27,
+  35,
+  46,
+  58,
+  75,
+  100,
+] as const
 
-const Distribution = () => {
-  useRawMortality()
-  const theme = useTheme()
-  const [mortality] = useMortality()
-  const { formatMessage: fm, formatNumber: fn } = useIntl()
-  const { labels, data, ratio, ageGroups } = mortality as Mortality
+const VERTICAL_X_LABEL_THRESHOLD = 18
+const X_LABEL_OFFSET = 20
+const RATE_LABEL_OFFSET = 8
+const RATE_LABEL_EVERY = 2
+const VALUE_LABEL_MIN_RATIO = 0.05
+const VALUE_LABEL_MIN_BAR_WIDTH = 18
 
-  const tr = (str: string) => fm({ id: str })
+const defaultFormatCompact = (n: number): string =>
+  new Intl.NumberFormat("en-US", {
+    notation: "compact",
+    maximumFractionDigits: 1,
+  }).format(n)
 
-  const getAgeGroup = (datasetIndex: number) => {
-    const ageGroup = ageGroups[datasetIndex - 1]
+const fillForBucket = (i: number): string => {
+  const pct = BUCKET_OPACITY_PERCENT[i]
+  if (pct == null) return "var(--color-grid)"
+  return `color-mix(in srgb, var(--color-accent) ${pct}%, transparent)`
+}
 
-    return `${ageGroup}${
-      datasetIndex > 10
-        ? "+"
-        : ` ${tr("to")} ${ageGroup + 9} ${tr("years old")}`
-    }`
-  }
+const Distribution = ({
+  years,
+  gender,
+  hovered,
+  setHovered,
+  labels,
+  height = 460,
+  formatCompact = defaultFormatCompact,
+}: DistributionProps) => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [width, setWidth] = useState(900)
 
-  const getLongFormat = (
-    dataIndex: number,
-    datasetIndex: number,
-    value: number
-  ) => {
-    return `${dataIndex + 2000}
-${tr("Deaths count")}: ${fn(value)}
-${tr("Age group")}: ${getAgeGroup(datasetIndex)}`
-  }
+  useEffect(() => {
+    const node = containerRef.current
+    if (!node) return
+    const ro = new ResizeObserver(([entry]) => {
+      if (entry) setWidth(entry.contentRect.width)
+    })
+    ro.observe(node)
+    return () => ro.disconnect()
+  }, [])
 
-  const getShortFormat = (datasetIndex: number, value: number) => {
-    const ageGroup = ageGroups[datasetIndex - 1]
-    return `${(value / 1000).toFixed()}K\n${ageGroup}-${ageGroup + 10}`
-  }
+  const filtered = applyGenderFilter(years, gender)
+  const {
+    innerW,
+    innerH,
+    barW,
+    xs,
+    yTicksLeft,
+    yTicksRight,
+    series,
+    ratePath,
+    niceMax,
+  } = buildDistributionGeometry(filtered, width, height)
+  const { left: padL, top: padT } = DISTRIBUTION_PADDING
 
-  const getFormattedBarLabel = (
-    value: number,
-    { active, dataIndex, datasetIndex }: Context
-  ) => {
-    if (active) {
-      return getLongFormat(dataIndex, datasetIndex, value)
-    } else if (value > 1000) {
-      return getShortFormat(datasetIndex, value)
-    }
-    return fn(Math.round(value))
-  }
+  const useVerticalXLabels = series.length > VERTICAL_X_LABEL_THRESHOLD
 
-  const bars = data.map((ageGroup, i) => ({
-    yAxisID: "y",
-    data: ageGroup,
-    label: `bar-${i}`,
-    backgroundColor: theme.primary.background,
-    hoverBackgroundColor: theme.primary.hover?.background,
-    borderWidth: { top: 1, right: 0, bottom: 0, left: 0 },
-    datalabels: {
-      borderRadius: 4,
-      display: getBarLabelDisplay,
-      textAlign: "center" as const,
-      formatter: getFormattedBarLabel,
-      borderColor: theme.primary.label?.hover?.border,
-      font: { size: 10, weight: "bold" as const },
-      borderWidth: ({ active }: Context) => (active ? 2 : 0),
-      backgroundColor: ({ active }: Context) =>
-        active
-          ? theme.primary.label?.hover?.background
-          : theme.primary.label?.background,
-      color: ({ active }: Context) =>
-        active ? theme.primary.label?.hover?.text : theme.primary.label?.text,
-    },
-  }))
+  return (
+    <div ref={containerRef} className="relative w-full">
+      <svg
+        width={width}
+        height={height}
+        style={{ display: "block", overflow: "visible" }}
+      >
+        {yTicksLeft.map((v) => {
+          const y = projectDistributionValueY(v, niceMax, innerH)
+          return (
+            <g key={`ytl-${v}`}>
+              <line
+                x1={padL}
+                y1={y}
+                x2={padL + innerW}
+                y2={y}
+                stroke="var(--color-grid)"
+                strokeWidth="1"
+              />
+              <text
+                x={padL - 10}
+                y={y + 3}
+                textAnchor="end"
+                fontSize="10"
+                className="font-mono"
+                fill="var(--color-text-faint)"
+                letterSpacing="0.04em"
+              >
+                {formatCompact(v)}
+              </text>
+            </g>
+          )
+        })}
 
-  const datasets = [
-    {
-      data: ratio,
-      tension: 0.4,
-      yAxisID: "y2",
-      label: "Ratio",
-      borderWidth: 3,
-      pointRadius: 5,
-      type: "line" as const,
-      borderColor: theme.secondary.border,
-      pointBackgroundColor: theme.secondary.border,
-      datalabels: {
-        offset: 3,
-        clamp: true,
-        borderRadius: 4,
-        align: "end" as const,
-        anchor: "end" as const,
-        color: theme.secondary.label?.text,
-        display: getLineLabelDisplay,
-        textAlign: "center" as const,
-        formatter: getFormattedLineLabel,
-        font: { weight: "bold" as const },
-        backgroundColor: theme.secondary.label?.background,
-        padding: { top: 4, right: 5, bottom: 4, left: 5 },
-      },
-    },
-    ...bars,
-  ] as ChartDataset<"bar">[]
+        {yTicksRight.map((v) => (
+          <text
+            key={`ytr-${v}`}
+            x={padL + innerW + 10}
+            y={projectDistributionRateY(v, innerH) + 3}
+            fontSize="10"
+            className="font-mono"
+            fill="var(--color-text-faint)"
+            letterSpacing="0.04em"
+          >
+            {v.toFixed(2)}%
+          </text>
+        ))}
 
-  const options = {
-    maintainAspectRatio: false,
-    animation: { duration: 0 },
-    interaction: { mode: "nearest" as const },
-    plugins: {
-      legend: { display: false },
-      tooltip: { enabled: false },
-    },
-    scales: {
-      x: {
-        type: "category" as const,
-        stacked: true,
-        grid: {
-          display: false,
-          drawBorder: false,
-        },
-        ticks: {
-          color: theme.scale.text,
-        },
-      },
-      y: {
-        stacked: true,
-        type: "linear" as const,
-        ticks: {
-          padding: 10,
-          color: theme.scale.text,
-        },
-        grid: {
-          lineWidth: 1,
-          drawTicks: false,
-          drawBorder: false,
-          borderDash: [3, 3],
-          color: theme.scale.border,
-        },
-      },
-      y2: {
-        type: "linear" as const,
-        position: "right" as const,
-        ticks: {
-          padding: 10,
-          stepSize: 0.1,
-          color: theme.scale.text,
-          callback: getFormattedLineLabel,
-        },
-        grid: {
-          display: false,
-          drawBorder: false,
-        },
-      },
-    },
-  } as ChartOptions<"bar">
+        {series.map((s, i) => {
+          const dimmed = hovered != null && hovered !== s.year
+          return (
+            <g
+              key={`g-${s.year}`}
+              data-year={s.year}
+              onMouseEnter={() => setHovered(s.year)}
+              onMouseLeave={() => setHovered(null)}
+              style={{ cursor: "pointer" }}
+            >
+              <rect
+                x={xs[i]}
+                y={padT}
+                width={barW}
+                height={innerH}
+                fill="transparent"
+                pointerEvents="all"
+              />
+              {s.bars.map((b) => {
+                const bh = Math.max(0, b.yBot - b.yTop)
+                const isLarge = b.value > niceMax * VALUE_LABEL_MIN_RATIO
+                const showLabel =
+                  isLarge && barW > VALUE_LABEL_MIN_BAR_WIDTH && bh > 10
+                return (
+                  <g key={`b-${s.year}-${b.bucketIndex}`}>
+                    <rect
+                      x={xs[i]}
+                      y={b.yTop}
+                      width={barW}
+                      height={bh}
+                      fill={fillForBucket(b.bucketIndex)}
+                      stroke="var(--color-surface)"
+                      strokeWidth="0.5"
+                      opacity={dimmed ? 0.4 : 1}
+                    />
+                    {showLabel && (
+                      <text
+                        x={xs[i]! + barW / 2}
+                        y={(b.yTop + b.yBot) / 2 + 3}
+                        textAnchor="middle"
+                        fontSize="8.5"
+                        className="font-mono"
+                        fill={
+                          b.bucketIndex >= 7
+                            ? "var(--color-surface)"
+                            : "var(--color-text-dim)"
+                        }
+                        style={{ pointerEvents: "none" }}
+                      >
+                        {formatCompact(b.value)}
+                      </text>
+                    )}
+                  </g>
+                )
+              })}
+            </g>
+          )
+        })}
 
-  return <Bar data={{ labels, datasets }} options={options} />
+        {series.length > 1 && (
+          <path
+            d={ratePath}
+            fill="none"
+            stroke="var(--color-danger)"
+            strokeWidth="2"
+            strokeLinejoin="round"
+          />
+        )}
+
+        {series.map((s, i) => {
+          const showLabel = i % RATE_LABEL_EVERY === 0 || hovered === s.year
+          return (
+            <g key={`r-${s.year}`} style={{ pointerEvents: "none" }}>
+              <circle
+                cx={s.centerX}
+                cy={s.rateY}
+                r="3"
+                fill="var(--color-surface)"
+                stroke="var(--color-danger)"
+                strokeWidth="1.5"
+              />
+              {showLabel && (
+                <text
+                  x={s.centerX}
+                  y={s.rateY - RATE_LABEL_OFFSET}
+                  textAnchor="middle"
+                  fontSize="9"
+                  className="font-mono"
+                  fill="var(--color-danger)"
+                  fontWeight="600"
+                >
+                  {s.rate.toFixed(2)}%
+                </text>
+              )}
+            </g>
+          )
+        })}
+
+        {series.map((s) => (
+          <text
+            key={`x-${s.year}`}
+            x={s.centerX}
+            y={padT + innerH + X_LABEL_OFFSET}
+            textAnchor="middle"
+            fontSize="10"
+            className="font-mono"
+            fill="var(--color-text-dim)"
+            letterSpacing="0.04em"
+            style={
+              useVerticalXLabels
+                ? { writingMode: "vertical-rl", textOrientation: "mixed" }
+                : undefined
+            }
+          >
+            {s.year}
+          </text>
+        ))}
+
+        <text
+          x={padL - 44}
+          y={padT - 6}
+          fontSize="9.5"
+          className="font-mono uppercase"
+          fill="var(--color-text-faint)"
+          letterSpacing="0.08em"
+        >
+          {labels.deathsCount}
+        </text>
+        <text
+          x={padL + innerW + 34}
+          y={padT - 6}
+          fontSize="9.5"
+          className="font-mono uppercase"
+          fill="var(--color-danger)"
+          letterSpacing="0.08em"
+        >
+          {labels.mortalityRate}
+        </text>
+      </svg>
+
+      <div
+        className="font-mono text-text-dim flex flex-wrap"
+        style={{
+          gap: 14,
+          marginTop: 8,
+          paddingLeft: padL,
+          fontSize: 10,
+          letterSpacing: "0.04em",
+        }}
+      >
+        {Array.from({ length: DISTRIBUTION_BUCKET_COUNT }, (_, i) => (
+          <div
+            key={`legend-${i}`}
+            style={{ display: "flex", alignItems: "center", gap: 5 }}
+          >
+            <div
+              style={{
+                width: 10,
+                height: 10,
+                background: fillForBucket(i),
+                border: "1px solid var(--color-border)",
+              }}
+            />
+            <span>{labels.ageBuckets[i] ?? ""}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
 }
 
 export default Distribution
+
+export type {
+  DistributionGender,
+  DistributionYear,
+} from "./distribution-geometry"

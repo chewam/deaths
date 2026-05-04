@@ -1,4 +1,4 @@
-import DistributionChart from "@/components/charts/Distribution"
+import DistributionChart from "@/components/charts/DistributionLegacy"
 
 const Distribution = () => {
   return (

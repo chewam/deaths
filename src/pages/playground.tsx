@@ -1,5 +1,12 @@
 import { useState } from "react"
 import { Card, Label, Mini, NavBtn, Pill, Stat } from "@/components/atoms"
+import Distribution, {
+  type DistributionLabels,
+} from "@/components/charts/Distribution"
+import type {
+  DistributionGender,
+  DistributionYear,
+} from "@/components/charts/distribution-geometry"
 import Monthly, {
   type MonthlyLabels,
   type MonthlyMode,
@@ -125,6 +132,76 @@ const MONTHLY_EVENTS: MonthlyEvent[] = [
   { year: 2020, month: 10, label: "2nd wave" },
 ]
 
+const DISTRIBUTION_SAMPLE: DistributionYear[] = [
+  {
+    year: 2017,
+    buckets: [
+      1_990, 1_240, 2_810, 5_090, 11_830, 31_230, 70_220, 156_340, 218_650,
+      106_874,
+    ],
+    rate: 0.91,
+    m: 290_840,
+    f: 315_434,
+  },
+  {
+    year: 2018,
+    buckets: [
+      1_950, 1_220, 2_780, 5_010, 11_690, 30_910, 69_540, 154_830, 217_220,
+      114_498,
+    ],
+    rate: 0.91,
+    m: 292_410,
+    f: 317_238,
+  },
+  {
+    year: 2019,
+    buckets: [
+      1_900, 1_180, 2_700, 4_870, 11_350, 30_010, 67_410, 150_300, 215_430,
+      128_093,
+    ],
+    rate: 0.91,
+    m: 294_010,
+    f: 319_233,
+  },
+  {
+    year: 2020,
+    buckets: [
+      2_010, 1_310, 2_960, 5_310, 12_360, 32_650, 73_130, 162_990, 232_870,
+      143_332,
+    ],
+    rate: 0.99,
+    m: 322_510,
+    f: 346_412,
+  },
+  {
+    year: 2021,
+    buckets: [
+      1_980, 1_290, 2_910, 5_220, 12_140, 32_080, 71_890, 160_220, 229_530,
+      142_908,
+    ],
+    rate: 0.97,
+    m: 318_420,
+    f: 341_748,
+  },
+]
+
+const DISTRIBUTION_LABELS: DistributionLabels = {
+  deathsCount: "Deaths",
+  mortalityRate: "Mortality rate",
+  ageBuckets: [
+    "0-9",
+    "10-19",
+    "20-29",
+    "30-39",
+    "40-49",
+    "50-59",
+    "60-69",
+    "70-79",
+    "80-89",
+    "90+",
+  ],
+}
+
 const Playground = () => {
   const [locale, setLocale] = useState<"en" | "fr">("en")
   const [view, setView] = useState<"overview" | "year" | "comparison">(
@@ -135,6 +212,11 @@ const Playground = () => {
   const [monthlyMode, setMonthlyMode] = useState<MonthlyMode>("single")
   const [monthlySelected, setMonthlySelected] = useState<number[]>([2018, 2020])
   const [monthlyHover, setMonthlyHover] = useState<MonthlyHover | null>(null)
+  const [distributionGender, setDistributionGender] =
+    useState<DistributionGender>("all")
+  const [distributionHover, setDistributionHover] = useState<number | null>(
+    null
+  )
 
   const toggleSelected = (year: number) => {
     setMonthlySelected((prev) =>
@@ -275,6 +357,38 @@ const Playground = () => {
             hovered={monthlyHover}
             setHovered={setMonthlyHover}
             labels={MONTHLY_LABELS}
+          />
+        </Card>
+      </Section>
+
+      <Section title="DistributionChart — gender filter + hover">
+        <div className="flex gap-2">
+          <Pill
+            active={distributionGender === "all"}
+            onClick={() => setDistributionGender("all")}
+          >
+            all
+          </Pill>
+          <Pill
+            active={distributionGender === "m"}
+            onClick={() => setDistributionGender("m")}
+          >
+            male
+          </Pill>
+          <Pill
+            active={distributionGender === "f"}
+            onClick={() => setDistributionGender("f")}
+          >
+            female
+          </Pill>
+        </div>
+        <Card className="w-full">
+          <Distribution
+            years={DISTRIBUTION_SAMPLE}
+            gender={distributionGender}
+            hovered={distributionHover}
+            setHovered={setDistributionHover}
+            labels={DISTRIBUTION_LABELS}
           />
         </Card>
       </Section>
