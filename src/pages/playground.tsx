@@ -309,7 +309,7 @@ const Playground = () => {
             area
           </Pill>
         </div>
-        <Card className="w-full">
+        <Card className="w-full" data-testid="chart-trend">
           <Trend
             years={TREND_SAMPLE}
             chartType={chartType}
@@ -348,7 +348,7 @@ const Playground = () => {
             ))}
           </div>
         )}
-        <Card className="w-full">
+        <Card className="w-full" data-testid="chart-monthly">
           <Monthly
             years={MONTHLY_SAMPLE}
             mode={monthlyMode}
@@ -382,7 +382,7 @@ const Playground = () => {
             female
           </Pill>
         </div>
-        <Card className="w-full">
+        <Card className="w-full" data-testid="chart-distribution">
           <Distribution
             years={DISTRIBUTION_SAMPLE}
             gender={distributionGender}
