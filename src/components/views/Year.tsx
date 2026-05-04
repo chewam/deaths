@@ -160,7 +160,7 @@ const Year = ({
   const peakMonthIdx = active ? active.monthly.indexOf(peakValue) : 0
   const peakLabel = `${fmtNumber(peakValue, locale)} · ${labels.monthsLong[peakMonthIdx] ?? ""}`
 
-  const sinceAvgSign = vsAvgDelta >= 0 ? "+" : ""
+  const yoySign = yoyDelta >= 0 ? "+" : ""
 
   const yearStart = sorted[0]?.year ?? activeYear
   const yearEnd = sorted[sorted.length - 1]?.year ?? activeYear
@@ -172,7 +172,6 @@ const Year = ({
       data-testid="view-year"
       style={{ display: "flex", flexDirection: "column", gap: sectionGap }}
     >
-      {/* SCRUBBER */}
       <Card
         data-testid="year-scrubber"
         data-partial={isPartial ? "true" : undefined}
@@ -217,7 +216,6 @@ const Year = ({
         </div>
       </Card>
 
-      {/* HEADLINE STRIP */}
       <div
         data-testid="year-headline"
         style={{
@@ -251,12 +249,11 @@ const Year = ({
         />
         <Stat
           label={labels.yearOverYear}
-          value={`${sinceAvgSign}${yoyDelta.toFixed(2)}%`}
+          value={`${yoySign}${yoyDelta.toFixed(2)}%`}
           colorize={yoyDelta}
         />
       </div>
 
-      {/* TREND */}
       <Card data-testid="year-trend">
         <div
           style={{
@@ -299,7 +296,6 @@ const Year = ({
         />
       </Card>
 
-      {/* MONTHLY */}
       <Card data-testid="year-monthly">
         <div
           style={{
@@ -339,7 +335,6 @@ const Year = ({
         />
       </Card>
 
-      {/* NOTABLE EVENTS */}
       {yearEvents.length > 0 && (
         <Card data-testid="year-events">
           <Label>
