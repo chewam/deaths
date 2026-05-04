@@ -14,6 +14,7 @@
   --color-grid: #F1EFEE;
   --color-danger: #DC2626;
   --color-warn: #D97706;
+  --color-success: #16A34A;
   --color-mute: #78716C;
 
   --font-display: var(--font-inter-tight), var(--font-inter), -apple-system, sans-serif;

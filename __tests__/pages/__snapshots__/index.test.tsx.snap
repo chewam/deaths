@@ -3,1952 +3,3822 @@
 exports[`Page snapshot: index 1`] = `
 <DocumentFragment>
   <div
-    class="dashboard"
+    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1px; background: var(--color-border); border: 1px solid var(--color-border);"
   >
-    <div
-      class="tile"
+    <button
+      data-year="2026"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2026
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2026
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            class="font-mono text-text-faint uppercase"
+            data-partial="true"
+            style="font-size: 9px; letter-spacing: 0.08em; margin-top: 2px;"
+          >
+            Partiel
+          </div>
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                —
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            NaN%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            NaN
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2025"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2025
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2025
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            NaN%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            NaN
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2024"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2024
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2024
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                68 373 433
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            68 373 433
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2023"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2023
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2023
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                68 042 591
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            68 042 591
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2022"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2022
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2022
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                67 813 396
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            67 813 396
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2021"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2021
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2021
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                67 063 703
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            67 063 703
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2020"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2020
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2020
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                67 063 703
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            67 063 703
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2019"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2019
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2019
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                66 977 703
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            66 977 703
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2018"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2018
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2018
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                66 883 761
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            66 883 761
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2017"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2017
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2017
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                66 774 482
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            66 774 482
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2016"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2016
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2016
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                66 602 645
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            66 602 645
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2015"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2015
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2015
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                66 422 469
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            66 422 469
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2014"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2014
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2014
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                66 130 873
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            66 130 873
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2013"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2013
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2013
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                65 564 756
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            65 564 756
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2012"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2012
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2012
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                65 241 241
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            65 241 241
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2011"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2011
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2011
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                64 933 400
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            64 933 400
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2010"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2010
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2010
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                64 612 939
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            64 612 939
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2009"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2009
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2009
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                64 304 500
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            64 304 500
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2008"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2008
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2008
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                63 961 859
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            63 961 859
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2007"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2007
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2007
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                63 600 690
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            63 600 690
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2006"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2006
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2006
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                63 186 117
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            63 186 117
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2005"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2005
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2005
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                62 730 537
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            62 730 537
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2004"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2004
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2004
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                62 251 062
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            62 251 062
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2003"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2003
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2003
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                61 824 030
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            61 824 030
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2002"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2002
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2002
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                61 385 070
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            61 385 070
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2001"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2001
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2001
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                60 941 410
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            60 941 410
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
-    <div
-      class="tile"
+    </button>
+    <button
+      data-year="2000"
+      style="all: unset; cursor: pointer; background: var(--color-surface); padding: 22px; min-height: 220px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms; position: relative;"
+      type="button"
     >
       <div
-        class="left"
+        style="display: flex; justify-content: space-between; align-items: stretch; gap: 14px; flex: 1 1 0%;"
       >
         <div
-          class="year-trend"
+          style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column;"
         >
           <div
-            class="year"
+            style="display: flex; align-items: center; gap: 10px;"
           >
-            2000
+            <div
+              class="tracking-display text-text font-mono"
+              style="font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums;"
+            >
+              2000
+            </div>
           </div>
-          <i
-            class="ri-arrow-right-up-line"
-            title="mortality raise"
-          />
+          <div
+            style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
+          >
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 17px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums;"
+              >
+                0.000%
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Taux de mortalité
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text"
+                style="font-size: 13px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                0
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Nombre de décès
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-mono text-text-dim"
+                style="font-size: 11px; line-height: 1.2; font-variant-numeric: tabular-nums;"
+              >
+                60 508 150
+              </div>
+              <div
+                class="font-mono text-text-faint uppercase"
+                style="font-size: 10px; letter-spacing: 0.1em;"
+              >
+                Population totale
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          class="stat"
+          style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"
         >
-          <div
-            class="value below"
+          <svg
+            height="150"
+            style="flex-shrink: 0;"
+            width="150"
           >
-            0%
-          </div>
-          <div
-            class="label"
-          >
-            Taux de mortalité
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            0
-          </div>
-          <div
-            class="label"
-          >
-            Nombre de décès
-          </div>
-        </div>
-        <div
-          class="stat"
-        >
-          <div
-            class="value"
-          >
-            60 508 150
-          </div>
-          <div
-            class="label"
-          >
-            Population totale
-          </div>
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="0"
+              fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="1"
+              fill="color-mix(in srgb, var(--color-accent) 10%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="2"
+              fill="color-mix(in srgb, var(--color-accent) 15%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="3"
+              fill="color-mix(in srgb, var(--color-accent) 20%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="4"
+              fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="5"
+              fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="6"
+              fill="color-mix(in srgb, var(--color-accent) 45%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="7"
+              fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="8"
+              fill="color-mix(in srgb, var(--color-accent) 74%, transparent)"
+            />
+            <path
+              d="M 75 4 A 71 71 0 0 1 75 4 L 75 35.949999999999996 A 39.050000000000004 39.050000000000004 0 0 0 75 35.949999999999996 Z"
+              data-bucket="9"
+              fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+            />
+            <text
+              class="font-mono"
+              fill="var(--color-text)"
+              font-size="10"
+              letter-spacing="0.02em"
+              text-anchor="middle"
+              x="75"
+              y="21.974999999999994"
+            >
+              0-9
+            </text>
+          </svg>
         </div>
       </div>
-      <div
-        class="right"
-      >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
-      </div>
-    </div>
+    </button>
   </div>
 </DocumentFragment>
 `;
