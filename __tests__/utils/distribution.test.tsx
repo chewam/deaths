@@ -3,7 +3,7 @@ import {
   getLineLabelDisplay,
   getBarLabelDisplay,
   getFormattedLineLabel,
-} from "../../src/components/charts/Distribution"
+} from "../../src/components/charts/DistributionLegacy"
 
 describe("Test getBarLabelDisplay()", () => {
   const data = [
