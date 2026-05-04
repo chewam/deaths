@@ -18,6 +18,10 @@ import type {
 } from "@/components/charts/monthly-geometry"
 import Trend, { type TrendChartType } from "@/components/charts/Trend"
 import type { TrendYear } from "@/components/charts/trend-geometry"
+import OverviewGrid, {
+  type OverviewGridLabels,
+  type OverviewYear,
+} from "@/components/views/OverviewGrid"
 
 const Section = ({
   title,
@@ -184,6 +188,145 @@ const DISTRIBUTION_SAMPLE: DistributionYear[] = [
     f: 341_748,
   },
 ]
+
+const OVERVIEW_GRID_SAMPLE: OverviewYear[] = [
+  {
+    year: 2014,
+    rate: 0.844,
+    deaths: 559_293,
+    pop: 66_311_000,
+    buckets: [
+      1_770, 1_080, 2_530, 4_530, 10_580, 27_950, 62_770, 139_990, 200_710,
+      107_383,
+    ],
+  },
+  {
+    year: 2015,
+    rate: 0.892,
+    deaths: 593_680,
+    pop: 66_548_272,
+    buckets: [
+      1_870, 1_140, 2_680, 4_790, 11_180, 29_550, 66_360, 148_010, 212_240,
+      115_860,
+    ],
+  },
+  {
+    year: 2016,
+    rate: 0.89,
+    deaths: 593_865,
+    pop: 66_724_103,
+    buckets: [
+      1_860, 1_140, 2_670, 4_780, 11_150, 29_460, 66_160, 147_550, 211_590,
+      117_505,
+    ],
+  },
+  {
+    year: 2017,
+    rate: 0.907,
+    deaths: 606_274,
+    pop: 66_864_408,
+    buckets: [
+      1_900, 1_160, 2_720, 4_890, 11_410, 30_120, 67_650, 150_860, 216_330,
+      119_234,
+    ],
+  },
+  {
+    year: 2018,
+    rate: 0.91,
+    deaths: 609_648,
+    pop: 66_977_107,
+    buckets: [
+      1_910, 1_170, 2_740, 4_910, 11_460, 30_270, 68_000, 151_570, 217_360,
+      120_258,
+    ],
+  },
+  {
+    year: 2019,
+    rate: 0.914,
+    deaths: 613_243,
+    pop: 67_063_703,
+    buckets: [
+      1_900, 1_180, 2_700, 4_870, 11_350, 30_010, 67_410, 150_300, 215_430,
+      128_093,
+    ],
+  },
+  {
+    year: 2020,
+    rate: 0.994,
+    deaths: 668_922,
+    pop: 67_287_241,
+    buckets: [
+      2_010, 1_310, 2_960, 5_310, 12_360, 32_650, 73_130, 162_990, 232_870,
+      143_332,
+    ],
+  },
+  {
+    year: 2021,
+    rate: 0.978,
+    deaths: 660_168,
+    pop: 67_499_343,
+    buckets: [
+      1_980, 1_290, 2_910, 5_220, 12_140, 32_080, 71_890, 160_220, 229_530,
+      142_908,
+    ],
+  },
+  {
+    year: 2022,
+    rate: 1.005,
+    deaths: 679_190,
+    pop: 67_580_000,
+    buckets: [
+      2_040, 1_330, 3_000, 5_390, 12_540, 33_120, 74_220, 165_350, 236_470,
+      145_730,
+    ],
+  },
+  {
+    year: 2023,
+    rate: 0.943,
+    deaths: 637_500,
+    pop: 67_600_000,
+    buckets: [
+      1_910, 1_240, 2_810, 5_050, 11_770, 31_080, 69_660, 155_180, 221_910,
+      136_890,
+    ],
+  },
+  {
+    year: 2024,
+    rate: 0.948,
+    deaths: 641_200,
+    pop: 67_650_000,
+    buckets: [
+      1_920, 1_250, 2_820, 5_070, 11_830, 31_220, 69_980, 155_900, 222_940,
+      138_270,
+    ],
+  },
+  {
+    year: 2025,
+    rate: 0.926,
+    deaths: 626_300,
+    pop: 67_650_000,
+    buckets: [
+      1_870, 1_220, 2_750, 4_950, 11_550, 30_500, 68_350, 152_250, 217_730,
+      135_135,
+    ],
+  },
+  {
+    year: 2026,
+    rate: 0.231,
+    deaths: 156_400,
+    pop: 67_700_000,
+    buckets: [
+      470, 300, 690, 1_240, 2_890, 7_620, 17_080, 38_050, 54_440, 33_620,
+    ],
+  },
+]
+
+const OVERVIEW_GRID_LABELS: OverviewGridLabels = {
+  mortalityRate: "Mortality rate",
+  deathsCount: "Deaths",
+  population: "Population",
+  partial: "Partial",
+}
 
 const DISTRIBUTION_LABELS: DistributionLabels = {
   deathsCount: "Deaths",
@@ -357,6 +500,18 @@ const Playground = () => {
             hovered={monthlyHover}
             setHovered={setMonthlyHover}
             labels={MONTHLY_LABELS}
+          />
+        </Card>
+      </Section>
+
+      <Section title="OverviewGrid — year cards with mini-donuts">
+        <Card className="w-full" data-testid="view-overview-grid">
+          <OverviewGrid
+            years={OVERVIEW_GRID_SAMPLE}
+            labels={OVERVIEW_GRID_LABELS}
+            locale="en"
+            partialYear={2026}
+            onSelectYear={() => {}}
           />
         </Card>
       </Section>
