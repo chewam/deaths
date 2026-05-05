@@ -23,16 +23,20 @@ Object.defineProperty(window, "matchMedia", {
   })),
 })
 
-test("Page snapshot: comparison", () => {
-  vi.mock("next/router", () => ({
-    useRouter() {
-      return {
-        locale: "fr",
-        defaultLocale: "fr",
-      }
-    },
-  }))
+vi.mock("next/router", () => ({
+  useRouter() {
+    return {
+      locale: "fr",
+      defaultLocale: "fr",
+      isReady: true,
+      pathname: "/comparison",
+      query: {},
+      replace: vi.fn(),
+    }
+  },
+}))
 
+test("Page snapshot: comparison", () => {
   const { asFragment } = render(
     <IntlProvider locale="fr" messages={messages}>
       <Page />
