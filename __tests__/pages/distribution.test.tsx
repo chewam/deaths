@@ -15,24 +15,51 @@ Object.defineProperty(window, "matchMedia", {
     matches: false,
     media: query,
     onchange: null,
-    addListener: vi.fn(), // Deprecated
-    removeListener: vi.fn(), // Deprecated
+    addListener: vi.fn(),
+    removeListener: vi.fn(),
     addEventListener: vi.fn(),
     removeEventListener: vi.fn(),
     dispatchEvent: vi.fn(),
   })),
 })
 
-test("Page snapshot: distribution", () => {
-  vi.mock("next/router", () => ({
-    useRouter() {
-      return {
-        locale: "fr",
-        defaultLocale: "fr",
-      }
-    },
-  }))
+vi.mock("next/router", () => ({
+  useRouter() {
+    return {
+      locale: "fr",
+      defaultLocale: "fr",
+    }
+  },
+}))
 
+const labels = ["2020", "2021", "2022"]
+const ageGroupStub = (base: number) =>
+  Array.from({ length: labels.length }, (_, i) => base + i * 100)
+
+vi.mock("@/services/raw-mortality", () => ({
+  default: () => [
+    {
+      labels,
+      ageGroups: Array.from({ length: 10 }, (_, i) =>
+        ageGroupStub(1_000 * (i + 1))
+      ),
+      male: {
+        ageGroups: Array.from({ length: 10 }, (_, i) =>
+          ageGroupStub(500 * (i + 1))
+        ),
+        global: [],
+      },
+      female: {
+        ageGroups: Array.from({ length: 10 }, (_, i) =>
+          ageGroupStub(500 * (i + 1))
+        ),
+        global: [],
+      },
+    },
+  ],
+}))
+
+test("Page snapshot: distribution", () => {
   const { asFragment } = render(
     <IntlProvider locale="fr" messages={messages}>
       <Page />

@@ -22,6 +22,9 @@ import Comparison, {
   type ComparisonLabels,
   type ComparisonYearData,
 } from "@/components/views/Comparison"
+import DistributionView, {
+  type DistributionViewLabels,
+} from "@/components/views/Distribution"
 import OverviewGrid, {
   type OverviewGridLabels,
   type OverviewYear,
@@ -477,6 +480,12 @@ const DISTRIBUTION_LABELS: DistributionLabels = {
   ],
 }
 
+const DISTRIBUTION_VIEW_LABELS: DistributionViewLabels = {
+  deathsByAge: "Deaths by age",
+  subtitle: "Deaths by age group with overall mortality rate",
+  ...DISTRIBUTION_LABELS,
+}
+
 const Playground = () => {
   const [locale, setLocale] = useState<"en" | "fr">("en")
   const [view, setView] = useState<"overview" | "year" | "comparison">(
@@ -716,6 +725,19 @@ const Playground = () => {
                 deathsCount: "Deaths",
               } as ComparisonLabels
             }
+            locale="en"
+          />
+        </div>
+      </Section>
+
+      <Section title="Distribution view — single card with chart">
+        <div className="w-full">
+          <DistributionView
+            years={DISTRIBUTION_SAMPLE}
+            gender={distributionGender}
+            hovered={distributionHover}
+            setHovered={setDistributionHover}
+            labels={DISTRIBUTION_VIEW_LABELS}
             locale="en"
           />
         </div>
