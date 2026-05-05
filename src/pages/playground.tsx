@@ -18,6 +18,10 @@ import type {
 } from "@/components/charts/monthly-geometry"
 import Trend, { type TrendChartType } from "@/components/charts/Trend"
 import type { TrendYear } from "@/components/charts/trend-geometry"
+import Comparison, {
+  type ComparisonLabels,
+  type ComparisonYearData,
+} from "@/components/views/Comparison"
 import OverviewGrid, {
   type OverviewGridLabels,
   type OverviewYear,
@@ -451,6 +455,11 @@ const YEAR_EVENTS: YearEvent[] = [
   },
 ]
 
+const COMPARISON_SAMPLE: ComparisonYearData[] = YEAR_SAMPLE.map((y) => ({
+  year: y.year,
+  monthly: y.monthly,
+}))
+
 const DISTRIBUTION_LABELS: DistributionLabels = {
   deathsCount: "Deaths",
   mortalityRate: "Mortality rate",
@@ -484,6 +493,9 @@ const Playground = () => {
     null
   )
   const [yearActive, setYearActive] = useState<number>(2020)
+  const [comparisonSelected, setComparisonSelected] = useState<number[]>([
+    2018, 2020, 2022,
+  ])
 
   const toggleSelected = (year: number) => {
     setMonthlySelected((prev) =>
@@ -682,6 +694,29 @@ const Playground = () => {
             labels={YEAR_LABELS}
             locale="en"
             chartType="area"
+          />
+        </div>
+      </Section>
+
+      <Section title="Comparison view — multi-year monthly compare + picker">
+        <div className="w-full">
+          <Comparison
+            years={COMPARISON_SAMPLE}
+            selected={comparisonSelected}
+            onSelectedChange={setComparisonSelected}
+            events={MONTHLY_EVENTS}
+            labels={
+              {
+                monthlyDeaths: "Monthly deaths",
+                comparison: "Comparison",
+                selectYears: "Select years",
+                selectedSubtitle: `${comparisonSelected.length} year(s) selected · max 7`,
+                months: MONTHLY_LABELS.months,
+                monthsLong: MONTHLY_LABELS.monthsLong,
+                deathsCount: "Deaths",
+              } as ComparisonLabels
+            }
+            locale="en"
           />
         </div>
       </Section>

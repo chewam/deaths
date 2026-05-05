@@ -44,6 +44,8 @@
   "Monthly subtitle": "Compared to previous years (in grey)",
   "Peak": "Peak",
   "Notable events": "Notable events",
+  "Select years": "Select years",
+  "comparison.selectedSubtitle": "{n} year(s) selected · max {max}",
   "event.heatwave-2003.label": "Heatwave / Canicule",
   "event.heatwave-2003.desc": "Heatwave killed an estimated 15,000+ people in France",
   "event.flu-2015.label": "Severe flu season",

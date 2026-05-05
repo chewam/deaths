@@ -44,6 +44,8 @@
   "Monthly subtitle": "Comparé aux années précédentes (en gris)",
   "Peak": "Pic",
   "Notable events": "Évènements notables",
+  "Select years": "Sélectionner les années",
+  "comparison.selectedSubtitle": "{n} année(s) sélectionnée(s) · max. {max}",
   "event.heatwave-2003.label": "Canicule",
   "event.heatwave-2003.desc": "Canicule, ~15 000 morts supplémentaires",
   "event.flu-2015.label": "Grippe sévère",
