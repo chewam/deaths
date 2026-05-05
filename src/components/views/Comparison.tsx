@@ -5,7 +5,6 @@ import Monthly, { type MonthlyLabels } from "@/components/charts/Monthly"
 import type {
   MonthlyEvent,
   MonthlyHover,
-  MonthlyYear,
 } from "@/components/charts/monthly-geometry"
 
 export type ComparisonYearData = {
@@ -58,11 +57,6 @@ const Comparison = ({
     [years]
   )
 
-  const monthlyYears: MonthlyYear[] = useMemo(
-    () => sorted.map((y) => ({ year: y.year, monthly: y.monthly })),
-    [sorted]
-  )
-
   const [monthlyHover, setMonthlyHover] = useState<MonthlyHover | null>(null)
 
   const toggleYear = (year: number) => {
@@ -109,7 +103,7 @@ const Comparison = ({
           </div>
         </div>
         <Monthly
-          years={monthlyYears}
+          years={sorted}
           mode="compare"
           selected={selected}
           events={events}

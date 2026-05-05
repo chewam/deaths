@@ -74,7 +74,9 @@ const Page = () => {
     [fullYears]
   )
 
-  const [selected, setSelected] = useState<number[]>([])
+  // null = not yet initialized from URL/defaults (initial render before
+  // router.isReady). Empty array = user-emptied selection, still rendered.
+  const [selected, setSelected] = useState<number[] | null>(null)
 
   useEffect(() => {
     if (!router.isReady) return
@@ -83,10 +85,14 @@ const Page = () => {
       setSelected(fromQuery.slice(0, MAX_SELECTED))
       return
     }
+    if (selected !== null) return
     const next = defaultSelectedKey
       ? defaultSelectedKey.split(",").map(Number)
       : []
-    if (next.length > 0) setSelected(next)
+    setSelected(next)
+    // selected is intentionally omitted: we only auto-fill the default once,
+    // when no URL param drives the selection.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.isReady, router.query.years, defaultSelectedKey])
 
   const handleSelectedChange = (next: number[]) => {
@@ -100,6 +106,8 @@ const Page = () => {
       { shallow: true }
     )
   }
+
+  if (!data.length || !deaths || selected === null) return null
 
   const labels: ComparisonLabels = {
     monthlyDeaths: intl.formatMessage({ id: "Monthly deaths" }),
@@ -121,8 +129,6 @@ const Page = () => {
     month: e.month,
     label: intl.formatMessage({ id: e.labelKey }),
   }))
-
-  if (!data.length || !deaths || selected.length === 0) return null
 
   return (
     <div className="container mx-auto px-6">
