@@ -6,237 +6,1036 @@ exports[`Page snapshot: comparison 1`] = `
     class="container mx-auto px-6"
   >
     <div
-      class="comparison"
+      data-testid="view-comparison"
+      style="display: flex; flex-direction: column; gap: 28px;"
     >
       <div
-        class="chart"
+        class="bg-surface border border-border p-7"
+        data-testid="comparison-compare"
       >
-        <canvas
-          height="150"
-          role="img"
-          width="300"
-        />
+        <div
+          style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px;"
+        >
+          <div>
+            <span
+              class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-faint"
+            >
+              Décès mensuels · Comparaison
+            </span>
+            <div
+              class="text-text-dim"
+              style="font-size: 12px; margin-top: 4px;"
+            >
+              3 année(s) sélectionnée(s) · max. 7
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative w-full"
+        >
+          <svg
+            height="420"
+            style="display: block; overflow: visible;"
+            width="900"
+          >
+            <g>
+              <line
+                stroke="var(--color-grid)"
+                stroke-width="1"
+                x1="56"
+                x2="876"
+                y1="370"
+                y2="370"
+              />
+              <text
+                class="font-mono"
+                fill="var(--color-text-faint)"
+                font-size="10"
+                letter-spacing="0.04em"
+                text-anchor="end"
+                x="46"
+                y="373"
+              >
+                0
+              </text>
+            </g>
+            <g>
+              <line
+                stroke="var(--color-grid)"
+                stroke-width="1"
+                x1="56"
+                x2="876"
+                y1="285.5"
+                y2="285.5"
+              />
+              <text
+                class="font-mono"
+                fill="var(--color-text-faint)"
+                font-size="10"
+                letter-spacing="0.04em"
+                text-anchor="end"
+                x="46"
+                y="288.5"
+              >
+                20 k
+              </text>
+            </g>
+            <g>
+              <line
+                stroke="var(--color-grid)"
+                stroke-width="1"
+                x1="56"
+                x2="876"
+                y1="201"
+                y2="201"
+              />
+              <text
+                class="font-mono"
+                fill="var(--color-text-faint)"
+                font-size="10"
+                letter-spacing="0.04em"
+                text-anchor="end"
+                x="46"
+                y="204"
+              >
+                40 k
+              </text>
+            </g>
+            <g>
+              <line
+                stroke="var(--color-grid)"
+                stroke-width="1"
+                x1="56"
+                x2="876"
+                y1="116.5"
+                y2="116.5"
+              />
+              <text
+                class="font-mono"
+                fill="var(--color-text-faint)"
+                font-size="10"
+                letter-spacing="0.04em"
+                text-anchor="end"
+                x="46"
+                y="119.5"
+              >
+                60 k
+              </text>
+            </g>
+            <g>
+              <line
+                stroke="var(--color-grid)"
+                stroke-width="1"
+                x1="56"
+                x2="876"
+                y1="32"
+                y2="32"
+              />
+              <text
+                class="font-mono"
+                fill="var(--color-text-faint)"
+                font-size="10"
+                letter-spacing="0.04em"
+                text-anchor="end"
+                x="46"
+                y="35"
+              >
+                80 k
+              </text>
+            </g>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="56"
+              y="392"
+            >
+              Jan
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="130.54545454545456"
+              y="392"
+            >
+              Fév
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="205.0909090909091"
+              y="392"
+            >
+              Mar
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="279.6363636363636"
+              y="392"
+            >
+              Avr
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="354.1818181818182"
+              y="392"
+            >
+              Mai
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="428.72727272727275"
+              y="392"
+            >
+              Jui
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="503.27272727272725"
+              y="392"
+            >
+              Jui
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="577.8181818181819"
+              y="392"
+            >
+              Aou
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="652.3636363636364"
+              y="392"
+            >
+              Sep
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="726.9090909090909"
+              y="392"
+            >
+              Oct
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="801.4545454545455"
+              y="392"
+            >
+              Nov
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-dim)"
+              font-size="10.5"
+              letter-spacing="0.05em"
+              text-anchor="middle"
+              x="876"
+              y="392"
+            >
+              Dec
+            </text>
+            <g>
+              <path
+                d="M 56.00 150.21 L 130.55 149.78 L 205.09 149.36 L 279.64 148.94 L 354.18 148.52 L 428.73 148.09 L 503.27 147.67 L 577.82 147.25 L 652.36 146.83 L 726.91 146.40 L 801.45 145.98 L 876.00 145.56"
+                fill="none"
+                stroke="var(--color-accent)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+              />
+              <g>
+                <circle
+                  cx="56"
+                  cy="150.20704999999998"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="56"
+                  cy="150.20704999999998"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="130.54545454545456"
+                  cy="149.78455"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="130.54545454545456"
+                  cy="149.78455"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="205.0909090909091"
+                  cy="149.36205"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="205.0909090909091"
+                  cy="149.36205"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="279.6363636363636"
+                  cy="148.93955"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="279.6363636363636"
+                  cy="148.93955"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="354.1818181818182"
+                  cy="148.51704999999998"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="354.1818181818182"
+                  cy="148.51704999999998"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="428.72727272727275"
+                  cy="148.09455"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="428.72727272727275"
+                  cy="148.09455"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="503.27272727272725"
+                  cy="147.67205"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="503.27272727272725"
+                  cy="147.67205"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="577.8181818181819"
+                  cy="147.24955"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="577.8181818181819"
+                  cy="147.24955"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="652.3636363636364"
+                  cy="146.82705"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="652.3636363636364"
+                  cy="146.82705"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="726.9090909090909"
+                  cy="146.40454999999997"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="726.9090909090909"
+                  cy="146.40454999999997"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="801.4545454545455"
+                  cy="145.98205000000002"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="801.4545454545455"
+                  cy="145.98205000000002"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="876"
+                  cy="145.55955"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="876"
+                  cy="145.55955"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+            </g>
+            <g>
+              <path
+                d="M 56.00 150.20 L 130.55 149.78 L 205.09 149.36 L 279.64 148.94 L 354.18 148.51 L 428.73 148.09 L 503.27 147.67 L 577.82 147.25 L 652.36 146.82 L 726.91 146.40 L 801.45 145.98 L 876.00 145.56"
+                fill="none"
+                stroke="var(--color-male)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+              />
+              <g>
+                <circle
+                  cx="56"
+                  cy="150.202825"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="56"
+                  cy="150.202825"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="130.54545454545456"
+                  cy="149.780325"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="130.54545454545456"
+                  cy="149.780325"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="205.0909090909091"
+                  cy="149.357825"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="205.0909090909091"
+                  cy="149.357825"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="279.6363636363636"
+                  cy="148.93532499999998"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="279.6363636363636"
+                  cy="148.93532499999998"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="354.1818181818182"
+                  cy="148.512825"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="354.1818181818182"
+                  cy="148.512825"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="428.72727272727275"
+                  cy="148.090325"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="428.72727272727275"
+                  cy="148.090325"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="503.27272727272725"
+                  cy="147.667825"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="503.27272727272725"
+                  cy="147.667825"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="577.8181818181819"
+                  cy="147.24532499999998"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="577.8181818181819"
+                  cy="147.24532499999998"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="652.3636363636364"
+                  cy="146.822825"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="652.3636363636364"
+                  cy="146.822825"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="726.9090909090909"
+                  cy="146.400325"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="726.9090909090909"
+                  cy="146.400325"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="801.4545454545455"
+                  cy="145.977825"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="801.4545454545455"
+                  cy="145.977825"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="876"
+                  cy="145.55532500000004"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-male)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="876"
+                  cy="145.55532500000004"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+            </g>
+            <g>
+              <path
+                d="M 56.00 150.20 L 130.55 149.78 L 205.09 149.35 L 279.64 148.93 L 354.18 148.51 L 428.73 148.09 L 503.27 147.66 L 577.82 147.24 L 652.36 146.82 L 726.91 146.40 L 801.45 145.97 L 876.00 145.55"
+                fill="none"
+                stroke="var(--color-female)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+              />
+              <g>
+                <circle
+                  cx="56"
+                  cy="150.1986"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="56"
+                  cy="150.1986"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="130.54545454545456"
+                  cy="149.7761"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="130.54545454545456"
+                  cy="149.7761"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="205.0909090909091"
+                  cy="149.35359999999997"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="205.0909090909091"
+                  cy="149.35359999999997"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="279.6363636363636"
+                  cy="148.9311"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="279.6363636363636"
+                  cy="148.9311"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="354.1818181818182"
+                  cy="148.5086"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="354.1818181818182"
+                  cy="148.5086"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="428.72727272727275"
+                  cy="148.08610000000002"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="428.72727272727275"
+                  cy="148.08610000000002"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="503.27272727272725"
+                  cy="147.66359999999997"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="503.27272727272725"
+                  cy="147.66359999999997"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="577.8181818181819"
+                  cy="147.2411"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="577.8181818181819"
+                  cy="147.2411"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="652.3636363636364"
+                  cy="146.8186"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="652.3636363636364"
+                  cy="146.8186"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="726.9090909090909"
+                  cy="146.3961"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="726.9090909090909"
+                  cy="146.3961"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="801.4545454545455"
+                  cy="145.97360000000003"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="801.4545454545455"
+                  cy="145.97360000000003"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+              <g>
+                <circle
+                  cx="876"
+                  cy="145.5511"
+                  fill="var(--color-surface)"
+                  r="2.5"
+                  stroke="var(--color-female)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="876"
+                  cy="145.5511"
+                  fill="transparent"
+                  r="14"
+                  style="cursor: pointer;"
+                />
+              </g>
+            </g>
+            <g
+              transform="translate(56, 14)"
+            >
+              <g
+                transform="translate(0, 0)"
+              >
+                <line
+                  stroke="var(--color-accent)"
+                  stroke-width="2"
+                  x1="0"
+                  x2="14"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-text)"
+                  font-size="10.5"
+                  x="20"
+                  y="3"
+                >
+                  2022
+                </text>
+              </g>
+              <g
+                transform="translate(70, 0)"
+              >
+                <line
+                  stroke="var(--color-male)"
+                  stroke-width="2"
+                  x1="0"
+                  x2="14"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-text)"
+                  font-size="10.5"
+                  x="20"
+                  y="3"
+                >
+                  2023
+                </text>
+              </g>
+              <g
+                transform="translate(140, 0)"
+              >
+                <line
+                  stroke="var(--color-female)"
+                  stroke-width="2"
+                  x1="0"
+                  x2="14"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-text)"
+                  font-size="10.5"
+                  x="20"
+                  y="3"
+                >
+                  2024
+                </text>
+              </g>
+            </g>
+          </svg>
+        </div>
       </div>
-      <ul
-        class="years"
+      <div
+        class="bg-surface border border-border p-7"
+        data-testid="comparison-picker"
       >
-        <li>
+        <span
+          class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-faint"
+        >
+          Sélectionner les années
+        </span>
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;"
+        >
           <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2026
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2025
-          </button>
-        </li>
-        <li>
-          <button
-            class="active"
-            style="background-color: rgb(156, 173, 206); border-color: rgb(156, 173, 206);"
-          >
-            2024
-          </button>
-        </li>
-        <li>
-          <button
-            class="active"
-            style="background-color: rgb(209, 207, 226); border-color: rgb(209, 207, 226);"
-          >
-            2023
-          </button>
-        </li>
-        <li>
-          <button
-            class="active"
-            style="background-color: rgb(212, 175, 185); border-color: rgb(212, 175, 185);"
-          >
-            2022
-          </button>
-        </li>
-        <li>
-          <button
-            class="active"
-            style="background-color: rgb(66, 129, 164); border-color: rgb(66, 129, 164);"
-          >
-            2021
-          </button>
-        </li>
-        <li>
-          <button
-            class="active"
-            style="background-color: rgb(156, 175, 183); border-color: rgb(156, 175, 183);"
+            aria-pressed="false"
+            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint"
+            type="button"
           >
             2020
           </button>
-        </li>
-        <li>
           <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
+            aria-pressed="false"
+            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint"
+            type="button"
           >
-            2019
+            2021
           </button>
-        </li>
-        <li>
           <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
+            aria-pressed="true"
+            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+            type="button"
           >
-            2018
+            2022
           </button>
-        </li>
-        <li>
           <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
+            aria-pressed="true"
+            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+            type="button"
           >
-            2017
+            2023
           </button>
-        </li>
-        <li>
           <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
+            aria-pressed="true"
+            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+            type="button"
           >
-            2016
+            2024
           </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2015
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2014
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2013
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2012
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2011
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2010
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2009
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2008
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2007
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2006
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2005
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2004
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2003
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2002
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2001
-          </button>
-        </li>
-        <li>
-          <button
-            class=""
-            style="background-color: transparent; border-color: inherit;"
-          >
-            2000
-          </button>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>
