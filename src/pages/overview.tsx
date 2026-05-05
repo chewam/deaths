@@ -4,9 +4,11 @@ import { useRouter } from "next/router"
 
 import Year, { type YearData, type YearLabels } from "@/components/views/Year"
 import { EVENTS_RAW, type YearEvent } from "@/data/events"
+import useFilters from "@/services/filters"
 import useYears from "@/services/years"
 import useRawDeaths from "@/services/raw-deaths"
-import { getYearPopulation, sumArray, sumYears } from "@/utils/index"
+import { getYearPopulation, sumArray } from "@/utils/index"
+import { computeFilteredMonthly } from "@/utils/filters"
 
 const monthKeys = [
   "January",
@@ -28,17 +30,17 @@ const Page = () => {
   const intl = useIntl()
   const [years] = useYears()
   const [deaths] = useRawDeaths()
+  const [filters] = useFilters()
   const partialYear = new Date().getFullYear()
 
   const data: YearData[] = useMemo(() => {
-    const ageGroups = deaths?.ageGroups ?? []
+    const monthlyByYear = computeFilteredMonthly(deaths, filters)
     const yearsList = Object.keys(years || {})
     return yearsList.map((yearStr, i) => {
       const year = Number(yearStr)
       const pop = getYearPopulation(year) || 0
-      const yearAgeTotals = ageGroups.map((group) => sumArray(group[i] || []))
-      const totalDeaths = sumArray(yearAgeTotals)
-      const monthly = sumYears(ageGroups.map((group) => group[i] || []))
+      const monthly = monthlyByYear[i] ?? []
+      const totalDeaths = sumArray(monthly)
       return {
         year,
         rate: pop > 0 ? (totalDeaths * 100) / pop : 0,
@@ -47,7 +49,7 @@ const Page = () => {
         monthly,
       }
     })
-  }, [years, deaths])
+  }, [years, deaths, filters])
 
   const lastFullYearData = data
     .filter((y) => y.year !== partialYear)
