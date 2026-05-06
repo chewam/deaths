@@ -72,9 +72,12 @@ export const computeFilteredAgeBuckets = (
     const year = FIRST_YEAR + i
     const rawBuckets = data.ageGroups.map((g) => g[i] ?? 0)
     const buckets = collapseTo10Buckets(rawBuckets, start, end)
-    const totalDeaths = buckets.reduce((s, b) => s + b, 0)
     const population = getYearPopulation(year) || 0
-    const rate = population > 0 ? (totalDeaths * 100) / population : 0
+    // Rate stays the all-ages mortality rate so the curve keeps its
+    // meaning under age-range filters; otherwise it would fall outside
+    // DISTRIBUTION_RATE_DOMAIN (0.8–1.05) and disappear from the chart.
+    const totalAllAges = rawBuckets.reduce((s, b) => s + b, 0)
+    const rate = population > 0 ? (totalAllAges * 100) / population : 0
     return {
       year,
       buckets,

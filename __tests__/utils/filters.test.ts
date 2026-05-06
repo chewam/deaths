@@ -103,7 +103,7 @@ describe("computeFilteredAgeBuckets()", () => {
     expect(narrow[0].f).toBeGreaterThan(0)
   })
 
-  test("rate is computed against total population for the filtered slice", () => {
+  test("rate stays the all-ages rate regardless of age filter (otherwise it would fall outside DISTRIBUTION_RATE_DOMAIN)", () => {
     const wide = computeFilteredAgeBuckets(rawMortality, {
       gender: null,
       ageGroup: [0, 110],
@@ -112,7 +112,7 @@ describe("computeFilteredAgeBuckets()", () => {
       gender: null,
       ageGroup: [60, 90],
     })
-    expect(narrow[0].rate).toBeLessThan(wide[0].rate)
+    expect(narrow[0].rate).toBe(wide[0].rate)
     expect(narrow[0].rate).toBeGreaterThan(0)
   })
 })
