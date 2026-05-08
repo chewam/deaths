@@ -79,8 +79,7 @@ export const buildMonthlyGeometry = (
   const series: MonthlySeries[] = years.map((y) => {
     const values = y.monthly
     const ys = values.map(projectY)
-    // Partial years (e.g. the current year before December) have fewer than 12
-    // months — emit path commands only for months that have data.
+    // Partial years (e.g. the current year before December) have fewer than 12 months.
     let started = false
     const linePath = xs
       .map((x, m) => {
