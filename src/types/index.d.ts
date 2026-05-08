@@ -1,5 +1,3 @@
-declare module "google-palette"
-
 type Gender = "male" | "female" | null
 
 type Filters = {
@@ -30,13 +28,11 @@ interface Overview {
   data: number[]
 }
 
-type MortalityAgeGroups = number[][]
-
 interface MortalityRawData {
   labels: string[]
-  ageGroups: MortalityAgeGroups
-  female: { ageGroups: MortalityAgeGroups; global: number[][] }
-  male: { ageGroups: MortalityAgeGroups; global: number[][] }
+  ageGroups: number[][]
+  female: { ageGroups: number[][]; global: number[][] }
+  male: { ageGroups: number[][]; global: number[][] }
 }
 
 interface Mortality {
@@ -46,23 +42,6 @@ interface Mortality {
   ageGroups: number[]
 }
 
-type LocationsAgeGroups = Record<number, number>[][]
-
-interface LocationsRawData {
-  ageGroups: LocationsAgeGroups
-  female: { ageGroups: LocationsAgeGroups }
-  male: { ageGroups: LocationsAgeGroups }
-}
-
-type Locations = Record<string, number>[]
-
 interface Years {
   [key: string]: boolean
-}
-
-interface Theme {
-  theme: string | undefined
-  values: Record<string, string>
-  setTheme: (theme: string) => void
-  setValues: (values: Record<string, Record<string, string>>) => void
 }

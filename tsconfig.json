@@ -2,34 +2,16 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@/data/*": [
-        "data/*"
-      ],
-      "@/lang/*": [
-        "lang/*"
-      ],
-      "@/views/*": [
-        "views/*"
-      ],
-      "@/utils/*": [
-        "utils/*"
-      ],
-      "@/styles/*": [
-        "styles/*"
-      ],
-      "@/services/*": [
-        "services/*"
-      ],
-      "@/components/*": [
-        "components/*"
-      ]
+      "@/data/*": ["data/*"],
+      "@/lang/*": ["lang/*"],
+      "@/views/*": ["views/*"],
+      "@/utils/*": ["utils/*"],
+      "@/styles/*": ["styles/*"],
+      "@/services/*": ["services/*"],
+      "@/components/*": ["components/*"]
     },
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -37,20 +19,19 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules",
     "tsconfig.json",
-    "sentry.*.config.js"
+    "sentry.*.config.js",
+    "e2e",
+    "playwright.config.ts",
+    "vitest.config.ts"
   ]
 }

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Page snapshot: distribution 1`] = `
 <DocumentFragment>
@@ -6,13 +6,976 @@ exports[`Page snapshot: distribution 1`] = `
     class="container mx-auto px-6"
   >
     <div
-      class="distribution"
+      data-testid="view-distribution"
+      style="display: flex; flex-direction: column; gap: 28px;"
     >
-      <canvas
-        height="150"
-        role="img"
-        width="300"
-      />
+      <div
+        class="bg-surface border border-border p-7"
+        data-testid="distribution-card"
+      >
+        <div
+          style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px;"
+        >
+          <div>
+            <span
+              class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-faint"
+            >
+              Décès par tranche d'âge
+            </span>
+            <div
+              class="text-text-dim"
+              style="font-size: 12px; margin-top: 4px;"
+            >
+              Décès par tranche d'âge et taux de mortalité
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative w-full"
+        >
+          <svg
+            aria-label="Nombre de décès · 2000–2002"
+            height="460"
+            role="img"
+            style="display: block; overflow: visible;"
+            width="900"
+          >
+            <g>
+              <line
+                stroke="var(--color-grid)"
+                stroke-width="1"
+                x1="64"
+                x2="836"
+                y1="410"
+                y2="410"
+              />
+              <text
+                class="font-mono"
+                fill="var(--color-text-faint)"
+                font-size="10"
+                letter-spacing="0.04em"
+                text-anchor="end"
+                x="54"
+                y="413"
+              >
+                0
+              </text>
+            </g>
+            <g>
+              <line
+                stroke="var(--color-grid)"
+                stroke-width="1"
+                x1="64"
+                x2="836"
+                y1="281.3333333333333"
+                y2="281.3333333333333"
+              />
+              <text
+                class="font-mono"
+                fill="var(--color-text-faint)"
+                font-size="10"
+                letter-spacing="0.04em"
+                text-anchor="end"
+                x="54"
+                y="284.3333333333333"
+              >
+                33,3 k
+              </text>
+            </g>
+            <g>
+              <line
+                stroke="var(--color-grid)"
+                stroke-width="1"
+                x1="64"
+                x2="836"
+                y1="152.66666666666663"
+                y2="152.66666666666663"
+              />
+              <text
+                class="font-mono"
+                fill="var(--color-text-faint)"
+                font-size="10"
+                letter-spacing="0.04em"
+                text-anchor="end"
+                x="54"
+                y="155.66666666666663"
+              >
+                66,7 k
+              </text>
+            </g>
+            <g>
+              <line
+                stroke="var(--color-grid)"
+                stroke-width="1"
+                x1="64"
+                x2="836"
+                y1="24"
+                y2="24"
+              />
+              <text
+                class="font-mono"
+                fill="var(--color-text-faint)"
+                font-size="10"
+                letter-spacing="0.04em"
+                text-anchor="end"
+                x="54"
+                y="27"
+              >
+                100 k
+              </text>
+            </g>
+            <text
+              class="font-mono"
+              fill="var(--color-text-faint)"
+              font-size="10"
+              letter-spacing="0.04em"
+              x="846"
+              y="335.8000000000001"
+            >
+              0.85%
+            </text>
+            <text
+              class="font-mono"
+              fill="var(--color-text-faint)"
+              font-size="10"
+              letter-spacing="0.04em"
+              x="846"
+              y="258.6"
+            >
+              0.90%
+            </text>
+            <text
+              class="font-mono"
+              fill="var(--color-text-faint)"
+              font-size="10"
+              letter-spacing="0.04em"
+              x="846"
+              y="181.40000000000015"
+            >
+              0.95%
+            </text>
+            <text
+              class="font-mono"
+              fill="var(--color-text-faint)"
+              font-size="10"
+              letter-spacing="0.04em"
+              x="846"
+              y="104.20000000000007"
+            >
+              1.00%
+            </text>
+            <g
+              data-year="2000"
+              style="cursor: pointer;"
+            >
+              <rect
+                fill="transparent"
+                height="386"
+                pointer-events="all"
+                width="185.27999999999997"
+                x="100.02666666666667"
+                y="24"
+              />
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 3%, transparent)"
+                  height="3.8600000000000136"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="406.14"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+                  height="7.71999999999997"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="398.42"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 12%, transparent)"
+                  height="11.580000000000041"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="386.84"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 19%, transparent)"
+                  height="15.43999999999994"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="371.40000000000003"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+                  height="19.300000000000068"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="352.09999999999997"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+                  height="23.159999999999968"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="328.94"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-text-dim)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="192.66666666666666"
+                  y="343.52"
+                >
+                  6 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 46%, transparent)"
+                  height="27.019999999999982"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="301.92"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-text-dim)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="192.66666666666666"
+                  y="318.43"
+                >
+                  7 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+                  height="30.880000000000052"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="271.03999999999996"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-surface)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="192.66666666666666"
+                  y="289.48"
+                >
+                  8 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 75%, transparent)"
+                  height="34.73999999999995"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="236.3"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-surface)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="192.66666666666666"
+                  y="256.66999999999996"
+                >
+                  9 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+                  height="38.60000000000002"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="197.7"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-surface)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="192.66666666666666"
+                  y="220"
+                >
+                  10 k
+                </text>
+              </g>
+            </g>
+            <g
+              data-year="2001"
+              style="cursor: pointer;"
+            >
+              <rect
+                fill="transparent"
+                height="386"
+                pointer-events="all"
+                width="185.27999999999997"
+                x="357.36"
+                y="24"
+              />
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 3%, transparent)"
+                  height="4.245999999999981"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="357.36"
+                  y="405.754"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+                  height="8.106000000000051"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="357.36"
+                  y="397.64799999999997"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 12%, transparent)"
+                  height="11.965999999999951"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="357.36"
+                  y="385.682"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 19%, transparent)"
+                  height="15.826000000000022"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="357.36"
+                  y="369.856"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+                  height="19.68599999999998"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="357.36"
+                  y="350.17"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-text-dim)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="450"
+                  y="363.01300000000003"
+                >
+                  5,1 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+                  height="23.545999999999992"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="357.36"
+                  y="326.624"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-text-dim)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="450"
+                  y="341.39700000000005"
+                >
+                  6,1 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 46%, transparent)"
+                  height="27.406000000000006"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="357.36"
+                  y="299.218"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-text-dim)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="450"
+                  y="315.92100000000005"
+                >
+                  7,1 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+                  height="31.26600000000002"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="357.36"
+                  y="267.952"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-surface)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="450"
+                  y="286.58500000000004"
+                >
+                  8,1 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 75%, transparent)"
+                  height="35.12600000000003"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="357.36"
+                  y="232.82599999999996"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-surface)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="450"
+                  y="253.38899999999998"
+                >
+                  9,1 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+                  height="38.98599999999999"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="357.36"
+                  y="193.83999999999997"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-surface)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="450"
+                  y="216.33299999999997"
+                >
+                  10,1 k
+                </text>
+              </g>
+            </g>
+            <g
+              data-year="2002"
+              style="cursor: pointer;"
+            >
+              <rect
+                fill="transparent"
+                height="386"
+                pointer-events="all"
+                width="185.27999999999997"
+                x="614.6933333333333"
+                y="24"
+              />
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 3%, transparent)"
+                  height="4.632000000000005"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="614.6933333333333"
+                  y="405.368"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+                  height="8.492000000000019"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="614.6933333333333"
+                  y="396.876"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 12%, transparent)"
+                  height="12.351999999999975"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="614.6933333333333"
+                  y="384.524"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 19%, transparent)"
+                  height="16.21199999999999"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="614.6933333333333"
+                  y="368.312"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
+                  height="20.072000000000003"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="614.6933333333333"
+                  y="348.24"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-text-dim)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="707.3333333333333"
+                  y="361.276"
+                >
+                  5,2 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+                  height="23.932000000000016"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="614.6933333333333"
+                  y="324.308"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-text-dim)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="707.3333333333333"
+                  y="339.274"
+                >
+                  6,2 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 46%, transparent)"
+                  height="27.79200000000003"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="614.6933333333333"
+                  y="296.51599999999996"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-text-dim)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="707.3333333333333"
+                  y="313.412"
+                >
+                  7,2 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+                  height="31.65199999999993"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="614.6933333333333"
+                  y="264.86400000000003"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-surface)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="707.3333333333333"
+                  y="283.69"
+                >
+                  8,2 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 75%, transparent)"
+                  height="35.51200000000003"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="614.6933333333333"
+                  y="229.352"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-surface)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="707.3333333333333"
+                  y="250.108"
+                >
+                  9,2 k
+                </text>
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
+                  height="39.371999999999986"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="614.6933333333333"
+                  y="189.98000000000002"
+                />
+                <text
+                  class="font-mono"
+                  fill="var(--color-surface)"
+                  font-size="8.5"
+                  style="pointer-events: none;"
+                  text-anchor="middle"
+                  x="707.3333333333333"
+                  y="212.666"
+                >
+                  10,2 k
+                </text>
+              </g>
+            </g>
+            <path
+              d="M 192.67 1504.86 L 450.00 1503.32 L 707.33 1501.83"
+              fill="none"
+              stroke="var(--color-danger)"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <g
+              style="pointer-events: none;"
+            >
+              <circle
+                cx="192.66666666666666"
+                cy="1504.8552695793874"
+                fill="var(--color-surface)"
+                r="3"
+                stroke="var(--color-danger)"
+                stroke-width="1.5"
+              />
+              <text
+                class="font-mono"
+                fill="var(--color-danger)"
+                font-size="9"
+                font-weight="600"
+                text-anchor="middle"
+                x="192.66666666666666"
+                y="1496.8552695793874"
+              >
+                0.09%
+              </text>
+            </g>
+            <g
+              style="pointer-events: none;"
+            >
+              <circle
+                cx="450"
+                cy="1503.319462611712"
+                fill="var(--color-surface)"
+                r="3"
+                stroke="var(--color-danger)"
+                stroke-width="1.5"
+              />
+            </g>
+            <g
+              style="pointer-events: none;"
+            >
+              <circle
+                cx="707.3333333333333"
+                cy="1501.8296332316636"
+                fill="var(--color-surface)"
+                r="3"
+                stroke="var(--color-danger)"
+                stroke-width="1.5"
+              />
+              <text
+                class="font-mono"
+                fill="var(--color-danger)"
+                font-size="9"
+                font-weight="600"
+                text-anchor="middle"
+                x="707.3333333333333"
+                y="1493.8296332316636"
+              >
+                0.09%
+              </text>
+            </g>
+            <text
+              class="font-mono"
+              fill="var(--color-text-dim)"
+              font-size="10"
+              letter-spacing="0.04em"
+              text-anchor="middle"
+              x="192.66666666666666"
+              y="430"
+            >
+              2000
+            </text>
+            <text
+              class="font-mono"
+              fill="var(--color-text-dim)"
+              font-size="10"
+              letter-spacing="0.04em"
+              text-anchor="middle"
+              x="450"
+              y="430"
+            >
+              2001
+            </text>
+            <text
+              class="font-mono"
+              fill="var(--color-text-dim)"
+              font-size="10"
+              letter-spacing="0.04em"
+              text-anchor="middle"
+              x="707.3333333333333"
+              y="430"
+            >
+              2002
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-text-faint)"
+              font-size="9.5"
+              letter-spacing="0.08em"
+              x="20"
+              y="18"
+            >
+              Nombre de décès
+            </text>
+            <text
+              class="font-mono uppercase"
+              fill="var(--color-danger)"
+              font-size="9.5"
+              letter-spacing="0.08em"
+              x="870"
+              y="18"
+            >
+              Taux de mortalité
+            </text>
+          </svg>
+          <div
+            class="font-mono text-text-dim flex flex-wrap"
+            style="gap: 14px; margin-top: 8px; padding-left: 64px; font-size: 10px; letter-spacing: 0.04em;"
+          >
+            <div
+              style="display: flex; align-items: center; gap: 5px;"
+            >
+              <div
+                style="width: 10px; height: 10px; background: color-mix(in srgb, var(--color-accent) 3%, transparent); border: 1px solid var(--color-border);"
+              />
+              <span>
+                0-9
+              </span>
+            </div>
+            <div
+              style="display: flex; align-items: center; gap: 5px;"
+            >
+              <div
+                style="width: 10px; height: 10px; background: color-mix(in srgb, var(--color-accent) 6%, transparent); border: 1px solid var(--color-border);"
+              />
+              <span>
+                10-19
+              </span>
+            </div>
+            <div
+              style="display: flex; align-items: center; gap: 5px;"
+            >
+              <div
+                style="width: 10px; height: 10px; background: color-mix(in srgb, var(--color-accent) 12%, transparent); border: 1px solid var(--color-border);"
+              />
+              <span>
+                20-29
+              </span>
+            </div>
+            <div
+              style="display: flex; align-items: center; gap: 5px;"
+            >
+              <div
+                style="width: 10px; height: 10px; background: color-mix(in srgb, var(--color-accent) 19%, transparent); border: 1px solid var(--color-border);"
+              />
+              <span>
+                30-39
+              </span>
+            </div>
+            <div
+              style="display: flex; align-items: center; gap: 5px;"
+            >
+              <div
+                style="width: 10px; height: 10px; background: color-mix(in srgb, var(--color-accent) 27%, transparent); border: 1px solid var(--color-border);"
+              />
+              <span>
+                40-49
+              </span>
+            </div>
+            <div
+              style="display: flex; align-items: center; gap: 5px;"
+            >
+              <div
+                style="width: 10px; height: 10px; background: color-mix(in srgb, var(--color-accent) 35%, transparent); border: 1px solid var(--color-border);"
+              />
+              <span>
+                50-59
+              </span>
+            </div>
+            <div
+              style="display: flex; align-items: center; gap: 5px;"
+            >
+              <div
+                style="width: 10px; height: 10px; background: color-mix(in srgb, var(--color-accent) 46%, transparent); border: 1px solid var(--color-border);"
+              />
+              <span>
+                60-69
+              </span>
+            </div>
+            <div
+              style="display: flex; align-items: center; gap: 5px;"
+            >
+              <div
+                style="width: 10px; height: 10px; background: color-mix(in srgb, var(--color-accent) 58%, transparent); border: 1px solid var(--color-border);"
+              />
+              <span>
+                70-79
+              </span>
+            </div>
+            <div
+              style="display: flex; align-items: center; gap: 5px;"
+            >
+              <div
+                style="width: 10px; height: 10px; background: color-mix(in srgb, var(--color-accent) 75%, transparent); border: 1px solid var(--color-border);"
+              />
+              <span>
+                80-89
+              </span>
+            </div>
+            <div
+              style="display: flex; align-items: center; gap: 5px;"
+            >
+              <div
+                style="width: 10px; height: 10px; background: color-mix(in srgb, var(--color-accent) 100%, transparent); border: 1px solid var(--color-border);"
+              />
+              <span>
+                90+
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>

@@ -1,3 +1,30 @@
+# [1.4.0-alpha.1](https://github.com/chewam/mortality/compare/v1.3.10...v1.4.0-alpha.1) (2026-05-08)
+
+
+### Bug Fixes
+
+* **charts:** handle partial-year monthly data on /overview ([#296](https://github.com/chewam/mortality/issues/296)) ([3a98d5e](https://github.com/chewam/mortality/commit/3a98d5ecc84618e533e7017346c35b35423bea5f)), closes [#295](https://github.com/chewam/mortality/issues/295)
+* sentry token ([#254](https://github.com/chewam/mortality/issues/254)) ([fd36068](https://github.com/chewam/mortality/commit/fd36068d57b7f96b14a8a21005d63ba900cc2996))
+
+
+### Features
+
+* **a11y:** pass axe-core + WCAG AA contrast on the 4 views (Lot 6 / 6.2) ([#298](https://github.com/chewam/mortality/issues/298)) ([4f2cecf](https://github.com/chewam/mortality/commit/4f2cecff038b85272ed92c9fa233d3290dd75e14)), closes [#78716C](https://github.com/chewam/mortality/issues/78716C) [#15803D](https://github.com/chewam/mortality/issues/15803D) [#B45309](https://github.com/chewam/mortality/issues/B45309)
+* **atoms:** atomic components + /playground (Lot 2 / 2.3) ([#282](https://github.com/chewam/mortality/issues/282)) ([982c5fc](https://github.com/chewam/mortality/commit/982c5fc6f0d35860570691e0cbe02cfbbc0c11a8)), closes [#281](https://github.com/chewam/mortality/issues/281)
+* **charts:** DistributionChart SVG component (Lot 3 / 3.3) ([#286](https://github.com/chewam/mortality/issues/286)) ([dcc403c](https://github.com/chewam/mortality/commit/dcc403c035a1e5e9b133136782fbcaf62724fb97))
+* **charts:** MonthlyChart SVG component (Lot 3 / 3.2) ([#285](https://github.com/chewam/mortality/issues/285)) ([5674cd9](https://github.com/chewam/mortality/commit/5674cd914f4951ab772ba29596bd87b422868232))
+* **charts:** TrendChart SVG component (Lot 3 / 3.1) ([#284](https://github.com/chewam/mortality/issues/284)) ([fb33ff9](https://github.com/chewam/mortality/commit/fb33ff9b63735561fe3c56af275c2dd115787829))
+* **filters:** redesign Genders + AgeRange to match NEW_VERSION (Lot 5 / 5.2) ([#293](https://github.com/chewam/mortality/issues/293)) ([2916f35](https://github.com/chewam/mortality/commit/2916f3575bfbee00dc6563f4747fbe2e458a9b25))
+* **fonts:** load 4 design fonts via next/font (Lot 2 / 2.1) ([#280](https://github.com/chewam/mortality/issues/280)) ([b9d113c](https://github.com/chewam/mortality/commit/b9d113c97d60c2b56a6767b08752f767f7c9c5e8))
+* **layout:** rewrite Header / FiltersBar / Footer (Lot 2 / 2.4) ([#283](https://github.com/chewam/mortality/issues/283)) ([4740b7b](https://github.com/chewam/mortality/commit/4740b7bf4f0ee3899b078a3a5b9dd310c255ca96)), closes [#236](https://github.com/chewam/mortality/issues/236)
+* **perf:** Lighthouse ≥ 0.9 on the 4 views + baseline (Lot 6 / 6.3) ([#299](https://github.com/chewam/mortality/issues/299)) ([f95a851](https://github.com/chewam/mortality/commit/f95a851451d201392ac41a2cd0ed018c40ef1d6c))
+* **tokens:** Graphite palette + modern type aliases via [@theme](https://github.com/theme) (Lot 2 / 2.2) ([#281](https://github.com/chewam/mortality/issues/281)) ([1d4d28f](https://github.com/chewam/mortality/commit/1d4d28fbb7e3a530a41ba82302fdd167c611a60e))
+* **views:** Comparison view (Lot 4 / 4.3) ([#290](https://github.com/chewam/mortality/issues/290)) ([13014eb](https://github.com/chewam/mortality/commit/13014ebf5947a17416eebec1b46468c9bda01a32)), closes [#243](https://github.com/chewam/mortality/issues/243)
+* **views:** Distribution view (Lot 4 / 4.4) ([#291](https://github.com/chewam/mortality/issues/291)) ([a917019](https://github.com/chewam/mortality/commit/a917019678be4730565d06d06a4a3886d629762b))
+* **views:** OverviewGrid SVG component + wire / route (Lot 4 / 4.1) ([#288](https://github.com/chewam/mortality/issues/288)) ([877a70a](https://github.com/chewam/mortality/commit/877a70a71556bc58454721a37539fd79f80b4a5e)), closes [#240](https://github.com/chewam/mortality/issues/240)
+* **views:** wire useFilters into /overview, /comparison, /distribution (Lot 5 / 5.1) ([#292](https://github.com/chewam/mortality/issues/292)) ([fbbc36b](https://github.com/chewam/mortality/commit/fbbc36bfd1d33c834b7eb43911169a0cf9b2393d)), closes [#245](https://github.com/chewam/mortality/issues/245)
+* **views:** Year view on /overview (Lot 4 / 4.2) ([#289](https://github.com/chewam/mortality/issues/289)) ([46f753c](https://github.com/chewam/mortality/commit/46f753cc91e7fb588ef8a21ac564be9618a01598)), closes [#246](https://github.com/chewam/mortality/issues/246) [#242](https://github.com/chewam/mortality/issues/242)
+
 ## [1.3.10](https://github.com/chewam/deaths/compare/v1.3.9...v1.3.10) (2026-04-26)
 
 ## [1.3.9](https://github.com/chewam/deaths/compare/v1.3.8...v1.3.9) (2026-04-26)

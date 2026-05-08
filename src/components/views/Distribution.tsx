@@ -1,0 +1,84 @@
+import { Card, Label } from "@/components/atoms"
+import DistributionChart from "@/components/charts/Distribution"
+import type {
+  DistributionGender,
+  DistributionYear,
+} from "@/components/charts/distribution-geometry"
+
+export type DistributionViewLabels = {
+  deathsByAge: string
+  subtitle: string
+  deathsCount: string
+  mortalityRate: string
+  ageBuckets: string[]
+}
+
+export type DistributionProps = {
+  years: DistributionYear[]
+  gender: DistributionGender
+  hovered: number | null
+  setHovered: (year: number | null) => void
+  labels: DistributionViewLabels
+  locale: string
+  compact?: boolean
+}
+
+const fmtCompact = (n: number, locale: string): string =>
+  new Intl.NumberFormat(locale, {
+    notation: "compact",
+    maximumFractionDigits: 1,
+  }).format(n)
+
+const Distribution = ({
+  years,
+  gender,
+  hovered,
+  setHovered,
+  labels,
+  locale,
+  compact = false,
+}: DistributionProps) => {
+  const sectionGap = compact ? 16 : 28
+
+  return (
+    <div
+      data-testid="view-distribution"
+      style={{ display: "flex", flexDirection: "column", gap: sectionGap }}
+    >
+      <Card data-testid="distribution-card">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "baseline",
+            marginBottom: 18,
+          }}
+        >
+          <div>
+            <Label>{labels.deathsByAge}</Label>
+            <div
+              className="text-text-dim"
+              style={{ fontSize: 12, marginTop: 4 }}
+            >
+              {labels.subtitle}
+            </div>
+          </div>
+        </div>
+        <DistributionChart
+          years={years}
+          gender={gender}
+          hovered={hovered}
+          setHovered={setHovered}
+          labels={{
+            deathsCount: labels.deathsCount,
+            mortalityRate: labels.mortalityRate,
+            ageBuckets: labels.ageBuckets,
+          }}
+          formatCompact={(n) => fmtCompact(n, locale)}
+        />
+      </Card>
+    </div>
+  )
+}
+
+export default Distribution
