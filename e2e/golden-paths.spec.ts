@@ -2,11 +2,11 @@ import { test, expect, type Locator, type Page } from "@playwright/test"
 
 const CHART_SETTLE_MS = 400
 
-async function waitForChartStable(canvas: Locator, page: Page) {
-  let prev = await canvas.screenshot()
+async function waitForChartStable(target: Locator, page: Page) {
+  let prev = await target.screenshot()
   for (let i = 0; i < 10; i++) {
     await page.waitForTimeout(100)
-    const next = await canvas.screenshot()
+    const next = await target.screenshot()
     if (Buffer.compare(prev, next) === 0) return next
     prev = next
   }
@@ -60,48 +60,45 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
     await expect(page.getByRole("link", { name: /^Overview$/ })).toBeVisible()
   })
 
-  // The gender filter and age range slider tests are skipped until Lot 5
-  // wires the global filters into the new SVG views. /overview (4.2) and
-  // /comparison (4.3) are SVG (no canvas), and /distribution legacy chart.js
-  // has a pre-existing missing-controller error not in scope to fix here.
-  test.skip("gender filter toggles active state and triggers chart re-render", async ({
+  test("gender filter toggles active state and triggers chart re-render", async ({
     page,
   }) => {
     await page.goto("/distribution")
 
-    const canvas = page.locator("canvas").first()
-    await expect(canvas).toBeVisible()
-    const initial = await waitForChartStable(canvas, page)
+    const card = page.getByTestId("distribution-card")
+    await expect(card).toBeVisible()
+    const initial = await waitForChartStable(card, page)
 
-    const male = page.getByTitle("males", { exact: true })
-    const female = page.getByTitle("females", { exact: true })
+    const all = page.getByTestId("filter-gender-all")
+    const male = page.getByTestId("filter-gender-male")
+    const female = page.getByTestId("filter-gender-female")
+
+    await expect(all).toHaveAttribute("aria-pressed", "true")
 
     await male.click()
-    await expect(male).toHaveClass(/active/)
+    await expect(male).toHaveAttribute("aria-pressed", "true")
+    await expect(all).toHaveAttribute("aria-pressed", "false")
     await page.waitForTimeout(CHART_SETTLE_MS)
-    const afterMale = await waitForChartStable(canvas, page)
+    const afterMale = await waitForChartStable(card, page)
     expect(Buffer.compare(initial, afterMale)).not.toBe(0)
 
-    await male.click()
-    await expect(male).not.toHaveClass(/active/)
-
     await female.click()
-    await expect(female).toHaveClass(/active/)
+    await expect(female).toHaveAttribute("aria-pressed", "true")
+    await expect(male).toHaveAttribute("aria-pressed", "false")
     await page.waitForTimeout(CHART_SETTLE_MS)
-    const afterFemale = await waitForChartStable(canvas, page)
+    const afterFemale = await waitForChartStable(card, page)
     expect(Buffer.compare(initial, afterFemale)).not.toBe(0)
     expect(Buffer.compare(afterMale, afterFemale)).not.toBe(0)
   })
 
-  test.skip("age range slider triggers chart re-render", async ({ page }) => {
-    // See note above — deferred to Lot 5.
+  test("age range slider triggers chart re-render", async ({ page }) => {
     await page.goto("/distribution")
 
-    const canvas = page.locator("canvas").first()
-    await expect(canvas).toBeVisible()
-    const initial = await waitForChartStable(canvas, page)
+    const card = page.getByTestId("distribution-card")
+    await expect(card).toBeVisible()
+    const initial = await waitForChartStable(card, page)
 
-    const handles = page.getByRole("slider")
+    const handles = page.getByTestId("filter-age-range").getByRole("slider")
     await expect(handles).toHaveCount(2)
 
     await handles.first().focus()
@@ -109,7 +106,7 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
     await page.keyboard.press("ArrowRight")
 
     await page.waitForTimeout(CHART_SETTLE_MS)
-    const after = await waitForChartStable(canvas, page)
+    const after = await waitForChartStable(card, page)
     expect(Buffer.compare(initial, after)).not.toBe(0)
   })
 
