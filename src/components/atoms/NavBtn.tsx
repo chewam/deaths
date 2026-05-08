@@ -21,14 +21,15 @@ type NavBtnProps = AsButton | AsLink
 
 const base =
   "font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] " +
-  "border border-transparent bg-transparent cursor-pointer transition-all duration-200 " +
-  "text-text-dim hover:text-text"
+  "border border-transparent cursor-pointer transition-all duration-200"
+
+const inactiveCls = "bg-transparent text-text-dim hover:text-text"
 
 const activeCls = "text-text border-border bg-surface"
 
 const NavBtn = (props: NavBtnProps) => {
   const { active, className, children, ...rest } = props
-  const cls = [base, active ? activeCls : "", className ?? ""]
+  const cls = [base, active ? activeCls : inactiveCls, className ?? ""]
     .filter(Boolean)
     .join(" ")
 

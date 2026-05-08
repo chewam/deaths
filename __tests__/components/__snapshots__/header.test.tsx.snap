@@ -27,19 +27,19 @@ exports[`Header > should create a Header in english 1`] = `
       class="flex gap-1"
     >
       <a
-        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"
         href="/overview"
       >
         Overview
       </a>
       <a
-        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"
         href="/comparison"
       >
         Comparison
       </a>
       <a
-        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"
         href="/distribution"
       >
         Distribution
@@ -49,7 +49,7 @@ exports[`Header > should create a Header in english 1`] = `
       class="flex items-center gap-1.5"
     >
       <a
-        class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+        class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 bg-text text-bg border-text hover:text-bg hover:border-text"
         href="/"
         title="english"
       >
@@ -94,19 +94,19 @@ exports[`Header > should create a Header in french 1`] = `
       class="flex gap-1"
     >
       <a
-        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"
         href="/overview"
       >
         Vue d'Ensemble
       </a>
       <a
-        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"
         href="/comparison"
       >
         Comparaison
       </a>
       <a
-        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent bg-transparent cursor-pointer transition-all duration-200 text-text-dim hover:text-text"
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"
         href="/distribution"
       >
         Répartition
@@ -123,7 +123,7 @@ exports[`Header > should create a Header in french 1`] = `
         EN
       </a>
       <a
-        class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+        class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 bg-text text-bg border-text hover:text-bg hover:border-text"
         href="/"
         title="français"
       >

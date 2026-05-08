@@ -110,9 +110,17 @@ const Monthly = ({
       ? null
       : (hoveredSeries.values[hovered.month] ?? null)
 
+  const labelYears = isSingle ? series.slice(-1).map((s) => s.year) : selected
+  const ariaLabel =
+    labelYears.length > 0
+      ? `${labels.deathsCount} · ${labelYears.join(", ")}`
+      : labels.deathsCount
+
   return (
     <div ref={containerRef} className="relative w-full">
       <svg
+        role="img"
+        aria-label={ariaLabel}
         width={width}
         height={height}
         style={{ display: "block", overflow: "visible" }}

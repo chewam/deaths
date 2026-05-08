@@ -21,7 +21,9 @@ type PillProps = AsButton | AsLink
 
 const base =
   "font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] " +
-  "border cursor-pointer transition-all duration-150 " +
+  "border cursor-pointer transition-all duration-150"
+
+const inactiveCls =
   "border-border bg-surface text-text-dim " +
   "hover:text-text hover:border-text-faint"
 
@@ -29,7 +31,7 @@ const activeCls = "bg-text text-bg border-text hover:text-bg hover:border-text"
 
 const Pill = (props: PillProps) => {
   const { active, className, children, ...rest } = props
-  const cls = [base, active ? activeCls : "", className ?? ""]
+  const cls = [base, active ? activeCls : inactiveCls, className ?? ""]
     .filter(Boolean)
     .join(" ")
 

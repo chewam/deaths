@@ -33,15 +33,14 @@ describe("@theme tokens (Graphite palette + modern typography)", () => {
     "--color-border": "#E7E5E4",
     "--color-text": "#0C0A09",
     "--color-text-dim": "#57534E",
-    "--color-text-faint": "#A8A29E",
+    "--color-text-faint": "#78716C",
     "--color-accent": "#0C0A09",
     "--color-accent-soft": "#E7E5E4",
     "--color-male": "#3B82F6",
     "--color-female": "#EC4899",
     "--color-grid": "#F1EFEE",
     "--color-danger": "#DC2626",
-    "--color-warn": "#D97706",
-    "--color-mute": "#78716C",
+    "--color-warn": "#B45309",
   }
 
   for (const [name, expected] of Object.entries(graphite)) {
