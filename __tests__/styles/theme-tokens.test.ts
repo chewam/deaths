@@ -41,6 +41,7 @@ describe("@theme tokens (Graphite palette + modern typography)", () => {
     "--color-grid": "#F1EFEE",
     "--color-danger": "#DC2626",
     "--color-warn": "#B45309",
+    "--color-success": "#15803D",
   }
 
   for (const [name, expected] of Object.entries(graphite)) {
