@@ -293,6 +293,8 @@ const Year = ({
             population: labels.population,
             avgLabel: labels.avgLabel,
           }}
+          formatDeaths={(n) => fmtNumber(n, locale)}
+          formatPopulation={(n) => fmtCompact(n, locale)}
         />
       </Card>
 
@@ -332,6 +334,8 @@ const Year = ({
               deathsCount: labels.deathsCount,
             } as MonthlyLabels
           }
+          formatNumber={(n) => fmtNumber(n, locale)}
+          formatCompact={(n) => fmtCompact(n, locale)}
         />
       </Card>
 
