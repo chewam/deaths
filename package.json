@@ -15,6 +15,7 @@
     "test": "vitest run --coverage",
     "e2e": "playwright test --project=e2e-behavior",
     "e2e:visual": "playwright test --project=e2e-visual --pass-with-no-tests",
+    "lhci": "next build && lhci autorun",
     "update-data": "./scripts/fetch.js",
     "postbuild": "./scripts/sitemap.js",
     "analyze": "ANALYZE=true yarn build",
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.11.3",
     "@juggle/resize-observer": "3.4.0",
+    "@lhci/cli": "^0.14.0",
     "@next/bundle-analyzer": "15.5.15",
     "@playwright/test": "^1.59.1",
     "@semantic-release/changelog": "6.0.1",
