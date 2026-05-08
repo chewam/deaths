@@ -131,6 +131,26 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
     expect(Buffer.compare(initial, after)).not.toBe(0)
   })
 
+  test("/overview renders the Year view against real data without a client-side crash", async ({
+    page,
+  }) => {
+    const errors: string[] = []
+    page.on("pageerror", (err) => errors.push(err.message))
+
+    await page.goto("/overview")
+
+    // The body must mount fully — Year.tsx renders these regions only after
+    // the chart geometry is built without throwing.
+    await expect(page.getByTestId("view-year")).toBeVisible({ timeout: 10_000 })
+    await expect(page.getByTestId("year-trend")).toBeVisible()
+    await expect(page.getByTestId("year-monthly")).toBeVisible()
+
+    // Next.js's error boundary swaps the page for "Application error: …" when
+    // a client-side render throws.
+    await expect(page.getByText(/Application error/i)).toHaveCount(0)
+    expect(errors, `unexpected pageerror(s):\n${errors.join("\n")}`).toEqual([])
+  })
+
   test("comparison year toggle adds and removes a series", async ({ page }) => {
     await page.goto("/comparison")
 

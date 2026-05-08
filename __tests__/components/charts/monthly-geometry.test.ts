@@ -111,6 +111,56 @@ describe("buildMonthlyGeometry", () => {
     expect(g.xs).toHaveLength(12)
   })
 
+  test("handles a partial-year input (fewer than 12 months) without crashing", () => {
+    // Real data: the current year only has the months that have been reported.
+    const partial: MonthlyYear = {
+      year: 2026,
+      monthly: [50_000, 45_000, 40_000],
+    }
+
+    expect(() => buildMonthlyGeometry([partial], 900, 420)).not.toThrow()
+
+    const g = buildMonthlyGeometry([partial], 900, 420)
+    const s = g.series[0]!
+
+    // values/ys length follows the input — no synthetic NaN entries.
+    expect(s.values).toHaveLength(3)
+    expect(s.ys).toHaveLength(3)
+
+    // linePath only emits commands for months that have data.
+    expect(s.linePath).not.toMatch(/NaN|undefined/)
+    const commands = s.linePath.split(" ").filter((t) => t === "M" || t === "L")
+    expect(commands).toEqual(["M", "L", "L"])
+
+    // The first command is anchored at xs[0], the last at xs[2].
+    expect(s.linePath.startsWith(`M ${g.xs[0]!.toFixed(2)}`)).toBe(true)
+    expect(s.linePath.endsWith(`${s.ys[2]!.toFixed(2)}`)).toBe(true)
+  })
+
+  test("does not include partial-year months in linePath when interleaved with full years", () => {
+    const years: MonthlyYear[] = [
+      constYear(2024, 50_000),
+      constYear(2025, 55_000),
+      { year: 2026, monthly: [60_000, 58_000] },
+    ]
+
+    expect(() => buildMonthlyGeometry(years, 900, 420)).not.toThrow()
+
+    const g = buildMonthlyGeometry(years, 900, 420)
+    expect(g.series).toHaveLength(3)
+    // Full years still emit 12 commands.
+    for (const s of g.series.slice(0, 2)) {
+      const cmds = s.linePath.split(" ").filter((t) => t === "M" || t === "L")
+      expect(cmds).toHaveLength(12)
+    }
+    // Partial year emits only as many commands as it has data points.
+    const partial = g.series[2]!
+    const partialCmds = partial.linePath
+      .split(" ")
+      .filter((t) => t === "M" || t === "L")
+    expect(partialCmds).toEqual(["M", "L"])
+  })
+
   test("yTicks span [0, maxV] in evenly-spaced steps and adapt to the domain", () => {
     const at80k = buildMonthlyGeometry(
       [{ year: 2018, monthly: Array.from({ length: 12 }, () => 50_000) }],

@@ -79,10 +79,17 @@ export const buildMonthlyGeometry = (
   const series: MonthlySeries[] = years.map((y) => {
     const values = y.monthly
     const ys = values.map(projectY)
+    // Partial years (e.g. the current year before December) have fewer than 12 months.
+    let started = false
     const linePath = xs
-      .map(
-        (x, m) => `${m === 0 ? "M" : "L"} ${x.toFixed(2)} ${ys[m]!.toFixed(2)}`
-      )
+      .map((x, m) => {
+        const yPx = ys[m]
+        if (yPx == null) return null
+        const cmd = started ? "L" : "M"
+        started = true
+        return `${cmd} ${x.toFixed(2)} ${yPx.toFixed(2)}`
+      })
+      .filter((s): s is string => s != null)
       .join(" ")
     return { year: y.year, values, ys, linePath }
   })
