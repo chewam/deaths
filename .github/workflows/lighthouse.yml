@@ -16,6 +16,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: run lhci
-        run: npx --yes @lhci/cli@latest autorun --collect.url=${{ github.event.deployment_status.target_url }}
+        run: |
+          npx --yes @lhci/cli@latest autorun \
+            --collect.startServerCommand="" \
+            --collect.url="${TARGET_URL%/}/" \
+            --collect.url="${TARGET_URL%/}/overview" \
+            --collect.url="${TARGET_URL%/}/comparison" \
+            --collect.url="${TARGET_URL%/}/distribution"
         env:
+          TARGET_URL: ${{ github.event.deployment_status.target_url }}
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

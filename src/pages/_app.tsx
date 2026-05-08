@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <Footer />
       </IntlProvider>
-      <Analytics />
+      {process.env.NEXT_PUBLIC_VERCEL_ENV ? <Analytics /> : null}
     </>
   )
 }
