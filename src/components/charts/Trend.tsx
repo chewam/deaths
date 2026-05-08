@@ -78,9 +78,18 @@ const Trend = ({
     hoveredYear == null ? -1 : years.findIndex((y) => y.year === hoveredYear)
   const hovered = hoveredIndex >= 0 ? years[hoveredIndex] : null
 
+  const yearStart = years[0]?.year
+  const yearEnd = years[years.length - 1]?.year
+  const ariaLabel =
+    yearStart != null && yearEnd != null
+      ? `${labels.mortalityRate} · ${yearStart}–${yearEnd}`
+      : labels.mortalityRate
+
   return (
     <div ref={containerRef} className="relative w-full">
       <svg
+        role="img"
+        aria-label={ariaLabel}
         width={width}
         height={height}
         style={{ display: "block", overflow: "visible" }}

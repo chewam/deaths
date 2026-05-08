@@ -3,7 +3,7 @@
 exports[`Pill > applies active variant 1`] = `
 <DocumentFragment>
   <button
-    class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+    class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 bg-text text-bg border-text hover:text-bg hover:border-text"
     type="button"
   >
     EN

@@ -33,6 +33,7 @@
     "swr": "^2"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.3",
     "@juggle/resize-observer": "3.4.0",
     "@next/bundle-analyzer": "15.5.15",
     "@playwright/test": "^1.59.1",

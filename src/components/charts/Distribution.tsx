@@ -83,9 +83,18 @@ const Distribution = ({
 
   const useVerticalXLabels = series.length > VERTICAL_X_LABEL_THRESHOLD
 
+  const yearStart = series[0]?.year
+  const yearEnd = series[series.length - 1]?.year
+  const ariaLabel =
+    yearStart != null && yearEnd != null
+      ? `${labels.deathsCount} · ${yearStart}–${yearEnd}`
+      : labels.deathsCount
+
   return (
     <div ref={containerRef} className="relative w-full">
       <svg
+        role="img"
+        aria-label={ariaLabel}
         width={width}
         height={height}
         style={{ display: "block", overflow: "visible" }}

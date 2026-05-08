@@ -195,6 +195,7 @@ const Year = ({
         <input
           type="range"
           data-testid="year-scrubber-input"
+          aria-label={labels.yearLabel}
           min={yearStart}
           max={yearEnd}
           value={active?.year ?? activeYear}

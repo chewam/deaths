@@ -80,8 +80,10 @@ const OverviewGrid = ({
             onMouseLeave={(e) => {
               e.currentTarget.style.background = "var(--color-surface)"
             }}
+            className="text-left text-inherit focus-visible:outline-text focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2"
             style={{
-              all: "unset",
+              border: 0,
+              font: "inherit",
               cursor: "pointer",
               background: "var(--color-surface)",
               padding,

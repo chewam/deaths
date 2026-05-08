@@ -28,7 +28,7 @@ const Stat = ({
     colorize != null && colorize > 0.5
       ? "text-danger"
       : colorize != null && colorize < -0.5
-        ? "text-green-600"
+        ? "text-success"
         : "text-text",
   ].join(" ")
 
@@ -43,7 +43,7 @@ const Stat = ({
     deltaSign > 0
       ? "text-danger"
       : deltaSign < 0
-        ? "text-green-600"
+        ? "text-success"
         : "text-text-dim",
   ].join(" ")
   const deltaArrow = deltaSign > 0 ? "↑" : deltaSign < 0 ? "↓" : "—"

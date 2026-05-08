@@ -34,7 +34,9 @@ exports[`Page snapshot: distribution 1`] = `
           class="relative w-full"
         >
           <svg
+            aria-label="Nombre de décès · 2000–2002"
             height="460"
+            role="img"
             style="display: block; overflow: visible;"
             width="900"
           >

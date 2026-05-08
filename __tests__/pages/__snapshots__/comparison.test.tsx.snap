@@ -34,7 +34,9 @@ exports[`Page snapshot: comparison 1`] = `
           class="relative w-full"
         >
           <svg
+            aria-label="Nombre de décès · 2022, 2023, 2024"
             height="420"
+            role="img"
             style="display: block; overflow: visible;"
             width="900"
           >
@@ -1015,21 +1017,21 @@ exports[`Page snapshot: comparison 1`] = `
           </button>
           <button
             aria-pressed="true"
-            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 bg-text text-bg border-text hover:text-bg hover:border-text"
             type="button"
           >
             2022
           </button>
           <button
             aria-pressed="true"
-            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 bg-text text-bg border-text hover:text-bg hover:border-text"
             type="button"
           >
             2023
           </button>
           <button
             aria-pressed="true"
-            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint bg-text text-bg border-text hover:text-bg hover:border-text"
+            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 bg-text text-bg border-text hover:text-bg hover:border-text"
             type="button"
           >
             2024
