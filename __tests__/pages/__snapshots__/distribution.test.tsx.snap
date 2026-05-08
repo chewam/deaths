@@ -163,7 +163,7 @@ exports[`Page snapshot: distribution 1`] = `
               1.00%
             </text>
             <g
-              data-year="2020"
+              data-year="2000"
               style="cursor: pointer;"
             >
               <rect
@@ -351,7 +351,7 @@ exports[`Page snapshot: distribution 1`] = `
               </g>
             </g>
             <g
-              data-year="2021"
+              data-year="2001"
               style="cursor: pointer;"
             >
               <rect
@@ -550,7 +550,7 @@ exports[`Page snapshot: distribution 1`] = `
               </g>
             </g>
             <g
-              data-year="2022"
+              data-year="2002"
               style="cursor: pointer;"
             >
               <rect
@@ -749,7 +749,7 @@ exports[`Page snapshot: distribution 1`] = `
               </g>
             </g>
             <path
-              d="M 192.67 1518.57 L 450.00 1516.27 L 707.33 1515.42"
+              d="M 192.67 1504.86 L 450.00 1503.32 L 707.33 1501.83"
               fill="none"
               stroke="var(--color-danger)"
               stroke-linejoin="round"
@@ -760,7 +760,7 @@ exports[`Page snapshot: distribution 1`] = `
             >
               <circle
                 cx="192.66666666666666"
-                cy="1518.5741260902341"
+                cy="1504.8552695793874"
                 fill="var(--color-surface)"
                 r="3"
                 stroke="var(--color-danger)"
@@ -773,9 +773,9 @@ exports[`Page snapshot: distribution 1`] = `
                 font-weight="600"
                 text-anchor="middle"
                 x="192.66666666666666"
-                y="1510.5741260902341"
+                y="1496.8552695793874"
               >
-                0.08%
+                0.09%
               </text>
             </g>
             <g
@@ -783,7 +783,7 @@ exports[`Page snapshot: distribution 1`] = `
             >
               <circle
                 cx="450"
-                cy="1516.2718374736928"
+                cy="1503.319462611712"
                 fill="var(--color-surface)"
                 r="3"
                 stroke="var(--color-danger)"
@@ -795,7 +795,7 @@ exports[`Page snapshot: distribution 1`] = `
             >
               <circle
                 cx="707.3333333333333"
-                cy="1515.4203322777112"
+                cy="1501.8296332316636"
                 fill="var(--color-surface)"
                 r="3"
                 stroke="var(--color-danger)"
@@ -808,9 +808,9 @@ exports[`Page snapshot: distribution 1`] = `
                 font-weight="600"
                 text-anchor="middle"
                 x="707.3333333333333"
-                y="1507.4203322777112"
+                y="1493.8296332316636"
               >
-                0.08%
+                0.09%
               </text>
             </g>
             <text
@@ -822,7 +822,7 @@ exports[`Page snapshot: distribution 1`] = `
               x="192.66666666666666"
               y="430"
             >
-              2020
+              2000
             </text>
             <text
               class="font-mono"
@@ -833,7 +833,7 @@ exports[`Page snapshot: distribution 1`] = `
               x="450"
               y="430"
             >
-              2021
+              2001
             </text>
             <text
               class="font-mono"
@@ -844,7 +844,7 @@ exports[`Page snapshot: distribution 1`] = `
               x="707.3333333333333"
               y="430"
             >
-              2022
+              2002
             </text>
             <text
               class="font-mono uppercase"

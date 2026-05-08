@@ -8,9 +8,10 @@ import Comparison, {
   type ComparisonYearData,
 } from "@/components/views/Comparison"
 import { EVENTS_RAW } from "@/data/events"
+import useFilters from "@/services/filters"
 import useRawDeaths from "@/services/raw-deaths"
 import useYears from "@/services/years"
-import { sumYears } from "@/utils/index"
+import { computeFilteredMonthly } from "@/utils/filters"
 
 const monthKeys = [
   "January",
@@ -44,16 +45,17 @@ const Page = () => {
   const intl = useIntl()
   const [years] = useYears()
   const [deaths] = useRawDeaths()
+  const [filters] = useFilters()
   const partialYear = new Date().getFullYear()
 
   const data: ComparisonYearData[] = useMemo(() => {
-    const ageGroups = deaths?.ageGroups ?? []
+    const monthlyByYear = computeFilteredMonthly(deaths, filters)
     const yearsList = Object.keys(years || {})
     return yearsList.map((yearStr, i) => ({
       year: Number(yearStr),
-      monthly: sumYears(ageGroups.map((group) => group[i] || [])),
+      monthly: monthlyByYear[i] ?? [],
     }))
-  }, [years, deaths])
+  }, [years, deaths, filters])
 
   const sortedYears = useMemo(
     () => [...data].sort((a, b) => a.year - b.year),

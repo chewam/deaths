@@ -8,7 +8,7 @@ import Distribution, {
 import type { DistributionGender } from "@/components/charts/distribution-geometry"
 import useFilters from "@/services/filters"
 import useRawMortality from "@/services/raw-mortality"
-import { getYearPopulation } from "@/utils/index"
+import { computeFilteredAgeBuckets } from "@/utils/filters"
 
 const AGE_BUCKETS = [
   "0-9",
@@ -22,9 +22,6 @@ const AGE_BUCKETS = [
   "80-89",
   "90+",
 ] as const
-
-const sumColumn = (groups: number[][], i: number): number =>
-  groups.reduce((sum, group) => sum + (group[i] ?? 0), 0)
 
 const toViewGender = (g: Filters["gender"]): DistributionGender => {
   if (g === "male") return "m"
@@ -40,24 +37,14 @@ const Page = () => {
 
   const [hovered, setHovered] = useState<number | null>(null)
 
-  const years = useMemo(() => {
-    if (!rawData) return []
-    const data = rawData as unknown as MortalityRawData
-    return data.labels.map((yearStr, i) => {
-      const year = Number(yearStr)
-      const buckets = data.ageGroups.map((group) => group[i] ?? 0)
-      const totalDeaths = buckets.reduce((s, b) => s + b, 0)
-      const population = getYearPopulation(year) || 0
-      const rate = population > 0 ? (totalDeaths * 100) / population : 0
-      return {
-        year,
-        buckets,
-        rate,
-        m: sumColumn(data.male.ageGroups, i),
-        f: sumColumn(data.female.ageGroups, i),
-      }
-    })
-  }, [rawData])
+  const years = useMemo(
+    () =>
+      computeFilteredAgeBuckets(
+        rawData as unknown as MortalityRawData | undefined,
+        filters
+      ),
+    [rawData, filters]
+  )
 
   if (!rawData || !years.length) return null
 
