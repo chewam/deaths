@@ -55,8 +55,29 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
     await expect(page.getByRole("link", { name: /Comparaison/i })).toBeVisible()
     await expect(page.getByRole("link", { name: /Répartition/i })).toBeVisible()
 
+    await page.getByRole("link", { name: /Comparaison/i }).click()
+    await expect(page).toHaveURL(/\/fr\/comparison$/)
+    const comparisonPicker = page.getByTestId("comparison-picker")
+    await expect(comparisonPicker).toBeVisible({ timeout: 10_000 })
+    await expect(
+      comparisonPicker.getByText(/Sélectionner les années/i)
+    ).toBeVisible()
+
+    await page.getByRole("link", { name: /Répartition/i }).click()
+    await expect(page).toHaveURL(/\/fr\/distribution$/)
+    const distributionCard = page.getByTestId("distribution-card")
+    await expect(distributionCard).toBeVisible({ timeout: 10_000 })
+    await expect(
+      distributionCard.getByText("Décès par tranche d'âge", { exact: true })
+    ).toBeVisible()
+
     await page.getByTitle("english", { exact: true }).click()
-    await expect(page).toHaveURL(/\/overview$/)
+    await expect(page).toHaveURL(/\/distribution$/)
+    await expect(
+      distributionCard.getByText("Deaths by age", { exact: true })
+    ).toBeVisible({
+      timeout: 10_000,
+    })
     await expect(page.getByRole("link", { name: /^Overview$/ })).toBeVisible()
   })
 
