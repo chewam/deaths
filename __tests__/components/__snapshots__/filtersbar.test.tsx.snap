@@ -34,7 +34,7 @@ exports[`Filters Bar > should create a visible Filters Bar 1`] = `
         <input
           aria-label="Âge minimum"
           class="absolute inset-0 w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-moz-range-thumb]:pointer-events-auto"
-          max="110"
+          max="100"
           min="0"
           step="10"
           type="range"
@@ -44,7 +44,7 @@ exports[`Filters Bar > should create a visible Filters Bar 1`] = `
           aria-label="Âge maximum"
           class="absolute inset-0 w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-moz-range-thumb]:pointer-events-auto"
           max="110"
-          min="0"
+          min="10"
           step="10"
           type="range"
           value="110"

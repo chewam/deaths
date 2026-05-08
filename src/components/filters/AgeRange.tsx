@@ -28,26 +28,20 @@ const AgeRange = ({ value, onChange }: Props) => {
         type="range"
         aria-label={intl.formatMessage({ id: "Age minimum" })}
         min={MIN}
-        max={MAX}
+        max={high - STEP}
         step={STEP}
         value={low}
-        onChange={(e) => {
-          const next = Number(e.target.value)
-          onChange([Math.min(next, high - STEP), high])
-        }}
+        onChange={(e) => onChange([Number(e.target.value), high])}
         className={sliderCls}
       />
       <input
         type="range"
         aria-label={intl.formatMessage({ id: "Age maximum" })}
-        min={MIN}
+        min={low + STEP}
         max={MAX}
         step={STEP}
         value={high}
-        onChange={(e) => {
-          const next = Number(e.target.value)
-          onChange([low, Math.max(next, low + STEP)])
-        }}
+        onChange={(e) => onChange([low, Number(e.target.value)])}
         className={sliderCls}
       />
     </div>
