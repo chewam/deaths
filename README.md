@@ -1,12 +1,27 @@
 # deaths.chewam.com
 
-A web page to show statistics about deaths in France from year 2000 up to now, based on [INSEE data](https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees/).
+A web page showing French mortality statistics from 2000 onward, based on [INSEE data](https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees/).
+
+Live: <https://deaths.chewam.com>
 
 ![Preview](public/screenshot.png)
 
-## Install
+## Stack
 
-### Install dependencies
+| Area      | Tech                                                  |
+| --------- | ----------------------------------------------------- |
+| Framework | [Next.js 15](https://nextjs.org/) (Pages Router)      |
+| UI        | [React 19](https://react.dev/)                        |
+| Language  | [TypeScript 5](https://www.typescriptlang.org/)       |
+| Styling   | [Tailwind CSS 4](https://tailwindcss.com/)            |
+| Charts    | Inline SVG (custom, no third-party chart lib)         |
+| i18n      | [react-intl](https://formatjs.io/) — EN / FR          |
+| Unit      | [Vitest](https://vitest.dev/)                         |
+| E2E       | [Playwright](https://playwright.dev/) (behavior + visual) |
+| Perf      | [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) |
+| Errors    | [Sentry](https://sentry.io/)                          |
+
+## Install
 
 ```bash
 yarn
@@ -14,59 +29,47 @@ yarn
 
 ## Development
 
-### Run development version
-
 ```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open <http://localhost:3000>.
 
 ## Tests
 
-### Run code linter
+Three nets guard against regressions:
 
 ```bash
-yarn lint
+yarn test         # Vitest — unit tests on business logic (filters, calculations)
+yarn e2e          # Playwright — golden-path behavior on the 4 routes
+yarn e2e:visual   # Playwright — pixel-perfect screenshots vs baselines
 ```
 
-### Run types check
+Static checks:
 
 ```bash
-yarn type-check
+yarn lint         # ESLint
+yarn type-check   # tsc --noEmit
 ```
 
-### Run tests
+## Accessibility & Performance
 
-```bash
-yarn test
-```
+- **a11y**: zero `axe-core` violations on the 4 routes (`/`, `/overview`, `/comparison`, `/distribution`); WCAG AA contrast on the graphite palette.
+- **perf**: Lighthouse ≥ 0.9 on Performance / Accessibility / Best Practices / SEO for every route. Reproduce with `yarn lhci`. Baseline tracked in [`docs/perf.md`](docs/perf.md).
 
-## Built version
+## Internationalisation
 
-### Build application
+User-facing strings go through `react-intl` (`<Trans id="…">`). Keys live in [`src/lang/en.json`](src/lang/en.json) and [`src/lang/fr.json`](src/lang/fr.json) — keep the two files in parity.
+
+## Build
 
 ```bash
 yarn build
-```
-
-### Run built version
-
-```bash
-yarn start --port 3001
-```
-
-Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
-
-### Analyze Built version
-
-```bash
-yarn analyze
+yarn start --port 3001     # serve the production build
+yarn analyze               # bundle analyzer
 ```
 
 ## Update datasets
-
-### Download and process data files
 
 ```bash
 yarn update-data
@@ -74,4 +77,4 @@ yarn update-data
 
 ---
 
-[![github](https://github.com/chewam/mortality/workflows/Quality/badge.svg)](https://github.com/chewam/mortality/actions?query=workflow%3AQuality) &nbsp; [![github](https://github.com/chewam/mortality/workflows/Release/badge.svg)](https://github.com/chewam/mortality/actions?query=workflow%3ARelease) &nbsp; [![github](https://github.com/chewam/mortality/workflows/CodeQL/badge.svg)](https://github.com/chewam/mortality/actions?query=workflow%3ACodeQL) &nbsp; [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=chewam_deaths&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=chewam_deaths)
+[![Quality](https://github.com/chewam/mortality/workflows/Quality/badge.svg)](https://github.com/chewam/mortality/actions?query=workflow%3AQuality) &nbsp; [![Release](https://github.com/chewam/mortality/workflows/Release/badge.svg)](https://github.com/chewam/mortality/actions?query=workflow%3ARelease) &nbsp; [![CodeQL](https://github.com/chewam/mortality/workflows/CodeQL/badge.svg)](https://github.com/chewam/mortality/actions?query=workflow%3ACodeQL) &nbsp; [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=chewam_deaths&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=chewam_deaths)
