@@ -35,15 +35,19 @@ const Page = () => {
 
   const data: YearData[] = useMemo(() => {
     const monthlyByYear = computeFilteredMonthly(deaths, filters)
+    const allAgesByYear = computeFilteredMonthly(deaths, undefined)
     const yearsList = Object.keys(years || {})
     return yearsList.map((yearStr, i) => {
       const year = Number(yearStr)
       const pop = getYearPopulation(year) || 0
       const monthly = monthlyByYear[i] ?? []
       const totalDeaths = sumArray(monthly)
+      // Rate stays the all-ages all-genders rate so the TrendChart curve
+      // stays inside TREND_RATE_DOMAIN (0.8–1.05) under any filter.
+      const totalAllAges = sumArray(allAgesByYear[i] ?? [])
       return {
         year,
-        rate: pop > 0 ? (totalDeaths * 100) / pop : 0,
+        rate: pop > 0 ? (totalAllAges * 100) / pop : 0,
         deaths: totalDeaths,
         pop,
         monthly,
