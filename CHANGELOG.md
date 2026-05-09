@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/chewam/mortality/compare/v2.0.1...v2.0.2) (2026-05-09)
+
+
+### Bug Fixes
+
+* align prod with NEW_VERSION canonical reference (16 items) ([#307](https://github.com/chewam/mortality/issues/307)) ([fe31e8c](https://github.com/chewam/mortality/commit/fe31e8cf11a7d0a07d4dd9436a8985e849fc77a2))
+
 ## [2.0.1](https://github.com/chewam/mortality/compare/v2.0.0...v2.0.1) (2026-05-09)
 
 
