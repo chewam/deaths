@@ -151,6 +151,36 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
     expect(errors, `unexpected pageerror(s):\n${errors.join("\n")}`).toEqual([])
   })
 
+  test("home grid shows the FiltersBar and reacts to gender selection", async ({
+    page,
+  }) => {
+    await page.goto("/")
+
+    // FiltersBar is now visible on /, not just on the inner views.
+    const ageRange = page.getByTestId("filter-age-range")
+    const all = page.getByTestId("filter-gender-all")
+    const male = page.getByTestId("filter-gender-male")
+    await expect(ageRange).toBeVisible()
+    await expect(all).toBeVisible()
+    await expect(male).toBeVisible()
+
+    // Pick a stable, non-partial year card and capture its deaths line.
+    const card2024 = page.locator('button[data-year="2024"]')
+    await expect(card2024).toBeVisible({ timeout: 10_000 })
+    const allText = (await card2024.textContent()) ?? ""
+    const allDeaths = allText.match(/([\d.,\s]+)Deaths/i)?.[1]
+    expect(allDeaths).toBeTruthy()
+
+    await male.click()
+    await expect(male).toHaveAttribute("aria-pressed", "true")
+    await page.waitForTimeout(CHART_SETTLE_MS)
+    const maleText = (await card2024.textContent()) ?? ""
+    const maleDeaths = maleText.match(/([\d.,\s]+)Deaths/i)?.[1]
+    expect(maleDeaths).toBeTruthy()
+    // Filtered total must change (men ≠ everyone).
+    expect(maleDeaths).not.toBe(allDeaths)
+  })
+
   test("comparison year toggle adds and removes a series", async ({ page }) => {
     await page.goto("/comparison")
 

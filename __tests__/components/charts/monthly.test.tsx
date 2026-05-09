@@ -98,6 +98,17 @@ describe("Monthly", () => {
     expect(screen.getByText("COVID")).toBeInTheDocument()
   })
 
+  test("single mode: event annotation lands at the data point's x (1-indexed month)", () => {
+    // events.ts stores month 1-indexed (Jan=1). Regression guard: previously
+    // `xs[ev.month]` rendered the annotation one month late (month=2 → March).
+    // Should match February's data-point x (index 1).
+    const { container } = render(<Monthly {...baseProps} mode="single" />)
+    const points = container.querySelectorAll('circle[r="2.5"]')
+    const febPointX = points[1]!.getAttribute("cx")
+    const annotationCircle = container.querySelector('circle[r="6"]')
+    expect(annotationCircle?.getAttribute("cx")).toBe(febPointX)
+  })
+
   test("compare mode: renders one line per selected year + a legend, no events", () => {
     const { container } = render(
       <Monthly {...baseProps} mode="compare" selected={[2018, 2020]} />
