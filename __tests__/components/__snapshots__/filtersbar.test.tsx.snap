@@ -1,8 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Filters Bar > should create a hidden Filters Bar 1`] = `<DocumentFragment />`;
-
-exports[`Filters Bar > should create a visible Filters Bar 1`] = `
+exports[`Filters Bar > renders identically on every route 1`] = `
 <DocumentFragment>
   <div
     class="border-border border-b px-12 py-3.5 flex flex-wrap items-center gap-8"
@@ -81,7 +79,7 @@ exports[`Filters Bar > should create a visible Filters Bar 1`] = `
           >
             ♂
           </span>
-           Hommes
+           Homme
         </button>
         <button
           aria-pressed="false"
@@ -94,7 +92,7 @@ exports[`Filters Bar > should create a visible Filters Bar 1`] = `
           >
             ♀
           </span>
-           Femmes
+           Femme
         </button>
       </div>
     </div>

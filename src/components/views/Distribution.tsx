@@ -23,10 +23,12 @@ export type DistributionProps = {
   compact?: boolean
 }
 
+// Bar value labels look cleaner as integer K (e.g. 170K, not 169.6K).
+// Millions still get one decimal (e.g. 68.6M) for readable totals.
 const fmtCompact = (n: number, locale: string): string =>
   new Intl.NumberFormat(locale, {
     notation: "compact",
-    maximumFractionDigits: 1,
+    maximumFractionDigits: Math.abs(n) >= 1e6 ? 1 : 0,
   }).format(n)
 
 const Distribution = ({

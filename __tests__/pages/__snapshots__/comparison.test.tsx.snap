@@ -34,7 +34,7 @@ exports[`Page snapshot: comparison 1`] = `
           class="relative w-full"
         >
           <svg
-            aria-label="Nombre de décès · 2022, 2023, 2024"
+            aria-label="Décès · 2020, 2022, 2024"
             height="420"
             role="img"
             style="display: block; overflow: visible;"
@@ -231,7 +231,7 @@ exports[`Page snapshot: comparison 1`] = `
               x="577.8181818181819"
               y="392"
             >
-              Aou
+              Aoû
             </text>
             <text
               class="font-mono uppercase"
@@ -275,11 +275,11 @@ exports[`Page snapshot: comparison 1`] = `
               x="876"
               y="392"
             >
-              Dec
+              Déc
             </text>
             <g>
               <path
-                d="M 56.00 150.21 L 130.55 149.78 L 205.09 149.36 L 279.64 148.94 L 354.18 148.52 L 428.73 148.09 L 503.27 147.67 L 577.82 147.25 L 652.36 146.83 L 726.91 146.40 L 801.45 145.98 L 876.00 145.56"
+                d="M 56.00 150.22 L 130.55 149.79 L 205.09 149.37 L 279.64 148.95 L 354.18 148.53 L 428.73 148.10 L 503.27 147.68 L 577.82 147.26 L 652.36 146.84 L 726.91 146.41 L 801.45 145.99 L 876.00 145.57"
                 fill="none"
                 stroke="var(--color-accent)"
                 stroke-linecap="round"
@@ -289,7 +289,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="56"
-                  cy="150.20704999999998"
+                  cy="150.21550000000002"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -297,7 +297,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="56"
-                  cy="150.20704999999998"
+                  cy="150.21550000000002"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -306,7 +306,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="130.54545454545456"
-                  cy="149.78455"
+                  cy="149.793"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -314,7 +314,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="130.54545454545456"
-                  cy="149.78455"
+                  cy="149.793"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -323,7 +323,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="205.0909090909091"
-                  cy="149.36205"
+                  cy="149.3705"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -331,7 +331,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="205.0909090909091"
-                  cy="149.36205"
+                  cy="149.3705"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -340,7 +340,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="279.6363636363636"
-                  cy="148.93955"
+                  cy="148.94799999999998"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -348,7 +348,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="279.6363636363636"
-                  cy="148.93955"
+                  cy="148.94799999999998"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -357,7 +357,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="354.1818181818182"
-                  cy="148.51704999999998"
+                  cy="148.5255"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -365,7 +365,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="354.1818181818182"
-                  cy="148.51704999999998"
+                  cy="148.5255"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -374,7 +374,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="428.72727272727275"
-                  cy="148.09455"
+                  cy="148.103"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -382,7 +382,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="428.72727272727275"
-                  cy="148.09455"
+                  cy="148.103"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -391,7 +391,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="503.27272727272725"
-                  cy="147.67205"
+                  cy="147.68050000000002"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -399,7 +399,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="503.27272727272725"
-                  cy="147.67205"
+                  cy="147.68050000000002"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -408,7 +408,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="577.8181818181819"
-                  cy="147.24955"
+                  cy="147.25799999999998"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -416,7 +416,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="577.8181818181819"
-                  cy="147.24955"
+                  cy="147.25799999999998"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -425,7 +425,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="652.3636363636364"
-                  cy="146.82705"
+                  cy="146.8355"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -433,7 +433,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="652.3636363636364"
-                  cy="146.82705"
+                  cy="146.8355"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -442,7 +442,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="726.9090909090909"
-                  cy="146.40454999999997"
+                  cy="146.413"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -450,7 +450,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="726.9090909090909"
-                  cy="146.40454999999997"
+                  cy="146.413"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -459,7 +459,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="801.4545454545455"
-                  cy="145.98205000000002"
+                  cy="145.9905"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -467,7 +467,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="801.4545454545455"
-                  cy="145.98205000000002"
+                  cy="145.9905"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -476,7 +476,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="876"
-                  cy="145.55955"
+                  cy="145.56799999999998"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-accent)"
@@ -484,7 +484,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="876"
-                  cy="145.55955"
+                  cy="145.56799999999998"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -493,7 +493,7 @@ exports[`Page snapshot: comparison 1`] = `
             </g>
             <g>
               <path
-                d="M 56.00 150.20 L 130.55 149.78 L 205.09 149.36 L 279.64 148.94 L 354.18 148.51 L 428.73 148.09 L 503.27 147.67 L 577.82 147.25 L 652.36 146.82 L 726.91 146.40 L 801.45 145.98 L 876.00 145.56"
+                d="M 56.00 150.21 L 130.55 149.78 L 205.09 149.36 L 279.64 148.94 L 354.18 148.52 L 428.73 148.09 L 503.27 147.67 L 577.82 147.25 L 652.36 146.83 L 726.91 146.40 L 801.45 145.98 L 876.00 145.56"
                 fill="none"
                 stroke="var(--color-male)"
                 stroke-linecap="round"
@@ -503,7 +503,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="56"
-                  cy="150.202825"
+                  cy="150.20704999999998"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -511,7 +511,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="56"
-                  cy="150.202825"
+                  cy="150.20704999999998"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -520,7 +520,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="130.54545454545456"
-                  cy="149.780325"
+                  cy="149.78455"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -528,7 +528,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="130.54545454545456"
-                  cy="149.780325"
+                  cy="149.78455"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -537,7 +537,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="205.0909090909091"
-                  cy="149.357825"
+                  cy="149.36205"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -545,7 +545,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="205.0909090909091"
-                  cy="149.357825"
+                  cy="149.36205"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -554,7 +554,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="279.6363636363636"
-                  cy="148.93532499999998"
+                  cy="148.93955"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -562,7 +562,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="279.6363636363636"
-                  cy="148.93532499999998"
+                  cy="148.93955"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -571,7 +571,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="354.1818181818182"
-                  cy="148.512825"
+                  cy="148.51704999999998"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -579,7 +579,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="354.1818181818182"
-                  cy="148.512825"
+                  cy="148.51704999999998"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -588,7 +588,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="428.72727272727275"
-                  cy="148.090325"
+                  cy="148.09455"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -596,7 +596,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="428.72727272727275"
-                  cy="148.090325"
+                  cy="148.09455"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -605,7 +605,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="503.27272727272725"
-                  cy="147.667825"
+                  cy="147.67205"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -613,7 +613,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="503.27272727272725"
-                  cy="147.667825"
+                  cy="147.67205"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -622,7 +622,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="577.8181818181819"
-                  cy="147.24532499999998"
+                  cy="147.24955"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -630,7 +630,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="577.8181818181819"
-                  cy="147.24532499999998"
+                  cy="147.24955"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -639,7 +639,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="652.3636363636364"
-                  cy="146.822825"
+                  cy="146.82705"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -647,7 +647,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="652.3636363636364"
-                  cy="146.822825"
+                  cy="146.82705"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -656,7 +656,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="726.9090909090909"
-                  cy="146.400325"
+                  cy="146.40454999999997"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -664,7 +664,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="726.9090909090909"
-                  cy="146.400325"
+                  cy="146.40454999999997"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -673,7 +673,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="801.4545454545455"
-                  cy="145.977825"
+                  cy="145.98205000000002"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -681,7 +681,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="801.4545454545455"
-                  cy="145.977825"
+                  cy="145.98205000000002"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -690,7 +690,7 @@ exports[`Page snapshot: comparison 1`] = `
               <g>
                 <circle
                   cx="876"
-                  cy="145.55532500000004"
+                  cy="145.55955"
                   fill="var(--color-surface)"
                   r="2.5"
                   stroke="var(--color-male)"
@@ -698,7 +698,7 @@ exports[`Page snapshot: comparison 1`] = `
                 />
                 <circle
                   cx="876"
-                  cy="145.55532500000004"
+                  cy="145.55955"
                   fill="transparent"
                   r="14"
                   style="cursor: pointer;"
@@ -940,7 +940,7 @@ exports[`Page snapshot: comparison 1`] = `
                   x="20"
                   y="3"
                 >
-                  2022
+                  2020
                 </text>
               </g>
               <g
@@ -961,7 +961,7 @@ exports[`Page snapshot: comparison 1`] = `
                   x="20"
                   y="3"
                 >
-                  2023
+                  2022
                 </text>
               </g>
               <g
@@ -1002,8 +1002,8 @@ exports[`Page snapshot: comparison 1`] = `
           style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;"
         >
           <button
-            aria-pressed="false"
-            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint"
+            aria-pressed="true"
+            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 bg-text text-bg border-text hover:text-bg hover:border-text"
             type="button"
           >
             2020
@@ -1023,8 +1023,8 @@ exports[`Page snapshot: comparison 1`] = `
             2022
           </button>
           <button
-            aria-pressed="true"
-            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 bg-text text-bg border-text hover:text-bg hover:border-text"
+            aria-pressed="false"
+            class="font-mono text-[10.5px] tracking-[0.08em] uppercase px-[9px] py-[5px] border cursor-pointer transition-all duration-150 border-border bg-surface text-text-dim hover:text-text hover:border-text-faint"
             type="button"
           >
             2023

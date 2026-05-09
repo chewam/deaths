@@ -96,7 +96,7 @@ const Page = () => {
     partial: intl.formatMessage({ id: "Partial" }),
     sinceAvg: intl.formatMessage({ id: "since avg" }),
     trend: intl.formatMessage({ id: "Trend" }),
-    trendSubtitle: intl.formatMessage({ id: "Mortality rate trend subtitle" }),
+    trendSubtitle: intl.formatMessage({ id: "subtitle" }),
     rateMin: intl.formatMessage({ id: "Rate min" }),
     rateMax: intl.formatMessage({ id: "Rate max" }),
     avgLabel: intl.formatMessage({ id: "AVG" }),
