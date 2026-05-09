@@ -1,0 +1,15 @@
+.next/
+node_modules/
+coverage/
+out/
+playwright-report/
+test-results/
+.lighthouseci/
+NEW_VERSION/
+public/data/
+src/data/
+yarn.lock
+*.min.js
+*.min.css
+CHANGELOG.md
+.claude/

@@ -10,12 +10,6 @@ const Head = () => {
       <title>{fm({ id: "Mortality in France" })}</title>
       <meta name="robots" content="all" />
       <link rel="icon" href="/favicon.ico" />
-      <link
-        as="font"
-        rel="preload"
-        crossOrigin=""
-        href="/fonts/Roboto-Regular.ttf"
-      />
       <meta
         property="og:title"
         content="Les chiffres de la mortalité en France"

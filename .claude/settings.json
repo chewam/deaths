@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '%s' '{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":\"[refactor v2 — chewam/mortality] Active branch: alpha. Before working on a sub-issue, invoke /start-task <num>. When done, /finish-task <num>. Full plan + conventions: CLAUDE.md at repo root.\"}}'"
+          }
+        ]
+      }
+    ]
+  }
+}

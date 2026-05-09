@@ -9,8 +9,12 @@ import FiltersBar from "@/components/FiltersBar"
 import { Analytics } from "@vercel/analytics/react"
 
 import "remixicon/fonts/remixicon.css"
-import "@/styles/tailwind.scss"
-import "@/styles/globals.scss"
+import "@/styles/tailwind.css"
+import "@/styles/globals.css"
+// Side-effect import: ensures next/font CSS is bundled into the pages chunk.
+// `_document.tsx` references the same module to attach the className to <Html>,
+// but a Pages Router _document.tsx import alone does not pull the CSS in.
+import "@/styles/fonts"
 
 import en from "@/lang/en.json"
 import fr from "@/lang/fr.json"
@@ -37,7 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <Footer />
       </IntlProvider>
-      <Analytics />
+      {process.env.NEXT_PUBLIC_VERCEL_ENV ? <Analytics /> : null}
     </>
   )
 }

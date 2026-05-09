@@ -1,38 +1,41 @@
-import { useIntl } from "react-intl"
-import { useState, useEffect } from "react"
+import { FormattedMessage as Trans } from "react-intl"
+
+import { Pill } from "@/components/atoms"
 
 interface Props {
+  value: Gender
   onChange: (gender: Gender) => void
 }
 
-const Genders = ({ onChange }: Props) => {
-  const { formatMessage: fm } = useIntl()
-  const [gender, setGender] = useState(null as Gender)
-
-  useEffect(() => onChange(gender), [gender, onChange])
-
-  return (
-    <div className="genders">
-      <i
-        tabIndex={0}
-        role="checkbox"
-        aria-hidden="true"
-        aria-checked="false"
-        title={fm({ id: "males" })}
-        onClick={() => setGender(gender === "male" ? null : "male")}
-        className={`ri-men-line ${gender === "male" ? "active" : ""}`}
-      ></i>
-      <i
-        tabIndex={0}
-        role="checkbox"
-        aria-hidden="true"
-        aria-checked="false"
-        title={fm({ id: "females" })}
-        onClick={() => setGender(gender === "female" ? null : "female")}
-        className={`ri-women-line ${gender === "female" ? "active" : ""}`}
-      ></i>
-    </div>
-  )
-}
+const Genders = ({ value, onChange }: Props) => (
+  <div className="inline-flex">
+    <Pill
+      active={value === null}
+      aria-pressed={value === null}
+      data-testid="filter-gender-all"
+      onClick={() => onChange(null)}
+    >
+      <Trans id="all" />
+    </Pill>
+    <Pill
+      active={value === "male"}
+      aria-pressed={value === "male"}
+      data-testid="filter-gender-male"
+      className="-ml-px"
+      onClick={() => onChange("male")}
+    >
+      <span aria-hidden="true">♂</span> <Trans id="males" />
+    </Pill>
+    <Pill
+      active={value === "female"}
+      aria-pressed={value === "female"}
+      data-testid="filter-gender-female"
+      className="-ml-px"
+      onClick={() => onChange("female")}
+    >
+      <span aria-hidden="true">♀</span> <Trans id="females" />
+    </Pill>
+  </div>
+)
 
 export default Genders

@@ -87,7 +87,9 @@ const main = async () => {
 
   await build()
 
-  const newHash = hash(fs.readFileSync(`${__dirname}/../public/data/deaths.json`))
+  const newHash = hash(
+    fs.readFileSync(`${__dirname}/../public/data/deaths.json`)
+  )
 
   console.log("New json file hash:", newHash)
 

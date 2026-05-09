@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import messages from "@/lang/fr.json"
 import { IntlProvider } from "react-intl"
 import { render } from "@testing-library/react"
@@ -13,7 +10,7 @@ if (typeof window !== "undefined") {
 }
 
 test("Page snapshot: index", () => {
-  jest.mock("next/router", () => ({
+  vi.mock("next/router", () => ({
     useRouter() {
       return {
         locale: "fr",

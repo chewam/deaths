@@ -6,34 +6,46 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 8,
-    sourceType: "module"
+    sourceType: "module",
   },
-  ignorePatterns: ["node_modules/*", ".next/*", ".out/*", "!.prettierrc.js"],
+  ignorePatterns: [
+    "node_modules/*",
+    ".next/*",
+    ".out/*",
+    "NEW_VERSION/*",
+    "next-env.d.ts",
+    "coverage/*",
+    "playwright-report/*",
+    "test-results/*",
+    "!.prettierrc.js",
+  ],
   extends: ["eslint:recommended"],
-  overrides: [{
-    files: ["**/*.ts", "**/*.tsx"],
-    parser: "@typescript-eslint/parser",
-    settings: { react: { version: "detect" } },
-    plugins: ["react", "@typescript-eslint"],
-    env: {
-      browser: true,
-      node: true,
-      es6: true,
+  overrides: [
+    {
+      files: ["**/*.ts", "**/*.tsx"],
+      parser: "@typescript-eslint/parser",
+      settings: { react: { version: "detect" } },
+      plugins: ["react", "@typescript-eslint"],
+      env: {
+        browser: true,
+        node: true,
+        es6: true,
+      },
+      extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:prettier/recommended",
+      ],
+      rules: {
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "prettier/prettier": ["error", {}, { usePrettierrc: true }],
+      },
     },
-    extends: [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:react/recommended",
-      "plugin:react-hooks/recommended",
-      "plugin:jsx-a11y/recommended",
-      "plugin:prettier/recommended",
-    ],
-    rules: {
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-      "jsx-a11y/anchor-is-valid": "off",
-      "@typescript-eslint/no-unused-vars": ["error"],
-      'prettier/prettier': ['error', {}, { usePrettierrc: true }],
-    },
-  }],
+  ],
 }

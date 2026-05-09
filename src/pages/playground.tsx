@@ -1,0 +1,749 @@
+import { useState } from "react"
+import { Card, Label, Mini, NavBtn, Pill, Stat } from "@/components/atoms"
+import Distribution, {
+  type DistributionLabels,
+} from "@/components/charts/Distribution"
+import type {
+  DistributionGender,
+  DistributionYear,
+} from "@/components/charts/distribution-geometry"
+import Monthly, {
+  type MonthlyLabels,
+  type MonthlyMode,
+} from "@/components/charts/Monthly"
+import type {
+  MonthlyEvent,
+  MonthlyHover,
+  MonthlyYear,
+} from "@/components/charts/monthly-geometry"
+import Trend, { type TrendChartType } from "@/components/charts/Trend"
+import type { TrendYear } from "@/components/charts/trend-geometry"
+import Comparison, {
+  type ComparisonLabels,
+  type ComparisonYearData,
+} from "@/components/views/Comparison"
+import DistributionView, {
+  type DistributionViewLabels,
+} from "@/components/views/Distribution"
+import OverviewGrid, {
+  type OverviewGridLabels,
+  type OverviewYear,
+} from "@/components/views/OverviewGrid"
+import Year, { type YearData, type YearLabels } from "@/components/views/Year"
+import type { YearEvent } from "@/data/events"
+
+const Section = ({
+  title,
+  children,
+}: {
+  title: string
+  children: React.ReactNode
+}) => (
+  <section className="flex flex-col gap-4">
+    <Label>{title}</Label>
+    <div className="flex flex-wrap items-start gap-6">{children}</div>
+  </section>
+)
+
+const TREND_SAMPLE: TrendYear[] = [
+  { year: 2000, rate: 0.92, deaths: 540_601, pop: 60_508_150 },
+  { year: 2001, rate: 0.9, deaths: 541_028, pop: 61_181_560 },
+  { year: 2002, rate: 0.91, deaths: 545_204, pop: 61_804_087 },
+  { year: 2003, rate: 0.95, deaths: 562_528, pop: 62_417_680 },
+  { year: 2004, rate: 0.86, deaths: 519_470, pop: 62_998_773 },
+  { year: 2005, rate: 0.88, deaths: 538_080, pop: 63_513_032 },
+  { year: 2006, rate: 0.84, deaths: 521_016, pop: 64_013_300 },
+  { year: 2007, rate: 0.84, deaths: 531_162, pop: 64_374_990 },
+  { year: 2008, rate: 0.85, deaths: 542_562, pop: 64_703_519 },
+  { year: 2009, rate: 0.85, deaths: 548_541, pop: 65_005_785 },
+  { year: 2010, rate: 0.86, deaths: 551_218, pop: 65_276_983 },
+  { year: 2011, rate: 0.84, deaths: 545_057, pop: 65_523_980 },
+  { year: 2012, rate: 0.87, deaths: 569_868, pop: 65_802_785 },
+  { year: 2013, rate: 0.87, deaths: 569_236, pop: 66_073_000 },
+  { year: 2014, rate: 0.85, deaths: 559_293, pop: 66_311_000 },
+  { year: 2015, rate: 0.9, deaths: 593_680, pop: 66_548_272 },
+  { year: 2016, rate: 0.89, deaths: 593_865, pop: 66_724_103 },
+  { year: 2017, rate: 0.91, deaths: 606_274, pop: 66_864_408 },
+  { year: 2018, rate: 0.91, deaths: 609_648, pop: 66_977_107 },
+  { year: 2019, rate: 0.91, deaths: 613_243, pop: 67_063_703 },
+  { year: 2020, rate: 0.99, deaths: 668_922, pop: 67_287_241 },
+  { year: 2021, rate: 0.97, deaths: 660_168, pop: 67_499_343 },
+]
+
+const TREND_LABELS = {
+  mortalityRate: "Mortality rate",
+  deathsCount: "Deaths",
+  population: "Population",
+  avgLabel: "AVG",
+}
+
+const MONTHLY_SAMPLE: MonthlyYear[] = [
+  {
+    year: 2018,
+    monthly: [
+      57_842, 64_119, 56_996, 50_874, 47_249, 45_523, 47_178, 47_044, 45_890,
+      50_140, 51_344, 53_401,
+    ],
+  },
+  {
+    year: 2019,
+    monthly: [
+      59_173, 51_607, 51_810, 49_419, 49_259, 48_268, 50_511, 47_366, 47_152,
+      52_257, 51_507, 53_676,
+    ],
+  },
+  {
+    year: 2020,
+    monthly: [
+      55_503, 50_192, 65_405, 78_625, 50_899, 47_519, 47_837, 47_995, 47_887,
+      54_403, 64_135, 65_560,
+    ],
+  },
+  {
+    year: 2021,
+    monthly: [
+      66_830, 53_690, 56_274, 56_400, 50_640, 49_054, 50_138, 49_853, 47_708,
+      50_794, 53_220, 55_625,
+    ],
+  },
+]
+
+const MONTHLY_LABELS: MonthlyLabels = {
+  months: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ],
+  monthsLong: [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ],
+  deathsCount: "Deaths",
+}
+
+const MONTHLY_EVENTS: MonthlyEvent[] = [
+  { year: 2020, month: 2, label: "COVID-19" },
+  { year: 2020, month: 10, label: "2nd wave" },
+]
+
+const DISTRIBUTION_SAMPLE: DistributionYear[] = [
+  {
+    year: 2017,
+    buckets: [
+      1_990, 1_240, 2_810, 5_090, 11_830, 31_230, 70_220, 156_340, 218_650,
+      106_874,
+    ],
+    rate: 0.91,
+    m: 290_840,
+    f: 315_434,
+  },
+  {
+    year: 2018,
+    buckets: [
+      1_950, 1_220, 2_780, 5_010, 11_690, 30_910, 69_540, 154_830, 217_220,
+      114_498,
+    ],
+    rate: 0.91,
+    m: 292_410,
+    f: 317_238,
+  },
+  {
+    year: 2019,
+    buckets: [
+      1_900, 1_180, 2_700, 4_870, 11_350, 30_010, 67_410, 150_300, 215_430,
+      128_093,
+    ],
+    rate: 0.91,
+    m: 294_010,
+    f: 319_233,
+  },
+  {
+    year: 2020,
+    buckets: [
+      2_010, 1_310, 2_960, 5_310, 12_360, 32_650, 73_130, 162_990, 232_870,
+      143_332,
+    ],
+    rate: 0.99,
+    m: 322_510,
+    f: 346_412,
+  },
+  {
+    year: 2021,
+    buckets: [
+      1_980, 1_290, 2_910, 5_220, 12_140, 32_080, 71_890, 160_220, 229_530,
+      142_908,
+    ],
+    rate: 0.97,
+    m: 318_420,
+    f: 341_748,
+  },
+]
+
+const OVERVIEW_GRID_SAMPLE: OverviewYear[] = [
+  {
+    year: 2014,
+    rate: 0.844,
+    deaths: 559_293,
+    pop: 66_311_000,
+    buckets: [
+      1_770, 1_080, 2_530, 4_530, 10_580, 27_950, 62_770, 139_990, 200_710,
+      107_383,
+    ],
+  },
+  {
+    year: 2015,
+    rate: 0.892,
+    deaths: 593_680,
+    pop: 66_548_272,
+    buckets: [
+      1_870, 1_140, 2_680, 4_790, 11_180, 29_550, 66_360, 148_010, 212_240,
+      115_860,
+    ],
+  },
+  {
+    year: 2016,
+    rate: 0.89,
+    deaths: 593_865,
+    pop: 66_724_103,
+    buckets: [
+      1_860, 1_140, 2_670, 4_780, 11_150, 29_460, 66_160, 147_550, 211_590,
+      117_505,
+    ],
+  },
+  {
+    year: 2017,
+    rate: 0.907,
+    deaths: 606_274,
+    pop: 66_864_408,
+    buckets: [
+      1_900, 1_160, 2_720, 4_890, 11_410, 30_120, 67_650, 150_860, 216_330,
+      119_234,
+    ],
+  },
+  {
+    year: 2018,
+    rate: 0.91,
+    deaths: 609_648,
+    pop: 66_977_107,
+    buckets: [
+      1_910, 1_170, 2_740, 4_910, 11_460, 30_270, 68_000, 151_570, 217_360,
+      120_258,
+    ],
+  },
+  {
+    year: 2019,
+    rate: 0.914,
+    deaths: 613_243,
+    pop: 67_063_703,
+    buckets: [
+      1_900, 1_180, 2_700, 4_870, 11_350, 30_010, 67_410, 150_300, 215_430,
+      128_093,
+    ],
+  },
+  {
+    year: 2020,
+    rate: 0.994,
+    deaths: 668_922,
+    pop: 67_287_241,
+    buckets: [
+      2_010, 1_310, 2_960, 5_310, 12_360, 32_650, 73_130, 162_990, 232_870,
+      143_332,
+    ],
+  },
+  {
+    year: 2021,
+    rate: 0.978,
+    deaths: 660_168,
+    pop: 67_499_343,
+    buckets: [
+      1_980, 1_290, 2_910, 5_220, 12_140, 32_080, 71_890, 160_220, 229_530,
+      142_908,
+    ],
+  },
+  {
+    year: 2022,
+    rate: 1.005,
+    deaths: 679_190,
+    pop: 67_580_000,
+    buckets: [
+      2_040, 1_330, 3_000, 5_390, 12_540, 33_120, 74_220, 165_350, 236_470,
+      145_730,
+    ],
+  },
+  {
+    year: 2023,
+    rate: 0.943,
+    deaths: 637_500,
+    pop: 67_600_000,
+    buckets: [
+      1_910, 1_240, 2_810, 5_050, 11_770, 31_080, 69_660, 155_180, 221_910,
+      136_890,
+    ],
+  },
+  {
+    year: 2024,
+    rate: 0.948,
+    deaths: 641_200,
+    pop: 67_650_000,
+    buckets: [
+      1_920, 1_250, 2_820, 5_070, 11_830, 31_220, 69_980, 155_900, 222_940,
+      138_270,
+    ],
+  },
+  {
+    year: 2025,
+    rate: 0.926,
+    deaths: 626_300,
+    pop: 67_650_000,
+    buckets: [
+      1_870, 1_220, 2_750, 4_950, 11_550, 30_500, 68_350, 152_250, 217_730,
+      135_135,
+    ],
+  },
+  {
+    year: 2026,
+    rate: 0.231,
+    deaths: 156_400,
+    pop: 67_700_000,
+    buckets: [
+      470, 300, 690, 1_240, 2_890, 7_620, 17_080, 38_050, 54_440, 33_620,
+    ],
+  },
+]
+
+const OVERVIEW_GRID_LABELS: OverviewGridLabels = {
+  mortalityRate: "Mortality rate",
+  deathsCount: "Deaths",
+  population: "Population",
+  partial: "Partial",
+}
+
+const YEAR_SAMPLE: YearData[] = [
+  {
+    year: 2018,
+    rate: 0.91,
+    deaths: 609_648,
+    pop: 66_977_107,
+    monthly: [
+      57_842, 64_119, 56_996, 50_874, 47_249, 45_523, 47_178, 47_044, 45_890,
+      50_140, 51_344, 53_401,
+    ],
+  },
+  {
+    year: 2019,
+    rate: 0.914,
+    deaths: 613_243,
+    pop: 67_063_703,
+    monthly: [
+      59_173, 51_607, 51_810, 49_419, 49_259, 48_268, 50_511, 47_366, 47_152,
+      52_257, 51_507, 53_676,
+    ],
+  },
+  {
+    year: 2020,
+    rate: 0.994,
+    deaths: 668_922,
+    pop: 67_287_241,
+    monthly: [
+      55_503, 50_192, 65_405, 78_625, 50_899, 47_519, 47_837, 47_995, 47_887,
+      54_403, 64_135, 65_560,
+    ],
+  },
+  {
+    year: 2021,
+    rate: 0.978,
+    deaths: 660_168,
+    pop: 67_499_343,
+    monthly: [
+      66_830, 53_690, 56_274, 56_400, 50_640, 49_054, 50_138, 49_853, 47_708,
+      50_794, 53_220, 55_625,
+    ],
+  },
+  {
+    year: 2022,
+    rate: 1.005,
+    deaths: 679_190,
+    pop: 67_580_000,
+    monthly: [
+      66_720, 54_310, 56_020, 53_440, 50_010, 51_230, 56_780, 58_910, 49_450,
+      51_820, 53_870, 56_640,
+    ],
+  },
+]
+
+const YEAR_LABELS: YearLabels = {
+  mortalityRate: "Mortality rate",
+  deathsCount: "Deaths",
+  population: "Population",
+  yearOverYear: "Year-over-year",
+  partial: "PARTIAL",
+  sinceAvg: "since avg",
+  trend: "Trend",
+  trendSubtitle: "Annual rate over the selected window",
+  rateMin: "Rate min",
+  rateMax: "Rate max",
+  avgLabel: "AVG",
+  monthlyDeaths: "Monthly deaths",
+  monthlySubtitle: "Compared to previous years (in grey)",
+  peak: "Peak",
+  months: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ],
+  monthsLong: [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ],
+  notableEvents: "Notable events",
+  yearLabel: "Year",
+}
+
+const YEAR_EVENTS: YearEvent[] = [
+  {
+    year: 2020,
+    month: 4,
+    label: "COVID-19 first wave",
+    desc: "Initial pandemic wave; first lockdown",
+  },
+  {
+    year: 2020,
+    month: 11,
+    label: "COVID-19 second wave",
+    desc: "Autumn 2020 pandemic resurgence",
+  },
+  {
+    year: 2022,
+    month: 7,
+    label: "Summer 2022 heatwaves",
+    desc: "Multiple heatwaves across summer",
+  },
+]
+
+const COMPARISON_SAMPLE: ComparisonYearData[] = YEAR_SAMPLE.map((y) => ({
+  year: y.year,
+  monthly: y.monthly,
+}))
+
+const DISTRIBUTION_LABELS: DistributionLabels = {
+  deathsCount: "Deaths",
+  mortalityRate: "Mortality rate",
+  ageBuckets: [
+    "0-9",
+    "10-19",
+    "20-29",
+    "30-39",
+    "40-49",
+    "50-59",
+    "60-69",
+    "70-79",
+    "80-89",
+    "90+",
+  ],
+}
+
+const DISTRIBUTION_VIEW_LABELS: DistributionViewLabels = {
+  deathsByAge: "Deaths by age",
+  subtitle: "Deaths by age group with overall mortality rate",
+  ...DISTRIBUTION_LABELS,
+}
+
+const Playground = () => {
+  const [locale, setLocale] = useState<"en" | "fr">("en")
+  const [view, setView] = useState<"overview" | "year" | "comparison">(
+    "overview"
+  )
+  const [chartType, setChartType] = useState<TrendChartType>("area")
+  const [hoveredYear, setHoveredYear] = useState<number | null>(null)
+  const [monthlyMode, setMonthlyMode] = useState<MonthlyMode>("single")
+  const [monthlySelected, setMonthlySelected] = useState<number[]>([2018, 2020])
+  const [monthlyHover, setMonthlyHover] = useState<MonthlyHover | null>(null)
+  const [distributionGender, setDistributionGender] =
+    useState<DistributionGender>("all")
+  const [distributionHover, setDistributionHover] = useState<number | null>(
+    null
+  )
+  const [yearActive, setYearActive] = useState<number>(2020)
+  const [comparisonSelected, setComparisonSelected] = useState<number[]>([
+    2018, 2020, 2022,
+  ])
+
+  const toggleSelected = (year: number) => {
+    setMonthlySelected((prev) =>
+      prev.includes(year) ? prev.filter((y) => y !== year) : [...prev, year]
+    )
+  }
+
+  return (
+    <main className="flex flex-col gap-12 p-12">
+      <h1 className="font-display tracking-display text-text text-3xl">
+        Atoms playground
+      </h1>
+
+      <Section title="Pill — locale toggle">
+        <Pill active={locale === "en"} onClick={() => setLocale("en")}>
+          EN
+        </Pill>
+        <Pill active={locale === "fr"} onClick={() => setLocale("fr")}>
+          FR
+        </Pill>
+      </Section>
+
+      <Section title="NavBtn — view switcher">
+        <NavBtn
+          active={view === "overview"}
+          onClick={() => setView("overview")}
+        >
+          Overview
+        </NavBtn>
+        <NavBtn active={view === "year"} onClick={() => setView("year")}>
+          Year
+        </NavBtn>
+        <NavBtn
+          active={view === "comparison"}
+          onClick={() => setView("comparison")}
+        >
+          Comparison
+        </NavBtn>
+      </Section>
+
+      <Section title="Label">
+        <Label>Source</Label>
+        <Label>Year</Label>
+        <Label>Gender</Label>
+      </Section>
+
+      <Section title="Card">
+        <Card className="w-72">
+          <p className="text-text-dim">Card content lives here.</p>
+        </Card>
+      </Section>
+
+      <Section title="Stat — variants">
+        <Stat label="death rate" value="1.234" unit="%" />
+        <Stat
+          label="death rate"
+          value="1.234"
+          unit="%"
+          big
+          sub="vs avg 1.087%"
+        />
+        <Stat
+          label="vs prev"
+          value="673,201"
+          delta={2.5}
+          deltaLabel="vs prev"
+        />
+        <Stat label="vs avg" value="612,830" delta={-1.7} deltaLabel="vs avg" />
+        <Stat label="rate" value="1.5" unit="%" colorize={1} />
+      </Section>
+
+      <Section title="Mini">
+        <Mini label="rate min" value="0.812%" />
+        <Mini label="rate max" value="1.342%" />
+        <Mini label="years" value={26} />
+      </Section>
+
+      <Section title="TrendChart — line / area">
+        <div className="flex gap-2">
+          <Pill
+            active={chartType === "line"}
+            onClick={() => setChartType("line")}
+          >
+            line
+          </Pill>
+          <Pill
+            active={chartType === "area"}
+            onClick={() => setChartType("area")}
+          >
+            area
+          </Pill>
+        </div>
+        <Card className="w-full" data-testid="chart-trend">
+          <Trend
+            years={TREND_SAMPLE}
+            chartType={chartType}
+            hoveredYear={hoveredYear}
+            setHoveredYear={setHoveredYear}
+            labels={TREND_LABELS}
+          />
+        </Card>
+      </Section>
+
+      <Section title="MonthlyChart — single / compare">
+        <div className="flex gap-2">
+          <Pill
+            active={monthlyMode === "single"}
+            onClick={() => setMonthlyMode("single")}
+          >
+            single
+          </Pill>
+          <Pill
+            active={monthlyMode === "compare"}
+            onClick={() => setMonthlyMode("compare")}
+          >
+            compare
+          </Pill>
+        </div>
+        {monthlyMode === "compare" && (
+          <div className="flex flex-wrap gap-2">
+            {MONTHLY_SAMPLE.map((y) => (
+              <Pill
+                key={y.year}
+                active={monthlySelected.includes(y.year)}
+                onClick={() => toggleSelected(y.year)}
+              >
+                {y.year}
+              </Pill>
+            ))}
+          </div>
+        )}
+        <Card className="w-full" data-testid="chart-monthly">
+          <Monthly
+            years={MONTHLY_SAMPLE}
+            mode={monthlyMode}
+            selected={monthlySelected}
+            events={MONTHLY_EVENTS}
+            hovered={monthlyHover}
+            setHovered={setMonthlyHover}
+            labels={MONTHLY_LABELS}
+          />
+        </Card>
+      </Section>
+
+      <Section title="OverviewGrid — year cards with mini-donuts">
+        <Card className="w-full" data-testid="view-overview-grid">
+          <OverviewGrid
+            years={OVERVIEW_GRID_SAMPLE}
+            labels={OVERVIEW_GRID_LABELS}
+            locale="en"
+            partialYear={2026}
+            onSelectYear={() => {}}
+          />
+        </Card>
+      </Section>
+
+      <Section title="DistributionChart — gender filter + hover">
+        <div className="flex gap-2">
+          <Pill
+            active={distributionGender === "all"}
+            onClick={() => setDistributionGender("all")}
+          >
+            all
+          </Pill>
+          <Pill
+            active={distributionGender === "m"}
+            onClick={() => setDistributionGender("m")}
+          >
+            male
+          </Pill>
+          <Pill
+            active={distributionGender === "f"}
+            onClick={() => setDistributionGender("f")}
+          >
+            female
+          </Pill>
+        </div>
+        <Card className="w-full" data-testid="chart-distribution">
+          <Distribution
+            years={DISTRIBUTION_SAMPLE}
+            gender={distributionGender}
+            hovered={distributionHover}
+            setHovered={setDistributionHover}
+            labels={DISTRIBUTION_LABELS}
+          />
+        </Card>
+      </Section>
+
+      <Section title="Year view — scrubber + headline + trend + monthly + events">
+        <div className="w-full">
+          <Year
+            years={YEAR_SAMPLE}
+            activeYear={yearActive}
+            onActiveYearChange={setYearActive}
+            events={YEAR_EVENTS}
+            labels={YEAR_LABELS}
+            locale="en"
+            chartType="area"
+          />
+        </div>
+      </Section>
+
+      <Section title="Comparison view — multi-year monthly compare + picker">
+        <div className="w-full">
+          <Comparison
+            years={COMPARISON_SAMPLE}
+            selected={comparisonSelected}
+            onSelectedChange={setComparisonSelected}
+            events={MONTHLY_EVENTS}
+            labels={
+              {
+                monthlyDeaths: "Monthly deaths",
+                comparison: "Comparison",
+                selectYears: "Select years",
+                selectedSubtitle: `${comparisonSelected.length} year(s) selected · max 7`,
+                months: MONTHLY_LABELS.months,
+                monthsLong: MONTHLY_LABELS.monthsLong,
+                deathsCount: "Deaths",
+              } as ComparisonLabels
+            }
+            locale="en"
+          />
+        </div>
+      </Section>
+
+      <Section title="Distribution view — single card with chart">
+        <div className="w-full">
+          <DistributionView
+            years={DISTRIBUTION_SAMPLE}
+            gender={distributionGender}
+            hovered={distributionHover}
+            setHovered={setDistributionHover}
+            labels={DISTRIBUTION_VIEW_LABELS}
+            locale="en"
+          />
+        </div>
+      </Section>
+    </main>
+  )
+}
+
+export default Playground
