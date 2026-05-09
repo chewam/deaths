@@ -1,3 +1,24 @@
+# [2.0.0](https://github.com/chewam/mortality/compare/v1.3.10...v2.0.0) (2026-05-09)
+
+
+### Bug Fixes
+
+* **ci:** scope Claude Review concurrency group by event_name ([#268](https://github.com/chewam/mortality/issues/268)) ([476f07b](https://github.com/chewam/mortality/commit/476f07b089b9b6b783ad473231735776944c7de2))
+* sentry token ([#254](https://github.com/chewam/mortality/issues/254)) ([f60bc31](https://github.com/chewam/mortality/commit/f60bc31f14e7b029296ae030c439bfd952f5921d))
+
+
+### chore
+
+* ship v2.0.0 stable ([#304](https://github.com/chewam/mortality/issues/304)) ([10661ff](https://github.com/chewam/mortality/commit/10661ff8e0a796aecd63d73f8eeb6ca43906304d)), closes [#303](https://github.com/chewam/mortality/issues/303)
+
+
+### BREAKING CHANGES
+
+* v2 refactor shipped in #303 — Next 14→15, React 18→19,
+TypeScript 4→5, Tailwind 3→4 (SCSS removed), Jest→Vitest,
+chart.js→inline SVG charts, new design system. ISO functional behavior
+vs 1.x — same routes, same data shape, same i18n keys.
+
 # [1.4.0-alpha.1](https://github.com/chewam/mortality/compare/v1.3.10...v1.4.0-alpha.1) (2026-05-08)
 
 
