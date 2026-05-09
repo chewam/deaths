@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/chewam/mortality/compare/v2.0.4...v2.0.5) (2026-05-09)
+
+
+### Bug Fixes
+
+* **comparison:** include partial current year in the picker ([#312](https://github.com/chewam/mortality/issues/312)) ([14e1497](https://github.com/chewam/mortality/commit/14e1497a7ceb269d5cb80d6dd44d2ccdce6984d7))
+
 ## [2.0.4](https://github.com/chewam/mortality/compare/v2.0.3...v2.0.4) (2026-05-09)
 
 
