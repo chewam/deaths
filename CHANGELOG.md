@@ -1,3 +1,10 @@
+## [2.0.6](https://github.com/chewam/mortality/compare/v2.0.5...v2.0.6) (2026-05-09)
+
+
+### Bug Fixes
+
+* **layout:** sticky footer + equal margins + fillable charts ([#311](https://github.com/chewam/mortality/issues/311)) ([63fe2f6](https://github.com/chewam/mortality/commit/63fe2f68a1f32c9e544cfb612f4da28454e843df))
+
 ## [2.0.5](https://github.com/chewam/mortality/compare/v2.0.4...v2.0.5) (2026-05-09)
 
 
