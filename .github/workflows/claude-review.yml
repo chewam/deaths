@@ -3,7 +3,7 @@ name: Claude Review
 on:
   pull_request:
     types: [opened, synchronize]
-    branches: [alpha]
+    branches: [master]
   issue_comment:
     types: [created]
 
