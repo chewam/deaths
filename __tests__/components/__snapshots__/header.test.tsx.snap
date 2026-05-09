@@ -27,10 +27,16 @@ exports[`Header > should create a Header in english 1`] = `
       class="flex gap-1"
     >
       <a
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 text-text border-border bg-surface"
+        href="/"
+      >
+        Overview
+      </a>
+      <a
         class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"
         href="/overview"
       >
-        Overview
+        Year
       </a>
       <a
         class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"
@@ -94,10 +100,16 @@ exports[`Header > should create a Header in french 1`] = `
       class="flex gap-1"
     >
       <a
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 text-text border-border bg-surface"
+        href="/"
+      >
+        Vue d'Ensemble
+      </a>
+      <a
         class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"
         href="/overview"
       >
-        Vue d'Ensemble
+        Année
       </a>
       <a
         class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"

@@ -14,7 +14,7 @@ const FiltersBar = () => {
 
   return (
     <div className="border-border border-b px-12 py-3.5 flex flex-wrap items-center gap-8">
-      <div className="flex flex-col gap-1.5 min-w-[280px] flex-1">
+      <div className="flex flex-col gap-1.5 min-w-[220px]">
         <div className="flex items-center justify-between gap-3">
           <Label>
             <Trans id="Age" />

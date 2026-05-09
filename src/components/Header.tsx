@@ -5,14 +5,22 @@ import { FormattedMessage as Trans } from "react-intl"
 import { Label, NavBtn, Pill } from "@/components/atoms"
 
 const navItems = [
-  { view: "overview", href: "/overview" },
+  { view: "overview", href: "/" },
+  { view: "year", href: "/overview" },
   { view: "comparison", href: "/comparison" },
   { view: "distribution", href: "/distribution" },
 ] as const
 
+const routeToView: Record<string, string> = {
+  "/": "overview",
+  "/overview": "year",
+  "/comparison": "comparison",
+  "/distribution": "distribution",
+}
+
 const Header = () => {
   const { route, pathname, locale = "en" } = useRouter()
-  const current = (route || "").substring(1)
+  const current = routeToView[route] ?? ""
 
   return (
     <header
