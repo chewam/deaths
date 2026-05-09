@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useLayoutEffect, useRef, useState } from "react"
 
 import {
   MONTHLY_PADDING,
@@ -26,6 +26,7 @@ export type MonthlyProps = {
   setHovered: (h: MonthlyHover | null) => void
   labels: MonthlyLabels
   height?: number
+  fillHeight?: boolean
   formatNumber?: (n: number) => string
   formatCompact?: (n: number) => string
 }
@@ -55,22 +56,34 @@ const Monthly = ({
   hovered,
   setHovered,
   labels,
-  height = 420,
+  height: heightProp = 420,
+  fillHeight = false,
   formatNumber = defaultFormatNumber,
   formatCompact = defaultFormatCompact,
 }: MonthlyProps) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState(900)
+  const [measuredHeight, setMeasuredHeight] = useState(0)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const node = containerRef.current
     if (!node) return
+    const rect = node.getBoundingClientRect()
+    if (rect.width > 0) setWidth(rect.width)
+    if (rect.height > 0) setMeasuredHeight(rect.height)
     const ro = new ResizeObserver(([entry]) => {
-      if (entry) setWidth(entry.contentRect.width)
+      if (!entry) return
+      setWidth(entry.contentRect.width)
+      setMeasuredHeight(entry.contentRect.height)
     })
     ro.observe(node)
     return () => ro.disconnect()
   }, [])
+
+  const height =
+    fillHeight && measuredHeight > 0
+      ? Math.max(measuredHeight, 280)
+      : heightProp
 
   const { left: padL, top: padT } = MONTHLY_PADDING
   const { innerW, innerH, maxV, xs, yTicks, series } = buildMonthlyGeometry(
@@ -126,7 +139,12 @@ const Monthly = ({
       : labels.deathsCount
 
   return (
-    <div ref={containerRef} className="relative w-full">
+    <div
+      ref={containerRef}
+      className={
+        fillHeight ? "relative w-full min-h-0 flex-1" : "relative w-full"
+      }
+    >
       <svg
         role="img"
         aria-label={ariaLabel}

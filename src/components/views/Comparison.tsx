@@ -30,6 +30,7 @@ export type ComparisonProps = {
   labels: ComparisonLabels
   locale: string
   compact?: boolean
+  fillHeight?: boolean
   maxSelected?: number
 }
 
@@ -50,6 +51,7 @@ const Comparison = ({
   labels,
   locale,
   compact = false,
+  fillHeight = false,
   maxSelected = 7,
 }: ComparisonProps) => {
   const sorted = useMemo(
@@ -79,9 +81,17 @@ const Comparison = ({
   return (
     <div
       data-testid="view-comparison"
-      style={{ display: "flex", flexDirection: "column", gap: sectionGap }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: sectionGap,
+        ...(fillHeight ? { flex: 1, minHeight: 0 } : null),
+      }}
     >
-      <Card data-testid="comparison-compare">
+      <Card
+        data-testid="comparison-compare"
+        className={fillHeight ? "flex min-h-0 flex-1 flex-col" : undefined}
+      >
         <div
           style={{
             display: "flex",
@@ -112,6 +122,7 @@ const Comparison = ({
           labels={monthlyLabels}
           formatNumber={(n) => fmtNumber(n, locale)}
           formatCompact={(n) => fmtCompact(n, locale)}
+          fillHeight={fillHeight}
         />
       </Card>
 

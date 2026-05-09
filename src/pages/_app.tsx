@@ -35,11 +35,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         defaultLocale={defaultLocale}
         messages={messages[locale] || messages[defaultLocale]}
       >
-        <Head />
-        <Header />
-        <FiltersBar />
-        <Component {...pageProps} />
-        <Footer />
+        <div className="flex h-full flex-col">
+          <Head />
+          <Header />
+          <FiltersBar />
+          <main className="flex min-h-0 flex-1 flex-col overflow-y-auto py-9">
+            <Component {...pageProps} />
+          </main>
+          <Footer />
+        </div>
       </IntlProvider>
       {process.env.NEXT_PUBLIC_VERCEL_ENV ? <Analytics /> : null}
     </>
