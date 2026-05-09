@@ -12,4 +12,5 @@
 /yarn-error.log
 /.claude/settings.local.json
 /.claude/worktrees
+/.claude/launch.json
 .DS_Store
