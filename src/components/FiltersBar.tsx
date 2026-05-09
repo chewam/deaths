@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { FormattedMessage as Trans } from "react-intl"
 
 import useFilters from "@/services/filters"
@@ -9,10 +8,7 @@ import AgeRange from "@/components/filters/AgeRange"
 const formatAge = (n: number) => (n >= 110 ? "110+" : String(n))
 
 const FiltersBar = () => {
-  const { route } = useRouter()
   const [filters, setFilters] = useFilters()
-
-  if (route === "/") return null
 
   const { ageGroup, gender = null } = filters as Filters
 

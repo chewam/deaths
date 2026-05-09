@@ -32,7 +32,7 @@ exports[`Page snapshot: index 1`] = `
             data-partial="true"
             style="font-size: 9px; letter-spacing: 0.08em; margin-top: 2px;"
           >
-            Partiel
+            année partielle
           </div>
           <div
             style="margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; gap: 6px;"
@@ -62,7 +62,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -76,7 +76,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -218,7 +218,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -346,7 +346,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -360,7 +360,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -488,7 +488,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -502,7 +502,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -630,7 +630,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -644,7 +644,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -772,7 +772,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -786,7 +786,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -914,7 +914,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -928,7 +928,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -1056,7 +1056,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -1070,7 +1070,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -1198,7 +1198,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -1212,7 +1212,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -1340,7 +1340,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -1354,7 +1354,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -1482,7 +1482,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -1496,7 +1496,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -1624,7 +1624,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -1638,7 +1638,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -1766,7 +1766,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -1780,7 +1780,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -1908,7 +1908,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -1922,7 +1922,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -2050,7 +2050,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -2064,7 +2064,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -2192,7 +2192,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -2206,7 +2206,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -2334,7 +2334,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -2348,7 +2348,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -2476,7 +2476,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -2490,7 +2490,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -2618,7 +2618,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -2632,7 +2632,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -2760,7 +2760,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -2774,7 +2774,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -2902,7 +2902,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -2916,7 +2916,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -3044,7 +3044,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -3058,7 +3058,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -3186,7 +3186,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -3200,7 +3200,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -3328,7 +3328,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -3342,7 +3342,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -3470,7 +3470,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -3484,7 +3484,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -3612,7 +3612,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -3626,7 +3626,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>
@@ -3754,7 +3754,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Nombre de décès
+                Décès
               </div>
             </div>
             <div>
@@ -3768,7 +3768,7 @@ exports[`Page snapshot: index 1`] = `
                 class="font-mono text-text-faint uppercase"
                 style="font-size: 10px; letter-spacing: 0.1em;"
               >
-                Population totale
+                Population
               </div>
             </div>
           </div>

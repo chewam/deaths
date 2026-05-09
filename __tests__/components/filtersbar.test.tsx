@@ -31,10 +31,8 @@ const mockUseRouter = vi.mocked(useRouter) as unknown as ReturnType<
 >
 
 describe("Filters Bar", () => {
-  test("should create a visible Filters Bar", () => {
-    mockUseRouter.mockImplementation(() => ({
-      route: "/comparison",
-    }))
+  test("renders on every route, including the home grid", () => {
+    mockUseRouter.mockImplementation(() => ({ route: "/" }))
     const { asFragment } = render(
       <IntlProvider locale="fr" messages={messages}>
         <FiltersBar />
@@ -43,10 +41,8 @@ describe("Filters Bar", () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test("should create a hidden Filters Bar", () => {
-    mockUseRouter.mockImplementation(() => ({
-      route: "/",
-    }))
+  test("renders the same content on /comparison", () => {
+    mockUseRouter.mockImplementation(() => ({ route: "/comparison" }))
     const { asFragment } = render(
       <IntlProvider locale="fr" messages={messages}>
         <FiltersBar />

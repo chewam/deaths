@@ -5,7 +5,6 @@ import {
   DISTRIBUTION_PADDING,
   DISTRIBUTION_RATE_DOMAIN,
   DISTRIBUTION_RATE_TICKS,
-  DISTRIBUTION_TICK_COUNT,
   applyGenderFilter,
   buildDistributionGeometry,
   computeDistributionDomainMax,
@@ -87,12 +86,12 @@ describe("applyGenderFilter", () => {
 })
 
 describe("computeDistributionDomainMax", () => {
-  test("rounds the max total up to the nearest 100k", () => {
+  test("picks niceMax 600k so 200k * 3 ticks cover up to 600k peak", () => {
     // Total per year = 50_000 * 10 = 500_000 ; 55_000 * 10 = 550_000 ; 60_000 * 10 = 600_000
     expect(computeDistributionDomainMax(sample)).toBe(600_000)
   })
 
-  test("rounds 540k up to 600k", () => {
+  test("rounds 540k up to 600k (200k step × 3 intervals)", () => {
     const years: DistributionYear[] = [mkYear(2018, 54_000, 0.91)] // total 540_000
     expect(computeDistributionDomainMax(years)).toBe(600_000)
   })
@@ -108,9 +107,9 @@ describe("computeDistributionDomainMax", () => {
     expect(computeDistributionDomainMax(years)).toBe(100_000)
   })
 
-  test("scales to 700k for a COVID-style peak", () => {
+  test("scales a 670k peak to 750k niceMax (250k step × 3 — clean ticks)", () => {
     const years: DistributionYear[] = [mkYear(2020, 67_000, 0.99)] // total 670_000
-    expect(computeDistributionDomainMax(years)).toBe(700_000)
+    expect(computeDistributionDomainMax(years)).toBe(750_000)
   })
 })
 
@@ -121,11 +120,9 @@ describe("computeDistributionYTicks", () => {
     ])
   })
 
-  test("adapts to a 700k domain", () => {
-    const ticks = computeDistributionYTicks(700_000)
-    expect(ticks).toHaveLength(DISTRIBUTION_TICK_COUNT)
-    expect(ticks[0]).toBe(0)
-    expect(ticks[3]).toBe(700_000)
+  test("adapts to a 750k domain", () => {
+    const ticks = computeDistributionYTicks(750_000)
+    expect(ticks).toEqual([0, 250_000, 500_000, 750_000])
   })
 })
 

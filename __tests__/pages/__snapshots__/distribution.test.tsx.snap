@@ -34,7 +34,7 @@ exports[`Page snapshot: distribution 1`] = `
           class="relative w-full"
         >
           <svg
-            aria-label="Nombre de décès · 2000–2002"
+            aria-label="Décès · 2000–2002"
             height="460"
             role="img"
             style="display: block; overflow: visible;"
@@ -67,8 +67,8 @@ exports[`Page snapshot: distribution 1`] = `
                 stroke-width="1"
                 x1="64"
                 x2="836"
-                y1="281.3333333333333"
-                y2="281.3333333333333"
+                y1="281.33333333333337"
+                y2="281.33333333333337"
               />
               <text
                 class="font-mono"
@@ -77,9 +77,9 @@ exports[`Page snapshot: distribution 1`] = `
                 letter-spacing="0.04em"
                 text-anchor="end"
                 x="54"
-                y="284.3333333333333"
+                y="284.33333333333337"
               >
-                33,3 k
+                100 k
               </text>
             </g>
             <g>
@@ -88,8 +88,8 @@ exports[`Page snapshot: distribution 1`] = `
                 stroke-width="1"
                 x1="64"
                 x2="836"
-                y1="152.66666666666663"
-                y2="152.66666666666663"
+                y1="152.66666666666669"
+                y2="152.66666666666669"
               />
               <text
                 class="font-mono"
@@ -98,9 +98,9 @@ exports[`Page snapshot: distribution 1`] = `
                 letter-spacing="0.04em"
                 text-anchor="end"
                 x="54"
-                y="155.66666666666663"
+                y="155.66666666666669"
               >
-                66,7 k
+                200 k
               </text>
             </g>
             <g>
@@ -121,7 +121,7 @@ exports[`Page snapshot: distribution 1`] = `
                 x="54"
                 y="27"
               >
-                100 k
+                300 k
               </text>
             </g>
             <text
@@ -179,7 +179,19 @@ exports[`Page snapshot: distribution 1`] = `
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 3%, transparent)"
-                  height="3.8600000000000136"
+                  height="1.2866666666666333"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="408.71333333333337"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
+                  height="2.5733333333333803"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
@@ -190,44 +202,80 @@ exports[`Page snapshot: distribution 1`] = `
               </g>
               <g>
                 <rect
-                  fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
-                  height="7.71999999999997"
-                  opacity="1"
-                  stroke="var(--color-surface)"
-                  stroke-width="0.5"
-                  width="185.27999999999997"
-                  x="100.02666666666667"
-                  y="398.42"
-                />
-              </g>
-              <g>
-                <rect
                   fill="color-mix(in srgb, var(--color-accent) 12%, transparent)"
-                  height="11.580000000000041"
+                  height="3.8600000000000136"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="100.02666666666667"
-                  y="386.84"
+                  y="402.28"
                 />
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 19%, transparent)"
-                  height="15.43999999999994"
+                  height="5.146666666666647"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="100.02666666666667"
-                  y="371.40000000000003"
+                  y="397.1333333333333"
                 />
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
-                  height="19.300000000000068"
+                  height="6.433333333333337"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="390.7"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
+                  height="7.720000000000027"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="382.97999999999996"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 46%, transparent)"
+                  height="9.00666666666666"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="373.9733333333333"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
+                  height="10.293333333333294"
+                  opacity="1"
+                  stroke="var(--color-surface)"
+                  stroke-width="0.5"
+                  width="185.27999999999997"
+                  x="100.02666666666667"
+                  y="363.68"
+                />
+              </g>
+              <g>
+                <rect
+                  fill="color-mix(in srgb, var(--color-accent) 75%, transparent)"
+                  height="11.580000000000041"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
@@ -238,118 +286,15 @@ exports[`Page snapshot: distribution 1`] = `
               </g>
               <g>
                 <rect
-                  fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
-                  height="23.159999999999968"
-                  opacity="1"
-                  stroke="var(--color-surface)"
-                  stroke-width="0.5"
-                  width="185.27999999999997"
-                  x="100.02666666666667"
-                  y="328.94"
-                />
-                <text
-                  class="font-mono"
-                  fill="var(--color-text-dim)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="192.66666666666666"
-                  y="343.52"
-                >
-                  6 k
-                </text>
-              </g>
-              <g>
-                <rect
-                  fill="color-mix(in srgb, var(--color-accent) 46%, transparent)"
-                  height="27.019999999999982"
-                  opacity="1"
-                  stroke="var(--color-surface)"
-                  stroke-width="0.5"
-                  width="185.27999999999997"
-                  x="100.02666666666667"
-                  y="301.92"
-                />
-                <text
-                  class="font-mono"
-                  fill="var(--color-text-dim)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="192.66666666666666"
-                  y="318.43"
-                >
-                  7 k
-                </text>
-              </g>
-              <g>
-                <rect
-                  fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
-                  height="30.880000000000052"
-                  opacity="1"
-                  stroke="var(--color-surface)"
-                  stroke-width="0.5"
-                  width="185.27999999999997"
-                  x="100.02666666666667"
-                  y="271.03999999999996"
-                />
-                <text
-                  class="font-mono"
-                  fill="var(--color-surface)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="192.66666666666666"
-                  y="289.48"
-                >
-                  8 k
-                </text>
-              </g>
-              <g>
-                <rect
-                  fill="color-mix(in srgb, var(--color-accent) 75%, transparent)"
-                  height="34.73999999999995"
-                  opacity="1"
-                  stroke="var(--color-surface)"
-                  stroke-width="0.5"
-                  width="185.27999999999997"
-                  x="100.02666666666667"
-                  y="236.3"
-                />
-                <text
-                  class="font-mono"
-                  fill="var(--color-surface)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="192.66666666666666"
-                  y="256.66999999999996"
-                >
-                  9 k
-                </text>
-              </g>
-              <g>
-                <rect
                   fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
-                  height="38.60000000000002"
+                  height="12.866666666666617"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="100.02666666666667"
-                  y="197.7"
+                  y="339.23333333333335"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-surface)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="192.66666666666666"
-                  y="220"
-                >
-                  10 k
-                </text>
               </g>
             </g>
             <g
@@ -367,188 +312,122 @@ exports[`Page snapshot: distribution 1`] = `
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 3%, transparent)"
-                  height="4.245999999999981"
+                  height="1.4153333333333649"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="357.36"
-                  y="405.754"
+                  y="408.58466666666664"
                 />
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
-                  height="8.106000000000051"
+                  height="2.701999999999998"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="357.36"
-                  y="397.64799999999997"
+                  y="405.88266666666664"
                 />
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 12%, transparent)"
-                  height="11.965999999999951"
+                  height="3.9886666666666315"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="357.36"
-                  y="385.682"
+                  y="401.894"
                 />
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 19%, transparent)"
-                  height="15.826000000000022"
+                  height="5.275333333333322"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="357.36"
-                  y="369.856"
+                  y="396.6186666666667"
                 />
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
-                  height="19.68599999999998"
+                  height="6.562000000000012"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="357.36"
-                  y="350.17"
+                  y="390.0566666666667"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-text-dim)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="450"
-                  y="363.01300000000003"
-                >
-                  5,1 k
-                </text>
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
-                  height="23.545999999999992"
+                  height="7.848666666666645"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="357.36"
-                  y="326.624"
+                  y="382.208"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-text-dim)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="450"
-                  y="341.39700000000005"
-                >
-                  6,1 k
-                </text>
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 46%, transparent)"
-                  height="27.406000000000006"
+                  height="9.135333333333392"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="357.36"
-                  y="299.218"
+                  y="373.07266666666663"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-text-dim)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="450"
-                  y="315.92100000000005"
-                >
-                  7,1 k
-                </text>
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
-                  height="31.26600000000002"
+                  height="10.421999999999969"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="357.36"
-                  y="267.952"
+                  y="362.65066666666667"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-surface)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="450"
-                  y="286.58500000000004"
-                >
-                  8,1 k
-                </text>
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 75%, transparent)"
-                  height="35.12600000000003"
+                  height="11.708666666666659"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="357.36"
-                  y="232.82599999999996"
+                  y="350.942"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-surface)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="450"
-                  y="253.38899999999998"
-                >
-                  9,1 k
-                </text>
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
-                  height="38.98599999999999"
+                  height="12.995333333333349"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="357.36"
-                  y="193.83999999999997"
+                  y="337.94666666666666"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-surface)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="450"
-                  y="216.33299999999997"
-                >
-                  10,1 k
-                </text>
               </g>
             </g>
             <g
@@ -566,188 +445,122 @@ exports[`Page snapshot: distribution 1`] = `
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 3%, transparent)"
-                  height="4.632000000000005"
+                  height="1.5439999999999827"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="614.6933333333333"
-                  y="405.368"
+                  y="408.456"
                 />
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 6%, transparent)"
-                  height="8.492000000000019"
+                  height="2.830666666666673"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="614.6933333333333"
-                  y="396.876"
+                  y="405.62533333333334"
                 />
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 12%, transparent)"
-                  height="12.351999999999975"
+                  height="4.117333333333363"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="614.6933333333333"
-                  y="384.524"
+                  y="401.508"
                 />
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 19%, transparent)"
-                  height="16.21199999999999"
+                  height="5.403999999999996"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="614.6933333333333"
-                  y="368.312"
+                  y="396.104"
                 />
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 27%, transparent)"
-                  height="20.072000000000003"
+                  height="6.69066666666663"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="614.6933333333333"
-                  y="348.24"
+                  y="389.41333333333336"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-text-dim)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="707.3333333333333"
-                  y="361.276"
-                >
-                  5,2 k
-                </text>
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 35%, transparent)"
-                  height="23.932000000000016"
+                  height="7.97733333333332"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="614.6933333333333"
-                  y="324.308"
+                  y="381.43600000000004"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-text-dim)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="707.3333333333333"
-                  y="339.274"
-                >
-                  6,2 k
-                </text>
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 46%, transparent)"
-                  height="27.79200000000003"
+                  height="9.26400000000001"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="614.6933333333333"
-                  y="296.51599999999996"
+                  y="372.172"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-text-dim)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="707.3333333333333"
-                  y="313.412"
-                >
-                  7,2 k
-                </text>
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 58%, transparent)"
-                  height="31.65199999999993"
+                  height="10.5506666666667"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="614.6933333333333"
-                  y="264.86400000000003"
+                  y="361.6213333333333"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-surface)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="707.3333333333333"
-                  y="283.69"
-                >
-                  8,2 k
-                </text>
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 75%, transparent)"
-                  height="35.51200000000003"
+                  height="11.837333333333333"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="614.6933333333333"
-                  y="229.352"
+                  y="349.784"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-surface)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="707.3333333333333"
-                  y="250.108"
-                >
-                  9,2 k
-                </text>
               </g>
               <g>
                 <rect
                   fill="color-mix(in srgb, var(--color-accent) 100%, transparent)"
-                  height="39.371999999999986"
+                  height="13.123999999999967"
                   opacity="1"
                   stroke="var(--color-surface)"
                   stroke-width="0.5"
                   width="185.27999999999997"
                   x="614.6933333333333"
-                  y="189.98000000000002"
+                  y="336.66"
                 />
-                <text
-                  class="font-mono"
-                  fill="var(--color-surface)"
-                  font-size="8.5"
-                  style="pointer-events: none;"
-                  text-anchor="middle"
-                  x="707.3333333333333"
-                  y="212.666"
-                >
-                  10,2 k
-                </text>
               </g>
             </g>
             <path
@@ -856,7 +669,7 @@ exports[`Page snapshot: distribution 1`] = `
               x="20"
               y="18"
             >
-              Nombre de décès
+              Décès
             </text>
             <text
               class="font-mono uppercase"

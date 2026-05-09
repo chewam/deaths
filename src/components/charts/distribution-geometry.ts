@@ -41,6 +41,11 @@ export const applyGenderFilter = (
   })
 }
 
+// Round step values that keep tick labels readable (1, 2, 2.5, 5 × 10^k).
+const NICE_STEPS = [
+  100_000, 200_000, 250_000, 500_000, 1_000_000, 2_000_000,
+] as const
+
 export const computeDistributionDomainMax = (
   years: DistributionYear[]
 ): number => {
@@ -49,7 +54,15 @@ export const computeDistributionDomainMax = (
     ...years.map((y) => y.buckets.reduce((s, b) => s + b, 0))
   )
   if (maxTotal <= 0) return DEFAULT_NICE_MAX
-  return Math.ceil(maxTotal / NICE_MAX_STEP) * NICE_MAX_STEP
+  // Pick the smallest "nice" step large enough that (TICK_COUNT-1) of them
+  // cover maxTotal. Keeps tick labels rounded (200K / 250K / 500K) instead
+  // of awkward thirds like 233.3K / 466.7K / 700K.
+  const intervals = DISTRIBUTION_TICK_COUNT - 1
+  const roughStep = maxTotal / intervals
+  const step =
+    NICE_STEPS.find((s) => s >= roughStep) ??
+    Math.ceil(roughStep / NICE_MAX_STEP) * NICE_MAX_STEP
+  return step * intervals
 }
 
 export const computeDistributionYTicks = (niceMax: number): number[] => {

@@ -67,14 +67,20 @@ const Page = () => {
     [sortedYears, partialYear]
   )
 
-  const defaultSelectedKey = useMemo(
-    () =>
-      fullYears
-        .slice(-3)
-        .map((y) => y.year)
-        .join(","),
-    [fullYears]
-  )
+  // Curated default selection — years that surface notable events in the
+  // chart (heatwave 2003, COVID 2020, summer 2022, recent baseline).
+  // Mirrors NEW_VERSION/app.jsx initial compareYears.
+  const defaultSelectedKey = useMemo(() => {
+    const preferred = [2003, 2020, 2022, 2024, 2025]
+    const available = new Set(fullYears.map((y) => y.year))
+    const present = preferred.filter((y) => available.has(y))
+    return present.length > 0
+      ? present.join(",")
+      : fullYears
+          .slice(-3)
+          .map((y) => y.year)
+          .join(",")
+  }, [fullYears])
 
   // null = not yet initialized from URL/defaults (initial render before
   // router.isReady). Empty array = user-emptied selection, still rendered.
