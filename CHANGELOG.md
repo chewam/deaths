@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/chewam/mortality/compare/v2.0.3...v2.0.4) (2026-05-09)
+
+
+### Bug Fixes
+
+* **overview-grid:** durable card layout — min width + proportional donut ([#310](https://github.com/chewam/mortality/issues/310)) ([e6d739b](https://github.com/chewam/mortality/commit/e6d739b20f8bcb96f1304c6065602da8ba979843)), closes [#DC2626](https://github.com/chewam/mortality/issues/DC2626) [#15803D](https://github.com/chewam/mortality/issues/15803D) [#B91C1C](https://github.com/chewam/mortality/issues/B91C1C) [#B91C1C](https://github.com/chewam/mortality/issues/B91C1C)
+
 ## [2.0.3](https://github.com/chewam/mortality/compare/v2.0.2...v2.0.3) (2026-05-09)
 
 
