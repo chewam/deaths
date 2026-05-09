@@ -254,8 +254,7 @@ const TrendBadge = ({
   // For the up direction, --color-danger on that tint fails WCAG AA
   // (4.27:1). --color-danger-text is the AA-passing darker shade, used
   // for stroke + label text only; the tint base stays the same.
-  const textColor =
-    direction === "up" ? "var(--color-danger-text)" : color
+  const textColor = direction === "up" ? "var(--color-danger-text)" : color
   const path =
     direction === "up" ? (
       <>
