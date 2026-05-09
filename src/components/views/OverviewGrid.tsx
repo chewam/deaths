@@ -49,13 +49,15 @@ const OverviewGrid = ({
   const yearMap = new Map(years.map((y) => [y.year, y]))
   const padding = compact ? 18 : 22
   const minHeight = compact ? 180 : 220
-  const donutSize = compact ? 130 : 150
 
   return (
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
+        // At this minimum the proportional donut (~55cqi, see wrapper below)
+        // lands at ~176 px, leaving the text column ~86 px — enough for
+        // "MORTALITY" / "POPULATION" labels in the mono uppercase rendering.
+        gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
         gap: 1,
         background: "var(--color-border)",
         border: "1px solid var(--color-border)",
@@ -94,6 +96,8 @@ const OverviewGrid = ({
               gap: 10,
               transition: "background 140ms",
               position: "relative",
+              // Lets the donut size itself with cqi units relative to the card.
+              containerType: "inline-size",
             }}
           >
             <div
@@ -205,13 +209,20 @@ const OverviewGrid = ({
 
               <div
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                   flexShrink: 0,
+                  // Opt out of the row's `alignItems: stretch` so the square
+                  // aspect ratio is honored.
+                  alignSelf: "center",
+                  // Scales with the card via container-query units. ~55 % of
+                  // the card's inline size, clamped so the donut never
+                  // collapses (mobile single-col) or dominates (very wide).
+                  width: compact
+                    ? "clamp(110px, 50cqi, 200px)"
+                    : "clamp(140px, 55cqi, 240px)",
+                  aspectRatio: "1 / 1",
                 }}
               >
-                <MiniDonut buckets={y.buckets} size={donutSize} />
+                <MiniDonut buckets={y.buckets} />
               </div>
             </div>
           </button>
@@ -239,6 +250,11 @@ const TrendBadge = ({
 }) => {
   const color =
     direction === "up" ? "var(--color-danger)" : "var(--color-success)"
+  // The badge mixes `color` 8 % with surface to produce a pale tint as bg.
+  // For the up direction, --color-danger on that tint fails WCAG AA
+  // (4.27:1). --color-danger-text is the AA-passing darker shade, used
+  // for stroke + label text only; the tint base stays the same.
+  const textColor = direction === "up" ? "var(--color-danger-text)" : color
   const path =
     direction === "up" ? (
       <>
@@ -259,8 +275,10 @@ const TrendBadge = ({
         alignItems: "center",
         gap: 4,
         padding: "3px 7px",
-        background: `color-mix(in srgb, ${color} 8%, transparent)`,
-        border: `1px solid color-mix(in srgb, ${color} 25%, transparent)`,
+        // Mix with the surface color (not transparent) so axe-core can
+        // resolve the effective background and compute contrast reliably.
+        background: `color-mix(in srgb, ${color} 8%, var(--color-surface))`,
+        border: `1px solid color-mix(in srgb, ${color} 25%, var(--color-surface))`,
         borderRadius: 3,
       }}
     >
@@ -269,7 +287,7 @@ const TrendBadge = ({
         height="14"
         viewBox="0 0 24 24"
         fill="none"
-        stroke={color}
+        stroke={textColor}
         strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -281,7 +299,7 @@ const TrendBadge = ({
         style={{
           fontSize: 11,
           fontWeight: 600,
-          color,
+          color: textColor,
           fontVariantNumeric: "tabular-nums",
         }}
       >
@@ -304,13 +322,12 @@ const DONUT_LABELS = [
   "90+",
 ] as const
 
-const MiniDonut = ({
-  buckets,
-  size = 130,
-}: {
-  buckets: number[]
-  size?: number
-}) => {
+// Donut paths are computed in this design coordinate system; the SVG scales
+// to fit its wrapper via viewBox + 100 % width/height (see the wrapper above).
+const DONUT_DESIGN_SIZE = 150
+
+const MiniDonut = ({ buckets }: { buckets: number[] }) => {
+  const size = DONUT_DESIGN_SIZE
   const cx = size / 2
   const cy = size / 2
   const r = size / 2 - 4
@@ -367,7 +384,10 @@ const MiniDonut = ({
   }).filter((a): a is NonNullable<typeof a> => a !== null)
 
   return (
-    <svg width={size} height={size} style={{ flexShrink: 0 }}>
+    <svg
+      viewBox={`0 0 ${size} ${size}`}
+      style={{ width: "100%", height: "100%", display: "block" }}
+    >
       {arcs.map((a) => (
         <path
           key={`arc-${a.bucketIndex}`}
@@ -382,7 +402,7 @@ const MiniDonut = ({
           x={ann.x}
           y={ann.y + 2}
           textAnchor="middle"
-          fontSize={size > 110 ? "10" : "8"}
+          fontSize="10"
           className="font-mono"
           fill={ann.color}
           letterSpacing="0.02em"
