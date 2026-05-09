@@ -54,8 +54,9 @@ const OverviewGrid = ({
     <div
       style={{
         display: "grid",
-        // 320 = donut(150) + gap(14) + text minimum(~112) + padding(22*2=44).
-        // Anything narrower truncates "MORTALITY" / "POPULATION" labels.
+        // At this minimum the proportional donut (~55cqi, see wrapper below)
+        // lands at ~176 px, leaving the text column ~86 px — enough for
+        // "MORTALITY" / "POPULATION" labels in the mono uppercase rendering.
         gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
         gap: 1,
         background: "var(--color-border)",
@@ -249,6 +250,11 @@ const TrendBadge = ({
 }) => {
   const color =
     direction === "up" ? "var(--color-danger)" : "var(--color-success)"
+  // The badge mixes `color` 8 % with surface to produce a pale tint as bg.
+  // For the up direction, --color-danger (#DC2626) on that tint gives
+  // 4.27:1 — just below WCAG AA (4.5:1). Use red-700 for the text stroke
+  // only; the tint stays the same so the badge looks identical.
+  const textColor = direction === "up" ? "#B91C1C" : color
   const path =
     direction === "up" ? (
       <>
@@ -269,8 +275,10 @@ const TrendBadge = ({
         alignItems: "center",
         gap: 4,
         padding: "3px 7px",
-        background: `color-mix(in srgb, ${color} 8%, transparent)`,
-        border: `1px solid color-mix(in srgb, ${color} 25%, transparent)`,
+        // Mix with the surface color (not transparent) so axe-core can
+        // resolve the effective background and compute contrast reliably.
+        background: `color-mix(in srgb, ${color} 8%, var(--color-surface))`,
+        border: `1px solid color-mix(in srgb, ${color} 25%, var(--color-surface))`,
         borderRadius: 3,
       }}
     >
@@ -279,7 +287,7 @@ const TrendBadge = ({
         height="14"
         viewBox="0 0 24 24"
         fill="none"
-        stroke={color}
+        stroke={textColor}
         strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -291,7 +299,7 @@ const TrendBadge = ({
         style={{
           fontSize: 11,
           fontWeight: 600,
-          color,
+          color: textColor,
           fontVariantNumeric: "tabular-nums",
         }}
       >
