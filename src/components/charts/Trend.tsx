@@ -176,6 +176,9 @@ const Trend = ({
         )}
 
         {years.map((y, i) => {
+          // Skip rate-less years (partial / population not yet available);
+          // their projected y is outside the chart domain.
+          if (!Number.isFinite(y.rate) || y.rate <= 0) return null
           const isHover = hoveredYear === y.year
           return (
             <g key={`pt-${y.year}`}>

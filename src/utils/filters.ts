@@ -62,7 +62,8 @@ const FIRST_YEAR = 2000
 
 export const computeFilteredAgeBuckets = (
   data: MortalityRawData | undefined,
-  filters: Filters | undefined
+  filters: Filters | undefined,
+  partialYear?: number
 ): FilteredAgeBucketsYear[] => {
   if (!data) return []
   const yearCount = data.ageGroups[0]?.length ?? 0
@@ -77,7 +78,11 @@ export const computeFilteredAgeBuckets = (
     // meaning under age-range filters; otherwise it would fall outside
     // DISTRIBUTION_RATE_DOMAIN (0.8–1.05) and disappear from the chart.
     const totalAllAges = rawBuckets.reduce((s, b) => s + b, 0)
-    const rate = population > 0 ? (totalAllAges * 100) / population : 0
+    // Partial-year deaths over full-year population would understate
+    // the rate; mask so the chart skips this point.
+    const isPartial = partialYear !== undefined && year === partialYear
+    const rate =
+      !isPartial && population > 0 ? (totalAllAges * 100) / population : 0
     return {
       year,
       buckets,

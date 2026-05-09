@@ -113,14 +113,15 @@ const Year = ({
   )
 
   const yoyDelta = useMemo(() => {
-    if (!active) return 0
+    if (!active || active.rate <= 0) return null
     const idx = sorted.findIndex((y) => y.year === active.year)
     const prev = idx > 0 ? sorted[idx - 1] : null
-    return prev ? ((active.rate - prev.rate) / prev.rate) * 100 : 0
+    if (!prev || prev.rate <= 0) return null
+    return ((active.rate - prev.rate) / prev.rate) * 100
   }, [active, sorted])
 
   const vsAvgDelta = useMemo(() => {
-    if (!active || avgRate === 0) return 0
+    if (!active || active.rate <= 0 || avgRate === 0) return null
     return ((active.rate - avgRate) / avgRate) * 100
   }, [active, avgRate])
 
@@ -160,7 +161,7 @@ const Year = ({
   const peakMonthIdx = active ? active.monthly.indexOf(peakValue) : 0
   const peakLabel = `${fmtNumber(peakValue, locale)} · ${labels.monthsLong[peakMonthIdx] ?? ""}`
 
-  const yoySign = yoyDelta >= 0 ? "+" : ""
+  const yoySign = yoyDelta != null && yoyDelta >= 0 ? "+" : ""
 
   const yearStart = sorted[0]?.year ?? activeYear
   const yearEnd = sorted[sorted.length - 1]?.year ?? activeYear
@@ -229,14 +230,14 @@ const Year = ({
       >
         <Stat
           label={labels.mortalityRate}
-          value={active ? fmtRate(active.rate) : "—"}
-          unit="%"
+          value={active && active.rate > 0 ? fmtRate(active.rate) : "—"}
+          unit={active && active.rate > 0 ? "%" : undefined}
           sub={
             active
               ? `${active.year}${isPartial ? ` · ${labels.partial}` : ""}`
               : undefined
           }
-          delta={vsAvgDelta}
+          delta={vsAvgDelta ?? undefined}
           deltaLabel={labels.sinceAvg}
           big
         />
@@ -250,8 +251,8 @@ const Year = ({
         />
         <Stat
           label={labels.yearOverYear}
-          value={`${yoySign}${yoyDelta.toFixed(2)}%`}
-          colorize={yoyDelta}
+          value={yoyDelta != null ? `${yoySign}${yoyDelta.toFixed(2)}%` : "—"}
+          colorize={yoyDelta ?? 0}
         />
       </div>
 
