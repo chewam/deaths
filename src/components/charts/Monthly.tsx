@@ -81,13 +81,22 @@ const Monthly = ({
 
   const isSingle = mode === "single"
 
-  const highlighted = isSingle
-    ? series.slice(-1)
-    : (selected
-        .map((yr) => series.find((s) => s.year === yr))
-        .filter(Boolean) as typeof series)
+  const fromSelected = selected
+    .map((yr) => series.find((s) => s.year === yr))
+    .filter(Boolean) as typeof series
 
-  const ghosts = isSingle ? series.slice(0, -1) : []
+  // Single mode pinpoints one series; fall back to the most recent year
+  // when nothing is selected so the chart never renders empty.
+  const highlighted = isSingle
+    ? fromSelected.length > 0
+      ? fromSelected.slice(0, 1)
+      : series.slice(-1)
+    : fromSelected
+
+  const highlightedYears = new Set(highlighted.map((s) => s.year))
+  const ghosts = isSingle
+    ? series.filter((s) => !highlightedYears.has(s.year))
+    : []
 
   const visibleEvents = isSingle
     ? events.filter((ev) => series.some((s) => s.year === ev.year))
@@ -110,7 +119,7 @@ const Monthly = ({
       ? null
       : (hoveredSeries.values[hovered.month] ?? null)
 
-  const labelYears = isSingle ? series.slice(-1).map((s) => s.year) : selected
+  const labelYears = highlighted.map((s) => s.year)
   const ariaLabel =
     labelYears.length > 0
       ? `${labels.deathsCount} · ${labelYears.join(", ")}`
