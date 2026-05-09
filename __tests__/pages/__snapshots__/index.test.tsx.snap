@@ -3,7 +3,7 @@
 exports[`Page snapshot: index 1`] = `
 <DocumentFragment>
   <div
-    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1px; background: var(--color-border); border: 1px solid var(--color-border);"
+    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1px; background: var(--color-border); border: 1px solid var(--color-border);"
   >
     <button
       class="text-left text-inherit focus-visible:outline-text focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2"

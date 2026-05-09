@@ -55,7 +55,9 @@ const OverviewGrid = ({
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
+        // 320 = donut(150) + gap(14) + text minimum(~112) + padding(22*2=44).
+        // Anything narrower truncates "MORTALITY" / "POPULATION" labels.
+        gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
         gap: 1,
         background: "var(--color-border)",
         border: "1px solid var(--color-border)",
