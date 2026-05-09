@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/chewam/mortality/compare/v2.0.0...v2.0.1) (2026-05-09)
+
+
+### Bug Fixes
+
+* 2025/2026 population + partial-year handling ([#305](https://github.com/chewam/mortality/issues/305)) ([23d754c](https://github.com/chewam/mortality/commit/23d754c130dedc149256c2f93ede57114f706d7a))
+
 # [2.0.0](https://github.com/chewam/mortality/compare/v1.3.10...v2.0.0) (2026-05-09)
 
 
