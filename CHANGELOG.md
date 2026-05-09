@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/chewam/mortality/compare/v2.0.2...v2.0.3) (2026-05-09)
+
+
+### Bug Fixes
+
+* **header:** align nav + filters bar with NEW_VERSION ([#309](https://github.com/chewam/mortality/issues/309)) ([931ea1d](https://github.com/chewam/mortality/commit/931ea1d6a15532c11742719d8d2ea94575c22291)), closes [#303](https://github.com/chewam/mortality/issues/303) [#308](https://github.com/chewam/mortality/issues/308) [#307](https://github.com/chewam/mortality/issues/307)
+
 ## [2.0.2](https://github.com/chewam/mortality/compare/v2.0.1...v2.0.2) (2026-05-09)
 
 
