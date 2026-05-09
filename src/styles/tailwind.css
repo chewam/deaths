@@ -27,6 +27,12 @@
 }
 
 @layer base {
+  html,
+  body,
+  #__next {
+    height: 100%;
+  }
+
   body {
     @apply text-base
       font-body

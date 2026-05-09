@@ -133,7 +133,7 @@ const Page = () => {
   }))
 
   return (
-    <div className="container mx-auto px-6">
+    <div className="container mx-auto flex min-h-0 flex-1 flex-col px-6">
       <Comparison
         years={sortedYears}
         selected={selected}
@@ -142,6 +142,7 @@ const Page = () => {
         labels={labels}
         locale={router.locale || "en"}
         maxSelected={MAX_SELECTED}
+        fillHeight
       />
     </div>
   )

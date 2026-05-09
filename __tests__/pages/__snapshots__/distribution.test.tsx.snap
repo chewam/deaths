@@ -3,14 +3,14 @@
 exports[`Page snapshot: distribution 1`] = `
 <DocumentFragment>
   <div
-    class="container mx-auto px-6"
+    class="container mx-auto flex min-h-0 flex-1 flex-col px-6"
   >
     <div
       data-testid="view-distribution"
-      style="display: flex; flex-direction: column; gap: 28px;"
+      style="display: flex; flex-direction: column; gap: 28px; flex: 1 1 0%; min-height: 0px;"
     >
       <div
-        class="bg-surface border border-border p-7"
+        class="bg-surface border border-border p-7 flex min-h-0 flex-1 flex-col"
         data-testid="distribution-card"
       >
         <div
@@ -31,7 +31,7 @@ exports[`Page snapshot: distribution 1`] = `
           </div>
         </div>
         <div
-          class="relative w-full"
+          class="relative w-full min-h-0 flex-1"
         >
           <svg
             aria-label="Décès · 2000–2002"
@@ -667,7 +667,7 @@ exports[`Page snapshot: distribution 1`] = `
               font-size="9.5"
               letter-spacing="0.08em"
               x="20"
-              y="18"
+              y="10"
             >
               Décès
             </text>
@@ -676,8 +676,9 @@ exports[`Page snapshot: distribution 1`] = `
               fill="var(--color-danger)"
               font-size="9.5"
               letter-spacing="0.08em"
-              x="870"
-              y="18"
+              text-anchor="end"
+              x="896"
+              y="10"
             >
               Taux de mortalité
             </text>

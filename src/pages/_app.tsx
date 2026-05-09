@@ -1,5 +1,6 @@
 import ErrorPage from "next/error"
 import Head from "@/components/Head"
+import { useRef, useEffect } from "react"
 import { useRouter } from "next/router"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
@@ -23,6 +24,15 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   const { locale = "", defaultLocale = "" } = router
   const messages = { en, fr } as Record<string, Record<string, string>>
+  const mainRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const reset = () => {
+      if (mainRef.current) mainRef.current.scrollTop = 0
+    }
+    router.events.on("routeChangeComplete", reset)
+    return () => router.events.off("routeChangeComplete", reset)
+  }, [router.events])
 
   if (pageProps?.statusCode >= 400) {
     return <ErrorPage statusCode={pageProps.statusCode} />
@@ -35,11 +45,18 @@ function MyApp({ Component, pageProps }: AppProps) {
         defaultLocale={defaultLocale}
         messages={messages[locale] || messages[defaultLocale]}
       >
-        <Head />
-        <Header />
-        <FiltersBar />
-        <Component {...pageProps} />
-        <Footer />
+        <div className="flex h-full flex-col">
+          <Head />
+          <Header />
+          <FiltersBar />
+          <main
+            ref={mainRef}
+            className="flex min-h-0 flex-1 flex-col overflow-y-auto py-9"
+          >
+            <Component {...pageProps} />
+          </main>
+          <Footer />
+        </div>
       </IntlProvider>
       {process.env.NEXT_PUBLIC_VERCEL_ENV ? <Analytics /> : null}
     </>

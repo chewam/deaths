@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
+
+import useIsomorphicLayoutEffect from "@/utils/use-isomorphic-layout-effect"
 
 import {
   DISTRIBUTION_BUCKET_COUNT,
@@ -24,6 +26,7 @@ export type DistributionProps = {
   setHovered: (year: number | null) => void
   labels: DistributionLabels
   height?: number
+  fillHeight?: boolean
   formatCompact?: (n: number) => string
 }
 
@@ -51,21 +54,33 @@ const Distribution = ({
   hovered,
   setHovered,
   labels,
-  height = 460,
+  height: heightProp = 460,
+  fillHeight = false,
   formatCompact = defaultFormatCompact,
 }: DistributionProps) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState(900)
+  const [measuredHeight, setMeasuredHeight] = useState(0)
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const node = containerRef.current
     if (!node) return
+    const rect = node.getBoundingClientRect()
+    if (rect.width > 0) setWidth(rect.width)
+    if (rect.height > 0) setMeasuredHeight(rect.height)
     const ro = new ResizeObserver(([entry]) => {
-      if (entry) setWidth(entry.contentRect.width)
+      if (!entry) return
+      setWidth(entry.contentRect.width)
+      setMeasuredHeight(entry.contentRect.height)
     })
     ro.observe(node)
     return () => ro.disconnect()
   }, [])
+
+  const height =
+    fillHeight && measuredHeight > 0
+      ? Math.max(measuredHeight, 320)
+      : heightProp
 
   const filtered = applyGenderFilter(years, gender)
   const {
@@ -91,7 +106,12 @@ const Distribution = ({
       : labels.deathsCount
 
   return (
-    <div ref={containerRef} className="relative w-full">
+    <div
+      ref={containerRef}
+      className={
+        fillHeight ? "relative w-full min-h-0 flex-1" : "relative w-full"
+      }
+    >
       <svg
         role="img"
         aria-label={ariaLabel}
@@ -263,7 +283,7 @@ const Distribution = ({
 
         <text
           x={padL - 44}
-          y={padT - 6}
+          y={padT - 14}
           fontSize="9.5"
           className="font-mono uppercase"
           fill="var(--color-text-faint)"
@@ -272,8 +292,9 @@ const Distribution = ({
           {labels.deathsCount}
         </text>
         <text
-          x={padL + innerW + 34}
-          y={padT - 6}
+          x={width - 4}
+          y={padT - 14}
+          textAnchor="end"
           fontSize="9.5"
           className="font-mono uppercase"
           fill="var(--color-danger)"

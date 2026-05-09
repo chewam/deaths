@@ -21,6 +21,7 @@ export type DistributionProps = {
   labels: DistributionViewLabels
   locale: string
   compact?: boolean
+  fillHeight?: boolean
 }
 
 // Bar value labels look cleaner as integer K (e.g. 170K, not 169.6K).
@@ -39,15 +40,24 @@ const Distribution = ({
   labels,
   locale,
   compact = false,
+  fillHeight = false,
 }: DistributionProps) => {
   const sectionGap = compact ? 16 : 28
 
   return (
     <div
       data-testid="view-distribution"
-      style={{ display: "flex", flexDirection: "column", gap: sectionGap }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: sectionGap,
+        ...(fillHeight ? { flex: 1, minHeight: 0 } : null),
+      }}
     >
-      <Card data-testid="distribution-card">
+      <Card
+        data-testid="distribution-card"
+        className={fillHeight ? "flex min-h-0 flex-1 flex-col" : undefined}
+      >
         <div
           style={{
             display: "flex",
@@ -77,6 +87,7 @@ const Distribution = ({
             ageBuckets: labels.ageBuckets,
           }}
           formatCompact={(n) => fmtCompact(n, locale)}
+          fillHeight={fillHeight}
         />
       </Card>
     </div>
