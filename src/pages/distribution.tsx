@@ -34,6 +34,7 @@ const Page = () => {
   const router = useRouter()
   const [filters] = useFilters()
   const [rawData] = useRawMortality()
+  const partialYear = new Date().getFullYear()
 
   const [hovered, setHovered] = useState<number | null>(null)
 
@@ -41,9 +42,10 @@ const Page = () => {
     () =>
       computeFilteredAgeBuckets(
         rawData as unknown as MortalityRawData | undefined,
-        filters
+        filters,
+        partialYear
       ),
-    [rawData, filters]
+    [rawData, filters, partialYear]
   )
 
   if (!rawData || !years.length) return null

@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import useSWR from "swr"
 import { sumYears } from "@/utils/index"
 import useFilters from "@/services/filters"
@@ -30,10 +31,12 @@ const useRawMortality = (): Mortality[] => {
     revalidateOnFocus: false,
   })
 
-  if (data && filters) {
+  useEffect(() => {
+    if (!data || !filters) return
     const filteredData = filter(data, filters)
     setMortality(filteredData)
-  }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, filters])
 
   return [data]
 }

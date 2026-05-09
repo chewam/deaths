@@ -30,9 +30,12 @@ const Page = () => {
       ...yearAgeGroups.slice(0, 9),
       sumArray(yearAgeGroups.slice(9)),
     ]
+    // Partial year deaths divided by full-year population would understate
+    // the rate; mask it so charts/badges treat the year as having no rate.
+    const isPartial = year === partialYear
     return {
       year,
-      rate: pop > 0 ? (totalDeaths * 100) / pop : 0,
+      rate: !isPartial && pop > 0 ? (totalDeaths * 100) / pop : 0,
       deaths: totalDeaths,
       pop,
       buckets,

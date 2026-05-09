@@ -64,7 +64,8 @@ const OverviewGrid = ({
       {sorted.map((y) => {
         const prev = yearMap.get(y.year - 1)
         const isPartial = y.year === partialYear
-        const trend = prev ? (y.rate - prev.rate) / prev.rate : 0
+        const hasComparable = prev && prev.rate > 0 && y.rate > 0
+        const trend = hasComparable ? (y.rate - prev.rate) / prev.rate : 0
         const trendUp = !isPartial && trend > TREND_THRESHOLD
         const trendDown = !isPartial && trend < -TREND_THRESHOLD
 
@@ -169,7 +170,7 @@ const OverviewGrid = ({
                         fontVariantNumeric: "tabular-nums",
                       }}
                     >
-                      {isPartial ? "—" : fmtRate(y.rate)}
+                      {isPartial || y.rate <= 0 ? "—" : fmtRate(y.rate)}
                     </div>
                     <Label>{labels.mortalityRate}</Label>
                   </div>

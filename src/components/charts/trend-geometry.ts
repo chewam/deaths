@@ -47,20 +47,27 @@ export const buildTrendGeometry = (
   )
   const ys = years.map((y) => projectRate(y.rate))
 
-  const avg = years.length
-    ? years.reduce((s, y) => s + y.rate, 0) / years.length
+  // Partial / unavailable years carry rate = 0; exclude them from path,
+  // average and area so the curve doesn't plunge to the bottom of the chart.
+  const validIdx = years
+    .map((y, i) => (Number.isFinite(y.rate) && y.rate > 0 ? i : -1))
+    .filter((i) => i >= 0)
+
+  const avg = validIdx.length
+    ? validIdx.reduce((s, i) => s + years[i].rate, 0) / validIdx.length
     : 0
   const avgY = projectRate(avg)
 
-  const linePath = xs
-    .map((x, i) => `${i === 0 ? "M" : "L"} ${x.toFixed(2)} ${ys[i].toFixed(2)}`)
+  const linePath = validIdx
+    .map(
+      (i, k) => `${k === 0 ? "M" : "L"} ${xs[i].toFixed(2)} ${ys[i].toFixed(2)}`
+    )
     .join(" ")
 
-  const last = xs.length - 1
   const baseY = padT + innerH
   const areaPath =
-    xs.length > 0
-      ? `${linePath} L ${xs[last]} ${baseY} L ${xs[0]} ${baseY} Z`
+    validIdx.length > 0
+      ? `${linePath} L ${xs[validIdx[validIdx.length - 1]]} ${baseY} L ${xs[validIdx[0]]} ${baseY} Z`
       : ""
 
   return { innerW, innerH, xs, ys, avg, avgY, linePath, areaPath }

@@ -151,7 +151,10 @@ export const buildDistributionGeometry = (
     }
   })
 
+  // Partial / unavailable years carry rate = 0; skip them so the rate line
+  // doesn't plunge off-chart.
   const ratePath = series
+    .filter((s) => Number.isFinite(s.rate) && s.rate > 0)
     .map(
       (s, i) =>
         `${i === 0 ? "M" : "L"} ${s.centerX.toFixed(2)} ${s.rateY.toFixed(2)}`

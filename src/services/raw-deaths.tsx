@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import useSWR from "swr"
 import { sumYears } from "@/utils/index"
 import useDeaths from "@/services/deaths"
@@ -33,11 +34,15 @@ const useRawDeaths = (): DeathsRawData[] => {
     revalidateOnFocus: false,
   })
 
-  if (data && filters) {
+  useEffect(() => {
+    if (!data || !filters) return
     const filteredData = filter(data, filters)
     setDeaths(filteredData)
     setOverview(filteredData)
-  }
+    // setDeaths/setOverview come from useSWR mutate and are stable — exclude
+    // them so we don't loop on identity changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, filters])
 
   return [data]
 }

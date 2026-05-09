@@ -45,15 +45,18 @@ const Page = () => {
       // Rate stays the all-ages all-genders rate so the TrendChart curve
       // stays inside TREND_RATE_DOMAIN (0.8–1.05) under any filter.
       const totalAllAges = sumArray(allAgesByYear[i] ?? [])
+      // Partial-year deaths over full-year population would understate
+      // the rate, dragging the trend curve toward 0.
+      const isPartial = year === partialYear
       return {
         year,
-        rate: pop > 0 ? (totalAllAges * 100) / pop : 0,
+        rate: !isPartial && pop > 0 ? (totalAllAges * 100) / pop : 0,
         deaths: totalDeaths,
         pop,
         monthly,
       }
     })
-  }, [years, deaths, filters])
+  }, [years, deaths, filters, partialYear])
 
   const lastFullYearData = data
     .filter((y) => y.year !== partialYear)

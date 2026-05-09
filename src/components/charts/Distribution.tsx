@@ -210,6 +210,9 @@ const Distribution = ({
         )}
 
         {series.map((s, i) => {
+          // Skip rate-less years (partial / population not yet available)
+          // — their projected y is outside the chart domain.
+          if (!Number.isFinite(s.rate) || s.rate <= 0) return null
           const showLabel = i % RATE_LABEL_EVERY === 0 || hovered === s.year
           return (
             <g key={`r-${s.year}`} style={{ pointerEvents: "none" }}>
