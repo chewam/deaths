@@ -22,7 +22,7 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
       /Mortality in France/i
     )
 
-    await page.getByRole("link", { name: /^Overview$/ }).click()
+    await page.getByRole("link", { name: /^Year$/ }).click()
     await expect(page).toHaveURL(/\/overview$/)
 
     await page.getByRole("link", { name: /^Comparison$/ }).click()
@@ -30,6 +30,9 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
 
     await page.getByRole("link", { name: /^Distribution$/ }).click()
     await expect(page).toHaveURL(/\/distribution$/)
+
+    await page.getByRole("link", { name: /^Overview$/ }).click()
+    await expect(page).toHaveURL(/\/$/)
 
     await page.getByRole("link", { name: /Mortality in France/i }).click()
     await expect(page).toHaveURL(/\/$/)
@@ -41,6 +44,7 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
     await page.goto("/overview")
 
     await expect(page.getByRole("link", { name: /^Overview$/ })).toBeVisible()
+    await expect(page.getByRole("link", { name: /^Year$/ })).toBeVisible()
     await expect(page.getByRole("link", { name: /^Comparison$/ })).toBeVisible()
     await expect(
       page.getByRole("link", { name: /^Distribution$/ })
@@ -52,6 +56,7 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
     await expect(
       page.getByRole("link", { name: /Vue d'Ensemble/i })
     ).toBeVisible()
+    await expect(page.getByRole("link", { name: /^Année$/ })).toBeVisible()
     await expect(page.getByRole("link", { name: /Comparaison/i })).toBeVisible()
     await expect(page.getByRole("link", { name: /Répartition/i })).toBeVisible()
 
