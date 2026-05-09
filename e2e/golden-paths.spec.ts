@@ -74,7 +74,7 @@ test.describe("golden paths — ISO functional contract for refactor v2", () => 
     await page.getByTitle("english", { exact: true }).click()
     await expect(page).toHaveURL(/\/distribution$/)
     await expect(
-      distributionCard.getByText("Deaths by age", { exact: true })
+      distributionCard.getByText("Deaths by age group", { exact: true })
     ).toBeVisible({
       timeout: 10_000,
     })
