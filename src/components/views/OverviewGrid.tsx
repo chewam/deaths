@@ -251,10 +251,11 @@ const TrendBadge = ({
   const color =
     direction === "up" ? "var(--color-danger)" : "var(--color-success)"
   // The badge mixes `color` 8 % with surface to produce a pale tint as bg.
-  // For the up direction, --color-danger (#DC2626) on that tint gives
-  // 4.27:1 — just below WCAG AA (4.5:1). Use red-700 for the text stroke
-  // only; the tint stays the same so the badge looks identical.
-  const textColor = direction === "up" ? "#B91C1C" : color
+  // For the up direction, --color-danger on that tint fails WCAG AA
+  // (4.27:1). --color-danger-text is the AA-passing darker shade, used
+  // for stroke + label text only; the tint base stays the same.
+  const textColor =
+    direction === "up" ? "var(--color-danger-text)" : color
   const path =
     direction === "up" ? (
       <>
