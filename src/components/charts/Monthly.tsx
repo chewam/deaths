@@ -1,4 +1,6 @@
-import { useLayoutEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
+
+import useIsomorphicLayoutEffect from "@/utils/use-isomorphic-layout-effect"
 
 import {
   MONTHLY_PADDING,
@@ -65,7 +67,7 @@ const Monthly = ({
   const [width, setWidth] = useState(900)
   const [measuredHeight, setMeasuredHeight] = useState(0)
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const node = containerRef.current
     if (!node) return
     const rect = node.getBoundingClientRect()
