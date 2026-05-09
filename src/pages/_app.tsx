@@ -49,7 +49,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Head />
           <Header />
           <FiltersBar />
-          <main ref={mainRef} className="flex min-h-0 flex-1 flex-col overflow-y-auto py-9">
+          <main
+            ref={mainRef}
+            className="flex min-h-0 flex-1 flex-col overflow-y-auto py-9"
+          >
             <Component {...pageProps} />
           </main>
           <Footer />
