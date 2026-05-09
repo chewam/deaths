@@ -1,3 +1,11 @@
+## [1.3.11](https://github.com/chewam/mortality/compare/v1.3.10...v1.3.11) (2026-05-09)
+
+
+### Bug Fixes
+
+* **ci:** scope Claude Review concurrency group by event_name ([#268](https://github.com/chewam/mortality/issues/268)) ([476f07b](https://github.com/chewam/mortality/commit/476f07b089b9b6b783ad473231735776944c7de2))
+* sentry token ([#254](https://github.com/chewam/mortality/issues/254)) ([f60bc31](https://github.com/chewam/mortality/commit/f60bc31f14e7b029296ae030c439bfd952f5921d))
+
 # [1.4.0-alpha.1](https://github.com/chewam/mortality/compare/v1.3.10...v1.4.0-alpha.1) (2026-05-08)
 
 
