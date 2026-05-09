@@ -8,18 +8,18 @@ A web page showing French mortality statistics from 2000 onward (INSEE data). Pr
 
 Repo: https://github.com/chewam/mortality (transferred from `goldlescred/deaths` in April 2026).
 
-## Current state: refactor v2 in progress
+## Current state: refactor v2 shipped — post-release alignment
 
-The app is being rewritten on the `alpha` branch. The work is tracked on the **[Mortality Project Board](https://github.com/orgs/chewam/projects/1)** as 8 parent Feature issues (one per "Lot") with sub-issues underneath.
+v2.0.0 shipped to `master` on 2026-05-09 (PR #303 / #304). Subsequent fixes (`v2.0.1` partial-year handling, `v2.0.2` NEW_VERSION alignment) followed within hours. The 8 lots and their sub-issues are closed; the **[Mortality Project Board](https://github.com/orgs/chewam/projects/1)** is archived but kept for history.
 
-**Goal**: ship `chewam/mortality` v2.0.0 — modern stack + new design — with **ISO functional behavior** vs current master.
+**Current goal**: keep prod (`master` / `deaths.chewam.com`) aligned with the design proto (`NEW_VERSION/`) and fix any post-release regressions surfaced by visual diff or user reports.
 
 ### Branch strategy
 
-- `master` — current 1.x, untouched during refactor.
-- `alpha` — refactor target. Each sub-issue is one PR onto `alpha`.
-- semantic-release publishes `2.0.0-alpha.N` from `alpha` (default config, no explicit `branches` in `.releaserc.json`).
-- Final merge `alpha` → `master` ships `2.0.0` (Lot 7).
+- `master` — current v2.x, the active branch. All work happens here.
+- `alpha` — **retired** since PR #308 (2026-05-09). Last release on it was `1.4.0-alpha.1` (pre-v2). Do not target new PRs at it.
+- Each fix is one PR onto `master`. semantic-release publishes patch/minor releases from `master` (`2.0.x` / `2.x.0`).
+- The Claude-review bot also targets `master` (workflow `on.pull_request.branches`).
 
 ### Stack target
 
@@ -45,7 +45,7 @@ These exist to guarantee no regression and to track pixel-perfect adherence.
 2. **`yarn e2e`** — Playwright behavior. Golden paths written against current master in Lot 0; **must pass identically on the new version** (= ISO contract).
 3. **`yarn e2e:visual`** — Playwright screenshots compared to `NEW_VERSION/screenshots/*.png` (pixel-perfect target).
 
-CI must run all three on every PR onto `alpha`.
+CI runs all three on every PR onto `master` (workflows: `tests.yml`, `screenshots.yml`).
 
 ## Pixel-perfect spec: `NEW_VERSION/`
 
@@ -94,7 +94,7 @@ The skills live in `.claude/skills/`. The `SessionStart` hook in `.claude/settin
 1. Runs the test net specified in the issue, fails loudly if anything is red.
 2. Checks the diff stays in scope.
 3. Self-reviews against the conventions below.
-4. Opens a PR onto `alpha` with `Closes #<num>`.
+4. Opens a PR onto `master` with `Closes #<num>` (the v2 refactor lots originally opened onto `alpha`; now retired — see Branch strategy).
 5. Moves the board status to `In review`.
 
 ## How to navigate work
@@ -122,7 +122,7 @@ Dates are indicative — adjust on the board (`Start date` / `Target date` field
 
 Multiple sessions can work in parallel as long as they pick **different lots** (or different sub-issues with no shared files). Coordination rules:
 
-- One PR per sub-issue, onto `alpha`.
+- One PR per sub-issue, onto `master`.
 - PR description must include `Closes #<sub-issue>` (auto-links the PR to the issue + closes on merge).
 - Before starting, set the sub-issue's `Status` to `In progress` on the board (or assign it to yourself).
 - Lots have hard dependencies: **0 → {1, 2, 3} → 4 → 5 → 6 → 7**. Lots 1, 2, 3 can run in parallel after Lot 0 lands.
@@ -148,7 +148,7 @@ Don't touch unless told otherwise:
 ```bash
 # Branch
 git fetch origin
-git checkout alpha
+git checkout master
 
 # Issues
 gh issue view 225 --repo chewam/mortality
