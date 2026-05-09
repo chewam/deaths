@@ -49,7 +49,6 @@ const OverviewGrid = ({
   const yearMap = new Map(years.map((y) => [y.year, y]))
   const padding = compact ? 18 : 22
   const minHeight = compact ? 180 : 220
-  const donutSize = compact ? 130 : 150
 
   return (
     <div
@@ -96,6 +95,8 @@ const OverviewGrid = ({
               gap: 10,
               transition: "background 140ms",
               position: "relative",
+              // Lets the donut size itself with cqi units relative to the card.
+              containerType: "inline-size",
             }}
           >
             <div
@@ -207,13 +208,20 @@ const OverviewGrid = ({
 
               <div
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                   flexShrink: 0,
+                  // Opt out of the row's `alignItems: stretch` so the square
+                  // aspect ratio is honored.
+                  alignSelf: "center",
+                  // Scales with the card via container-query units. ~55 % of
+                  // the card's inline size, clamped so the donut never
+                  // collapses (mobile single-col) or dominates (very wide).
+                  width: compact
+                    ? "clamp(110px, 50cqi, 200px)"
+                    : "clamp(140px, 55cqi, 240px)",
+                  aspectRatio: "1 / 1",
                 }}
               >
-                <MiniDonut buckets={y.buckets} size={donutSize} />
+                <MiniDonut buckets={y.buckets} />
               </div>
             </div>
           </button>
@@ -306,13 +314,12 @@ const DONUT_LABELS = [
   "90+",
 ] as const
 
-const MiniDonut = ({
-  buckets,
-  size = 130,
-}: {
-  buckets: number[]
-  size?: number
-}) => {
+// Donut paths are computed in this design coordinate system; the SVG scales
+// to fit its wrapper via viewBox + 100 % width/height (see the wrapper above).
+const DONUT_DESIGN_SIZE = 150
+
+const MiniDonut = ({ buckets }: { buckets: number[] }) => {
+  const size = DONUT_DESIGN_SIZE
   const cx = size / 2
   const cy = size / 2
   const r = size / 2 - 4
@@ -369,7 +376,10 @@ const MiniDonut = ({
   }).filter((a): a is NonNullable<typeof a> => a !== null)
 
   return (
-    <svg width={size} height={size} style={{ flexShrink: 0 }}>
+    <svg
+      viewBox={`0 0 ${size} ${size}`}
+      style={{ width: "100%", height: "100%", display: "block" }}
+    >
       {arcs.map((a) => (
         <path
           key={`arc-${a.bucketIndex}`}
@@ -384,7 +394,7 @@ const MiniDonut = ({
           x={ann.x}
           y={ann.y + 2}
           textAnchor="middle"
-          fontSize={size > 110 ? "10" : "8"}
+          fontSize="10"
           className="font-mono"
           fill={ann.color}
           letterSpacing="0.02em"
