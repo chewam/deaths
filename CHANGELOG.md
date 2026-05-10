@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/chewam/mortality/compare/v2.0.6...v2.1.0) (2026-05-10)
+
+
+### Features
+
+* **origins:** World Origins view — country-of-birth choropleth ([#313](https://github.com/chewam/mortality/issues/313)) ([b136296](https://github.com/chewam/mortality/commit/b136296fc6a7a09e31634f3625a281f03c51fca3))
+
 ## [2.0.6](https://github.com/chewam/mortality/compare/v2.0.5...v2.0.6) (2026-05-09)
 
 
