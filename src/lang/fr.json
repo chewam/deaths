@@ -69,6 +69,7 @@
   "origins.franceExcludedShort": "France (exclue)",
   "origins.topCountries": "Top 10 pays",
   "origins.ofForeignTotal": "du total étranger",
+  "origins.logScale": "log",
   "origins.loading": "Chargement de la carte…",
   "origins.loadError": "Impossible de charger la carte du monde"
 }

@@ -69,6 +69,7 @@
   "origins.franceExcludedShort": "France (excluded)",
   "origins.topCountries": "Top 10 countries",
   "origins.ofForeignTotal": "of foreign-born total",
+  "origins.logScale": "log",
   "origins.loading": "Loading map…",
   "origins.loadError": "Could not load world map"
 }

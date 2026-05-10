@@ -17,6 +17,7 @@ export type OriginsViewLabels = {
   loading: string
   loadError: string
   franceExcludedShort: string
+  logScale: string
 }
 
 export type OriginsViewProps = {
@@ -101,20 +102,19 @@ const Origins = ({ data, labels, locale }: OriginsViewProps) => {
     }
   }, [worldGeo])
 
+  // "Born in France" KPI groups metropolitan + overseas (overseas territories
+  // are part of France for state-civil purposes — keeping them in their own
+  // bucket would silently shrink the FR share while still summing to 100%).
+  const bornInFranceTotal = data.meta.bornInFrance + data.meta.bornInOverseas
   const totalForeign = data.meta.bornAbroad
+  const grandTotal = bornInFranceTotal + totalForeign
   const top10 = data.countries.slice(0, 10)
   const top10Max = top10[0]?.count ?? 1
   const topName =
     locale === "fr" ? data.countries[0]?.name_fr : data.countries[0]?.name_en
 
-  const pctFrance = (
-    (data.meta.bornInFrance / (data.meta.bornInFrance + data.meta.bornAbroad)) *
-    100
-  ).toFixed(1)
-  const pctForeign = (
-    (data.meta.bornAbroad / (data.meta.bornInFrance + data.meta.bornAbroad)) *
-    100
-  ).toFixed(1)
+  const pctFrance = ((bornInFranceTotal / grandTotal) * 100).toFixed(1)
+  const pctForeign = ((totalForeign / grandTotal) * 100).toFixed(1)
 
   return (
     <div data-testid="view-origins" className="flex flex-col gap-7 pb-9">
@@ -122,7 +122,7 @@ const Origins = ({ data, labels, locale }: OriginsViewProps) => {
       <div className="bg-border border-border grid grid-cols-1 gap-px border md:grid-cols-4">
         <Stat
           label={labels.bornInFrance}
-          value={fmtNum(data.meta.bornInFrance, locale)}
+          value={fmtNum(bornInFranceTotal, locale)}
           sub={`${pctFrance}%`}
         />
         <Stat
@@ -176,7 +176,7 @@ const Origins = ({ data, labels, locale }: OriginsViewProps) => {
                 {fmtNum(max, locale)}
               </span>
               <span className="text-text-faint font-mono uppercase tracking-wider">
-                log
+                {labels.logScale}
               </span>
               <span className="border-border ml-2 inline-flex items-center gap-1.5 border-l pl-2.5">
                 <svg width="14" height="10">

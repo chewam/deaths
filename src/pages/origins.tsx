@@ -23,6 +23,7 @@ const Page = () => {
     }),
     topCountries: intl.formatMessage({ id: "origins.topCountries" }),
     ofForeignTotal: intl.formatMessage({ id: "origins.ofForeignTotal" }),
+    logScale: intl.formatMessage({ id: "origins.logScale" }),
     loading: intl.formatMessage({ id: "origins.loading" }),
     loadError: intl.formatMessage({ id: "origins.loadError" }),
   }
