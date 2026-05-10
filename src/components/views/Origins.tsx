@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { geoNaturalEarth1, geoPath } from "d3-geo"
 import { feature } from "topojson-client"
 import type { Feature, Geometry } from "geojson"
@@ -39,7 +39,6 @@ const Origins = ({ data, labels, locale }: OriginsViewProps) => {
   const [worldGeo, setWorldGeo] = useState<CountryFeature[] | null>(null)
   const [loadErr, setLoadErr] = useState<string | null>(null)
   const [hovered, setHovered] = useState<number | null>(null)
-  const svgRef = useRef<SVGSVGElement | null>(null)
 
   useEffect(() => {
     let cancel = false
@@ -113,7 +112,6 @@ const Origins = ({ data, labels, locale }: OriginsViewProps) => {
 
   return (
     <div data-testid="view-origins" className="flex flex-col gap-7 pb-9">
-      {/* KPI strip */}
       <div className="bg-border border-border grid grid-cols-1 gap-px border md:grid-cols-4">
         <Stat
           label={labels.bornInFrance}
@@ -144,9 +142,7 @@ const Origins = ({ data, labels, locale }: OriginsViewProps) => {
         />
       </div>
 
-      {/* Map + sidebar */}
       <div className="bg-border border-border grid grid-cols-1 gap-px border lg:grid-cols-[1fr_320px]">
-        {/* Map card */}
         <div className="bg-surface p-7" data-testid="origins-map">
           <div className="mb-4 flex items-baseline justify-between gap-4">
             <div>
@@ -222,7 +218,6 @@ const Origins = ({ data, labels, locale }: OriginsViewProps) => {
             )}
             {mapPaths && (
               <svg
-                ref={svgRef}
                 viewBox={`0 0 ${mapPaths.W} ${mapPaths.H}`}
                 className="block h-auto w-full"
               >
@@ -295,7 +290,6 @@ const Origins = ({ data, labels, locale }: OriginsViewProps) => {
           </div>
         </div>
 
-        {/* Top 10 sidebar */}
         <div className="bg-surface p-7" data-testid="origins-top10">
           <Label>{labels.topCountries}</Label>
           <div className="text-text-dim mt-1 mb-5 text-[11px] font-mono">
