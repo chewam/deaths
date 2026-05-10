@@ -29,8 +29,6 @@ export type OriginsViewProps = {
 const fmtNum = (n: number, locale: string) =>
   new Intl.NumberFormat(locale).format(n)
 
-// World-atlas TopoJSON geometries: countries-110m, ~50 KB. We hold the typed
-// FeatureCollection at module scope after the first conversion.
 type CountryFeature = Feature<Geometry, { name: string }> & {
   id?: string | number
 }
