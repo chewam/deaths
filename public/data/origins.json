@@ -1,0 +1,902 @@
+{
+  "meta": {
+    "source": "Sample derived from src/data/countries.json (will be replaced by build.js on next yarn fetch)",
+    "generated": "2026-05-09T18:11:21.586Z",
+    "bornInFrance": 190577,
+    "bornInOverseas": 3576,
+    "bornAbroad": 26135,
+    "bornAbroadUnmapped": 292,
+    "distinctCountries": 127
+  },
+  "countries": [
+    {
+      "iso3": "DZA",
+      "m49": 12,
+      "name_en": "Algeria",
+      "name_fr": "Algérie",
+      "count": 6058
+    },
+    {
+      "iso3": "ITA",
+      "m49": 380,
+      "name_en": "Italy",
+      "name_fr": "Italie",
+      "count": 4366
+    },
+    {
+      "iso3": "ESP",
+      "m49": 724,
+      "name_en": "Spain",
+      "name_fr": "Espagne",
+      "count": 2850
+    },
+    {
+      "iso3": "POL",
+      "m49": 616,
+      "name_en": "Poland",
+      "name_fr": "Pologne",
+      "count": 1812
+    },
+    {
+      "iso3": "DEU",
+      "m49": 276,
+      "name_en": "Germany",
+      "name_fr": "Allemagne",
+      "count": 1395
+    },
+    {
+      "iso3": "TUN",
+      "m49": 788,
+      "name_en": "Tunisia",
+      "name_fr": "Tunisie",
+      "count": 1337
+    },
+    {
+      "iso3": "MAR",
+      "m49": 504,
+      "name_en": "Morocco",
+      "name_fr": "Maroc",
+      "count": 1234
+    },
+    {
+      "iso3": "PRT",
+      "m49": 620,
+      "name_en": "Portugal",
+      "name_fr": "Portugal",
+      "count": 1086
+    },
+    {
+      "iso3": "BEL",
+      "m49": 56,
+      "name_en": "Belgium",
+      "name_fr": "Belgique",
+      "count": 1003
+    },
+    {
+      "iso3": "CHE",
+      "m49": 756,
+      "name_en": "Switzerland",
+      "name_fr": "Suisse",
+      "count": 473
+    },
+    {
+      "iso3": "TUR",
+      "m49": 792,
+      "name_en": "Turkey",
+      "name_fr": "Turquie",
+      "count": 450
+    },
+    {
+      "iso3": "VNM",
+      "m49": 704,
+      "name_en": "Vietnam",
+      "name_fr": "Vietnam",
+      "count": 393
+    },
+    {
+      "iso3": "SRB",
+      "m49": 688,
+      "name_en": "Serbia",
+      "name_fr": "Serbie",
+      "count": 275
+    },
+    {
+      "iso3": "GBR",
+      "m49": 826,
+      "name_en": "United Kingdom",
+      "name_fr": "Royaume-Uni",
+      "count": 236
+    },
+    {
+      "iso3": "MDG",
+      "m49": 450,
+      "name_en": "Madagascar",
+      "name_fr": "Madagascar",
+      "count": 199
+    },
+    {
+      "iso3": "RUS",
+      "m49": 643,
+      "name_en": "Russia",
+      "name_fr": "Russie",
+      "count": 172
+    },
+    {
+      "iso3": "ROU",
+      "m49": 642,
+      "name_en": "Romania",
+      "name_fr": "Roumanie",
+      "count": 169
+    },
+    {
+      "iso3": "CZE",
+      "m49": 203,
+      "name_en": "Czechia",
+      "name_fr": "Tchéquie",
+      "count": 153
+    },
+    {
+      "iso3": "SEN",
+      "m49": 686,
+      "name_en": "Senegal",
+      "name_fr": "Sénégal",
+      "count": 138
+    },
+    {
+      "iso3": "HUN",
+      "m49": 348,
+      "name_en": "Hungary",
+      "name_fr": "Hongrie",
+      "count": 133
+    },
+    {
+      "iso3": "EGY",
+      "m49": 818,
+      "name_en": "Egypt",
+      "name_fr": "Égypte",
+      "count": 118
+    },
+    {
+      "iso3": "NLD",
+      "m49": 528,
+      "name_en": "Netherlands",
+      "name_fr": "Pays-Bas",
+      "count": 112
+    },
+    {
+      "iso3": "KHM",
+      "m49": 116,
+      "name_en": "Cambodia",
+      "name_fr": "Cambodge",
+      "count": 98
+    },
+    {
+      "iso3": "LUX",
+      "m49": 442,
+      "name_en": "Luxembourg",
+      "name_fr": "Luxembourg",
+      "count": 88
+    },
+    {
+      "iso3": "USA",
+      "m49": 840,
+      "name_en": "United States",
+      "name_fr": "États-Unis",
+      "count": 85
+    },
+    {
+      "iso3": "CHN",
+      "m49": 156,
+      "name_en": "China",
+      "name_fr": "Chine",
+      "count": 85
+    },
+    {
+      "iso3": "GRC",
+      "m49": 300,
+      "name_en": "Greece",
+      "name_fr": "Grèce",
+      "count": 81
+    },
+    {
+      "iso3": "AUT",
+      "m49": 40,
+      "name_en": "Austria",
+      "name_fr": "Autriche",
+      "count": 77
+    },
+    {
+      "iso3": "MUS",
+      "m49": 480,
+      "name_en": "Mauritius",
+      "name_fr": "Maurice",
+      "count": 74
+    },
+    {
+      "iso3": "CMR",
+      "m49": 120,
+      "name_en": "Cameroon",
+      "name_fr": "Cameroun",
+      "count": 68
+    },
+    {
+      "iso3": "LAO",
+      "m49": 418,
+      "name_en": "Laos",
+      "name_fr": "Laos",
+      "count": 67
+    },
+    {
+      "iso3": "IND",
+      "m49": 356,
+      "name_en": "India",
+      "name_fr": "Inde",
+      "count": 64
+    },
+    {
+      "iso3": "LBN",
+      "m49": 422,
+      "name_en": "Lebanon",
+      "name_fr": "Liban",
+      "count": 62
+    },
+    {
+      "iso3": "MLI",
+      "m49": 466,
+      "name_en": "Mali",
+      "name_fr": "Mali",
+      "count": 58
+    },
+    {
+      "iso3": "SYR",
+      "m49": 760,
+      "name_en": "Syria",
+      "name_fr": "Syrie",
+      "count": 55
+    },
+    {
+      "iso3": "UKR",
+      "m49": 804,
+      "name_en": "Ukraine",
+      "name_fr": "Ukraine",
+      "count": 50
+    },
+    {
+      "iso3": "HTI",
+      "m49": 332,
+      "name_en": "Haiti",
+      "name_fr": "Haïti",
+      "count": 48
+    },
+    {
+      "iso3": "COG",
+      "m49": 178,
+      "name_en": "Congo",
+      "name_fr": "Congo",
+      "count": 47
+    },
+    {
+      "iso3": "ARG",
+      "m49": 32,
+      "name_en": "Argentina",
+      "name_fr": "Argentine",
+      "count": 45
+    },
+    {
+      "iso3": "CIV",
+      "m49": 384,
+      "name_en": "Côte d'Ivoire",
+      "name_fr": "Côte d'Ivoire",
+      "count": 38
+    },
+    {
+      "iso3": "COD",
+      "m49": 180,
+      "name_en": "DR Congo",
+      "name_fr": "RD Congo",
+      "count": 35
+    },
+    {
+      "iso3": "BGR",
+      "m49": 100,
+      "name_en": "Bulgaria",
+      "name_fr": "Bulgarie",
+      "count": 35
+    },
+    {
+      "iso3": "BRA",
+      "m49": 76,
+      "name_en": "Brazil",
+      "name_fr": "Brésil",
+      "count": 33
+    },
+    {
+      "iso3": "CAN",
+      "m49": 124,
+      "name_en": "Canada",
+      "name_fr": "Canada",
+      "count": 33
+    },
+    {
+      "iso3": "IRN",
+      "m49": 364,
+      "name_en": "Iran",
+      "name_fr": "Iran",
+      "count": 31
+    },
+    {
+      "iso3": "SWE",
+      "m49": 752,
+      "name_en": "Sweden",
+      "name_fr": "Suède",
+      "count": 26
+    },
+    {
+      "iso3": "SUR",
+      "m49": 740,
+      "name_en": "Suriname",
+      "name_fr": "Suriname",
+      "count": 25
+    },
+    {
+      "iso3": "MCO",
+      "m49": 492,
+      "name_en": "Monaco",
+      "name_fr": "Monaco",
+      "count": 23
+    },
+    {
+      "iso3": "DMA",
+      "m49": 212,
+      "name_en": "Dominica",
+      "name_fr": "Dominique",
+      "count": 21
+    },
+    {
+      "iso3": "HRV",
+      "m49": 191,
+      "name_en": "Croatia",
+      "name_fr": "Croatie",
+      "count": 21
+    },
+    {
+      "iso3": "LKA",
+      "m49": 144,
+      "name_en": "Sri Lanka",
+      "name_fr": "Sri Lanka",
+      "count": 20
+    },
+    {
+      "iso3": "CPV",
+      "m49": 132,
+      "name_en": "Cape Verde",
+      "name_fr": "Cap-Vert",
+      "count": 18
+    },
+    {
+      "iso3": "GIN",
+      "m49": 324,
+      "name_en": "Guinea",
+      "name_fr": "Guinée",
+      "count": 17
+    },
+    {
+      "iso3": "COM",
+      "m49": 174,
+      "name_en": "Comoros",
+      "name_fr": "Comores",
+      "count": 17
+    },
+    {
+      "iso3": "CHL",
+      "m49": 152,
+      "name_en": "Chile",
+      "name_fr": "Chili",
+      "count": 17
+    },
+    {
+      "iso3": "DNK",
+      "m49": 208,
+      "name_en": "Denmark",
+      "name_fr": "Danemark",
+      "count": 16
+    },
+    {
+      "iso3": "JPN",
+      "m49": 392,
+      "name_en": "Japan",
+      "name_fr": "Japon",
+      "count": 15
+    },
+    {
+      "iso3": "LCA",
+      "m49": 662,
+      "name_en": "Saint Lucia",
+      "name_fr": "Sainte-Lucie",
+      "count": 15
+    },
+    {
+      "iso3": "BEN",
+      "m49": 204,
+      "name_en": "Benin",
+      "name_fr": "Bénin",
+      "count": 14
+    },
+    {
+      "iso3": "GUY",
+      "m49": 328,
+      "name_en": "Guyana",
+      "name_fr": "Guyana",
+      "count": 13
+    },
+    {
+      "iso3": "IRL",
+      "m49": 372,
+      "name_en": "Ireland",
+      "name_fr": "Irlande",
+      "count": 12
+    },
+    {
+      "iso3": "NOR",
+      "m49": 578,
+      "name_en": "Norway",
+      "name_fr": "Norvège",
+      "count": 11
+    },
+    {
+      "iso3": "MEX",
+      "m49": 484,
+      "name_en": "Mexico",
+      "name_fr": "Mexique",
+      "count": 11
+    },
+    {
+      "iso3": "CUB",
+      "m49": 192,
+      "name_en": "Cuba",
+      "name_fr": "Cuba",
+      "count": 11
+    },
+    {
+      "iso3": "PER",
+      "m49": 604,
+      "name_en": "Peru",
+      "name_fr": "Pérou",
+      "count": 11
+    },
+    {
+      "iso3": "LVA",
+      "m49": 428,
+      "name_en": "Latvia",
+      "name_fr": "Lettonie",
+      "count": 11
+    },
+    {
+      "iso3": "TGO",
+      "m49": 768,
+      "name_en": "Togo",
+      "name_fr": "Togo",
+      "count": 10
+    },
+    {
+      "iso3": "CAF",
+      "m49": 140,
+      "name_en": "Central African Republic",
+      "name_fr": "Centrafrique",
+      "count": 10
+    },
+    {
+      "iso3": "URY",
+      "m49": 858,
+      "name_en": "Uruguay",
+      "name_fr": "Uruguay",
+      "count": 10
+    },
+    {
+      "iso3": "ISR",
+      "m49": 376,
+      "name_en": "Israel",
+      "name_fr": "Israël",
+      "count": 10
+    },
+    {
+      "iso3": "DOM",
+      "m49": 214,
+      "name_en": "Dominican Republic",
+      "name_fr": "République dominicaine",
+      "count": 10
+    },
+    {
+      "iso3": "COL",
+      "m49": 170,
+      "name_en": "Colombia",
+      "name_fr": "Colombie",
+      "count": 9
+    },
+    {
+      "iso3": "SVK",
+      "m49": 703,
+      "name_en": "Slovakia",
+      "name_fr": "Slovaquie",
+      "count": 9
+    },
+    {
+      "iso3": "LTU",
+      "m49": 440,
+      "name_en": "Lithuania",
+      "name_fr": "Lituanie",
+      "count": 9
+    },
+    {
+      "iso3": "NER",
+      "m49": 562,
+      "name_en": "Niger",
+      "name_fr": "Niger",
+      "count": 8
+    },
+    {
+      "iso3": "MRT",
+      "m49": 478,
+      "name_en": "Mauritania",
+      "name_fr": "Mauritanie",
+      "count": 8
+    },
+    {
+      "iso3": "KOR",
+      "m49": 410,
+      "name_en": "South Korea",
+      "name_fr": "Corée du Sud",
+      "count": 8
+    },
+    {
+      "iso3": "PAK",
+      "m49": 586,
+      "name_en": "Pakistan",
+      "name_fr": "Pakistan",
+      "count": 8
+    },
+    {
+      "iso3": "ARM",
+      "m49": 51,
+      "name_en": "Armenia",
+      "name_fr": "Arménie",
+      "count": 8
+    },
+    {
+      "iso3": "SVN",
+      "m49": 705,
+      "name_en": "Slovenia",
+      "name_fr": "Slovénie",
+      "count": 8
+    },
+    {
+      "iso3": "TCD",
+      "m49": 148,
+      "name_en": "Chad",
+      "name_fr": "Tchad",
+      "count": 7
+    },
+    {
+      "iso3": "AGO",
+      "m49": 24,
+      "name_en": "Angola",
+      "name_fr": "Angola",
+      "count": 7
+    },
+    {
+      "iso3": "SDN",
+      "m49": 729,
+      "name_en": "Sudan",
+      "name_fr": "Soudan",
+      "count": 7
+    },
+    {
+      "iso3": "ZAF",
+      "m49": 710,
+      "name_en": "South Africa",
+      "name_fr": "Afrique du Sud",
+      "count": 6
+    },
+    {
+      "iso3": "BOL",
+      "m49": 68,
+      "name_en": "Bolivia",
+      "name_fr": "Bolivie",
+      "count": 6
+    },
+    {
+      "iso3": "ALB",
+      "m49": 8,
+      "name_en": "Albania",
+      "name_fr": "Albanie",
+      "count": 6
+    },
+    {
+      "iso3": "MLT",
+      "m49": 470,
+      "name_en": "Malta",
+      "name_fr": "Malte",
+      "count": 6
+    },
+    {
+      "iso3": "LBY",
+      "m49": 434,
+      "name_en": "Libya",
+      "name_fr": "Libye",
+      "count": 5
+    },
+    {
+      "iso3": "AND",
+      "m49": 20,
+      "name_en": "Andorra",
+      "name_fr": "Andorre",
+      "count": 5
+    },
+    {
+      "iso3": "PHL",
+      "m49": 608,
+      "name_en": "Philippines",
+      "name_fr": "Philippines",
+      "count": 5
+    },
+    {
+      "iso3": "ETH",
+      "m49": 231,
+      "name_en": "Ethiopia",
+      "name_fr": "Éthiopie",
+      "count": 5
+    },
+    {
+      "iso3": "IDN",
+      "m49": 360,
+      "name_en": "Indonesia",
+      "name_fr": "Indonésie",
+      "count": 5
+    },
+    {
+      "iso3": "THA",
+      "m49": 764,
+      "name_en": "Thailand",
+      "name_fr": "Thaïlande",
+      "count": 5
+    },
+    {
+      "iso3": "BFA",
+      "m49": 854,
+      "name_en": "Burkina Faso",
+      "name_fr": "Burkina Faso",
+      "count": 5
+    },
+    {
+      "iso3": "AUS",
+      "m49": 36,
+      "name_en": "Australia",
+      "name_fr": "Australie",
+      "count": 4
+    },
+    {
+      "iso3": "BGD",
+      "m49": 50,
+      "name_en": "Bangladesh",
+      "name_fr": "Bangladesh",
+      "count": 4
+    },
+    {
+      "iso3": "AFG",
+      "m49": 4,
+      "name_en": "Afghanistan",
+      "name_fr": "Afghanistan",
+      "count": 4
+    },
+    {
+      "iso3": "BDI",
+      "m49": 108,
+      "name_en": "Burundi",
+      "name_fr": "Burundi",
+      "count": 3
+    },
+    {
+      "iso3": "GHA",
+      "m49": 288,
+      "name_en": "Ghana",
+      "name_fr": "Ghana",
+      "count": 3
+    },
+    {
+      "iso3": "FIN",
+      "m49": 246,
+      "name_en": "Finland",
+      "name_fr": "Finlande",
+      "count": 3
+    },
+    {
+      "iso3": "VEN",
+      "m49": 862,
+      "name_en": "Venezuela",
+      "name_fr": "Venezuela",
+      "count": 3
+    },
+    {
+      "iso3": "DJI",
+      "m49": 262,
+      "name_en": "Djibouti",
+      "name_fr": "Djibouti",
+      "count": 3
+    },
+    {
+      "iso3": "IRQ",
+      "m49": 368,
+      "name_en": "Iraq",
+      "name_fr": "Irak",
+      "count": 3
+    },
+    {
+      "iso3": "BIH",
+      "m49": 70,
+      "name_en": "Bosnia and Herz.",
+      "name_fr": "Bosnie-Herzégovine",
+      "count": 3
+    },
+    {
+      "iso3": "PSE",
+      "m49": 275,
+      "name_en": "Palestine",
+      "name_fr": "Palestine",
+      "count": 3
+    },
+    {
+      "iso3": "MYS",
+      "m49": 458,
+      "name_en": "Malaysia",
+      "name_fr": "Malaisie",
+      "count": 3
+    },
+    {
+      "iso3": "MDA",
+      "m49": 498,
+      "name_en": "Moldova",
+      "name_fr": "Moldavie",
+      "count": 2
+    },
+    {
+      "iso3": "GTM",
+      "m49": 320,
+      "name_en": "Guatemala",
+      "name_fr": "Guatemala",
+      "count": 2
+    },
+    {
+      "iso3": "ECU",
+      "m49": 218,
+      "name_en": "Ecuador",
+      "name_fr": "Équateur",
+      "count": 2
+    },
+    {
+      "iso3": "CYP",
+      "m49": 196,
+      "name_en": "Cyprus",
+      "name_fr": "Chypre",
+      "count": 2
+    },
+    {
+      "iso3": "EST",
+      "m49": 233,
+      "name_en": "Estonia",
+      "name_fr": "Estonie",
+      "count": 2
+    },
+    {
+      "iso3": "GEO",
+      "m49": 268,
+      "name_en": "Georgia",
+      "name_fr": "Géorgie",
+      "count": 2
+    },
+    {
+      "iso3": "MKD",
+      "m49": 807,
+      "name_en": "North Macedonia",
+      "name_fr": "Macédoine du Nord",
+      "count": 1
+    },
+    {
+      "iso3": "KWT",
+      "m49": 414,
+      "name_en": "Kuwait",
+      "name_fr": "Koweït",
+      "count": 1
+    },
+    {
+      "iso3": "GNQ",
+      "m49": 226,
+      "name_en": "Equatorial Guinea",
+      "name_fr": "Guinée équatoriale",
+      "count": 1
+    },
+    {
+      "iso3": "NGA",
+      "m49": 566,
+      "name_en": "Nigeria",
+      "name_fr": "Nigeria",
+      "count": 1
+    },
+    {
+      "iso3": "NPL",
+      "m49": 524,
+      "name_en": "Nepal",
+      "name_fr": "Népal",
+      "count": 1
+    },
+    {
+      "iso3": "SLE",
+      "m49": 694,
+      "name_en": "Sierra Leone",
+      "name_fr": "Sierra Leone",
+      "count": 1
+    },
+    {
+      "iso3": "MOZ",
+      "m49": 508,
+      "name_en": "Mozambique",
+      "name_fr": "Mozambique",
+      "count": 1
+    },
+    {
+      "iso3": "NZL",
+      "m49": 554,
+      "name_en": "New Zealand",
+      "name_fr": "Nouvelle-Zélande",
+      "count": 1
+    },
+    {
+      "iso3": "UGA",
+      "m49": 800,
+      "name_en": "Uganda",
+      "name_fr": "Ouganda",
+      "count": 1
+    },
+    {
+      "iso3": "MNE",
+      "m49": 499,
+      "name_en": "Montenegro",
+      "name_fr": "Monténégro",
+      "count": 1
+    },
+    {
+      "iso3": "BLR",
+      "m49": 112,
+      "name_en": "Belarus",
+      "name_fr": "Biélorussie",
+      "count": 1
+    },
+    {
+      "iso3": "SAU",
+      "m49": 682,
+      "name_en": "Saudi Arabia",
+      "name_fr": "Arabie saoudite",
+      "count": 1
+    },
+    {
+      "iso3": "PAN",
+      "m49": 591,
+      "name_en": "Panama",
+      "name_fr": "Panama",
+      "count": 1
+    },
+    {
+      "iso3": "ZMB",
+      "m49": 894,
+      "name_en": "Zambia",
+      "name_fr": "Zambie",
+      "count": 1
+    },
+    {
+      "iso3": "MMR",
+      "m49": 104,
+      "name_en": "Myanmar",
+      "name_fr": "Myanmar",
+      "count": 1
+    }
+  ]
+}

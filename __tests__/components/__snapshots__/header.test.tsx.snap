@@ -50,6 +50,12 @@ exports[`Header > should create a Header in english 1`] = `
       >
         Distribution
       </a>
+      <a
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"
+        href="/origins"
+      >
+        Origins
+      </a>
     </nav>
     <div
       class="flex items-center gap-1.5"
@@ -122,6 +128,12 @@ exports[`Header > should create a Header in french 1`] = `
         href="/distribution"
       >
         Répartition
+      </a>
+      <a
+        class="font-mono text-[11.5px] tracking-[0.08em] uppercase px-[14px] py-[8px] border border-transparent cursor-pointer transition-all duration-200 bg-transparent text-text-dim hover:text-text"
+        href="/origins"
+      >
+        Origines
       </a>
     </nav>
     <div

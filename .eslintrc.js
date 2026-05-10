@@ -13,6 +13,7 @@ module.exports = {
     ".next/*",
     ".out/*",
     "NEW_VERSION/*",
+    "NEW_VERSION_WORLD/*",
     "next-env.d.ts",
     "coverage/*",
     "playwright-report/*",

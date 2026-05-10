@@ -3,6 +3,7 @@
   "year": "Year",
   "comparison": "Comparison",
   "distribution": "Distribution",
+  "origins": "Origins",
   "Mortality rate": "Mortality rate",
   "Deaths count": "Deaths",
   "Total population": "Population",
@@ -58,5 +59,16 @@
   "event.heatwave-2022.label": "Summer 2022 heatwaves",
   "event.heatwave-2022.desc": "Multiple heatwaves across summer",
   "event.winter-2025.label": "Winter 2025 peak",
-  "event.winter-2025.desc": "Combined respiratory illness season"
+  "event.winter-2025.desc": "Combined respiratory illness season",
+  "origins.bornInFrance": "Born in France",
+  "origins.bornAbroad": "Born abroad",
+  "origins.distinctCountries": "Distinct countries",
+  "origins.topOrigin": "Top origin",
+  "origins.deathsByOrigin": "Deaths by country of birth",
+  "origins.franceExcluded": "France excluded — figures cover foreign-born only",
+  "origins.franceExcludedShort": "France (excluded)",
+  "origins.topCountries": "Top 10 countries",
+  "origins.ofForeignTotal": "of foreign-born total",
+  "origins.loading": "Loading map…",
+  "origins.loadError": "Could not load world map"
 }

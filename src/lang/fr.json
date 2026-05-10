@@ -3,6 +3,7 @@
   "year": "Année",
   "comparison": "Comparaison",
   "distribution": "Répartition",
+  "origins": "Origines",
   "Mortality rate": "Taux de mortalité",
   "Deaths count": "Décès",
   "Total population": "Population",
@@ -58,5 +59,16 @@
   "event.heatwave-2022.label": "Canicules été 2022",
   "event.heatwave-2022.desc": "Plusieurs vagues de chaleur successives",
   "event.winter-2025.label": "Pic hivernal 2025",
-  "event.winter-2025.desc": "Saison combinée de maladies respiratoires"
+  "event.winter-2025.desc": "Saison combinée de maladies respiratoires",
+  "origins.bornInFrance": "Né·es en France",
+  "origins.bornAbroad": "Né·es à l'étranger",
+  "origins.distinctCountries": "Pays distincts",
+  "origins.topOrigin": "Origine principale",
+  "origins.deathsByOrigin": "Décès par pays de naissance",
+  "origins.franceExcluded": "France exclue — chiffres pour les personnes nées à l'étranger",
+  "origins.franceExcludedShort": "France (exclue)",
+  "origins.topCountries": "Top 10 pays",
+  "origins.ofForeignTotal": "du total étranger",
+  "origins.loading": "Chargement de la carte…",
+  "origins.loadError": "Impossible de charger la carte du monde"
 }
