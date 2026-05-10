@@ -41,7 +41,6 @@ const Origins = ({ data, labels, locale }: OriginsViewProps) => {
   const [hovered, setHovered] = useState<number | null>(null)
   const svgRef = useRef<SVGSVGElement | null>(null)
 
-  // Load world topojson once, convert to GeoJSON features.
   useEffect(() => {
     let cancel = false
     fetch(WORLD_TOPOJSON_URL)
@@ -63,7 +62,6 @@ const Origins = ({ data, labels, locale }: OriginsViewProps) => {
     }
   }, [labels.loadError])
 
-  // Build a fast lookup: m49 → country
   const byM49 = useMemo(() => {
     const m: Record<number, OriginsCountry> = {}
     for (const c of data.countries) m[c.m49] = c
@@ -80,7 +78,6 @@ const Origins = ({ data, labels, locale }: OriginsViewProps) => {
     return `color-mix(in srgb, var(--color-text) ${(tt * 100).toFixed(1)}%, var(--color-bg))`
   }
 
-  // Compute SVG paths once we have the geo.
   const mapPaths = useMemo(() => {
     if (!worldGeo) return null
     const W = 1100
