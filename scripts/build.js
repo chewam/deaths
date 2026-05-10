@@ -7,6 +7,7 @@ const crypto = require("crypto")
 const isValid = require("date-fns/isValid")
 const Months = require("../src/data/months.json")
 const intervalToDuration = require("date-fns/intervalToDuration")
+const { NAME_TO_COUNTRY, FRENCH_OVERSEAS } = require("./insee-country-map")
 
 const baseDir = `${__dirname}/../data`
 
@@ -118,6 +119,67 @@ const getChartsData = (data) => {
   return chartsData
 }
 
+const getOriginsData = (data) => {
+  let bornInFrance = 0
+  let bornInOverseas = 0
+  let bornAbroadUnmapped = 0
+  const byIso = {}
+  const unmappedNames = new Map()
+
+  data.forEach(({ birthCode, birthCountry, year }) => {
+    if (year < 2000) return
+    const code = (birthCode || "").trim()
+    // INSEE convention: COG starting with "99" means born abroad. Anything
+    // else is a French commune code (including DOM-TOM 97x/98x). Empty code
+    // also means metropolitan France (unspecified).
+    if (!code.startsWith("99")) {
+      if (FRENCH_OVERSEAS.has(birthCountry)) bornInOverseas++
+      else bornInFrance++
+      return
+    }
+    const mapping = NAME_TO_COUNTRY[birthCountry]
+    if (!mapping) {
+      bornAbroadUnmapped++
+      if (birthCountry) {
+        unmappedNames.set(birthCountry, (unmappedNames.get(birthCountry) || 0) + 1)
+      }
+      return
+    }
+    const [iso3, m49, name_en, name_fr] = mapping
+    if (!byIso[iso3]) {
+      byIso[iso3] = { iso3, m49, name_en, name_fr, count: 0 }
+    }
+    byIso[iso3].count++
+  })
+
+  const countries = Object.values(byIso).sort((a, b) => b.count - a.count)
+  const bornAbroad = countries.reduce((s, c) => s + c.count, 0)
+
+  if (unmappedNames.size > 0) {
+    const top = [...unmappedNames.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10)
+    console.log(
+      `Origins: ${unmappedNames.size} distinct names did not match the mapping ` +
+        `(${bornAbroadUnmapped} records). Top:`,
+      top
+    )
+  }
+
+  return {
+    meta: {
+      source: "INSEE — Fichier des personnes décédées",
+      generated: new Date().toISOString(),
+      bornInFrance,
+      bornInOverseas,
+      bornAbroad,
+      bornAbroadUnmapped,
+      distinctCountries: countries.length,
+    },
+    countries,
+  }
+}
+
 const getLineHash = (line) =>
   crypto.createHash("md5").update(line).digest("hex")
 
@@ -131,10 +193,15 @@ const readLine = (line) => [
   parseInt(line.substring(154, 158), 10),
   parseInt(line.substring(158, 160), 10),
   parseInt(line.substring(160, 162), 10),
+  // Birthplace info: code COG (5 chars) + pays clair (30 chars).
+  // Code starts with "99" when person was born abroad.
+  line.substring(89, 94),
+  line.substring(124, 154).trim().toUpperCase(),
 ]
 
 const processLine = (line) => {
-  const [gender, dob, year, month, day] = readLine(line)
+  const [gender, dob, year, month, day, birthCode, birthCountry] =
+    readLine(line)
   const start = new Date(dob[0], dob[1] - 1, dob[2])
   const end = new Date(year, month - 1, day)
   const { years: age } =
@@ -148,6 +215,8 @@ const processLine = (line) => {
       age,
       year,
       month,
+      birthCode,
+      birthCountry,
     })
   }
 }
@@ -192,6 +261,7 @@ const main = async () => {
   console.log("File processing done:", data.size, "records found.")
 
   const json = getChartsData(data)
+  const origins = getOriginsData(data)
 
   fs.writeFileSync(
     resultPublicFolderPath + "deaths.json",
@@ -201,8 +271,21 @@ const main = async () => {
     resultPublicFolderPath + "mortality.json",
     JSON.stringify(json.mortality)
   )
+  fs.writeFileSync(
+    resultPublicFolderPath + "origins.json",
+    JSON.stringify(origins)
+  )
   fs.writeFileSync(resultFolderPath + "years.json", JSON.stringify(json.years))
 
+  console.log(
+    "Origins:",
+    origins.meta.bornInFrance,
+    "born in France ·",
+    origins.meta.bornAbroad,
+    "born abroad ·",
+    origins.meta.distinctCountries,
+    "countries"
+  )
   console.log("Result written into", resultFolderPath)
 }
 

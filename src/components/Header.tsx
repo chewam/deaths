@@ -9,6 +9,7 @@ const navItems = [
   { view: "year", href: "/overview" },
   { view: "comparison", href: "/comparison" },
   { view: "distribution", href: "/distribution" },
+  { view: "origins", href: "/origins" },
 ] as const
 
 const routeToView: Record<string, string> = {
@@ -16,6 +17,7 @@ const routeToView: Record<string, string> = {
   "/overview": "year",
   "/comparison": "comparison",
   "/distribution": "distribution",
+  "/origins": "origins",
 }
 
 const Header = () => {

@@ -26,12 +26,14 @@
   "dependencies": {
     "@sentry/nextjs": "^10",
     "@vercel/analytics": "^2",
+    "d3-geo": "^3.1.1",
     "next": "15.5.15",
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "react-intl": "^10",
     "remixicon": "2.5.0",
-    "swr": "^2"
+    "swr": "^2",
+    "topojson-client": "^3.1.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.3",
@@ -46,11 +48,13 @@
     "@testing-library/dom": "^10",
     "@testing-library/jest-dom": "^6",
     "@testing-library/react": "^16",
+    "@types/d3-geo": "^3.1.0",
     "@types/d3-scale": "4.0.2",
     "@types/node": "20.19.39",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@types/react-simple-maps": "1.0.8",
+    "@types/topojson-client": "^3.1.5",
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
     "@vitejs/plugin-react": "^6.0.1",
@@ -66,7 +70,8 @@
     "prettier": "^3",
     "tailwindcss": "^4.2.4",
     "typescript": "5.9.3",
-    "vitest": "^4.1.5"
+    "vitest": "^4.1.5",
+    "world-atlas": "^2.0.2"
   },
   "resolutions": {
     "@types/react": "19.2.14",
